@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="43" actionName="B050_rageskill_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-1.135971" scaleY="-1.135971" rotation="179.999985" position="12.750000,-80.150002" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-2.187698" scaleY="-2.187698" rotation="179.999985" position="18.100000,-83.750000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-3.239426" scaleY="-3.239426" rotation="179.999985" position="23.350000,-87.349998" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-4.291138" scaleY="-4.291138" rotation="179.999985" position="28.700001,-90.949997" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-5.342834" scaleY="-5.342834" rotation="179.999985" position="33.849998,-94.550003" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-4.106583" scaleY="-4.106583" rotation="179.999985" position="26.200001,-88.599998" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-2.870422" scaleY="-2.870422" rotation="179.999985" position="18.650000,-82.800003" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-1.634171" scaleY="-1.634171" rotation="179.999985" position="11.100000,-76.849998" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="B050_rageskill_21" scaleX="-0.398010" scaleY="-0.398010" rotation="179.999985" position="3.550000,-71.050003" />
+        </frameInfo>
+        <frameInfo frame="9" />
+        <frameInfo frame="10" />
+        <frameInfo frame="11" />
+        <frameInfo frame="12" />
+        <frameInfo frame="13" />
+        <frameInfo frame="14" />
+        <frameInfo frame="15">
+            <frameData bitmapName="B050_rageskill_22" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="21.500000,-133.600006" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData bitmapName="B050_rageskill_22" scaleX="-0.412521" scaleY="-0.559097" rotation="179.999985" position="58.200001,-145.699997" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData bitmapName="B050_rageskill_22" scaleX="-0.213181" scaleY="-0.311508" rotation="179.999985" position="70.699997,-152.500000" />
+        </frameInfo>
+        <frameInfo frame="18" />
+        <frameInfo frame="19" />
+        <frameInfo frame="20" />
+        <frameInfo frame="21" />
+        <frameInfo frame="22" />
+        <frameInfo frame="23" />
+        <frameInfo frame="24" />
+        <frameInfo frame="25" />
+        <frameInfo frame="26" />
+        <frameInfo frame="27" />
+        <frameInfo frame="28" />
+        <frameInfo frame="29" />
+        <frameInfo frame="30" />
+        <frameInfo frame="31" />
+        <frameInfo frame="32" />
+        <frameInfo frame="33" />
+        <frameInfo frame="34" />
+        <frameInfo frame="35" />
+        <frameInfo frame="36" />
+        <frameInfo frame="37" />
+        <frameInfo frame="38" />
+        <frameInfo frame="39" />
+        <frameInfo frame="40">
+            <frameData bitmapName="B050_rageskill_23" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="37.950001,-125.000000" />
+        </frameInfo>
+        <frameInfo frame="41">
+            <frameData bitmapName="B050_rageskill_23" scaleX="-0.790787" scaleY="-0.480957" rotation="179.999985" position="45.900002,-152.250000" />
+        </frameInfo>
+        <frameInfo frame="42">
+            <frameData bitmapName="B050_rageskill_23" scaleX="-0.471878" scaleY="-0.271851" rotation="179.999985" position="58.049999,-163.250000" />
+        </frameInfo>
+    </action>
+</animation>

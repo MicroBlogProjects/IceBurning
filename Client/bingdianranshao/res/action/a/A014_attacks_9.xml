@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="20" actionName="A014_attacks_9">
+        <frameInfo frame="0">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="A014_attacks_9" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="4.350000,-210.600006" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData bitmapName="A014_attacks_9" scaleX="-1.149709" scaleY="-1.149709" rotation="166.249985" position="4.350000,-210.600006" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData bitmapName="A014_attacks_9" scaleX="-1.297679" scaleY="-1.297679" rotation="152.456894" position="4.350000,-210.600006" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData bitmapName="A014_attacks_9" scaleX="-1.446787" scaleY="-1.446787" rotation="138.663086" position="4.350000,-210.600006" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData bitmapName="A014_attacks_9" scaleX="-1.596408" scaleY="-1.596408" rotation="124.868507" position="4.300000,-210.600006" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData bitmapName="A014_attacks_9" scaleX="-1.746677" scaleY="-1.746677" rotation="111.079659" position="4.350000,-210.649994" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData bitmapName="A014_attacks_9" scaleX="-1.897529" scaleY="-1.897529" rotation="97.305435" position="4.350000,-210.600006" />
+        </frameInfo>
+        <frameInfo frame="19">
+            <frameData bitmapName="A014_attacks_9" scaleX="-2.047307" scaleY="-2.047307" rotation="83.734932" position="4.300000,-220.600006" />
+        </frameInfo>
+    </action>
+</animation>

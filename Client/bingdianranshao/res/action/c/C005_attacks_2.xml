@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="12" actionName="C005_attacks_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="C005_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5" />
+        <frameInfo frame="6" />
+        <frameInfo frame="7">
+            <frameData bitmapName="C005_attacks_20" scaleX="-3.475250" scaleY="-3.475250" rotation="179.999985" position="8.000000,-70.500000" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="C005_attacks_20" scaleX="-3.865799" scaleY="-3.865799" rotation="179.999985" position="36.000000,-62.150002" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="C005_attacks_20" scaleX="-4.256348" scaleY="-4.256348" rotation="179.999985" position="64.000000,-53.950001" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="C005_attacks_20" scaleX="-4.646912" scaleY="-4.646912" rotation="179.999985" position="92.000000,-45.650002" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="C005_attacks_20" scaleX="-5.037399" scaleY="-5.037399" rotation="179.999985" position="120.000000,-37.500000" />
+        </frameInfo>
+    </action>
+</animation>

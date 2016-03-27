@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="16" actionName="A019_rageskill_4">
+        <frameInfo frame="0">
+            <frameData bitmapName="A019_rageskill_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5" />
+        <frameInfo frame="6">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-0.159088" scaleY="-0.159088" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-0.369324" scaleY="-0.369324" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-0.579544" scaleY="-0.579544" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-0.789780" scaleY="-0.789780" rotation="179.999985" position="-14.050000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-1.123291" scaleY="-1.123291" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-1.123291" scaleY="-1.123291" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData bitmapName="A019_rageskill_4" scaleX="-1.123291" scaleY="-1.123291" rotation="179.999985" position="-14.100000,-59.549999" />
+        </frameInfo>
+    </action>
+</animation>

@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="23" actionName="C096_attacks_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="C096_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4">
+            <frameData alpha="0" bitmapName="C096_attacks_21" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-41.049999,-64.050003" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData alpha="0.25" bitmapName="C096_attacks_21" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-41.049999,-64.050003" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData alpha="0.5" bitmapName="C096_attacks_21" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-41.049999,-64.050003" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData alpha="0.75" bitmapName="C096_attacks_21" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-41.049999,-64.050003" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="C096_attacks_21" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-41.049999,-64.050003" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="C096_attacks_22" scaleX="-3.150055" scaleY="-3.150055" rotation="179.999985" position="17.150000,-67.349998" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="C096_attacks_22" scaleX="-4.344925" scaleY="-4.344925" rotation="179.999985" position="26.100000,-77.250000" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="C096_attacks_22" scaleX="-5.539673" scaleY="-5.539673" rotation="179.999985" position="35.150002,-87.349998" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="C096_attacks_22" scaleX="-6.002640" scaleY="-6.002640" rotation="179.999985" position="31.500000,-88.800003" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData bitmapName="C096_attacks_22" scaleX="-6.465683" scaleY="-6.465683" rotation="179.999985" position="27.799999,-90.099998" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData alpha="0.5" bitmapName="C096_attacks_22" scaleX="-6.928772" scaleY="-6.928772" rotation="179.999985" position="24.049999,-91.250000" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData alpha="0" bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData alpha="0" bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData alpha="0" bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+        <frameInfo frame="19">
+            <frameData alpha="0" bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+        <frameInfo frame="20">
+            <frameData alpha="0" bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+        <frameInfo frame="21">
+            <frameData alpha="0" bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+        <frameInfo frame="22">
+            <frameData alpha="0" bitmapName="C096_attacks_22" scaleX="-6.928986" scaleY="-6.928986" rotation="179.999985" position="24.150000,-91.349998" />
+        </frameInfo>
+    </action>
+</animation>

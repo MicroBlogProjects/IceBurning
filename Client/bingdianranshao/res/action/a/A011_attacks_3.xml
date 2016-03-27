@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="21" actionName="A011_attacks_3">
+        <frameInfo frame="0">
+            <frameData bitmapName="A011_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="A011_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="A011_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="A011_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="A011_attacks_31" scaleX="-1.698395" scaleY="-1.698395" rotation="179.999985" position="-22.549999,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="A011_attacks_31" scaleX="-2.334641" scaleY="-2.334641" rotation="179.999985" position="13.550000,-84.750000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="A011_attacks_31" scaleX="-2.970886" scaleY="-2.970886" rotation="179.999985" position="49.599998,-84.750000" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="A011_attacks_31" scaleX="-3.607147" scaleY="-3.607147" rotation="179.999985" position="85.650002,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="A011_attacks_31" scaleX="-3.732147" scaleY="-3.732147" rotation="179.999985" position="68.199997,-84.849998" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="A011_attacks_31" scaleX="-3.857178" scaleY="-3.857178" rotation="179.999985" position="50.799999,-84.849998" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="A011_attacks_31" scaleX="-3.982239" scaleY="-3.982239" rotation="179.999985" position="33.299999,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="A011_attacks_31" scaleX="-4.107300" scaleY="-4.107300" rotation="179.999985" position="15.950000,-84.849998" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="A011_attacks_31" scaleX="-4.232361" scaleY="-4.232361" rotation="179.999985" position="-1.450000,-84.849998" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData bitmapName="A011_attacks_31" scaleX="-4.357407" scaleY="-4.357407" rotation="179.999985" position="-18.900000,-84.849998" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData bitmapName="A011_attacks_31" scaleX="-4.482452" scaleY="-4.482452" rotation="179.999985" position="-36.299999,-84.849998" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData bitmapName="A011_attacks_31" scaleX="-4.607605" scaleY="-4.607605" rotation="179.999985" position="-53.700001,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData alpha="0.75" bitmapName="A011_attacks_31" scaleX="-4.732544" scaleY="-4.732544" rotation="179.999985" position="-71.150002,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData alpha="0.5" bitmapName="A011_attacks_31" scaleX="-4.857697" scaleY="-4.857697" rotation="179.999985" position="-88.500000,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData alpha="0.25" bitmapName="A011_attacks_31" scaleX="-4.982773" scaleY="-4.982773" rotation="179.999985" position="-105.900002,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="19">
+            <frameData alpha="0" bitmapName="A011_attacks_31" scaleX="-5.108002" scaleY="-5.108002" rotation="179.999985" position="-123.300003,-84.800003" />
+        </frameInfo>
+        <frameInfo frame="20" />
+    </action>
+</animation>

@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="59" actionName="A015_rageskill_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="A015_rageskill_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5" />
+        <frameInfo frame="6" />
+        <frameInfo frame="7" />
+        <frameInfo frame="8" />
+        <frameInfo frame="9" />
+        <frameInfo frame="10" />
+        <frameInfo frame="11" />
+        <frameInfo frame="12" />
+        <frameInfo frame="13" />
+        <frameInfo frame="14" />
+        <frameInfo frame="15" />
+        <frameInfo frame="16" />
+        <frameInfo frame="17" />
+        <frameInfo frame="18" />
+        <frameInfo frame="19">
+            <frameData alpha="0" bitmapName="A015_rageskill_21" scaleX="-1.299103" scaleY="-1.299103" rotation="179.999985" position="-24.200001,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="20">
+            <frameData alpha="0.328125" bitmapName="A015_rageskill_21" scaleX="-1.601227" scaleY="-1.601227" rotation="179.999985" position="-24.200001,-3.250000" />
+        </frameInfo>
+        <frameInfo frame="21">
+            <frameData alpha="0.671875" bitmapName="A015_rageskill_21" scaleX="-1.903320" scaleY="-1.903320" rotation="179.999985" position="-24.150000,-3.250000" />
+        </frameInfo>
+        <frameInfo frame="22">
+            <frameData bitmapName="A015_rageskill_21" scaleX="-2.205475" scaleY="-2.205475" rotation="179.999985" position="-24.200001,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="23">
+            <frameData alpha="0.828125" bitmapName="A015_rageskill_21" scaleX="-2.488525" scaleY="-2.488525" rotation="179.999985" position="-24.250000,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="24">
+            <frameData alpha="0.671875" bitmapName="A015_rageskill_21" scaleX="-2.771515" scaleY="-2.771515" rotation="179.999985" position="-24.250000,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="25">
+            <frameData alpha="0.5" bitmapName="A015_rageskill_21" scaleX="-3.054565" scaleY="-3.054565" rotation="179.999985" position="-24.250000,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="26">
+            <frameData alpha="0.328125" bitmapName="A015_rageskill_21" scaleX="-3.337631" scaleY="-3.337631" rotation="179.999985" position="-24.250000,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="27">
+            <frameData alpha="0.171875" bitmapName="A015_rageskill_21" scaleX="-3.620651" scaleY="-3.620651" rotation="179.999985" position="-24.299999,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="28">
+            <frameData alpha="0" bitmapName="A015_rageskill_21" scaleX="-3.903687" scaleY="-3.903687" rotation="179.999985" position="-24.200001,-3.200000" />
+        </frameInfo>
+        <frameInfo frame="29" />
+        <frameInfo frame="30" />
+        <frameInfo frame="31" />
+        <frameInfo frame="32" />
+        <frameInfo frame="33" />
+        <frameInfo frame="34" />
+        <frameInfo frame="35" />
+        <frameInfo frame="36" />
+        <frameInfo frame="37" />
+        <frameInfo frame="38" />
+        <frameInfo frame="39" />
+        <frameInfo frame="40" />
+        <frameInfo frame="41" />
+        <frameInfo frame="42" />
+        <frameInfo frame="43" />
+        <frameInfo frame="44" />
+        <frameInfo frame="45" />
+        <frameInfo frame="46" />
+        <frameInfo frame="47" />
+        <frameInfo frame="48" />
+        <frameInfo frame="49" />
+        <frameInfo frame="50" />
+        <frameInfo frame="51" />
+        <frameInfo frame="52" />
+        <frameInfo frame="53" />
+        <frameInfo frame="54" />
+        <frameInfo frame="55" />
+        <frameInfo frame="56" />
+        <frameInfo frame="57" />
+        <frameInfo frame="58" />
+    </action>
+</animation>
