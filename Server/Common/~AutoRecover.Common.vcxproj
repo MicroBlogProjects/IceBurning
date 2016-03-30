@@ -113,11 +113,14 @@
     <ClInclude Include="Common.h" />
     <ClInclude Include="Common_Trace.h" />
     <ClInclude Include="Console_Output.h" />
+    <ClInclude Include="Message_i.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common_Trace.cpp" />
     <ClCompile Include="Console_Output.cpp" />
-    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

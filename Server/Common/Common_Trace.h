@@ -19,7 +19,7 @@
             int fd = NS_LG::OpenLogFile(&NS_LG::warn_log_path); \
             if (fd < 0) \
             { \
-                err_quit("PrintWarnLog Error."); \
+                err_quit("PrintWarnLog Error...Maybe sudo?"); \
                 break; \
             } \
             NS_LG::PrintLog(fd, file_name, line_no, func, fmt, ##args); \
@@ -29,7 +29,7 @@
             int fd = NS_LG::OpenLogFile(&NS_LG::error_log_path); \
             if (fd < 0) \
             { \
-                err_quit("PrintErrorLog Error."); \
+                err_quit("PrintErrorLog Error...Maybe sudo?"); \
                 break; \
             } \
             NS_LG::PrintLog(fd, file_name, line_no, func, fmt, ##args); \

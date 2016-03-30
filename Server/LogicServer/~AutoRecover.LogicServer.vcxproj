@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3D18D239-D84A-495D-BE7B-8BCE4755A6F7}</ProjectGuid>
-    <RootNamespace>Common</RootNamespace>
+    <ProjectGuid>{CA9A4C10-A248-4D5B-BF52-EC8203A100BC}</ProjectGuid>
+    <RootNamespace>LogicServer</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,17 +110,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Common.h" />
-    <ClInclude Include="Common_Trace.h" />
-    <ClInclude Include="Console_Output.h" />
-    <ClInclude Include="Message_i.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Common_Trace.cpp" />
-    <ClCompile Include="Console_Output.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Makefile" />
+    <ClInclude Include="Logicserver_Common.h" />
+    <ClInclude Include="Logicserver_Message.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

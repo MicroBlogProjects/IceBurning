@@ -1,0 +1,316 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	ConnectServer/test/a.cpp	/^A::A()$/;"	f	class:A	signature:()
+A	ConnectServer/test/a.cpp	/^A::A(const A& from)$/;"	f	class:A	signature:(const A& from)
+A	ConnectServer/test/a.h	/^  A();$/;"	p	class:A	access:public	signature:()
+A	ConnectServer/test/a.h	/^  A(const A& from);$/;"	p	class:A	access:public	signature:(const A& from)
+A	ConnectServer/test/a.h	/^class A : public ::google::protobuf::Message {$/;"	c	inherits:::google::protobuf::Message
+A::A	ConnectServer/test/a.cpp	/^A::A()$/;"	f	class:A	signature:()
+A::A	ConnectServer/test/a.cpp	/^A::A(const A& from)$/;"	f	class:A	signature:(const A& from)
+A::A	ConnectServer/test/a.h	/^  A();$/;"	p	class:A	access:public	signature:()
+A::A	ConnectServer/test/a.h	/^  A(const A& from);$/;"	p	class:A	access:public	signature:(const A& from)
+A::ByteSize	ConnectServer/test/a.cpp	/^int A::ByteSize() const {$/;"	f	class:A	signature:() const
+A::ByteSize	ConnectServer/test/a.h	/^  int ByteSize() const;$/;"	p	class:A	access:public	signature:() const
+A::Clear	ConnectServer/test/a.cpp	/^void A::Clear() {$/;"	f	class:A	signature:()
+A::Clear	ConnectServer/test/a.h	/^  void Clear();$/;"	p	class:A	access:public	signature:()
+A::CopyFrom	ConnectServer/test/a.cpp	/^void A::CopyFrom(const ::google::protobuf::Message& from) {$/;"	f	class:A	signature:(const ::google::protobuf::Message& from)
+A::CopyFrom	ConnectServer/test/a.cpp	/^void A::CopyFrom(const A& from) {$/;"	f	class:A	signature:(const A& from)
+A::CopyFrom	ConnectServer/test/a.h	/^  void CopyFrom(const ::google::protobuf::Message& from);$/;"	p	class:A	access:public	signature:(const ::google::protobuf::Message& from)
+A::CopyFrom	ConnectServer/test/a.h	/^  void CopyFrom(const A& from);$/;"	p	class:A	access:public	signature:(const A& from)
+A::GetCachedSize	ConnectServer/test/a.h	/^  int GetCachedSize() const { return _cached_size_; }$/;"	f	class:A	access:public	signature:() const
+A::GetMetadata	ConnectServer/test/a.cpp	/^::google::protobuf::Metadata A::GetMetadata() const {$/;"	f	class:A	signature:() const
+A::GetMetadata	ConnectServer/test/a.h	/^  ::google::protobuf::Metadata GetMetadata() const;$/;"	p	class:A	access:public	signature:() const
+A::InitAsDefaultInstance	ConnectServer/test/a.cpp	/^void A::InitAsDefaultInstance() {$/;"	f	class:A	signature:()
+A::InitAsDefaultInstance	ConnectServer/test/a.h	/^  void InitAsDefaultInstance();$/;"	p	class:A	access:private	signature:()
+A::IsInitialized	ConnectServer/test/a.cpp	/^bool A::IsInitialized() const {$/;"	f	class:A	signature:() const
+A::IsInitialized	ConnectServer/test/a.h	/^  bool IsInitialized() const;$/;"	p	class:A	access:public	signature:() const
+A::MergeFrom	ConnectServer/test/a.cpp	/^void A::MergeFrom(const ::google::protobuf::Message& from) {$/;"	f	class:A	signature:(const ::google::protobuf::Message& from)
+A::MergeFrom	ConnectServer/test/a.cpp	/^void A::MergeFrom(const A& from) {$/;"	f	class:A	signature:(const A& from)
+A::MergeFrom	ConnectServer/test/a.h	/^  void MergeFrom(const ::google::protobuf::Message& from);$/;"	p	class:A	access:public	signature:(const ::google::protobuf::Message& from)
+A::MergeFrom	ConnectServer/test/a.h	/^  void MergeFrom(const A& from);$/;"	p	class:A	access:public	signature:(const A& from)
+A::MergePartialFromCodedStream	ConnectServer/test/a.cpp	/^bool A::MergePartialFromCodedStream($/;"	f	class:A	signature:( ::google::protobuf::io::CodedInputStream* input)
+A::MergePartialFromCodedStream	ConnectServer/test/a.h	/^  bool MergePartialFromCodedStream($/;"	p	class:A	access:public	signature:( ::google::protobuf::io::CodedInputStream* input)
+A::New	ConnectServer/test/a.cpp	/^A* A::New() const {$/;"	f	class:A	signature:() const
+A::New	ConnectServer/test/a.h	/^  A* New() const;$/;"	p	class:A	access:public	signature:() const
+A::SerializeWithCachedSizes	ConnectServer/test/a.cpp	/^void A::SerializeWithCachedSizes($/;"	f	class:A	signature:( ::google::protobuf::io::CodedOutputStream* output) const
+A::SerializeWithCachedSizes	ConnectServer/test/a.h	/^  void SerializeWithCachedSizes($/;"	p	class:A	access:public	signature:( ::google::protobuf::io::CodedOutputStream* output) const
+A::SerializeWithCachedSizesToArray	ConnectServer/test/a.cpp	/^::google::protobuf::uint8* A::SerializeWithCachedSizesToArray($/;"	f	class:A	signature:( ::google::protobuf::uint8* target) const
+A::SerializeWithCachedSizesToArray	ConnectServer/test/a.h	/^  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;$/;"	p	class:A	access:public	signature:(::google::protobuf::uint8* output) const
+A::SetCachedSize	ConnectServer/test/a.cpp	/^void A::SetCachedSize(int size) const {$/;"	f	class:A	signature:(int size) const
+A::SetCachedSize	ConnectServer/test/a.h	/^  void SetCachedSize(int size) const;$/;"	p	class:A	access:private	signature:(int size) const
+A::SharedCtor	ConnectServer/test/a.cpp	/^void A::SharedCtor() {$/;"	f	class:A	signature:()
+A::SharedCtor	ConnectServer/test/a.h	/^  void SharedCtor();$/;"	p	class:A	access:private	signature:()
+A::SharedDtor	ConnectServer/test/a.cpp	/^void A::SharedDtor() {$/;"	f	class:A	signature:()
+A::SharedDtor	ConnectServer/test/a.h	/^  void SharedDtor();$/;"	p	class:A	access:private	signature:()
+A::Swap	ConnectServer/test/a.cpp	/^void A::Swap(A* other) {$/;"	f	class:A	signature:(A* other)
+A::Swap	ConnectServer/test/a.h	/^  void Swap(A* other);$/;"	p	class:A	access:public	signature:(A* other)
+A::_cached_size_	ConnectServer/test/a.h	/^  mutable int _cached_size_;$/;"	m	class:A	access:private
+A::_has_bits_	ConnectServer/test/a.h	/^  ::google::protobuf::uint32 _has_bits_[(2 + 31) \/ 32];$/;"	m	class:A	access:private
+A::_unknown_fields_	ConnectServer/test/a.h	/^  ::google::protobuf::UnknownFieldSet _unknown_fields_;$/;"	m	class:A	access:private
+A::a	ConnectServer/test/a.h	/^  inline ::google::protobuf::int32 a() const;$/;"	p	class:A	access:public	signature:() const
+A::a	ConnectServer/test/a.h	/^inline ::google::protobuf::int32 A::a() const {$/;"	f	class:A	signature:() const
+A::a_	ConnectServer/test/a.h	/^  ::google::protobuf::int32 a_;$/;"	m	class:A	access:private
+A::b	ConnectServer/test/a.h	/^  inline const ::std::string& b() const;$/;"	p	class:A	access:public	signature:() const
+A::b	ConnectServer/test/a.h	/^inline const ::std::string& A::b() const {$/;"	f	class:A	signature:() const
+A::b_	ConnectServer/test/a.h	/^  ::std::string* b_;$/;"	m	class:A	access:private
+A::clear_a	ConnectServer/test/a.h	/^  inline void clear_a();$/;"	p	class:A	access:public	signature:()
+A::clear_a	ConnectServer/test/a.h	/^inline void A::clear_a() {$/;"	f	class:A	signature:()
+A::clear_b	ConnectServer/test/a.h	/^  inline void clear_b();$/;"	p	class:A	access:public	signature:()
+A::clear_b	ConnectServer/test/a.h	/^inline void A::clear_b() {$/;"	f	class:A	signature:()
+A::clear_has_a	ConnectServer/test/a.h	/^  inline void clear_has_a();$/;"	p	class:A	access:private	signature:()
+A::clear_has_a	ConnectServer/test/a.h	/^inline void A::clear_has_a() {$/;"	f	class:A	signature:()
+A::clear_has_b	ConnectServer/test/a.h	/^  inline void clear_has_b();$/;"	p	class:A	access:private	signature:()
+A::clear_has_b	ConnectServer/test/a.h	/^inline void A::clear_has_b() {$/;"	f	class:A	signature:()
+A::default_instance	ConnectServer/test/a.cpp	/^const A& A::default_instance() {$/;"	f	class:A	signature:()
+A::default_instance	ConnectServer/test/a.h	/^  static const A& default_instance();$/;"	p	class:A	access:public	signature:()
+A::default_instance_	ConnectServer/test/a.cpp	/^A* A::default_instance_ = NULL;$/;"	m	class:A	file:
+A::default_instance_	ConnectServer/test/a.h	/^  static A* default_instance_;$/;"	m	class:A	access:private
+A::descriptor	ConnectServer/test/a.cpp	/^const ::google::protobuf::Descriptor* A::descriptor() {$/;"	f	class:A	signature:()
+A::descriptor	ConnectServer/test/a.h	/^  static const ::google::protobuf::Descriptor* descriptor();$/;"	p	class:A	access:public	signature:()
+A::has_a	ConnectServer/test/a.h	/^  inline bool has_a() const;$/;"	p	class:A	access:public	signature:() const
+A::has_a	ConnectServer/test/a.h	/^inline bool A::has_a() const {$/;"	f	class:A	signature:() const
+A::has_b	ConnectServer/test/a.h	/^  inline bool has_b() const;$/;"	p	class:A	access:public	signature:() const
+A::has_b	ConnectServer/test/a.h	/^inline bool A::has_b() const {$/;"	f	class:A	signature:() const
+A::kAFieldNumber	ConnectServer/test/a.cpp	/^const int A::kAFieldNumber;$/;"	m	class:A	file:
+A::kAFieldNumber	ConnectServer/test/a.h	/^  static const int kAFieldNumber = 1;$/;"	m	class:A	access:public
+A::kBFieldNumber	ConnectServer/test/a.cpp	/^const int A::kBFieldNumber;$/;"	m	class:A	file:
+A::kBFieldNumber	ConnectServer/test/a.h	/^  static const int kBFieldNumber = 2;$/;"	m	class:A	access:public
+A::mutable_b	ConnectServer/test/a.h	/^  inline ::std::string* mutable_b();$/;"	p	class:A	access:public	signature:()
+A::mutable_b	ConnectServer/test/a.h	/^inline ::std::string* A::mutable_b() {$/;"	f	class:A	signature:()
+A::mutable_unknown_fields	ConnectServer/test/a.h	/^  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {$/;"	f	class:A	access:public	signature:()
+A::operator =	ConnectServer/test/a.h	/^  inline A& operator=(const A& from) {$/;"	f	class:A	access:public	signature:(const A& from)
+A::protobuf_AddDesc_a_2eproto	ConnectServer/test/a.h	/^  friend void  protobuf_AddDesc_a_2eproto();$/;"	p	class:A	access:friend	signature:()
+A::protobuf_AssignDesc_a_2eproto	ConnectServer/test/a.h	/^  friend void protobuf_AssignDesc_a_2eproto();$/;"	p	class:A	access:friend	signature:()
+A::protobuf_ShutdownFile_a_2eproto	ConnectServer/test/a.h	/^  friend void protobuf_ShutdownFile_a_2eproto();$/;"	p	class:A	access:friend	signature:()
+A::release_b	ConnectServer/test/a.h	/^  inline ::std::string* release_b();$/;"	p	class:A	access:public	signature:()
+A::release_b	ConnectServer/test/a.h	/^inline ::std::string* A::release_b() {$/;"	f	class:A	signature:()
+A::set_a	ConnectServer/test/a.h	/^  inline void set_a(::google::protobuf::int32 value);$/;"	p	class:A	access:public	signature:(::google::protobuf::int32 value)
+A::set_a	ConnectServer/test/a.h	/^inline void A::set_a(::google::protobuf::int32 value) {$/;"	f	class:A	signature:(::google::protobuf::int32 value)
+A::set_allocated_b	ConnectServer/test/a.h	/^  inline void set_allocated_b(::std::string* b);$/;"	p	class:A	access:public	signature:(::std::string* b)
+A::set_allocated_b	ConnectServer/test/a.h	/^inline void A::set_allocated_b(::std::string* b) {$/;"	f	class:A	signature:(::std::string* b)
+A::set_b	ConnectServer/test/a.h	/^  inline void set_b(const ::std::string& value);$/;"	p	class:A	access:public	signature:(const ::std::string& value)
+A::set_b	ConnectServer/test/a.h	/^  inline void set_b(const char* value);$/;"	p	class:A	access:public	signature:(const char* value)
+A::set_b	ConnectServer/test/a.h	/^  inline void set_b(const char* value, size_t size);$/;"	p	class:A	access:public	signature:(const char* value, size_t size)
+A::set_b	ConnectServer/test/a.h	/^inline void A::set_b(const ::std::string& value) {$/;"	f	class:A	signature:(const ::std::string& value)
+A::set_b	ConnectServer/test/a.h	/^inline void A::set_b(const char* value) {$/;"	f	class:A	signature:(const char* value)
+A::set_b	ConnectServer/test/a.h	/^inline void A::set_b(const char* value, size_t size) {$/;"	f	class:A	signature:(const char* value, size_t size)
+A::set_has_a	ConnectServer/test/a.h	/^  inline void set_has_a();$/;"	p	class:A	access:private	signature:()
+A::set_has_a	ConnectServer/test/a.h	/^inline void A::set_has_a() {$/;"	f	class:A	signature:()
+A::set_has_b	ConnectServer/test/a.h	/^  inline void set_has_b();$/;"	p	class:A	access:private	signature:()
+A::set_has_b	ConnectServer/test/a.h	/^inline void A::set_has_b() {$/;"	f	class:A	signature:()
+A::unknown_fields	ConnectServer/test/a.h	/^  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {$/;"	f	class:A	access:public	signature:() const
+A::~A	ConnectServer/test/a.cpp	/^A::~A() {$/;"	f	class:A	signature:()
+A::~A	ConnectServer/test/a.h	/^  virtual ~A();$/;"	p	class:A	access:public	signature:()
+A_descriptor_	ConnectServer/test/a.cpp	/^const ::google::protobuf::Descriptor* A_descriptor_ = NULL;$/;"	m	namespace:__anon1	file:
+A_reflection_	ConnectServer/test/a.cpp	/^  A_reflection_ = NULL;$/;"	m	namespace:__anon1	file:
+BINARY	ConnectServer/makefile	/^BINARY := ..\/ConnServer$/;"	m
+BINARY	LogicServer/makefile	/^BINARY := ..\/test$/;"	m
+BUFSIZE	ConnectServer/Connectserver_Common.h	21;"	d
+ByteSize	ConnectServer/test/a.cpp	/^int A::ByteSize() const {$/;"	f	class:A	signature:() const
+ByteSize	ConnectServer/test/a.h	/^  int ByteSize() const;$/;"	p	class:A	access:public	signature:() const
+CMessage	ConnectServer/Message.h	/^class CMessage$/;"	c
+CPPFLAGS	ConnectServer/makefile	/^CPPFLAGS= -g$/;"	m
+CPPFLAGS	LogicServer/makefile	/^CPPFLAGS= -g$/;"	m
+CPP_FILES	ConnectServer/makefile	/^CPP_FILES := $(shell find $(SRCDIR) -name "*.cpp")$/;"	m
+CPP_FILES	LogicServer/makefile	/^CPP_FILES := $(shell find $(SRCDIR) -name "*.cpp")$/;"	m
+Clear	ConnectServer/test/a.cpp	/^void A::Clear() {$/;"	f	class:A	signature:()
+Clear	ConnectServer/test/a.h	/^  void Clear();$/;"	p	class:A	access:public	signature:()
+CopyFrom	ConnectServer/test/a.cpp	/^void A::CopyFrom(const ::google::protobuf::Message& from) {$/;"	f	class:A	signature:(const ::google::protobuf::Message& from)
+CopyFrom	ConnectServer/test/a.cpp	/^void A::CopyFrom(const A& from) {$/;"	f	class:A	signature:(const A& from)
+CopyFrom	ConnectServer/test/a.h	/^  void CopyFrom(const ::google::protobuf::Message& from);$/;"	p	class:A	access:public	signature:(const ::google::protobuf::Message& from)
+CopyFrom	ConnectServer/test/a.h	/^  void CopyFrom(const A& from);$/;"	p	class:A	access:public	signature:(const A& from)
+DEP_FILES	ConnectServer/makefile	/^DEP_FILES := $(subst \/,-,$(subst $(SRCDIR)\/,,$(CPP_FILES:%.cpp=%.d)))$/;"	m
+DEP_FILES	LogicServer/makefile	/^DEP_FILES := $(subst \/,-,$(subst $(SRCDIR)\/,,$(CPP_FILES:%.cpp=%.d)))$/;"	m
+DO_	ConnectServer/test/a.cpp	171;"	d	file:
+DO_	ConnectServer/test/a.cpp	220;"	d	file:
+Error_Log	Common/Common_Trace.h	15;"	d
+GOOGLE_PROTOBUF_DECLARE_ONCE	ConnectServer/test/a.cpp	/^GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);$/;"	p	namespace:__anon2	file:	signature:(protobuf_AssignDescriptors_once_)
+GetCachedSize	ConnectServer/test/a.h	/^  int GetCachedSize() const { return _cached_size_; }$/;"	f	class:A	access:public	signature:() const
+GetFileName	Common/Common_Trace.cpp	/^std::string* GetFileName(const struct tm* curr_tm)$/;"	f	signature:(const struct tm* curr_tm)
+GetFileName	Common/Common_Trace.h	/^std::string* GetFileName(const struct tm* tm = NULL);$/;"	p	signature:(const struct tm* tm = NULL)
+GetMetadata	ConnectServer/test/a.cpp	/^::google::protobuf::Metadata A::GetMetadata() const {$/;"	f	class:A	signature:() const
+GetMetadata	ConnectServer/test/a.h	/^  ::google::protobuf::Metadata GetMetadata() const;$/;"	p	class:A	access:public	signature:() const
+INTERNAL_SUPPRESS_PROTOBUF_FIELD_DEPRECATION	ConnectServer/test/a.cpp	4;"	d	file:
+InitAsDefaultInstance	ConnectServer/test/a.cpp	/^void A::InitAsDefaultInstance() {$/;"	f	class:A	signature:()
+InitAsDefaultInstance	ConnectServer/test/a.h	/^  void InitAsDefaultInstance();$/;"	p	class:A	access:private	signature:()
+IsInitialized	ConnectServer/test/a.cpp	/^bool A::IsInitialized() const {$/;"	f	class:A	signature:() const
+IsInitialized	ConnectServer/test/a.h	/^  bool IsInitialized() const;$/;"	p	class:A	access:public	signature:() const
+LDFLAGS	ConnectServer/makefile	/^LDFLAGS = -g$/;"	m
+LDFLAGS	LogicServer/makefile	/^LDFLAGS = -g$/;"	m
+LISTENQ	ConnectServer/Connectserver_Common.h	16;"	d
+LOG_BUF_MAX	Common/Common_Trace.h	41;"	d
+MAXEVENTS	ConnectServer/Connectserver_Common.h	18;"	d
+MAXLINE	Common/Console_Output.h	7;"	d
+MAXLINE	ConnectServer/Connectserver_Common.h	20;"	d
+MergeFrom	ConnectServer/test/a.cpp	/^void A::MergeFrom(const ::google::protobuf::Message& from) {$/;"	f	class:A	signature:(const ::google::protobuf::Message& from)
+MergeFrom	ConnectServer/test/a.cpp	/^void A::MergeFrom(const A& from) {$/;"	f	class:A	signature:(const A& from)
+MergeFrom	ConnectServer/test/a.h	/^  void MergeFrom(const ::google::protobuf::Message& from);$/;"	p	class:A	access:public	signature:(const ::google::protobuf::Message& from)
+MergeFrom	ConnectServer/test/a.h	/^  void MergeFrom(const A& from);$/;"	p	class:A	access:public	signature:(const A& from)
+MergePartialFromCodedStream	ConnectServer/test/a.cpp	/^bool A::MergePartialFromCodedStream($/;"	f	class:A	signature:( ::google::protobuf::io::CodedInputStream* input)
+MergePartialFromCodedStream	ConnectServer/test/a.h	/^  bool MergePartialFromCodedStream($/;"	p	class:A	access:public	signature:( ::google::protobuf::io::CodedInputStream* input)
+NS_CS	Common/Common.h	35;"	d
+NS_CS_BEGIN	Common/Common.h	37;"	d
+NS_CS_END	Common/Common.h	38;"	d
+NS_GJ	Common/Common.h	25;"	d
+NS_GJ_BEGIN	Common/Common.h	27;"	d
+NS_GJ_END	Common/Common.h	28;"	d
+NS_LG	Common/Common.h	30;"	d
+NS_LG_BEGIN	Common/Common.h	32;"	d
+NS_LG_END	Common/Common.h	33;"	d
+NS_LS	Common/Common.h	40;"	d
+NS_LS_BEGIN	Common/Common.h	42;"	d
+NS_LS_END	Common/Common.h	43;"	d
+New	ConnectServer/test/a.cpp	/^A* A::New() const {$/;"	f	class:A	signature:() const
+New	ConnectServer/test/a.h	/^  A* New() const;$/;"	p	class:A	access:public	signature:() const
+OBJ_FILES	ConnectServer/makefile	/^OBJ_FILES := $(subst \/,-,$(subst $(SRCDIR)\/,,$(CPP_FILES:%.cpp=%.o)))$/;"	m
+OBJ_FILES	LogicServer/makefile	/^OBJ_FILES := $(subst \/,-,$(subst $(SRCDIR)\/,,$(CPP_FILES:%.cpp=%.o)))$/;"	m
+OpenLogFile	Common/Common_Trace.cpp	/^int OpenLogFile(const std::string* path, const std::string* filename)$/;"	f	signature:(const std::string* path, const std::string* filename)
+OpenLogFile	Common/Common_Trace.h	/^int OpenLogFile(const std::string* path, const std::string* filename = NULL);$/;"	p	signature:(const std::string* path, const std::string* filename = NULL)
+PATH_MAX	Common/Common_Trace.h	40;"	d
+PORT	ConnectServer/Connectserver_Common.h	15;"	d
+PROTOBUF_a_2eproto__INCLUDED	ConnectServer/test/a.h	5;"	d
+PrintErrorLog	Common/Common_Trace.h	27;"	d
+PrintLog	Common/Common_Trace.cpp	/^void PrintLog(int fd, const char* file_name, int line_no, const char* func, const char* fmt, ...)$/;"	f	signature:(int fd, const char* file_name, int line_no, const char* func, const char* fmt, ...)
+PrintLog	Common/Common_Trace.h	/^void PrintLog(int fd, const char* file_name, int line_no, const char* func, const char* fmt, ...);$/;"	p	signature:(int fd, const char* file_name, int line_no, const char* func, const char* fmt, ...)
+PrintWarnLog	Common/Common_Trace.h	17;"	d
+SA	ConnectServer/Connectserver_Common.h	17;"	d
+SMessageBody	ConnectServer/Message.h	/^struct SMessageBody$/;"	s
+SMessageHead	ConnectServer/Message.h	/^struct SMessageHead$/;"	s
+SMessageHead::decode	ConnectServer/Message.h	/^    int32_t  decode(const char* pszIn, const int32_t iInLength);$/;"	p	struct:SMessageHead	access:public	signature:(const char* pszIn, const int32_t iInLength)
+SMessageHead::encode	ConnectServer/Message.h	/^    int32_t  encode(char* pszOut, int32_t& iOutLength) const;$/;"	p	struct:SMessageHead	access:public	signature:(char* pszOut, int32_t& iOutLength) const
+SMessageHead::m_iMessageID	ConnectServer/Message.h	/^    int16_t m_iMessageID;$/;"	m	struct:SMessageHead	access:public
+SMessageHead::m_iMessageType	ConnectServer/Message.h	/^    int8_t m_iMessageType;$/;"	m	struct:SMessageHead	access:public
+SMessageHead::m_iPackageLen	ConnectServer/Message.h	/^    int32_t m_iPackageLen;$/;"	m	struct:SMessageHead	access:public
+SMessageHead::m_iUin	ConnectServer/Message.h	/^    int32_t m_iUin;$/;"	m	struct:SMessageHead	access:public
+SMessageHead::size	ConnectServer/Message.h	/^    int32_t size();$/;"	p	struct:SMessageHead	access:public	signature:()
+SRCDIR	ConnectServer/makefile	/^SRCDIR := ..$/;"	m
+SRCDIR	LogicServer/makefile	/^SRCDIR := ..$/;"	m
+SerializeWithCachedSizes	ConnectServer/test/a.cpp	/^void A::SerializeWithCachedSizes($/;"	f	class:A	signature:( ::google::protobuf::io::CodedOutputStream* output) const
+SerializeWithCachedSizes	ConnectServer/test/a.h	/^  void SerializeWithCachedSizes($/;"	p	class:A	access:public	signature:( ::google::protobuf::io::CodedOutputStream* output) const
+SerializeWithCachedSizesToArray	ConnectServer/test/a.cpp	/^::google::protobuf::uint8* A::SerializeWithCachedSizesToArray($/;"	f	class:A	signature:( ::google::protobuf::uint8* target) const
+SerializeWithCachedSizesToArray	ConnectServer/test/a.h	/^  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;$/;"	p	class:A	access:public	signature:(::google::protobuf::uint8* output) const
+SetCachedSize	ConnectServer/test/a.cpp	/^void A::SetCachedSize(int size) const {$/;"	f	class:A	signature:(int size) const
+SetCachedSize	ConnectServer/test/a.h	/^  void SetCachedSize(int size) const;$/;"	p	class:A	access:private	signature:(int size) const
+SharedCtor	ConnectServer/test/a.cpp	/^void A::SharedCtor() {$/;"	f	class:A	signature:()
+SharedCtor	ConnectServer/test/a.h	/^  void SharedCtor();$/;"	p	class:A	access:private	signature:()
+SharedDtor	ConnectServer/test/a.cpp	/^void A::SharedDtor() {$/;"	f	class:A	signature:()
+SharedDtor	ConnectServer/test/a.h	/^  void SharedDtor();$/;"	p	class:A	access:private	signature:()
+StaticDescriptorInitializer_a_2eproto	ConnectServer/test/a.cpp	/^  StaticDescriptorInitializer_a_2eproto() {$/;"	f	struct:StaticDescriptorInitializer_a_2eproto	access:public	signature:()
+StaticDescriptorInitializer_a_2eproto	ConnectServer/test/a.cpp	/^struct StaticDescriptorInitializer_a_2eproto {$/;"	s	file:
+StaticDescriptorInitializer_a_2eproto::StaticDescriptorInitializer_a_2eproto	ConnectServer/test/a.cpp	/^  StaticDescriptorInitializer_a_2eproto() {$/;"	f	struct:StaticDescriptorInitializer_a_2eproto	access:public	signature:()
+Swap	ConnectServer/test/a.cpp	/^void A::Swap(A* other) {$/;"	f	class:A	signature:(A* other)
+Swap	ConnectServer/test/a.h	/^  void Swap(A* other);$/;"	p	class:A	access:public	signature:(A* other)
+TRACE_ERROR	Common/Common_Trace.h	12;"	d
+TRACE_WARN	Common/Common_Trace.h	11;"	d
+US_NS_CS	Common/Common.h	36;"	d
+US_NS_GJ	Common/Common.h	26;"	d
+US_NS_LG	Common/Common.h	31;"	d
+US_NS_LS	Common/Common.h	41;"	d
+Warn_Log	Common/Common_Trace.h	14;"	d
+__COMMON_H__	Common/Common.h	3;"	d
+__COMMON_TRACE_H__	Common/Common_Trace.h	4;"	d
+__CONNECTSERVER_COMMON_H__	ConnectServer/Connectserver_Common.h	4;"	d
+__CONSOLE_OUTPUT_H__	Common/Console_Output.h	3;"	d
+__MESSAGE_H__	ConnectServer/Message.h	4;"	d
+__anon1::A_descriptor_	ConnectServer/test/a.cpp	/^const ::google::protobuf::Descriptor* A_descriptor_ = NULL;$/;"	m	namespace:__anon1	file:
+__anon1::A_reflection_	ConnectServer/test/a.cpp	/^  A_reflection_ = NULL;$/;"	m	namespace:__anon1	file:
+__anon2::GOOGLE_PROTOBUF_DECLARE_ONCE	ConnectServer/test/a.cpp	/^GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);$/;"	p	namespace:__anon2	file:	signature:(protobuf_AssignDescriptors_once_)
+__anon2::protobuf_AssignDescriptorsOnce	ConnectServer/test/a.cpp	/^inline void protobuf_AssignDescriptorsOnce() {$/;"	f	namespace:__anon2	signature:()
+__anon2::protobuf_RegisterTypes	ConnectServer/test/a.cpp	/^void protobuf_RegisterTypes(const ::std::string&) {$/;"	f	namespace:__anon2	signature:(const ::std::string&)
+_cached_size_	ConnectServer/test/a.h	/^  mutable int _cached_size_;$/;"	m	class:A	access:private
+_has_bits_	ConnectServer/test/a.h	/^  ::google::protobuf::uint32 _has_bits_[(2 + 31) \/ 32];$/;"	m	class:A	access:private
+_unknown_fields_	ConnectServer/test/a.h	/^  ::google::protobuf::UnknownFieldSet _unknown_fields_;$/;"	m	class:A	access:private
+a	ConnectServer/test/a.h	/^  inline ::google::protobuf::int32 a() const;$/;"	p	class:A	access:public	signature:() const
+a	ConnectServer/test/a.h	/^inline ::google::protobuf::int32 A::a() const {$/;"	f	class:A	signature:() const
+a_	ConnectServer/test/a.h	/^  ::google::protobuf::int32 a_;$/;"	m	class:A	access:private
+b	ConnectServer/test/a.h	/^  inline const ::std::string& b() const;$/;"	p	class:A	access:public	signature:() const
+b	ConnectServer/test/a.h	/^inline const ::std::string& A::b() const {$/;"	f	class:A	signature:() const
+b_	ConnectServer/test/a.h	/^  ::std::string* b_;$/;"	m	class:A	access:private
+clear_a	ConnectServer/test/a.h	/^  inline void clear_a();$/;"	p	class:A	access:public	signature:()
+clear_a	ConnectServer/test/a.h	/^inline void A::clear_a() {$/;"	f	class:A	signature:()
+clear_b	ConnectServer/test/a.h	/^  inline void clear_b();$/;"	p	class:A	access:public	signature:()
+clear_b	ConnectServer/test/a.h	/^inline void A::clear_b() {$/;"	f	class:A	signature:()
+clear_has_a	ConnectServer/test/a.h	/^  inline void clear_has_a();$/;"	p	class:A	access:private	signature:()
+clear_has_a	ConnectServer/test/a.h	/^inline void A::clear_has_a() {$/;"	f	class:A	signature:()
+clear_has_b	ConnectServer/test/a.h	/^  inline void clear_has_b();$/;"	p	class:A	access:private	signature:()
+clear_has_b	ConnectServer/test/a.h	/^inline void A::clear_has_b() {$/;"	f	class:A	signature:()
+decode	ConnectServer/Message.h	/^    int32_t  decode(const char* pszIn, const int32_t iInLength);$/;"	p	struct:SMessageHead	access:public	signature:(const char* pszIn, const int32_t iInLength)
+default_instance	ConnectServer/test/a.cpp	/^const A& A::default_instance() {$/;"	f	class:A	signature:()
+default_instance	ConnectServer/test/a.h	/^  static const A& default_instance();$/;"	p	class:A	access:public	signature:()
+default_instance_	ConnectServer/test/a.cpp	/^A* A::default_instance_ = NULL;$/;"	m	class:A	file:
+default_instance_	ConnectServer/test/a.h	/^  static A* default_instance_;$/;"	m	class:A	access:private
+descriptor	ConnectServer/test/a.cpp	/^const ::google::protobuf::Descriptor* A::descriptor() {$/;"	f	class:A	signature:()
+descriptor	ConnectServer/test/a.h	/^  static const ::google::protobuf::Descriptor* descriptor();$/;"	p	class:A	access:public	signature:()
+encode	ConnectServer/Message.h	/^    int32_t  encode(char* pszOut, int32_t& iOutLength) const;$/;"	p	struct:SMessageHead	access:public	signature:(char* pszOut, int32_t& iOutLength) const
+err_doit	Common/Console_Output.cpp	/^static void err_doit(int errnoflag, int error, const char *fmt, va_list ap)$/;"	f	file:	signature:(int errnoflag, int error, const char *fmt, va_list ap)
+err_doit	Common/Console_Output.h	/^static void err_doit(int errnoflag, int error, const char *fmt, va_list ap);$/;"	p	signature:(int errnoflag, int error, const char *fmt, va_list ap)
+err_doit	Common/Console_Output.h	/^static void err_doit(int, int, const char *, va_list);$/;"	p	signature:(int, int, const char *, va_list)
+err_dump	Common/Console_Output.cpp	/^void err_dump(const char *fmt, ...)$/;"	f	signature:(const char *fmt, ...)
+err_dump	Common/Console_Output.h	/^void err_dump(const char *fmt, ...);$/;"	p	signature:(const char *fmt, ...)
+err_exit	Common/Console_Output.cpp	/^void err_exit(int error, const char *fmt, ...)$/;"	f	signature:(int error, const char *fmt, ...)
+err_exit	Common/Console_Output.h	/^void err_exit(int error, const char *fmt, ...);$/;"	p	signature:(int error, const char *fmt, ...)
+err_msg	Common/Console_Output.cpp	/^void err_msg(const char *fmt, ...)$/;"	f	signature:(const char *fmt, ...)
+err_msg	Common/Console_Output.h	/^void err_msg(const char *fmt, ...);$/;"	p	signature:(const char *fmt, ...)
+err_quit	Common/Console_Output.cpp	/^void err_quit(const char *fmt, ...)$/;"	f	signature:(const char *fmt, ...)
+err_quit	Common/Console_Output.h	/^void err_quit(const char *fmt, ...);$/;"	p	signature:(const char *fmt, ...)
+err_ret	Common/Console_Output.cpp	/^void err_ret(const char *fmt, ...)$/;"	f	signature:(const char *fmt, ...)
+err_ret	Common/Console_Output.h	/^void err_ret(const char *fmt, ...);$/;"	p	signature:(const char *fmt, ...)
+err_sys	Common/Console_Output.cpp	/^void err_sys(const char *fmt, ...)$/;"	f	signature:(const char *fmt, ...)
+err_sys	Common/Console_Output.h	/^void err_sys(const char *fmt, ...);$/;"	p	signature:(const char *fmt, ...)
+error_log_path	Common/Common_Trace.h	/^const std::string error_log_path = "\/data\/log\/mygame\/error\/";$/;"	v
+google	ConnectServer/test/a.h	/^namespace google {$/;"	n
+google::protobuf	ConnectServer/test/a.h	/^namespace protobuf {$/;"	n	namespace:google
+has_a	ConnectServer/test/a.h	/^  inline bool has_a() const;$/;"	p	class:A	access:public	signature:() const
+has_a	ConnectServer/test/a.h	/^inline bool A::has_a() const {$/;"	f	class:A	signature:() const
+has_b	ConnectServer/test/a.h	/^  inline bool has_b() const;$/;"	p	class:A	access:public	signature:() const
+has_b	ConnectServer/test/a.h	/^inline bool A::has_b() const {$/;"	f	class:A	signature:() const
+kAFieldNumber	ConnectServer/test/a.cpp	/^const int A::kAFieldNumber;$/;"	m	class:A	file:
+kAFieldNumber	ConnectServer/test/a.h	/^  static const int kAFieldNumber = 1;$/;"	m	class:A	access:public
+kBFieldNumber	ConnectServer/test/a.cpp	/^const int A::kBFieldNumber;$/;"	m	class:A	file:
+kBFieldNumber	ConnectServer/test/a.h	/^  static const int kBFieldNumber = 2;$/;"	m	class:A	access:public
+m_iMessageID	ConnectServer/Message.h	/^    int16_t m_iMessageID;$/;"	m	struct:SMessageHead	access:public
+m_iMessageType	ConnectServer/Message.h	/^    int8_t m_iMessageType;$/;"	m	struct:SMessageHead	access:public
+m_iPackageLen	ConnectServer/Message.h	/^    int32_t m_iPackageLen;$/;"	m	struct:SMessageHead	access:public
+m_iUin	ConnectServer/Message.h	/^    int32_t m_iUin;$/;"	m	struct:SMessageHead	access:public
+mutable_b	ConnectServer/test/a.h	/^  inline ::std::string* mutable_b();$/;"	p	class:A	access:public	signature:()
+mutable_b	ConnectServer/test/a.h	/^inline ::std::string* A::mutable_b() {$/;"	f	class:A	signature:()
+mutable_unknown_fields	ConnectServer/test/a.h	/^  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {$/;"	f	class:A	access:public	signature:()
+operator =	ConnectServer/test/a.h	/^  inline A& operator=(const A& from) {$/;"	f	class:A	access:public	signature:(const A& from)
+protobuf	ConnectServer/test/a.h	/^namespace protobuf {$/;"	n	namespace:google
+protobuf_AddDesc_a_2eproto	ConnectServer/test/a.cpp	/^void protobuf_AddDesc_a_2eproto() {$/;"	f	signature:()
+protobuf_AddDesc_a_2eproto	ConnectServer/test/a.h	/^  friend void  protobuf_AddDesc_a_2eproto();$/;"	p	class:A	access:friend	signature:()
+protobuf_AddDesc_a_2eproto	ConnectServer/test/a.h	/^void  protobuf_AddDesc_a_2eproto();$/;"	p	signature:()
+protobuf_AssignDesc_a_2eproto	ConnectServer/test/a.cpp	/^void protobuf_AssignDesc_a_2eproto() {$/;"	f	signature:()
+protobuf_AssignDesc_a_2eproto	ConnectServer/test/a.h	/^  friend void protobuf_AssignDesc_a_2eproto();$/;"	p	class:A	access:friend	signature:()
+protobuf_AssignDesc_a_2eproto	ConnectServer/test/a.h	/^void protobuf_AssignDesc_a_2eproto();$/;"	p	signature:()
+protobuf_AssignDescriptorsOnce	ConnectServer/test/a.cpp	/^inline void protobuf_AssignDescriptorsOnce() {$/;"	f	namespace:__anon2	signature:()
+protobuf_RegisterTypes	ConnectServer/test/a.cpp	/^void protobuf_RegisterTypes(const ::std::string&) {$/;"	f	namespace:__anon2	signature:(const ::std::string&)
+protobuf_ShutdownFile_a_2eproto	ConnectServer/test/a.cpp	/^void protobuf_ShutdownFile_a_2eproto() {$/;"	f	signature:()
+protobuf_ShutdownFile_a_2eproto	ConnectServer/test/a.h	/^  friend void protobuf_ShutdownFile_a_2eproto();$/;"	p	class:A	access:friend	signature:()
+protobuf_ShutdownFile_a_2eproto	ConnectServer/test/a.h	/^void protobuf_ShutdownFile_a_2eproto();$/;"	p	signature:()
+release_b	ConnectServer/test/a.h	/^  inline ::std::string* release_b();$/;"	p	class:A	access:public	signature:()
+release_b	ConnectServer/test/a.h	/^inline ::std::string* A::release_b() {$/;"	f	class:A	signature:()
+set_a	ConnectServer/test/a.h	/^  inline void set_a(::google::protobuf::int32 value);$/;"	p	class:A	access:public	signature:(::google::protobuf::int32 value)
+set_a	ConnectServer/test/a.h	/^inline void A::set_a(::google::protobuf::int32 value) {$/;"	f	class:A	signature:(::google::protobuf::int32 value)
+set_allocated_b	ConnectServer/test/a.h	/^  inline void set_allocated_b(::std::string* b);$/;"	p	class:A	access:public	signature:(::std::string* b)
+set_allocated_b	ConnectServer/test/a.h	/^inline void A::set_allocated_b(::std::string* b) {$/;"	f	class:A	signature:(::std::string* b)
+set_b	ConnectServer/test/a.h	/^  inline void set_b(const ::std::string& value);$/;"	p	class:A	access:public	signature:(const ::std::string& value)
+set_b	ConnectServer/test/a.h	/^  inline void set_b(const char* value);$/;"	p	class:A	access:public	signature:(const char* value)
+set_b	ConnectServer/test/a.h	/^  inline void set_b(const char* value, size_t size);$/;"	p	class:A	access:public	signature:(const char* value, size_t size)
+set_b	ConnectServer/test/a.h	/^inline void A::set_b(const ::std::string& value) {$/;"	f	class:A	signature:(const ::std::string& value)
+set_b	ConnectServer/test/a.h	/^inline void A::set_b(const char* value) {$/;"	f	class:A	signature:(const char* value)
+set_b	ConnectServer/test/a.h	/^inline void A::set_b(const char* value, size_t size) {$/;"	f	class:A	signature:(const char* value, size_t size)
+set_has_a	ConnectServer/test/a.h	/^  inline void set_has_a();$/;"	p	class:A	access:private	signature:()
+set_has_a	ConnectServer/test/a.h	/^inline void A::set_has_a() {$/;"	f	class:A	signature:()
+set_has_b	ConnectServer/test/a.h	/^  inline void set_has_b();$/;"	p	class:A	access:private	signature:()
+set_has_b	ConnectServer/test/a.h	/^inline void A::set_has_b() {$/;"	f	class:A	signature:()
+size	ConnectServer/Message.h	/^    int32_t size();$/;"	p	struct:SMessageHead	access:public	signature:()
+static_descriptor_initializer_a_2eproto_	ConnectServer/test/a.cpp	/^} static_descriptor_initializer_a_2eproto_;$/;"	v	typeref:struct:StaticDescriptorInitializer_a_2eproto
+unknown_fields	ConnectServer/test/a.h	/^  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {$/;"	f	class:A	access:public	signature:() const
+warn_log_path	Common/Common_Trace.h	/^const std::string warn_log_path = "\/data\/log\/mygame\/warn\/";$/;"	v
+~A	ConnectServer/test/a.cpp	/^A::~A() {$/;"	f	class:A	signature:()
+~A	ConnectServer/test/a.h	/^  virtual ~A();$/;"	p	class:A	access:public	signature:()
