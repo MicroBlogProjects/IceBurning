@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="23" actionName="A014_attacks_12">
+        <frameInfo frame="0">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="A014_attacks_0" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData alpha="0.01953125" bitmapName="A014_attacks_12" scaleX="-0.402496" scaleY="-0.402496" rotation="179.999985" position="-2.500000,-211.199997" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData alpha="0.2109375" bitmapName="A014_attacks_12" scaleX="-0.599747" scaleY="-0.599747" rotation="179.999985" position="-2.550000,-211.199997" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData alpha="0.41015625" bitmapName="A014_attacks_12" scaleX="-0.796982" scaleY="-0.796982" rotation="179.999985" position="-2.500000,-211.199997" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData alpha="0.609375" bitmapName="A014_attacks_12" scaleX="-0.994247" scaleY="-0.994247" rotation="179.999985" position="-2.550000,-211.149994" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData alpha="0.80078125" bitmapName="A014_attacks_12" scaleX="-1.191467" scaleY="-1.191467" rotation="179.999985" position="-2.500000,-211.149994" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData bitmapName="A014_attacks_12" scaleX="-1.388733" scaleY="-1.388733" rotation="179.999985" position="-2.500000,-211.199997" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData alpha="0.83984375" bitmapName="A014_attacks_12" scaleX="-1.283981" scaleY="-1.283981" rotation="179.999985" position="-2.500000,-211.149994" />
+        </frameInfo>
+        <frameInfo frame="19">
+            <frameData alpha="0.6796875" bitmapName="A014_attacks_12" scaleX="-1.179245" scaleY="-1.179245" rotation="179.999985" position="-2.500000,-211.199997" />
+        </frameInfo>
+        <frameInfo frame="20">
+            <frameData alpha="0.51953125" bitmapName="A014_attacks_12" scaleX="-1.074463" scaleY="-1.074463" rotation="179.999985" position="-2.500000,-211.149994" />
+        </frameInfo>
+        <frameInfo frame="21">
+            <frameData alpha="0.359375" bitmapName="A014_attacks_12" scaleX="-0.969742" scaleY="-0.969742" rotation="179.999985" position="-2.500000,-211.199997" />
+        </frameInfo>
+        <frameInfo frame="22">
+            <frameData alpha="0.19921875" bitmapName="A014_attacks_12" scaleX="-0.865005" scaleY="-0.865005" rotation="179.999985" position="-2.500000,-211.199997" />
+        </frameInfo>
+    </action>
+</animation>

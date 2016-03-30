@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="22" actionName="A035_attacks_3">
+        <frameInfo frame="0">
+            <frameData bitmapName="A035_attacks_0" scaleX="1" scaleY="1" rotation="0" position="0.000000,0.000000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="A035_attacks_0" scaleX="1" scaleY="1" rotation="0" position="0.000000,0.000000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="A035_attacks_0" scaleX="1" scaleY="1" rotation="0" position="0.000000,0.000000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="A035_attacks_32" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-9.400000,-74.800003" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="A035_attacks_32" scaleX="-2.867538" scaleY="-2.867538" rotation="179.999985" position="-7.250000,-76.250000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="A035_attacks_32" scaleX="-4.735153" scaleY="-4.735153" rotation="179.999985" position="-5.100000,-77.650002" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="A035_attacks_32" scaleX="-6.602692" scaleY="-6.602692" rotation="179.999985" position="-2.950000,-79.099998" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="A035_attacks_32" scaleX="-4.735290" scaleY="-4.735290" rotation="179.999985" position="-5.050000,-77.599998" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="A035_attacks_32" scaleX="-2.867615" scaleY="-2.867615" rotation="179.999985" position="-7.250000,-76.199997" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="A035_attacks_32" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="-9.400000,-74.800003" />
+        </frameInfo>
+        <frameInfo frame="10" />
+        <frameInfo frame="11" />
+        <frameInfo frame="12" />
+        <frameInfo frame="13" />
+        <frameInfo frame="14" />
+        <frameInfo frame="15" />
+        <frameInfo frame="16" />
+        <frameInfo frame="17" />
+        <frameInfo frame="18" />
+        <frameInfo frame="19" />
+        <frameInfo frame="20" />
+        <frameInfo frame="21" />
+    </action>
+</animation>

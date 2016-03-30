@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="12" actionName="B047_attacks_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="B047_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2">
+            <frameData bitmapName="B047_attacks_21" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="-216.250000,-487.500000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="B047_attacks_21" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="-216.250000,-487.500000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="B047_attacks_22" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="327.750000,-287.000000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="B047_attacks_22" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="327.750000,-287.000000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="B047_attacks_23" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="516.750000,-177.000000" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="B047_attacks_23" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="516.750000,-177.000000" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="B047_attacks_24" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="392.750000,-181.750000" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="B047_attacks_24" scaleX="-5.000000" scaleY="-5.000000" rotation="179.999985" position="392.750000,-181.750000" />
+        </frameInfo>
+        <frameInfo frame="10" />
+        <frameInfo frame="11" />
+    </action>
+</animation>

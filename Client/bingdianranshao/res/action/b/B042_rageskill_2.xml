@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="13" actionName="B042_rageskill_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="B042_rageskill_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5">
+            <frameData bitmapName="B042_rageskill_2" scaleX="-6.297867" scaleY="-6.297867" rotation="179.999985" position="50.500000,-88.900002" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="B042_rageskill_2" scaleX="-5.260681" scaleY="-5.260681" rotation="179.999985" position="41.799999,-83.949997" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="B042_rageskill_2" scaleX="-4.223495" scaleY="-4.223495" rotation="179.999985" position="32.950001,-78.949997" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="B042_rageskill_2" scaleX="-3.186218" scaleY="-3.186218" rotation="179.999985" position="24.150000,-73.949997" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="B042_rageskill_2" scaleX="-2.149033" scaleY="-2.149033" rotation="179.999985" position="15.350000,-68.949997" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="B042_rageskill_2" scaleX="-1.111862" scaleY="-1.111862" rotation="179.999985" position="6.500000,-63.900002" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="B042_rageskill_2" scaleX="0.743024" scaleY="0.743024" rotation="22.500389" position="6.500000,-63.900002" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="B042_rageskill_2" scaleX="0.374183" scaleY="0.374183" rotation="44.999996" position="6.500000,-63.900002" />
+        </frameInfo>
+    </action>
+</animation>

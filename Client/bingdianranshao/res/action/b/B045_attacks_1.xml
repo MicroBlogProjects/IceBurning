@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="13" actionName="B045_attacks_1">
+        <frameInfo frame="0">
+            <frameData bitmapName="B045_attacks_11" scaleX="-4.000000" scaleY="-4.000000" rotation="179.999985" position="-98.449997,-133.300003" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="B045_attacks_11" scaleX="-4.000000" scaleY="-4.000000" rotation="179.999985" position="-98.449997,-133.300003" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="B045_attacks_12" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="-185.850006,-159.500000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="B045_attacks_12" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="-185.850006,-159.500000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="B045_attacks_12" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="-185.850006,-159.500000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="B045_attacks_12" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="-185.850006,-159.500000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="B045_attacks_13" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="17.950001,-133.800003" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="B045_attacks_13" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="17.950001,-133.800003" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="B045_attacks_13" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="17.950001,-133.800003" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="B045_attacks_13" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="17.950001,-133.800003" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="B045_attacks_13" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="17.950001,-133.800003" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="B045_attacks_14" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="-100.650002,-117.900002" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="B045_attacks_14" scaleX="-2.000000" scaleY="-2.000000" rotation="179.999985" position="-100.650002,-117.900002" />
+        </frameInfo>
+    </action>
+</animation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="16" actionName="B023_attacks_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="B023_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5" />
+        <frameInfo frame="6" />
+        <frameInfo frame="7">
+            <frameData bitmapName="B023_attacks_21" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="37.049999,-76.750000" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="B023_attacks_21" scaleX="-0.862183" scaleY="-0.906830" rotation="179.999985" position="49.549999,-76.750000" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="B023_attacks_21" scaleX="-0.724365" scaleY="-0.813675" rotation="179.999985" position="62.049999,-76.750000" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="B023_attacks_21" scaleX="-0.586548" scaleY="-0.720489" rotation="179.999985" position="74.550003,-76.750000" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="B023_attacks_21" scaleX="-0.448730" scaleY="-0.627335" rotation="179.999985" position="87.050003,-76.750000" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="B023_attacks_21" scaleX="-0.310913" scaleY="-0.534164" rotation="179.999985" position="99.550003,-76.750000" />
+        </frameInfo>
+        <frameInfo frame="13" />
+        <frameInfo frame="14" />
+        <frameInfo frame="15" />
+    </action>
+</animation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="16" actionName="A053_rageskill_3">
+        <frameInfo frame="0">
+            <frameData bitmapName="A053_rageskill_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-0.855042" scaleY="-0.855042" rotation="179.999985" position="-0.850000,-78.199997" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-2.256683" scaleY="-2.256683" rotation="179.999985" position="7.400000,-86.000000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-3.658310" scaleY="-3.658310" rotation="179.999985" position="15.650000,-93.750000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-5.059936" scaleY="-5.059936" rotation="179.999985" position="23.900000,-101.449997" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-6.461533" scaleY="-6.461533" rotation="179.999985" position="32.150002,-109.199997" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-5.059708" scaleY="-5.059708" rotation="179.999985" position="23.799999,-101.449997" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-3.658081" scaleY="-3.658081" rotation="179.999985" position="15.550000,-93.650002" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-2.256546" scaleY="-2.256546" rotation="179.999985" position="7.350000,-85.949997" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="A053_rageskill_3" scaleX="-0.855042" scaleY="-0.855042" rotation="179.999985" position="-0.850000,-78.199997" />
+        </frameInfo>
+        <frameInfo frame="10" />
+        <frameInfo frame="11" />
+        <frameInfo frame="12" />
+        <frameInfo frame="13" />
+        <frameInfo frame="14" />
+        <frameInfo frame="15" />
+    </action>
+</animation>

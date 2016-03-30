@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="21" actionName="C028_attacks_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="C028_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5" />
+        <frameInfo frame="6" />
+        <frameInfo frame="7" />
+        <frameInfo frame="8" />
+        <frameInfo frame="9">
+            <frameData bitmapName="C028_attacks_2" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="47.500000,-83.500000" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData alpha="0.83203125" bitmapName="C028_attacks_2" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="47.500000,-83.500000" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData alpha="0.66796875" bitmapName="C028_attacks_2" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="47.500000,-83.500000" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData alpha="0.5" bitmapName="C028_attacks_2" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="47.500000,-83.500000" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData alpha="0.33203125" bitmapName="C028_attacks_2" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="47.500000,-83.500000" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData alpha="0.16796875" bitmapName="C028_attacks_2" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="47.500000,-83.500000" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData alpha="0" bitmapName="C028_attacks_2" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="47.500000,-83.500000" />
+        </frameInfo>
+        <frameInfo frame="16" />
+        <frameInfo frame="17" />
+        <frameInfo frame="18" />
+        <frameInfo frame="19" />
+        <frameInfo frame="20" />
+    </action>
+</animation>

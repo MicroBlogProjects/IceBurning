@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="7" actionName="B015_attacks_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="B015_attacks_20" scaleX="-8.993553" scaleY="-8.993553" rotation="159.787292" position="-195.550003,-300.399994" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="B015_attacks_20" scaleX="-5.674737" scaleY="-5.674737" rotation="55.484718" position="204.550003,-250.250000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="B015_attacks_20" scaleX="-5.665566" scaleY="-5.665566" rotation="55.435524" position="204.600006,-250.000000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="B015_attacks_20" scaleX="-5.674737" scaleY="-5.674737" rotation="55.484718" position="204.550003,-250.250000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData alpha="0.671875" bitmapName="B015_attacks_20" scaleX="-5.665549" scaleY="-5.665549" rotation="55.435783" position="204.600006,-250.000000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData alpha="0.328125" bitmapName="B015_attacks_20" scaleX="-5.665549" scaleY="-5.665549" rotation="55.435783" position="204.600006,-250.000000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData alpha="0" bitmapName="B015_attacks_20" scaleX="-5.674737" scaleY="-5.674737" rotation="55.484718" position="204.550003,-250.250000" />
+        </frameInfo>
+    </action>
+</animation>

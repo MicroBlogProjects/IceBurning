@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="20" actionName="A069_attacks_0">
+        <frameInfo frame="0">
+            <frameData bitmapName="A069_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5" />
+        <frameInfo frame="6" />
+        <frameInfo frame="7" />
+        <frameInfo frame="8" />
+        <frameInfo frame="9" />
+        <frameInfo frame="10" />
+        <frameInfo frame="11" isKeyFrame="1" />
+        <frameInfo frame="12">
+            <frameData bitmapName="A069_attacks_0" scaleX="-1.727280" scaleY="-1.727280" rotation="179.999985" position="-16.900000,3.400000" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData bitmapName="A069_attacks_0" scaleX="-2.571442" scaleY="-2.571442" rotation="179.999985" position="-16.850000,3.450000" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData bitmapName="A069_attacks_0" scaleX="-3.415604" scaleY="-3.415604" rotation="179.999985" position="-16.799999,3.500000" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData bitmapName="A069_attacks_0" scaleX="-4.259796" scaleY="-4.259796" rotation="179.999985" position="-16.799999,3.550000" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData bitmapName="A069_attacks_0" scaleX="-5.103958" scaleY="-5.103958" rotation="179.999985" position="-16.750000,3.600000" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData bitmapName="A069_attacks_0" scaleX="-5.948059" scaleY="-5.948059" rotation="179.999985" position="-16.799999,3.500000" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData alpha="0.5" bitmapName="A069_attacks_0" scaleX="-6.792221" scaleY="-6.792221" rotation="179.999985" position="-17.049999,3.350000" />
+        </frameInfo>
+        <frameInfo frame="19" />
+    </action>
+</animation>

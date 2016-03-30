@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="19" actionName="C006_attacks_2">
+        <frameInfo frame="0">
+            <frameData bitmapName="C006_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1" />
+        <frameInfo frame="2" />
+        <frameInfo frame="3" />
+        <frameInfo frame="4" />
+        <frameInfo frame="5" />
+        <frameInfo frame="6" />
+        <frameInfo frame="7" />
+        <frameInfo frame="8" />
+        <frameInfo frame="9">
+            <frameData bitmapName="C006_attacks_20" scaleX="-0.471268" scaleY="-0.471268" rotation="179.999985" position="127.099998,-80.949997" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="C006_attacks_20" scaleX="-0.918289" scaleY="-0.918289" rotation="179.999985" position="127.099998,-81.000000" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="C006_attacks_20" scaleX="-1.365250" scaleY="-1.365250" rotation="179.999985" position="127.099998,-81.000000" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="C006_attacks_20" scaleX="-1.812271" scaleY="-1.812271" rotation="179.999985" position="127.099998,-81.050003" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData bitmapName="C006_attacks_20" scaleX="-2.259293" scaleY="-2.259293" rotation="179.999985" position="127.099998,-81.050003" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData bitmapName="C006_attacks_20" scaleX="-2.706253" scaleY="-2.706253" rotation="179.999985" position="127.050003,-81.099998" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData bitmapName="C006_attacks_20" scaleX="-3.153274" scaleY="-3.153274" rotation="179.999985" position="127.099998,-81.050003" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData alpha="0.66796875" bitmapName="C006_attacks_20" scaleX="-3.600174" scaleY="-3.600174" rotation="179.999985" position="127.099998,-81.000000" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData alpha="0.33203125" bitmapName="C006_attacks_20" scaleX="-4.047165" scaleY="-4.047165" rotation="179.999985" position="127.150002,-81.050003" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData alpha="0" bitmapName="C006_attacks_20" scaleX="-4.494247" scaleY="-4.494247" rotation="179.999985" position="127.099998,-80.949997" />
+        </frameInfo>
+    </action>
+</animation>

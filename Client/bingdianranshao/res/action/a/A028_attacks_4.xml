@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="27" actionName="A028_attacks_4">
+        <frameInfo frame="0">
+            <frameData bitmapName="A028_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData alpha="0.26953125" bitmapName="A028_attacks_41" scaleX="-0.886688" scaleY="-0.886688" rotation="179.999985" position="-38.450001,-94.000000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData alpha="0.8203125" bitmapName="A028_attacks_41" scaleX="-1.172592" scaleY="-1.172592" rotation="179.999985" position="-16.450001,-95.000000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="A028_attacks_41" scaleX="-2.111450" scaleY="-1.874939" rotation="179.999985" position="11.550000,-96.000000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="A028_attacks_41" scaleX="-2.172409" scaleY="-2.172409" rotation="179.999985" position="28.549999,-97.000000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData alpha="0.75" bitmapName="A028_attacks_41" scaleX="-1.830078" scaleY="-1.983215" rotation="179.999985" position="13.800000,-97.000000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData alpha="0.5" bitmapName="A028_attacks_41" scaleX="-1.487823" scaleY="-1.794067" rotation="179.999985" position="-0.950000,-97.000000" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData alpha="0.25" bitmapName="A028_attacks_41" scaleX="-1.145538" scaleY="-1.604950" rotation="179.999985" position="-15.700000,-97.000000" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData alpha="0" bitmapName="A028_attacks_41" scaleX="-0.803268" scaleY="-1.415802" rotation="179.999985" position="-30.450001,-97.000000" />
+        </frameInfo>
+        <frameInfo frame="9" />
+        <frameInfo frame="10" />
+        <frameInfo frame="11" />
+        <frameInfo frame="12" />
+        <frameInfo frame="13" />
+        <frameInfo frame="14" />
+        <frameInfo frame="15" />
+        <frameInfo frame="16" />
+        <frameInfo frame="17" />
+        <frameInfo frame="18" />
+        <frameInfo frame="19" />
+        <frameInfo frame="20" />
+        <frameInfo frame="21" />
+        <frameInfo frame="22" />
+        <frameInfo frame="23" />
+        <frameInfo frame="24" />
+        <frameInfo frame="25" />
+        <frameInfo frame="26" />
+    </action>
+</animation>

@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="28" actionName="C002_attacks_3">
+        <frameInfo frame="0">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="13">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="14">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="15">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="16">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData bitmapName="C002_attacks_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData alpha="0.328125" bitmapName="C002_attacks_t4" scaleX="-0.871979" scaleY="-0.746567" rotation="179.999985" position="182.649994,5.350000" />
+        </frameInfo>
+        <frameInfo frame="19">
+            <frameData alpha="0.66015625" bitmapName="C002_attacks_t4" scaleX="-1.127380" scaleY="-0.952042" rotation="179.999985" position="183.850006,6.750000" />
+        </frameInfo>
+        <frameInfo frame="20">
+            <frameData bitmapName="C002_attacks_t4" scaleX="-1.382751" scaleY="-1.157501" rotation="179.999985" position="185.050003,8.250000" />
+        </frameInfo>
+        <frameInfo frame="21">
+            <frameData alpha="0.75" bitmapName="C002_attacks_t4" scaleX="-1.601715" scaleY="-1.332886" rotation="179.999985" position="185.350006,10.050000" />
+        </frameInfo>
+        <frameInfo frame="22">
+            <frameData alpha="0.5" bitmapName="C002_attacks_t4" scaleX="-1.820709" scaleY="-1.508240" rotation="179.999985" position="185.699997,11.950000" />
+        </frameInfo>
+        <frameInfo frame="23">
+            <frameData alpha="0.25" bitmapName="C002_attacks_t4" scaleX="-2.039719" scaleY="-1.683594" rotation="179.999985" position="186.100006,13.850000" />
+        </frameInfo>
+        <frameInfo frame="24">
+            <frameData alpha="0" bitmapName="C002_attacks_t4" scaleX="-2.258667" scaleY="-1.858933" rotation="179.999985" position="186.449997,15.600000" />
+        </frameInfo>
+        <frameInfo frame="25">
+            <frameData alpha="0" bitmapName="C002_attacks_t4" scaleX="-2.258667" scaleY="-1.858933" rotation="179.999985" position="186.449997,15.600000" />
+        </frameInfo>
+        <frameInfo frame="26">
+            <frameData alpha="0" bitmapName="C002_attacks_t4" scaleX="-2.258667" scaleY="-1.858933" rotation="179.999985" position="186.449997,15.600000" />
+        </frameInfo>
+        <frameInfo frame="27">
+            <frameData alpha="0" bitmapName="C002_attacks_t4" scaleX="-2.258667" scaleY="-1.858933" rotation="179.999985" position="186.449997,15.600000" />
+        </frameInfo>
+    </action>
+</animation>

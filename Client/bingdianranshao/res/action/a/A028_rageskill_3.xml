@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!--动画帧信息表-->
+<animation>
+    <action totalFrame="35" actionName="A028_rageskill_3">
+        <frameInfo frame="0">
+            <frameData bitmapName="A028_rageskill_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="1">
+            <frameData bitmapName="A028_rageskill_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="2">
+            <frameData bitmapName="A028_rageskill_dingwei" scaleX="-1.000000" scaleY="-1.000000" rotation="179.999985" position="0.500000,0.500000" />
+        </frameInfo>
+        <frameInfo frame="3">
+            <frameData bitmapName="A028_rageskill_30" scaleX="-2.963825" scaleY="-2.963825" rotation="80.951431" position="-18.750000,-106.150002" />
+        </frameInfo>
+        <frameInfo frame="4">
+            <frameData bitmapName="A028_rageskill_30" scaleX="-3.405909" scaleY="-3.405909" rotation="105.565765" position="-3.050000,-102.199997" />
+        </frameInfo>
+        <frameInfo frame="5">
+            <frameData bitmapName="A028_rageskill_30" scaleX="-3.847680" scaleY="-3.847680" rotation="130.384811" position="12.700000,-98.199997" />
+        </frameInfo>
+        <frameInfo frame="6">
+            <frameData bitmapName="A028_rageskill_30" scaleX="-4.293573" scaleY="-4.293573" rotation="155.212769" position="28.549999,-94.250000" />
+        </frameInfo>
+        <frameInfo frame="7">
+            <frameData bitmapName="A028_rageskill_30" scaleX="-4.744232" scaleY="-4.744232" rotation="179.999985" position="44.250000,-90.150002" />
+        </frameInfo>
+        <frameInfo frame="8">
+            <frameData bitmapName="A028_rageskill_30" scaleX="3.954837" scaleY="3.954837" rotation="23.281433" position="33.799999,-85.150002" />
+        </frameInfo>
+        <frameInfo frame="9">
+            <frameData bitmapName="A028_rageskill_30" scaleX="3.169596" scaleY="3.169596" rotation="46.604805" position="23.400000,-80.250000" />
+        </frameInfo>
+        <frameInfo frame="10">
+            <frameData bitmapName="A028_rageskill_30" scaleX="2.387360" scaleY="2.387360" rotation="69.924690" position="13.050000,-75.199997" />
+        </frameInfo>
+        <frameInfo frame="11">
+            <frameData bitmapName="A028_rageskill_30" scaleX="1.604879" scaleY="1.604879" rotation="93.012238" position="2.650000,-70.199997" />
+        </frameInfo>
+        <frameInfo frame="12">
+            <frameData bitmapName="A028_rageskill_30" scaleX="0.820409" scaleY="0.820409" rotation="116.309128" position="-7.750000,-65.150002" />
+        </frameInfo>
+        <frameInfo frame="13" />
+        <frameInfo frame="14" />
+        <frameInfo frame="15" />
+        <frameInfo frame="16">
+            <frameData bitmapName="A028_rageskill_31" scaleX="-2.094635" scaleY="-2.094635" rotation="179.999985" position="16.549999,-60.400002" />
+        </frameInfo>
+        <frameInfo frame="17">
+            <frameData bitmapName="A028_rageskill_31" scaleX="-2.421143" scaleY="-2.421143" rotation="179.999985" position="7.550000,-59.849998" />
+        </frameInfo>
+        <frameInfo frame="18">
+            <frameData bitmapName="A028_rageskill_31" scaleX="-2.747604" scaleY="-2.747604" rotation="179.999985" position="-1.450000,-59.400002" />
+        </frameInfo>
+        <frameInfo frame="19">
+            <frameData alpha="0.671875" bitmapName="A028_rageskill_31" scaleX="-2.529907" scaleY="-2.529907" rotation="179.999985" position="-1.400000,-60.450001" />
+        </frameInfo>
+        <frameInfo frame="20">
+            <frameData alpha="0.328125" bitmapName="A028_rageskill_31" scaleX="-2.312302" scaleY="-2.312302" rotation="179.999985" position="-1.400000,-61.450001" />
+        </frameInfo>
+        <frameInfo frame="21">
+            <frameData alpha="0" bitmapName="A028_rageskill_31" scaleX="-2.094635" scaleY="-2.094635" rotation="179.999985" position="-1.450000,-62.400002" />
+        </frameInfo>
+        <frameInfo frame="22" />
+        <frameInfo frame="23" />
+        <frameInfo frame="24" />
+        <frameInfo frame="25" />
+        <frameInfo frame="26" />
+        <frameInfo frame="27" />
+        <frameInfo frame="28" />
+        <frameInfo frame="29" />
+        <frameInfo frame="30" />
+        <frameInfo frame="31" />
+        <frameInfo frame="32" />
+        <frameInfo frame="33" />
+        <frameInfo frame="34" />
+    </action>
+</animation>
