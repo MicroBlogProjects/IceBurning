@@ -13,7 +13,7 @@ std::string* GetFileName(const struct tm* curr_tm)
     }
     char buf[PATH_MAX] = { 0 };
     snprintf(buf, PATH_MAX, "%04d-%02d-%02d.log", 
-        curr_tm->tm_year + 1900, curr_tm->tm_mon, curr_tm->tm_mday);
+        curr_tm->tm_year + 1900, curr_tm->tm_mon + 1, curr_tm->tm_mday);
     return new std::string(buf);
 }
 

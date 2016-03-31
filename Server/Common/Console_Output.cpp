@@ -90,12 +90,12 @@ void err_quit(const char *fmt, ...)
 * Print a message and return to caller.
 * Caller specifies "errnoflag".
 */
-static void err_doit(int errnoflag, int error, const char *fmt, va_list ap)
+void err_doit(int errnoflag, int error, const char *fmt, va_list ap)
 {
-    char buf[MAXLINE];
-    vsnprintf(buf, MAXLINE, fmt, ap);
+    char buf[MAXERRBUFSIZE];
+    vsnprintf(buf, MAXERRBUFSIZE, fmt, ap);
     if (errnoflag)
-        snprintf(buf + strlen(buf), MAXLINE - strlen(buf), ": %s",
+        snprintf(buf + strlen(buf), MAXERRBUFSIZE - strlen(buf), ": %s",
             strerror(error));
     strcat(buf, "\n");
     fflush(stdout); /* in case stdout and stderr are the same */

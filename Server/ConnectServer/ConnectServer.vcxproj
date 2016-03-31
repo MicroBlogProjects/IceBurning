@@ -110,6 +110,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Connectserver_Common.h" />
+    <ClInclude Include="Connectserver_Connection.h" />
+    <ClInclude Include="Connectserver_Socket.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="make\makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Connectserver.cpp" />
+    <ClCompile Include="Connectserver_Connection.cpp" />
+    <ClCompile Include="Connectserver_Socket.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
