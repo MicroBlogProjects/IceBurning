@@ -31,7 +31,6 @@ var res = {
 
 
 
-
 };
 
 var g_resources = [];

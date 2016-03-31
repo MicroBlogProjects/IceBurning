@@ -5,20 +5,30 @@
 
 var GamePlayLayer = cc.Layer.extend({
     monsterLayer : null,
-    onEnter:function () {
+    scrollView : null,
+    ctor:function () {
         this._super();
-        //this.addMapLayer();
-        //this.addMonsterLayer();
+        this.addScrollView();
+        this.addMapLayer();
+        this.addMonsterLayer();
+    },
+    addScrollView :function(){
+        this.scrollView = new ccui.ScrollView();
+        this.scrollView.setDirection(ccui.ScrollView.DIR_HORIZONTAL);
+        this.scrollView.setTouchEnabled(true);
+        this.scrollView.setContentSize(cc.size(GC.w, GC.h));
+        this.scrollView.setInnerContainerSize(cc.size(GC.w*2, GC.h));//可滑动区域
+        this.addChild(this.scrollView);
     },
 
     addMapLayer : function(){
         var tmxMap = cc.TMXTiledMap.create(res.GM_Map_tmx);
-        this.addChild(tmxMap,LAYER_PRIORITY_MAP);
+        this.scrollView.addChild(tmxMap,LAYER_PRIORITY_MAP);
     },
 
     addMonsterLayer : function(){
         this.monsterLayer = new MonsterLayer();
-        this.addChild(this.monsterLayer,LAYER_PRIORITY_MAP);
+        this.scrollView.addChild(this.monsterLayer,LAYER_PRIORITY_MAP);
         var config = MonsterConfig.yuangujuren;
         this.monsterLayer.addMonsterNode(config,1);
     }
@@ -26,32 +36,12 @@ var GamePlayLayer = cc.Layer.extend({
 var GamePlayScene = cc.Scene.extend({
     gamePlayLayer :null,
     scrollView : null,
-    //eventListenTouch : null,
-    ctor :function(){
+    onEnter :function(){
         this._super();
-        //gamePlaylayer = new GamePlayLayer();
-        //this.addChild(gamePlaylayer);
-        this.addScrollView();
+        this.addGamePlay();
     },
-    addScrollView : function(){
-        this.scrollView = ccui.ScrollView.create();
-        this.addChild(this.scrollView);
-        this.scrollView.setDirection(ccui.SCROLLVIEW_DIRECTION_BOTH);
-        this.scrollView.setTouchEnabled(true);
-        this.scrollView.setContentSize(GC.w, GC.h);
-        var tmxMap = cc.TMXTiledMap.create(res.GM_Map_tmx);
-        var mapLayer = cc.Layer.create();
-        mapLayer.addChild(tmxMap);
-        mapLayer.setContentSize(GC.w*2,GC.h);
-        var s = mapLayer.getContentSize();
-        this.scrollView.addChild(mapLayer);
+    addGamePlay : function(){
+        this.gamePlayLayer = new GamePlayLayer();
+        this.addChild(this.gamePlayLayer);
     }
-    /*addEventListenTouch : function()
-    {
-        this.eventListen = cc.EventListener.create({
-            event: cc.EventListener.TOUCH_ONE_BY_ONE, //单点触摸
-            swallowTouches: true,   // 设置是否吞没事件，在 onTouchBegan 方法返回 true 时吞掉事件，不再向下传递。
-        });
-        ;
-    }*/
 });
