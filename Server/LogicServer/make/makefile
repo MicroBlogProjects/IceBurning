@@ -1,4 +1,4 @@
-BINARY := ../test
+BINARY := ../LogicServer
 SRCDIR := ..
 
 .PHONY: all clean
@@ -9,8 +9,12 @@ CPP_FILES := $(shell find $(SRCDIR) -name "*.cpp")
 OBJ_FILES := $(subst /,-,$(subst $(SRCDIR)/,,$(CPP_FILES:%.cpp=%.o)))
 DEP_FILES := $(subst /,-,$(subst $(SRCDIR)/,,$(CPP_FILES:%.cpp=%.d)))
 
-CPPFLAGS= -g
-LDFLAGS = -g
+CPPFLAGS= -g -I.. \
+			-I../../Common \
+			-I../../../Common/protobuf-2.5.0/src
+
+LDFLAGS = ../../Lib/libCommon.a \
+			../../../Common/protobuf-2.5.0/src/.libs/libprotobuf.a
 
 # Generate dependence, including rules to generate object files
 %.d:

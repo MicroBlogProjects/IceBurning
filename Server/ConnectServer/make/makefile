@@ -9,9 +9,10 @@ CPP_FILES := $(shell find $(SRCDIR) -name "*.cpp")
 OBJ_FILES := $(subst /,-,$(subst $(SRCDIR)/,,$(CPP_FILES:%.cpp=%.o)))
 DEP_FILES := $(subst /,-,$(subst $(SRCDIR)/,,$(CPP_FILES:%.cpp=%.d)))
 
-CPPFLAGS= -g -I../../Common -I..
+CPPFLAGS= -g -I.. \
+			-I../../Common
 
-LDFLAGS = ../../Lib/libCommon.a
+LDFLAGS = ../../Lib/libCommon.a 
 
 # Generate dependence, including rules to generate object files
 %.d:

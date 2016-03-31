@@ -1,0 +1,30 @@
+﻿  Function_Wrap.cpp
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(14): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(15): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(17): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(27): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\function_wrap.h(8): fatal error C1083: Cannot open include file: 'arpa/inet.h': No such file or directory
+  Console_Output.cpp
+\\10.0.128.158\gongjing\git\iceburning\server\common\console_output.cpp(99): error C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(178): note: see declaration of 'strerror'
+\\10.0.128.158\gongjing\git\iceburning\server\common\console_output.cpp(100): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+  Common_Trace.cpp
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(14): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(15): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(17): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.h(27): error C2010: '.': unexpected in macro formal parameter list
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(8): error C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(34): error C2065: 'mode_t': undeclared identifier
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(34): error C2146: syntax error: missing ';' before identifier 'pre_mask'
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(34): error C2065: 'pre_mask': undeclared identifier
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(34): error C3861: 'umask': identifier not found
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(35): error C3861: 'open': identifier not found
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(36): error C2065: 'pre_mask': undeclared identifier
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(36): error C3861: 'umask': identifier not found
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(63): error C3861: 'write': identifier not found
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(69): error C3861: 'close': identifier not found
+\\10.0.128.158\gongjing\git\iceburning\server\common\common_trace.cpp(43): error C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
+  Generating Code...

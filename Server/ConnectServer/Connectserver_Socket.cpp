@@ -41,18 +41,30 @@ ConnsvrSocket* ConnsvrSocket::Instance()
     return instance;
 }
 
-void ConnsvrSocket::BindAndListen()
+int32_t ConnsvrSocket::BindAndListen()
 {
-    connserver_fd_ = Socket(AF_INET, SOCK_STREAM, 0);
+    if ( (connserver_fd_ = Socket(AF_INET, SOCK_STREAM, 0)) < 0 )
+    {
+        TRACE_ERROR("socket at connectserver_socket failed");
+        return error;
+    }
 
     memset(&connserver_addr_, sizeof(connserver_addr_), 0);
     connserver_addr_.sin_family = AF_INET;
     connserver_addr_.sin_addr.s_addr = htonl(INADDR_ANY);
     connserver_addr_.sin_port = htons(PORT);
 
-    Bind(connserver_fd_, (SA *)&connserver_addr_, sizeof(connserver_addr_));
+    if (Bind(connserver_fd_, (SA *)&connserver_addr_, sizeof(connserver_addr_)) < 0)
+    {
+        TRACE_ERROR("Bind at connectserver_socket failed");
+        return error;
+    }
 
-    Listen(connserver_fd_, LISTENQ);
+    if (Listen(connserver_fd_, LISTENQ) < 0)
+    {
+        TRACE_ERROR("Listen at connectserver_socket failed");
+        return error;
+    }
 
     make_socket_non_blocking(connserver_fd_);
 }
@@ -173,7 +185,7 @@ int32_t ConnsvrSocket::TransmitMessageToLogicServer(int32_t client_fd, char* con
     // save <K, V> of <uin, fd>
     if (uin <= 0)
     {
-        int32_t msgID = FindMessageID(content, len);
+        int32_t msgID = FindMessageSequence(content, len);
         if (msgSequence_to_fd.find(msgID) != msgSequence_to_fd.end())
         {
             TRACE_WARN("generated the same msg id.");
@@ -203,7 +215,7 @@ int32_t ConnsvrSocket::TransmitMessageToClient(char* content, int32_t len)
     // find fd
     if (uin_to_fd.find(uin) == uin_to_fd.end())
     {
-        int32_t msgID = FindMessageID(content, len);
+        int32_t msgID = FindMessageSequence(content, len);
         if (msgSequence_to_fd.find(msgID) == msgSequence_to_fd.end())
         {
             TRACE_WARN("can not find fd with msgID(%d) and uin(%d)", msgID, uin);
@@ -260,10 +272,10 @@ int32_t ConnsvrSocket::make_socket_non_blocking(int32_t sfd)
     return 0;
 }
 
-int32_t ConnsvrSocket::FindMessageID(const char* str, int32_t len)
+int32_t ConnsvrSocket::FindMessageSequence(const char* str, int32_t len)
 {
     int32_t ret = 0;
-    for (int32_t i = 8; i < 12; ++i)
+    for (int32_t i = 12; i < 16; ++i)
     {
         ret = (ret << 8) | (int32_t)str[i];
     }
