@@ -2,6 +2,7 @@
 #include "Connectserver_Socket.h"
 #include "Function_Wrap.h"
 
+US_NS_GJ;
 US_NS_CS;
 US_NS_LG;
 
@@ -19,7 +20,10 @@ void EpollRegist(int32_t connfd)
 int main()
 {
     ConnsvrSocket* connSocket = ConnsvrSocket::Instance();
-    connSocket->BindAndListen();
+    if (error == connSocket->BindAndListen())
+    {
+        exit(-1);
+    }
 
     epoll_fd_ = Epoll_create(0);
     events_ = (epoll_event *)calloc(MAXEVENTS, sizeof(struct epoll_event));

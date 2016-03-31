@@ -27,12 +27,18 @@
     <ClInclude Include="Message_i.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Function_Wrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common_Trace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Console_Output.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Function_Wrap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

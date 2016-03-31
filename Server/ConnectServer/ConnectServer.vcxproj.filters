@@ -21,9 +21,6 @@
     <ClInclude Include="Connectserver_Socket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Function_Wrap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Connectserver_Connection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -33,9 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Connectserver_Socket.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Function_Wrap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Connectserver.cpp">

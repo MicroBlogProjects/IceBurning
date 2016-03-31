@@ -3,7 +3,6 @@
 #ifndef __CONNECTSERVER_SOCKET__
 #define __CONNECTSERVER_SOCKET__
 #include "Connectserver_Common.h"
-#include "Function_Wrap.h"
 #include "Connectserver_Connection.h"
 
 NS_CS_BEGIN
@@ -16,7 +15,7 @@ public:
     /*
         initialize
     */
-    void BindAndListen();
+    int32_t BindAndListen();
 
     int32_t ProcessRequestConnect(std::vector<int32_t>& vec);
 
@@ -39,7 +38,7 @@ private:
     int32_t TransmitMessageToClient(char* content, int32_t len);
 
     int32_t make_socket_non_blocking(int32_t sfd);
-    int32_t FindMessageID(const char* str, int len);
+    int32_t FindMessageSequence(const char* str, int32_t len);
     int32_t FindUin(const char* str, int len);
 
 private:

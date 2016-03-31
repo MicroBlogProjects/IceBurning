@@ -111,7 +111,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Logicserver_Common.h" />
+    <ClInclude Include="Logicserver_EpollUnit.h" />
+    <ClInclude Include="Logicserver_LogicFrame.h" />
     <ClInclude Include="Logicserver_Message.h" />
+    <ClInclude Include="Logicserver_Socket.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Logicserver_EpollUnit.cpp" />
+    <ClCompile Include="Logicserver_LogicFrame.cpp" />
+    <ClCompile Include="Logicserver_Message.cpp" />
+    <ClCompile Include="Logicserver_server.cpp" />
+    <ClCompile Include="Logicserver_Socket.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

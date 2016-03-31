@@ -3,9 +3,10 @@
 #ifndef __CONNECTSERVER_COMMON_H__
 #define __CONNECTSERVER_COMMON_H__
 
-#include "Common.h"
-#include "Common_Trace.h"
-#include "Console_Output.h"
+#include "../Common/Common.h"
+#include "../Common/Common_Trace.h"
+#include "../Common/Console_Output.h"
+#include "../Common/Function_Wrap.h"
 
 #include <arpa/inet.h>
 #include <sys/socket.h>
@@ -15,7 +16,6 @@
 NS_CS_BEGIN
 
 #define PORT 23333
-#define LISTENQ 1024
 #define SA struct sockaddr
 #define MAXEVENTS 64
 

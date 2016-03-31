@@ -1,6 +1,7 @@
 #include "Function_Wrap.h"
+US_NS_LG;
 
-NS_CS_BEGIN
+NS_GJ_BEGIN
 
 /*******************************socket**********************************/
 
@@ -98,4 +99,4 @@ int Epoll_wait(int epfd, struct epoll_event * events, int maxevents, int timeout
     return ret;
 }
 
-NS_CS_END
+NS_GJ_END

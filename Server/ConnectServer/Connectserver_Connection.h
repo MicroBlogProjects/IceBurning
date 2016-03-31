@@ -6,15 +6,6 @@
 
 NS_CS_BEGIN
 
-enum ConnectStatus
-{
-    unconnected = 0x0000,
-    registing = 0x0001,
-    logining = 0x0002,
-    logined = 0x0003,
-    disconnected = 0x0004,
-};
-
 class CConnConnection
 {
 public:

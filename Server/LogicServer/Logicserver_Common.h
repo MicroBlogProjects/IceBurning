@@ -2,18 +2,25 @@
 #ifndef __LOGICSERVER_COMMON_H__
 #define __LOGICSERVER_COMMON_H__
 
-#include "Common.h"
-#include "Message_i.h"
-#include "Common_Trace.h"
+#include "../Common/Common.h"
+#include "../Common/Message_i.h"
+#include "../Common/Common_Trace.h"
+#include "../Common/Function_Wrap.h"
 
-#include <arpa/inet.h>
-#include <sys/socket.h>
-#include <sys/epoll.h>
-#include <fcntl.h>
 
 NS_LS_BEGIN
 
+#define MAXEVENTS 5
+#define CONNECT_SERVER_PORT 23333
+#define SA struct sockaddr
 
+enum
+{
+    success = 0,
+    error = -1,
+    fail = -2,
+    quit = -3,
+};
 
 NS_LS_END
 
