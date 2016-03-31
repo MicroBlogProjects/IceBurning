@@ -12,7 +12,7 @@ var HelloWorldLayer = cc.Layer.extend({
         // ask the window size
         var size = cc.winSize;
 
-        var mainscene = ccs.load(res.MainScene_json);
+        var mainscene = ccs.load(res.MM_MainScene_json);
         this.addChild(mainscene.node);
 
         /* you can create scene with following comment code instead of using csb file.

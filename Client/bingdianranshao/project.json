@@ -13,6 +13,20 @@
 
     "jsList" : [
         "src/resource.js",
-        "src/app.js"
+        "src/app.js",
+        "src/Config/GameConfig.js",
+
+        "src/UILogic/MainMenu/Scene/MainMenuScene.js",
+        "src/UILogic/MainMenu/Layer/MMBackgroundLayer.js",
+        "src/UILogic/MainMenu/Layer/MMTouchLayer.js",
+
+        "src/UIlogic/Config/MonsterConfig/MonsterConfig.js",
+        "src/UILogic/GamePlay/Scene/GamePlayScene.js",
+        "src/UILogic/GamePlay/Layer/MonsterLayer.js",
+        "src/UILogic/GamePlay/Sprite/MonsterNode.js",
+
+        "src/UILogic/Setting/Scene/SettingScene.js",
+        "src/UILogic/Setting/Layer/STBackgroundLayer.js",
+        "src/UILogic/Setting/Layer/STTouchLayer.js"
     ]
 }
