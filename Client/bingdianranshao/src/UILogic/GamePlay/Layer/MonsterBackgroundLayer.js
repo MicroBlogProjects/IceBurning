@@ -28,7 +28,8 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         else{
             mosterSprite = new MonsterSprite(config,false);
         }
-        mosterSprite.setPosition(point);
+        var offset = gamePlayLayer.scrollView.getInnerContainer()._position;
+        mosterSprite.setPosition(point.x - offset.x ,point.y);
         this.addChild(mosterSprite);
         mosterSprite.walkingAnimate();
         if(type == MonsterType.OwnMonster)
@@ -39,7 +40,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     },
 
     test : function(config, point){
-        for(var i = 0; i < 10; i++){
+        for(var i = 0; i < 5; i++){
             var randownum = Math.floor(Math.random() * 10000+1);
             var mosterSprite = new MonsterSprite(config,false);
             mosterSprite.setPosition(new cc.Point(randownum %(GC.w) + GC.w,randownum%640));
@@ -47,7 +48,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             mosterSprite.walkingAnimate(mosterSprite);
             this.enemyMonsterArray.push(mosterSprite);
         }
-        for(var i =0; i< 10; i++){
+        for(var i =0; i< 5; i++){
             var randownum = Math.floor(Math.random() * 10000+1);
             var mosterSprite = new MonsterSprite(config,true);
             mosterSprite.setPosition(new cc.Point(randownum %(GC.w),randownum%640));

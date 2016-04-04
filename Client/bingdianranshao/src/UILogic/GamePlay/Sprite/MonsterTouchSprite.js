@@ -25,8 +25,6 @@ var MonsterTouchSprite = cc.Sprite.extend({
     },
     onTouchMoved : function (touch, event) {
         //var target = event.getCurrentTarget();
-        cc.log(touch.getLocation().x);
-        cc.log(touch.getLocation().y);
         MonsterTouch.moveListerSprite(touch.getLocation());
 
     },

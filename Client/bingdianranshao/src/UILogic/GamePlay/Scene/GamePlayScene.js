@@ -3,6 +3,7 @@
  */
 
 
+var gamePlayLayer;
 var GamePlayLayer = cc.Layer.extend({
     monsterBackgroundLayer : null,
     scrollView : null,
@@ -12,6 +13,7 @@ var GamePlayLayer = cc.Layer.extend({
         this.addScrollView();
         this.addMonsteBackgroundrLayer();
         this.addMonsterTouchlayer();
+        gamePlayLayer = this;
     },
     addScrollView :function(){
         this.scrollView = new ccui.ScrollView();
