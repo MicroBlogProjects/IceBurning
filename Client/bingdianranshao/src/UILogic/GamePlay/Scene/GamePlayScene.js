@@ -4,13 +4,14 @@
 
 
 var GamePlayLayer = cc.Layer.extend({
-    monsterLayer : null,
+    monsterBackgroundLayer : null,
     scrollView : null,
+    monsterTouchlayer: null,
     ctor:function () {
         this._super();
         this.addScrollView();
-        this.addMapLayer();
-        this.addMonsterLayer();
+        this.addMonsteBackgroundrLayer();
+        this.addMonsterTouchlayer();
     },
     addScrollView :function(){
         this.scrollView = new ccui.ScrollView();
@@ -21,16 +22,21 @@ var GamePlayLayer = cc.Layer.extend({
         this.addChild(this.scrollView);
     },
 
-    addMapLayer : function(){
+    addMonsteBackgroundrLayer : function(){
+        this.monsterBackgroundLayer = new MonsterBackgroundLayer();
         var tmxMap = cc.TMXTiledMap.create(res.GM_Map_tmx);
         this.scrollView.addChild(tmxMap,LAYER_PRIORITY_MAP);
+        this.scrollView.addChild(this.monsterBackgroundLayer,LAYER_PRIORITY_MAP);
+        this.test();
     },
 
-    addMonsterLayer : function(){
-        this.monsterLayer = new MonsterLayer();
-        this.scrollView.addChild(this.monsterLayer,LAYER_PRIORITY_MAP);
+    addMonsterTouchlayer :function(){
+      this.monsterTouchlayer = new MonsterTouchLayer();
+        this.addChild(this.monsterTouchlayer);
+    },
+    test : function(){
         var config = MonsterConfig.yuangujuren;
-        this.monsterLayer.addMonsterNode(config,1);
+        this.monsterBackgroundLayer.test(config, new cc.Point(200,200));
     }
 });
 var GamePlayScene = cc.Scene.extend({

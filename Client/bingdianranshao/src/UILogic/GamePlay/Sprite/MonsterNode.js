@@ -1,6 +1,7 @@
 /**
  * Created by jiachen on 2016/3/29.
  */
+//先弃用
 
 MonsterNode =  cc.Node.extend({
     //属相

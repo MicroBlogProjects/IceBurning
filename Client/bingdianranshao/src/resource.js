@@ -17,6 +17,9 @@ var res = {
     GM_Map_png : "res/GamePlay/Map/c.png",
 
     //monster
+    GM_RedBlood_png     : "res/GamePlay/Monster/bloodImage/RedBlood.png",
+    GM_BlueBlood_png :    "res/GamePlay/Monster/bloodImage/BlueBlood.png",
+    GM_BackgroundBolld_png : "res/GamePlay/monster/bloodImage/BackgroundBlood.png",
     GM_Ygjrwalking_plist :  "res/GamePlay/Monster/yuangujuren/ygjrwalking.plist",
     GM_Ygjrwalking_png :     "res/GamePlay/Monster/yuangujuren/ygjrwalking.png",
     GM_Ygjr_png :             "res/GamePlay/Monster/yuangujuren/ygjr.png",
@@ -24,6 +27,10 @@ var res = {
     GM_Ygjrattack_png :      "res/GamePlay/Monster/yuangujuren/ygjrattack.png",
     GM_Ygjrdeath_plist :     "res/GamePlay/Monster/yuangujuren/ygjrdeath.plist",
     GM_Ygjrdeath_png :        "res/GamePlay/Monster/yuangujuren/ygjrdeath.png",
+
+    //monstertouchlayr
+
+    GM_TouchlayerTool_png : "res/GamePlay/MonsterTouchLayer/tool.png",
 
     //setting
     ST_Title_png : "res/Setting/menuTitle.png"

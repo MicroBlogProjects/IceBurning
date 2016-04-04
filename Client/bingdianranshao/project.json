@@ -22,8 +22,11 @@
 
         "src/UIlogic/Config/MonsterConfig/MonsterConfig.js",
         "src/UILogic/GamePlay/Scene/GamePlayScene.js",
+        "src/UILogic/GamePlay/Layer/MonsterBackgroundLayer.js",
+        "src/UILogic/GamePlay/Sprite/MonsterSprite.js",
+        "src/UILogic/GamePlay/Sprite/MonsterTouchSprite.js",
+        "src/UILogic/GamePlay/Layer/MonsterTouchLayer.js",
         "src/UILogic/GamePlay/Layer/MonsterLayer.js",
-        "src/UILogic/GamePlay/Sprite/MonsterNode.js",
 
         "src/UILogic/Setting/Scene/SettingScene.js",
         "src/UILogic/Setting/Layer/STBackgroundLayer.js",
