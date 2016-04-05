@@ -12,12 +12,9 @@ var MonsterStep = 20; //一步20
 var MonsterState ={
     WalkingLeft :0,
     WalkingRight : 1,
-    Attack : 10,
-    Death : 3
-    /*AttackLeft : 2,
+    AttackLeft : 2,
     AttackRight : 3,
-    DeathLeft : 4,
-    DeathRight :5*/
+    Death : 4
 }
 
 var YuangujurenAttribute = {
