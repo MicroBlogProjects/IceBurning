@@ -5,6 +5,7 @@
 MonsterSprite = cc.Sprite.extend({
     m_isMyMonster : true,
     m_state :null,
+    m_type : null,
     m_activity :true,
     //属性
     m_id : null,
@@ -52,6 +53,13 @@ MonsterSprite = cc.Sprite.extend({
         this.m_attackRadius = attributeConfig.attackRadius;
         this.setDirect();
         this.scheduleUpdate();
+
+        if(this.m_id >= 100){
+            this.m_type = MonsterType.Building;
+        }
+        else{
+            this.m_type = MonsterType.Animal
+        }
 
         //设置动画
         this.m_prefixName = animateConfig.prefixName;
@@ -129,16 +137,21 @@ MonsterSprite = cc.Sprite.extend({
     },
 
     walkingAnimate :function(enemyMonster, state){
+        if(this.m_type == MonsterType.Building){
+            return;
+        }
         if (this.m_state == state){
             return;
         }
         this.m_state =state;
-        this.startAnimate(this.m_walkingAnimatePlist, this.m_walkingAnimateAccount,this.m_prefixName + "walking",this.m_walkSpeed,false);
+        this.startAnimate(this.m_walkingAnimatePlist, this.m_walkingAnimateAccount,this.m_prefixName + "walking",2,false);
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
-        //this.runAction(cc.repeatForever(this.m_nowAnimateAction));
     },
 
     attackAnimate : function(enemyMonster, state){
+        if(this.m_type == MonsterType.Building){
+            return;
+        }
         if(this.m_state == state){
             return;
         }
