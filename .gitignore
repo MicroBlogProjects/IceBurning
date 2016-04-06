@@ -2,3 +2,5 @@
 *.d
 *.vs/*
 ./Server/LogicServer/LogicServer
+*/workspace.xml
+*/Debug.win32/*
