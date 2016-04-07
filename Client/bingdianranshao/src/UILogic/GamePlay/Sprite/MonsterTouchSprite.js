@@ -53,14 +53,9 @@ var MonsterTouchSprite = cc.Sprite.extend({
     },
 
     isTouchInRect:function (touch) {
-        var getPoint = touch.getLocation();
-        var myRect = this.getFrame();
-        myRect.x += this.x;
-        myRect.y += this.y;
+        point = this.convertToWorldSpace(cc.p(this.width/2,this.height/2)); //将坐标系映射到世界坐标系
+        myRect = cc.rect(point.x - this.width/2.0,point.y - this.height/2.0,this.width,this.height);
         return cc.rectContainsPoint(myRect, getPoint);
-    },
-    getFrame:function () {
-        return cc.rect(-this.width / 2, -this.height / 2, this.width, this.height);
     }
 
 });
