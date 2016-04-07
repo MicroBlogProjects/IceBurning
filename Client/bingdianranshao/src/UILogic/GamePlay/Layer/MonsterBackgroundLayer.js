@@ -1,7 +1,7 @@
 /**
  * Created by jiachen on 2016/3/29.
  */
-
+//弃用
 //管理所有的怪物
 var ScheduleTime =1.0/10
 var monsterManager;
@@ -14,25 +14,33 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         this._super();
         this.myMonsterArray = []; //创建一个数组
         this.enemyMonsterArray = [];
+        this.init();
         monsterManager = this;
 
-        //this.schedule(this.update,1.0/6); //计时器
-        this.schedule(this.updateEvent,ScheduleTime);
+        this.schedule(this.updateEvent,ScheduleTime);//计时器
     },
 
-    addMonsterSprite : function(config, point, type){
+    init :function(){
+        config = MonsterConfig.maincity;
+        var mainCitySprite =  new MonsterSprite(config,true);
+        mainCitySprite.setPosition(150,GC.h_2);
+        this.addChild(mainCitySprite);
+        this.myMonsterArray.push(mainCitySprite);
+    },
+
+    addMonsterSprite : function(config, point, isOwnMonster){
+
         var mosterSprite;
-        if(type == MonsterType.OwnMonster){
+        if(isOwnMonster){
             mosterSprite = new MonsterSprite(config,true);
         }
         else{
             mosterSprite = new MonsterSprite(config,false);
         }
-        var offset = gamePlayLayer.scrollView.getInnerContainer()._position;
+        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
         mosterSprite.setPosition(point.x - offset.x ,point.y);
         this.addChild(mosterSprite);
-        //mosterSprite.walkingAnimate();
-        if(type == MonsterType.OwnMonster)
+        if(isOwnMonster)
             this.myMonsterArray.push(mosterSprite);
         else{
             this.enemyMonsterArray.push(mosterSprite);
@@ -43,7 +51,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         for(var i = 0; i < 10; i++){
             var randownum = Math.floor(Math.random() * 10000+1);
             var mosterSprite = new MonsterSprite(config,false);
-            mosterSprite.setPosition(new cc.Point(randownum %(GC.w) + GC.w,randownum%640));
+            mosterSprite.setPosition(cc.p(randownum %(GC.w) + GC.w,randownum%640));
             //mosterSprite.setPosition(new cc.Point(200,200));
             this.addChild(mosterSprite);
             mosterSprite.walkingAnimate(mosterSprite);
@@ -52,7 +60,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         for(var i =0; i< 10; i++){
             var randownum = Math.floor(Math.random() * 10000+1);
             var mosterSprite = new MonsterSprite(config,true);
-            mosterSprite.setPosition(new cc.Point(randownum %(GC.w),randownum%640));
+            mosterSprite.setPosition(cc.p(randownum %(GC.w),randownum%640));
             //mosterSprite.setPosition(new cc.Point(250,250));
             this.addChild(mosterSprite);
             mosterSprite.walkingAnimate();
@@ -67,6 +75,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     },
 
     updateMonsterArray :function(){
+        //删除已经死亡的怪物
         for(var  i = 0; i < this.myMonsterArray.length; i++){
             var monster = this.myMonsterArray[i];
             if(monster.m_activity == false){
@@ -133,7 +142,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             else{
                 state = MonsterState.WalkingLeft;
             }
-            destinationX = monsterPoint.x +MonsterStep / monster.m_walkSpeed * ScheduleTime * monster.m_direct;
+            destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
             destinationY = monsterPoint.y;
             destinationPoint = cc.p(destinationX,destinationY);
             monster.setPosition(destinationPoint);
@@ -161,7 +170,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                     }
                 }
                 else{
-                    var d = MonsterStep / monster.m_walkSpeed * ScheduleTime;
+                    var d = monster.m_walkSpeed * ScheduleTime;
                     var ratio = dy / dx;
                     var x = Math.sqrt((d * d * 1.0) / (ratio * ratio +1));
                     var y = Math.sqrt((d * d - x * x));
@@ -185,67 +194,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             }
         }
         monster.monsterAction(state,destinationMonster);
-        /*var point = monster.getPosition();
-        var sighRadius = monster.m_sightRadius;
-        var attackRadius = monster.m_attackRadius;
-        var des_x;
-        var des_y = point.y;
-        var state
-        if(ismyMonster){
-            des_x = point.x +  MonsterStep / monster.m_walkSpeed * ScheduleTime;
-            state = MonsterState.WalkingRight;
-        }
-        else{
-            des_x = point.x -  MonsterStep / monster.m_walkSpeed * ScheduleTime;
-            state = MonsterState.WalkingLeft;
-        }
-        var min_distance = sighRadius * sighRadius;
-        var des_enemyMonster = monsterArray[0];
-        for(var i = 0;i <monsterArray.length ;i++){
-            var enemyMonster = monsterArray[i];
-            if(enemyMonster.m_HP < 0){
-                continue;
-            }
-            var enemyPoint = enemyMonster.getPosition();
-            var enemyPoint_x = enemyPoint.x - point.x;
-            var enemyPoint_y = enemyPoint.y - point.y;
-            var distance = enemyPoint_x * enemyPoint_x + enemyPoint_x * enemyPoint_x;
-            if (distance > min_distance) {
-                continue;
-            }
-            else {
-                min_distance = distance;
-                des_enemyMonster =enemyMonster;
-                if(distance > attackRadius * attackRadius ){//大于攻击范围
-                    var d = MonsterStep / monster.m_walkSpeed * ScheduleTime;
-                    var ratio = enemyPoint_x / enemyPoint_y;
-                    var y = Math.sqrt(d*d /((ratio+1) *(ratio+1)));
-                    var x = Math.sqrt((ratio*ratio *d *d)/(ratio*ratio+1));
-                    if(enemyPoint_x < 0){
-                        if(ismyMonster){
-                            state = MonsterState.WalkingLeft;
-                        }
-                        else{
-                            state = MonsterState.WalkingRight;
-                        }
-                        x*=-1;
-                    }
-                    if(enemyPoint_y < 0){
-                        y*=-1;
-                    }
-                    des_x = point.x + x;
-                    des_y = point.y + y;
-                }
-                else{//正在攻击
-                    state = MonsterState.Attack;
-                    des_x = point.x;
-                    des_y = point.y;
-
-                }
-            }
-        }
-        monster.monsterAction(state,des_enemyMonster);
-        monster.setPosition(new cc.Point(des_x,des_y));*/
     },
 
     getPointDistance : function (p1, p2) {

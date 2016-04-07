@@ -6,6 +6,7 @@ var MonsterTouch ;
 var MonsterTouchLayer = cc.Layer.extend({
     m_toolScrollView : null,
     m_nowmoveSprite : null,
+    m_clipperNode : null,
     ctor : function(){
         this._super();
         this.addToolScrollView();
@@ -30,7 +31,7 @@ var MonsterTouchLayer = cc.Layer.extend({
         config = MonsterConfig.yuangujuren;
         for(var i = 0; i < 10;i++){
             var monsterTouchSprite = new MonsterTouchSprite(config);
-            monsterTouchSprite.setPosition((monsterTouchSprite.getContentSize().width/2 + 20) * (i+1),monsterTouchSprite.getContentSize().height/2);
+            monsterTouchSprite.setPosition((monsterTouchSprite.getContentSize().width/2 + 20) * (i+0.5),monsterTouchSprite.getContentSize().height/2);
             this.m_toolScrollView.addChild(monsterTouchSprite,10);
         }
     },
@@ -51,8 +52,43 @@ var MonsterTouchLayer = cc.Layer.extend({
     removeListerSprite :function(){
         this.m_nowmoveSprite.removeFromParent();
         this.m_nowmoveSprite = null;
+    },
+
+    addClipperNode :function(){
+        var baLayer = cc.LayerColor.create(cc.color(0,0,0,150));
+
+        //画个正方形
+        /*var rectangular = new cc.DrawNode();
+        var origin = cc.p(0,0);
+        var destination = cc.p(25*32,64);
+        var color = cc.color(0,0,0);
+        rectangular.setPosition(5*32,16*32);
+        rectangular.drawRect(origin,destination,color);*/
+
+
+        //设置模板
+        var stencil = cc.Node.create();
+        stencil.addChild(rectangular);
+        //设置
+        this.m_clipperNode = cc.ClippingNode.create(stencil);
+        this.m_clipperNode.setInverted(true);
+        this.m_clipperNode.setAlphaThreshold(1.0);
+        this.m_clipperNode.addChild(baLayer);
+        this.addChild(this.m_clipperNode);
+    },
+
+    getRectangular : function(posiition, destination){
+        var rectangular = new cc.DrawNode();
+        var origin = cc.p(0,0);
+        var color = cc.color(0,0,0);
+        rectangular.setPosition(posiition);
+        rectangular.drawRect(origin,destination,color);
+        return rectangular;
+    },
+
+    removeClipperNode : function(){
+        this.m_clipperNode.removeFromParent();
+        this.m_clipperNode = null;
     }
-
-
 
 });
