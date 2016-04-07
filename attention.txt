@@ -1,0 +1,8 @@
+1.打开vs：选中工程libcocos2d->Project->properties->c/c++->additional Include Directories->添加：$(EngineRoot)..\..\..\..\Common\protobuf-2.5.0\src
+
+2.打开vs：选中工程libcocos2d->Project->properties->Linker->general->additional library directories->添加：$(EngineRoot)..\..\..\..\Common\protobuf-2.5.0\src\.libs
+
+3.。。。Linker->Input->additional dependencied->Input->添加：
+libprotoc.lib
+libprotobuf-lite.lib
+libprotobuf.lib

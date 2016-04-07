@@ -1,6 +1,8 @@
 *.o
 *.d
-*.vs/*
+*.vs*
 ./Server/LogicServer/LogicServer
-*/workspace.xml
-*/Debug.win32/*
+*workspace.xml
+*Debug.win32*
+Common/protobuf-2.5.0/vsprojects*
+Common/protobuf-2.5.0/gtest*

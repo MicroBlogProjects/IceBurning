@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="physics">
@@ -282,6 +282,15 @@
     </Filter>
     <Filter Include="cocostudio\TimelineAction\Skeleton">
       <UniqueIdentifier>{ca5e1475-3bfd-4aae-ad54-2e19d5021b92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="my">
+      <UniqueIdentifier>{bd41f969-08b8-4c11-8b08-ab660ac9d286}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="my\Common">
+      <UniqueIdentifier>{3e15317f-1683-4e5e-abe7-809370d65906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="my\Connect">
+      <UniqueIdentifier>{96a200cc-c2e3-44c1-95ac-63ce2a770850}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1941,6 +1950,12 @@
       <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp" />
+    <ClCompile Include="..\my\Common\Console_Output.cpp">
+      <Filter>my\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\my\Connect\CMessage.cpp">
+      <Filter>my\Connect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\physics\CCPhysicsBody.h">
@@ -3787,6 +3802,15 @@
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.h" />
     <ClInclude Include="..\ui\UIAbstractCheckButton.h">
       <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\my\Common\Common_Head.h">
+      <Filter>my\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\my\Common\Console_Output.h">
+      <Filter>my\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\my\Connect\CMessage.h">
+      <Filter>my\Connect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
