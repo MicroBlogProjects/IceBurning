@@ -36,15 +36,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         monsterManager.removeClipperNode();
         config = MonsterConfig.yuangujuren;
         var point = touch.getLocation();
-        var type ;
-        if(point.x <= GC.w_2)
-        {
-            type =true;
-        }
-        else{
-            type = false;
-        }
-        monsterManager.addMonsterSprite(config, point,type);
+        monsterManager.addMyMonsterSprite(config, point);
 
     },
     onTouchCancelled : function (touch, event) {

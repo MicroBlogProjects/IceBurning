@@ -15,7 +15,7 @@ GC.w_2 = GC.winSize.width / 2 ;
 GC.h_2 = GC.winSize.height / 2;
 
 GC.SOUND_ON = true;
-GC.IS_HOST = false;
+GC.IS_HOST = true;
 
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
@@ -38,65 +38,55 @@ var MonsterType ={
 
 var TMXTileMapsize = 32;
 
+var HostUpPath = {"origin" : cc.p(5,12),
+               "destination" : cc.p(7,16)};
+
+var HostUpStraightPath = {"origin" : cc.p(5,16),
+                             "destination" : cc.p(30,18)};
+
+var HostStraightPath = {"origin" : cc.p(8,9),
+                         "destination" : cc.p(30,11)};
+
+var HostDownStraightPath = {"origin" : cc.p(5,2),
+                           "destination" : cc.p(30,4)};
+
+var HostDownPath = {"origin" : cc.p(5,4),
+                  "destination" : cc.p(7,8)};
+
+var AwayUpPath = {"origin" : cc.p(53,12),
+                    "destination" : cc.p(55,16)};
+
+var AwayUpStraightPath = {"origin" : cc.p(30,16),
+                             "destination" : cc.p(55,18)};
+
+var AwayStraightPath = {"origin" : cc.p(30,9),
+                           "destination" : cc.p(52,11)};
+
+var AwayDownStraightPath = {"origin" : cc.p(30,2),
+                               "destination" : cc.p(55,4)};
+
+var AwayDownPath = {"origin" : cc.p(53,4),
+                      "destination" : cc.p(55,8)};
+
 var HostPathConfig = {
-    "UpPath" :[{"origin" : cc.p(5,12), "destination" : cc.p(7,16)},
-                {"origin" : cc.p(5,16),"destination" : cc.p(30,18)}],
-    "MiddlePath" : [{"origin" : cc.p(8,9),"destination" : cc.p(30,11)}],
-    "DownPath" :[{"origin" : cc.p(5,4), "destination" : cc.p(7,8)},
-                   {"origin" : cc.p(5,2), "destination" : cc.p(30,4)}]
+    "UpPath" :[HostUpPath,],
+    "StraightPath" : [HostUpStraightPath,HostStraightPath,HostDownStraightPath],
+    "DownPath" :[HostDownPath,]
 };
+
+
 
 var  AwayPathConfig = {
-    "UpPath" : [{"origin" : cc.p(53,12), "destination" : cc.p(55,16)},
-                  {"origin" : cc.p(30,16), "destination" : cc.p(55,18)}],
-    "MiddlePath" : [{"origin" : cc.p(30,9), "destination" : cc.p(52,11)}],
-    "DownPath" : [{"origin" : cc.p(53,4),"destination" : cc.p(55,8)},
-                    {"origin" : cc.p(30,2), "destination" : cc.p(55,4)}]
+    "UpPath" : [AwayUpPath,],
+    "StraightPath" : [AwayUpStraightPath,AwayStraightPath,AwayDownStraightPath],
+    "DownPath" : [AwayDownPath,]
+};
+
+var FightingPathConfig = {
+    "UpPath" :[HostUpPath, AwayDownPath],
+    "StraightPath" : [HostUpStraightPath,HostStraightPath,HostDownStraightPath,AwayUpStraightPath,AwayStraightPath,AwayDownStraightPath],
+    "DownPath" :[HostDownPath,AwayUpPath]
 }
-
-
-/*var isInDownPath = function(point){
-    if((2 * TMXTileMapsize) <= point.y && point.y <= (4 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (50*TMXTileMapsize)){
-            return true;
-        }
-    }
-    else if((4 * TMXTileMapsize) <= point.y && point.y <= (8 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (7 * TMXTileMapsize)){
-            return true;
-        }
-        else if((52 * TMXTileMapsize) <= point.x && point.x <= (54 * TMXTileMapsize)){
-            return true;
-        }
-    }
-    return false;
-};
-
-var isInMiddlePath = function(point){
-    if((8 * TMXTileMapsize) <= point.x && (51 * TMXTileMapsize)){
-        if((9 * TMXTileMapsize) <= point.y && point.y <= (11 * TMXTileMapsize)){
-            return true;
-        }
-    }
-    return false;
-};
-
-var isInUpPath = function(point){
-    if((16 * TMXTileMapsize) <= point.y && point.y <= (18 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (50*TMXTileMapsize)){
-            return true;
-        }
-    }
-    else if((13 * TMXTileMapsize) <= point.y && point.y <= (17 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (7 * TMXTileMapsize)){
-            return true;
-        }
-        else if((52 * TMXTileMapsize) <= point.x && point.x <= (54 * TMXTileMapsize)){
-            return true;
-        }
-    }
-    return false;
-}*/
 
 //建筑物可以放得位置
 var BuilddingPosition = {

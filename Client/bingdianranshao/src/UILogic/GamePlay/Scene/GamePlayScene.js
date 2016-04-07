@@ -34,7 +34,6 @@ var GamePlayLayer = cc.Layer.extend({
         this.scrollView.addChild(this.TMXTiledMap,LAYER_PRIORITY_MAP);
         this.monsterBackgroundLayer = new MonsterBackgroundLayer();
         this.scrollView.addChild(this.monsterBackgroundLayer,LAYER_PRIORITY_MAP);
-        this.test();
     },
 
     addMonsterTouchlayer :function(){
