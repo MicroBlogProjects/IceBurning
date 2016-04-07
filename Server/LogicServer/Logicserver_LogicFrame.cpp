@@ -8,6 +8,11 @@ LogicFrame::LogicFrame()
 {
 }
 
+int32_t LogicFrame::HandleOneMessage(const CMessage* message)
+{
+    // to do
+}
+
 LogicFrame* LogicFrame::Instance()
 {
     if (instance == NULL)
@@ -19,7 +24,7 @@ LogicFrame* LogicFrame::Instance()
 
 int32_t LogicFrame::HandleMessage()
 {
-
+  // to do 
 }
 
 

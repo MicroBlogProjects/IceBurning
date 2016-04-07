@@ -7,16 +7,28 @@
 
 NS_LS_BEGIN
 
+#define New_MessageBody(PB) CMessageBody::ConstructMessageBody<PB>()
+
 class CMessageHead
 {
 public:
-    int32_t Encode(char* out_str, int32_t& out_len);
+    CMessageHead(int32_t uin = -1, int32_t msgID = -1) 
+        :m_iUin(uin), m_iMessageID(msgID) {}
+
+    int32_t Encode(char* out_str, int32_t& out_len) const;
     int32_t Decode(const char* in_str, int32_t in_len);
+    int32_t Size() const;
 
-    int32_t Size();
-
+    void SetLen(int32_t len) { this->m_iMessageLen      = len; }
+    void SetUin(int32_t uin) { this->m_iUin             = uin; }
+    void SetMid(int32_t mid) { this->m_iMessageID       = mid; }
+    void SetMsq(int32_t msq) { this->m_iMessageSequece  = msq; }
+    int32_t GetLen() { return m_iMessageLen;    }
+    int32_t GetUin() { return m_iUin;           }
+    int32_t GetMid() { return m_iMessageID;     }
+    int32_t GetMsq() { return m_iMessageSequece;}
 private:
-    int32_t EncodeInt32(char*& str, int32_t value);
+    int32_t EncodeInt32(char*& str, int32_t value) const;
     int32_t DecodeInt32(const char*& str);
 
 private:
@@ -29,22 +41,45 @@ private:
 class CMessageBody
 {
 public:
-    int32_t Encode(char* out_str, int32_t& out_len);
+    ~CMessageBody();
+
+    int32_t Encode(char* out_str, int32_t& out_len) const;
     int32_t Decode(const char* in_str, int32_t in_len);
 
+    template<class PB_T> static CMessageBody* ConstructMessageBody()
+    {
+        CMessageBody* messageBody = new CMessageBody();
+        messageBody->message = new PB_T();
+        return messageBody;
+    }
+    ::google::protobuf::Message* GetPB()
+    {
+        return message;
+    }
 private:
-    ::google::protobuf::Message *message;
+    CMessageBody() {}
+    ::google::protobuf::Message* message;
 };
 
 class CMessage
 {
 public:
+    CMessage() {}
+    ~CMessage();
     // return: success or fail
-    int32_t Encode(char* out_str, int32_t& out_len);
+    int32_t Encode(char* out_str, int32_t& out_len) const;
     int32_t Decode(const char* in_str, int32_t in_len);
+
+    void SetMessageHead(CMessageHead* head);
+    void SetMessageBody(CMessageBody* body);
+
+    ::google::protobuf::Message* GetPB() { return m_iMessageBody->GetPB(); }
+    int32_t GetUin() { return m_iMessageHead->GetUin(); }
+    int32_t GetMessageID() { return m_iMessageHead->GetMid(); }
+
 private:
-    CMessageHead m_iMessageHead;
-    CMessageBody m_iMessageBody;
+    CMessageHead* m_iMessageHead;
+    CMessageBody* m_iMessageBody;
 };
 
 

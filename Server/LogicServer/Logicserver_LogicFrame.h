@@ -6,6 +6,8 @@
 
 NS_LS_BEGIN
 
+#define LOGICFRAME LogicFrame::Instance()
+
 class LogicFrame
 {
 public:
@@ -14,6 +16,7 @@ public:
 
 private:
     LogicFrame();
+    int32_t HandleOneMessage(const CMessage* message);
 
 private:
     static LogicFrame* instance;

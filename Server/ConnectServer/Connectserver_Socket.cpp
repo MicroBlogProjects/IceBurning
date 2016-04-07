@@ -130,8 +130,7 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
         // send message from logic server to client
         else
         {
-            // to do
-            //TransmitMessageToClient(buf_, len);
+            TransmitMessageToClient(buf_, len);
         }
         console_msg(&buf_[4]);
         len = sizeof(buf_);

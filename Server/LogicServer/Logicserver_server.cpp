@@ -7,20 +7,17 @@ US_NS_LS;
 
 void working()
 {
-    LogicFrame* logicFrame = LogicFrame::Instance();
-
     EpollUnit* epollUnit = EpollUnit::Instance();
     epollUnit->Initialize();
 
-    LogicSocket* logicSocket = LogicSocket::Instance();
-    int32_t logic_fd = logicSocket->ConnectToConnectserver();
+    int32_t logic_fd = LOGICSOCKET->ConnectToConnectserver();
     if (logic_fd == error)
     {
         printf("connect to connect server failed.");
         return;
     }
 
-    epollUnit->EpollRegist(logic_fd, logicFrame->HandleMessage);
+    epollUnit->EpollRegist(logic_fd, LOGICFRAME->HandleMessage);
 
     epollUnit->EpollRun();
 }
