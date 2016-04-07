@@ -3,10 +3,10 @@
 #define __LOGICSERVER_COMMON_H__
 
 #include "../Common/Common.h"
-#include "../Common/Message_i.h"
 #include "../Common/Common_Trace.h"
 #include "../Common/Function_Wrap.h"
 
+#include "../../Common/Include/Message_i.h"
 
 NS_LS_BEGIN
 

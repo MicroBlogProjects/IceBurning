@@ -7,10 +7,10 @@
 
 class CMessageHead
 {
-    int32_t m_iPackageLen;      //这个是整个包的长度，包括此字段
-    int32_t m_iUin;             //当没有登录时，没有uin，需要将此项填充为<=0
-    int32_t m_iMessageID;       //消息类型
-    int32_t m_iMessageSequece;  //消息唯一标识符
+int32_t m_iPackageLen;      //这个是整个包的长度，包括此字段
+int32_t m_iUin;             //当没有登录时，没有uin，需要将此项填充为<=0
+int32_t m_iMessageID;       //消息类型
+int32_t m_iMessageSequece;  //消息唯一标识符
 }
 */
 

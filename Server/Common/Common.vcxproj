@@ -110,11 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Common\Include\Message_i.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Common_Trace.h" />
     <ClInclude Include="Console_Output.h" />
     <ClInclude Include="Function_Wrap.h" />
-    <ClInclude Include="Message_i.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common_Trace.cpp" />
