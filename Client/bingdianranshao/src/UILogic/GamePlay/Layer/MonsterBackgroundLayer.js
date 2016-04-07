@@ -9,7 +9,7 @@ var monsterManager;
 var MonsterBackgroundLayer = cc.Layer.extend({
     myMonsterArray : null,
     enemyMonsterArray : null,
-    //schedule : null,
+    m_clipperNode : null,
     ctor : function(){
         this._super();
         this.myMonsterArray = []; //创建一个数组
@@ -88,7 +88,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 this.enemyMonsterArray.splice(i,1);
             }
         }
-        //cc.log("111");
     },
 
     monsterWalking :function(){
@@ -198,5 +197,55 @@ var MonsterBackgroundLayer = cc.Layer.extend({
 
     getPointDistance : function (p1, p2) {
         return (p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y);
+    },
+
+    addClipperNode :function(){
+        var pathConfig;
+        if(GC.IS_HOST){
+            pathConfig = HostPathConfig;
+        }
+        else {
+            pathConfig = AwayPathConfig;
+        }
+        //设置模板
+        var stencil = cc.Node.create();
+        for(var i = 0; i<pathConfig.UpPath.length ;i++){
+            var element = pathConfig.UpPath[i];
+            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
+            stencil.addChild(rectangular);
+        }
+        for(var i =0 ;i < pathConfig.MiddlePath.length;i++){
+            var element = pathConfig.MiddlePath[i];
+            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
+            stencil.addChild(rectangular);
+        }
+        for(var i =0 ;i < pathConfig.DownPath.length;i++){
+            var element = pathConfig.DownPath[i];
+            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
+            stencil.addChild(rectangular);
+        }
+        //设置
+        this.m_clipperNode = cc.ClippingNode.create(stencil);
+        this.m_clipperNode.setInverted(true);//底板可见
+        this.m_clipperNode.setAlphaThreshold(1.0);
+        //设置灰色的底板
+        var baLayer = cc.LayerColor.create(cc.color(0,0,0,150));
+        baLayer.setScaleX(4);
+        this.m_clipperNode.addChild(baLayer);
+        this.addChild(this.m_clipperNode);
+    },
+
+    getRectangular : function(origin, destination){
+        var rectangular = new cc.DrawNode();
+        var origin = cc.p(origin);
+        var destination = cc.p(destination);
+        var color = cc.color(0,0,0);
+        rectangular.drawRect(origin,destination,color);
+        return rectangular;
+    },
+
+    removeClipperNode : function(){
+        this.m_clipperNode.removeFromParent();
+        this.m_clipperNode = null;
     }
 });

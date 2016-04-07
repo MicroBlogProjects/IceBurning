@@ -15,7 +15,7 @@ GC.w_2 = GC.winSize.width / 2 ;
 GC.h_2 = GC.winSize.height / 2;
 
 GC.SOUND_ON = true;
-GC.IS_HOST = true;
+GC.IS_HOST = false;
 
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
@@ -38,7 +38,24 @@ var MonsterType ={
 
 var TMXTileMapsize = 32;
 
-var isInDownPath = function(point){
+var HostPathConfig = {
+    "UpPath" :[{"origin" : cc.p(5,12), "destination" : cc.p(7,16)},
+                {"origin" : cc.p(5,16),"destination" : cc.p(30,18)}],
+    "MiddlePath" : [{"origin" : cc.p(8,9),"destination" : cc.p(30,11)}],
+    "DownPath" :[{"origin" : cc.p(5,4), "destination" : cc.p(7,8)},
+                   {"origin" : cc.p(5,2), "destination" : cc.p(30,4)}]
+};
+
+var  AwayPathConfig = {
+    "UpPath" : [{"origin" : cc.p(53,12), "destination" : cc.p(55,16)},
+                  {"origin" : cc.p(30,16), "destination" : cc.p(55,18)}],
+    "MiddlePath" : [{"origin" : cc.p(30,9), "destination" : cc.p(52,11)}],
+    "DownPath" : [{"origin" : cc.p(53,4),"destination" : cc.p(55,8)},
+                    {"origin" : cc.p(30,2), "destination" : cc.p(55,4)}]
+}
+
+
+/*var isInDownPath = function(point){
     if((2 * TMXTileMapsize) <= point.y && point.y <= (4 * TMXTileMapsize)){
         if((5 * TMXTileMapsize) <= point.x && point.x <= (50*TMXTileMapsize)){
             return true;
@@ -79,7 +96,7 @@ var isInUpPath = function(point){
         }
     }
     return false;
-}
+}*/
 
 //建筑物可以放得位置
 var BuilddingPosition = {

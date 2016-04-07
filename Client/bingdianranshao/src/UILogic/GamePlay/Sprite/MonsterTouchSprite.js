@@ -22,7 +22,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
             return false
         }
         MonsterTouch.addListerSprite(touch.getLocation());
-        //MonsterTouch.addClipperNode();
+        monsterManager.addClipperNode();
         return true;
     },
     onTouchMoved : function (touch, event) {
@@ -33,7 +33,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
     onTouchEnded : function (touch, event) {
         //var target = event.getCurrentTarget();
         MonsterTouch.removeListerSprite();
-        //MonsterTouch.removeClipperNode();
+        monsterManager.removeClipperNode();
         config = MonsterConfig.yuangujuren;
         var point = touch.getLocation();
         var type ;
@@ -53,7 +53,8 @@ var MonsterTouchSprite = cc.Sprite.extend({
     },
 
     isTouchInRect:function (touch) {
-        point = this.convertToWorldSpace(cc.p(this.width/2,this.height/2)); //将坐标系映射到世界坐标系
+        var getPoint = touch.getLocation();
+        point = this.convertToWorldSpace(cc.p(this.width/2,this.height/2));
         myRect = cc.rect(point.x - this.width/2.0,point.y - this.height/2.0,this.width,this.height);
         return cc.rectContainsPoint(myRect, getPoint);
     }

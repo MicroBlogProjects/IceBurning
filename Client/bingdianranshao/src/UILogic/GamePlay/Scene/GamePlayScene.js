@@ -45,6 +45,8 @@ var GamePlayLayer = cc.Layer.extend({
         var config = MonsterConfig.yuangujuren;
         this.monsterBackgroundLayer.test(config, cc.p(200,200));
     }
+
+
 });
 var GamePlayScene = cc.Scene.extend({
     gamePlayLayer :null,
