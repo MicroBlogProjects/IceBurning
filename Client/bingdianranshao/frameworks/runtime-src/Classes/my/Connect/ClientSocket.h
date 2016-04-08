@@ -9,7 +9,7 @@
 
 NS_GJ_BEGIN
 
-class CC_DLL ClientSocket
+class ClientSocket
 {
 public:
     static ClientSocket* Instance();

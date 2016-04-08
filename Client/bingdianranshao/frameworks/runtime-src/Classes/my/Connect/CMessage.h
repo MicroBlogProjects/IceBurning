@@ -7,7 +7,7 @@
 
 NS_GJ_BEGIN
 
-class CC_DLL CMessageHead
+class CMessageHead
 {
 public:
     CMessageHead(int32_t uin = -1, int32_t msgID = -1)
@@ -36,7 +36,7 @@ private:
     int32_t m_iMessageSequece;  //消息唯一标识符
 };
 
-class CC_DLL CMessageBody
+class CMessageBody
 {
 public:
     ~CMessageBody();
@@ -59,7 +59,7 @@ private:
     ::google::protobuf::Message* message;
 };
 
-class CC_DLL CMessage
+class CMessage
 {
 public:
     CMessage():m_iMessageHead(NULL), m_iMessageBody(NULL) {}

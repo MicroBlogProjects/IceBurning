@@ -103,7 +103,7 @@
       </Command>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>libcurl_imp.lib;mozjs-33.lib;ws2_32.lib;sqlite3.lib;websockets.lib;libprotobuf.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcurl_imp.lib;mozjs-33.lib;ws2_32.lib;sqlite3.lib;websockets.lib;libprotoc.lib;libprotobuf-lite.lib;libprotobuf.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\..\Common\protobuf-2.5.0\src\.libs;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -178,10 +178,21 @@ copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Classes\my\Common\Console_Output.cpp" />
+    <ClCompile Include="..\Classes\my\Connect\ClientSocket.cpp" />
+    <ClCompile Include="..\Classes\my\Connect\CMessage.cpp" />
+    <ClCompile Include="..\Classes\my\ProtoOut\MessageRegister.cpp" />
+    <ClCompile Include="..\Classes\my\ProtoOut\Test.pb.cc" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\my\Common\Common_Head.h" />
+    <ClInclude Include="..\Classes\my\Common\Console_Output.h" />
+    <ClInclude Include="..\Classes\my\Connect\ClientSocket.h" />
+    <ClInclude Include="..\Classes\my\Connect\CMessage.h" />
+    <ClInclude Include="..\Classes\my\ProtoOut\MessageRegister.h" />
+    <ClInclude Include="..\Classes\my\ProtoOut\Test.pb.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="resource.h" />

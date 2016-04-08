@@ -11,6 +11,18 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{e93a77e1-af1e-4400-87d3-504b62ebdbb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\my">
+      <UniqueIdentifier>{1a303ce5-3551-4787-9b9f-27543e239fdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\my\Common">
+      <UniqueIdentifier>{d97e6e60-8d9a-43df-b4b7-c006885518e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\my\Connect">
+      <UniqueIdentifier>{3b30ceae-ae56-400d-9f7a-c1837794f960}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\my\ProtoOut">
+      <UniqueIdentifier>{de04f882-4649-43cd-a2dc-8a07b4d8f2e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -18,6 +30,21 @@
     </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\Common\Console_Output.cpp">
+      <Filter>Classes\my\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\Connect\ClientSocket.cpp">
+      <Filter>Classes\my\Connect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\Connect\CMessage.cpp">
+      <Filter>Classes\my\Connect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\ProtoOut\MessageRegister.cpp">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\ProtoOut\Test.pb.cc">
+      <Filter>Classes\my\ProtoOut</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +55,24 @@
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="..\Classes\my\Common\Common_Head.h">
+      <Filter>Classes\my\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\Common\Console_Output.h">
+      <Filter>Classes\my\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\Connect\ClientSocket.h">
+      <Filter>Classes\my\Connect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\Connect\CMessage.h">
+      <Filter>Classes\my\Connect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\ProtoOut\MessageRegister.h">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\ProtoOut\Test.pb.h">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

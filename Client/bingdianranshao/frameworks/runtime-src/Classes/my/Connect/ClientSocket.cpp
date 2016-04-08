@@ -15,6 +15,15 @@ ClientSocket* ClientSocket::Instance()
 
 int32_t ClientSocket::Initialize()
 {
+    msg_len_ = 0;
+    recved_len_ = 0;
+    recved_MsgLen_len_ = 0;
+    pHead_ = pTail_ = 0;
+    return success;
+}
+
+int32_t ClientSocket::Connect(std::string ip, int32_t port)
+{
     // 加载socket动态链接库(dll)  
     WORD wVersionRequested;
     WSADATA wsaData;    // 这结构是用于接收Wjndows Socket的结构信息的  
@@ -25,14 +34,14 @@ int32_t ClientSocket::Initialize()
     err = WSAStartup(wVersionRequested, &wsaData);
     if (err != 0) {
         console_msg("Initialize in ClientSocket failed.");
-        return error;          // 返回值为零的时候是表示成功申请WSAStartup  
+        return fail;          // 返回值为零的时候是表示成功申请WSAStartup  
     }
 
     if (LOBYTE(wsaData.wVersion) != 1 || HIBYTE(wsaData.wVersion) != 1) {
         // 检查这个低字节是不是1，高字节是不是1以确定是否我们所请求的1.1版本  
         // 否则的话，调用WSACleanup()清除信息，结束函数  
         WSACleanup();
-        return error;
+        return fail;
     }
 
     // 创建socket操作，建立流式套接字，返回套接字号sockClient  
@@ -40,12 +49,12 @@ int32_t ClientSocket::Initialize()
     // 第一个参数，指定地址簇(TCP/IP只能是AF_INET，也可写成PF_INET)  
     // 第二个，选择套接字的类型(流式套接字)，第三个，特定地址家族相关协议（0为自动）  
     sockClient = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockClient < 0)
+    {
+        console_msg("socket error.");
+        return fail;
+    }
 
-    return success;
-}
-
-int32_t ClientSocket::Connect(std::string ip, int32_t port)
-{
     // 将套接字sockClient与远程主机相连  
     // int connect( SOCKET s,  const struct sockaddr* name,  int namelen);  
     // 第一个参数：需要进行连接操作的套接字  
@@ -137,7 +146,8 @@ int32_t ClientSocket::RecvOneMessageFromServer(CMessage* message)
             }
             else if (recv_byte < 0)
             {
-                if (errno != EAGAIN)
+                int32_t err = WSAGetLastError();
+                if (err != WSAEWOULDBLOCK)
                 {
                     console_msg("read data error.");
                     return error;
@@ -154,40 +164,41 @@ int32_t ClientSocket::RecvOneMessageFromServer(CMessage* message)
 
             msg_len_ = ParseToInt(buf_, pHead_, pTail_);
             recved_len_ = sz_int;
+        }
 
-            int32_t read_limit = (pTail_ >= pHead_) ? (MAX_CSMESSAGE_SIZE - pTail_) : (pHead_ - pTail_);
-            read_limit = std::min(read_limit, msg_len_ - recved_len_);
-            recv_byte = recv(sockClient, &buf_[pTail_], read_limit, 0);
-            if (recv_byte == 0)
+        int32_t read_limit = (pTail_ >= pHead_) ? (MAX_CSMESSAGE_SIZE - pTail_) : (pHead_ - pTail_);
+        read_limit = std::min(read_limit, msg_len_ - recved_len_);
+        recv_byte = recv(sockClient, &buf_[pTail_], read_limit, 0);
+        if (recv_byte == 0)
+        {
+            return quit;
+        }
+        else if (recv_byte < 0)
+        {
+            int32_t err = WSAGetLastError();
+            if (err != WSAEWOULDBLOCK)
             {
-                return quit;
+                console_msg("read data error.");
+                return error;
             }
-            else if (recv_byte < 0)
-            {
-                if (errno != EAGAIN)
-                {
-                    console_msg("read data error.");
-                    return error;
-                }
-                return fail;
-            }
+            return fail;
+        }
 
-            recved_len_ += recv_byte;
-            pTail_ = (pTail_ + recv_byte) % MAX_CSMESSAGE_SIZE;
+        recved_len_ += recv_byte;
+        pTail_ = (pTail_ + recv_byte) % MAX_CSMESSAGE_SIZE;
 
-            // complete one message
-            if (msg_len_ == recved_len_)
+        // complete one message
+        if (msg_len_ == recved_len_)
+        {
+            if (error == FillMessage(message))
             {
-                if (error == FillMessage(message))
-                {
-                    console_msg("copy data error.");
-                    return error;
-                }
-                msg_len_ = recved_len_ = 0;
-                pHead_ = pTail_ = 0;
-                recved_MsgLen_len_ = 0;
-                return success;
+                console_msg("copy data error.");
+                return error;
             }
+            msg_len_ = recved_len_ = 0;
+            pHead_ = pTail_ = 0;
+            recved_MsgLen_len_ = 0;
+            return success;
         }
     } while (recv_byte > 0);
     return fail;

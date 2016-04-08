@@ -20,7 +20,7 @@ using namespace std;
 NS_GJ_BEGIN
 
 
-class CC_DLL MsgRegister
+class MsgRegister
 {
 public:
     static MsgRegister* Instance();
