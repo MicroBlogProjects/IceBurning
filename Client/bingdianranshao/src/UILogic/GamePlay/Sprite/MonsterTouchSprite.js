@@ -4,9 +4,11 @@
 
 var MonsterTouchSprite = cc.Sprite.extend({
     m_id : null,
+    m_config : null,
     ctor : function(config){
         this._super(config.defaultImage);
-
+        this.m_config = config;
+        this.m_id = config.attribute.id;
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -21,8 +23,13 @@ var MonsterTouchSprite = cc.Sprite.extend({
         if (!target.isTouchInRect(touch)){
             return false
         }
-        MonsterTouch.addListerSprite(touch.getLocation());
-        //MonsterTouch.addClipperNode();
+        MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
+        if(target.m_id < 100){
+            monsterManager.addClipperNode();
+        }
+        else{
+            monsterManager.addBuildingTick();
+        }
         return true;
     },
     onTouchMoved : function (touch, event) {
@@ -31,36 +38,28 @@ var MonsterTouchSprite = cc.Sprite.extend({
 
     },
     onTouchEnded : function (touch, event) {
-        //var target = event.getCurrentTarget();
+        var target = event.getCurrentTarget();
         MonsterTouch.removeListerSprite();
-        //MonsterTouch.removeClipperNode();
-        config = MonsterConfig.yuangujuren;
         var point = touch.getLocation();
-        var type ;
-        if(point.x <= GC.w_2)
-        {
-            type =true;
+        if(target.m_id < 100){
+            monsterManager.removeClipperNode();
         }
-        else{
-            type = false;
+        else {
+            monsterManager.removeBuildingTick();
         }
-        monsterManager.addMonsterSprite(config, point,type);
+        monsterManager.addMyMonsterSprite(target.m_config, point);
 
     },
     onTouchCancelled : function (touch, event) {
-        var target = event.getCurrentTarget();
+        //var target = event.getCurrentTarget();
 
     },
 
     isTouchInRect:function (touch) {
         var getPoint = touch.getLocation();
-        var myRect = this.getFrame();
-        myRect.x += this.x;
-        myRect.y += this.y;
+        point = this.convertToWorldSpace(cc.p(this.width/2,this.height/2));
+        myRect = cc.rect(point.x - this.width/2.0,point.y - this.height/2.0,this.width,this.height);
         return cc.rectContainsPoint(myRect, getPoint);
-    },
-    getFrame:function () {
-        return cc.rect(-this.width / 2, -this.height / 2, this.width, this.height);
     }
 
 });
