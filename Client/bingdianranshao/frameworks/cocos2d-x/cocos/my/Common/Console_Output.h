@@ -4,7 +4,7 @@
 
 #include "Common_Head.h"
 
-#define console_msg err_msg
+#define console_msg CCLOG
 
 #define MAXERRBUFSIZE 2000
 

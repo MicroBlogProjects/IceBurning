@@ -2,14 +2,12 @@
 #ifndef __CMESSAGE_H__
 #define __CMESSAGE_H__
 
-#include "../Common/Common_Head.h"
+#include "my/Common/Common_Head.h"
 #include "google/protobuf/message.h"
 
 NS_GJ_BEGIN
 
-#define New_MessageBody(PB) CMessageBody::ConstructMessageBody<PB>()
-
-class CMessageHead
+class CC_DLL CMessageHead
 {
 public:
     CMessageHead(int32_t uin = -1, int32_t msgID = -1)
@@ -38,7 +36,7 @@ private:
     int32_t m_iMessageSequece;  //消息唯一标识符
 };
 
-class CMessageBody
+class CC_DLL CMessageBody
 {
 public:
     ~CMessageBody();
@@ -61,10 +59,10 @@ private:
     ::google::protobuf::Message* message;
 };
 
-class CMessage
+class CC_DLL CMessage
 {
 public:
-    CMessage() {}
+    CMessage():m_iMessageHead(NULL), m_iMessageBody(NULL) {}
     ~CMessage();
     // return: success or fail
     int32_t Encode(char* out_str, int32_t& out_len) const;

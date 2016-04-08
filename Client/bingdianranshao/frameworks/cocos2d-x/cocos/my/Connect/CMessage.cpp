@@ -1,5 +1,6 @@
 
 #include "CMessage.h"
+#include "my/ProtoOut/MessageRegister.h"
 
 NS_GJ_BEGIN
 
@@ -31,10 +32,10 @@ int32_t CMessageHead::Decode(const char* in_str, int32_t in_len)
     int32_t len = 0;
     const char* str = in_str;
 
-    m_iMessageLen = DecodeInt32(str);
-    m_iUin = DecodeInt32(str);
-    m_iMessageID = DecodeInt32(str);
-    m_iMessageSequece = DecodeInt32(str);
+    m_iMessageLen       = DecodeInt32(str);
+    m_iUin              = DecodeInt32(str);
+    m_iMessageID        = DecodeInt32(str);
+    m_iMessageSequece   = DecodeInt32(str);
     return success;
 }
 
@@ -93,8 +94,14 @@ int32_t CMessageBody::Decode(const char* in_str, int32_t in_len)
 
 CMessage::~CMessage()
 {
-    delete m_iMessageHead;
-    delete m_iMessageBody;
+    if (m_iMessageHead != NULL)
+    {
+        delete m_iMessageHead;
+    }
+    if (m_iMessageBody != NULL)
+    {
+        delete m_iMessageBody;
+    }
 }
 
 int32_t CMessage::Encode(char* out_str, int32_t& out_len) const
@@ -123,6 +130,11 @@ int32_t CMessage::Encode(char* out_str, int32_t& out_len) const
 
 int32_t CMessage::Decode(const char* in_str, int32_t in_len)
 {
+    // 解析消息头
+    if (m_iMessageHead == NULL)
+    {
+        m_iMessageHead = new CMessageHead();
+    }
     int32_t head_len = m_iMessageHead->Size();
     if (fail == m_iMessageHead->Decode(in_str, head_len))
     {
@@ -130,6 +142,11 @@ int32_t CMessage::Decode(const char* in_str, int32_t in_len)
         return fail;
     }
 
+    // 根据消息头的msgID生成对应的body，然后解析
+    if (m_iMessageBody == NULL)
+    {
+        m_iMessageBody = NewMessageBodyWithMsgID(m_iMessageHead->GetMid());
+    }
     int32_t body_len = in_len - head_len;
     if (fail == m_iMessageBody->Decode(&in_str[head_len], body_len))
     {

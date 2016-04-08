@@ -1,7 +1,7 @@
 *.o
 *.d
 *.vs*
-./Server/LogicServer/LogicServer
+Server/LogicServer/LogicServer
 *workspace.xml
 *Debug.win32*
 Common/protobuf-2.5.0/vsprojects*

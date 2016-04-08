@@ -6,3 +6,11 @@
 libprotoc.lib
 libprotobuf-lite.lib
 libprotobuf.lib
+
+4.将protoc.exe加入系统环境变量
+
+5.将sed安装并加入环境变量(可选)
+
+6.在每个工程属性里的c/c++->Preprocessor中添加_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS(可选)
+
+

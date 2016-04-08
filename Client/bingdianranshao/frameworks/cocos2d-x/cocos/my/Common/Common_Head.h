@@ -21,13 +21,16 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-#include "../Common/Console_Output.h"
-//#include "../../../../../Common/protobuf-2.5.0/src/google/protobuf/message.h"
+#include "cocos2d.h"
+#include "my/Common/Console_Output.h"
 
 #define NS_GJ           GameJoy
 #define US_NS_GJ        using namespace GameJoy
 #define NS_GJ_BEGIN     namespace GameJoy {
 #define NS_GJ_END       }
+
+#define SERVERIP "10.0.128.158"
+#define SERVERPORT 23333
 
 enum
 {

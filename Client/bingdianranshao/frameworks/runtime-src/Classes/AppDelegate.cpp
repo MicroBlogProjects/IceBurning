@@ -26,6 +26,9 @@
 #include "jsb_cocos2dx_navmesh_auto.hpp"
 #include "navmesh/jsb_cocos2dx_navmesh_manual.h"
 
+#include "my/Common/Common_Head.h"
+#include "my/Connect/ClientSocket.h"
+
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 #include "jsb_cocos2dx_experimental_video_auto.hpp"
 #include "experimental/jsb_cocos2dx_experimental_video_manual.h"
@@ -158,6 +161,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     ScriptEngineProtocol *engine = ScriptingCore::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     ScriptingCore::getInstance()->runScript("main.js");
+
+    GameJoy::ClientSocket::Instance()->Initialize();
+    GameJoy::ClientSocket::Instance()->Connect();
 
     return true;
 }
