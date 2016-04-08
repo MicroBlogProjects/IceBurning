@@ -38,50 +38,67 @@ var MonsterType ={
 
 var TMXTileMapsize = 32;
 
-var isInDownPath = function(point){
-    if((2 * TMXTileMapsize) <= point.y && point.y <= (4 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (50*TMXTileMapsize)){
-            return true;
-        }
-    }
-    else if((4 * TMXTileMapsize) <= point.y && point.y <= (8 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (7 * TMXTileMapsize)){
-            return true;
-        }
-        else if((52 * TMXTileMapsize) <= point.x && point.x <= (54 * TMXTileMapsize)){
-            return true;
-        }
-    }
-    return false;
+var HostUpPath = {"origin" : cc.p(5,12),
+               "destination" : cc.p(7,16)};
+
+var HostUpStraightPath = {"origin" : cc.p(5,16),
+                             "destination" : cc.p(30,18)};
+
+var HostStraightPath = {"origin" : cc.p(8,9),
+                         "destination" : cc.p(30,11)};
+
+var HostDownStraightPath = {"origin" : cc.p(5,2),
+                           "destination" : cc.p(30,4)};
+
+var HostDownPath = {"origin" : cc.p(5,4),
+                  "destination" : cc.p(7,8)};
+
+var AwayUpPath = {"origin" : cc.p(53,12),
+                    "destination" : cc.p(55,16)};
+
+var AwayUpStraightPath = {"origin" : cc.p(30,16),
+                             "destination" : cc.p(55,18)};
+
+var AwayStraightPath = {"origin" : cc.p(30,9),
+                           "destination" : cc.p(52,11)};
+
+var AwayDownStraightPath = {"origin" : cc.p(30,2),
+                               "destination" : cc.p(55,4)};
+
+var AwayDownPath = {"origin" : cc.p(53,4),
+                      "destination" : cc.p(55,8)};
+
+var HostPathConfig = {
+    "UpPath" :[HostUpPath,],
+    "StraightPath" : [HostUpStraightPath,HostStraightPath,HostDownStraightPath],
+    "DownPath" :[HostDownPath,]
 };
 
-var isInMiddlePath = function(point){
-    if((8 * TMXTileMapsize) <= point.x && (51 * TMXTileMapsize)){
-        if((9 * TMXTileMapsize) <= point.y && point.y <= (11 * TMXTileMapsize)){
-            return true;
-        }
-    }
-    return false;
+
+
+var  AwayPathConfig = {
+    "UpPath" : [AwayUpPath,],
+    "StraightPath" : [AwayUpStraightPath,AwayStraightPath,AwayDownStraightPath],
+    "DownPath" : [AwayDownPath,]
 };
 
-var isInUpPath = function(point){
-    if((16 * TMXTileMapsize) <= point.y && point.y <= (18 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (50*TMXTileMapsize)){
-            return true;
-        }
-    }
-    else if((13 * TMXTileMapsize) <= point.y && point.y <= (17 * TMXTileMapsize)){
-        if((5 * TMXTileMapsize) <= point.x && point.x <= (7 * TMXTileMapsize)){
-            return true;
-        }
-        else if((52 * TMXTileMapsize) <= point.x && point.x <= (54 * TMXTileMapsize)){
-            return true;
-        }
-    }
-    return false;
+var FightingPathConfig = {
+    "UpPath" :[HostUpPath, AwayDownPath],
+    "StraightPath" : [HostUpStraightPath,HostStraightPath,HostDownStraightPath,AwayUpStraightPath,AwayStraightPath,AwayDownStraightPath],
+    "DownPath" :[HostDownPath,AwayUpPath]
 }
 
 //建筑物可以放得位置
-var BuilddingPosition = {
+var HostBuilddingPosition = [{"origin" : cc.p(9,6), "destination" : cc.p(11,8)},
+                               {"origin" : cc.p(15,6),"destination" : cc.p(17,8)},
+                               {"origin" : cc.p(21,6),"destination" : cc.p(23,8)},
+                               {"origin" : cc.p(9,12), "destination" : cc.p(11,14)},
+                               {"origin" : cc.p(15,12),"destination" : cc.p(17,14)},
+                               {"origin" : cc.p(21,12),"destination" : cc.p(23,14)}];
 
-};
+var AwayBuilddingPosition =[{"origin" : cc.p(36,6), "destination" : cc.p(38,8)},
+                                {"origin" : cc.p(42,6),"destination" : cc.p(44,8)},
+                                {"origin" : cc.p(48,6),"destination" : cc.p(50,8)},
+                                {"origin" : cc.p(36,12), "destination" : cc.p(38,14)},
+                                {"origin" : cc.p(42,12),"destination" : cc.p(44,14)},
+                                {"origin" : cc.p(48,12),"destination" : cc.p(50,14)}];

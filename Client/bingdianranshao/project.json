@@ -27,6 +27,7 @@
         "src/UILogic/GamePlay/Sprite/MonsterTouchSprite.js",
         "src/UILogic/GamePlay/Layer/MonsterTouchLayer.js",
         "src/UILogic/GamePlay/Layer/MonsterLayer.js",
+        "src/UILogic/GamePlay/Layer/BuildingTickLayer.js",
 
         "src/UILogic/Setting/Scene/SettingScene.js",
         "src/UILogic/Setting/Layer/STBackgroundLayer.js",

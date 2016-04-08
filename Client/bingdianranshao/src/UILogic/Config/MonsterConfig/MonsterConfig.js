@@ -21,7 +21,7 @@ var MianCityAttribute = {
 var YuangujurenAttribute = {
     "id" : 1, //id
     "name" : "远古巨人",
-    "walkSpeed" : 20, //移动速度 多少秒一步
+    "walkSpeed" : 50, //移动速度 多少秒一步
     "HP" : 20.0, //血量
     "sightRadius" : 100.0, //视野半径
     "defense" : 20.0,
