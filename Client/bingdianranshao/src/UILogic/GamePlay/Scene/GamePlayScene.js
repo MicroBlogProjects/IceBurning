@@ -22,6 +22,9 @@ var GamePlayLayer = cc.Layer.extend({
         this.scrollView.setTouchEnabled(true);
         this.scrollView.setContentSize(cc.size(GC.w, GC.h));
         this.scrollView.setInnerContainerSize(cc.size(GC.w*2, GC.h));//可滑动区域
+        if(GC.IS_HOST == false){
+            //this.scrollView.scrollToLeft();
+        }
         this.addChild(this.scrollView);
     },
 
@@ -38,7 +41,7 @@ var GamePlayLayer = cc.Layer.extend({
 
     addMonsterTouchlayer :function(){
       this.monsterTouchlayer = new MonsterTouchLayer();
-        this.addChild(this.monsterTouchlayer);
+        this.addChild(this.monsterTouchlayer,LAYER_PRIORITY_TOUCH);
     },
     test : function(){
         var config = MonsterConfig.yuangujuren;

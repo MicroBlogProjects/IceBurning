@@ -27,17 +27,22 @@ var MonsterTouchLayer = cc.Layer.extend({
         bgSprite.setPosition(30,30);
         this.m_toolScrollView.addChild(bgSprite,0);
 
-        config = MonsterConfig.yuangujuren;
-        for(var i = 0; i < 10;i++){
-            var monsterTouchSprite = new MonsterTouchSprite(config);
+        var monsterConfig = MonsterConfig.yuangujuren;
+        for(var i = 0; i < 1;i++){
+            var monsterTouchSprite = new MonsterTouchSprite(monsterConfig);
+            monsterTouchSprite.setPosition((monsterTouchSprite.getContentSize().width/2 + 20) * (i+0.5),monsterTouchSprite.getContentSize().height/2);
+            this.m_toolScrollView.addChild(monsterTouchSprite,10);
+        }
+        var buildingConfig = MonsterConfig.maincity;
+        for(var i = 1;i < 2;i++){
+            var monsterTouchSprite = new MonsterTouchSprite(buildingConfig);
             monsterTouchSprite.setPosition((monsterTouchSprite.getContentSize().width/2 + 20) * (i+0.5),monsterTouchSprite.getContentSize().height/2);
             this.m_toolScrollView.addChild(monsterTouchSprite,10);
         }
     },
 
     //tool点击之后的效果
-    addListerSprite : function(point){
-        this.m_nowmoveSprite = MonsterConfig.yuangujuren;
+    addListerSprite : function(config,point){
         this.m_nowmoveSprite = cc.Sprite.create(config.defaultImage);
         this.m_nowmoveSprite.setPosition(point);
         this.addChild(this.m_nowmoveSprite);

@@ -89,6 +89,16 @@ var FightingPathConfig = {
 }
 
 //建筑物可以放得位置
-var BuilddingPosition = {
+var HostBuilddingPosition = [{"origin" : cc.p(9,6), "destination" : cc.p(11,8)},
+                               {"origin" : cc.p(15,6),"destination" : cc.p(17,8)},
+                               {"origin" : cc.p(21,6),"destination" : cc.p(23,8)},
+                               {"origin" : cc.p(9,12), "destination" : cc.p(11,14)},
+                               {"origin" : cc.p(15,12),"destination" : cc.p(17,14)},
+                               {"origin" : cc.p(21,12),"destination" : cc.p(23,14)}];
 
-};
+var AwayBuilddingPosition =[{"origin" : cc.p(36,6), "destination" : cc.p(38,8)},
+                                {"origin" : cc.p(42,6),"destination" : cc.p(44,8)},
+                                {"origin" : cc.p(48,6),"destination" : cc.p(50,8)},
+                                {"origin" : cc.p(36,12), "destination" : cc.p(38,14)},
+                                {"origin" : cc.p(42,12),"destination" : cc.p(44,14)},
+                                {"origin" : cc.p(48,12),"destination" : cc.p(50,14)}];

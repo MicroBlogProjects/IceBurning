@@ -12,10 +12,14 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     m_clipperNode : null,
     walkingPathConfig : null,
     fightingPathConfig : null,
+    buildingPositionConfig : null,
+    buildingPositionMark : null, //标记是否被放塔
+    buildingTickLayer : null,
     ctor : function(){
         this._super();
         this.myMonsterArray = []; //创建一个数组
         this.enemyMonsterArray = [];
+        this.buildingPositionMark = [];
         this.fightingPathConfig = FightingPathConfig;
         this.init();
         monsterManager = this;
@@ -26,9 +30,14 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     init :function(){
         if(GC.IS_HOST){
             this.walkingPathConfig = HostPathConfig;
+            this.buildingPositionConfig = HostBuilddingPosition;
         }
         else {
             this.walkingPathConfig = AwayPathConfig;
+            this.buildingPositionConfig = AwayBuilddingPosition;
+        }
+        for(var i = 0; i<this.buildingPositionConfig.length;i++){
+            this.buildingPositionMark.push(false);
         }
         config = MonsterConfig.maincity;
         var mainCitySprite =  new MonsterSprite(config,true);
@@ -48,30 +57,20 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             }
         }
         else { //建筑物
-
+            var ret =this.isInBuildingPosition(this.buildingPositionConfig,point);
+            if(ret == -1 || this.buildingPositionMark[ret]){
+                return;
+            }
+            else{
+                this.buildingPositionMark[ret] = true;
+                var mosterSprite = new MonsterSprite(config,true);
+                mosterSprite.setPosition(point);
+                this.addChild(mosterSprite);
+                this.myMonsterArray.push(mosterSprite);
+            }
         }
     },
-    /*addMonsterSprite : function(config, point, isOwnMonster){
-        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
-        point.x += offset.x;
-        var mosterSprite;
-        if(isOwnMonster){
-            //判断是否在合法位置
-            mosterSprite = new MonsterSprite(config,true);
 
-        }
-        else{
-            mosterSprite = new MonsterSprite(config,false);
-        }
-        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
-        mosterSprite.setPosition(point.x + offset.x ,point.y);
-        this.addChild(mosterSprite);
-        if(isOwnMonster)
-            this.myMonsterArray.push(mosterSprite);
-        else{
-            this.enemyMonsterArray.push(mosterSprite);
-        }
-    },*/
 
     isInRect : function(config,point){
         var origin = config.origin;
@@ -114,6 +113,16 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         else{
             return false;
         }
+    },
+
+    isInBuildingPosition : function(buildingConfig,point){
+        for(var i = 0; i < buildingConfig.length; i++){
+            var element = buildingConfig[i];
+            if(this.isInRect(element,point)){
+                return i;
+            }
+        }
+        return -1;
     },
 
 
@@ -301,6 +310,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         return (p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y);
     },
 
+    //拖动怪物的效果
     addClipperNode :function(){
         //设置模板
         var stencil = cc.Node.create();
@@ -329,7 +339,29 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         this.m_clipperNode.addChild(baLayer);
         this.addChild(this.m_clipperNode);
     },
+    removeClipperNode : function(){
+        this.m_clipperNode.removeFromParent();
+        this.m_clipperNode = null;
+    },
 
+    //拖动建筑物效果
+    addBuildingTick : function(){
+        this.buildingTickLayer = new BuildingTicklayer();
+        this.addChild(this.buildingTickLayer,LAYER_PRIORITY_TOUCH-1);
+        for(var i = 0; i< this.buildingPositionConfig.length;i++){
+            var element = this.buildingPositionConfig[i];
+            if(this.buildingPositionMark[i] == false){//还没放塔
+                var position = cc.p((element.origin.x+1) * TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
+                this.buildingTickLayer.addTickSprite(position);
+            }
+        }
+    },
+    removeBuildingTick : function(){
+        this.buildingTickLayer.removeFromParent();
+        this.buildingTickLayer = null;
+    },
+
+    //画一个矩形
     getRectangular : function(origin, destination){
         var rectangular = new cc.DrawNode();
         var origin = cc.p(origin);
@@ -337,10 +369,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         var color = cc.color(0,0,0);
         rectangular.drawRect(origin,destination,color);
         return rectangular;
-    },
-
-    removeClipperNode : function(){
-        this.m_clipperNode.removeFromParent();
-        this.m_clipperNode = null;
     }
+
 });

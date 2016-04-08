@@ -4,9 +4,11 @@
 
 var MonsterTouchSprite = cc.Sprite.extend({
     m_id : null,
+    m_config : null,
     ctor : function(config){
         this._super(config.defaultImage);
-
+        this.m_config = config;
+        this.m_id = config.attribute.id;
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -21,8 +23,13 @@ var MonsterTouchSprite = cc.Sprite.extend({
         if (!target.isTouchInRect(touch)){
             return false
         }
-        MonsterTouch.addListerSprite(touch.getLocation());
-        monsterManager.addClipperNode();
+        MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
+        if(target.m_id < 100){
+            monsterManager.addClipperNode();
+        }
+        else{
+            monsterManager.addBuildingTick();
+        }
         return true;
     },
     onTouchMoved : function (touch, event) {
@@ -31,16 +38,20 @@ var MonsterTouchSprite = cc.Sprite.extend({
 
     },
     onTouchEnded : function (touch, event) {
-        //var target = event.getCurrentTarget();
+        var target = event.getCurrentTarget();
         MonsterTouch.removeListerSprite();
-        monsterManager.removeClipperNode();
-        config = MonsterConfig.yuangujuren;
         var point = touch.getLocation();
-        monsterManager.addMyMonsterSprite(config, point);
+        if(target.m_id < 100){
+            monsterManager.removeClipperNode();
+        }
+        else {
+            monsterManager.removeBuildingTick();
+        }
+        monsterManager.addMyMonsterSprite(target.m_config, point);
 
     },
     onTouchCancelled : function (touch, event) {
-        var target = event.getCurrentTarget();
+        //var target = event.getCurrentTarget();
 
     },
 
