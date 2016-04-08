@@ -132,7 +132,6 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
         {
             TransmitMessageToClient(buf_, len);
         }
-        console_msg(&buf_[4]);
         len = sizeof(buf_);
     }
     if (status == quit)

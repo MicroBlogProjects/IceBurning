@@ -14,6 +14,12 @@
     <ClInclude Include="Logicserver_Message.h">
       <Filter>Network</Filter>
     </ClInclude>
+    <ClInclude Include="MessageRegister.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Proto_out\Test.h">
+      <Filter>Proto_out</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Logicserver_EpollUnit.cpp">
@@ -31,6 +37,12 @@
     <ClCompile Include="Logicserver_Message.cpp">
       <Filter>Network</Filter>
     </ClCompile>
+    <ClCompile Include="MessageRegister.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Proto_out\Test.cpp">
+      <Filter>Proto_out</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Network">
@@ -38,6 +50,9 @@
     </Filter>
     <Filter Include="LogicFrame">
       <UniqueIdentifier>{4e3e56b5-be40-41f0-9a61-3fe1de51d026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Proto_out">
+      <UniqueIdentifier>{8fba83cb-c558-44c3-9174-20af5d3d1e5d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

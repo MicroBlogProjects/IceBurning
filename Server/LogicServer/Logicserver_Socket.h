@@ -21,32 +21,8 @@ public:
     int32_t ConnectToConnectserver(const std::string& connect_server_ip = "10.0.128.158");
     int32_t WriteMessages(const std::vector<CMessage>& messages);
     int32_t WriteOneMessage(const CMessage& message);
-    template<class PB_T> int32_t ReadMessages(std::vector<CMessage*>& messages)
-    {
-        int32_t ret = success;
-        CMessage* msg = new CMessage();
-        msg->SetMessageHead(new CMessageHead());
-        msg->SetMessageBody(New_MessageBody(PB_T));
-        while (success == (ret = ReadOneMessage(msg)))
-        {
-            messages.push_back(msg);
-            msg = new CMessage();
-            msg->SetMessageHead(new CMessageHead());
-            msg->SetMessageBody(New_MessageBody(PB_T));
-        }
-        delete msg;
-        if (ret == quit)
-        {
-            TRACE_WARN("Maybe ConnServer disconnected.");
-            return quit;
-        }
-        else if (ret == error)
-        {
-            TRACE_WARN("ReadMessage Error");
-            return fail;
-        }
-        return success;
-    }
+    int32_t ReadMessages(std::vector<CMessage*>& messages);
+
 private:
     LogicSocket();
     void Initialize();

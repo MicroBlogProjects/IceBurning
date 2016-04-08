@@ -64,7 +64,7 @@ private:
 class CMessage
 {
 public:
-    CMessage() {}
+    CMessage():m_iMessageHead(NULL), m_iMessageBody(NULL) {}
     ~CMessage();
     // return: success or fail
     int32_t Encode(char* out_str, int32_t& out_len) const;
@@ -74,8 +74,8 @@ public:
     void SetMessageBody(CMessageBody* body);
 
     ::google::protobuf::Message* GetPB() { return m_iMessageBody->GetPB(); }
-    int32_t GetUin() { return m_iMessageHead->GetUin(); }
-    int32_t GetMessageID() { return m_iMessageHead->GetMid(); }
+    int32_t GetUin() const { return m_iMessageHead->GetUin(); }
+    int32_t GetMessageID() const { return m_iMessageHead->GetMid(); }
 
 private:
     CMessageHead* m_iMessageHead;
