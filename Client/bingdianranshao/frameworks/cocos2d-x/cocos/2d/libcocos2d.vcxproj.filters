@@ -283,18 +283,6 @@
     <Filter Include="cocostudio\TimelineAction\Skeleton">
       <UniqueIdentifier>{ca5e1475-3bfd-4aae-ad54-2e19d5021b92}</UniqueIdentifier>
     </Filter>
-    <Filter Include="my">
-      <UniqueIdentifier>{bd41f969-08b8-4c11-8b08-ab660ac9d286}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="my\Common">
-      <UniqueIdentifier>{3e15317f-1683-4e5e-abe7-809370d65906}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="my\Connect">
-      <UniqueIdentifier>{96a200cc-c2e3-44c1-95ac-63ce2a770850}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="my\ProtoOut">
-      <UniqueIdentifier>{cae6aa46-8558-4607-998b-c222fe1b7bf2}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\physics\CCPhysicsBody.cpp">
@@ -1953,21 +1941,6 @@
       <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp" />
-    <ClCompile Include="..\my\Common\Console_Output.cpp">
-      <Filter>my\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\my\Connect\CMessage.cpp">
-      <Filter>my\Connect</Filter>
-    </ClCompile>
-    <ClCompile Include="..\my\Connect\ClientSocket.cpp">
-      <Filter>my\Connect</Filter>
-    </ClCompile>
-    <ClCompile Include="..\my\ProtoOut\MessageRegister.cpp">
-      <Filter>my\ProtoOut</Filter>
-    </ClCompile>
-    <ClCompile Include="..\my\ProtoOut\Test.pb.cc">
-      <Filter>my\ProtoOut</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\physics\CCPhysicsBody.h">
@@ -3814,24 +3787,6 @@
     <ClInclude Include="..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.h" />
     <ClInclude Include="..\ui\UIAbstractCheckButton.h">
       <Filter>ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\my\Common\Common_Head.h">
-      <Filter>my\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\my\Common\Console_Output.h">
-      <Filter>my\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\my\Connect\CMessage.h">
-      <Filter>my\Connect</Filter>
-    </ClInclude>
-    <ClInclude Include="..\my\Connect\ClientSocket.h">
-      <Filter>my\Connect</Filter>
-    </ClInclude>
-    <ClInclude Include="..\my\ProtoOut\MessageRegister.h">
-      <Filter>my\ProtoOut</Filter>
-    </ClInclude>
-    <ClInclude Include="..\my\ProtoOut\Test.pb.h">
-      <Filter>my\ProtoOut</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

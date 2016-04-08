@@ -6,7 +6,7 @@
 #include "../Common/Common_Trace.h"
 #include "../Common/Function_Wrap.h"
 
-#include "../../Common/Include/Message_i.h"
+#include "../../Common/include/Message_i.h"
 
 NS_LS_BEGIN
 
