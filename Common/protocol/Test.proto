@@ -1,0 +1,6 @@
+message PBTest
+{
+    required int32 id = 1;
+    optional string name = 2;
+    optional string pwd = 3;
+}
