@@ -64,7 +64,9 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             else{
                 this.buildingPositionMark[ret] = true;
                 var mosterSprite = new MonsterSprite(config,true);
-                mosterSprite.setPosition(point);
+                var element = this.buildingPositionConfig[ret];
+                var position = cc.p((element.origin.x+1)*TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
+                mosterSprite.setPosition(position);
                 this.addChild(mosterSprite);
                 this.myMonsterArray.push(mosterSprite);
             }
