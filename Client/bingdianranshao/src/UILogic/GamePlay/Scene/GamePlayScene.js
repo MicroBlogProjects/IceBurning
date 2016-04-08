@@ -22,10 +22,10 @@ var GamePlayLayer = cc.Layer.extend({
         this.scrollView.setTouchEnabled(true);
         this.scrollView.setContentSize(cc.size(GC.w, GC.h));
         this.scrollView.setInnerContainerSize(cc.size(GC.w*2, GC.h));//可滑动区域
-        if(GC.IS_HOST == false){
-            //this.scrollView.scrollToLeft();
-        }
         this.addChild(this.scrollView);
+        if(GC.IS_HOST == false){
+            this.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(function(){this.scrollView.jumpToRight()}.bind(this))));
+        }
     },
 
     addMonsteBackgroundrLayer : function(){

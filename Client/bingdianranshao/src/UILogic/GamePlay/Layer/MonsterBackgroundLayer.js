@@ -3,7 +3,8 @@
  */
 //弃用
 //管理所有的怪物
-var ScheduleTime =1.0/10
+var ScheduleTime =1.0/10;
+var TestTime = 1;
 var monsterManager;
 
 var MonsterBackgroundLayer = cc.Layer.extend({
@@ -24,7 +25,8 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         this.init();
         monsterManager = this;
 
-        this.schedule(this.updateEvent,ScheduleTime);//计时器
+        this.schedule(this.updateEvent,ScheduleTime);//计时器\
+        this.schedule(this.monsterTest,TestTime);//计时器
     },
 
     init :function(){
@@ -40,20 +42,43 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             this.buildingPositionMark.push(false);
         }
         config = MonsterConfig.maincity;
-        var mainCitySprite =  new MonsterSprite(config,true);
-        mainCitySprite.setPosition(150,GC.h_2);
-        this.addChild(mainCitySprite);
-        this.myMonsterArray.push(mainCitySprite);
+        if(GC.IS_HOST){
+            this.addMainCitySprite(config,cc.p(200,GC.h_2),true);
+            this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),false);
+        }
+        else{
+            this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),true);
+            this.addMainCitySprite(config,cc.p(200,GC.h_2),false);
+        }
+        //this.monsterTest();
     },
-    addMyMonsterSprite : function(config,point){
+
+    addMainCitySprite : function(config,point,isMyMonster){
+        var monsterSprite = new MonsterSprite(config,isMyMonster);
+        monsterSprite.setPosition(point);
+        this.addChild(monsterSprite);
+        if(isMyMonster){
+            this.myMonsterArray.push(monsterSprite);
+        }
+        else{
+            this.enemyMonsterArray.push(monsterSprite);
+        }
+    },
+
+    addMonsterSprite : function(config,point,isMymonster){
         var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
         point.x -= offset.x;
         if(config.attribute.id < 100){//怪物
             if(this.isInPath(this.walkingPathConfig,point)){
-                var mosterSprite = new MonsterSprite(config,true);
+                var mosterSprite = new MonsterSprite(config,isMymonster);
                 mosterSprite.setPosition(point);
                 this.addChild(mosterSprite);
-                this.myMonsterArray.push(mosterSprite);
+                if(isMymonster){
+                    this.myMonsterArray.push(mosterSprite);
+                }
+                else{
+                    this.myMonsterArray.push(mosterSprite);
+                }
             }
         }
         else { //建筑物
@@ -63,12 +88,17 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             }
             else{
                 this.buildingPositionMark[ret] = true;
-                var mosterSprite = new MonsterSprite(config,true);
+                var mosterSprite = new MonsterSprite(config,isMymonster);
                 var element = this.buildingPositionConfig[ret];
                 var position = cc.p((element.origin.x+1)*TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
                 mosterSprite.setPosition(position);
                 this.addChild(mosterSprite);
-                this.myMonsterArray.push(mosterSprite);
+                if(isMymonster){
+                    this.myMonsterArray.push(mosterSprite);
+                }
+                else{
+                    this.myMonsterArray.push(mosterSprite);
+                }
             }
         }
     },
@@ -128,27 +158,23 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     },
 
 
-    /*test : function(config, point){
-        for(var i = 0; i < 10; i++){
-            var randownum = Math.floor(Math.random() * 10000+1);
-            var mosterSprite = new MonsterSprite(config,false);
-            mosterSprite.setPosition(cc.p(randownum %(GC.w) + GC.w,randownum%640));
-            //mosterSprite.setPosition(new cc.Point(200,200));
-            this.addChild(mosterSprite);
-            mosterSprite.walkingAnimate(mosterSprite);
-            this.enemyMonsterArray.push(mosterSprite);
+    monsterTest : function(){
+        var points;
+        if(GC.IS_HOST){
+            points = [cc.p(50 * TMXTileMapsize,3 * TMXTileMapsize),cc.p(50*TMXTileMapsize,10*TMXTileMapsize), cc.p(50*TMXTileMapsize,17*TMXTileMapsize)];
         }
-        for(var i =0; i< 10; i++){
-            var randownum = Math.floor(Math.random() * 10000+1);
-            var mosterSprite = new MonsterSprite(config,true);
-            mosterSprite.setPosition(cc.p(randownum %(GC.w),randownum%640));
-            //mosterSprite.setPosition(new cc.Point(250,250));
-            this.addChild(mosterSprite);
-            mosterSprite.walkingAnimate();
-            this.myMonsterArray.push(mosterSprite);
+        else{
+            points = [cc.p(6 * TMXTileMapsize,3 * TMXTileMapsize),cc.p(10*TMXTileMapsize,10*TMXTileMapsize), cc.p(6*TMXTileMapsize,17*TMXTileMapsize)];
         }
+        var config = MonsterConfig.yuangujuren;
+        var num = Math.round(Math.random()*3)%3;
+        var point = points[num];
 
-    },*/
+        var mosterSprite = new MonsterSprite(config,false);
+        mosterSprite.setPosition(point);
+        this.addChild(mosterSprite);
+        this.enemyMonsterArray.push(mosterSprite);
+    },
 
     updateEvent : function(){
         this.updateMonsterArray()
@@ -216,11 +242,22 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         var state;
         if (destinationMonster == null){ //视野内没有任何敌人 向前走
             monster.setDirect();
-            if(monster.m_isMyMonster){
-                state = MonsterState.WalkingRight;
+            if(GC.IS_HOST){
+                if(monster.m_isMyMonster){
+                    state = MonsterState.WalkingRight;
+                }
+                else{
+                    state = MonsterState.WalkingLeft;
+                }
             }
             else{
-                state = MonsterState.WalkingLeft;
+                if(monster.m_isMyMonster){
+                    state = MonsterState.WalkingLeft;
+                }
+                else {
+                    state = MonsterState.WalkingRight;
+                }
+
             }
             if(this.isInUpPath(this.fightingPathConfig,monsterPoint)){
                 destinationX = monsterPoint.x;
@@ -246,18 +283,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
                 destinationY = monsterPoint.y;
                 destinationPoint = cc.p(destinationX,destinationY);
-                if(!this.isInPath(this.fightingPathConfig,destinationPoint)){
-                    if(monster.y < GC.h_2){
-                        destinationX = monsterPoint.x ;
-                        destinationY = monsterPoint.y + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                        destinationPoint = cc.p(destinationX,destinationY);
-                    }
-                    else {
-                        destinationX = monsterPoint.x;
-                        destinationY = monsterPoint.y - monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                        destinationPoint = cc.p(destinationX,destinationY);
-                    }
-                }
             }
             monster.setPosition(destinationPoint);
         }

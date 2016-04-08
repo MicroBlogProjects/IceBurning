@@ -77,11 +77,21 @@ MonsterSprite = cc.Sprite.extend({
     },
 
     setDirect : function(){
-        if(this.m_isMyMonster){
-            this.m_direct = 1;
+        if(GC.IS_HOST){
+            if(this.m_isMyMonster){
+                this.m_direct = 1;
+            }
+            else{
+                this.m_direct = -1;
+            }
         }
         else {
-            this.m_direct = -1;
+            if(this.m_isMyMonster){
+                this.m_direct = -1;
+            }
+            else {
+                this.m_direct = 1;
+            }
         }
     },
 
@@ -203,19 +213,6 @@ MonsterSprite = cc.Sprite.extend({
         else if(state == MonsterState.Death){
             this.deathAnimate(enemyMonster, state);
         }
-
-        /*if(state == MonsterState.WalkingLeft){
-            this.walkingLeftAnimate(enemyMonster)
-        }
-        else if(state == MonsterState.Attack){
-            this.attackAnimate(enemyMonster);
-        }
-        else if(state == MonsterState.WalkingRight){
-            this.walkingAnimate(enemyMonster);
-        }
-        else if(state == MonsterState.Death){
-            this.deathAnimate(enemyMonster);
-        }*/
     },
 
     //添加血条
