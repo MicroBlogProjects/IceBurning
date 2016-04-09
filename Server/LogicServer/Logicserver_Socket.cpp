@@ -122,6 +122,7 @@ int32_t LogicSocket::ReadOneMessage(CMessage* msg)
             return success;
         }
     } while (recv_byte >  0);
+    return fail;
 }
 
 int32_t LogicSocket::WriteMessages(const std::vector<CMessage>& messages)
@@ -150,6 +151,28 @@ int32_t LogicSocket::WriteOneMessage(const CMessage& message)
     if (write(logicserver_fd_, tmp, len) < 0)
     {
         TRACE_WARN("write data from logic to connect failed.");
+        return fail;
+    }
+    return success;
+}
+
+int32_t LogicSocket::ReadMessages(std::vector<CMessage*>& messages)
+{
+    int32_t ret = success;
+    CMessage* msg = NULL;
+    while ( success == ( ret = ReadOneMessage(msg = new CMessage()) ) )
+    {
+        messages.push_back(msg);
+    }
+    delete msg;
+    if (ret == quit)
+    {
+        TRACE_WARN("Maybe ConnServer disconnected.");
+        return quit;
+    }
+    else if (ret == error)
+    {
+        TRACE_WARN("ReadMessage Error");
         return fail;
     }
     return success;
