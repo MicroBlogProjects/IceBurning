@@ -25,7 +25,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         this.init();
         monsterManager = this;
 
-        this.schedule(this.updateEvent,ScheduleTime);//计时器\
+        this.schedule(this.updateEvent,ScheduleTime);//计时器
         this.schedule(this.monsterTest,TestTime);//计时器
     },
 
@@ -41,16 +41,15 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         for(var i = 0; i<this.buildingPositionConfig.length;i++){
             this.buildingPositionMark.push(false);
         }
-        config = MonsterConfig.maincity;
-        if(GC.IS_HOST){
+        config = MonsterConfig.xingxingmofata;
+        /*if(GC.IS_HOST){
             this.addMainCitySprite(config,cc.p(200,GC.h_2),true);
             this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),false);
         }
         else{
             this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),true);
             this.addMainCitySprite(config,cc.p(200,GC.h_2),false);
-        }
-        //this.monsterTest();
+        }*/
     },
 
     addMainCitySprite : function(config,point,isMyMonster){
@@ -181,8 +180,8 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         this.monsterWalking();
     },
 
+    //删除已经死亡的怪物
     updateMonsterArray :function(){
-        //删除已经死亡的怪物
         for(var  i = 0; i < this.myMonsterArray.length; i++){
             var monster = this.myMonsterArray[i];
             if(monster.m_activity == false){

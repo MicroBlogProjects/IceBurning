@@ -6,7 +6,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
     m_id : null,
     m_config : null,
     ctor : function(config){
-        this._super(config.defaultImage);
+        this._super(config.attribute.defaultImage);
         this.m_config = config;
         this.m_id = config.attribute.id;
         cc.eventManager.addListener({
@@ -21,7 +21,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
     onTouchBegan : function (touch, event) {
         var target = event.getCurrentTarget();
         if (!target.isTouchInRect(touch)){
-            return false
+            return false;
         }
         MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
         if(target.m_id < 100){
@@ -33,7 +33,6 @@ var MonsterTouchSprite = cc.Sprite.extend({
         return true;
     },
     onTouchMoved : function (touch, event) {
-        //var target = event.getCurrentTarget();
         MonsterTouch.moveListerSprite(touch.getLocation());
 
     },

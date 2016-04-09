@@ -3,10 +3,10 @@
  */
 
 MonsterSprite = cc.Sprite.extend({
-    m_isMyMonster : true,
-    m_state :null,
-    m_type : null,
-    m_activity :true,
+    m_isMyMonster : true, //是否是我方怪物
+    m_state :null, //执行什么动画
+    m_type : null, //怪物还是建筑
+    m_activity :true, //是否可以去除  死亡的时候依旧不能去除
     //属性
     m_id : null,
     m_name : null,
@@ -19,26 +19,18 @@ MonsterSprite = cc.Sprite.extend({
     m_attackSpeed : null,
     m_direct : null,
 
-    //动画相关
-    m_prefixName :null,
-    m_walkingAnimateAccount : null,
-    m_walkingAnimatePlist : null,
-    m_attackAnimateAccount : null,
-    m_attackAnimatePlist : null,
-    m_deathAnimatePlist : null,
-    m_deathAnimateAccount:null,
-    m_nowAnimateAction : null,
+    m_attackConfig : null,
+    m_walkingConfig : null,
+    m_deathConfig : null,
+    m_skillConfig : null,
 
     //血条
     m_booldProgressTimer :null,
     m_total_HP :null,
 
     ctor : function(config,isMyMonster){
-        this._super(config.defaultImage);
         var attributeConfig = config.attribute;
-        var animateConfig  = config.animate;
-        this.m_isMyMonster = isMyMonster;
-        this.m_activity = true;
+        this._super(attributeConfig.defaultImage);
 
         //设置属性
         this.m_id = attributeConfig.id;
@@ -49,8 +41,8 @@ MonsterSprite = cc.Sprite.extend({
         this.m_sightRadius = attributeConfig.sightRadius;
          this.m_defense = attributeConfig.defense;
         this.m_attack = attributeConfig.attack;
-        this.m_attackSpeed = attributeConfig.attackSpeed;
         this.m_attackRadius = attributeConfig.attackRadius;
+        this.m_isMyMonster = isMyMonster
         this.setDirect();
         this.scheduleUpdate();
 
@@ -61,17 +53,10 @@ MonsterSprite = cc.Sprite.extend({
             this.m_type = MonsterType.Animal
         }
 
-        //设置动画
-        this.m_prefixName = animateConfig.prefixName;
-        //行走动画
-        this.m_walkingAnimateAccount = animateConfig.walkingAnimateAccount;
-        this.m_walkingAnimatePlist = animateConfig.walkingAnimatePlist;
-        //攻击动画
-        this.m_attackAnimateAccount = animateConfig.attackAnimateAccount;
-        this.m_attackAnimatePlist = animateConfig.attackAnimatePlist;
-        //死亡动画
-        this.m_deathAnimateAccount = animateConfig.deathAnimateAccount;
-        this.m_deathAnimatePlist = animateConfig.deathAnimatePlist;
+        this.m_attackConfig = config.attack;
+        this.m_walkingConfig = config.walking;
+        this.m_deathConfig = config.death;
+        this.m_skillConfig = config.skill;
 
         this.addBooldProgressTimer();
     },
@@ -95,12 +80,18 @@ MonsterSprite = cc.Sprite.extend({
         }
     },
 
-    startAnimate : function(plistFile, account, imageName, totalTime, callFunc, enemyMonster){
+    startAnimate : function(config){
         this.stopAnimate();
+
+        var plistFile = config.animatePlist;
+        var prefixname = config.prefix;
+        var totalTime = config.time;
+        var account = config.account;
+
         cc.spriteFrameCache.addSpriteFrames(plistFile);
         var animFrames = [];
         for(var i = 0; i < account;i++) {
-            var str = imageName + i + ".png";
+            var str = prefixname + i + ".png";
             var frame = cc.spriteFrameCache.getSpriteFrame(str);
             animFrames.push(frame);
         }
@@ -111,17 +102,9 @@ MonsterSprite = cc.Sprite.extend({
             this.setFlippedX(false);
         }
 
-        speed = totalTime * 1.0 / account;
+        var speed = totalTime * 1.0 / account;
         var animation = new cc.Animation(animFrames, speed);
         this.m_nowAnimateAction = new cc.Animate(animation);
-        /*if(this.m_state == MonsterState.Death){ //执行一次
-            this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this)));
-        }
-        else{
-            this.runAction(cc.sequence(cc.repeatForever(this.m_nowAnimateAction),cc.callFunc(this.deathCallFunc,enemyMonster)));
-            //this.runAction(cc.repeatForever(this.m_nowAnimateAction));
-        }*/
-        //this.runAction(cc.repeat(this.m_nowAnimateAction,1))
     },
 
     deathCallFunc : function(){
@@ -130,23 +113,38 @@ MonsterSprite = cc.Sprite.extend({
         this.m_state = null;
         //this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
     },
-    attackCallFunc : function(sprite,argu){
-        enemyMonster = argu.enemyMonster;
-        myMonster = argu.myMonster;
-        enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
-        this.m_state = null;
-        //this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.attackCallFunc,this,argu)));
 
+    attackCallFunc : function(sprite,argu){
+        var enemyMonster = argu.enemyMonster;
+        var myMonster = argu.myMonster;
+        var skillConfig = argu.skillConfig;
+        var endAnimate = argu.endAnimate;
+        if(skillConfig == null || skillConfig == undefined){
+            enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
+        }
+        else {
+
+        }
+        if(endAnimate == null || endAnimate == undefined){
+            this.m_state = null;
+        }
+        else {
+            this.startAnimate(endAnimate);
+            this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.attackEndCallFunc,this)));
+        }
+
+    },
+    attackEndCallFunc :function(){
+        this.m_state = null;
     },
     walkingCallFunc : function(){
         this.m_state = null;
-        //this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
     },
     stopAnimate : function(){
         this.stopAllActions();
     },
 
-    walkingAnimate :function(enemyMonster, state){
+    walkingAnimate :function(state){
         if(this.m_type == MonsterType.Building){
             return;
         }
@@ -154,11 +152,11 @@ MonsterSprite = cc.Sprite.extend({
             return;
         }
         this.m_state =state;
-        this.startAnimate(this.m_walkingAnimatePlist, this.m_walkingAnimateAccount,this.m_prefixName + "walking",2,false);
+        this.startAnimate(this.m_walkingConfig.begin);
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
     },
 
-    attackAnimate : function(enemyMonster, state){
+    attackAnimate : function(state,enemyMonster){
         if(this.m_type == MonsterType.Building){
             return;
         }
@@ -166,52 +164,49 @@ MonsterSprite = cc.Sprite.extend({
             return;
         }
         this.m_state = state;
-        this.startAnimate(this.m_attackAnimatePlist, this.m_attackAnimateAccount,this.m_prefixName + "attack",this.m_attackSpeed,false);
+        var beginConfig = this.m_attackConfig.begin;
+        this.startAnimate(beginConfig);
+        var endConfig = this.m_attackConfig.end;
+        var skillConfig = this.m_skillConfig;
         var argu = {
             "enemyMonster" : enemyMonster,
-            "myMonster" : this
+            "myMonster" : this,
+            "endAnimate" : endConfig,
+            "skillConfig" : skillConfig
         }
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.attackCallFunc,this,argu)));
 
     },
-    deathAnimate : function(enemyMonster, state)
+    deathAnimate : function(state)
     {
         if(this.m_state == state){
             return;
         }
         this.m_state = state;
-        this.startAnimate(this.m_deathAnimatePlist, this.m_deathAnimateAccount,this.m_prefixName + "death",1,false);
+        this.startAnimate(this.m_deathConfig.begin);
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this)));
     },
 
-    /*walkingLeftAnimate : function (enemyMonster) {
-        if(this.m_state == MonsterState.WalkingLeft){
-            return;
-        }
-        this.m_state = MonsterState.WalkingLeft;
-        this.startAnimate(this.m_walkingAnimatePlist, this.m_walkingAnimateAccount,this.m_prefixName + "walking",this.m_walkSpeed,true);
-        this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
-    },*/
 
     monsterAction : function(state,enemyMonster){
         if(state == MonsterState.WalkingLeft){
             this.m_direct = -1;
-            this.walkingAnimate(enemyMonster, state)
+            this.walkingAnimate(state)
         }
         else if(state == MonsterState.WalkingRight){
             this.m_direct = 1;
-            this.walkingAnimate(enemyMonster,state)
+            this.walkingAnimate(state)
         }
         else if(state == MonsterState.AttackLeft){
             this.m_direct = -1;
-            this.attackAnimate(enemyMonster, state)
+            this.attackAnimate(state,enemyMonster)
         }
         else if(state == MonsterState.AttackRight){
             this.m_direct = 1;
-            this.attackAnimate(enemyMonster, state)
+            this.attackAnimate(state,enemyMonster)
         }
         else if(state == MonsterState.Death){
-            this.deathAnimate(enemyMonster, state);
+            this.deathAnimate(state);
         }
     },
 
@@ -229,9 +224,6 @@ MonsterSprite = cc.Sprite.extend({
             booldSprite = cc.Sprite.create(res.GM_BlueBlood_png,cc.rect(0,0,this.width*0.8,10))
         }
         this.m_booldProgressTimer =  cc.ProgressTimer.create(booldSprite);
-        /*if(this.m_isMyMonster){
-            //this.m_boold.setReverseDirection(true);
-        }*/
         this.m_booldProgressTimer.setPosition(this.width/2.0,this.height);
         this.m_booldProgressTimer.type = cc.ProgressTimer.TYPE_BAR;
         this.m_booldProgressTimer.setMidpoint(cc.p(0.0,0.5));
@@ -241,7 +233,6 @@ MonsterSprite = cc.Sprite.extend({
     },
     update:function (dt){
         var num = this.m_HP / this.m_total_HP * 100;
-        //cc.log(this.m_total_HP);
         this.m_booldProgressTimer.setPercentage(this.m_HP / this.m_total_HP * 100);
     }
 
