@@ -28,19 +28,17 @@ var MMBackgroundLayer = cc.Layer.extend({
         l_loginButton.addTouchEventListener(this.buttonTouchEvent);
     },
     buttonTouchEvent: function () {
-
-
-        g_this.flareEffect();
+        var flare = new cc.Sprite(res.MM_Flare_jpg);
+        this.addChild(flare);
+        g_this.flareEffect(flare);
         var l_text_name = ccui.helper.seekWidgetByName(g_mainscene, "m_TextField_name");
         var l_text_pwd = ccui.helper.seekWidgetByName(g_mainscene, "m_TextField_pwd");
         var l_name = l_text_name.getString();
         var l_pwd = l_text_pwd.getString();
 
     },
-    flareEffect : function(){
-       flare = new cc.Sprite(res.MM_Flare_jpg);
+    flareEffect : function(flare){
         flare.stopAllActions();
-
 //        设置flare 的渲染混合模式
         flare.setBlendFunc(cc.SRC_ALPHA, cc.ONE);
         flare.attr({
