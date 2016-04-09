@@ -17,6 +17,8 @@ int32_t m_iMessageSequece;  //消息唯一标识符
 /***************************message ID end*********************************/
 
 #define MSG_ON_LOGIN                0x0001 // 登录请求
+#define MSG_ON_LOGIN_RESPONSE               0x0002 // 登录回复
+
 #define MSG_ON_REGIST               0x0002 // 注册请求
 
 

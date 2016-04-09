@@ -1,0 +1,11 @@
+
+message CSLoginRequest
+{
+    optional string username        = 1;
+    optional string password        = 2;
+}
+message CSLoginResponse
+{
+    optional int32 uin              = 1;
+    optional int32 result           = 2;
+}

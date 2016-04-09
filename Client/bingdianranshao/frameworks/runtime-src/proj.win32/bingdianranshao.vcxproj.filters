@@ -23,6 +23,9 @@
     <Filter Include="Classes\my\ProtoOut">
       <UniqueIdentifier>{de04f882-4649-43cd-a2dc-8a07b4d8f2e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\my\JSvsCPP">
+      <UniqueIdentifier>{38c34151-1fb9-44f8-ae24-f20bbf22a23d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,6 +48,21 @@
     </ClCompile>
     <ClCompile Include="..\Classes\my\ProtoOut\Test.pb.cc">
       <Filter>Classes\my\ProtoOut</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\JSvsCPP\jsb_GameJoy_auto.cpp">
+      <Filter>Classes\my\JSvsCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\JSvsCPP\BindPBWithJS.cpp">
+      <Filter>Classes\my\JSvsCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\ProtoOut\Login.pb.cc">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.cpp">
+      <Filter>Classes\my\JSvsCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\JSvsCPP\MessageProxy.cpp">
+      <Filter>Classes\my\JSvsCPP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +90,24 @@
     </ClInclude>
     <ClInclude Include="..\Classes\my\ProtoOut\Test.pb.h">
       <Filter>Classes\my\ProtoOut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.h">
+      <Filter>Classes\my\JSvsCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\JSvsCPP\jsb_GameJoy_auto.hpp">
+      <Filter>Classes\my\JSvsCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\JSvsCPP\BindPBWithJS.h">
+      <Filter>Classes\my\JSvsCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\ProtoOut\Login.pb.h">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Common\include\Message_i.h">
+      <Filter>Classes\my</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\JSvsCPP\MessageProxy.h">
+      <Filter>Classes\my\JSvsCPP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

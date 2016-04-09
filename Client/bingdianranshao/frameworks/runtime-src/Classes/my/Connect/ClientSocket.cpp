@@ -98,12 +98,13 @@ int32_t ClientSocket::SendDataToServer(const CMessage& message)
 int32_t ClientSocket::RecvOneDataFromServer(CMessage*& message)
 {
     // 先从网络拉取一遍消息
-    RecvMsgsFromServer();
+    //RecvMsgsFromServer();
     // 在判断队列里有没有消息
     if (!msg_que.empty())
     {
         message = msg_que.front();
         msg_que.pop();
+        return success;
     }
     return fail;
 }

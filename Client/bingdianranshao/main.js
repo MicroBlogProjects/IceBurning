@@ -53,6 +53,14 @@
  */
 
 cc.game.onStart = function(){
+
+    var login_request = GameJoy.JS_CSLoginRequest.Instance();
+    cc.log(login_request);
+
+    GameJoy.Proxy.SendRequest(1);
+
+    var ret = GameJoy.Proxy.RecvResponse();
+
     if(!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
         document.body.removeChild(document.getElementById("cocosLoading"));
 
