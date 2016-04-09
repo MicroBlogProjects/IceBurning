@@ -12,7 +12,7 @@ var MainMenuScene = cc.Scene.extend({
         this._super();
         this.addBackgroundLayer();
 
-        this.addTouchLayer();
+       // this.addTouchLayer();
     },
 
     addBackgroundLayer : function(){
@@ -24,5 +24,6 @@ var MainMenuScene = cc.Scene.extend({
     addTouchLayer : function(){
         this._touchLayer = new MMTouchLayer();
         this.addChild(this._touchLayer,LAYER_PRIORITY_TOUCH);
+
     }
 });
