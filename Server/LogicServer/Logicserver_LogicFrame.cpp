@@ -1,5 +1,5 @@
 #include "Logicserver_LogicFrame.h"
-
+#include "LoginFrame.h"
 NS_LS_BEGIN
 
 LogicFrame* LogicFrame::instance = NULL;
@@ -10,8 +10,8 @@ LogicFrame::LogicFrame()
 
 int32_t LogicFrame::HandleOneMessage(const CMessage* message)
 {
-    console_msg("mid(%d) uin(%d)", message->GetUin(), message->GetMessageID());
-    LOGICSOCKET->WriteOneMessage(*message);
+    CLoginFrame::Instance()->ProcessRequest(*message);
+    //LOGICSOCKET->WriteOneMessage(*message);
 }
 
 LogicFrame* LogicFrame::Instance()

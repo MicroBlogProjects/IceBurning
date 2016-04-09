@@ -183,14 +183,15 @@ int32_t ConnsvrSocket::TransmitMessageToLogicServer(int32_t client_fd, char* con
     // save <K, V> of <uin, fd>
     if (uin <= 0)
     {
-        int32_t msgID = FindMessageSequence(content, len);
-        if (msgSequence_to_fd.find(msgID) != msgSequence_to_fd.end())
+        int32_t msgSq = FindMessageSequence(content, len);
+        if (msgSequence_to_fd.find(msgSq) != msgSequence_to_fd.end())
         {
             TRACE_WARN("generated the same msg id.");
             return fail;
         }
-        msgSequence_to_fd[msgID] = client_fd;
-        fd_to_msgSequence[client_fd] = msgID;
+        console_msg("%d, %d\n", msgSq, client_fd);
+        msgSequence_to_fd[msgSq] = client_fd;
+        fd_to_msgSequence[client_fd] = msgSq;
     }
     else if (uin_to_fd.find(uin) == uin_to_fd.end())
     {

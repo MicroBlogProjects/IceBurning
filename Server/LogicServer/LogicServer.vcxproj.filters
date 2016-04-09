@@ -17,7 +17,10 @@
     <ClInclude Include="MessageRegister.h">
       <Filter>Network</Filter>
     </ClInclude>
-    <ClInclude Include="..\Proto_out\Test.h">
+    <ClInclude Include="LoginFrame.h">
+      <Filter>LogicFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Proto_out\Login.h">
       <Filter>Proto_out</Filter>
     </ClInclude>
   </ItemGroup>
@@ -40,7 +43,10 @@
     <ClCompile Include="MessageRegister.cpp">
       <Filter>Network</Filter>
     </ClCompile>
-    <ClCompile Include="..\Proto_out\Test.cpp">
+    <ClCompile Include="LoginFrame.cpp">
+      <Filter>LogicFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Proto_out\Login.cpp">
       <Filter>Proto_out</Filter>
     </ClCompile>
   </ItemGroup>

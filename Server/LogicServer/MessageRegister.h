@@ -4,32 +4,41 @@
 
 #include "Logicserver_Common.h"
 #include "Logicserver_Message.h"
-using namespace std;
 
-#define RegistPBToMessageID(MSGID, PB_T) \
-    struct PBRegist_##PB_T_##MSGID { \
-        PBRegist_##PB_T_##MSGID() { \
-            NS_LS::MsgRegister::Instance()->\
-                RegistPBToMsgID(MSGID, NS_LS::CMessageBody::ConstructMessageBody<PB_T>); \
+
+#define MSGREGISTER NS_LS::MsgRegister::Instance()
+
+#define RegistPBToMessageID(MSGID, PB_REQ, PB_RES) \
+    struct PBRegist_##PB_REQ_##PB_RES_##MSGID { \
+        PBRegist_##PB_REQ_##PB_RES_##MSGID() { \
+            MSGREGISTER->RegistPBRequestToMsgID(MSGID, NS_LS::CMessageBody::ConstructMessageBody<PB_REQ>); \
+            MSGREGISTER->RegistPBResPonseToMsgID(MSGID, NS_LS::CMessageBody::ConstructMessageBody<PB_RES>); \
         } \
     }; \
-    PBRegist_##PB_T_##MSGID LINE_##PB_T_##MSGID_##__LINE__;
+    PBRegist_##PB_REQ_##PB_RES_##MSGID var_##PB_REQ_##PB_RES_##MSGID_##__LINE__;
 
-#define NewMessageBodyWithMsgID(MSGID) NS_LS::MsgRegister::Instance()->NewMessageBody(MSGID)
+#define NewRequestBodyWithMsgID(MSGID) MSGREGISTER->NewRequestBody(MSGID)
+#define NewResponseBodtWithMsgID(MSGID) MSGREGISTER->NewResponseBody(MSGID) 
 
 NS_LS_BEGIN
-
 
 class MsgRegister
 {
 public:
     static MsgRegister* Instance();
-    void RegistPBToMsgID(int32_t msgID, CMessageBody* (*func)());
-    CMessageBody* NewMessageBody(int32_t msgID);
+    void RegistPBRequestToMsgID(int32_t msgID, CMessageBody* (*func)());
+    void RegistPBResPonseToMsgID(int32_t msgID, CMessageBody* (*func)());
+    CMessageBody* NewRequestBody(int32_t msgID);
+    CMessageBody* NewResponseBody(int32_t msgID);
 private:
-    MsgRegister() { msgID_to_constructor.clear(); }
+    MsgRegister() 
+    { 
+        msgID_to_request_constructor.clear(); 
+        msgID_to_response_constructor.clear();
+    }
     static MsgRegister* instance;
-    map< int32_t, CMessageBody* (*)() > msgID_to_constructor;
+    std::map< int32_t, CMessageBody* (*)() > msgID_to_request_constructor;
+    std::map< int32_t, CMessageBody* (*)() > msgID_to_response_constructor;
 };
 
 
