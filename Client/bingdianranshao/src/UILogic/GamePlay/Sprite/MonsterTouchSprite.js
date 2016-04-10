@@ -50,8 +50,6 @@ var MonsterTouchSprite = cc.Sprite.extend({
 
     },
     onTouchCancelled : function (touch, event) {
-        //var target = event.getCurrentTarget();
-
     },
 
     isTouchInRect:function (touch) {

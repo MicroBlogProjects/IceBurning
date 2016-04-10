@@ -95,11 +95,13 @@ MonsterSprite = cc.Sprite.extend({
             var frame = cc.spriteFrameCache.getSpriteFrame(str);
             animFrames.push(frame);
         }
-        if(this.m_direct == -1){
-            this.setFlippedX(true);
-        }
-        else if(this.m_direct == 1){
-            this.setFlippedX(false);
+        if(this.m_type == MonsterType.Animal){
+            if(this.m_direct == -1){
+                this.setFlippedX(true);
+            }
+            else if(this.m_direct == 1){
+                this.setFlippedX(false);
+            }
         }
 
         var speed = totalTime * 1.0 / account;
@@ -110,8 +112,6 @@ MonsterSprite = cc.Sprite.extend({
     deathCallFunc : function(){
         this.m_activity = false;
         this.removeFromParent();
-        this.m_state = null;
-        //this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
     },
 
     attackCallFunc : function(sprite,argu){
@@ -123,7 +123,7 @@ MonsterSprite = cc.Sprite.extend({
             enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
         }
         else {
-
+            monsterManager.skillAnimate(skillConfig,enemyMonster);
         }
         if(endAnimate == null || endAnimate == undefined){
             this.m_state = null;
@@ -157,9 +157,6 @@ MonsterSprite = cc.Sprite.extend({
     },
 
     attackAnimate : function(state,enemyMonster){
-        if(this.m_type == MonsterType.Building){
-            return;
-        }
         if(this.m_state == state){
             return;
         }
@@ -177,8 +174,7 @@ MonsterSprite = cc.Sprite.extend({
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.attackCallFunc,this,argu)));
 
     },
-    deathAnimate : function(state)
-    {
+    deathAnimate : function(state) {
         if(this.m_state == state){
             return;
         }

@@ -58,5 +58,4 @@ var MonsterTouchLayer = cc.Layer.extend({
         this.m_nowmoveSprite = null;
     }
 
-
 });

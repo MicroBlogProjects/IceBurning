@@ -42,14 +42,14 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             this.buildingPositionMark.push(false);
         }
         config = MonsterConfig.xingxingmofata;
-        /*if(GC.IS_HOST){
+        if(GC.IS_HOST){
             this.addMainCitySprite(config,cc.p(200,GC.h_2),true);
             this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),false);
         }
         else{
             this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),true);
             this.addMainCitySprite(config,cc.p(200,GC.h_2),false);
-        }*/
+        }
     },
 
     addMainCitySprite : function(config,point,isMyMonster){
@@ -101,7 +101,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             }
         }
     },
-
 
     isInRect : function(config,point){
         var origin = config.origin;
@@ -186,6 +185,12 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             var monster = this.myMonsterArray[i];
             if(monster.m_activity == false){
                 this.myMonsterArray.splice(i,1);
+                if(monster.m_type == MonsterType.Building){
+                    var ret = this.isInBuildingPosition(this.buildingPositionConfig,monster.getPosition());
+                    if(ret != -1){
+                        this.buildingPositionMark[ret] = false;
+                    }
+                }
             }
         }
         for(var  i = 0; i < this.enemyMonsterArray.length;i ++){
@@ -224,7 +229,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         for(var i = 0; i < enemyMonsterArray.length; i++){ //寻找最近的敌人
             var enemyMonster = enemyMonsterArray[i];
             if(enemyMonsterArray.m_HP <= 0){ //血量为0
-                continue
+                continue;
             }
 
             var enemyPoint = enemyMonster.getPosition();
@@ -368,6 +373,15 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     removeClipperNode : function(){
         this.m_clipperNode.removeFromParent();
         this.m_clipperNode = null;
+    },
+
+    //技能效果
+    skillAnimate :function(skillConfig,elemy){
+        var skillSprite = new SkillSprite(skillConfig);
+        skillSprite.setRotation(145);
+        skillSprite.setScaleY(0.75);
+        skillSprite.attackAnimate(elemy);
+        this.addChild(skillSprite);
     },
 
     //拖动建筑物效果
