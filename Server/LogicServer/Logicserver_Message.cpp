@@ -148,7 +148,7 @@ int32_t CMessage::Decode(const char* in_str, int32_t in_len)
 
     if (m_iMessageBody == NULL)
     {
-        m_iMessageBody = NewMessageBodyWithMsgID(m_iMessageHead->GetMid());
+        m_iMessageBody = NewRequestBodyWithMsgID(m_iMessageHead->GetMid());
         if (m_iMessageBody == NULL)
         {
             TRACE_WARN("can not construct MessageBody with msgID(%d), " \

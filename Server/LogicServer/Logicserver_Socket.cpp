@@ -148,6 +148,7 @@ int32_t LogicSocket::WriteOneMessage(const CMessage& message)
         TRACE_WARN("Encode message when write one message failed.");
         return fail;
     }
+    printf("%d\n", len);
     if (write(logicserver_fd_, tmp, len) < 0)
     {
         TRACE_WARN("write data from logic to connect failed.");
