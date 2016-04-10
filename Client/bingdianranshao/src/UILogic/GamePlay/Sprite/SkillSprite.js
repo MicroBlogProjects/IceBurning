@@ -18,6 +18,11 @@ var SkillSprite = cc.Sprite.extend({
         this.m_attackRadius = attributeConfig.attackRadius;
 
         this.m_attackConfig = config.attack;
+
+        this.attr({
+            anchorX : 0.5,
+            anchorY : 0.
+        });
     },
 
     startAnimate : function(config){
@@ -51,7 +56,6 @@ var SkillSprite = cc.Sprite.extend({
             "myMonster" : this,
             "endAnimate" : endConfig
         };
-        this.setPosition(enemyMonster.getPosition());
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.attackCallFunc,this,argu)));
     },
 
@@ -65,7 +69,7 @@ var SkillSprite = cc.Sprite.extend({
         var endAnimate = argu.endAnimate;
         enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;
         if(endAnimate == null || endAnimate == undefined){
-            this.m_state = null;
+            this.removeFromParent();
         }
         else {
             this.startAnimate(endAnimate);

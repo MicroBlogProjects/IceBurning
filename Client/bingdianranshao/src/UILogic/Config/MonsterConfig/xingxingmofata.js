@@ -17,6 +17,7 @@ XingxingmofataConfig.attribute = {
     "attack" : 20.0, //攻击力
     "attackRadius" : 200.0, //攻击半径
 
+    "Icon" :res.GM_XxmftIcon_Png,
     "defaultImage" : res.GM_Xxmft_Png
 };
 //攻击
@@ -61,15 +62,10 @@ XingxingmofataConfig.skill = {
     "attack" :{
         "begin" :{
             "time" : 0.5,
-            "account" : 9,
-            "prefix" : "skillAttack",
+            "account" : 6,
+            "prefix" : "attack",
             "animatePlist" : res.GM_XxmftSkillAttack_Plist
         },
-        "end" :  {
-            "time" : 0.5,
-            "account" : 7,
-            "prefix" : "skillDeath",
-            "animatePlist" : res.GM_XxmftSkillDeath_Plist
-        }
+        "end" : null
     }
 };

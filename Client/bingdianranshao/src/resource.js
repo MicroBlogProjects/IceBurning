@@ -22,15 +22,16 @@ var res = {
     GM_BlueBlood_png :    "res/GamePlay/Monster/bloodImage/BlueBlood.png",
     GM_BackgroundBolld_png : "res/GamePlay/monster/bloodImage/BackgroundBlood.png",
 
+
     //monstertouchlayr
     GM_TouchlayerTool_png : "res/GamePlay/MonsterTouchLayer/tool.png",
     GM_PickImage_png : "res/GamePlay/MonsterTouchLayer/pickImage.png",
-
-    //setting
-    ST_Title_png : "res/Setting/menuTitle.png",
+    GM_PlayerInfomation_json : "res/json/PlayerInfomation.json",
+    GM_SelectTool_json : "res/json/SelectTool.json",
 
 
     //远古巨人
+    GM_YgjrIcon_png :        "res/GamePlay/Monster/yuangujuren/yuangujurenIcon.png",
     GM_Ygjrwalking_plist :  "res/GamePlay/Monster/yuangujuren/ygjrwalking.plist",
     GM_Ygjrwalking_png :     "res/GamePlay/Monster/yuangujuren/ygjrwalking.png",
     GM_Ygjr_png :             "res/GamePlay/Monster/yuangujuren/ygjr.png",
@@ -42,16 +43,23 @@ var res = {
     //星星魔法塔
     GM_Xxmft_Png      :    "res/GamePlay/Monster/xingxingmofata/xingxingmofata.png",
     GM_XxmftSkill_Png :   "res/GamePlay/Monster/xingxingmofata/xxmftskill.png",
+    GM_XxmftIcon_Png : "res/GamePlay/Monster/xingxingmofata/xingxingmofataIcon.png",
     GM_XxmftAttack_Plist :  "res/GamePlay/Monster/xingxingmofata/xxmftattack.plist",
     GM_XxmftAttack_Png :  "res/GamePlay/Monster/xingxingmofata/xxmftattack.png",
     GM_XxmftAttackDeath_Plist : "res/GamePlay/Monster/xingxingmofata/xxmftattackdeath.plist",
     GM_XxmftAttackDeath_png : "res/GamePlay/Monster/xingxingmofata/xxmftattackdeath.png",
     GM_XxmftDeath_Plist : "res/GamePlay/Monster/xingxingmofata/xxmftdeath.plist",
     GM_XxmftDeath_Png : "res/GamePlay/Monster/xingxingmofata/xxmftdeath.png",
-    GM_XxmftSkillAttack_Plist : "res/GamePlay/Monster/xingxingmofata/xxmftSkillAttack.plist",
-    GM_XxmftSkillAttack_Png : "res/GamePlay/Monster/xingxingmofata/xxmftSkillAttack.png",
-    GM_XxmftSkillDeath_Plist : "res/GamePlay/Monster/xingxingmofata/xxmftSkillDeath.plist",
-    GM_XxmftSkillDeath_Png : "res/GamePlay/Monster/xingxingmofata/xxmftSkillDeath.png",
+    GM_XxmftSkillAttack_Plist : "res/GamePlay/Monster/xingxingmofata/skillattack.plist",
+    GM_XxmftSkillAttack_Png : "res/GamePlay/Monster/xingxingmofata/skillattack.png",
+
+
+    //英雄技能
+    HS_Hongqiu_png : "res/GamePlay/HeroSkill/Hongqiu/Hongqiu.png",
+    HS_Hongqiu_plist : "res/GamePlay/HeroSkill/Hongqiu/Hongqiu.plist",
+    HS_HongqiuIcon_png : "res/GamePlay/HeroSkill/Hongqiu/HongqiuIcon.png",
+    HS_HongqiuDefault_png : "res/GamePlay/HeroSkill/Hongqiu/HongqiuImage.png",
+
 
     //setting
     ST_Title_png : "res/Setting/menuTitle.png",

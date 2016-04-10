@@ -25,7 +25,7 @@
         "src/UIlogic/Config/MonsterConfig/xingxingmofata.js",
         "src/UIlogic/Config/MonsterConfig/MonsterConfig.js",
 
-
+        "src/UILogic/Config/MonsterConfig/HeroSkillConfig.js",
         "src/UILogic/GamePlay/Scene/GamePlayScene.js",
         "src/UILogic/GamePlay/Layer/MonsterBackgroundLayer.js",
         "src/UILogic/GamePlay/Sprite/MonsterSprite.js",
@@ -34,6 +34,7 @@
         "src/UILogic/GamePlay/Layer/MonsterLayer.js",
         "src/UILogic/GamePlay/Layer/BuildingTickLayer.js",
         "src/UILogic/GamePlay/Sprite/SkillSprite.js",
+        "src/UILogic/GamePlay/Sprite/HeroSkillSprite.js",
 
         "src/UILogic/Setting/Scene/SettingScene.js",
         "src/UILogic/Setting/Layer/STBackgroundLayer.js",

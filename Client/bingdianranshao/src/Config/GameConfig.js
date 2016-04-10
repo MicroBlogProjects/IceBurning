@@ -15,7 +15,7 @@ GC.w_2 = GC.winSize.width / 2 ;
 GC.h_2 = GC.winSize.height / 2;
 
 GC.SOUND_ON = true;
-GC.IS_HOST = false;
+GC.IS_HOST = true;
 
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
@@ -48,7 +48,7 @@ var HostStraightPath = {"origin" : cc.p(8,9),
                          "destination" : cc.p(30,11)};
 
 var HostDownStraightPath = {"origin" : cc.p(5,2),
-                           "destination" : cc.p(30,8)};
+                           "destination" : cc.p(30,4)};
 
 var HostDownPath = {"origin" : cc.p(5,2),
                   "destination" : cc.p(7,8)};

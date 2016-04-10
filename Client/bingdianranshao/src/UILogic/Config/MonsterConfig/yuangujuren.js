@@ -17,6 +17,7 @@ YuangujurenConfig.attribute = {
     "attackRadius" : 5.0, //攻击半径
     //"attackSpeed" : 1.0  //攻击速度 多少秒一下
 
+    "Icon" : res.GM_YgjrIcon_png,
     "defaultImage" : res.GM_Ygjr_png
 };
 

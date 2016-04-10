@@ -185,18 +185,21 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             var monster = this.myMonsterArray[i];
             if(monster.m_activity == false){
                 this.myMonsterArray.splice(i,1);
-                if(monster.m_type == MonsterType.Building){
-                    var ret = this.isInBuildingPosition(this.buildingPositionConfig,monster.getPosition());
-                    if(ret != -1){
-                        this.buildingPositionMark[ret] = false;
-                    }
-                }
             }
         }
         for(var  i = 0; i < this.enemyMonsterArray.length;i ++){
             var monster = this.enemyMonsterArray[i];
             if(this.enemyMonsterArray[i].m_activity == false){
                 this.enemyMonsterArray.splice(i,1);
+            }
+        }
+    },
+
+    resetBuildingPosition : function(monster){
+        if(monster.m_type == MonsterType.Building) {
+            var ret = this.isInBuildingPosition(this.buildingPositionConfig, monster.getPosition());
+            if (ret != -1) {
+                this.buildingPositionMark[ret] = false;
             }
         }
     },
@@ -215,6 +218,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
 
     walk : function(monster, enemyMonsterArray){
         if(monster.m_HP <= 0){
+            this.resetBuildingPosition(monster);
             monster.monsterAction(MonsterState.Death);
             return;
         }
@@ -378,10 +382,37 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     //技能效果
     skillAnimate :function(skillConfig,elemy){
         var skillSprite = new SkillSprite(skillConfig);
-        skillSprite.setRotation(145);
-        skillSprite.setScaleY(0.75);
+        skillSprite.setPosition(elemy.getPosition().x,elemy.getPosition().y -60 );
         skillSprite.attackAnimate(elemy);
         this.addChild(skillSprite);
+    },
+    //英雄技能效果
+
+    heroSkillAniamte :function(){
+        config = HeroSkillConfig.first;
+        var x;
+        var y;
+        var isFlipX;
+        if(GC.IS_HOST){
+            x = 9*32;
+            y  =3*32;
+            isFlipX = false;
+        }
+        else{
+            x = 51 * 32;
+            y = 3*32;
+            isFlipX = true
+        }
+        for(var i = 0;i < 3;i++){
+            var heroSkillSprite = new HeroSkillSprite(config);
+            heroSkillSprite.setFlippedX(isFlipX);
+            var position = cc.p(x,y);
+            heroSkillSprite.setPosition(position);
+            heroSkillSprite.startAnimate();
+            this.addChild(heroSkillSprite,160);
+
+            y += 7*32;
+        }
     },
 
     //拖动建筑物效果
