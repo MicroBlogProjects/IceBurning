@@ -15,6 +15,7 @@
         "src/resource.js",
         "src/app.js",
         "src/Config/GameConfig.js",
+        "src/Config/NetConfig.js",
 
         "src/UILogic/MainMenu/Scene/MainMenuScene.js",
         "src/UILogic/MainMenu/Layer/MMBackgroundLayer.js",

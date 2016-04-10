@@ -9,7 +9,19 @@ var MMBackgroundLayer = cc.Layer.extend({
         this._super();
         this.initBackground();
         this.playMusic();
+        this.schedule(this.receiveMessage,0.1);
         g_this = this;
+    },
+    receiveMessage : function(){
+
+        var id = GameJoy.Proxy.RecvResponse();
+        if(id > 0)
+        {
+            var index = ""+id;
+            var login_res = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
+            cc.log(login_res.get_uin());
+            cc.log(login_res.get_result());
+        }
     },
     playMusic: function () {
 
@@ -35,6 +47,11 @@ var MMBackgroundLayer = cc.Layer.extend({
         var l_text_pwd = ccui.helper.seekWidgetByName(g_mainscene, "m_TextField_pwd");
         var l_name = l_text_name.getString();
         var l_pwd = l_text_pwd.getString();
+        // 向服务器请求登录
+        var login_request = GameJoy.JS_CSLoginRequest.Instance();
+        login_request.set_username(l_name);
+        login_request.set_password(l_pwd);
+        GameJoy.Proxy.SendRequest(1);
 
     },
     flareEffect : function(flare){
@@ -52,8 +69,8 @@ var MMBackgroundLayer = cc.Layer.extend({
 
 
 //        定义动作
-        var opacityAnim = cc.fadeIn(0.5, 255);
-        var opacDim = cc.fadeIn(1, 0);
+        var opacityAnim = cc.fadeIn(0.5);
+        var opacDim = cc.fadeIn(1);
 
 //        为动作加上easing效果，具体参考tests里面的示例
         var biggerEase = cc.scaleBy(0.7, 1.2, 1.2).easing(cc.easeSineOut());

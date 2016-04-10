@@ -64,6 +64,9 @@
     <ClCompile Include="..\Classes\my\JSvsCPP\MessageProxy.cpp">
       <Filter>Classes\my\JSvsCPP</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\my\ProtoOut\CreateRoom.pb.cc">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -108,6 +111,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\my\JSvsCPP\MessageProxy.h">
       <Filter>Classes\my\JSvsCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\ProtoOut\CreateRoom.pb.h">
+      <Filter>Classes\my\ProtoOut</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
