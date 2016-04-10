@@ -33,6 +33,9 @@ void protobuf_ShutdownFile_Login_2eproto();
 
 class CSLoginRequest;
 class CSLoginResponse;
+class CSRoomMessage;
+class CSPullRoomsRequest;
+class CSPullRoomsResponse;
 
 // ===================================================================
 
@@ -228,6 +231,269 @@ class CSLoginResponse : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static CSLoginResponse* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class CSRoomMessage : public ::google::protobuf::Message {
+ public:
+  CSRoomMessage();
+  virtual ~CSRoomMessage();
+
+  CSRoomMessage(const CSRoomMessage& from);
+
+  inline CSRoomMessage& operator=(const CSRoomMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSRoomMessage& default_instance();
+
+  void Swap(CSRoomMessage* other);
+
+  // implements Message ----------------------------------------------
+
+  CSRoomMessage* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CSRoomMessage& from);
+  void MergeFrom(const CSRoomMessage& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 uin = 2;
+  inline bool has_uin() const;
+  inline void clear_uin();
+  static const int kUinFieldNumber = 2;
+  inline ::google::protobuf::int32 uin() const;
+  inline void set_uin(::google::protobuf::int32 value);
+
+  // optional string username = 3;
+  inline bool has_username() const;
+  inline void clear_username();
+  static const int kUsernameFieldNumber = 3;
+  inline const ::std::string& username() const;
+  inline void set_username(const ::std::string& value);
+  inline void set_username(const char* value);
+  inline void set_username(const char* value, size_t size);
+  inline ::std::string* mutable_username();
+  inline ::std::string* release_username();
+  inline void set_allocated_username(::std::string* username);
+
+  // @@protoc_insertion_point(class_scope:CSRoomMessage)
+ private:
+  inline void set_has_uin();
+  inline void clear_has_uin();
+  inline void set_has_username();
+  inline void clear_has_username();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::std::string* username_;
+  ::google::protobuf::int32 uin_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_Login_2eproto();
+  friend void protobuf_AssignDesc_Login_2eproto();
+  friend void protobuf_ShutdownFile_Login_2eproto();
+
+  void InitAsDefaultInstance();
+  static CSRoomMessage* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CSPullRoomsRequest : public ::google::protobuf::Message {
+ public:
+  CSPullRoomsRequest();
+  virtual ~CSPullRoomsRequest();
+
+  CSPullRoomsRequest(const CSPullRoomsRequest& from);
+
+  inline CSPullRoomsRequest& operator=(const CSPullRoomsRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSPullRoomsRequest& default_instance();
+
+  void Swap(CSPullRoomsRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  CSPullRoomsRequest* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CSPullRoomsRequest& from);
+  void MergeFrom(const CSPullRoomsRequest& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:CSPullRoomsRequest)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[1];
+
+  friend void  protobuf_AddDesc_Login_2eproto();
+  friend void protobuf_AssignDesc_Login_2eproto();
+  friend void protobuf_ShutdownFile_Login_2eproto();
+
+  void InitAsDefaultInstance();
+  static CSPullRoomsRequest* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CSPullRoomsResponse : public ::google::protobuf::Message {
+ public:
+  CSPullRoomsResponse();
+  virtual ~CSPullRoomsResponse();
+
+  CSPullRoomsResponse(const CSPullRoomsResponse& from);
+
+  inline CSPullRoomsResponse& operator=(const CSPullRoomsResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSPullRoomsResponse& default_instance();
+
+  void Swap(CSPullRoomsResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  CSPullRoomsResponse* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CSPullRoomsResponse& from);
+  void MergeFrom(const CSPullRoomsResponse& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 result = 1;
+  inline bool has_result() const;
+  inline void clear_result();
+  static const int kResultFieldNumber = 1;
+  inline ::google::protobuf::int32 result() const;
+  inline void set_result(::google::protobuf::int32 value);
+
+  // optional .CSRoomMessage rooms = 2;
+  inline bool has_rooms() const;
+  inline void clear_rooms();
+  static const int kRoomsFieldNumber = 2;
+  inline const ::CSRoomMessage& rooms() const;
+  inline ::CSRoomMessage* mutable_rooms();
+  inline ::CSRoomMessage* release_rooms();
+  inline void set_allocated_rooms(::CSRoomMessage* rooms);
+
+  // @@protoc_insertion_point(class_scope:CSPullRoomsResponse)
+ private:
+  inline void set_has_result();
+  inline void clear_has_result();
+  inline void set_has_rooms();
+  inline void clear_has_rooms();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::CSRoomMessage* rooms_;
+  ::google::protobuf::int32 result_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_Login_2eproto();
+  friend void protobuf_AssignDesc_Login_2eproto();
+  friend void protobuf_ShutdownFile_Login_2eproto();
+
+  void InitAsDefaultInstance();
+  static CSPullRoomsResponse* default_instance_;
+};
 // ===================================================================
 
 
@@ -421,6 +687,170 @@ inline ::google::protobuf::int32 CSLoginResponse::result() const {
 inline void CSLoginResponse::set_result(::google::protobuf::int32 value) {
   set_has_result();
   result_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CSRoomMessage
+
+// optional int32 uin = 2;
+inline bool CSRoomMessage::has_uin() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSRoomMessage::set_has_uin() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSRoomMessage::clear_has_uin() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSRoomMessage::clear_uin() {
+  uin_ = 0;
+  clear_has_uin();
+}
+inline ::google::protobuf::int32 CSRoomMessage::uin() const {
+  return uin_;
+}
+inline void CSRoomMessage::set_uin(::google::protobuf::int32 value) {
+  set_has_uin();
+  uin_ = value;
+}
+
+// optional string username = 3;
+inline bool CSRoomMessage::has_username() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CSRoomMessage::set_has_username() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CSRoomMessage::clear_has_username() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CSRoomMessage::clear_username() {
+  if (username_ != &::google::protobuf::internal::kEmptyString) {
+    username_->clear();
+  }
+  clear_has_username();
+}
+inline const ::std::string& CSRoomMessage::username() const {
+  return *username_;
+}
+inline void CSRoomMessage::set_username(const ::std::string& value) {
+  set_has_username();
+  if (username_ == &::google::protobuf::internal::kEmptyString) {
+    username_ = new ::std::string;
+  }
+  username_->assign(value);
+}
+inline void CSRoomMessage::set_username(const char* value) {
+  set_has_username();
+  if (username_ == &::google::protobuf::internal::kEmptyString) {
+    username_ = new ::std::string;
+  }
+  username_->assign(value);
+}
+inline void CSRoomMessage::set_username(const char* value, size_t size) {
+  set_has_username();
+  if (username_ == &::google::protobuf::internal::kEmptyString) {
+    username_ = new ::std::string;
+  }
+  username_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CSRoomMessage::mutable_username() {
+  set_has_username();
+  if (username_ == &::google::protobuf::internal::kEmptyString) {
+    username_ = new ::std::string;
+  }
+  return username_;
+}
+inline ::std::string* CSRoomMessage::release_username() {
+  clear_has_username();
+  if (username_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = username_;
+    username_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CSRoomMessage::set_allocated_username(::std::string* username) {
+  if (username_ != &::google::protobuf::internal::kEmptyString) {
+    delete username_;
+  }
+  if (username) {
+    set_has_username();
+    username_ = username;
+  } else {
+    clear_has_username();
+    username_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CSPullRoomsRequest
+
+// -------------------------------------------------------------------
+
+// CSPullRoomsResponse
+
+// optional int32 result = 1;
+inline bool CSPullRoomsResponse::has_result() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSPullRoomsResponse::set_has_result() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSPullRoomsResponse::clear_has_result() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSPullRoomsResponse::clear_result() {
+  result_ = 0;
+  clear_has_result();
+}
+inline ::google::protobuf::int32 CSPullRoomsResponse::result() const {
+  return result_;
+}
+inline void CSPullRoomsResponse::set_result(::google::protobuf::int32 value) {
+  set_has_result();
+  result_ = value;
+}
+
+// optional .CSRoomMessage rooms = 2;
+inline bool CSPullRoomsResponse::has_rooms() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CSPullRoomsResponse::set_has_rooms() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CSPullRoomsResponse::clear_has_rooms() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CSPullRoomsResponse::clear_rooms() {
+  if (rooms_ != NULL) rooms_->::CSRoomMessage::Clear();
+  clear_has_rooms();
+}
+inline const ::CSRoomMessage& CSPullRoomsResponse::rooms() const {
+  return rooms_ != NULL ? *rooms_ : *default_instance_->rooms_;
+}
+inline ::CSRoomMessage* CSPullRoomsResponse::mutable_rooms() {
+  set_has_rooms();
+  if (rooms_ == NULL) rooms_ = new ::CSRoomMessage;
+  return rooms_;
+}
+inline ::CSRoomMessage* CSPullRoomsResponse::release_rooms() {
+  clear_has_rooms();
+  ::CSRoomMessage* temp = rooms_;
+  rooms_ = NULL;
+  return temp;
+}
+inline void CSPullRoomsResponse::set_allocated_rooms(::CSRoomMessage* rooms) {
+  delete rooms_;
+  rooms_ = rooms;
+  if (rooms) {
+    set_has_rooms();
+  } else {
+    clear_has_rooms();
+  }
 }
 
 
