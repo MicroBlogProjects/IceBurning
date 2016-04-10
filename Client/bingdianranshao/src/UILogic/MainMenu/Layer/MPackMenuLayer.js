@@ -15,7 +15,8 @@ var MPackMenuLayer = cc.Scene.extend({
     {
         var index = ""+id;
         var fight_res = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
-        if(fight_res.get_result() !=0 )return ;
+        if(fight_res.get_result() !=0 )
+            return ;
         this.unschedule(this.receiveMessage());
         g_this.parent.addBattleLayer();
         this.removeFromParent();
