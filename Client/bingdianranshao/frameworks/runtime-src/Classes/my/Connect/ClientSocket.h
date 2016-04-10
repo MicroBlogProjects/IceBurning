@@ -7,6 +7,8 @@
 
 #include <Winsock2.h>
 
+#define CLIENTSOCKET GameJoy::ClientSocket::Instance()
+
 NS_GJ_BEGIN
 
 class ClientSocket

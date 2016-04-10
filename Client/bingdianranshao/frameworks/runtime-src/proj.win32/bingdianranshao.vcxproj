@@ -81,7 +81,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\Common\protobuf-2.5.0\src;$(ProjectDir)..\Classes;$(EngineRoot);$(EngineRoot)cocos;$(EngineRoot)cocos\base;$(EngineRoot)cocos\storage;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\scripting\js-bindings\auto;$(EngineRoot)cocos\scripting\js-bindings\manual;$(EngineRoot)cocos\audio\include;$(EngineRoot)external\spidermonkey\include\win32;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\Common\include;$(ProjectDir)..\..\..\..\..\Common\protobuf-2.5.0\src;$(ProjectDir)..\Classes;$(EngineRoot);$(EngineRoot)cocos;$(EngineRoot)cocos\base;$(EngineRoot)cocos\storage;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\scripting\js-bindings\auto;$(EngineRoot)cocos\scripting\js-bindings\manual;$(EngineRoot)cocos\audio\include;$(EngineRoot)external\spidermonkey\include\win32;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;WIN32;_WINDOWS;STRICT;_DEBUG;XP_WIN;JS_HAVE___INTN;JS_INTPTR_TYPE=int;COCOS2D_DEBUG=1;COCOS2D_JAVASCRIPT=1;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_USRJSSTATIC;_USRLIBSIMSTATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -181,16 +181,29 @@ copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
     <ClCompile Include="..\Classes\my\Common\Console_Output.cpp" />
     <ClCompile Include="..\Classes\my\Connect\ClientSocket.cpp" />
     <ClCompile Include="..\Classes\my\Connect\CMessage.cpp" />
+    <ClCompile Include="..\Classes\my\JSvsCPP\BindPBWithJS.cpp" />
+    <ClCompile Include="..\Classes\my\JSvsCPP\jsb_GameJoy_auto.cpp" />
+    <ClCompile Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.cpp" />
+    <ClCompile Include="..\Classes\my\JSvsCPP\MessageProxy.cpp" />
+    <ClCompile Include="..\Classes\my\ProtoOut\CreateRoom.pb.cc" />
+    <ClCompile Include="..\Classes\my\ProtoOut\Login.pb.cc" />
     <ClCompile Include="..\Classes\my\ProtoOut\MessageRegister.cpp" />
     <ClCompile Include="..\Classes\my\ProtoOut\Test.pb.cc" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Common\include\Message_i.h" />
     <ClInclude Include="..\Classes\my\Common\Common_Head.h" />
     <ClInclude Include="..\Classes\my\Common\Console_Output.h" />
     <ClInclude Include="..\Classes\my\Connect\ClientSocket.h" />
     <ClInclude Include="..\Classes\my\Connect\CMessage.h" />
+    <ClInclude Include="..\Classes\my\JSvsCPP\BindPBWithJS.h" />
+    <ClInclude Include="..\Classes\my\JSvsCPP\jsb_GameJoy_auto.hpp" />
+    <ClInclude Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.h" />
+    <ClInclude Include="..\Classes\my\JSvsCPP\MessageProxy.h" />
+    <ClInclude Include="..\Classes\my\ProtoOut\CreateRoom.pb.h" />
+    <ClInclude Include="..\Classes\my\ProtoOut\Login.pb.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\MessageRegister.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\Test.pb.h" />
     <ClInclude Include="main.h" />

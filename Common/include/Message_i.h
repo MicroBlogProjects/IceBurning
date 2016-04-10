@@ -18,6 +18,11 @@ int32_t m_iMessageSequece;  //消息唯一标识符
 
 #define MSG_ON_LOGIN                0x0001 // 登录请求
 #define MSG_ON_REGIST               0x0002 // 注册请求
+#define MSG_ON_PULL_ROOMS           0x0003 // 拉取房间列表
+#define MSG_ON_CREATE_ROOM          0x0004 // 
+#define MSG_ON_JOIN_ROOM            0x0005 //
+#define MSG_FIGHT_READY             0x0006 //
+
 
 
 /***************************message ID end*********************************/

@@ -35,9 +35,9 @@
 enum
 {
     success = 0,
-    fail = -1,
-    quit = -2,
-    error = -3,
+    error = -1,
+    fail = -2,
+    quit = -3,
 };
 
 #define MAX_CSMESSAGE_SIZE 0x3fff

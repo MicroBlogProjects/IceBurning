@@ -86,6 +86,11 @@ int32_t ClientSocket::SendDataToServer(const CMessage& message)
         console_msg("encode msg error when send data to server");
         return fail;
     }
+    console_msg("len = %d", len);
+    for (int i = 0; i < len; i++)
+    {
+        console_msg("%d", (int)data[i]);
+    }
     if (len != send(sockClient, data, len, 0))
     {
         console_msg("maybe send msg fail.");
@@ -104,6 +109,7 @@ int32_t ClientSocket::RecvOneDataFromServer(CMessage*& message)
     {
         message = msg_que.front();
         msg_que.pop();
+        return success;
     }
     return fail;
 }
