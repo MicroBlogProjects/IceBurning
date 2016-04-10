@@ -32,6 +32,13 @@
           <Image Name="Cn19.png" />
           <Image Name="Cn20.png" />
           <Image Name="Cn21.png" />
+          <Image Name="Lg_selectbardground.jpg" />
+          <TTF Name="simhei.ttf" />
+          <Image Name="MM04.png" />
+          <Image Name="MM17.png" />
+          <Image Name="BaS08.png" />
+          <Image Name="BaS09.png" />
+          <Image Name="BaS10.png" />
         </Folder>
         <Folder Name="DifficultySelection">
           <Image Name="DS01.png" />
@@ -76,6 +83,23 @@
           <PlistImageFile Name="Login_LI07.jpg" Key="Login/LI07.jpg" />
         </PlistImageFolder>
         <Project Name="selectopponent.csd" Type="Layer" />
+        <Folder Name="AltarScene" />
+        <Folder Name="Inventory">
+          <Image Name="BaB14.png" />
+          <Image Name="BaB148.png" />
+          <Image Name="BaB149.png" />
+          <Image Name="BaB15.png" />
+          <Image Name="BaB151.png" />
+          <Image Name="BaB159.png" />
+          <Image Name="BaB161.png" />
+          <Image Name="BaB17.png" />
+          <Image Name="BaB18.png" />
+          <Image Name="BaB77.png" />
+          <Image Name="charalockedbg.png" />
+          <Image Name="ic_egyviper_blue.png" />
+          <Image Name="rolebg.png" />
+        </Folder>
+        <Project Name="Inventory.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
