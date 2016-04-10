@@ -1,7 +1,7 @@
 #include "Logicserver_Common.h"
-#include "Logicserver_EpollUnit.h"
-#include "Logicserver_LogicFrame.h"
-#include "Logicserver_Socket.h"
+#include "Network/Logicserver_EpollUnit.h"
+#include "Network/Logicserver_Socket.h"
+#include "LogicFrame/Logicserver_LogicFrame.h"
 US_NS_LS;
 
 

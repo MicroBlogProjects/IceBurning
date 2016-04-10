@@ -1,3 +1,4 @@
+// 创建房间
 message CSCreateRoomRequest
 {
 }
@@ -6,6 +7,7 @@ message CSCreateRoomResponse
     optional int32 result               = 1;
 }
 
+// 请求加入房间
 message CSJoinRoomRequest
 {
     optional int32 uin                  = 1;
@@ -15,6 +17,7 @@ message CSJoinRoomResponse
     optional int32 result               = 1;
 }
 
+//请求开始比赛，已经准备好
 message CSFightReadyRequest
 {
 }

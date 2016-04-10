@@ -6,6 +6,16 @@
 #include "Login.pb.h"
 RegistPBToMessageID(MSG_ON_LOGIN, CSLoginRequest, CSLoginResponse)
 
+// 拉取房间信息
+#include "Login.pb.h"
+RegistPBToMessageID(MSG_ON_PULL_ROOMS, CSPullRoomsRequest, CSPullRoomsResponse)
+// 创建房间信息
+#include "CreateRoom.pb.h"
+RegistPBToMessageID(MSG_ON_CREATE_ROOM, CSCreateRoomRequest, CSCreateRoomResponse)
+#include "CreateRoom.pb.h"
+RegistPBToMessageID(MSG_ON_JOIN_ROOM, CSJoinRoomRequest, CSJoinRoomResponse)
+#include "CreateRoom.pb.h"
+RegistPBToMessageID(MSG_FIGHT_READY, CSFightReadyRequest, CSFightReadyResponse)
 // to add 其他协议
 /*==============================================================================*/
 

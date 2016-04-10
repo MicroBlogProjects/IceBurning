@@ -33,10 +33,14 @@
         <OpenedDocuments>
           <FilePathData Path="SelectTool.csd" />
           <FilePathData Path="selectopponent.csd" />
-          <FilePathData Path="PlayerStats.csd" />
           <FilePathData Path="PlayerInfomation.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="SelectTool.csd" />
+
+          <FilePathData Path="Login.csd" />
+          <FilePathData Path="Inventory.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Inventory.csd" />
       </Value>
     </Item>
   </Properties>

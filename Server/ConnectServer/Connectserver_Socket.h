@@ -39,6 +39,8 @@ private:
 
     int32_t make_socket_non_blocking(int32_t sfd);
     int32_t FindMessageSequence(const char* str, int32_t len);
+    int32_t ResetMessageSequence(char* str, int32_t new_sq);
+    int32_t GeneratNewSequence(int32_t start);
     int32_t FindUin(const char* str, int len);
 
 private:

@@ -20,6 +20,7 @@
         "src/UILogic/MainMenu/Scene/MainMenuScene.js",
         "src/UILogic/MainMenu/Layer/MMBackgroundLayer.js",
         "src/UILogic/MainMenu/Layer/WaitTeam.js",
+        "src/UILogic/MainMenu/Layer/MPackMenuLayer.js",
 
         "src/UIlogic/Config/MonsterConfig/yuangujuren.js",
         "src/UIlogic/Config/MonsterConfig/xingxingmofata.js",
@@ -39,5 +40,6 @@
         "src/UILogic/Setting/Scene/SettingScene.js",
         "src/UILogic/Setting/Layer/STBackgroundLayer.js",
         "src/UILogic/Setting/Layer/STTouchLayer.js"
+
     ]
 }
