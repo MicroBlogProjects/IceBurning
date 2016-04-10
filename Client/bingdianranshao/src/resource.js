@@ -37,9 +37,9 @@ var res = {
     ST_Title_png : "res/Setting/menuTitle.png",
 
    //登录界面资源
-    LI_LoginJson_json: "res/json/Login.json"
-
-
+    LI_LoginJson_json: "res/json/Login.json",
+    MT_MainView_json: "res/json/selectopponent.json",
+    PB_MainView_json: "res/json/Inventory.json"
 };
 
 var g_resources = [];

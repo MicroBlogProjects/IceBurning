@@ -2,51 +2,61 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="Logicserver_Common.h" />
-    <ClInclude Include="Logicserver_EpollUnit.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="Logicserver_Socket.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="Logicserver_LogicFrame.h">
-      <Filter>LogicFrame</Filter>
-    </ClInclude>
-    <ClInclude Include="Logicserver_Message.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="MessageRegister.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="LoginFrame.h">
-      <Filter>LogicFrame</Filter>
-    </ClInclude>
     <ClInclude Include="..\Proto_out\Login.h">
+      <Filter>Proto_out</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Logicserver_EpollUnit.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Logicserver_Message.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Logicserver_Socket.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\MessageRegister.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicFrame\Logicserver_LogicFrame.h">
+      <Filter>LogicFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicFrame\LoginFrame.h">
+      <Filter>LogicFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicFrame\Logicserver_FrameBase.h">
+      <Filter>LogicFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Proto_out\CreateRoom.h">
       <Filter>Proto_out</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Logicserver_EpollUnit.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="Logicserver_Socket.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="Logicserver_LogicFrame.cpp">
-      <Filter>LogicFrame</Filter>
-    </ClCompile>
-    <ClCompile Include="Logicserver_server.cpp">
-      <Filter>LogicFrame</Filter>
-    </ClCompile>
-    <ClCompile Include="Logicserver_Message.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="MessageRegister.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="LoginFrame.cpp">
-      <Filter>LogicFrame</Filter>
-    </ClCompile>
     <ClCompile Include="..\Proto_out\Login.cpp">
+      <Filter>Proto_out</Filter>
+    </ClCompile>
+    <ClCompile Include="Logicserver_server.cpp" />
+    <ClCompile Include="Network\Logicserver_EpollUnit.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Logicserver_Message.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Logicserver_Socket.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\MessageRegister.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicFrame\Logicserver_LogicFrame.cpp">
+      <Filter>LogicFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicFrame\LoginFrame.cpp">
+      <Filter>LogicFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicFrame\Logicserver_FrameBase.cpp">
+      <Filter>LogicFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Proto_out\CreateRoom.cpp">
       <Filter>Proto_out</Filter>
     </ClCompile>
   </ItemGroup>

@@ -168,6 +168,7 @@ void CMessage::SetMessageBody(CMessageBody* body)
     m_iMessageHead->SetLen(m_iMessageHead->Size() + m_iMessageBody->GetPB()->ByteSize());
     srand(time(NULL));
     m_iMessageHead->SetMsq((int32_t)(time(NULL) << 16) | (1 + rand()));
+	console_msg("msq:%d", m_iMessageHead->GetMsq());
 }
 
 NS_GJ_END

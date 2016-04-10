@@ -11,9 +11,11 @@ public:
     void SendRequest(int msgID);
     int RecvResponse();
     int ConnectToServer();
+	void SetUin(int _uin) { if(uin < 0) uin = _uin; }
 private:
     MessageProxy();
     static MessageProxy* instance;
+	int uin;
 };
 
 }

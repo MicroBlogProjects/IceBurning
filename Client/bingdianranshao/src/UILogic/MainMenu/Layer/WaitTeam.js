@@ -1,140 +1,92 @@
 /**
  * Created by jiachen on 2016/3/28.
  */
-
+var g_mainscene;
+var g_this;
+var useName;
 var MMTouchLayer = cc.Layer.extend({
 
-    ctor : function(){
-
+    ctor : function()
+    {
         this._super();
-
-        //this.playMusic();
-
-        this.initMenu();
-
+        g_this = this;
+        this.initUI();
+    	this.schedule(this.receiveMessage,0.1);
+        this.buttonFreshRoomTouchEvent();
+        this.ismyRoom=false;
     },
-    playMusic : function(){
+    createRoom:function(id)
+    {
+        var index = ""+id;
+        var l_oppen = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
+        var is_success = l_oppen.get_result();
+        if(is_success != 0 )return ;
+        var l_person = l_oppen.get_rooms();
 
-//        播放背景音乐，true代表循环无限次播放，false表示只播放一次。
-        if (GC.SOUND_ON){
-            if (cc.audioEngine.isMusicPlaying()){
-                return;
+        var Panel_room = ccui.helper.seekWidgetByName(g_mainscene, "Panel_room");
+        Panel_room.setVisible(true);
+        var l_name_text = ccui.helper.seekWidgetByName(g_mainscene, "m_name");
+        l_name_text.setString(l_person.get_username());
+        var l_uid_text = ccui.helper.seekWidgetByName(g_mainscene,"m_uid");
+        l_uid_text.setString(l_person.get_uin());
+        var Panel_room_button = ccui.helper.seekWidgetByName(g_mainscene,"m_Button_start");
+        Panel_room_button.addClickEventListener(this.buttonJoinBattleTouchEvent);
+    },
+    createMyRoom:function(id)
+    {
+        var Panel_room = ccui.helper.seekWidgetByName(g_mainscene, "Panel_room");
+        Panel_room.setVisible(true);
+        var panel_text = ccui.helper.seekWidgetByName(g_mainscene, "m_name");
+        panel_text.setString(g_this.parent.m_Name);
+    },
+    JoinBattle:function(id)
+    {
+        this.unschedule(this.receiveMessage());
+        g_this.parent.addChosePack();
+        this.removeFromParent();
+    },
+    receiveMessage:function()
+    {
+        var id = GameJoy.Proxy.RecvResponse();
+        if(id > 0)
+        {
+            if(id == 3)
+            {
+                cc.log("------------------------sheng qin lie biao-------------------");
+                this.createRoom(id);
             }
-            cc.audioEngine.playMusic(res.MM_BgMusic_mp3, true);
+            if(id == 4)
+            {
+                this.createMyRoom(id);
+            }
+            if(id == 5)
+            {
+                this.JoinBattle(id);
+            }
         }
     },
-    initMenu : function(){
-
-        var flare = new cc.Sprite(res.MM_Flare_jpg);
-
-//        设置flare 为不可见
-        flare.visible = false;
-        this.addChild(flare, 10);
-
-//        根据rect区域去创建一个精灵，作为下面menuItemSprite显示的图片。
-//        因为menuItem有Normal、Selected、Disabled三个状态，所以一个菜单项需要三张纹理图片
-        var newGameNormal = new cc.Sprite(res.MM_Mune_png, cc.rect(0, 0, 126, 33));
-        var newGameSelected = new cc.Sprite(res.MM_Mune_png, cc.rect(0, 33, 126, 33));
-        var newGameDisabled = new cc.Sprite(res.MM_Mune_png, cc.rect(0, 33 * 2, 126, 33));
-
-        var gameSettingsNormal = new cc.Sprite(res.MM_Mune_png, cc.rect(126, 0, 126, 33));
-        var gameSettingsSelected = new cc.Sprite(res.MM_Mune_png, cc.rect(126, 33, 126, 33));
-        var gameSettingsDisabled = new cc.Sprite(res.MM_Mune_png, cc.rect(126, 33 * 2, 126, 33));
-
-        var aboutNormal = new cc.Sprite(res.MM_Mune_png, cc.rect(252, 0, 126, 33));
-        var aboutSelected = new cc.Sprite(res.MM_Mune_png, cc.rect(252, 33, 126, 33));
-        var aboutDisabled = new cc.Sprite(res.MM_Mune_png, cc.rect(252, 33 * 2, 126, 33));
-
-//        三个菜单项，并且指定菜单项点击所会执行的函数
-        var newGame = new cc.MenuItemSprite(
-            newGameNormal,
-            newGameSelected,
-            newGameDisabled,
-            function(){
-                this.onButtonEffect();
-                this.flareEffect(flare, this, this.onNewGame);
-            }.bind(this)
-        );
-
-        var gameSettings = new cc.MenuItemSprite(
-            gameSettingsNormal,
-            gameSettingsSelected,
-            gameSettingsDisabled,
-            this.onSettings,
-            this
-        );
-
-        var about = new cc.MenuItemSprite(
-            aboutNormal,
-            aboutSelected,
-            aboutDisabled,
-            this.onAbout,
-            this
-        );
-
-//        菜单。 对应三者关系：菜单里面有菜单项，菜单项中绑定要执行的方法，并且需要图片去显示。图片就是精灵
-        var menu = new cc.Menu(newGame, gameSettings, about);
-        menu.alignItemsVerticallyWithPadding(10);
-        menu.x = GC.w_2;
-        menu.y = GC.h_2 - 80;
-        this.addChild(menu, 1, 2);
-
+    initUI:function()
+    {
+        g_mainscene = ccs.load(res.MT_MainView_json).node;
+        this.addChild(g_mainscene);
+        var create_room = ccui.helper.seekWidgetByName(g_mainscene, "m_button_create");
+        create_room.addClickEventListener(this.buttonCreateRoomTouchEvent);
+        var refresh_room = ccui.helper.seekWidgetByName(g_mainscene,"m_refresh");
+        refresh_room.addClickEventListener(this.buttonFreshRoomTouchEvent);
     },
-    onNewGame : function(){
-        cc.audioEngine.stopMusic();
-
-//        场景切换，并且指定切换效果，更多效果，参考引擎包samples/js-tests下的Transitions Test
-        cc.director.runScene(new cc.TransitionFade(1.2, new GamePlayScene()));
+    buttonCreateRoomTouchEvent:function()
+    {
+        cc.log("4----------------------------creatRoom");
+        GameJoy.Proxy.SendRequest(4);
     },
-    onSettings : function(){
-        this.onButtonEffect();
-        cc.director.runScene(new cc.TransitionFade(1.2, new SettingScene()));
+    buttonJoinBattleTouchEvent:function()
+    {
+        cc.log("5----------------------------JoinRoom");
+        GameJoy.Proxy.SendRequest(5);
     },
-    onAbout : function(){
-        this.onButtonEffect();
-        cc.director.runScene(new cc.TransitionFade(1.2, new AboutScene()));
-    },
-    onButtonEffect : function(){
-        if (GC.SOUND_ON) {
-            cc.audioEngine.playEffect(res.MM_ButtonEffect);
-        }
-    },
-    flareEffect : function(flare,target, callback){
-        flare.stopAllActions();
-
-//        设置flare 的渲染混合模式
-        flare.setBlendFunc(cc.SRC_ALPHA, cc.ONE);
-        flare.attr({
-            x: -30,
-            y: 297,
-            visible: true,
-            opacity: 0,
-            rotation: -120,
-            scale: 0.2
-        });
-
-
-//        定义动作
-        var opacityAnim = cc.fadeIn(0.5, 255);
-        var opacDim = cc.fadeIn(1, 0);
-
-//        为动作加上easing效果，具体参考tests里面的示例
-        var biggerEase = cc.scaleBy(0.7, 1.2, 1.2).easing(cc.easeSineOut());
-        var easeMove = cc.moveBy(0.5, cc.p(640, 0)).easing(cc.easeSineOut());
-        var rotateEase = cc.rotateBy(2.5, 90).easing(cc.easeExponentialOut());
-        var bigger = cc.scaleTo(0.5, 1);
-
-//        函数回调动作
-        var onComplete = cc.callFunc(callback, target);
-        var killflare = cc.callFunc(function () {
-            this.getParent().removeChild(this,true);
-        }, flare);
-
-//        按顺序执行一组动作
-        var seqAction = cc.sequence(opacityAnim, biggerEase, opacDim, killflare, onComplete);
-
-//        同时执行一组动作
-        var action = cc.spawn(seqAction, easeMove, rotateEase, bigger);
-        flare.runAction(action);
+    buttonFreshRoomTouchEvent:function()
+    {
+        cc.log("3----------------------------PullRoomList");
+        GameJoy.Proxy.SendRequest(3);
     }
 });

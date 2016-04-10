@@ -21,8 +21,8 @@
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                 <PressedFileData Type="Normal" Path="Login/BaS32.png" Plist="" />
                 <NormalFileData Type="Normal" Path="Login/BaS31.png" Plist="" />
-                <OutlineColor A="0" R="0" G="0" B="0" />
-                <ShadowColor A="0" R="0" G="0" B="0" />
+                <OutlineColor A="255" R="0" G="0" B="0" />
+                <ShadowColor A="255" R="0" G="0" B="0" />
               </AbstractNodeData>
               <AbstractNodeData Name="m_Button_logout" ActionTag="147826963" Tag="94" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="668.0001" RightMargin="51.9999" TopMargin="446.0002" BottomMargin="112.9998" TouchEnable="True" FontSize="14" Scale9Enable="True" Scale9Width="240" Scale9Height="81" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="240.0000" Y="81.0000" />
@@ -36,8 +36,8 @@
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                 <PressedFileData Type="Normal" Path="Login/LI02.png" Plist="" />
                 <NormalFileData Type="Normal" Path="Login/LI01.png" Plist="" />
-                <OutlineColor A="0" R="0" G="0" B="0" />
-                <ShadowColor A="0" R="0" G="0" B="0" />
+                <OutlineColor A="255" R="0" G="0" B="0" />
+                <ShadowColor A="255" R="0" G="0" B="0" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
