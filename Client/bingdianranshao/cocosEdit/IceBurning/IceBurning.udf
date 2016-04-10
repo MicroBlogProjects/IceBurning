@@ -33,8 +33,9 @@
         <OpenedDocuments>
           <FilePathData Path="selectopponent.csd" />
           <FilePathData Path="Login.csd" />
+          <FilePathData Path="Inventory.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Login.csd" />
+        <ActiveDocument Path="selectopponent.csd" />
       </Value>
     </Item>
   </Properties>

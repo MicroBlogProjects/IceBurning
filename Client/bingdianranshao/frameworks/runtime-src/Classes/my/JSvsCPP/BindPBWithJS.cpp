@@ -2,6 +2,8 @@
 #include "BindPBWithJS.h"
 #include "Message_i.h"
 
+#include "MessageProxy.h"
+
 #define ParseBegin(PB) \
     PB* real_pb = (PB*)pb; \
     GameJoy::JS_##PB * real_js = (GameJoy::JS_##PB *)js;
@@ -20,6 +22,7 @@ int ParsePBResponseToJS_CSLogin(::google::protobuf::Message* pb, GameJoy::JS_CPP
     ParseBegin(CSLoginResponse)
         real_js->result = real_pb->result();
         real_js->uin = real_pb->uin();
+		GameJoy::MessageProxy::Instance()->SetUin(real_js->uin);
     ParseEnd
 }
 int ParseJSToPBRequest_CSLogin(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb)

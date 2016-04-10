@@ -15,6 +15,7 @@ MessageProxy* MessageProxy::instance = NULL;
 MessageProxy::MessageProxy()
 {
     ConnectToServer();
+	uin = -1;
 }
 
 MessageProxy* MessageProxy::Instance()
@@ -44,6 +45,7 @@ void MessageProxy::SendRequest(int msgID)
 
     CMessageHead* msg_head = new CMessageHead();
     msg_head->SetMid(msgID);
+	msg_head->SetUin(uin);
     msg.SetMessageHead(msg_head);
 
     CMessageBody* msg_body = NewRequestBodyWithMsgID(msgID);

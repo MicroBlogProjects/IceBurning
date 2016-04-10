@@ -7,7 +7,7 @@ var MainMenuScene = cc.Scene.extend({
     //    属性声明
     _backgroundLayer : null,
     _touchLayer      : null,
-
+    _packLayer :null,
     onEnter:function () {
         this._super();
         this.addBackgroundLayer();
@@ -21,9 +21,18 @@ var MainMenuScene = cc.Scene.extend({
         this._backgroundLayer = new MMBackgroundLayer();
         this.addChild(this._backgroundLayer,LAYER_PRIORITY_BACKGROUND);
     },
-    addTouchLayer : function(){
+    addTouchLayer : function()
+    {
         this._touchLayer = new MMTouchLayer();
         this.addChild(this._touchLayer,LAYER_PRIORITY_TOUCH);
+    },
+    addChosePack:function()
+    {
+        this._packLayer = new MPackMenuLayer();
+        this.addChild(this._packLayer,LAYER_PRIORITY_TOUCH);
+    },
+    addBattleLayer:function()
+    {
 
     }
 });
