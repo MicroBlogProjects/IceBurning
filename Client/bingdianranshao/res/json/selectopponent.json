@@ -1,0 +1,2511 @@
+{
+  "ID": "ff720657-bb3b-4a38-b0a7-38d626b14d91",
+  "Version": "2.3.3.0",
+  "Name": "selectopponent",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 169,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 170,
+            "Children": [
+              {
+                "BackColorAlpha": 102,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 0,
+                  "G": 128,
+                  "B": 0
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "Tag": 250,
+                "ActionTag": 206336819,
+                "Size": {
+                  "X": 960.0,
+                  "Y": 640.0
+                },
+                "Name": "Panel_9",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 0,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 480.0038,
+                  "Y": 320.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.81,
+                  "Y": 0.83
+                },
+                "LeftMargin": 91.2039,
+                "RightMargin": 91.1962,
+                "TopMargin": 54.4,
+                "BottomMargin": 54.4,
+                "Tag": 251,
+                "Children": [
+                  {
+                    "BackColorAlpha": 102,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PercentWidthEnable": true,
+                    "PercentHeightEnable": true,
+                    "PercentWidthEnabled": true,
+                    "PercentHeightEnabled": true,
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 1.0
+                    },
+                    "Tag": 278,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn07.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 20,
+                        "Scale9Height": 35,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 380.5575,
+                          "Y": 504.4807
+                        },
+                        "Scale": {
+                          "ScaleX": 28.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4894,
+                          "Y": 0.9497
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0336,
+                          "Y": 0.0714
+                        },
+                        "LeftMargin": 367.4938,
+                        "RightMargin": 383.9788,
+                        "TopMargin": 7.7555,
+                        "BottomMargin": 485.5168,
+                        "Tag": 252,
+                        "ActionTag": -405994459,
+                        "Size": {
+                          "X": 26.1274,
+                          "Y": 37.9277
+                        },
+                        "Name": "Image_Frame",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn05.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 20,
+                        "Scale9Height": 35,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 380.5575,
+                          "Y": 23.1072
+                        },
+                        "Scale": {
+                          "ScaleX": 28.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4894,
+                          "Y": 0.0435
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0336,
+                          "Y": 0.0692
+                        },
+                        "LeftMargin": 367.4938,
+                        "RightMargin": 383.9788,
+                        "TopMargin": 489.7133,
+                        "BottomMargin": 4.7277,
+                        "Tag": 253,
+                        "ActionTag": -162920522,
+                        "Size": {
+                          "X": 26.1274,
+                          "Y": 36.759
+                        },
+                        "Name": "Image_Frame_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn06.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 35,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 19.5178,
+                          "Y": 266.928
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 23.6
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.0251,
+                          "Y": 0.5025
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0587,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": -3.3048,
+                        "RightMargin": 735.2596,
+                        "TopMargin": 253.4355,
+                        "BottomMargin": 256.0915,
+                        "Tag": 254,
+                        "ActionTag": 1103074865,
+                        "Size": {
+                          "X": 45.6451,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Frame_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn06.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 35,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 746.496,
+                          "Y": 258.4818
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 23.6
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.96,
+                          "Y": 0.4866
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0587,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": 723.6734,
+                        "RightMargin": 8.2814,
+                        "TopMargin": 261.8817,
+                        "BottomMargin": 247.6454,
+                        "Tag": 255,
+                        "ActionTag": -1421081922,
+                        "Size": {
+                          "X": 45.6451,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Frame_2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn04.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 190,
+                        "Scale9Height": 86,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 382.7346,
+                          "Y": 464.375
+                        },
+                        "Scale": {
+                          "ScaleX": 2.9637,
+                          "ScaleY": 0.9188
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4922,
+                          "Y": 0.8742
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3188,
+                          "Y": 0.1755
+                        },
+                        "LeftMargin": 258.7852,
+                        "RightMargin": 270.9159,
+                        "TopMargin": 20.2122,
+                        "BottomMargin": 417.7622,
+                        "Tag": 256,
+                        "ActionTag": -1624482574,
+                        "Size": {
+                          "X": 247.8989,
+                          "Y": 93.2256
+                        },
+                        "Name": "Image_Wood",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn04.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 190,
+                        "Scale9Height": 86,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 382.7346,
+                          "Y": 381.6672
+                        },
+                        "Scale": {
+                          "ScaleX": 2.9637,
+                          "ScaleY": 0.9188
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4922,
+                          "Y": 0.7185
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3188,
+                          "Y": 0.1755
+                        },
+                        "LeftMargin": 258.7852,
+                        "RightMargin": 270.9159,
+                        "TopMargin": 102.92,
+                        "BottomMargin": 335.0544,
+                        "Tag": 257,
+                        "ActionTag": -372770031,
+                        "Size": {
+                          "X": 247.8989,
+                          "Y": 93.2256
+                        },
+                        "Name": "Image_Wood_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn04.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 190,
+                        "Scale9Height": 86,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 382.7346,
+                          "Y": 301.1373
+                        },
+                        "Scale": {
+                          "ScaleX": 2.9637,
+                          "ScaleY": 0.9188
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4922,
+                          "Y": 0.5669
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3188,
+                          "Y": 0.1755
+                        },
+                        "LeftMargin": 258.7852,
+                        "RightMargin": 270.9159,
+                        "TopMargin": 183.4499,
+                        "BottomMargin": 254.5245,
+                        "Tag": 258,
+                        "ActionTag": 751195405,
+                        "Size": {
+                          "X": 247.8989,
+                          "Y": 93.2256
+                        },
+                        "Name": "Image_Wood_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn04.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 190,
+                        "Scale9Height": 86,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 382.7346,
+                          "Y": 218.9075
+                        },
+                        "Scale": {
+                          "ScaleX": 2.9637,
+                          "ScaleY": 0.9188
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4922,
+                          "Y": 0.4121
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3188,
+                          "Y": 0.1755
+                        },
+                        "LeftMargin": 258.7852,
+                        "RightMargin": 270.9159,
+                        "TopMargin": 265.6797,
+                        "BottomMargin": 172.2947,
+                        "Tag": 259,
+                        "ActionTag": -790003069,
+                        "Size": {
+                          "X": 247.8989,
+                          "Y": 93.2256
+                        },
+                        "Name": "Image_Wood_2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn04.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 190,
+                        "Scale9Height": 86,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 382.7346,
+                          "Y": 135.6154
+                        },
+                        "Scale": {
+                          "ScaleX": 2.9637,
+                          "ScaleY": 0.9188
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4922,
+                          "Y": 0.2553
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3188,
+                          "Y": 0.1755
+                        },
+                        "LeftMargin": 258.7852,
+                        "RightMargin": 270.9159,
+                        "TopMargin": 348.9719,
+                        "BottomMargin": 89.0025,
+                        "Tag": 260,
+                        "ActionTag": -85156815,
+                        "Size": {
+                          "X": 247.8989,
+                          "Y": 93.2256
+                        },
+                        "Name": "Image_Wood_3",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn04.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 190,
+                        "Scale9Height": 86,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 382.7346,
+                          "Y": 62.841
+                        },
+                        "Scale": {
+                          "ScaleX": 2.9637,
+                          "ScaleY": 0.9188
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4922,
+                          "Y": 0.1183
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3188,
+                          "Y": 0.1755
+                        },
+                        "LeftMargin": 258.7852,
+                        "RightMargin": 270.9159,
+                        "TopMargin": 421.7462,
+                        "BottomMargin": 16.2282,
+                        "Tag": 261,
+                        "ActionTag": 2002915174,
+                        "Size": {
+                          "X": 247.8989,
+                          "Y": 93.2256
+                        },
+                        "Name": "Image_Wood_4",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn11.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 5.3654,
+                          "Y": 368.5997
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.0069,
+                          "Y": 0.6939
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": -4.4323,
+                        "RightMargin": 762.4368,
+                        "TopMargin": 151.7639,
+                        "BottomMargin": 357.7632,
+                        "Tag": 262,
+                        "ActionTag": 1521777816,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn10.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 5.3654,
+                          "Y": 318.3482
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.0069,
+                          "Y": 0.5993
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": -4.4323,
+                        "RightMargin": 762.4368,
+                        "TopMargin": 202.0154,
+                        "BottomMargin": 307.5117,
+                        "Tag": 263,
+                        "ActionTag": -557522670,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn12.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 5.3654,
+                          "Y": 253.0106
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.0069,
+                          "Y": 0.4763
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": -4.4323,
+                        "RightMargin": 762.4368,
+                        "TopMargin": 267.353,
+                        "BottomMargin": 242.1741,
+                        "Tag": 264,
+                        "ActionTag": 1828049042,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn11.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 6.6874,
+                          "Y": 199.5187
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.0086,
+                          "Y": 0.3756
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": -3.1104,
+                        "RightMargin": 761.1149,
+                        "TopMargin": 320.8448,
+                        "BottomMargin": 188.6822,
+                        "Tag": 265,
+                        "ActionTag": -442692054,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch_2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn11.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 759.5596,
+                          "Y": 356.9133
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.9768,
+                          "Y": 0.6719
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": 749.7618,
+                        "RightMargin": 8.2427,
+                        "TopMargin": 163.4503,
+                        "BottomMargin": 346.0768,
+                        "Tag": 266,
+                        "ActionTag": 811305306,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch_3",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn10.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 759.5596,
+                          "Y": 308.2553
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.9768,
+                          "Y": 0.5803
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": 749.7618,
+                        "RightMargin": 8.2427,
+                        "TopMargin": 212.1082,
+                        "BottomMargin": 297.4189,
+                        "Tag": 267,
+                        "ActionTag": -745372455,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch_0_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn12.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 759.5596,
+                          "Y": 244.9895
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.9768,
+                          "Y": 0.4612
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": 749.7618,
+                        "RightMargin": 8.2427,
+                        "TopMargin": 275.3741,
+                        "BottomMargin": 234.153,
+                        "Tag": 268,
+                        "ActionTag": -1448150197,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch_1_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn11.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 15,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 759.5596,
+                          "Y": 193.1974
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.9768,
+                          "Y": 0.3637
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0252,
+                          "Y": 0.0408
+                        },
+                        "LeftMargin": 749.7618,
+                        "RightMargin": 8.2427,
+                        "TopMargin": 327.1661,
+                        "BottomMargin": 182.361,
+                        "Tag": 269,
+                        "ActionTag": -1327608305,
+                        "Size": {
+                          "X": 19.5955,
+                          "Y": 21.673
+                        },
+                        "Name": "Image_Scratch_2_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn08.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 20,
+                        "Scale9Height": 15,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 170.6832,
+                          "Y": 514.5734
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.2195,
+                          "Y": 0.9687
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0336,
+                          "Y": 0.0306
+                        },
+                        "LeftMargin": 157.6195,
+                        "RightMargin": 593.8531,
+                        "TopMargin": 8.4992,
+                        "BottomMargin": 506.4461,
+                        "Tag": 270,
+                        "ActionTag": -1430331767,
+                        "Size": {
+                          "X": 26.1274,
+                          "Y": 16.2547
+                        },
+                        "Name": "Image_177",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn08.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 20,
+                        "Scale9Height": 15,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 633.5886,
+                          "Y": 514.5734
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.8148,
+                          "Y": 0.9687
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0336,
+                          "Y": 0.0306
+                        },
+                        "LeftMargin": 620.5249,
+                        "RightMargin": 130.9478,
+                        "TopMargin": 8.4992,
+                        "BottomMargin": 506.4461,
+                        "Tag": 271,
+                        "ActionTag": -814855051,
+                        "Size": {
+                          "X": 26.1274,
+                          "Y": 16.2547
+                        },
+                        "Name": "Image_177_3",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn09.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 20,
+                        "Scale9Height": 15,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 168.817,
+                          "Y": 12.3238
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.2171,
+                          "Y": 0.0232
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0336,
+                          "Y": 0.0296
+                        },
+                        "LeftMargin": 155.7533,
+                        "RightMargin": 595.7194,
+                        "TopMargin": 511.0144,
+                        "BottomMargin": 4.4621,
+                        "Tag": 272,
+                        "ActionTag": -610072344,
+                        "Size": {
+                          "X": 26.1274,
+                          "Y": 15.7235
+                        },
+                        "Name": "Image_177_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn09.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 20,
+                        "Scale9Height": 15,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 631.7223,
+                          "Y": 12.3238
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.8124,
+                          "Y": 0.0232
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0336,
+                          "Y": 0.0296
+                        },
+                        "LeftMargin": 618.6586,
+                        "RightMargin": 132.814,
+                        "TopMargin": 511.0144,
+                        "BottomMargin": 4.4621,
+                        "Tag": 273,
+                        "ActionTag": -400281048,
+                        "Size": {
+                          "X": 26.1274,
+                          "Y": 15.7235
+                        },
+                        "Name": "Image_177_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn02.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 94,
+                        "Scale9Height": 100,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 734.4316,
+                          "Y": 50.9999
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9445,
+                          "Y": 0.096
+                        },
+                        "PreSize": {
+                          "X": 0.1209,
+                          "Y": 0.1883
+                        },
+                        "HorizontalEdge": "RightEdge",
+                        "LeftMargin": 687.4316,
+                        "RightMargin": -3.8316,
+                        "TopMargin": 430.2001,
+                        "BottomMargin": 0.9999,
+                        "Tag": 274,
+                        "ActionTag": -1740965085,
+                        "Size": {
+                          "X": 94.0,
+                          "Y": 100.0
+                        },
+                        "Name": "Image_183_1_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn02.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 94,
+                        "Scale9Height": 100,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 36.5004,
+                          "Y": 50.9999
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.0469,
+                          "Y": 0.096
+                        },
+                        "PreSize": {
+                          "X": 0.1209,
+                          "Y": 0.1883
+                        },
+                        "LeftMargin": -10.4996,
+                        "RightMargin": 694.0996,
+                        "TopMargin": 430.2001,
+                        "BottomMargin": 0.9999,
+                        "Tag": 275,
+                        "ActionTag": -542225429,
+                        "Size": {
+                          "X": 94.0,
+                          "Y": 100.0
+                        },
+                        "Name": "Image_183_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn03.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 94,
+                        "Scale9Height": 100,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 734.4317,
+                          "Y": 481.5316
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9445,
+                          "Y": 0.9065
+                        },
+                        "PreSize": {
+                          "X": 0.1209,
+                          "Y": 0.1883
+                        },
+                        "HorizontalEdge": "RightEdge",
+                        "VerticalEdge": "TopEdge",
+                        "LeftMargin": 687.4317,
+                        "RightMargin": -3.8317,
+                        "TopMargin": -0.3315,
+                        "BottomMargin": 431.5316,
+                        "Tag": 276,
+                        "ActionTag": -1271032245,
+                        "Size": {
+                          "X": 94.0,
+                          "Y": 100.0
+                        },
+                        "Name": "Image_183_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn03.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 94,
+                        "Scale9Height": 100,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 36.5004,
+                          "Y": 481.5316
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.0469,
+                          "Y": 0.9065
+                        },
+                        "PreSize": {
+                          "X": 0.1209,
+                          "Y": 0.1883
+                        },
+                        "VerticalEdge": "TopEdge",
+                        "LeftMargin": -10.4996,
+                        "RightMargin": 694.0996,
+                        "TopMargin": -0.3315,
+                        "BottomMargin": 431.5316,
+                        "Tag": 277,
+                        "ActionTag": -360572167,
+                        "Size": {
+                          "X": 94.0,
+                          "Y": 100.0
+                        },
+                        "Name": "Image_183",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS16.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 270,
+                        "Scale9Height": 94,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 388.8,
+                          "Y": 520.576
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.98
+                        },
+                        "PreSize": {
+                          "X": 0.3485,
+                          "Y": 0.1827
+                        },
+                        "LeftMargin": 253.3144,
+                        "RightMargin": 253.3145,
+                        "TopMargin": -37.9014,
+                        "BottomMargin": 472.0507,
+                        "Tag": 279,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "DifficultySelection/DS01.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 181,
+                            "Scale9Height": 59,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 135.4855,
+                              "Y": 51.6213
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": 0.5,
+                              "Y": 0.5319
+                            },
+                            "PercentWidthEnable": true,
+                            "PercentHeightEnable": true,
+                            "PercentWidthEnabled": true,
+                            "PercentHeightEnabled": true,
+                            "PreSize": {
+                              "X": 0.6704,
+                              "Y": 0.6277
+                            },
+                            "LeftMargin": 44.656,
+                            "RightMargin": 44.656,
+                            "TopMargin": 14.9701,
+                            "BottomMargin": 21.1619,
+                            "Tag": 280,
+                            "ActionTag": -1944571695,
+                            "Size": {
+                              "X": 181.659,
+                              "Y": 60.9188
+                            },
+                            "Name": "Image_188",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -799277454,
+                        "Size": {
+                          "X": 270.9711,
+                          "Y": 97.0508
+                        },
+                        "Name": "Image_187",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 14,
+                        "ButtonText": "",
+                        "TextColor": {
+                          "R": 65,
+                          "G": 65,
+                          "B": 70
+                        },
+                        "DisabledFileData": {
+                          "Type": "Default",
+                          "Path": "Default/Button_Disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn15.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn14.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 82,
+                        "Scale9Height": 82,
+                        "OutlineColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 747.6808,
+                          "Y": 504.423
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9615,
+                          "Y": 0.9496
+                        },
+                        "PreSize": {
+                          "X": 0.1055,
+                          "Y": 0.1544
+                        },
+                        "HorizontalEdge": "RightEdge",
+                        "VerticalEdge": "TopEdge",
+                        "LeftMargin": 706.6808,
+                        "RightMargin": -11.0808,
+                        "TopMargin": -14.223,
+                        "BottomMargin": 463.423,
+                        "Tag": 281,
+                        "ActionTag": 1134281371,
+                        "Size": {
+                          "X": 82.0,
+                          "Y": 82.0
+                        },
+                        "Name": "Button_Close",
+                        "ctype": "ButtonObjectData"
+                      }
+                    ],
+                    "ActionTag": -327091752,
+                    "Size": {
+                      "X": 777.6,
+                      "Y": 531.2
+                    },
+                    "Name": "Panel_11",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "BackColorAlpha": 0,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 381.024,
+                      "Y": 265.6
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.49,
+                      "Y": 0.5
+                    },
+                    "PercentWidthEnable": true,
+                    "PercentHeightEnable": true,
+                    "PercentWidthEnabled": true,
+                    "PercentHeightEnabled": true,
+                    "PreSize": {
+                      "X": 0.92,
+                      "Y": 0.3263
+                    },
+                    "LeftMargin": 23.328,
+                    "RightMargin": 38.88,
+                    "TopMargin": 178.944,
+                    "BottomMargin": 178.944,
+                    "Tag": 298,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn01.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 273,
+                        "Scale9Height": 100,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 184.2134,
+                          "Y": 85.5468
+                        },
+                        "Scale": {
+                          "ScaleX": 0.98,
+                          "ScaleY": 1.36
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.2575,
+                          "Y": 0.4936
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.5056,
+                          "Y": 0.7299
+                        },
+                        "LeftMargin": 3.3624,
+                        "RightMargin": 350.3275,
+                        "TopMargin": 24.515,
+                        "BottomMargin": 22.2966,
+                        "Tag": 299,
+                        "ActionTag": 2026092007,
+                        "Size": {
+                          "X": 361.7021,
+                          "Y": 126.5004
+                        },
+                        "Name": "Image_189_229",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn01.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 273,
+                        "Scale9Height": 100,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 532.8239,
+                          "Y": 85.5468
+                        },
+                        "Scale": {
+                          "ScaleX": 0.98,
+                          "ScaleY": 1.36
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.7448,
+                          "Y": 0.4936
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.5056,
+                          "Y": 0.7299
+                        },
+                        "LeftMargin": 351.9728,
+                        "RightMargin": 1.717,
+                        "TopMargin": 24.515,
+                        "BottomMargin": 22.2966,
+                        "Tag": 300,
+                        "ActionTag": 1236957558,
+                        "Size": {
+                          "X": 361.7021,
+                          "Y": 126.5004
+                        },
+                        "Name": "Image_189_0_231",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 14,
+                        "ButtonText": "",
+                        "TextColor": {
+                          "R": 65,
+                          "G": 65,
+                          "B": 70
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS12.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS11.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS10.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 154,
+                        "Scale9Height": 59,
+                        "OutlineColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "StretchWidthEnable": true,
+                        "StretchHeightEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 584.5448,
+                          "Y": 50.5712
+                        },
+                        "Scale": {
+                          "ScaleX": 0.8963,
+                          "ScaleY": 0.8963
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.8171,
+                          "Y": 0.2918
+                        },
+                        "PreSize": {
+                          "X": 0.2852,
+                          "Y": 0.438
+                        },
+                        "HorizontalEdge": "RightEdge",
+                        "LeftMargin": 482.5299,
+                        "RightMargin": 28.8323,
+                        "TopMargin": 84.7854,
+                        "BottomMargin": 12.6159,
+                        "Tag": 302,
+                        "ActionTag": -1079072223,
+                        "Size": {
+                          "X": 204.0298,
+                          "Y": 75.9107
+                        },
+                        "Name": "m_Button_start",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS15.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 10,
+                        "Scale9Width": 6,
+                        "Scale9Height": 32,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 247.1679,
+                          "Y": 115.4258
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.3455,
+                          "Y": 0.666
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.1296,
+                          "Y": 0.2336
+                        },
+                        "LeftMargin": 200.8105,
+                        "RightMargin": 421.8666,
+                        "TopMargin": 37.6434,
+                        "BottomMargin": 95.183,
+                        "Tag": 303,
+                        "ActionTag": 1338912373,
+                        "Size": {
+                          "X": 92.7148,
+                          "Y": 40.4857
+                        },
+                        "Name": "ImageView_Input_233",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS15.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 10,
+                        "Scale9Width": 6,
+                        "Scale9Height": 32,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 339.8827,
+                          "Y": 115.4258
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4751,
+                          "Y": 0.666
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.1296,
+                          "Y": 0.2336
+                        },
+                        "LeftMargin": 293.5253,
+                        "RightMargin": 329.1519,
+                        "TopMargin": 37.6434,
+                        "BottomMargin": 95.183,
+                        "Tag": 304,
+                        "ActionTag": 833196779,
+                        "Size": {
+                          "X": 92.7148,
+                          "Y": 40.4857
+                        },
+                        "Name": "ImageView_Input_0_235",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS15.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 10,
+                        "Scale9Width": 6,
+                        "Scale9Height": 32,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 246.5956,
+                          "Y": 64.1081
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.3447,
+                          "Y": 0.3699
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.1296,
+                          "Y": 0.2336
+                        },
+                        "LeftMargin": 200.2382,
+                        "RightMargin": 422.439,
+                        "TopMargin": 88.961,
+                        "BottomMargin": 43.8653,
+                        "Tag": 305,
+                        "ActionTag": -515791416,
+                        "Size": {
+                          "X": 92.7148,
+                          "Y": 40.4857
+                        },
+                        "Name": "ImageView_Input_1_237",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS15.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 10,
+                        "Scale9Width": 6,
+                        "Scale9Height": 32,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 339.3105,
+                          "Y": 64.1081
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4743,
+                          "Y": 0.3699
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.1296,
+                          "Y": 0.2336
+                        },
+                        "LeftMargin": 292.9531,
+                        "RightMargin": 329.7241,
+                        "TopMargin": 88.961,
+                        "BottomMargin": 43.8653,
+                        "Tag": 306,
+                        "ActionTag": 830999713,
+                        "Size": {
+                          "X": 92.7148,
+                          "Y": 40.4857
+                        },
+                        "Name": "ImageView_Input_2_239",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "IsCustomSize": true,
+                        "FontSize": 16,
+                        "LabelText": "3 times",
+                        "OutlineColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 284.2967,
+                          "Y": 120.0879
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.3974,
+                          "Y": 0.6929
+                        },
+                        "PreSize": {
+                          "X": 0.0788,
+                          "Y": 0.1039
+                        },
+                        "LeftMargin": 256.11,
+                        "RightMargin": 402.9085,
+                        "TopMargin": 44.2216,
+                        "BottomMargin": 111.0853,
+                        "Tag": 307,
+                        "ActionTag": -2108557373,
+                        "Size": {
+                          "X": 56.3735,
+                          "Y": 18.0051
+                        },
+                        "Name": "m_text_sheng",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "IsCustomSize": true,
+                        "FontSize": 16,
+                        "LabelText": "4 point",
+                        "OutlineColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 286.1568,
+                          "Y": 69.3248
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.4,
+                          "Y": 0.4
+                        },
+                        "PreSize": {
+                          "X": 0.0839,
+                          "Y": 0.1039
+                        },
+                        "LeftMargin": 256.1568,
+                        "RightMargin": 399.2352,
+                        "TopMargin": 94.9872,
+                        "BottomMargin": 60.3248,
+                        "Tag": 308,
+                        "ActionTag": 854819166,
+                        "Size": {
+                          "X": 60.0,
+                          "Y": 18.0
+                        },
+                        "Name": "m_text_bai",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS03.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 130,
+                        "Scale9Height": 130,
+                        "StretchWidthEnable": true,
+                        "StretchHeightEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 102.0969,
+                          "Y": 90.156
+                        },
+                        "Scale": {
+                          "ScaleX": 0.9385,
+                          "ScaleY": 0.9385
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1427,
+                          "Y": 0.5202
+                        },
+                        "PreSize": {
+                          "X": 0.2407,
+                          "Y": 0.9596
+                        },
+                        "HorizontalEdge": "LeftEdge",
+                        "VerticalEdge": "BothEdge",
+                        "LeftMargin": 15.9995,
+                        "RightMargin": 527.1976,
+                        "BottomMargin": 7.0,
+                        "Tag": 309,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "Common/Cn20.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 68,
+                            "Scale9Height": 57,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 81.8786,
+                              "Y": 68.1879
+                            },
+                            "Scale": {
+                              "ScaleX": 0.6,
+                              "ScaleY": 0.6
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": 0.4755,
+                              "Y": 0.41
+                            },
+                            "PercentWidthEnable": true,
+                            "PercentHeightEnable": true,
+                            "PercentWidthEnabled": true,
+                            "PercentHeightEnabled": true,
+                            "PreSize": {
+                              "X": 0.5232,
+                              "Y": 0.4384
+                            },
+                            "LeftMargin": 36.8324,
+                            "RightMargin": 45.2701,
+                            "TopMargin": 61.6685,
+                            "BottomMargin": 31.7323,
+                            "Tag": 310,
+                            "ActionTag": 194616852,
+                            "Size": {
+                              "X": 90.0923,
+                              "Y": 72.9112
+                            },
+                            "Name": "Image_82_0_243",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 1721400766,
+                        "Size": {
+                          "X": 172.1948,
+                          "Y": 166.312
+                        },
+                        "Name": "Image_82_241",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "DifficultySelection/DS13.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 45,
+                        "Scale9Height": 41,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 207.9644,
+                          "Y": 117.4015
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.2907,
+                          "Y": 0.6774
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.0833,
+                          "Y": 0.2993
+                        },
+                        "LeftMargin": 178.1684,
+                        "RightMargin": 477.6315,
+                        "TopMargin": 29.9743,
+                        "BottomMargin": 91.4654,
+                        "Tag": 311,
+                        "ActionTag": 1709699235,
+                        "Size": {
+                          "X": 59.5922,
+                          "Y": 51.8723
+                        },
+                        "Name": "Image_82_1_245",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn17.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 55,
+                        "Scale9Height": 63,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 209.3237,
+                          "Y": 62.323
+                        },
+                        "Scale": {
+                          "ScaleX": 0.78,
+                          "ScaleY": 0.78
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.2926,
+                          "Y": 0.3596
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.1019,
+                          "Y": 0.4599
+                        },
+                        "LeftMargin": 172.8745,
+                        "RightMargin": 469.619,
+                        "TopMargin": 71.1359,
+                        "BottomMargin": 22.4699,
+                        "Tag": 312,
+                        "ActionTag": -1090850719,
+                        "Size": {
+                          "X": 72.8984,
+                          "Y": 79.7062
+                        },
+                        "Name": "Image_227_247",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 1886560810,
+                    "Size": {
+                      "X": 715.392,
+                      "Y": 173.312
+                    },
+                    "Name": "Panel_3_0",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "DirectionType": "Vertical",
+                    "ScrollDirectionType": 0,
+                    "BackColorAlpha": 102,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 150
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 150
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 388.8,
+                      "Y": 265.6
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PercentWidthEnable": true,
+                    "PercentHeightEnable": true,
+                    "PercentWidthEnabled": true,
+                    "PercentHeightEnabled": true,
+                    "PreSize": {
+                      "X": 0.91,
+                      "Y": 0.8
+                    },
+                    "LeftMargin": 34.992,
+                    "RightMargin": 34.992,
+                    "TopMargin": 53.12,
+                    "BottomMargin": 53.12,
+                    "Tag": 297,
+                    "ActionTag": 1391633034,
+                    "Size": {
+                      "X": 707.616,
+                      "Y": 424.96
+                    },
+                    "Name": "ListView_1",
+                    "ctype": "ListViewObjectData"
+                  }
+                ],
+                "ActionTag": -1969558565,
+                "Size": {
+                  "X": 777.6,
+                  "Y": 531.2
+                },
+                "Alpha": 254,
+                "Name": "Panel_6",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": -2012053302,
+            "Size": {
+              "X": 960.0,
+              "Y": 640.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "Common/Cn01.png",
+        "Common/Cn02.png",
+        "Common/Cn03.png",
+        "Common/Cn04.png",
+        "Common/Cn05.png",
+        "Common/Cn06.png",
+        "Common/Cn07.png",
+        "Common/Cn08.png",
+        "Common/Cn09.png",
+        "Common/Cn10.png",
+        "Common/Cn11.png",
+        "Common/Cn12.png",
+        "Common/Cn14.png",
+        "Common/Cn15.png",
+        "Common/Cn17.png",
+        "Common/Cn20.png",
+        "Default/Button_Disable.png",
+        "DifficultySelection/DS01.png",
+        "DifficultySelection/DS03.png",
+        "DifficultySelection/DS10.png",
+        "DifficultySelection/DS11.png",
+        "DifficultySelection/DS12.png",
+        "DifficultySelection/DS13.png",
+        "DifficultySelection/DS15.png",
+        "DifficultySelection/DS16.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

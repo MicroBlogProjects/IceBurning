@@ -10,8 +10,9 @@ public:
     static MessageProxy* Instance();
     void SendRequest(int msgID);
     int RecvResponse();
+    int ConnectToServer();
 private:
-    MessageProxy() {}
+    MessageProxy();
     static MessageProxy* instance;
 };
 

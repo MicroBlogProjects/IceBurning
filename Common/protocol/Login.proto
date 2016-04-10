@@ -9,3 +9,19 @@ message CSLoginResponse
     optional int32 uin              = 1;
     optional int32 result           = 2;
 }
+
+message CSRoomMessageResponse
+{
+    optional int32 uin              = 1;
+    optional string username        = 2;
+    optional int32 result           = 3;
+}
+
+message CSPullRoomsRequest
+{
+}
+message CSPullRoomsResponse
+{
+    repeated CSRoomMessage rooms    = 1;
+    optional int32 result           = 2;
+}

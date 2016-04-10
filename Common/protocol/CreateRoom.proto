@@ -1,0 +1,24 @@
+message CSCreateRoomRequest
+{
+}
+message CSCreateRoomResponse
+{
+    optional int32 result               = 1;
+}
+
+message CSJoinRoomRequest
+{
+    optional int32 uin                  = 1;
+}
+message CSJoinRoomResponse
+{
+    optional int32 result               = 1;
+}
+
+message CSFightReadyRequest
+{
+}
+message CSFightReadyResponse
+{
+    optional int32 result               = 1;
+}

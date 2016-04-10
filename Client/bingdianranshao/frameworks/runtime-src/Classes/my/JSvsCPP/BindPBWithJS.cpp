@@ -31,7 +31,7 @@ int ParseJSToPBRequest_CSLogin(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::M
 {
     ParseBegin(CSLoginRequest)
         real_pb->set_username(real_js->username);
-    real_pb->set_password(real_js->password);
+        real_pb->set_password(real_js->password);
     ParseEnd
 }
 

@@ -185,6 +185,7 @@ copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
     <ClCompile Include="..\Classes\my\JSvsCPP\jsb_GameJoy_auto.cpp" />
     <ClCompile Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.cpp" />
     <ClCompile Include="..\Classes\my\JSvsCPP\MessageProxy.cpp" />
+    <ClCompile Include="..\Classes\my\ProtoOut\CreateRoom.pb.cc" />
     <ClCompile Include="..\Classes\my\ProtoOut\Login.pb.cc" />
     <ClCompile Include="..\Classes\my\ProtoOut\MessageRegister.cpp" />
     <ClCompile Include="..\Classes\my\ProtoOut\Test.pb.cc" />
@@ -201,6 +202,7 @@ copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
     <ClInclude Include="..\Classes\my\JSvsCPP\jsb_GameJoy_auto.hpp" />
     <ClInclude Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.h" />
     <ClInclude Include="..\Classes\my\JSvsCPP\MessageProxy.h" />
+    <ClInclude Include="..\Classes\my\ProtoOut\CreateRoom.pb.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\Login.pb.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\MessageRegister.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\Test.pb.h" />

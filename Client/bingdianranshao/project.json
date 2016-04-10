@@ -15,10 +15,11 @@
         "src/resource.js",
         "src/app.js",
         "src/Config/GameConfig.js",
+        "src/Config/NetConfig.js",
 
         "src/UILogic/MainMenu/Scene/MainMenuScene.js",
         "src/UILogic/MainMenu/Layer/MMBackgroundLayer.js",
-        "src/UILogic/MainMenu/Layer/MMTouchLayer.js",
+        "src/UILogic/MainMenu/Layer/WaitTeam.js",
 
         "src/UIlogic/Config/MonsterConfig/MonsterConfig.js",
         "src/UILogic/GamePlay/Scene/GamePlayScene.js",

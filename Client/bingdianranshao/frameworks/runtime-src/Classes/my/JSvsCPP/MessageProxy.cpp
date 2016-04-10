@@ -12,6 +12,11 @@ NS_GJ_BEGIN
 
 MessageProxy* MessageProxy::instance = NULL;
 
+MessageProxy::MessageProxy()
+{
+    ConnectToServer();
+}
+
 MessageProxy* MessageProxy::Instance()
 {
     if (instance == NULL)
@@ -19,6 +24,12 @@ MessageProxy* MessageProxy::Instance()
         instance = new MessageProxy();
     }
     return instance;
+}
+
+int MessageProxy::ConnectToServer()
+{
+    CLIENTSOCKET->Initialize();
+    return CLIENTSOCKET->Connect();
 }
 
 void MessageProxy::SendRequest(int msgID)
@@ -29,18 +40,17 @@ void MessageProxy::SendRequest(int msgID)
         CCLOG("can not find js obj with msgID(%d)", msgID);
         return ;
     }
-    CMessage* msg = new CMessage();
+    CMessage msg;
 
     CMessageHead* msg_head = new CMessageHead();
     msg_head->SetMid(msgID);
-    msg->SetMessageHead(msg_head);
+    msg.SetMessageHead(msg_head);
 
     CMessageBody* msg_body = NewRequestBodyWithMsgID(msgID);
     FillPBWithJS(msgID, js_obj, msg_body->GetPB());
-    msg->SetMessageBody(msg_body);
+    msg.SetMessageBody(msg_body);
 
-    //CLIENTSOCKET->SendDataToServer(msg);
-    CLIENTSOCKET->push(msg);
+    CLIENTSOCKET->SendDataToServer(msg);
 }
 
 int MessageProxy::RecvResponse()
