@@ -18,7 +18,7 @@
 /********************************************************************************************/
 // 登录协议
 #include "my/ProtoOut/Login.pb.h"
-BindMsgIDToJSObj(MSG_ON_LOGIN, JS_CSLoginRequest, JS_CSLoginResponse)
+BindMsgIDToJSObj(MSG_ON_LOGIN, CSLoginRequest, CSLoginResponse)
 BindParserJS_PB(MSG_ON_LOGIN, ParsePBResponseToJS_CSLogin, ParseJSToPBRequest_CSLogin)
 int ParsePBResponseToJS_CSLogin(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
 {
@@ -33,6 +33,78 @@ int ParseJSToPBRequest_CSLogin(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::M
         real_pb->set_username(real_js->username);
         real_pb->set_password(real_js->password);
     ParseEnd
+}
+
+// 拉取房间列表
+#include "my/ProtoOut/Login.pb.h"
+BindMsgIDToJSObj(MSG_ON_PULL_ROOMS, CSPullRoomsRequest, CSPullRoomsResponse)
+BindParserJS_PB(MSG_ON_PULL_ROOMS, ParsePBResponseToJS_CSPullRooms, ParseJSToPBRequest_CSPullRooms)
+int ParsePBResponseToJS_CSPullRooms(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
+{
+	ParseBegin(CSPullRoomsResponse)
+	real_js->result = real_pb->result();
+	(real_js->rooms).clear();
+	for (int i = 0; i < real_pb->rooms_size(); ++i)
+	{
+		CSRoomMessage p = real_pb->rooms(i);
+		GameJoy::JS_CSRoomMessage *t = new (GameJoy::JS_CSRoomMessage);
+		t->set_uin(p.uin());
+		t->set_username(p.username());
+		(real_js->rooms).push_back(t);
+	}
+	ParseEnd
+}
+int ParseJSToPBRequest_CSPullRooms(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb) 
+{
+	ParseBegin(CSPullRoomsRequest)
+	ParseEnd
+}
+
+// 创建房间
+#include "my/ProtoOut/CreateRoom.pb.h"
+BindMsgIDToJSObj(MSG_ON_CREATE_ROOM,CSCreateRoomRequest,CSCreateRoomResponse)
+BindParserJS_PB(MSG_ON_CREATE_ROOM, ParsePBResponseToJS_CSCreateRoom, ParseJSToPBRequest_CSCreateRoom)
+int ParsePBResponseToJS_CSCreateRoom(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
+{
+	ParseBegin(CSCreateRoomResponse)
+	real_js->result = real_pb->result();
+	ParseEnd
+}
+int ParseJSToPBRequest_CSCreateRoom(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb)
+{ 
+	ParseBegin(CSCreateRoomRequest)
+	ParseEnd
+}
+// 加入房间
+#include "my/ProtoOut/CreateRoom.pb.h"
+BindMsgIDToJSObj(MSG_ON_JOIN_ROOM,CSJoinRoomRequest, CSJoinRoomResponse)
+BindParserJS_PB(MSG_ON_JOIN_ROOM, ParsePBResponseToJS_CSJoinRoom, ParseJSToPBRequest_CSJoinRoom)
+int ParsePBResponseToJS_CSJoinRoom(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
+{
+	ParseBegin(CSJoinRoomResponse)
+	real_js->result = real_pb->result();
+	ParseEnd
+}
+int ParseJSToPBRequest_CSJoinRoom(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb)
+{
+	ParseBegin(CSJoinRoomRequest)
+	real_pb->set_uin(real_js->uin);
+	ParseEnd
+}
+// 准备就绪
+#include "my/ProtoOut/CreateRoom.pb.h"
+BindMsgIDToJSObj(MSG_FIGHT_READY, CSFightReadyRequest, CSFightReadyResponse)
+BindParserJS_PB(MSG_FIGHT_READY, ParsePBResponseToJS_CSFightReady, ParseJSToPBRequest_CSFightReady)
+int ParsePBResponseToJS_CSFightReady(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
+{
+	ParseBegin(CSFightReadyResponse)
+	real_js->result = real_pb->result();
+	ParseEnd
+}
+int ParseJSToPBRequest_CSFightReady(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb)
+{
+	ParseBegin(CSFightReadyRequest)
+	ParseEnd
 }
 
 // to add 下一个协议

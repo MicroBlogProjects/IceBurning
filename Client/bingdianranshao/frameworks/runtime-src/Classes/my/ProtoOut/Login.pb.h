@@ -287,17 +287,17 @@ class CSRoomMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // optional int32 uin = 1;
+  // optional int32 uin = 2;
   inline bool has_uin() const;
   inline void clear_uin();
-  static const int kUinFieldNumber = 1;
+  static const int kUinFieldNumber = 2;
   inline ::google::protobuf::int32 uin() const;
   inline void set_uin(::google::protobuf::int32 value);
 
-  // optional string username = 2;
+  // optional string username = 3;
   inline bool has_username() const;
   inline void clear_username();
-  static const int kUsernameFieldNumber = 2;
+  static const int kUsernameFieldNumber = 3;
   inline const ::std::string& username() const;
   inline void set_username(const ::std::string& value);
   inline void set_username(const char* value);
@@ -456,10 +456,17 @@ class CSPullRoomsResponse : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // repeated .CSRoomMessage rooms = 1;
+  // optional int32 result = 1;
+  inline bool has_result() const;
+  inline void clear_result();
+  static const int kResultFieldNumber = 1;
+  inline ::google::protobuf::int32 result() const;
+  inline void set_result(::google::protobuf::int32 value);
+
+  // repeated .CSRoomMessage rooms = 2;
   inline int rooms_size() const;
   inline void clear_rooms();
-  static const int kRoomsFieldNumber = 1;
+  static const int kRoomsFieldNumber = 2;
   inline const ::CSRoomMessage& rooms(int index) const;
   inline ::CSRoomMessage* mutable_rooms(int index);
   inline ::CSRoomMessage* add_rooms();
@@ -467,13 +474,6 @@ class CSPullRoomsResponse : public ::google::protobuf::Message {
       rooms() const;
   inline ::google::protobuf::RepeatedPtrField< ::CSRoomMessage >*
       mutable_rooms();
-
-  // optional int32 result = 2;
-  inline bool has_result() const;
-  inline void clear_result();
-  static const int kResultFieldNumber = 2;
-  inline ::google::protobuf::int32 result() const;
-  inline void set_result(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:CSPullRoomsResponse)
  private:
@@ -694,7 +694,7 @@ inline void CSLoginResponse::set_result(::google::protobuf::int32 value) {
 
 // CSRoomMessage
 
-// optional int32 uin = 1;
+// optional int32 uin = 2;
 inline bool CSRoomMessage::has_uin() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -716,7 +716,7 @@ inline void CSRoomMessage::set_uin(::google::protobuf::int32 value) {
   uin_ = value;
 }
 
-// optional string username = 2;
+// optional string username = 3;
 inline bool CSRoomMessage::has_username() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -794,7 +794,29 @@ inline void CSRoomMessage::set_allocated_username(::std::string* username) {
 
 // CSPullRoomsResponse
 
-// repeated .CSRoomMessage rooms = 1;
+// optional int32 result = 1;
+inline bool CSPullRoomsResponse::has_result() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSPullRoomsResponse::set_has_result() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSPullRoomsResponse::clear_has_result() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSPullRoomsResponse::clear_result() {
+  result_ = 0;
+  clear_has_result();
+}
+inline ::google::protobuf::int32 CSPullRoomsResponse::result() const {
+  return result_;
+}
+inline void CSPullRoomsResponse::set_result(::google::protobuf::int32 value) {
+  set_has_result();
+  result_ = value;
+}
+
+// repeated .CSRoomMessage rooms = 2;
 inline int CSPullRoomsResponse::rooms_size() const {
   return rooms_.size();
 }
@@ -817,28 +839,6 @@ CSPullRoomsResponse::rooms() const {
 inline ::google::protobuf::RepeatedPtrField< ::CSRoomMessage >*
 CSPullRoomsResponse::mutable_rooms() {
   return &rooms_;
-}
-
-// optional int32 result = 2;
-inline bool CSPullRoomsResponse::has_result() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void CSPullRoomsResponse::set_has_result() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void CSPullRoomsResponse::clear_has_result() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void CSPullRoomsResponse::clear_result() {
-  result_ = 0;
-  clear_has_result();
-}
-inline ::google::protobuf::int32 CSPullRoomsResponse::result() const {
-  return result_;
-}
-inline void CSPullRoomsResponse::set_result(::google::protobuf::int32 value) {
-  set_has_result();
-  result_ = value;
 }
 
 

@@ -107,8 +107,8 @@ void protobuf_AssignDesc_Login_2eproto() {
       sizeof(CSPullRoomsRequest));
   CSPullRoomsResponse_descriptor_ = file->message_type(4);
   static const int CSPullRoomsResponse_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSPullRoomsResponse, rooms_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSPullRoomsResponse, result_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSPullRoomsResponse, rooms_),
   };
   CSPullRoomsResponse_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -170,10 +170,10 @@ void protobuf_AddDesc_Login_2eproto() {
     "\n\013Login.proto\"4\n\016CSLoginRequest\022\020\n\010usern"
     "ame\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\".\n\017CSLoginRe"
     "sponse\022\013\n\003uin\030\001 \001(\005\022\016\n\006result\030\002 \001(\005\".\n\rC"
-    "SRoomMessage\022\013\n\003uin\030\001 \001(\005\022\020\n\010username\030\002 "
+    "SRoomMessage\022\013\n\003uin\030\002 \001(\005\022\020\n\010username\030\003 "
     "\001(\t\"\024\n\022CSPullRoomsRequest\"D\n\023CSPullRooms"
-    "Response\022\035\n\005rooms\030\001 \003(\0132\016.CSRoomMessage\022"
-    "\016\n\006result\030\002 \001(\005", 255);
+    "Response\022\016\n\006result\030\001 \001(\005\022\035\n\005rooms\030\002 \003(\0132"
+    "\016.CSRoomMessage", 255);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Login.proto", &protobuf_RegisterTypes);
   CSLoginRequest::default_instance_ = new CSLoginRequest();
@@ -806,8 +806,8 @@ bool CSRoomMessage::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int32 uin = 1;
-      case 1: {
+      // optional int32 uin = 2;
+      case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -817,12 +817,12 @@ bool CSRoomMessage::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(18)) goto parse_username;
+        if (input->ExpectTag(26)) goto parse_username;
         break;
       }
 
-      // optional string username = 2;
-      case 2: {
+      // optional string username = 3;
+      case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_username:
@@ -856,18 +856,18 @@ bool CSRoomMessage::MergePartialFromCodedStream(
 
 void CSRoomMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // optional int32 uin = 1;
+  // optional int32 uin = 2;
   if (has_uin()) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->uin(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->uin(), output);
   }
 
-  // optional string username = 2;
+  // optional string username = 3;
   if (has_username()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->username().data(), this->username().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     ::google::protobuf::internal::WireFormatLite::WriteString(
-      2, this->username(), output);
+      3, this->username(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -878,19 +878,19 @@ void CSRoomMessage::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CSRoomMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // optional int32 uin = 1;
+  // optional int32 uin = 2;
   if (has_uin()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->uin(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->uin(), target);
   }
 
-  // optional string username = 2;
+  // optional string username = 3;
   if (has_username()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->username().data(), this->username().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->username(), target);
+        3, this->username(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -904,14 +904,14 @@ int CSRoomMessage::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional int32 uin = 1;
+    // optional int32 uin = 2;
     if (has_uin()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->uin());
     }
 
-    // optional string username = 2;
+    // optional string username = 3;
     if (has_username()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1150,8 +1150,8 @@ void CSPullRoomsRequest::Swap(CSPullRoomsRequest* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int CSPullRoomsResponse::kRoomsFieldNumber;
 const int CSPullRoomsResponse::kResultFieldNumber;
+const int CSPullRoomsResponse::kRoomsFieldNumber;
 #endif  // !_MSC_VER
 
 CSPullRoomsResponse::CSPullRoomsResponse()
@@ -1205,7 +1205,7 @@ CSPullRoomsResponse* CSPullRoomsResponse::New() const {
 }
 
 void CSPullRoomsResponse::Clear() {
-  if (_has_bits_[1 / 32] & (0xffu << (1 % 32))) {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     result_ = 0;
   }
   rooms_.Clear();
@@ -1219,8 +1219,23 @@ bool CSPullRoomsResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .CSRoomMessage rooms = 1;
+      // optional int32 result = 1;
       case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &result_)));
+          set_has_result();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rooms;
+        break;
+      }
+
+      // repeated .CSRoomMessage rooms = 2;
+      case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_rooms:
@@ -1229,23 +1244,7 @@ bool CSPullRoomsResponse::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(10)) goto parse_rooms;
-        if (input->ExpectTag(16)) goto parse_result;
-        break;
-      }
-
-      // optional int32 result = 2;
-      case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_result:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &result_)));
-          set_has_result();
-        } else {
-          goto handle_uninterpreted;
-        }
+        if (input->ExpectTag(18)) goto parse_rooms;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -1268,15 +1267,15 @@ bool CSPullRoomsResponse::MergePartialFromCodedStream(
 
 void CSPullRoomsResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // repeated .CSRoomMessage rooms = 1;
-  for (int i = 0; i < this->rooms_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->rooms(i), output);
+  // optional int32 result = 1;
+  if (has_result()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->result(), output);
   }
 
-  // optional int32 result = 2;
-  if (has_result()) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->result(), output);
+  // repeated .CSRoomMessage rooms = 2;
+  for (int i = 0; i < this->rooms_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->rooms(i), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -1287,16 +1286,16 @@ void CSPullRoomsResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CSPullRoomsResponse::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // repeated .CSRoomMessage rooms = 1;
+  // optional int32 result = 1;
+  if (has_result()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->result(), target);
+  }
+
+  // repeated .CSRoomMessage rooms = 2;
   for (int i = 0; i < this->rooms_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        1, this->rooms(i), target);
-  }
-
-  // optional int32 result = 2;
-  if (has_result()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->result(), target);
+        2, this->rooms(i), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -1309,8 +1308,8 @@ void CSPullRoomsResponse::SerializeWithCachedSizes(
 int CSPullRoomsResponse::ByteSize() const {
   int total_size = 0;
 
-  if (_has_bits_[1 / 32] & (0xffu << (1 % 32))) {
-    // optional int32 result = 2;
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 result = 1;
     if (has_result()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
@@ -1318,7 +1317,7 @@ int CSPullRoomsResponse::ByteSize() const {
     }
 
   }
-  // repeated .CSRoomMessage rooms = 1;
+  // repeated .CSRoomMessage rooms = 2;
   total_size += 1 * this->rooms_size();
   for (int i = 0; i < this->rooms_size(); i++) {
     total_size +=
@@ -1352,7 +1351,7 @@ void CSPullRoomsResponse::MergeFrom(const ::google::protobuf::Message& from) {
 void CSPullRoomsResponse::MergeFrom(const CSPullRoomsResponse& from) {
   GOOGLE_CHECK_NE(&from, this);
   rooms_.MergeFrom(from.rooms_);
-  if (from._has_bits_[1 / 32] & (0xffu << (1 % 32))) {
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_result()) {
       set_result(from.result());
     }
@@ -1379,8 +1378,8 @@ bool CSPullRoomsResponse::IsInitialized() const {
 
 void CSPullRoomsResponse::Swap(CSPullRoomsResponse* other) {
   if (other != this) {
-    rooms_.Swap(&other->rooms_);
     std::swap(result_, other->result_);
+    rooms_.Swap(&other->rooms_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
