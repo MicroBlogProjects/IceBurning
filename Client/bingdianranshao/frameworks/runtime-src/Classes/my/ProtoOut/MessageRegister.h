@@ -15,7 +15,7 @@ using namespace std;
             MSGREGISTER->RegistPBResPonseToMsgID(MSGID, GameJoy::CMessageBody::ConstructMessageBody<PB_RES>); \
         } \
     }; \
-    PBRegist_##PB_REQ_##PB_RES_##MSGID var_##PB_REQ_##PB_RES_##MSGID_##__LINE__;
+    PBRegist_##PB_REQ_##PB_RES_##MSGID var_##PB_REQ_##PB_RES_##MSGID;
 
 #define NewRequestBodyWithMsgID(MSGID) MSGREGISTER->NewRequestBody(MSGID)
 #define NewResponseBodtWithMsgID(MSGID) MSGREGISTER->NewResponseBody(MSGID) 

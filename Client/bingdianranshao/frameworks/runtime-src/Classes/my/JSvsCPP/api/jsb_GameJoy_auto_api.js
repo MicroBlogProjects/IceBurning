@@ -52,21 +52,21 @@ JS_CPP_Bridge : function (
 GameJoy.JS_CSLoginRequest = {
 
 /**
- * @method get_usernmae
- * @return {String}
- */
-get_usernmae : function (
-)
-{
-    return ;
-},
-
-/**
  * @method set_msgID
  * @param {int} arg0
  */
 set_msgID : function (
 int 
+)
+{
+},
+
+/**
+ * @method set_username
+ * @param {String} arg0
+ */
+set_username : function (
+str 
 )
 {
 },
@@ -79,6 +79,16 @@ get_msgID : function (
 )
 {
     return 0;
+},
+
+/**
+ * @method get_username
+ * @return {String}
+ */
+get_username : function (
+)
+{
+    return ;
 },
 
 /**
@@ -96,16 +106,6 @@ get_password : function (
  * @param {String} arg0
  */
 set_password : function (
-str 
-)
-{
-},
-
-/**
- * @method set_usernmae
- * @param {String} arg0
- */
-set_usernmae : function (
 str 
 )
 {
@@ -340,22 +340,22 @@ int
 
 /**
  * @method set_rooms
- * @param {Array} arg0
+ * @param {GameJoy::JS_CSRoomMessage} arg0
  */
 set_rooms : function (
-array 
+js_csroommessage 
 )
 {
 },
 
 /**
  * @method get_rooms
- * @return {Array}
+ * @return {GameJoy::JS_CSRoomMessage}
  */
 get_rooms : function (
 )
 {
-    return new Array();
+    return GameJoy::JS_CSRoomMessage;
 },
 
 /**

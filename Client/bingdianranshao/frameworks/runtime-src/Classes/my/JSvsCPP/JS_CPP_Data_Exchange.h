@@ -10,19 +10,19 @@ using namespace std;
 
 // 定义绑定(msgId)与(js类)的宏
 #define MSGIDBINDJSUNIT GameJoy::MsgIdBindJSUnit::Instance()
-#define BindMsgIDToJSObj(msgID, JSReq, JSRes)                                               \
-    struct BindMsgIDToJsObj##msgID_##JSReq_##JSRes {                                       \
-        BindMsgIDToJsObj_##msgID_##JSReq_##JSRes() {                                        \
-            MSGIDBINDJSUNIT->BindMsgIDToJSRequest(msgID, GameJoy::JS_##JSReq::Instance());       \
-            MSGIDBINDJSUNIT->BindMsgIDToJSResponse(msgID, GameJoy::JS_##JSRes::Instance());      \
-        }                                                                                   \
-    };                                                                                      \
+#define BindMsgIDToJSObj(msgID, JSReq, JSRes)                                                   \
+    struct BindMsgIDToJsObj_##msgID_##JSReq_##JSRes {                                           \
+        BindMsgIDToJsObj_##msgID_##JSReq_##JSRes() {                                            \
+            MSGIDBINDJSUNIT->BindMsgIDToJSRequest(msgID, GameJoy::JS_##JSReq::Instance());      \
+            MSGIDBINDJSUNIT->BindMsgIDToJSResponse(msgID, GameJoy::JS_##JSRes::Instance());     \
+        }                                                                                       \
+    };                                                                                          \
     BindMsgIDToJsObj_##msgID_##JSReq_##JSRes var_BindMsgIDToJsObj_##msgID_##JSReq_##JSRes;  
 
 #define NewField(TYPE, NAME) \
 	TYPE NAME; \
 	TYPE get_##NAME() { return NAME; } \
-	void set_##NAME(TYPE _##NAME) { NAME = _##NAME; }
+	void set_##NAME(TYPE A##NAME) { NAME = A##NAME; }
 	
 #define NewRequest(PB)                                                              \
     class JS_##PB : public JS_CPP_Bridge {                                          \
@@ -107,7 +107,7 @@ private:
 /******************************************************************************/
 // 登录的协议
 NewRequest(CSLoginRequest)
-    NewField(string, usernmae)
+    NewField(string, username)
 	NewField(string, password)
 EndRequest(CSLoginRequest)
 NewResponse(CSLoginResponse)
@@ -122,7 +122,7 @@ EndEntity(CSRoomMessage)
 NewRequest(CSPullRoomsRequest)
 EndRequest(CSPullRoomsRequest)
 NewResponse(CSPullRoomsResponse)
-	NewField(vector<JS_CSRoomMessage*>, rooms)
+	NewField(JS_CSRoomMessage*, rooms)
 EndResponse(CSPullRoomsResponse)
 
 //

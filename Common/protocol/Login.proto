@@ -23,5 +23,5 @@ message CSPullRoomsRequest
 message CSPullRoomsResponse
 {
     optional int32 result           = 1;
-    repeated CSRoomMessage rooms    = 2;
+    optional CSRoomMessage rooms    = 2;
 }

@@ -198,24 +198,6 @@ void js_register_GameJoy_JS_CPP_Bridge(JSContext *cx, JS::HandleObject global) {
 JSClass  *jsb_GameJoy_JS_CSLoginRequest_class;
 JSObject *jsb_GameJoy_JS_CSLoginRequest_prototype;
 
-bool js_GameJoy_JS_CSLoginRequest_get_usernmae(JSContext *cx, uint32_t argc, jsval *vp)
-{
-    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
-    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
-    js_proxy_t *proxy = jsb_get_js_proxy(obj);
-    GameJoy::JS_CSLoginRequest* cobj = (GameJoy::JS_CSLoginRequest *)(proxy ? proxy->ptr : NULL);
-    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSLoginRequest_get_usernmae : Invalid Native Object");
-    if (argc == 0) {
-        std::string ret = cobj->get_usernmae();
-        jsval jsret = JSVAL_NULL;
-        jsret = std_string_to_jsval(cx, ret);
-        args.rval().set(jsret);
-        return true;
-    }
-
-    JS_ReportError(cx, "js_GameJoy_JS_CSLoginRequest_get_usernmae : wrong number of arguments: %d, was expecting %d", argc, 0);
-    return false;
-}
 bool js_GameJoy_JS_CSLoginRequest_set_msgID(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
@@ -236,6 +218,26 @@ bool js_GameJoy_JS_CSLoginRequest_set_msgID(JSContext *cx, uint32_t argc, jsval 
     JS_ReportError(cx, "js_GameJoy_JS_CSLoginRequest_set_msgID : wrong number of arguments: %d, was expecting %d", argc, 1);
     return false;
 }
+bool js_GameJoy_JS_CSLoginRequest_set_username(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSLoginRequest* cobj = (GameJoy::JS_CSLoginRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSLoginRequest_set_username : Invalid Native Object");
+    if (argc == 1) {
+        std::string arg0;
+        ok &= jsval_to_std_string(cx, args.get(0), &arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSLoginRequest_set_username : Error processing arguments");
+        cobj->set_username(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSLoginRequest_set_username : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
 bool js_GameJoy_JS_CSLoginRequest_get_msgID(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
@@ -252,6 +254,24 @@ bool js_GameJoy_JS_CSLoginRequest_get_msgID(JSContext *cx, uint32_t argc, jsval 
     }
 
     JS_ReportError(cx, "js_GameJoy_JS_CSLoginRequest_get_msgID : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_CSLoginRequest_get_username(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSLoginRequest* cobj = (GameJoy::JS_CSLoginRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSLoginRequest_get_username : Invalid Native Object");
+    if (argc == 0) {
+        std::string ret = cobj->get_username();
+        jsval jsret = JSVAL_NULL;
+        jsret = std_string_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSLoginRequest_get_username : wrong number of arguments: %d, was expecting %d", argc, 0);
     return false;
 }
 bool js_GameJoy_JS_CSLoginRequest_get_password(JSContext *cx, uint32_t argc, jsval *vp)
@@ -290,26 +310,6 @@ bool js_GameJoy_JS_CSLoginRequest_set_password(JSContext *cx, uint32_t argc, jsv
     }
 
     JS_ReportError(cx, "js_GameJoy_JS_CSLoginRequest_set_password : wrong number of arguments: %d, was expecting %d", argc, 1);
-    return false;
-}
-bool js_GameJoy_JS_CSLoginRequest_set_usernmae(JSContext *cx, uint32_t argc, jsval *vp)
-{
-    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
-    bool ok = true;
-    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
-    js_proxy_t *proxy = jsb_get_js_proxy(obj);
-    GameJoy::JS_CSLoginRequest* cobj = (GameJoy::JS_CSLoginRequest *)(proxy ? proxy->ptr : NULL);
-    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSLoginRequest_set_usernmae : Invalid Native Object");
-    if (argc == 1) {
-        std::string arg0;
-        ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSLoginRequest_set_usernmae : Error processing arguments");
-        cobj->set_usernmae(arg0);
-        args.rval().setUndefined();
-        return true;
-    }
-
-    JS_ReportError(cx, "js_GameJoy_JS_CSLoginRequest_set_usernmae : wrong number of arguments: %d, was expecting %d", argc, 1);
     return false;
 }
 bool js_GameJoy_JS_CSLoginRequest_Instance(JSContext *cx, uint32_t argc, jsval *vp)
@@ -353,12 +353,12 @@ void js_register_GameJoy_JS_CSLoginRequest(JSContext *cx, JS::HandleObject globa
     };
 
     static JSFunctionSpec funcs[] = {
-        JS_FN("get_usernmae", js_GameJoy_JS_CSLoginRequest_get_usernmae, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("set_msgID", js_GameJoy_JS_CSLoginRequest_set_msgID, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_username", js_GameJoy_JS_CSLoginRequest_set_username, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("get_msgID", js_GameJoy_JS_CSLoginRequest_get_msgID, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_username", js_GameJoy_JS_CSLoginRequest_get_username, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("get_password", js_GameJoy_JS_CSLoginRequest_get_password, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("set_password", js_GameJoy_JS_CSLoginRequest_set_password, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("set_usernmae", js_GameJoy_JS_CSLoginRequest_set_usernmae, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FS_END
     };
 
@@ -932,14 +932,14 @@ bool js_GameJoy_JS_CSPullRoomsResponse_set_rooms(JSContext *cx, uint32_t argc, j
     GameJoy::JS_CSPullRoomsResponse* cobj = (GameJoy::JS_CSPullRoomsResponse *)(proxy ? proxy->ptr : NULL);
     JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSPullRoomsResponse_set_rooms : Invalid Native Object");
     if (argc == 1) {
-        std::vector<GameJoy::JS_CSRoomMessage *, std::allocator<GameJoy::JS_CSRoomMessage *> > arg0;
+        GameJoy::JS_CSRoomMessage* arg0 = nullptr;
         do {
             if (args.get(0).isNull()) { arg0 = nullptr; break; }
             if (!args.get(0).isObject()) { ok = false; break; }
             js_proxy_t *jsProxy;
             JS::RootedObject tmpObj(cx, args.get(0).toObjectOrNull());
             jsProxy = jsb_get_js_proxy(tmpObj);
-            arg0 = (std::vector<GameJoy::JS_CSRoomMessage *, std::allocator<GameJoy::JS_CSRoomMessage *> >)(jsProxy ? jsProxy->ptr : NULL);
+            arg0 = (GameJoy::JS_CSRoomMessage*)(jsProxy ? jsProxy->ptr : NULL);
             JSB_PRECONDITION2( arg0, cx, false, "Invalid Native Object");
         } while (0);
         JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSPullRoomsResponse_set_rooms : Error processing arguments");
@@ -959,10 +959,10 @@ bool js_GameJoy_JS_CSPullRoomsResponse_get_rooms(JSContext *cx, uint32_t argc, j
     GameJoy::JS_CSPullRoomsResponse* cobj = (GameJoy::JS_CSPullRoomsResponse *)(proxy ? proxy->ptr : NULL);
     JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSPullRoomsResponse_get_rooms : Invalid Native Object");
     if (argc == 0) {
-        std::vector<GameJoy::JS_CSRoomMessage *, std::allocator<GameJoy::JS_CSRoomMessage *> > ret = cobj->get_rooms();
+        GameJoy::JS_CSRoomMessage* ret = cobj->get_rooms();
         jsval jsret = JSVAL_NULL;
         if (ret) {
-            jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<std::vector<GameJoy::JS_CSRoomMessage , std::allocator<GameJoy::JS_CSRoomMessage > >>(cx, (std::vector<GameJoy::JS_CSRoomMessage *, std::allocator<GameJoy::JS_CSRoomMessage *> >)ret));
+            jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<GameJoy::JS_CSRoomMessage>(cx, (GameJoy::JS_CSRoomMessage*)ret));
         } else {
             jsret = JSVAL_NULL;
         };
