@@ -1,4 +1,4 @@
-<UserData Version="2.3.3.0">
+<UserData Version="3.10.0.0">
   <Properties>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
@@ -31,7 +31,12 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
+          <FilePathData Path="SelectTool.csd" />
           <FilePathData Path="selectopponent.csd" />
+          <FilePathData Path="PlayerInfomation.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="SelectTool.csd" />
+
           <FilePathData Path="Login.csd" />
           <FilePathData Path="Inventory.csd" />
         </OpenedDocuments>

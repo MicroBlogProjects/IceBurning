@@ -33,6 +33,6 @@ var MainMenuScene = cc.Scene.extend({
     },
     addBattleLayer:function()
     {
-
+        cc.director.replaceScene(new GamePlayScene());
     }
 });
