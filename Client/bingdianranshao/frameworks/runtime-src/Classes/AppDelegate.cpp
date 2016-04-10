@@ -26,8 +26,8 @@
 #include "jsb_cocos2dx_navmesh_auto.hpp"
 #include "navmesh/jsb_cocos2dx_navmesh_manual.h"
 
-#include "my/Common/Common_Head.h"
-#include "my/Connect/ClientSocket.h"
+#include "my/JSvsCPP/jsb_GameJoy_auto.hpp"
+#include "my/JSvsCPP/JS_CPP_Data_Exchange.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 #include "jsb_cocos2dx_experimental_video_auto.hpp"
@@ -125,7 +125,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     // 3d extension can be commented out to reduce the package
     sc->addRegisterCallback(register_all_cocos2dx_3d_extension);
-    
+
+    sc->addRegisterCallback(register_all_GameJoy);
+
 #if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
     // Physics 3d can be commented out to reduce the package
     sc->addRegisterCallback(register_all_cocos2dx_physics3d);
@@ -161,10 +163,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     ScriptEngineProtocol *engine = ScriptingCore::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     ScriptingCore::getInstance()->runScript("main.js");
-
-    GameJoy::ClientSocket::Instance()->Initialize();
-    GameJoy::ClientSocket::Instance()->Connect();
-
+    
     return true;
 }
 

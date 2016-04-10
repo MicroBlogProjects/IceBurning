@@ -1,5 +1,6 @@
 
 #include "Logicserver_Message.h"
+#include "MessageRegister.h"
 
 NS_LS_BEGIN
 
@@ -102,6 +103,11 @@ int32_t CMessage::Encode(char* out_str, int32_t& out_len) const
     char* str = out_str;
 
     int32_t head_len = out_len;
+    if (m_iMessageHead == NULL)
+    {
+        TRACE_WARN("Head is NULL when encode message.");
+        return fail;
+    }
     int32_t result = m_iMessageHead->Encode(str, head_len);
     if (result == fail)
     {
@@ -110,6 +116,11 @@ int32_t CMessage::Encode(char* out_str, int32_t& out_len) const
     }
 
     int32_t body_len = out_len - head_len;
+    if (m_iMessageBody == NULL)
+    {
+        TRACE_WARN("Body is NULL when encode message.");
+        return fail;
+    }
     result = m_iMessageBody->Encode(&str[head_len], body_len);
     if (result == fail)
     {
@@ -123,17 +134,36 @@ int32_t CMessage::Encode(char* out_str, int32_t& out_len) const
 
 int32_t CMessage::Decode(const char* in_str, int32_t in_len)
 {
+    if (m_iMessageHead == NULL)
+    {
+        m_iMessageHead = new CMessageHead();
+    }
     int32_t head_len = m_iMessageHead->Size();
     if (fail == m_iMessageHead->Decode(in_str, head_len))
     {
         TRACE_WARN("decode message head fail.");
+        delete m_iMessageHead;
         return fail;
     }
 
+    if (m_iMessageBody == NULL)
+    {
+        m_iMessageBody = NewMessageBodyWithMsgID(m_iMessageHead->GetMid());
+        if (m_iMessageBody == NULL)
+        {
+            TRACE_WARN("can not construct MessageBody with msgID(%d), " \
+                "please make sure your PB has been registed on this id", m_iMessageHead->GetMid());
+            delete m_iMessageHead;
+            delete m_iMessageBody;
+            return fail;
+        }
+    }
     int32_t body_len = in_len - head_len;
     if (fail == m_iMessageBody->Decode(&in_str[head_len], body_len))
     {
         TRACE_WARN("decode message body fail.");
+        delete m_iMessageHead;
+        delete m_iMessageBody;
         return fail;
     }
     return success;

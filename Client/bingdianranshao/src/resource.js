@@ -7,7 +7,7 @@ var res = {
 
     //MainMenu
     MM_MainScene_json : "res/MainMenu/MainScene.json",
-    MM_BgMusic_mp3 : "res/Sound/Music/MainMusic.mp3",
+    MM_BgMusic_mp3 : "res/Sound/Music/gameStart.mp3",
     MM_Mune_png :     "res/MainMenu/menu.png",
     MM_ButtonEffect : "res/Sound/Effect/buttonEffect.mp3",
     MM_Flare_jpg :     "res/MainMenu/flare.jpg",
@@ -51,10 +51,13 @@ var res = {
     GM_XxmftSkillAttack_Plist : "res/GamePlay/Monster/xingxingmofata/xxmftSkillAttack.plist",
     GM_XxmftSkillAttack_Png : "res/GamePlay/Monster/xingxingmofata/xxmftSkillAttack.png",
     GM_XxmftSkillDeath_Plist : "res/GamePlay/Monster/xingxingmofata/xxmftSkillDeath.plist",
-    GM_XxmftSkillDeath_Png : "res/GamePlay/Monster/xingxingmofata/xxmftSkillDeath.png"
+    GM_XxmftSkillDeath_Png : "res/GamePlay/Monster/xingxingmofata/xxmftSkillDeath.png",
 
+    //setting
+    ST_Title_png : "res/Setting/menuTitle.png",
 
-
+   //登录界面资源
+    LI_LoginJson_json: "res/json/Login.json"
 
 
 };

@@ -6,7 +6,7 @@ DEBUG_TARGET_DIR = ../Lib
 DEBUG_TARGET = $(DEBUG_TARGET_DIR)/libCommon.a
 TARGET	= $(DEBUG_TARGET)
 
-OBJ_DIR	= ../.objs
+OBJ_DIR	= ../.objs/Common
 
 SRC = $(wildcard *.cpp)
 OBJS = $(addprefix $(OBJ_DIR)/,$(subst .cpp,.o,$(SRC)))
@@ -20,6 +20,9 @@ $(TARGET) : $(OBJS)
 	ar $(ARFLAGS) $@ $?
 
 $(OBJ_DIR)/%.o : %.cpp
+	@if [ ! -e $(OBJ_DIR) ]; then \
+		mkdir $(OBJ_DIR); \
+	fi
 	g++ $(CPPFLAGS) -c $< -o $@
 
 clean: 

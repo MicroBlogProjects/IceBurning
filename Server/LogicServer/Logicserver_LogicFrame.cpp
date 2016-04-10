@@ -10,7 +10,8 @@ LogicFrame::LogicFrame()
 
 int32_t LogicFrame::HandleOneMessage(const CMessage* message)
 {
-    // to do
+    console_msg("mid(%d) uin(%d)", message->GetUin(), message->GetMessageID());
+    LOGICSOCKET->WriteOneMessage(*message);
 }
 
 LogicFrame* LogicFrame::Instance()
@@ -24,7 +25,12 @@ LogicFrame* LogicFrame::Instance()
 
 int32_t LogicFrame::HandleMessage()
 {
-  // to do 
+    std::vector<CMessage*> msgs;
+    LOGICSOCKET->ReadMessages(msgs);
+    for (size_t i = 0; i < msgs.size(); i++)
+    {
+        LOGICFRAME->HandleOneMessage(msgs[i]);
+    }
 }
 
 

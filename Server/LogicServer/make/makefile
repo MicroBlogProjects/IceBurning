@@ -14,7 +14,8 @@ CPPFLAGS= -g -I.. \
 			-I../../../Common/protobuf-2.5.0/src
 
 LDFLAGS = ../../Lib/libCommon.a \
-			../../../Common/protobuf-2.5.0/src/.libs/libprotobuf.a
+			../../Lib/libProto_out.a \
+			../../../Common/protobuf-2.5.0/src/.libs/libprotobuf.a 
 
 # Generate dependence, including rules to generate object files
 %.d:
