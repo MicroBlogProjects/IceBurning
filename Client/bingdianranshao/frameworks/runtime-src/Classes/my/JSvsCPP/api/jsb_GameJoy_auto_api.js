@@ -47,6 +47,83 @@ JS_CPP_Bridge : function (
 };
 
 /**
+ * @class JS_CSLoginRequest
+ */
+GameJoy.JS_CSLoginRequest = {
+
+/**
+ * @method set_msgID
+ * @param {int} arg0
+ */
+set_msgID : function (
+int 
+)
+{
+},
+
+/**
+ * @method set_username
+ * @param {String} arg0
+ */
+set_username : function (
+str 
+)
+{
+},
+
+/**
+ * @method get_msgID
+ * @return {int}
+ */
+get_msgID : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method get_username
+ * @return {String}
+ */
+get_username : function (
+)
+{
+    return ;
+},
+
+/**
+ * @method get_password
+ * @return {String}
+ */
+get_password : function (
+)
+{
+    return ;
+},
+
+/**
+ * @method set_password
+ * @param {String} arg0
+ */
+set_password : function (
+str 
+)
+{
+},
+
+/**
+ * @method Instance
+ * @return {GameJoy::JS_CSLoginRequest}
+ */
+Instance : function (
+)
+{
+    return GameJoy::JS_CSLoginRequest;
+},
+
+};
+
+/**
  * @class JS_CSLoginResponse
  */
 GameJoy.JS_CSLoginResponse = {

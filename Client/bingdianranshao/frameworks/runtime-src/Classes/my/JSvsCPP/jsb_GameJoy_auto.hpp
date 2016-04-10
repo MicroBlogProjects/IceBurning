@@ -24,6 +24,21 @@ void js_register_GameJoy_JS_CPP_Bridge(JSContext *cx, JS::HandleObject global);
 void register_all_GameJoy(JSContext* cx, JS::HandleObject obj);
 bool js_GameJoy_JS_CPP_Bridge_JS_CPP_Bridge(JSContext *cx, uint32_t argc, jsval *vp);
 
+extern JSClass  *jsb_GameJoy_JS_CSLoginRequest_class;
+extern JSObject *jsb_GameJoy_JS_CSLoginRequest_prototype;
+
+bool js_GameJoy_JS_CSLoginRequest_constructor(JSContext *cx, uint32_t argc, jsval *vp);
+void js_GameJoy_JS_CSLoginRequest_finalize(JSContext *cx, JSObject *obj);
+void js_register_GameJoy_JS_CSLoginRequest(JSContext *cx, JS::HandleObject global);
+void register_all_GameJoy(JSContext* cx, JS::HandleObject obj);
+bool js_GameJoy_JS_CSLoginRequest_set_msgID(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSLoginRequest_set_username(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSLoginRequest_get_msgID(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSLoginRequest_get_username(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSLoginRequest_get_password(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSLoginRequest_set_password(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSLoginRequest_Instance(JSContext *cx, uint32_t argc, jsval *vp);
+
 extern JSClass  *jsb_GameJoy_JS_CSLoginResponse_class;
 extern JSObject *jsb_GameJoy_JS_CSLoginResponse_prototype;
 

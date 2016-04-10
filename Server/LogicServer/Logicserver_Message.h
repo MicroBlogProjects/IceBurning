@@ -73,9 +73,10 @@ public:
     void SetMessageHead(CMessageHead* head);
     void SetMessageBody(CMessageBody* body);
 
-    ::google::protobuf::Message* GetPB() { return m_iMessageBody->GetPB(); }
+    ::google::protobuf::Message* GetPB() const { return m_iMessageBody->GetPB(); }
     int32_t GetUin() const { return m_iMessageHead->GetUin(); }
     int32_t GetMessageID() const { return m_iMessageHead->GetMid(); }
+    int32_t GetMessageSequence() const { return m_iMessageHead->GetMsq(); }
 
 private:
     CMessageHead* m_iMessageHead;
