@@ -4,7 +4,7 @@
 //弃用
 //管理所有的怪物
 var ScheduleTime =1.0/10;
-var TestTime = 1;
+var TestTime = 5;
 var monsterManager;
 
 var MonsterBackgroundLayer = cc.Layer.extend({
