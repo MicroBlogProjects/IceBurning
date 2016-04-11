@@ -6,4 +6,6 @@ Server/LogicServer/LogicServer
 *Debug.win32*
 Common/protobuf-2.5.0/vsprojects*
 Common/protobuf-2.5.0/gtest*
-
+*bingdianranshao.sdf*
+Client/bingdianranshao/frameworks/runtime-src/proj.win32/bingdianranshao.VC.opend*
+*userconf.ini*
