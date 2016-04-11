@@ -1,0 +1,27 @@
+
+// 登录请求
+message CSLoginRequest
+{
+    optional string username        = 1;
+    optional string password        = 2;
+}
+message CSLoginResponse
+{
+    optional int32 uin              = 1;
+    optional int32 result           = 2;
+}
+
+// 拉取房间列表
+message CSRoomMessage
+{
+    optional int32 uin              = 2;
+    optional string username        = 3;
+}
+message CSPullRoomsRequest
+{
+}
+message CSPullRoomsResponse
+{
+    optional int32 result           = 1;
+    optional CSRoomMessage rooms    = 2;
+}

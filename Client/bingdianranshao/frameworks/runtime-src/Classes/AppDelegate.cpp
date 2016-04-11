@@ -26,11 +26,8 @@
 #include "jsb_cocos2dx_navmesh_auto.hpp"
 #include "navmesh/jsb_cocos2dx_navmesh_manual.h"
 
-#include "my/Common/Common_Head.h"
-#include "my/Connect/ClientSocket.h"
-#include "my/ProtoOut/Test.pb.h"
-#include "my/Connect/CMessage.h"
-using namespace GameJoy;
+#include "my/JSvsCPP/jsb_GameJoy_auto.hpp"
+#include "my/JSvsCPP/JS_CPP_Data_Exchange.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 #include "jsb_cocos2dx_experimental_video_auto.hpp"
@@ -128,7 +125,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     // 3d extension can be commented out to reduce the package
     sc->addRegisterCallback(register_all_cocos2dx_3d_extension);
-    
+
+    sc->addRegisterCallback(register_all_GameJoy);
+
 #if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
     // Physics 3d can be commented out to reduce the package
     sc->addRegisterCallback(register_all_cocos2dx_physics3d);
@@ -164,38 +163,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     ScriptEngineProtocol *engine = ScriptingCore::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     ScriptingCore::getInstance()->runScript("main.js");
-
-    ClientSocket::Instance()->Initialize();
-    ClientSocket::Instance()->Connect();
-
-    CMessage* msg_send = new CMessage();
-
-    CMessageHead* head_send = new CMessageHead();
-    head_send->SetMid(1);
-    head_send->SetUin(1);
-    msg_send->SetMessageHead(head_send);
-
-    CMessageBody* body_send = CMessageBody::ConstructMessageBody<PBTest>();
-    PBTest* pb_send = (PBTest*)body_send->GetPB();
-    pb_send->set_id(100);
-    pb_send->set_name("name");
-    pb_send->set_pwd("pwd");
-    msg_send->SetMessageBody(body_send);
-    
-    ClientSocket::Instance()->SendDataToServer(*msg_send);
-
-    Sleep(5);
-
-    CMessage* msg_recv = NULL;
-    ClientSocket::Instance()->RecvOneDataFromServer(msg_recv);
-
-    PBTest* pb_recv = (PBTest*)msg_recv->GetPB();
-    if (msg_recv && pb_recv)
-    {
-        console_msg("uin(%d) msgID(%d):id(%d) name(%s) pwd(%s)",
-            msg_recv->GetUin(), msg_recv->GetMessageID(),
-            pb_recv->id(), pb_recv->name().c_str(), pb_recv->pwd().c_str());
-    }
     
     return true;
 }

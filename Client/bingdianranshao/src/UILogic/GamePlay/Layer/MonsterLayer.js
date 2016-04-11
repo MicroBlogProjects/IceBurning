@@ -90,7 +90,7 @@ var MonsterLayer = cc.Layer.extend({
         if(this.m_isMyMonster){
             //this.m_boold.setReverseDirection(true);
         }
-        var size = this.m_boold.getContentSize()
+        var size = this.m_boold.getContentSize();
         this.m_boold.type = cc.ProgressTimer.TYPE_BAR;
         this.m_boold.setMidpoint(cc.p(0.0,0.5));
         this.m_boold.setBarChangeRate(cc.p(1.0,0.0));

@@ -145,7 +145,8 @@ int32_t CMessage::Decode(const char* in_str, int32_t in_len)
     // 根据消息头的msgID生成对应的body，然后解析
     if (m_iMessageBody == NULL)
     {
-        m_iMessageBody = NewMessageBodyWithMsgID(m_iMessageHead->GetMid());
+        // 这里客户端的代码默认为decode时使用responsePB
+        m_iMessageBody = NewResponseBodtWithMsgID(m_iMessageHead->GetMid());
     }
     int32_t body_len = in_len - head_len;
     if (fail == m_iMessageBody->Decode(&in_str[head_len], body_len))
@@ -167,6 +168,7 @@ void CMessage::SetMessageBody(CMessageBody* body)
     m_iMessageHead->SetLen(m_iMessageHead->Size() + m_iMessageBody->GetPB()->ByteSize());
     srand(time(NULL));
     m_iMessageHead->SetMsq((int32_t)(time(NULL) << 16) | (1 + rand()));
+	console_msg("msq:%d", m_iMessageHead->GetMsq());
 }
 
 NS_GJ_END

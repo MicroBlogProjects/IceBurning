@@ -100,6 +100,10 @@ def main():
     cocos_root = os.path.abspath(project_root)
     jsb_root = os.path.abspath(os.path.join(project_root, 'cocos/scripting/js-bindings'))
     cxx_generator_root = os.path.abspath(os.path.join(project_root, 'tools/bindings-generator'))
+    #######################################
+    source_dir = os.path.abspath(os.path.join(project_root, '../runtime-src/Classes/my/JSvsCPP'))
+    target_dir = os.path.abspath(os.path.join(project_root, '../runtime-src/Classes/my/JSvsCPP'))
+    #######################################
 
     # save config to file
     config = ConfigParser.ConfigParser()
@@ -109,6 +113,10 @@ def main():
     config.set('DEFAULT', 'jsbdir', jsb_root)
     config.set('DEFAULT', 'cxxgeneratordir', cxx_generator_root)
     config.set('DEFAULT', 'extra_flags', '')
+    #######################################
+    config.set('DEFAULT', 'sourcedir', source_dir)
+    config.set('DEFAULT', 'targetdir', target_dir)
+    #######################################
     
     if '3.4' in llvm_path:
         config.set('DEFAULT', 'clang_version', '3.4')
@@ -139,20 +147,7 @@ def main():
         tojs_root = '%s/tools/tojs' % project_root
         output_dir = '%s/cocos/scripting/js-bindings/auto' % project_root
 
-        cmd_args = {'cocos2dx.ini': ('cocos2d-x', 'jsb_cocos2dx_auto'),
-                    'cocos2dx_audioengine.ini': ('cocos2dx_audioengine', 'jsb_cocos2dx_audioengine_auto'),
-                    'cocos2dx_extension.ini': ('cocos2dx_extension', 'jsb_cocos2dx_extension_auto'),
-                    'cocos2dx_builder.ini': ('cocos2dx_builder', 'jsb_cocos2dx_builder_auto'),
-                    'cocos2dx_ui.ini': ('cocos2dx_ui', 'jsb_cocos2dx_ui_auto'),
-                    'cocos2dx_studio.ini': ('cocos2dx_studio', 'jsb_cocos2dx_studio_auto'),
-                    'cocos2dx_spine.ini': ('cocos2dx_spine', 'jsb_cocos2dx_spine_auto'),
-                    'cocos2dx_3d.ini': ('cocos2dx_3d', 'jsb_cocos2dx_3d_auto'),
-                    'cocos2dx_3d_ext.ini': ('cocos2dx_3d_extension', 'jsb_cocos2dx_3d_extension_auto'),
-                    'cocos2dx_experimental_webView.ini': ('cocos2dx_experimental_webView', 'jsb_cocos2dx_experimental_webView_auto'),
-                    'cocos2dx_experimental_video.ini': ('cocos2dx_experimental_video', 'jsb_cocos2dx_experimental_video_auto'),
-                    'cocos2dx_physics3d.ini': ('cocos2dx_physics3d', 'jsb_cocos2dx_physics3d_auto'),
-                    'cocos2dx_navmesh.ini': ('cocos2dx_navmesh', 'jsb_cocos2dx_navmesh_auto'),
-                    }
+        cmd_args = {}
         target = 'spidermonkey'
         generator_py = '%s/generator.py' % cxx_generator_root
         for key in cmd_args.keys():
@@ -167,14 +162,18 @@ def main():
         #         _run_cmd('dos2unix *')
 
 
-        custom_cmd_args = {}
+        custom_cmd_args = {'GameJoy.ini': ('GameJoy', 'jsb_GameJoy_auto'),}
         if len(custom_cmd_args) > 0:
-            output_dir = '%s/frameworks/custom/auto' % project_root
+            #######################################
+            output_dir = '%s' % target_dir
+            print source_dir
+            #######################################
             for key in custom_cmd_args.keys():
                 args = custom_cmd_args[key]
                 cfg = '%s/%s' % (tojs_root, key)
                 print 'Generating bindings for %s...' % (key[:-4])
                 command = '%s %s %s -s %s -t %s -o %s -n %s' % (python_bin, generator_py, cfg, args[0], target, output_dir, args[1])
+                print command
                 _run_cmd(command)
             # if platform == 'win32':
             #     with _pushd(output_dir):

@@ -110,22 +110,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\Proto_out\Test.h" />
+    <ClInclude Include="..\Proto_out\CreateRoom.h" />
+    <ClInclude Include="..\Proto_out\Login.h" />
+    <ClInclude Include="LogicFrame\Logicserver_FrameBase.h" />
+    <ClInclude Include="LogicFrame\Logicserver_LogicFrame.h" />
+    <ClInclude Include="LogicFrame\LoginFrame.h" />
     <ClInclude Include="Logicserver_Common.h" />
-    <ClInclude Include="Logicserver_EpollUnit.h" />
-    <ClInclude Include="Logicserver_LogicFrame.h" />
-    <ClInclude Include="Logicserver_Message.h" />
-    <ClInclude Include="Logicserver_Socket.h" />
-    <ClInclude Include="MessageRegister.h" />
+    <ClInclude Include="Network\Logicserver_EpollUnit.h" />
+    <ClInclude Include="Network\Logicserver_Message.h" />
+    <ClInclude Include="Network\Logicserver_Socket.h" />
+    <ClInclude Include="Network\MessageRegister.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Proto_out\Test.cpp" />
-    <ClCompile Include="Logicserver_EpollUnit.cpp" />
-    <ClCompile Include="Logicserver_LogicFrame.cpp" />
-    <ClCompile Include="Logicserver_Message.cpp" />
+    <ClCompile Include="..\Proto_out\CreateRoom.cpp" />
+    <ClCompile Include="..\Proto_out\Login.cpp" />
+    <ClCompile Include="LogicFrame\Logicserver_FrameBase.cpp" />
+    <ClCompile Include="LogicFrame\Logicserver_LogicFrame.cpp" />
+    <ClCompile Include="LogicFrame\LoginFrame.cpp" />
     <ClCompile Include="Logicserver_server.cpp" />
-    <ClCompile Include="Logicserver_Socket.cpp" />
-    <ClCompile Include="MessageRegister.cpp" />
+    <ClCompile Include="Network\Logicserver_EpollUnit.cpp" />
+    <ClCompile Include="Network\Logicserver_Message.cpp" />
+    <ClCompile Include="Network\Logicserver_Socket.cpp" />
+    <ClCompile Include="Network\MessageRegister.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,4 @@
-1.打开vs：选中工程libcocos2d->Project->properties->c/c++->additional Include Directories->添加：$(EngineRoot)..\..\..\..\Common\protobuf-2.5.0\src
+﻿1.打开vs：选中工程libcocos2d->Project->properties->c/c++->additional Include Directories->添加：$(EngineRoot)..\..\..\..\Common\protobuf-2.5.0\src
 
 2.打开vs：选中工程libcocos2d->Project->properties->Linker->general->additional library directories->添加：$(EngineRoot)..\..\..\..\Common\protobuf-2.5.0\src\.libs
 
@@ -13,4 +13,19 @@ libprotobuf.lib
 
 6.在每个工程属性里的c/c++->Preprocessor中添加_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS(可选)
 
+7.添加协议的过程：
+	1）在Common/protocol中添加.proto文件
 
+	2）在Common/include/Message_i.h添加msgid
+
+	3）执Common/protocol/ClientBuild.sh，会生成/Classes/my/ProtoOut/.pb.cc和.pb.h文件
+
+	4）在Classes/my/JSvsCPP/JS_CPP_Data_Exchange.h和cpp添加新的class
+
+	5）修改\Client\bingdianranshao\frameworks\cocos2d-x\tools\tojs\GameJoy.ini文件，添加新的类
+
+	6）执行frameworks\cocos2d-x\tools\tojs\genbindings.py脚本
+
+	7）在Classes/my/JSvsCPP/BindPBWithJS中添加绑定函数及注册绑定
+
+	8）在Classes/my/ProtoOut/MessageRegister.cpp绑定msgID到PB

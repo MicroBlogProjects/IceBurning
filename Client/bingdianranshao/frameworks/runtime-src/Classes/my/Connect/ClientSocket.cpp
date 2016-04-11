@@ -104,6 +104,7 @@ int32_t ClientSocket::RecvOneDataFromServer(CMessage*& message)
     {
         message = msg_que.front();
         msg_que.pop();
+        return success;
     }
     return fail;
 }
