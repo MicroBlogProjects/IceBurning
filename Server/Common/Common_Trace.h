@@ -14,25 +14,25 @@
 #define Warn_Log(fmt, args...) PrintWarnLog(__FILE__, __LINE__, __FUNCTION__, fmt, ##args)
 #define Error_Log(fmt, args...) PrintErrorLog(__FILE__, __LINE__, __FUNCTION__, fmt, ##args)
 
-#define PrintWarnLog(file_name, line_no, func, fmt, args...) \
-        do { \
-            int fd = NS_LG::OpenLogFile(&NS_LG::warn_log_path); \
-            if (fd < 0) \
-            { \
-                err_quit("PrintWarnLog Error...Maybe sudo?"); \
-                break; \
-            } \
-            NS_LG::PrintLog(fd, file_name, line_no, func, fmt, ##args); \
+#define PrintWarnLog(file_name, line_no, func, fmt, args...)                \
+        do {                                                                \
+            int fd = NS_LG::OpenLogFile(&NS_LG::warn_log_path);             \
+            if (fd < 0)                                                     \
+            {                                                               \
+                err_quit("PrintWarnLog Error...Maybe sudo?");               \
+                break;                                                      \
+            }                                                               \
+            NS_LG::PrintLog(fd, file_name, line_no, func, fmt, ##args);     \
         } while(0)
-#define PrintErrorLog(file_name, line_no, func, fmt, args...) \
-        do { \
-            int fd = NS_LG::OpenLogFile(&NS_LG::error_log_path); \
-            if (fd < 0) \
-            { \
-                err_quit("PrintErrorLog Error...Maybe sudo?"); \
-                break; \
-            } \
-            NS_LG::PrintLog(fd, file_name, line_no, func, fmt, ##args); \
+#define PrintErrorLog(file_name, line_no, func, fmt, args...)               \
+        do {                                                                \
+            int fd = NS_LG::OpenLogFile(&NS_LG::error_log_path);            \
+            if (fd < 0)                                                     \
+            {                                                               \
+                err_quit("PrintErrorLog Error...Maybe sudo?");              \
+                break;                                                      \
+            }                                                               \
+            NS_LG::PrintLog(fd, file_name, line_no, func, fmt, ##args);     \
         } while(0)
 
 NS_LG_BEGIN

@@ -22,9 +22,9 @@ libprotobuf.lib
 
 	4）在Classes/my/JSvsCPP/JS_CPP_Data_Exchange.h和cpp添加新的class
 
-	5）修改\Client\bingdianranshao\frameworks\cocos2d-x\tools\tojs\GameJoy.ini文件，添加新的类
+	5）修改Client/bingdianranshao/frameworks/cocos2d-x/tools/tojs/GameJoy.ini文件，添加新的类
 
-	6）执行frameworks\cocos2d-x\tools\tojs\genbindings.py脚本
+	6）执行frameworks/cocos2d-x/tools/tojs/genbindings.py脚本
 
 	7）在Classes/my/JSvsCPP/BindPBWithJS中添加绑定函数及注册绑定
 
