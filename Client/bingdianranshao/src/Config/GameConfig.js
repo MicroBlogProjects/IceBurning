@@ -39,7 +39,7 @@ var MonsterType ={
 var TMXTileMapsize = 32;
 
 var HostUpPath = {"origin" : cc.p(5,12),
-               "destination" : cc.p(7,16)};
+               "destination" : cc.p(7,18)};
 
 var HostUpStraightPath = {"origin" : cc.p(5,16),
                              "destination" : cc.p(30,18)};
@@ -50,11 +50,11 @@ var HostStraightPath = {"origin" : cc.p(8,9),
 var HostDownStraightPath = {"origin" : cc.p(5,2),
                            "destination" : cc.p(30,4)};
 
-var HostDownPath = {"origin" : cc.p(5,4),
+var HostDownPath = {"origin" : cc.p(5,2),
                   "destination" : cc.p(7,8)};
 
 var AwayUpPath = {"origin" : cc.p(53,12),
-                    "destination" : cc.p(55,16)};
+                    "destination" : cc.p(55,18)};
 
 var AwayUpStraightPath = {"origin" : cc.p(30,16),
                              "destination" : cc.p(55,18)};
@@ -65,7 +65,7 @@ var AwayStraightPath = {"origin" : cc.p(30,9),
 var AwayDownStraightPath = {"origin" : cc.p(30,2),
                                "destination" : cc.p(55,4)};
 
-var AwayDownPath = {"origin" : cc.p(53,4),
+var AwayDownPath = {"origin" : cc.p(53,2),
                       "destination" : cc.p(55,8)};
 
 var HostPathConfig = {

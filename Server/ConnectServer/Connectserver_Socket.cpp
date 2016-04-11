@@ -138,7 +138,6 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
     {
         if (IsLogicserverConnect(fd))
         {
-            console_msg("logic server quit.");
             // TRACE_ERROR("logic server quit.");
             has_connected_logicserver_ = false;
         }
@@ -186,10 +185,9 @@ int32_t ConnsvrSocket::TransmitMessageToLogicServer(int32_t client_fd, char* con
         int32_t msgSq = FindMessageSequence(content, len);
         if (msgSequence_to_fd.find(msgSq) != msgSequence_to_fd.end())
         {
-            TRACE_WARN("generated the same msg id.");
-            return fail;
+            int32_t new_sq = GeneratNewSequence(msgSq);
+            ResetMessageSequence(content, new_sq);
         }
-        console_msg("%d, %d\n", msgSq, client_fd);
         msgSequence_to_fd[msgSq] = client_fd;
         fd_to_msgSequence[client_fd] = msgSq;
     }
@@ -214,16 +212,16 @@ int32_t ConnsvrSocket::TransmitMessageToClient(char* content, int32_t len)
     // find fd
     if (uin_to_fd.find(uin) == uin_to_fd.end())
     {
-        int32_t msgID = FindMessageSequence(content, len);
-        if (msgSequence_to_fd.find(msgID) == msgSequence_to_fd.end())
+        int32_t msgSq = FindMessageSequence(content, len);
+        if (msgSequence_to_fd.find(msgSq) == msgSequence_to_fd.end())
         {
-            TRACE_WARN("can not find fd with msgID(%d) and uin(%d)", msgID, uin);
+            TRACE_WARN("can not find fd with msgSq(%d) and uin(%d)", msgSq, uin);
             return fail;
         }
-        fd = msgSequence_to_fd[msgID];
+        fd = msgSequence_to_fd[msgSq];
 
         // msgID only use temporary
-        msgSequence_to_fd.erase(msgID);
+        msgSequence_to_fd.erase(msgSq);
         fd_to_msgSequence.erase(fd);
     }
     else
@@ -279,6 +277,30 @@ int32_t ConnsvrSocket::FindMessageSequence(const char* str, int32_t len)
         ret = (ret << 8) | (int32_t)str[i];
     }
     return ret;
+}
+
+int32_t ConnsvrSocket::ResetMessageSequence(char* str, int32_t new_sq)
+{
+    int32_t p = 0xff000000, m = 24;
+    for (int i = 12; i < 16; i++)
+    {
+        str[i] = (char)((new_sq & p) >> m);
+        p >>= 8;
+        m -= 8;
+    }
+    return success;
+}
+
+int32_t ConnsvrSocket::GeneratNewSequence(int32_t start)
+{
+    for (int32_t i = start + 1; i < start + 1000; i++)
+    {
+        if (msgSequence_to_fd.find(i) != msgSequence_to_fd.end())
+        {
+            return i;
+        }
+    }
+    return rand();
 }
 
 int32_t ConnsvrSocket::FindUin(const char* str, int len)
