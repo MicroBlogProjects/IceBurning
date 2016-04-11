@@ -95,7 +95,7 @@ var MonsterTouchLayer = cc.Layer.extend({
     },
 
     heroButtonClick : function(){
-        monsterManager.heroSkillAniamte();
+        monsterBackGroundLayer.heroSkillAniamte();
     },
 
     //tool点击之后的效果

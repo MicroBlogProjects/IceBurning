@@ -32,6 +32,7 @@
         "src/UILogic/GamePlay/Sprite/MonsterSprite.js",
         "src/UILogic/GamePlay/Sprite/MonsterTouchSprite.js",
         "src/UILogic/GamePlay/Layer/MonsterTouchLayer.js",
+        "src/UILogic/GamePlay/Class/MonsterManager.js",
         "src/UILogic/GamePlay/Layer/MonsterLayer.js",
         "src/UILogic/GamePlay/Layer/BuildingTickLayer.js",
         "src/UILogic/GamePlay/Sprite/SkillSprite.js",

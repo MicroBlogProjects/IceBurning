@@ -5,7 +5,7 @@
 //管理所有的怪物
 var ScheduleTime =1.0/10;
 var TestTime = 5;
-var monsterManager;
+var monsterBackGroundLayer;
 
 var MonsterBackgroundLayer = cc.Layer.extend({
     myMonsterArray : null,
@@ -23,7 +23,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         this.buildingPositionMark = [];
         this.fightingPathConfig = FightingPathConfig;
         this.init();
-        monsterManager = this;
+        monsterBackGroundLayer = this;
 
         this.schedule(this.updateEvent,ScheduleTime);//计时器
         this.schedule(this.monsterTest,TestTime);//计时器
@@ -78,6 +78,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 else{
                     this.myMonsterArray.push(mosterSprite);
                 }
+                monsterManager.addMonsterSprite(mosterSprite);
             }
         }
         else { //建筑物
@@ -98,6 +99,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 else{
                     this.myMonsterArray.push(mosterSprite);
                 }
+                monsterManager.addMonsterSprite(mosterSprite);
             }
         }
     },

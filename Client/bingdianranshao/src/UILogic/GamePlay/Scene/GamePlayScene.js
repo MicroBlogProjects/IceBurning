@@ -88,9 +88,11 @@ var GamePlayLayer = cc.Layer.extend({
 var GamePlayScene = cc.Scene.extend({
     gamePlayLayer :null,
     scrollView : null,
+    monsterManager:null,
     onEnter :function(){
         this._super();
         this.addGamePlay();
+        this.monsterManager = new MonsterManager();
     },
     addGamePlay : function(){
         this.gamePlayLayer = new GamePlayLayer();

@@ -25,10 +25,10 @@ var MonsterTouchSprite = cc.Sprite.extend({
         }
         MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
         if(target.m_id < 100){
-            monsterManager.addClipperNode();
+            monsterBackGroundLayer.addClipperNode();
         }
         else{
-            monsterManager.addBuildingTick();
+            monsterBackGroundLayer.addBuildingTick();
         }
         return true;
     },
@@ -41,12 +41,12 @@ var MonsterTouchSprite = cc.Sprite.extend({
         MonsterTouch.removeListerSprite();
         var point = touch.getLocation();
         if(target.m_id < 100){
-            monsterManager.removeClipperNode();
+            monsterBackGroundLayer.removeClipperNode();
         }
         else {
-            monsterManager.removeBuildingTick();
+            monsterBackGroundLayer.removeBuildingTick();
         }
-        monsterManager.addMonsterSprite(target.m_config, point,true);
+        monsterBackGroundLayer.addMonsterSprite(target.m_config, point,true);
 
     },
     onTouchCancelled : function (touch, event) {
