@@ -15,8 +15,6 @@ int32_t LogicFrame::HandleOneMessage(const CMessage* message)
 {
     CFrameBase* frame = GetFrameWithMsgID(message->GetMessageID());
     frame->ProcessRequest(*message);
-    delete message;
-    //LOGICSOCKET->WriteOneMessage(*message);
 }
 
 LogicFrame* LogicFrame::Instance()
@@ -35,6 +33,7 @@ int32_t LogicFrame::HandleMessage()
     for (size_t i = 0; i < msgs.size(); i++)
     {
         LOGICFRAME->HandleOneMessage(msgs[i]);
+        delete msgs[i];
     }
 }
 

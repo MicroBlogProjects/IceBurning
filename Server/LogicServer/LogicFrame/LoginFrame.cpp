@@ -56,14 +56,6 @@ int32_t CLoginFrame::ProcessRequestLogin(const CMessage& message)
 {
     console_msg("uin(%d) login", message.GetUin());
     ProcessRequestBegin(MSG_ON_LOGIN, CSLoginRequest, CSLoginResponse);
-    if (pbReq)
-    {
-        console_msg("uin(%d), sq(%d)", message.GetUin(), message.GetMessageSequence());
-    }
-    else
-    {
-        console_msg("pb is null");
-    }
     pbRes->set_uin(++uin_id_);
     pbRes->set_result(success);
     if (user == NULL)
@@ -110,15 +102,16 @@ int32_t CLoginFrame::ProcessRequestJoinRoom(const CMessage& message)
     if (user != NULL && user->uin == message.GetUin())
     {
         pbRes->set_result(fail);
+        console_msg("join fail");
     }
     else
     {
         CMessage msg;
 
-        CMessageHead* h = new CMessageHead(user->uin, MSG_FIGHT_READY);
+        CMessageHead* h = new CMessageHead(user->uin, MSG_ON_JOIN_ROOM);
         msg.SetMessageHead(h);
 
-        CMessageBody* b = NewResponseBodyWithMsgID(MSG_FIGHT_READY);
+        CMessageBody* b = NewResponseBodyWithMsgID(MSG_ON_JOIN_ROOM);
         CSJoinRoomResponse* pb = (CSJoinRoomResponse*)b->GetPB();
         pb->set_result(success);
         msg.SetMessageBody(b);
@@ -134,35 +127,29 @@ int32_t CLoginFrame::ProcessRequestReadyFight(const CMessage& message)
 {
     console_msg("uin(%d) ReadyFight", message.GetUin());
     ProcessRequestBegin(MSG_FIGHT_READY, CSFightReadyRequest, CSFightReadyResponse);
-    if (user != NULL)
+    if (ready_)
     {
-        if (ready_)
-        {
-            CMessage msg;
+        CMessage msg;
 
-            CMessageHead* h = new CMessageHead(user->uin, MSG_FIGHT_READY);
-            msg.SetMessageHead(h);
+        CMessageHead* h = new CMessageHead(user->uin, MSG_FIGHT_READY);
+        msg.SetMessageHead(h);
 
-            CMessageBody* b = NewResponseBodyWithMsgID(MSG_FIGHT_READY);
-            CSFightReadyResponse* pb = (CSFightReadyResponse*)b->GetPB();
-            pb->set_result(success);
-            pbRes->set_result(success);
-            msg.SetMessageBody(b);
+        CMessageBody* b = NewResponseBodyWithMsgID(MSG_FIGHT_READY);
+        CSFightReadyResponse* pb = (CSFightReadyResponse*)b->GetPB();
+        pb->set_result(success);
+        pbRes->set_result(success);
+        msg.SetMessageBody(b);
 
-            LOGICSOCKET->WriteOneMessage(msg);
-            delete user;
-            user = NULL;
-            ready_ = 0;
-            hasRoom_ = 0;
-        }
-        else
-        {
-            user->uin = message.GetUin();
-            ready_ = 1;
-        }
+        LOGICSOCKET->WriteOneMessage(msg);
+        delete user;
+        user = NULL;
+        ready_ = 0;
+        hasRoom_ = 0;
     }
     else
     {
+        user->uin = message.GetUin();
+        ready_ = 1;
         pbRes->set_result(fail);
     }
     ProcessRequestEnd(success);

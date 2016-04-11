@@ -9,6 +9,7 @@
 #include <sys/socket.h>
 #include <sys/epoll.h>
 #include <fcntl.h>
+#include <errno.h>
 
 NS_GJ_BEGIN
 
