@@ -15,8 +15,12 @@
         "Tag": 514,
         "Children": [
           {
-            "BackColorAlpha": 0,
-            "ComboBoxIndex": 1,
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Common/Lg_selectbardground.jpg",
+              "Plist": ""
+            },
             "SingleColor": {
               "R": 150,
               "G": 200
@@ -29,8 +33,9 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
+            "Scale9Enable": true,
+            "Scale9Width": 1024,
+            "Scale9Height": 522,
             "TouchEnable": true,
             "AnchorPoint": {},
             "Position": {
@@ -57,6 +62,65 @@
               "X": 1.0,
               "Y": 1.0
             },
+            "Tag": 119,
+            "ActionTag": -338024205,
+            "Size": {
+              "X": 960.0,
+              "Y": 640.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "BackColorAlpha": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.78,
+              "Y": 0.87
+            },
+            "LeftMargin": 105.6,
+            "RightMargin": 105.6,
+            "TopMargin": 41.6,
+            "BottomMargin": 41.6,
             "Tag": 711,
             "Children": [
               {
@@ -82,8 +146,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 480.0,
-                  "Y": 320.0
+                  "X": 374.4,
+                  "Y": 278.4
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -120,8 +184,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 469.824,
-                      "Y": 607.808
+                      "X": 366.4628,
+                      "Y": 528.793
                     },
                     "Scale": {
                       "ScaleX": 28.0,
@@ -143,15 +207,15 @@
                       "X": 0.0336,
                       "Y": 0.0714
                     },
-                    "LeftMargin": 453.696,
-                    "RightMargin": 474.048,
-                    "TopMargin": 9.344,
-                    "BottomMargin": 584.96,
+                    "LeftMargin": 353.8829,
+                    "RightMargin": 369.7574,
+                    "TopMargin": 8.1293,
+                    "BottomMargin": 508.9152,
                     "Tag": 635,
                     "ActionTag": -701715881,
                     "Size": {
-                      "X": 32.256,
-                      "Y": 45.696
+                      "X": 25.1597,
+                      "Y": 39.7555
                     },
                     "Name": "Image_Frame",
                     "ctype": "ImageViewObjectData"
@@ -169,8 +233,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 469.824,
-                      "Y": 27.84
+                      "X": 366.4628,
+                      "Y": 24.2208
                     },
                     "Scale": {
                       "ScaleX": 28.0,
@@ -192,15 +256,15 @@
                       "X": 0.0336,
                       "Y": 0.0692
                     },
-                    "LeftMargin": 453.696,
-                    "RightMargin": 474.048,
-                    "TopMargin": 590.016,
-                    "BottomMargin": 5.696,
+                    "LeftMargin": 353.8829,
+                    "RightMargin": 369.7574,
+                    "TopMargin": 513.3139,
+                    "BottomMargin": 4.9555,
                     "Tag": 677,
                     "ActionTag": -284116626,
                     "Size": {
-                      "X": 32.256,
-                      "Y": 44.288
+                      "X": 25.1597,
+                      "Y": 38.5306
                     },
                     "Name": "Image_Frame_0",
                     "ctype": "ImageViewObjectData"
@@ -218,8 +282,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 24.096,
-                      "Y": 321.6
+                      "X": 18.7949,
+                      "Y": 279.792
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -241,15 +305,15 @@
                       "X": 0.0587,
                       "Y": 0.0408
                     },
-                    "LeftMargin": -4.08,
-                    "RightMargin": 907.728,
-                    "TopMargin": 305.344,
-                    "BottomMargin": 308.544,
+                    "LeftMargin": -3.1824,
+                    "RightMargin": 708.0278,
+                    "TopMargin": 265.6493,
+                    "BottomMargin": 268.4333,
                     "Tag": 678,
                     "ActionTag": 899737982,
                     "Size": {
-                      "X": 56.352,
-                      "Y": 26.112
+                      "X": 43.9546,
+                      "Y": 22.7174
                     },
                     "Name": "Image_Frame_1",
                     "ctype": "ImageViewObjectData"
@@ -268,8 +332,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 921.6,
-                      "Y": 311.424
+                      "X": 718.848,
+                      "Y": 270.9388
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -291,15 +355,15 @@
                       "X": 0.0587,
                       "Y": 0.0408
                     },
-                    "LeftMargin": 893.424,
-                    "RightMargin": 10.224,
-                    "TopMargin": 315.52,
-                    "BottomMargin": 298.368,
+                    "LeftMargin": 696.8707,
+                    "RightMargin": 7.9747,
+                    "TopMargin": 274.5024,
+                    "BottomMargin": 259.5801,
                     "Tag": 691,
                     "ActionTag": -732298708,
                     "Size": {
-                      "X": 56.352,
-                      "Y": 26.112
+                      "X": 43.9546,
+                      "Y": 22.7174
                     },
                     "Name": "Image_Frame_2",
                     "ctype": "ImageViewObjectData"
@@ -317,8 +381,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 472.512,
-                      "Y": 559.488
+                      "X": 368.5593,
+                      "Y": 486.7545
                     },
                     "Scale": {
                       "ScaleX": 2.9637,
@@ -340,15 +404,15 @@
                       "X": 0.3188,
                       "Y": 0.1755
                     },
-                    "LeftMargin": 319.488,
-                    "RightMargin": 334.464,
-                    "TopMargin": 24.3521,
-                    "BottomMargin": 503.328,
+                    "LeftMargin": 249.2005,
+                    "RightMargin": 260.882,
+                    "TopMargin": 21.1863,
+                    "BottomMargin": 437.8953,
                     "Tag": 671,
                     "ActionTag": -621834957,
                     "Size": {
-                      "X": 306.048,
-                      "Y": 112.32
+                      "X": 238.7175,
+                      "Y": 97.7184
                     },
                     "Name": "Image_Wood",
                     "ctype": "ImageViewObjectData"
@@ -366,8 +430,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 472.512,
-                      "Y": 459.84
+                      "X": 368.5593,
+                      "Y": 400.0608
                     },
                     "Scale": {
                       "ScaleX": 2.9637,
@@ -389,15 +453,15 @@
                       "X": 0.3188,
                       "Y": 0.1755
                     },
-                    "LeftMargin": 319.488,
-                    "RightMargin": 334.464,
-                    "TopMargin": 124.0,
-                    "BottomMargin": 403.68,
+                    "LeftMargin": 249.2005,
+                    "RightMargin": 260.882,
+                    "TopMargin": 107.88,
+                    "BottomMargin": 351.2016,
                     "Tag": 672,
                     "ActionTag": 1185590087,
                     "Size": {
-                      "X": 306.048,
-                      "Y": 112.32
+                      "X": 238.7175,
+                      "Y": 97.7184
                     },
                     "Name": "Image_Wood_0",
                     "ctype": "ImageViewObjectData"
@@ -415,8 +479,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 472.512,
-                      "Y": 362.816
+                      "X": 368.5593,
+                      "Y": 315.6499
                     },
                     "Scale": {
                       "ScaleX": 2.9637,
@@ -438,15 +502,15 @@
                       "X": 0.3188,
                       "Y": 0.1755
                     },
-                    "LeftMargin": 319.488,
-                    "RightMargin": 334.464,
-                    "TopMargin": 221.024,
-                    "BottomMargin": 306.656,
+                    "LeftMargin": 249.2005,
+                    "RightMargin": 260.882,
+                    "TopMargin": 192.2909,
+                    "BottomMargin": 266.7907,
                     "Tag": 673,
                     "ActionTag": 420688228,
                     "Size": {
-                      "X": 306.048,
-                      "Y": 112.32
+                      "X": 238.7175,
+                      "Y": 97.7184
                     },
                     "Name": "Image_Wood_1",
                     "ctype": "ImageViewObjectData"
@@ -464,8 +528,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 472.512,
-                      "Y": 263.744
+                      "X": 368.5593,
+                      "Y": 229.4573
                     },
                     "Scale": {
                       "ScaleX": 2.9637,
@@ -487,15 +551,15 @@
                       "X": 0.3188,
                       "Y": 0.1755
                     },
-                    "LeftMargin": 319.488,
-                    "RightMargin": 334.464,
-                    "TopMargin": 320.096,
-                    "BottomMargin": 207.584,
+                    "LeftMargin": 249.2005,
+                    "RightMargin": 260.882,
+                    "TopMargin": 278.4835,
+                    "BottomMargin": 180.5981,
                     "Tag": 674,
                     "ActionTag": -495401228,
                     "Size": {
-                      "X": 306.048,
-                      "Y": 112.32
+                      "X": 238.7175,
+                      "Y": 97.7184
                     },
                     "Name": "Image_Wood_2",
                     "ctype": "ImageViewObjectData"
@@ -513,8 +577,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 472.512,
-                      "Y": 163.392
+                      "X": 368.5593,
+                      "Y": 142.151
                     },
                     "Scale": {
                       "ScaleX": 2.9637,
@@ -536,15 +600,15 @@
                       "X": 0.3188,
                       "Y": 0.1755
                     },
-                    "LeftMargin": 319.488,
-                    "RightMargin": 334.464,
-                    "TopMargin": 420.448,
-                    "BottomMargin": 107.232,
+                    "LeftMargin": 249.2005,
+                    "RightMargin": 260.882,
+                    "TopMargin": 365.7898,
+                    "BottomMargin": 93.2918,
                     "Tag": 675,
                     "ActionTag": -1617581323,
                     "Size": {
-                      "X": 306.048,
-                      "Y": 112.32
+                      "X": 238.7175,
+                      "Y": 97.7184
                     },
                     "Name": "Image_Wood_3",
                     "ctype": "ImageViewObjectData"
@@ -562,8 +626,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 472.512,
-                      "Y": 75.712
+                      "X": 368.5593,
+                      "Y": 65.8694
                     },
                     "Scale": {
                       "ScaleX": 2.9637,
@@ -585,15 +649,15 @@
                       "X": 0.3188,
                       "Y": 0.1755
                     },
-                    "LeftMargin": 319.488,
-                    "RightMargin": 334.464,
-                    "TopMargin": 508.128,
-                    "BottomMargin": 19.552,
+                    "LeftMargin": 249.2005,
+                    "RightMargin": 260.882,
+                    "TopMargin": 442.0714,
+                    "BottomMargin": 17.0102,
                     "Tag": 676,
                     "ActionTag": 9574333,
                     "Size": {
-                      "X": 306.048,
-                      "Y": 112.32
+                      "X": 238.7175,
+                      "Y": 97.7184
                     },
                     "Name": "Image_Wood_4",
                     "ctype": "ImageViewObjectData"
@@ -612,7 +676,7 @@
                     },
                     "Position": {
                       "X": 5.1192,
-                      "Y": 444.096
+                      "Y": 386.3635
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -622,24 +686,24 @@
                     "IconVisible": false,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.0053,
+                      "X": 0.0068,
                       "Y": 0.6939
                     },
                     "PercentHeightEnable": true,
                     "PercentHeightEnabled": true,
                     "PreSize": {
-                      "X": 0.0156,
+                      "X": 0.02,
                       "Y": 0.0408
                     },
                     "LeftMargin": -2.3808,
-                    "RightMargin": 947.3808,
-                    "TopMargin": 182.848,
-                    "BottomMargin": 431.04,
+                    "RightMargin": 736.1808,
+                    "TopMargin": 159.0778,
+                    "BottomMargin": 375.0048,
                     "Tag": 692,
                     "ActionTag": 1219380763,
                     "Size": {
                       "X": 15.0,
-                      "Y": 26.112
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch",
                     "ctype": "ImageViewObjectData"
@@ -658,7 +722,7 @@
                     },
                     "Position": {
                       "X": 5.1192,
-                      "Y": 383.552
+                      "Y": 333.6902
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -668,24 +732,24 @@
                     "IconVisible": false,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.0053,
+                      "X": 0.0068,
                       "Y": 0.5993
                     },
                     "PercentHeightEnable": true,
                     "PercentHeightEnabled": true,
                     "PreSize": {
-                      "X": 0.0156,
+                      "X": 0.02,
                       "Y": 0.0408
                     },
                     "LeftMargin": -2.3808,
-                    "RightMargin": 947.3808,
-                    "TopMargin": 243.392,
-                    "BottomMargin": 370.496,
+                    "RightMargin": 736.1808,
+                    "TopMargin": 211.751,
+                    "BottomMargin": 322.3315,
                     "Tag": 693,
                     "ActionTag": 545558419,
                     "Size": {
                       "X": 15.0,
-                      "Y": 26.112
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch_0",
                     "ctype": "ImageViewObjectData"
@@ -704,7 +768,7 @@
                     },
                     "Position": {
                       "X": 5.1192,
-                      "Y": 304.832
+                      "Y": 265.2038
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -714,24 +778,24 @@
                     "IconVisible": false,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.0053,
+                      "X": 0.0068,
                       "Y": 0.4763
                     },
                     "PercentHeightEnable": true,
                     "PercentHeightEnabled": true,
                     "PreSize": {
-                      "X": 0.0156,
+                      "X": 0.02,
                       "Y": 0.0408
                     },
                     "LeftMargin": -2.3808,
-                    "RightMargin": 947.3808,
-                    "TopMargin": 322.112,
-                    "BottomMargin": 291.776,
+                    "RightMargin": 736.1808,
+                    "TopMargin": 280.2374,
+                    "BottomMargin": 253.8451,
                     "Tag": 694,
                     "ActionTag": -1918534619,
                     "Size": {
                       "X": 15.0,
-                      "Y": 26.112
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch_1",
                     "ctype": "ImageViewObjectData"
@@ -750,7 +814,7 @@
                     },
                     "Position": {
                       "X": 5.1192,
-                      "Y": 240.384
+                      "Y": 209.1341
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -760,24 +824,24 @@
                     "IconVisible": false,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.0053,
+                      "X": 0.0068,
                       "Y": 0.3756
                     },
                     "PercentHeightEnable": true,
                     "PercentHeightEnabled": true,
                     "PreSize": {
-                      "X": 0.0156,
+                      "X": 0.02,
                       "Y": 0.0408
                     },
                     "LeftMargin": -2.3808,
-                    "RightMargin": 947.3808,
-                    "TopMargin": 386.56,
-                    "BottomMargin": 227.328,
+                    "RightMargin": 736.1808,
+                    "TopMargin": 336.3072,
+                    "BottomMargin": 197.7754,
                     "Tag": 696,
                     "ActionTag": 450287380,
                     "Size": {
                       "X": 15.0,
-                      "Y": 26.112
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch_2",
                     "ctype": "ImageViewObjectData"
@@ -796,8 +860,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 937.728,
-                      "Y": 430.016
+                      "X": 731.4278,
+                      "Y": 374.1139
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -819,15 +883,15 @@
                       "X": 0.0252,
                       "Y": 0.0408
                     },
-                    "LeftMargin": 925.632,
-                    "RightMargin": 10.176,
-                    "TopMargin": 196.928,
-                    "BottomMargin": 416.96,
+                    "LeftMargin": 721.9929,
+                    "RightMargin": 7.9373,
+                    "TopMargin": 171.3274,
+                    "BottomMargin": 362.7552,
                     "Tag": 697,
                     "ActionTag": -768787150,
                     "Size": {
-                      "X": 24.192,
-                      "Y": 26.112
+                      "X": 18.8698,
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch_3",
                     "ctype": "ImageViewObjectData"
@@ -846,8 +910,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 937.728,
-                      "Y": 371.392
+                      "X": 731.4278,
+                      "Y": 323.111
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -869,15 +933,15 @@
                       "X": 0.0252,
                       "Y": 0.0408
                     },
-                    "LeftMargin": 925.632,
-                    "RightMargin": 10.176,
-                    "TopMargin": 255.552,
-                    "BottomMargin": 358.336,
+                    "LeftMargin": 721.9929,
+                    "RightMargin": 7.9373,
+                    "TopMargin": 222.3302,
+                    "BottomMargin": 311.7523,
                     "Tag": 698,
                     "ActionTag": -2009159290,
                     "Size": {
-                      "X": 24.192,
-                      "Y": 26.112
+                      "X": 18.8698,
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch_0_0",
                     "ctype": "ImageViewObjectData"
@@ -896,8 +960,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 937.728,
-                      "Y": 295.168
+                      "X": 731.4278,
+                      "Y": 256.7962
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -919,15 +983,15 @@
                       "X": 0.0252,
                       "Y": 0.0408
                     },
-                    "LeftMargin": 925.632,
-                    "RightMargin": 10.176,
-                    "TopMargin": 331.776,
-                    "BottomMargin": 282.112,
+                    "LeftMargin": 721.9929,
+                    "RightMargin": 7.9373,
+                    "TopMargin": 288.6451,
+                    "BottomMargin": 245.4375,
                     "Tag": 699,
                     "ActionTag": -1754775979,
                     "Size": {
-                      "X": 24.192,
-                      "Y": 26.112
+                      "X": 18.8698,
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch_1_0",
                     "ctype": "ImageViewObjectData"
@@ -946,8 +1010,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 937.728,
-                      "Y": 232.768
+                      "X": 731.4278,
+                      "Y": 202.5082
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -969,15 +1033,15 @@
                       "X": 0.0252,
                       "Y": 0.0408
                     },
-                    "LeftMargin": 925.632,
-                    "RightMargin": 10.176,
-                    "TopMargin": 394.176,
-                    "BottomMargin": 219.712,
+                    "LeftMargin": 721.9929,
+                    "RightMargin": 7.9373,
+                    "TopMargin": 342.9331,
+                    "BottomMargin": 191.1494,
                     "Tag": 700,
                     "ActionTag": 1050561931,
                     "Size": {
-                      "X": 24.192,
-                      "Y": 26.112
+                      "X": 18.8698,
+                      "Y": 22.7174
                     },
                     "Name": "Image_Scratch_2_0",
                     "ctype": "ImageViewObjectData"
@@ -995,8 +1059,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 210.72,
-                      "Y": 619.968
+                      "X": 164.3616,
+                      "Y": 539.3721
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1018,15 +1082,15 @@
                       "X": 0.0336,
                       "Y": 0.0306
                     },
-                    "LeftMargin": 194.592,
-                    "RightMargin": 733.152,
-                    "TopMargin": 10.24,
-                    "BottomMargin": 610.176,
+                    "LeftMargin": 151.7818,
+                    "RightMargin": 571.8585,
+                    "TopMargin": 8.9088,
+                    "BottomMargin": 530.8531,
                     "Tag": 701,
                     "ActionTag": -663061588,
                     "Size": {
-                      "X": 32.256,
-                      "Y": 19.584
+                      "X": 25.1597,
+                      "Y": 17.0381
                     },
                     "Name": "Image_177",
                     "ctype": "ImageViewObjectData"
@@ -1044,8 +1108,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 782.208,
-                      "Y": 619.968
+                      "X": 610.1223,
+                      "Y": 539.3721
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1067,15 +1131,15 @@
                       "X": 0.0336,
                       "Y": 0.0306
                     },
-                    "LeftMargin": 766.08,
-                    "RightMargin": 161.664,
-                    "TopMargin": 10.24,
-                    "BottomMargin": 610.176,
+                    "LeftMargin": 597.5425,
+                    "RightMargin": 126.0978,
+                    "TopMargin": 8.9088,
+                    "BottomMargin": 530.8531,
                     "Tag": 705,
                     "ActionTag": 408692404,
                     "Size": {
-                      "X": 32.256,
-                      "Y": 19.584
+                      "X": 25.1597,
+                      "Y": 17.0381
                     },
                     "Name": "Image_177_3",
                     "ctype": "ImageViewObjectData"
@@ -1093,8 +1157,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 208.416,
-                      "Y": 14.848
+                      "X": 162.5645,
+                      "Y": 12.9178
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1116,15 +1180,15 @@
                       "X": 0.0336,
                       "Y": 0.0296
                     },
-                    "LeftMargin": 192.288,
-                    "RightMargin": 735.456,
-                    "TopMargin": 615.68,
-                    "BottomMargin": 5.376,
+                    "LeftMargin": 149.9846,
+                    "RightMargin": 573.6557,
+                    "TopMargin": 535.6416,
+                    "BottomMargin": 4.6771,
                     "Tag": 702,
                     "ActionTag": -982903517,
                     "Size": {
-                      "X": 32.256,
-                      "Y": 18.944
+                      "X": 25.1597,
+                      "Y": 16.4813
                     },
                     "Name": "Image_177_0",
                     "ctype": "ImageViewObjectData"
@@ -1142,8 +1206,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 779.904,
-                      "Y": 14.848
+                      "X": 608.3252,
+                      "Y": 12.9178
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1165,15 +1229,15 @@
                       "X": 0.0336,
                       "Y": 0.0296
                     },
-                    "LeftMargin": 763.776,
-                    "RightMargin": 163.968,
-                    "TopMargin": 615.68,
-                    "BottomMargin": 5.376,
+                    "LeftMargin": 595.7454,
+                    "RightMargin": 127.895,
+                    "TopMargin": 535.6416,
+                    "BottomMargin": 4.6771,
                     "Tag": 706,
                     "ActionTag": 878466779,
                     "Size": {
-                      "X": 32.256,
-                      "Y": 18.944
+                      "X": 25.1597,
+                      "Y": 16.4813
                     },
                     "Name": "Image_177_0_0",
                     "ctype": "ImageViewObjectData"
@@ -1192,7 +1256,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 916.8316,
+                      "X": 705.6316,
                       "Y": 50.9999
                     },
                     "Scale": {
@@ -1202,17 +1266,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.955,
-                      "Y": 0.0797
+                      "X": 0.9423,
+                      "Y": 0.0916
                     },
                     "PreSize": {
-                      "X": 0.0979,
-                      "Y": 0.1562
+                      "X": 0.1255,
+                      "Y": 0.1796
                     },
                     "HorizontalEdge": "RightEdge",
-                    "LeftMargin": 869.8316,
+                    "LeftMargin": 658.6316,
                     "RightMargin": -3.8316,
-                    "TopMargin": 539.0001,
+                    "TopMargin": 455.8001,
                     "BottomMargin": 0.9999,
                     "Tag": 710,
                     "ActionTag": 1177306953,
@@ -1246,16 +1310,16 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.038,
-                      "Y": 0.0797
+                      "X": 0.0487,
+                      "Y": 0.0916
                     },
                     "PreSize": {
-                      "X": 0.0979,
-                      "Y": 0.1562
+                      "X": 0.1255,
+                      "Y": 0.1796
                     },
                     "LeftMargin": -10.4996,
-                    "RightMargin": 876.4996,
-                    "TopMargin": 539.0001,
+                    "RightMargin": 665.2996,
+                    "TopMargin": 455.8001,
                     "BottomMargin": 0.9999,
                     "Tag": 709,
                     "ActionTag": 1723033372,
@@ -1280,8 +1344,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 916.8317,
-                      "Y": 590.3315
+                      "X": 705.6317,
+                      "Y": 507.1315
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1290,19 +1354,19 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.955,
-                      "Y": 0.9224
+                      "X": 0.9424,
+                      "Y": 0.9108
                     },
                     "PreSize": {
-                      "X": 0.0979,
-                      "Y": 0.1562
+                      "X": 0.1255,
+                      "Y": 0.1796
                     },
                     "HorizontalEdge": "RightEdge",
                     "VerticalEdge": "TopEdge",
-                    "LeftMargin": 869.8317,
+                    "LeftMargin": 658.6317,
                     "RightMargin": -3.8317,
                     "TopMargin": -0.3315,
-                    "BottomMargin": 540.3315,
+                    "BottomMargin": 457.1315,
                     "Tag": 708,
                     "ActionTag": 770642048,
                     "Size": {
@@ -1326,7 +1390,7 @@
                     },
                     "Position": {
                       "X": 36.5004,
-                      "Y": 590.3315
+                      "Y": 507.1315
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1335,18 +1399,18 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.038,
-                      "Y": 0.9224
+                      "X": 0.0487,
+                      "Y": 0.9108
                     },
                     "PreSize": {
-                      "X": 0.0979,
-                      "Y": 0.1562
+                      "X": 0.1255,
+                      "Y": 0.1796
                     },
                     "VerticalEdge": "TopEdge",
                     "LeftMargin": -10.4996,
-                    "RightMargin": 876.4996,
+                    "RightMargin": 665.2996,
                     "TopMargin": -0.3315,
-                    "BottomMargin": 540.3315,
+                    "BottomMargin": 457.1315,
                     "Tag": 707,
                     "ActionTag": 1102906392,
                     "Size": {
@@ -1359,8 +1423,8 @@
                 ],
                 "ActionTag": 491874756,
                 "Size": {
-                  "X": 960.0,
-                  "Y": 640.0
+                  "X": 748.8,
+                  "Y": 556.8
                 },
                 "Alpha": 254,
                 "Name": "Panel_6",
@@ -1379,8 +1443,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 480.0,
-                  "Y": 627.2
+                  "X": 374.4,
+                  "Y": 545.6639
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1402,10 +1466,10 @@
                   "X": 0.4546,
                   "Y": 0.1516
                 },
-                "LeftMargin": 261.792,
-                "RightMargin": 261.792,
-                "TopMargin": -35.712,
-                "BottomMargin": 578.688,
+                "LeftMargin": 204.1977,
+                "RightMargin": 204.1978,
+                "TopMargin": -31.0693,
+                "BottomMargin": 503.4584,
                 "Tag": 712,
                 "Children": [
                   {
@@ -1421,8 +1485,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 218.2516,
-                      "Y": 51.6265
+                      "X": 170.2363,
+                      "Y": 44.915
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1444,15 +1508,15 @@
                       "X": 0.3912,
                       "Y": 0.5667
                     },
-                    "LeftMargin": 132.8887,
-                    "RightMargin": 132.8014,
-                    "TopMargin": 17.9058,
-                    "BottomMargin": 24.1347,
+                    "LeftMargin": 103.6532,
+                    "RightMargin": 103.5851,
+                    "TopMargin": 15.578,
+                    "BottomMargin": 20.9972,
                     "Tag": 713,
                     "ActionTag": -1421011725,
                     "Size": {
-                      "X": 170.7259,
-                      "Y": 54.9835
+                      "X": 133.1663,
+                      "Y": 47.8356
                     },
                     "Name": "Image_188",
                     "ctype": "ImageViewObjectData"
@@ -1460,8 +1524,8 @@
                 ],
                 "ActionTag": -1718170485,
                 "Size": {
-                  "X": 436.416,
-                  "Y": 97.024
+                  "X": 340.4045,
+                  "Y": 84.4109
                 },
                 "Name": "Image_187",
                 "ctype": "ImageViewObjectData"
@@ -1479,8 +1543,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 347.424,
-                  "Y": 575.744
+                  "X": 270.9907,
+                  "Y": 500.8973
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1502,15 +1566,15 @@
                   "X": 0.026,
                   "Y": 0.0953
                 },
-                "LeftMargin": 334.944,
-                "RightMargin": 600.0959,
-                "TopMargin": 33.76,
-                "BottomMargin": 545.248,
+                "LeftMargin": 261.2563,
+                "RightMargin": 468.0749,
+                "TopMargin": 29.3712,
+                "BottomMargin": 474.3658,
                 "Tag": 323,
                 "ActionTag": 133932958,
                 "Size": {
-                  "X": 24.96,
-                  "Y": 60.992
+                  "X": 19.4688,
+                  "Y": 53.063
                 },
                 "Name": "Image_6",
                 "ctype": "ImageViewObjectData"
@@ -1528,8 +1592,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 598.272,
-                  "Y": 575.68
+                  "X": 466.6522,
+                  "Y": 500.8415
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1551,15 +1615,15 @@
                   "X": 0.0336,
                   "Y": 0.0953
                 },
-                "LeftMargin": 582.144,
-                "RightMargin": 345.6,
-                "TopMargin": 33.824,
-                "BottomMargin": 545.184,
+                "LeftMargin": 454.0723,
+                "RightMargin": 269.568,
+                "TopMargin": 29.427,
+                "BottomMargin": 474.3099,
                 "Tag": 324,
                 "ActionTag": -2044773172,
                 "Size": {
-                  "X": 32.256,
-                  "Y": 60.992
+                  "X": 25.1597,
+                  "Y": 53.063
                 },
                 "Name": "Image_6_0",
                 "ctype": "ImageViewObjectData"
@@ -1577,8 +1641,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 407.04,
-                  "Y": 570.688
+                  "X": 317.4912,
+                  "Y": 496.4985
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1600,10 +1664,10 @@
                   "X": 0.1393,
                   "Y": 0.0719
                 },
-                "LeftMargin": 340.176,
-                "RightMargin": 486.096,
-                "TopMargin": 46.304,
-                "BottomMargin": 547.68,
+                "LeftMargin": 265.3372,
+                "RightMargin": 379.1549,
+                "TopMargin": 40.2845,
+                "BottomMargin": 476.4815,
                 "Tag": 326,
                 "Children": [
                   {
@@ -1619,8 +1683,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 73.5237,
-                      "Y": 24.3793
+                      "X": 57.3484,
+                      "Y": 21.21
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1642,15 +1706,15 @@
                       "X": 0.9036,
                       "Y": 0.8478
                     },
-                    "LeftMargin": 13.1053,
-                    "RightMargin": -0.214,
-                    "TopMargin": 2.1305,
-                    "BottomMargin": 4.8731,
+                    "LeftMargin": 10.2222,
+                    "RightMargin": -0.1669,
+                    "TopMargin": 1.8536,
+                    "BottomMargin": 4.2396,
                     "Tag": 325,
                     "ActionTag": 288265334,
                     "Size": {
-                      "X": 120.8366,
-                      "Y": 39.0124
+                      "X": 94.2526,
+                      "Y": 33.9408
                     },
                     "Name": "Image_6_1",
                     "ctype": "ImageViewObjectData"
@@ -1658,8 +1722,8 @@
                 ],
                 "ActionTag": -249356501,
                 "Size": {
-                  "X": 133.728,
-                  "Y": 46.016
+                  "X": 104.3078,
+                  "Y": 40.0339
                 },
                 "Name": "Image_6_2",
                 "ctype": "ImageViewObjectData"
@@ -1677,8 +1741,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 530.496,
-                  "Y": 570.688
+                  "X": 413.7869,
+                  "Y": 496.4985
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1700,10 +1764,10 @@
                   "X": 0.1393,
                   "Y": 0.0719
                 },
-                "LeftMargin": 463.632,
-                "RightMargin": 362.64,
-                "TopMargin": 46.304,
-                "BottomMargin": 547.68,
+                "LeftMargin": 361.633,
+                "RightMargin": 282.8592,
+                "TopMargin": 40.2845,
+                "BottomMargin": 476.4815,
                 "Tag": 327,
                 "Children": [
                   {
@@ -1719,8 +1783,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 73.5237,
-                      "Y": 24.3793
+                      "X": 57.3484,
+                      "Y": 21.21
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1742,15 +1806,15 @@
                       "X": 0.9036,
                       "Y": 0.8478
                     },
-                    "LeftMargin": 13.1053,
-                    "RightMargin": -0.214,
-                    "TopMargin": 2.1305,
-                    "BottomMargin": 4.8731,
+                    "LeftMargin": 10.2222,
+                    "RightMargin": -0.1669,
+                    "TopMargin": 1.8536,
+                    "BottomMargin": 4.2396,
                     "Tag": 328,
                     "ActionTag": -1903970428,
                     "Size": {
-                      "X": 120.8366,
-                      "Y": 39.0124
+                      "X": 94.2526,
+                      "Y": 33.9408
                     },
                     "Name": "Image_6_1_12",
                     "ctype": "ImageViewObjectData"
@@ -1758,8 +1822,8 @@
                 ],
                 "ActionTag": -973188165,
                 "Size": {
-                  "X": 133.728,
-                  "Y": 46.016
+                  "X": 104.3078,
+                  "Y": 40.0339
                 },
                 "Name": "Image_6_2_0",
                 "ctype": "ImageViewObjectData"
@@ -1785,7 +1849,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 19.4031,
-                  "Y": 93.952
+                  "Y": 81.7382
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1795,7 +1859,7 @@
                 "IconVisible": false,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.0202,
+                  "X": 0.0259,
                   "Y": 0.1468
                 },
                 "PercentWidthEnable": true,
@@ -1807,9 +1871,9 @@
                   "Y": 0.7109
                 },
                 "LeftMargin": 19.4031,
-                "RightMargin": 61.1409,
-                "TopMargin": 91.072,
-                "BottomMargin": 93.952,
+                "RightMargin": 43.421,
+                "TopMargin": 79.2327,
+                "BottomMargin": 81.7382,
                 "Tag": 512,
                 "Children": [
                   {
@@ -1828,8 +1892,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 219.864,
-                      "Y": 227.488
+                      "X": 171.494,
+                      "Y": 197.9146
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1851,12 +1915,12 @@
                       "X": 0.5,
                       "Y": 1.0
                     },
-                    "RightMargin": 439.728,
+                    "RightMargin": 342.9879,
                     "Tag": 714,
                     "ActionTag": -336795910,
                     "Size": {
-                      "X": 439.7281,
-                      "Y": 454.976
+                      "X": 342.988,
+                      "Y": 395.8291
                     },
                     "Name": "Image_189",
                     "ctype": "ImageViewObjectData"
@@ -1878,8 +1942,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 654.7551,
-                      "Y": 227.488
+                      "X": 510.7091,
+                      "Y": 197.9146
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1901,13 +1965,13 @@
                       "X": 0.5,
                       "Y": 1.0
                     },
-                    "LeftMargin": 434.8911,
-                    "RightMargin": 4.837,
+                    "LeftMargin": 339.2151,
+                    "RightMargin": 3.7728,
                     "Tag": 321,
                     "ActionTag": -2014833156,
                     "Size": {
-                      "X": 439.7281,
-                      "Y": 454.976
+                      "X": 342.988,
+                      "Y": 395.8291
                     },
                     "Name": "Image_189_0",
                     "ctype": "ImageViewObjectData"
@@ -1925,8 +1989,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 439.7281,
-                      "Y": 374.2178
+                      "X": 342.988,
+                      "Y": 325.5695
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1948,15 +2012,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 369.3716,
-                    "RightMargin": 369.3715,
-                    "TopMargin": 22.7715,
-                    "BottomMargin": 316.2311,
+                    "LeftMargin": 288.1099,
+                    "RightMargin": 288.1098,
+                    "TopMargin": 19.8112,
+                    "BottomMargin": 275.121,
                     "Tag": 331,
                     "ActionTag": 1017102377,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_0",
                     "ctype": "ImageViewObjectData"
@@ -1974,8 +2038,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 598.0302,
-                      "Y": 374.2178
+                      "X": 466.4636,
+                      "Y": 325.5695
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1997,15 +2061,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 527.6736,
-                    "RightMargin": 211.0694,
-                    "TopMargin": 22.7715,
-                    "BottomMargin": 316.2311,
+                    "LeftMargin": 411.5855,
+                    "RightMargin": 164.6342,
+                    "TopMargin": 19.8112,
+                    "BottomMargin": 275.121,
                     "Tag": 332,
                     "ActionTag": -610409757,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_1",
                     "ctype": "ImageViewObjectData"
@@ -2023,8 +2087,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 756.3323,
-                      "Y": 374.2178
+                      "X": 589.9394,
+                      "Y": 325.5695
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2046,15 +2110,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 685.9758,
-                    "RightMargin": 52.7673,
-                    "TopMargin": 22.7715,
-                    "BottomMargin": 316.2311,
+                    "LeftMargin": 535.0613,
+                    "RightMargin": 41.1584,
+                    "TopMargin": 19.8112,
+                    "BottomMargin": 275.121,
                     "Tag": 333,
                     "ActionTag": 1778892092,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_2",
                     "ctype": "ImageViewObjectData"
@@ -2072,8 +2136,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 123.1239,
-                      "Y": 227.488
+                      "X": 96.0366,
+                      "Y": 197.9146
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2095,15 +2159,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 52.7674,
-                    "RightMargin": 685.9757,
-                    "TopMargin": 169.5013,
-                    "BottomMargin": 169.5013,
+                    "LeftMargin": 41.1586,
+                    "RightMargin": 535.0612,
+                    "TopMargin": 147.4661,
+                    "BottomMargin": 147.4661,
                     "Tag": 334,
                     "ActionTag": -1221204490,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_3",
                     "ctype": "ImageViewObjectData"
@@ -2121,8 +2185,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 281.426,
-                      "Y": 227.488
+                      "X": 219.5123,
+                      "Y": 197.9146
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2144,15 +2208,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 211.0695,
-                    "RightMargin": 527.6736,
-                    "TopMargin": 169.5013,
-                    "BottomMargin": 169.5013,
+                    "LeftMargin": 164.6343,
+                    "RightMargin": 411.5854,
+                    "TopMargin": 147.4661,
+                    "BottomMargin": 147.4661,
                     "Tag": 335,
                     "ActionTag": 1524195670,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_4",
                     "ctype": "ImageViewObjectData"
@@ -2170,8 +2234,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 439.7281,
-                      "Y": 227.488
+                      "X": 342.988,
+                      "Y": 197.9146
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2193,15 +2257,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 369.3716,
-                    "RightMargin": 369.3715,
-                    "TopMargin": 169.5013,
-                    "BottomMargin": 169.5013,
+                    "LeftMargin": 288.1099,
+                    "RightMargin": 288.1098,
+                    "TopMargin": 147.4661,
+                    "BottomMargin": 147.4661,
                     "Tag": 336,
                     "ActionTag": -904940423,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_5",
                     "ctype": "ImageViewObjectData"
@@ -2219,8 +2283,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 598.0302,
-                      "Y": 227.488
+                      "X": 466.4636,
+                      "Y": 197.9146
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2242,15 +2306,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 527.6736,
-                    "RightMargin": 211.0694,
-                    "TopMargin": 169.5013,
-                    "BottomMargin": 169.5013,
+                    "LeftMargin": 411.5855,
+                    "RightMargin": 164.6342,
+                    "TopMargin": 147.4661,
+                    "BottomMargin": 147.4661,
                     "Tag": 337,
                     "ActionTag": 36210681,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_6",
                     "ctype": "ImageViewObjectData"
@@ -2268,8 +2332,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 756.3323,
-                      "Y": 227.488
+                      "X": 589.9394,
+                      "Y": 197.9146
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2291,15 +2355,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 685.9758,
-                    "RightMargin": 52.7673,
-                    "TopMargin": 169.5013,
-                    "BottomMargin": 169.5013,
+                    "LeftMargin": 535.0613,
+                    "RightMargin": 41.1584,
+                    "TopMargin": 147.4661,
+                    "BottomMargin": 147.4661,
                     "Tag": 338,
                     "ActionTag": -670373168,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_7",
                     "ctype": "ImageViewObjectData"
@@ -2317,8 +2381,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 123.1239,
-                      "Y": 90.9952
+                      "X": 96.0366,
+                      "Y": 79.1658
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2340,15 +2404,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 52.7674,
-                    "RightMargin": 685.9757,
-                    "TopMargin": 305.9941,
-                    "BottomMargin": 33.0085,
+                    "LeftMargin": 41.1586,
+                    "RightMargin": 535.0612,
+                    "TopMargin": 266.2148,
+                    "BottomMargin": 28.7174,
                     "Tag": 339,
                     "ActionTag": -99995460,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_8",
                     "ctype": "ImageViewObjectData"
@@ -2366,8 +2430,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 281.426,
-                      "Y": 90.9952
+                      "X": 219.5123,
+                      "Y": 79.1658
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2389,15 +2453,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 211.0695,
-                    "RightMargin": 527.6736,
-                    "TopMargin": 305.9941,
-                    "BottomMargin": 33.0085,
+                    "LeftMargin": 164.6343,
+                    "RightMargin": 411.5854,
+                    "TopMargin": 266.2148,
+                    "BottomMargin": 28.7174,
                     "Tag": 340,
                     "ActionTag": 1719374065,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_9",
                     "ctype": "ImageViewObjectData"
@@ -2415,8 +2479,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 439.7281,
-                      "Y": 90.9952
+                      "X": 342.988,
+                      "Y": 79.1658
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2438,15 +2502,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 369.3716,
-                    "RightMargin": 369.3715,
-                    "TopMargin": 305.9941,
-                    "BottomMargin": 33.0085,
+                    "LeftMargin": 288.1099,
+                    "RightMargin": 288.1098,
+                    "TopMargin": 266.2148,
+                    "BottomMargin": 28.7174,
                     "Tag": 341,
                     "ActionTag": 18956967,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_10",
                     "ctype": "ImageViewObjectData"
@@ -2464,8 +2528,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 598.0302,
-                      "Y": 90.9952
+                      "X": 466.4636,
+                      "Y": 79.1658
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2487,15 +2551,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 527.6736,
-                    "RightMargin": 211.0694,
-                    "TopMargin": 305.9941,
-                    "BottomMargin": 33.0085,
+                    "LeftMargin": 411.5855,
+                    "RightMargin": 164.6342,
+                    "TopMargin": 266.2148,
+                    "BottomMargin": 28.7174,
                     "Tag": 342,
                     "ActionTag": -1838241120,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_11",
                     "ctype": "ImageViewObjectData"
@@ -2513,8 +2577,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 273.335,
-                      "Y": 373.8993
+                      "X": 213.2013,
+                      "Y": 325.2924
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2536,10 +2600,10 @@
                       "X": 0.1923,
                       "Y": 0.2879
                     },
-                    "LeftMargin": 188.7753,
-                    "RightMargin": 521.5614,
-                    "TopMargin": 15.5829,
-                    "BottomMargin": 308.4055,
+                    "LeftMargin": 147.2447,
+                    "RightMargin": 406.818,
+                    "TopMargin": 13.5571,
+                    "BottomMargin": 268.3127,
                     "Tag": 214,
                     "Children": [
                       {
@@ -2555,8 +2619,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 84.5638,
-                          "Y": 65.5
+                          "X": 65.9566,
+                          "Y": 56.9796
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2578,15 +2642,15 @@
                           "X": 1.0668,
                           "Y": 0.5497
                         },
-                        "LeftMargin": -5.6404,
-                        "RightMargin": -5.6485,
-                        "TopMargin": 29.4888,
-                        "BottomMargin": 29.5012,
+                        "LeftMargin": -4.4059,
+                        "RightMargin": -4.4059,
+                        "TopMargin": 25.6579,
+                        "BottomMargin": 25.6579,
                         "Tag": 215,
                         "ActionTag": 1015372250,
                         "Size": {
-                          "X": 180.4083,
-                          "Y": 71.9976
+                          "X": 140.725,
+                          "Y": 62.6434
                         },
                         "Name": "Image_2",
                         "ctype": "ImageViewObjectData"
@@ -2604,8 +2668,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 72.116,
-                          "Y": 23.449
+                          "X": 56.2478,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2627,15 +2691,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 53.5965,
-                        "RightMargin": 78.484,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 41.8033,
+                        "RightMargin": 61.2209,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 216,
                         "ActionTag": 1003584913,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0",
                         "ctype": "ImageViewObjectData"
@@ -2653,8 +2717,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 88.2169,
-                          "Y": 23.449
+                          "X": 68.8059,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2676,15 +2740,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 69.6974,
-                        "RightMargin": 62.383,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 54.3614,
+                        "RightMargin": 48.6628,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 217,
                         "ActionTag": -1543893180,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0_0",
                         "ctype": "ImageViewObjectData"
@@ -2702,8 +2766,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 104.3348,
-                          "Y": 23.449
+                          "X": 81.3772,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2725,15 +2789,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 85.8153,
-                        "RightMargin": 46.2652,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 66.9327,
+                        "RightMargin": 36.0915,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 218,
                         "ActionTag": -339688462,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0_1",
                         "ctype": "ImageViewObjectData"
@@ -2751,8 +2815,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 120.4357,
-                          "Y": 23.449
+                          "X": 93.9354,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2774,15 +2838,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 101.9162,
-                        "RightMargin": 30.1643,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 79.4909,
+                        "RightMargin": 23.5333,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 219,
                         "ActionTag": -878967114,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0_2",
                         "ctype": "ImageViewObjectData"
@@ -2790,8 +2854,8 @@
                     ],
                     "ActionTag": 379849343,
                     "Size": {
-                      "X": 169.1194,
-                      "Y": 130.9876
+                      "X": 131.9132,
+                      "Y": 113.9592
                     },
                     "Name": "Image_1",
                     "ctype": "ImageViewObjectData"
@@ -2809,8 +2873,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 109.8441,
-                      "Y": 370.5325
+                      "X": 85.6784,
+                      "Y": 322.3633
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2832,10 +2896,10 @@
                       "X": 0.1923,
                       "Y": 0.2879
                     },
-                    "LeftMargin": 25.2844,
-                    "RightMargin": 685.0522,
-                    "TopMargin": 18.9497,
-                    "BottomMargin": 305.0387,
+                    "LeftMargin": 19.7218,
+                    "RightMargin": 534.3409,
+                    "TopMargin": 16.4862,
+                    "BottomMargin": 265.3837,
                     "Tag": 220,
                     "Children": [
                       {
@@ -2851,8 +2915,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 84.5638,
-                          "Y": 65.5
+                          "X": 65.9566,
+                          "Y": 56.9796
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2874,15 +2938,15 @@
                           "X": 1.0668,
                           "Y": 0.5497
                         },
-                        "LeftMargin": -5.6404,
-                        "RightMargin": -5.6485,
-                        "TopMargin": 29.4888,
-                        "BottomMargin": 29.5012,
+                        "LeftMargin": -4.4059,
+                        "RightMargin": -4.4059,
+                        "TopMargin": 25.6579,
+                        "BottomMargin": 25.6579,
                         "Tag": 221,
                         "ActionTag": 1319317170,
                         "Size": {
-                          "X": 180.4083,
-                          "Y": 71.9976
+                          "X": 140.725,
+                          "Y": 62.6434
                         },
                         "Name": "Image_2",
                         "ctype": "ImageViewObjectData"
@@ -2900,8 +2964,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 72.116,
-                          "Y": 23.449
+                          "X": 56.2478,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2923,15 +2987,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 53.5965,
-                        "RightMargin": 78.484,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 41.8033,
+                        "RightMargin": 61.2209,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 222,
                         "ActionTag": -1944266885,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0",
                         "ctype": "ImageViewObjectData"
@@ -2949,8 +3013,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 88.2169,
-                          "Y": 23.449
+                          "X": 68.8059,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2972,15 +3036,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 69.6974,
-                        "RightMargin": 62.383,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 54.3614,
+                        "RightMargin": 48.6628,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 223,
                         "ActionTag": -1981418986,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0_0",
                         "ctype": "ImageViewObjectData"
@@ -2998,8 +3062,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 104.3348,
-                          "Y": 23.449
+                          "X": 81.3772,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -3021,15 +3085,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 85.8153,
-                        "RightMargin": 46.2652,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 66.9327,
+                        "RightMargin": 36.0915,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 224,
                         "ActionTag": 1613526146,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0_1",
                         "ctype": "ImageViewObjectData"
@@ -3047,8 +3111,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 120.4357,
-                          "Y": 23.449
+                          "X": 93.9354,
+                          "Y": 20.3987
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -3070,15 +3134,15 @@
                           "X": 0.219,
                           "Y": 0.1908
                         },
-                        "LeftMargin": 101.9162,
-                        "RightMargin": 30.1643,
-                        "TopMargin": 95.0412,
-                        "BottomMargin": 10.9516,
+                        "LeftMargin": 79.4909,
+                        "RightMargin": 23.5333,
+                        "TopMargin": 82.6888,
+                        "BottomMargin": 9.527,
                         "Tag": 225,
                         "ActionTag": 268595326,
                         "Size": {
-                          "X": 37.0389,
-                          "Y": 24.9948
+                          "X": 28.889,
+                          "Y": 21.7434
                         },
                         "Name": "Image_2_0_2",
                         "ctype": "ImageViewObjectData"
@@ -3086,8 +3150,8 @@
                     ],
                     "ActionTag": 1586646127,
                     "Size": {
-                      "X": 169.1194,
-                      "Y": 130.9876
+                      "X": 131.9132,
+                      "Y": 113.9592
                     },
                     "Name": "Image_1",
                     "ctype": "ImageViewObjectData"
@@ -3105,8 +3169,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 756.3323,
-                      "Y": 90.9952
+                      "X": 589.9394,
+                      "Y": 79.1658
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -3128,15 +3192,15 @@
                       "X": 0.16,
                       "Y": 0.2549
                     },
-                    "LeftMargin": 685.9758,
-                    "RightMargin": 52.7673,
-                    "TopMargin": 305.9941,
-                    "BottomMargin": 33.0085,
+                    "LeftMargin": 535.0613,
+                    "RightMargin": 41.1584,
+                    "TopMargin": 266.2148,
+                    "BottomMargin": 28.7174,
                     "Tag": 343,
                     "ActionTag": 1722249332,
                     "Size": {
-                      "X": 140.713,
-                      "Y": 115.9734
+                      "X": 109.7562,
+                      "Y": 100.8968
                     },
                     "Name": "Image_13_12",
                     "ctype": "ImageViewObjectData"
@@ -3144,8 +3208,8 @@
                 ],
                 "ActionTag": -1760594608,
                 "Size": {
-                  "X": 879.4561,
-                  "Y": 454.976
+                  "X": 685.9759,
+                  "Y": 395.8291
                 },
                 "Name": "Panel_3",
                 "ctype": "PanelObjectData"
@@ -3193,8 +3257,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 930.0808,
-                  "Y": 613.223
+                  "X": 718.8808,
+                  "Y": 530.023
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3203,19 +3267,19 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.9688,
-                  "Y": 0.9582
+                  "X": 0.96,
+                  "Y": 0.9519
                 },
                 "PreSize": {
-                  "X": 0.0854,
-                  "Y": 0.1281
+                  "X": 0.1095,
+                  "Y": 0.1473
                 },
                 "HorizontalEdge": "RightEdge",
                 "VerticalEdge": "TopEdge",
-                "LeftMargin": 889.0808,
+                "LeftMargin": 677.8808,
                 "RightMargin": -11.0808,
                 "TopMargin": -14.223,
-                "BottomMargin": 572.223,
+                "BottomMargin": 489.023,
                 "Tag": 567,
                 "ActionTag": -548243778,
                 "Size": {
@@ -3268,8 +3332,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 317.856,
-                  "Y": 62.912
+                  "X": 247.9277,
+                  "Y": 54.7334
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3284,13 +3348,13 @@
                   "Y": 0.0983
                 },
                 "PreSize": {
-                  "X": 0.1604,
-                  "Y": 0.0922
+                  "X": 0.2057,
+                  "Y": 0.106
                 },
-                "LeftMargin": 240.856,
-                "RightMargin": 565.144,
-                "TopMargin": 547.588,
-                "BottomMargin": 33.412,
+                "LeftMargin": 170.9277,
+                "RightMargin": 423.8723,
+                "TopMargin": 472.5665,
+                "BottomMargin": 25.2334,
                 "Tag": 317,
                 "ActionTag": -1671816660,
                 "Size": {
@@ -3343,8 +3407,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 641.568,
-                  "Y": 62.912
+                  "X": 500.423,
+                  "Y": 54.7334
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3359,13 +3423,13 @@
                   "Y": 0.0983
                 },
                 "PreSize": {
-                  "X": 0.1604,
-                  "Y": 0.0922
+                  "X": 0.2057,
+                  "Y": 0.106
                 },
-                "LeftMargin": 564.568,
-                "RightMargin": 241.432,
-                "TopMargin": 547.588,
-                "BottomMargin": 33.412,
+                "LeftMargin": 423.423,
+                "RightMargin": 171.377,
+                "TopMargin": 472.5665,
+                "BottomMargin": 25.2334,
                 "Tag": 316,
                 "ActionTag": -1388254793,
                 "Size": {
@@ -3378,8 +3442,8 @@
             ],
             "ActionTag": -1300486961,
             "Size": {
-              "X": 960.0,
-              "Y": 640.0
+              "X": 748.8,
+              "Y": 556.8
             },
             "Name": "Panel_9",
             "ctype": "PanelObjectData"
@@ -3410,6 +3474,7 @@
         "Common/Cn12.png",
         "Common/Cn14.png",
         "Common/Cn15.png",
+        "Common/Lg_selectbardground.jpg",
         "Default/Button_Disable.png",
         "Default/ImageFile.png",
         "DifficultySelection/DS16.png",
