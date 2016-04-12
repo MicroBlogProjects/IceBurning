@@ -172,7 +172,7 @@ void protobuf_AddDesc_Login_2eproto() {
     "sponse\022\013\n\003uin\030\001 \001(\005\022\016\n\006result\030\002 \001(\005\".\n\rC"
     "SRoomMessage\022\013\n\003uin\030\002 \001(\005\022\020\n\010username\030\003 "
     "\001(\t\"\024\n\022CSPullRoomsRequest\"D\n\023CSPullRooms"
-    "Response\022\016\n\006result\030\001 \001(\005\022\035\n\005rooms\030\002 \001(\0132"
+    "Response\022\016\n\006result\030\001 \001(\005\022\035\n\005rooms\030\002 \003(\0132"
     "\016.CSRoomMessage", 255);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Login.proto", &protobuf_RegisterTypes);
@@ -1160,7 +1160,6 @@ CSPullRoomsResponse::CSPullRoomsResponse()
 }
 
 void CSPullRoomsResponse::InitAsDefaultInstance() {
-  rooms_ = const_cast< ::CSRoomMessage*>(&::CSRoomMessage::default_instance());
 }
 
 CSPullRoomsResponse::CSPullRoomsResponse(const CSPullRoomsResponse& from)
@@ -1172,7 +1171,6 @@ CSPullRoomsResponse::CSPullRoomsResponse(const CSPullRoomsResponse& from)
 void CSPullRoomsResponse::SharedCtor() {
   _cached_size_ = 0;
   result_ = 0;
-  rooms_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -1182,7 +1180,6 @@ CSPullRoomsResponse::~CSPullRoomsResponse() {
 
 void CSPullRoomsResponse::SharedDtor() {
   if (this != default_instance_) {
-    delete rooms_;
   }
 }
 
@@ -1210,10 +1207,8 @@ CSPullRoomsResponse* CSPullRoomsResponse::New() const {
 void CSPullRoomsResponse::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     result_ = 0;
-    if (has_rooms()) {
-      if (rooms_ != NULL) rooms_->::CSRoomMessage::Clear();
-    }
   }
+  rooms_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -1239,16 +1234,17 @@ bool CSPullRoomsResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .CSRoomMessage rooms = 2;
+      // repeated .CSRoomMessage rooms = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_rooms:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_rooms()));
+                input, add_rooms()));
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(18)) goto parse_rooms;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -1276,10 +1272,10 @@ void CSPullRoomsResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->result(), output);
   }
 
-  // optional .CSRoomMessage rooms = 2;
-  if (has_rooms()) {
+  // repeated .CSRoomMessage rooms = 2;
+  for (int i = 0; i < this->rooms_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->rooms(), output);
+      2, this->rooms(i), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -1295,11 +1291,11 @@ void CSPullRoomsResponse::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->result(), target);
   }
 
-  // optional .CSRoomMessage rooms = 2;
-  if (has_rooms()) {
+  // repeated .CSRoomMessage rooms = 2;
+  for (int i = 0; i < this->rooms_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        2, this->rooms(), target);
+        2, this->rooms(i), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -1320,14 +1316,15 @@ int CSPullRoomsResponse::ByteSize() const {
           this->result());
     }
 
-    // optional .CSRoomMessage rooms = 2;
-    if (has_rooms()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->rooms());
-    }
-
   }
+  // repeated .CSRoomMessage rooms = 2;
+  total_size += 1 * this->rooms_size();
+  for (int i = 0; i < this->rooms_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->rooms(i));
+  }
+
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -1353,12 +1350,10 @@ void CSPullRoomsResponse::MergeFrom(const ::google::protobuf::Message& from) {
 
 void CSPullRoomsResponse::MergeFrom(const CSPullRoomsResponse& from) {
   GOOGLE_CHECK_NE(&from, this);
+  rooms_.MergeFrom(from.rooms_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_result()) {
       set_result(from.result());
-    }
-    if (from.has_rooms()) {
-      mutable_rooms()->::CSRoomMessage::MergeFrom(from.rooms());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -1384,7 +1379,7 @@ bool CSPullRoomsResponse::IsInitialized() const {
 void CSPullRoomsResponse::Swap(CSPullRoomsResponse* other) {
   if (other != this) {
     std::swap(result_, other->result_);
-    std::swap(rooms_, other->rooms_);
+    rooms_.Swap(&other->rooms_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
