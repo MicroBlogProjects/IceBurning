@@ -4,7 +4,7 @@
 //弃用
 //管理所有的怪物
 var ScheduleTime =1.0/10;
-var TestTime = 5;
+var TestTime = 2;
 var monsterBackGroundLayer;
 
 var MonsterBackgroundLayer = cc.Layer.extend({
@@ -16,6 +16,8 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     buildingPositionConfig : null,
     buildingPositionMark : null, //标记是否被放塔
     buildingTickLayer : null,
+    account : null,//测试
+
     ctor : function(){
         this._super();
         this.myMonsterArray = []; //创建一个数组
@@ -27,6 +29,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
 
         this.schedule(this.updateEvent,ScheduleTime);//计时器
         this.schedule(this.monsterTest,TestTime);//计时器
+        //this.monsterTest();
     },
 
     init :function(){
@@ -62,13 +65,15 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         else{
             this.enemyMonsterArray.push(monsterSprite);
         }
+        monsterManager.addMonsterSprite(monsterSprite);
     },
 
     addMonsterSprite : function(config,point,isMymonster){
         var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
         point.x -= offset.x;
         if(config.attribute.id < 100){//怪物
-            if(this.isInPath(this.walkingPathConfig,point)){
+            //if(this.isInPath(this.walkingPathConfig,point)){
+            if(checkPathManager.isInWalkingPath(point)){
                 var mosterSprite = new MonsterSprite(config,isMymonster);
                 mosterSprite.setPosition(point);
                 this.addChild(mosterSprite);
@@ -82,15 +87,19 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             }
         }
         else { //建筑物
-            var ret =this.isInBuildingPosition(this.buildingPositionConfig,point);
+            /*var ret =this.isInBuildingPosition(this.buildingPositionConfig,point);
             if(ret == -1 || this.buildingPositionMark[ret]){
                 return;
+            }*/
+            var position = checkPathManager.isInTowerPosition(point);
+            if(position == null || position == undefined){
+                return
             }
             else{
-                this.buildingPositionMark[ret] = true;
+                //this.buildingPositionMark[ret] = true;
                 var mosterSprite = new MonsterSprite(config,isMymonster);
-                var element = this.buildingPositionConfig[ret];
-                var position = cc.p((element.origin.x+1)*TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
+                //var element = this.buildingPositionConfig[ret];
+                //var position = cc.p((element.origin.x+1)*TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
                 mosterSprite.setPosition(position);
                 this.addChild(mosterSprite);
                 if(isMymonster){
@@ -104,7 +113,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         }
     },
 
-    isInRect : function(config,point){
+    /*isInRect : function(config,point){
         var origin = config.origin;
         var destination = config.destination;
         var rect = cc.rect(origin.x * TMXTileMapsize, origin.y * TMXTileMapsize,(destination.x - origin.x) *TMXTileMapsize,(destination.y - origin.y) * TMXTileMapsize);
@@ -155,10 +164,11 @@ var MonsterBackgroundLayer = cc.Layer.extend({
             }
         }
         return -1;
-    },
+    },*/
 
 
     monsterTest : function(){
+        this.account ++;
         var points;
         if(GC.IS_HOST){
             points = [cc.p(50 * TMXTileMapsize,3 * TMXTileMapsize),cc.p(50*TMXTileMapsize,10*TMXTileMapsize), cc.p(50*TMXTileMapsize,17*TMXTileMapsize)];
@@ -174,6 +184,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         mosterSprite.setPosition(point);
         this.addChild(mosterSprite);
         this.enemyMonsterArray.push(mosterSprite);
+        monsterManager.addMonsterSprite(mosterSprite);
     },
 
     updateEvent : function(){
@@ -186,25 +197,27 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         for(var  i = 0; i < this.myMonsterArray.length; i++){
             var monster = this.myMonsterArray[i];
             if(monster.m_activity == false){
+                monsterManager.removeMonsterSprite(monster);
                 this.myMonsterArray.splice(i,1);
             }
         }
         for(var  i = 0; i < this.enemyMonsterArray.length;i ++){
             var monster = this.enemyMonsterArray[i];
             if(this.enemyMonsterArray[i].m_activity == false){
+                monsterManager.removeMonsterSprite(monster);
                 this.enemyMonsterArray.splice(i,1);
             }
         }
     },
 
-    resetBuildingPosition : function(monster){
+    /*resetBuildingPosition : function(monster){
         if(monster.m_type == MonsterType.Building) {
             var ret = this.isInBuildingPosition(this.buildingPositionConfig, monster.getPosition());
             if (ret != -1) {
                 this.buildingPositionMark[ret] = false;
             }
         }
-    },
+    },*/
 
     monsterWalking :function(){
         for(var i = 0;i < this.myMonsterArray.length; i++){
@@ -220,7 +233,8 @@ var MonsterBackgroundLayer = cc.Layer.extend({
 
     walk : function(monster, enemyMonsterArray){
         if(monster.m_HP <= 0){
-            this.resetBuildingPosition(monster);
+            //this.resetBuildingPosition(monster);
+            checkPathManager.resetBuildingPosition(monster);
             monster.monsterAction(MonsterState.Death);
             return;
         }
@@ -269,21 +283,25 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 }
 
             }
-            if(this.isInUpPath(this.fightingPathConfig,monsterPoint)){
+            //if(this.isInUpPath(this.fightingPathConfig,monsterPoint)){
+            if(checkPathManager.isInFightUpPath(monsterPoint)){
                 destinationX = monsterPoint.x;
                 destinationY = monsterPoint.y + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
                 destinationPoint = cc.p(destinationX,destinationY);
-                if(!this.isInPath(this.fightingPathConfig,destinationPoint)){
+                //if(!this.isInPath(this.fightingPathConfig,destinationPoint)){
+                if(!checkPathManager.isInFightPath(destinationPoint)){
                     destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
                     destinationY = monsterPoint.y;
                     destinationPoint = cc.p(destinationX,destinationY);
                 }
             }
-            else if(this.isInDownPath(this.fightingPathConfig,monsterPoint)){
+            //else if(this.isInDownPath(this.fightingPathConfig,monsterPoint)){
+            else if(checkPathManager.isInFightDownPath(monsterPoint)){
                 destinationX = monsterPoint.x;
                 destinationY = monsterPoint.y - monster.m_walkSpeed * ScheduleTime * monster.m_direct;
                 destinationPoint = cc.p(destinationX,destinationY);
-                if(!this.isInPath(this.fightingPathConfig,destinationPoint)){
+                //if(!this.isInPath(this.fightingPathConfig,destinationPoint)){
+                if(!checkPathManager.isInFightPath(destinationPoint)){
                     destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
                     destinationY = monsterPoint.y;
                     destinationPoint = cc.p(destinationX,destinationY);
@@ -295,10 +313,18 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 destinationPoint = cc.p(destinationX,destinationY);
             }
             monster.setPosition(destinationPoint);
+            if(destinationY != monsterPoint.y)
+            {
+                monsterManager.monsterChangeY(monster);
+            }
         }
         else{
             var enemyPoint = destinationMonster.getPosition();
-            if(minDistance <= (attackRadius * attackRadius)){ //攻击范围
+            if(minDistance < (attackRadius * attackRadius)){ //攻击范围
+                /*if(monster.m_id < 100)
+                {
+                    cc.log(monster.getPosition().y);
+                }*/
                 if(monsterPoint.x < enemyPoint.x){
                     state = MonsterState.AttackRight;
                 }
@@ -337,6 +363,10 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                     }
                     destinationPoint = cc.p(destinationX,destinationY);
                     monster.setPosition(destinationPoint);
+                    if(destinationY != monsterPoint.y){
+                        monsterManager.monsterChangeY(monster);
+                    }
+
                 }
             }
         }
@@ -350,22 +380,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     //拖动怪物的效果
     addClipperNode :function(){
         //设置模板
-        var stencil = cc.Node.create();
-        for(var i = 0; i<this.walkingPathConfig.UpPath.length ;i++){
-            var element = this.walkingPathConfig.UpPath[i];
-            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
-            stencil.addChild(rectangular);
-        }
-        for(var i =0 ;i < this.walkingPathConfig.StraightPath.length;i++){
-            var element = this.walkingPathConfig.StraightPath[i];
-            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
-            stencil.addChild(rectangular);
-        }
-        for(var i =0 ;i < this.walkingPathConfig.DownPath.length;i++){
-            var element = this.walkingPathConfig.DownPath[i];
-            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
-            stencil.addChild(rectangular);
-        }
+        var stencil = checkPathManager.getStencil();
         //设置
         this.m_clipperNode = cc.ClippingNode.create(stencil);
         this.m_clipperNode.setInverted(true);//底板可见
@@ -374,7 +389,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         var baLayer = cc.LayerColor.create(cc.color(0,0,0,150));
         baLayer.setScaleX(4);
         this.m_clipperNode.addChild(baLayer);
-        this.addChild(this.m_clipperNode);
+        this.addChild(this.m_clipperNode,20000);
     },
     removeClipperNode : function(){
         this.m_clipperNode.removeFromParent();

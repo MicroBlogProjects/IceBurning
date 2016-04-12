@@ -3,6 +3,7 @@
  */
 
 MonsterSprite = cc.Sprite.extend({
+    m_weiyi : null,
     m_isMyMonster : true, //是否是我方怪物
     m_state :null, //执行什么动画
     m_type : null, //怪物还是建筑
@@ -35,6 +36,7 @@ MonsterSprite = cc.Sprite.extend({
     m_total_HP :null,
 
     ctor : function(config,isMyMonster){
+        this.m_weiyi = parseInt(Math.random() * 1000);
         var attributeConfig = config.attribute;
         this._super(attributeConfig.defaultImage);
 
