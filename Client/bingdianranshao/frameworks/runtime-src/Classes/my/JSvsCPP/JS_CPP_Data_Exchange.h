@@ -19,9 +19,9 @@ using namespace std;
     };                                                                                          \
     BindMsgIDToJsObj_##msgID_##JSReq_##JSRes var_BindMsgIDToJsObj_##msgID_##JSReq_##JSRes;  
 
-#define NewField(TYPE, NAME) \
-	TYPE NAME; \
-	TYPE get_##NAME() { return NAME; } \
+#define NewField(TYPE, NAME)                        \
+	TYPE NAME;                                      \
+	TYPE get_##NAME() { return NAME; }              \
 	void set_##NAME(TYPE A##NAME) { NAME = A##NAME; }
 
 #define NewRequest(PB)                                                              \
@@ -96,42 +96,59 @@ private:
 /******************************************************************************/
 // 登录的协议
 NewRequest(CSLoginRequest)
-    NewField(string, username)
-	NewField(string, password)
+NewField(string, username)
+NewField(string, password)
 EndRequest(CSLoginRequest)
 NewResponse(CSLoginResponse)
-	NewField(int, uin)
+NewField(int, uin)
 EndResponse(CSLoginResponse)
 
-// to add 下一个协议
+// 拉取房间列表
 NewEntity(CSRoomMessage)
-	NewField(int, uin)
-	NewField(string, username)
+NewField(int, uin)
+NewField(string, username)
 EndEntity(CSRoomMessage)
 NewRequest(CSPullRoomsRequest)
 EndRequest(CSPullRoomsRequest)
 NewResponse(CSPullRoomsResponse)
-	NewField(cocos2d::Vector<JS_CSRoomMessage*>, rooms)
+NewField(cocos2d::Vector<JS_CSRoomMessage*>, rooms)
 EndResponse(CSPullRoomsResponse)
 
-//
+// 创建房间
 NewRequest(CSCreateRoomRequest)
 EndRequest(CSCreateRoomRequest)
 NewResponse(CSCreateRoomResponse)
 EndResponse(CSCreateRoomResponse)
 
-//
+// 请求加入房间
 NewRequest(CSJoinRoomRequest)
-  NewField(int,uin)
+NewField(int, uin)
 EndRequest(CSJoinRoomRequest)
 NewResponse(CSJoinRoomResponse)
 EndResponse(CSJoinRoomResponse)
 
-//
+// 准备就绪
 NewRequest(CSFightReadyRequest)
 EndRequest(CSFightReadyRequest)
 NewResponse(CSFightReadyResponse)
 EndResponse(CSFightReadyResponse)
+
+// 帧同步信息
+NewEntity(PBFrameMessage)
+    NewField(int, uin)
+    NewField(int, type)
+    NewField(int, obj_id)
+    NewField(int, pos_x)
+    NewField(int, pos_y)
+EndEntity(PBFrameMessage)
+NewRequest(CSFrameSyncRequest)
+    NewField(JS_PBFrameMessage*, step)
+EndRequest(CSFrameSyncRequest)
+NewResponse(CSFrameSyncResponse)
+    NewField(cocos2d::Vector<JS_PBFrameMessage*>, steps)
+EndResponse(CSFrameSyncResponse)
+
+// to add 下一个协议
 /******************************************************************************/
 
 
