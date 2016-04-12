@@ -2,7 +2,7 @@
 
 NS_LS_BEGIN
 
-int32_t CPlayer::SendMessageToSelf(int32_t msgID, CMessageBody* body)
+int32_t CPlayer::SendMessageToSelf(int32_t msgID, CMessageBody* body) const
 {
     CMessage msg;
     CMessageHead* h = new CMessageHead(uin, msgID);

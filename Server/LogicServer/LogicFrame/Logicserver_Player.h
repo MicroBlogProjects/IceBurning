@@ -19,7 +19,7 @@ public:
     CPlayer(int32_t _uin, std::string _username, std::string _password): 
         uin(_uin), username(_username), password(_password) {}
 
-    int32_t SendMessageToSelf(int32_t msgID, CMessageBody* body);
+    int32_t SendMessageToSelf(int32_t msgID, CMessageBody* body) const;
 
     int32_t GetUin() const { return uin; }
     void SetUin(int32_t _uin) { uin = _uin; }
