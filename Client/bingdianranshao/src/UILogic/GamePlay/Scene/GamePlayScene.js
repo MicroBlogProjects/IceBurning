@@ -5,28 +5,31 @@
 
 var gamePlayLayer;
 var GamePlayLayer = cc.Layer.extend({
-    monsterBackgroundLayer : null,
+
     scrollView : null,
+    backgroundLayer : null,
+    monstarLayer : null,
     monsterTouchlayer: null,
-    TMXTiledMap :null,
+
     playerInfomation : null,
     selectTool : null,
     timeTitle : null,
     GC_Time : 0,
+
     ctor:function () {
         this._super();
-        this.addScrollView();
-        this.addMonsteBackgroundrLayer();
+        this.addBackgroundpScrollView();
+        this.addMonsterLayerLayer();
         this.addMonsterTouchlayer();
         this.playerInfomation = ccs.load(res.GM_PlayerInfomation_json).node;
         this.TimeTitle = ccui.helper.seekWidgetByName(this.playerInfomation,"m_time_label");
-        //this.addSelectTool();
 
         this.addChild(this.playerInfomation,150);
         this.schedule(this.updataTime,1);//计时器
         gamePlayLayer = this;
     },
-    addScrollView :function(){
+    addBackgroundpScrollView :function(){
+
         this.scrollView = new ccui.ScrollView();
         this.scrollView.setDirection(ccui.ScrollView.DIR_HORIZONTAL);
         this.scrollView.setTouchEnabled(true);
@@ -36,6 +39,14 @@ var GamePlayLayer = cc.Layer.extend({
         if(GC.IS_HOST == false){
             this.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(function(){this.scrollView.jumpToRight()}.bind(this))));
         }
+        this.backgroundLayer = new MonsterBackgroundLayer();
+        this.scrollView.addChild(this.backgroundLayer,LAYER_PRIORITY_MAP);
+    },
+    addMonsterLayerLayer : function () {
+        this.monstarLayer = new MonsterLayer();
+        this.monstarLayer.addMainCitySprite();
+        this.scrollView.addChild(this.monstarLayer,LAYER_PRIORITY_MONSTER);
+
     },
 
     updataTime : function(){
@@ -60,16 +71,6 @@ var GamePlayLayer = cc.Layer.extend({
         var timeTitle = "00:"+minutesTitle+secondTitle;
         this.TimeTitle.setString(timeTitle);
 
-    },
-    addMonsteBackgroundrLayer : function(){
-        this.TMXTiledMap = cc.TMXTiledMap.create(res.GM_Map_tmx);
-        /*var sprite = cc.Sprite.create(res.GM_PickImage_png);
-        var mapLayer = this.TMXTiledMap.getLayer("MapLayer");
-        var sp = mapLayer.getTileAt(cc.p(10,10));
-        sp.addChild(sprite);*/
-        this.scrollView.addChild(this.TMXTiledMap,LAYER_PRIORITY_MAP);
-        this.monsterBackgroundLayer = new MonsterBackgroundLayer();
-        this.scrollView.addChild(this.monsterBackgroundLayer,LAYER_PRIORITY_MAP);
     },
 
     addMonsterTouchlayer :function(){

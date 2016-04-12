@@ -155,6 +155,18 @@ var CheckPathManager = cc.Class.extend({
         var color = cc.color(0,0,0);
         rectangular.drawRect(origin,destination,color);
         return rectangular;
+    },
+
+    getBuildintPositions : function () {
+        var positions = []
+        for (var i = 0; i < this.buildingPositionConfig.length; i++) {
+            var element = this.buildingPositionConfig[i];
+            if (this.buildingPositionMark[i] == false) {//还没放塔
+                var position = cc.p((element.origin.x + 1) * TMXTileMapsize, (element.origin.y + 1) * TMXTileMapsize);
+                positions.push(position);
+            }
+        }
+        return positions;
     }
 
 });

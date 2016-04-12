@@ -49,7 +49,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         else {
             monsterBackGroundLayer.removeBuildingTick();
         }
-        monsterBackGroundLayer.addMonsterSprite(target.m_config, point,true);
+        monsterManager.addMonsterSprite(target.m_id, point,true);
 
     },
     onTouchCancelled : function (touch, event) {

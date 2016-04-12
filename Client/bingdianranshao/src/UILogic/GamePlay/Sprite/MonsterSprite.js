@@ -36,7 +36,6 @@ MonsterSprite = cc.Sprite.extend({
     m_total_HP :null,
 
     ctor : function(config,isMyMonster){
-        this.m_weiyi = parseInt(Math.random() * 1000);
         var attributeConfig = config.attribute;
         this._super(attributeConfig.defaultImage);
 
@@ -131,7 +130,7 @@ MonsterSprite = cc.Sprite.extend({
             enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
         }
         else {
-            monsterBackGroundLayer.skillAnimate(skillConfig,enemyMonster);
+            monsterLayer.skillAnimate(skillConfig,enemyMonster);
         }
         if(endAnimate == null || endAnimate == undefined){
             this.m_state = null;
