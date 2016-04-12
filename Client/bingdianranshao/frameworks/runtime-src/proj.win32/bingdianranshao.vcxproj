@@ -178,7 +178,7 @@ copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Classes\my\Common\Console_Output.cpp" />
+    <ClCompile Include="..\Classes\my\Common\Common_Tools.cpp" />
     <ClCompile Include="..\Classes\my\Connect\ClientSocket.cpp" />
     <ClCompile Include="..\Classes\my\Connect\CMessage.cpp" />
     <ClCompile Include="..\Classes\my\JSvsCPP\BindPBWithJS.cpp" />
@@ -186,16 +186,16 @@ copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
     <ClCompile Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.cpp" />
     <ClCompile Include="..\Classes\my\JSvsCPP\MessageProxy.cpp" />
     <ClCompile Include="..\Classes\my\ProtoOut\CreateRoom.pb.cc" />
+    <ClCompile Include="..\Classes\my\ProtoOut\GamePlay.pb.cc" />
     <ClCompile Include="..\Classes\my\ProtoOut\Login.pb.cc" />
     <ClCompile Include="..\Classes\my\ProtoOut\MessageRegister.cpp" />
-    <ClCompile Include="..\Classes\my\ProtoOut\Test.pb.cc" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Common\include\Message_i.h" />
     <ClInclude Include="..\Classes\my\Common\Common_Head.h" />
-    <ClInclude Include="..\Classes\my\Common\Console_Output.h" />
+    <ClInclude Include="..\Classes\my\Common\Common_Tools.h" />
     <ClInclude Include="..\Classes\my\Connect\ClientSocket.h" />
     <ClInclude Include="..\Classes\my\Connect\CMessage.h" />
     <ClInclude Include="..\Classes\my\JSvsCPP\BindPBWithJS.h" />
@@ -203,9 +203,9 @@ copy "$(ProjectDir)..\..\..\project.json" "$(OutDir)\" /Y</Command>
     <ClInclude Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.h" />
     <ClInclude Include="..\Classes\my\JSvsCPP\MessageProxy.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\CreateRoom.pb.h" />
+    <ClInclude Include="..\Classes\my\ProtoOut\GamePlay.pb.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\Login.pb.h" />
     <ClInclude Include="..\Classes\my\ProtoOut\MessageRegister.h" />
-    <ClInclude Include="..\Classes\my\ProtoOut\Test.pb.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="resource.h" />

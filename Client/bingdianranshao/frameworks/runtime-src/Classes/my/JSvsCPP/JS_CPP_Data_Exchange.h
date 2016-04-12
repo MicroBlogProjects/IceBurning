@@ -60,7 +60,7 @@ using namespace std;
 		JS_##PB() {}																\
 		~JS_##PB(){}
 #define EndEntity(PB)																\
-	};
+};
 
 NS_GJ_BEGIN
 
@@ -96,22 +96,22 @@ private:
 /******************************************************************************/
 // 登录的协议
 NewRequest(CSLoginRequest)
-NewField(string, username)
-NewField(string, password)
+    NewField(string, username)
+    NewField(string, password)
 EndRequest(CSLoginRequest)
 NewResponse(CSLoginResponse)
-NewField(int, uin)
+    NewField(int, uin)
 EndResponse(CSLoginResponse)
 
 // 拉取房间列表
 NewEntity(CSRoomMessage)
-NewField(int, uin)
-NewField(string, username)
+    NewField(int, uin)
+    NewField(string, username)
 EndEntity(CSRoomMessage)
 NewRequest(CSPullRoomsRequest)
 EndRequest(CSPullRoomsRequest)
 NewResponse(CSPullRoomsResponse)
-NewField(cocos2d::Vector<JS_CSRoomMessage*>, rooms)
+    NewField(cocos2d::Vector<JS_CSRoomMessage*>, rooms)
 EndResponse(CSPullRoomsResponse)
 
 // 创建房间
@@ -122,7 +122,7 @@ EndResponse(CSCreateRoomResponse)
 
 // 请求加入房间
 NewRequest(CSJoinRoomRequest)
-NewField(int, uin)
+    NewField(int, uin)
 EndRequest(CSJoinRoomRequest)
 NewResponse(CSJoinRoomResponse)
 EndResponse(CSJoinRoomResponse)
