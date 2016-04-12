@@ -22,8 +22,9 @@ GC.UIN = -1;
 
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
-var LAYER_PRIORITY_TOUCH = 100;                                //点击层优先级
 var LAYER_PRIORITY_MONSTER = 10;                                //怪物层优先级
+var LAYER_PRIORITY_TOUCH = 100;                                //点击层优先级
+
 
 var UserOperatorType = {
     "Monster" : 1

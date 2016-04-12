@@ -9,12 +9,12 @@ YuangujurenConfig.attribute = {
     "id" : 1, //id
     "name" : "远古巨人",
     "walkSpeed" : 50, //移动速度
-    "HP" : 20.0, //血量
+    "HP" : 1120.0, //血量
     "sightRadius" : 100.0, //视野半径
     "defense" : 20.0,
 
     "attack" : 20.0, //攻击力
-    "attackRadius" : 5.0, //攻击半径
+    "attackRadius" : 10.0, //攻击半径
     //"attackSpeed" : 1.0  //攻击速度 多少秒一下
 
     "Icon" : res.GM_YgjrIcon_png,

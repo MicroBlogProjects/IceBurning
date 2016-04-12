@@ -25,10 +25,10 @@ var MonsterTouchSprite = cc.Sprite.extend({
         }
         MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
         if(target.m_id < 100){
-            monsterManager.addClipperNode();
+            monsterBackGroundLayer.addClipperNode();
         }
         else{
-            monsterManager.addBuildingTick();
+            monsterBackGroundLayer.addBuildingTick();
         }
         return true;
     },
@@ -42,11 +42,12 @@ var MonsterTouchSprite = cc.Sprite.extend({
         var point = touch.getLocation();
         var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
         point.x -= offset.x;
+
         if(target.m_id < 100){
-            monsterManager.removeClipperNode();
+            monsterBackGroundLayer.removeClipperNode();
         }
         else {
-            monsterManager.removeBuildingTick();
+            monsterBackGroundLayer.removeBuildingTick();
         }
         /*var step = new GameJoy.JS_PBFrameMessage();
         step.set_uin(GC.UIN);
@@ -57,7 +58,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         GameJoy.JS_CSFrameSyncRequest.set_step(step);
         GameJoy.Proxy.SendRequest();
         cc.log("send Monster Message");*/
-        monsterManager.addMonsterSprite(target.m_config, point,true);
+        monsterManager.addMonsterSprite(target.m_id, point,true);
 
     },
     onTouchCancelled : function (touch, event) {
