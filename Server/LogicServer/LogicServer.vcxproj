@@ -114,6 +114,7 @@
     <ClInclude Include="..\Proto_out\Login.h" />
     <ClInclude Include="LogicFrame\Logicserver_FrameBase.h" />
     <ClInclude Include="LogicFrame\Logicserver_LogicFrame.h" />
+    <ClInclude Include="LogicFrame\Logicserver_Player.h" />
     <ClInclude Include="LogicFrame\LoginFrame.h" />
     <ClInclude Include="Logicserver_Common.h" />
     <ClInclude Include="Network\Logicserver_EpollUnit.h" />
@@ -126,6 +127,7 @@
     <ClCompile Include="..\Proto_out\Login.cpp" />
     <ClCompile Include="LogicFrame\Logicserver_FrameBase.cpp" />
     <ClCompile Include="LogicFrame\Logicserver_LogicFrame.cpp" />
+    <ClCompile Include="LogicFrame\Logicserver_Player.cpp" />
     <ClCompile Include="LogicFrame\LoginFrame.cpp" />
     <ClCompile Include="Logicserver_server.cpp" />
     <ClCompile Include="Network\Logicserver_EpollUnit.cpp" />
