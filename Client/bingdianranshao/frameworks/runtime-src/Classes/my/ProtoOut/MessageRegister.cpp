@@ -11,6 +11,9 @@ RegistPBToMessageID(MSG_ON_PULL_ROOMS, CSPullRoomsRequest, CSPullRoomsResponse)
 RegistPBToMessageID(MSG_ON_CREATE_ROOM, CSCreateRoomRequest, CSCreateRoomResponse)
 RegistPBToMessageID(MSG_ON_JOIN_ROOM, CSJoinRoomRequest, CSJoinRoomResponse)
 RegistPBToMessageID(MSG_FIGHT_READY, CSFightReadyRequest, CSFightReadyResponse)
+// 帧同步模块
+#include "GamePlay.pb.h"
+RegistPBToMessageID(MSG_FRAME_SYNC, CSFrameSyncRequest, CSFrameSyncResponse)
 // to add 其他协议
 /*==============================================================================*/
 

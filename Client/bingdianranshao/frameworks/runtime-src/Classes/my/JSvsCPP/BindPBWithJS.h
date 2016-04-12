@@ -26,7 +26,7 @@
 
 
 /**************************************************************************************************/
-// MSG_ON_LOGIN : 登录模块
+// 登录模块
 int ParsePBResponseToJS_CSLogin(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js);
 int ParseJSToPBRequest_CSLogin(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb);
 // 拉取房间列表
@@ -41,6 +41,11 @@ int ParseJSToPBRequest_CSJoinRoom(GameJoy::JS_CPP_Bridge* js, ::google::protobuf
 // 准备就绪
 int ParsePBResponseToJS_CSFightReady(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js);
 int ParseJSToPBRequest_CSFightReady(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb);
+
+// 帧同步
+int ParsePBResponseToJS_CSFrameSync(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js);
+int ParseJSToPBRequest_CSFrameSync(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb);
+
 //to add
 /**************************************************************************************************/
 

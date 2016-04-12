@@ -27,6 +27,8 @@
         "src/UIlogic/Config/MonsterConfig/MonsterConfig.js",
 
         "src/UILogic/Config/MonsterConfig/HeroSkillConfig.js",
+        "src/UILogic/GamePlay/Class/MonsterManager.js",
+        "src/UILogic/GamePlay/Class/CheckPathManager.js",
         "src/UILogic/GamePlay/Scene/GamePlayScene.js",
         "src/UILogic/GamePlay/Layer/MonsterBackgroundLayer.js",
         "src/UILogic/GamePlay/Sprite/MonsterSprite.js",

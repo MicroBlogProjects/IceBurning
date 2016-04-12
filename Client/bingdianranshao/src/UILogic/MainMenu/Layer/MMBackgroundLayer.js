@@ -20,12 +20,13 @@ var MMBackgroundLayer = cc.Layer.extend({
             var index = ""+id;
             var login_res = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
             cc.log(login_res.get_uin());
+            GC.UIN = login_res.get_uin();
             cc.log(login_res.get_result());
+            GC.UIN = login_res.get_uin();
             g_this.receiveMessageLogin();
         }
     },
     playMusic: function () {
-
 //        播放背景音乐，true代表循环无限次播放，false表示只播放一次。
         if (GC.SOUND_ON) {
             if (cc.audioEngine.isMusicPlaying()) {

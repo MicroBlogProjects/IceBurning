@@ -3,10 +3,17 @@
  */
 
 MonsterSprite = cc.Sprite.extend({
+    m_weiyi : null,
     m_isMyMonster : true, //是否是我方怪物
     m_state :null, //执行什么动画
     m_type : null, //怪物还是建筑
     m_activity :true, //是否可以去除  死亡的时候依旧不能去除
+
+    //用来计算当前的层级结构的
+    m_frontMonsterSprite : null,  //前面
+    m_nextMonsterSprite : null, //后面
+    m_localZOrder : null,
+
     //属性
     m_id : null,
     m_name : null,
@@ -123,7 +130,7 @@ MonsterSprite = cc.Sprite.extend({
             enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
         }
         else {
-            monsterManager.skillAnimate(skillConfig,enemyMonster);
+            monsterLayer.skillAnimate(skillConfig,enemyMonster);
         }
         if(endAnimate == null || endAnimate == undefined){
             this.m_state = null;
