@@ -29,12 +29,20 @@ LogicFrame* LogicFrame::Instance()
 int32_t LogicFrame::HandleMessage()
 {
     std::vector<CMessage*> msgs;
-    LOGICSOCKET->ReadMessages(msgs);
-    for (size_t i = 0; i < msgs.size(); i++)
+    int32_t ret = LOGICSOCKET->ReadMessages(msgs);
+    if (ret == success)
     {
-        LOGICFRAME->HandleOneMessage(msgs[i]);
-        delete msgs[i];
+        for (size_t i = 0; i < msgs.size(); i++)
+        {
+            LOGICFRAME->HandleOneMessage(msgs[i]);
+            delete msgs[i];
+        }
     }
+    else
+    {
+        TRACE_WARN("Connect server quit or error connect");
+    }
+    return ret;
 }
 
 

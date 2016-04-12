@@ -60,9 +60,9 @@ void EpollUnit::EpollRun()
             {
                 TRACE_WARN("call error: function NULL!");
             }
-            else if (fd_to_func[fd]() == error)
+            else if (fd_to_func[fd]() != success)
             {
-                TRACE_WARN("epoll_run error!");
+                TRACE_WARN("epoll_run registed function error!");
                 EpollDelete(fd);
             }
         }
