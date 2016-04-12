@@ -65,14 +65,11 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         else{
             this.enemyMonsterArray.push(monsterSprite);
         }
-        monsterManager.addMonsterSprite(monsterSprite);
+        monsterManager.addHierarchyMonsterSprite(monsterSprite);
     },
 
     addMonsterSprite : function(config,point,isMymonster){
-        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
-        point.x -= offset.x;
         if(config.attribute.id < 100){//怪物
-            //if(this.isInPath(this.walkingPathConfig,point)){
             if(checkPathManager.isInWalkingPath(point)){
                 var mosterSprite = new MonsterSprite(config,isMymonster);
                 mosterSprite.setPosition(point);
@@ -83,23 +80,16 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 else{
                     this.myMonsterArray.push(mosterSprite);
                 }
-                monsterManager.addMonsterSprite(mosterSprite);
+                monsterManager.addHierarchyMonsterSprite(mosterSprite);
             }
         }
         else { //建筑物
-            /*var ret =this.isInBuildingPosition(this.buildingPositionConfig,point);
-            if(ret == -1 || this.buildingPositionMark[ret]){
-                return;
-            }*/
             var position = checkPathManager.isInTowerPosition(point);
             if(position == null || position == undefined){
                 return
             }
             else{
-                //this.buildingPositionMark[ret] = true;
                 var mosterSprite = new MonsterSprite(config,isMymonster);
-                //var element = this.buildingPositionConfig[ret];
-                //var position = cc.p((element.origin.x+1)*TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
                 mosterSprite.setPosition(position);
                 this.addChild(mosterSprite);
                 if(isMymonster){
@@ -108,63 +98,11 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 else{
                     this.myMonsterArray.push(mosterSprite);
                 }
-                monsterManager.addMonsterSprite(mosterSprite);
+                monsterManager.addHierarchyMonsterSprite(mosterSprite);
             }
         }
     },
 
-    /*isInRect : function(config,point){
-        var origin = config.origin;
-        var destination = config.destination;
-        var rect = cc.rect(origin.x * TMXTileMapsize, origin.y * TMXTileMapsize,(destination.x - origin.x) *TMXTileMapsize,(destination.y - origin.y) * TMXTileMapsize);
-        return cc.rectContainsPoint(rect, point);
-    },
-    isInUpPath : function (pathConfig,point){
-        for(var i = 0; i<pathConfig.UpPath.length ;i++){
-            var element = pathConfig.UpPath[i];
-            if(this.isInRect(element,point)){
-                return true;
-            }
-        }
-        return false;
-    },
-    isInStraightPath : function(pathConfig,point){
-        for(var i =0 ;i < pathConfig.StraightPath.length;i++){
-            var element = pathConfig.StraightPath[i];
-            if(this.isInRect(element,point)){
-                return true;
-            }
-        }
-        return false;
-    },
-    isInDownPath : function(pathConfig,point){
-        for(var i =0 ;i < pathConfig.DownPath.length;i++){
-            var element = pathConfig.DownPath[i];
-            if(this.isInRect(element,point)){
-                return true;
-            }
-        }
-        return false;
-    },
-
-    isInPath : function(pathConfig,point){
-        if((this.isInUpPath(pathConfig,point)) || (this.isInStraightPath(pathConfig,point)) || (this.isInDownPath(pathConfig,point))){
-            return true;
-        }
-        else{
-            return false;
-        }
-    },
-
-    isInBuildingPosition : function(buildingConfig,point){
-        for(var i = 0; i < buildingConfig.length; i++){
-            var element = buildingConfig[i];
-            if(this.isInRect(element,point)){
-                return i;
-            }
-        }
-        return -1;
-    },*/
 
 
     monsterTest : function(){
@@ -184,7 +122,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         mosterSprite.setPosition(point);
         this.addChild(mosterSprite);
         this.enemyMonsterArray.push(mosterSprite);
-        monsterManager.addMonsterSprite(mosterSprite);
+        monsterManager.addHierarchyMonsterSprite(mosterSprite);
     },
 
     updateEvent : function(){
@@ -210,14 +148,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         }
     },
 
-    /*resetBuildingPosition : function(monster){
-        if(monster.m_type == MonsterType.Building) {
-            var ret = this.isInBuildingPosition(this.buildingPositionConfig, monster.getPosition());
-            if (ret != -1) {
-                this.buildingPositionMark[ret] = false;
-            }
-        }
-    },*/
 
     monsterWalking :function(){
         for(var i = 0;i < this.myMonsterArray.length; i++){
@@ -283,7 +213,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                 }
 
             }
-            //if(this.isInUpPath(this.fightingPathConfig,monsterPoint)){
             if(checkPathManager.isInFightUpPath(monsterPoint)){
                 destinationX = monsterPoint.x;
                 destinationY = monsterPoint.y + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
@@ -295,7 +224,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
                     destinationPoint = cc.p(destinationX,destinationY);
                 }
             }
-            //else if(this.isInDownPath(this.fightingPathConfig,monsterPoint)){
             else if(checkPathManager.isInFightDownPath(monsterPoint)){
                 destinationX = monsterPoint.x;
                 destinationY = monsterPoint.y - monster.m_walkSpeed * ScheduleTime * monster.m_direct;
@@ -321,10 +249,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         else{
             var enemyPoint = destinationMonster.getPosition();
             if(minDistance < (attackRadius * attackRadius)){ //攻击范围
-                /*if(monster.m_id < 100)
-                {
-                    cc.log(monster.getPosition().y);
-                }*/
                 if(monsterPoint.x < enemyPoint.x){
                     state = MonsterState.AttackRight;
                 }

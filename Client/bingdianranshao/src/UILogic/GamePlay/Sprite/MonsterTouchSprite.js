@@ -40,6 +40,9 @@ var MonsterTouchSprite = cc.Sprite.extend({
         var target = event.getCurrentTarget();
         MonsterTouch.removeListerSprite();
         var point = touch.getLocation();
+        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
+        point.x -= offset.x;
+
         if(target.m_id < 100){
             monsterBackGroundLayer.removeClipperNode();
         }
