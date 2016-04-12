@@ -203,7 +203,7 @@ int32_t LogicSocket::ParseToInt(const char* str, int32_t pBegin, int32_t pEnd)
     {
         ret = (ret << 8) | (int32_t)str[i];
     }
-    return ret;
+    return ntohl(ret);
 }
 
 int32_t LogicSocket::make_socket_non_blocking(int32_t sfd)

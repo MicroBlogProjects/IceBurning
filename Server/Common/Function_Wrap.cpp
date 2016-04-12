@@ -8,7 +8,7 @@ NS_GJ_BEGIN
 int Accept(int listenfd, sockaddr * cliaddr, socklen_t * clilen)
 {
     int ret;
-    if ((ret = accept(listenfd, cliaddr, clilen)) < 0)
+    if ((ret = accept(listenfd, cliaddr, clilen)) < 0 && (errno != EAGAIN))
     {
         TRACE_WARN("accept error!");
         return -1;

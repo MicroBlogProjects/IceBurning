@@ -130,7 +130,6 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
         // send message from logic server to client
         else
         {
-            console_msg("to client");
             TransmitMessageToClient(buf_, len);
         }
         len = sizeof(buf_);
@@ -140,7 +139,6 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
         if (IsLogicserverConnect(fd))
         {
             console_msg("logic server quit.");
-            // TRACE_ERROR("logic server quit.");
             has_connected_logicserver_ = false;
         }
         else
@@ -190,7 +188,6 @@ int32_t ConnsvrSocket::TransmitMessageToLogicServer(int32_t client_fd, char* con
             int32_t new_sq = GeneratNewSequence(msgSq);
             ResetMessageSequence(content, new_sq);
         }
-        console_msg("fd(%d),sq(%d)", client_fd, FindMessageSequence(content, len));
         msgSequence_to_fd[msgSq] = client_fd;
         fd_to_msgSequence[client_fd] = msgSq;
     }
@@ -216,7 +213,6 @@ int32_t ConnsvrSocket::TransmitMessageToClient(char* content, int32_t len)
     if (uin_to_fd.find(uin) == uin_to_fd.end())
     {
         int32_t msgSq = FindMessageSequence(content, len);
-        console_msg("to client sq(%d)", msgSq);
         if (msgSequence_to_fd.find(msgSq) == msgSequence_to_fd.end())
         {
             TRACE_WARN("can not find fd with msgSq(%d) and uin(%d)", msgSq, uin);
@@ -280,12 +276,14 @@ int32_t ConnsvrSocket::FindMessageSequence(const char* str, int32_t len)
     {
         ret = (ret << 8) | (int32_t)str[i];
     }
+    ret = ntohl(ret);
     return ret;
 }
 
 int32_t ConnsvrSocket::ResetMessageSequence(char* str, int32_t new_sq)
 {
     int32_t p = 0xff000000, m = 24;
+    new_sq = htonl(new_sq);
     for (int i = 12; i < 16; i++)
     {
         str[i] = (char)((new_sq & p) >> m);
@@ -314,6 +312,7 @@ int32_t ConnsvrSocket::FindUin(const char* str, int len)
     {
         ret = (ret << 8) | (int32_t)str[i];
     }
+    ret = ntohl(ret);
     return ret;
 }
 

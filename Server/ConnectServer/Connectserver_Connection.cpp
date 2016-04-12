@@ -133,7 +133,7 @@ int32_t CConnConnection::ParseToInt(const char* str, int32_t pBegin, int32_t pEn
     {
         ret = (ret << 8) | (int32_t)str[i];
     }
-    return ret;
+    return ntohl(ret);
 }
 
 const char* CConnConnection::GetIP()

@@ -47,21 +47,25 @@ int32_t CMessageHead::Size() const
 int32_t CMessageHead::EncodeInt32(char*& str, int32_t value) const
 {
     int32_t p = 0xff000000;
+    value = htonl(value);
+    int w = 24;
     for (int i = 0; i < sizeof(int32_t); ++i)
     {
-        *(str++) = value & p;
+        *(str++) = (char)((value & p) >> w);
         p >>= 8;
+        w -= 8;
     }
     return sizeof(int32_t);
 }
 
 int32_t CMessageHead::DecodeInt32(const char*& str)
-{
+{ 
     int32_t value = 0;
     for (int32_t i = 0; i < sizeof(int32_t); ++i)
     {
         value = (value << 8) | (int32_t)*(str++);
     }
+    value = ntohl(value);
     return value;
 }
 
@@ -166,9 +170,7 @@ void CMessage::SetMessageBody(CMessageBody* body)
 {
     m_iMessageBody = body;
     m_iMessageHead->SetLen(m_iMessageHead->Size() + m_iMessageBody->GetPB()->ByteSize());
-    srand(time(NULL));
     m_iMessageHead->SetMsq((int32_t)(time(NULL) << 16) | (1 + rand()));
-	console_msg("msq:%d", m_iMessageHead->GetMsq());
 }
 
 NS_GJ_END

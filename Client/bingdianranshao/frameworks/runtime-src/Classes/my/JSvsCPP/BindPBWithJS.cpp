@@ -40,20 +40,19 @@ BindParserJS_PB(MSG_ON_PULL_ROOMS, ParsePBResponseToJS_CSPullRooms, ParseJSToPBR
 int ParsePBResponseToJS_CSPullRooms(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
 {
 	ParseBegin(CSPullRoomsResponse)
-	real_js->result = real_pb->result();
-    real_js->rooms = new GameJoy::JS_CSRoomMessage();
-    real_js->rooms->uin = real_pb->rooms().uin();
-    real_js->rooms->username = real_pb->rooms().username();
- //   real_js->rooms = new vector<GameJoy::JS_CSRoomMessage*>();
-	//(real_js->rooms)->clear();
-	//for (int i = 0; i < real_pb->rooms_size(); ++i)
-	//{
-	//	CSRoomMessage p = real_pb->rooms(i);
-	//	GameJoy::JS_CSRoomMessage *t = new (GameJoy::JS_CSRoomMessage);
-	//	t->set_uin(p.uin());
-	//	t->set_username(p.username());
-	//	(real_js->rooms)->push_back(t);
-	//}
+	//real_js->result = real_pb->result();
+    //real_js->rooms = new GameJoy::JS_CSRoomMessage();
+    //real_js->rooms->uin = real_pb->rooms().uin();
+    //real_js->rooms->username = real_pb->rooms().username();
+	(real_js->rooms).clear();
+	for (int i = 0; i < real_pb->rooms_size(); ++i)
+	{
+		CSRoomMessage p = real_pb->rooms(i);
+		GameJoy::JS_CSRoomMessage *t = new (GameJoy::JS_CSRoomMessage);
+		t->set_uin(p.uin());
+		t->set_username(p.username());
+		(real_js->rooms).pushBack(t);
+	}
 	ParseEnd
 }
 int ParseJSToPBRequest_CSPullRooms(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb) 

@@ -129,30 +129,20 @@ Instance : function (
 GameJoy.JS_CSLoginResponse = {
 
 /**
- * @method get_result
- * @return {int}
- */
-get_result : function (
-)
-{
-    return 0;
-},
-
-/**
- * @method set_msgID
+ * @method set_uin
  * @param {int} arg0
  */
-set_msgID : function (
+set_uin : function (
 int 
 )
 {
 },
 
 /**
- * @method get_msgID
+ * @method get_result
  * @return {int}
  */
-get_msgID : function (
+get_result : function (
 )
 {
     return 0;
@@ -173,16 +163,6 @@ get_uin : function (
  * @param {int} arg0
  */
 set_result : function (
-int 
-)
-{
-},
-
-/**
- * @method set_uin
- * @param {int} arg0
- */
-set_uin : function (
 int 
 )
 {
@@ -299,6 +279,16 @@ Instance : function (
 GameJoy.JS_CSPullRoomsResponse = {
 
 /**
+ * @method set_rooms
+ * @param {Array} arg0
+ */
+set_rooms : function (
+array 
+)
+{
+},
+
+/**
  * @method get_result
  * @return {int}
  */
@@ -309,23 +299,13 @@ get_result : function (
 },
 
 /**
- * @method set_msgID
- * @param {int} arg0
+ * @method get_rooms
+ * @return {Array}
  */
-set_msgID : function (
-int 
+get_rooms : function (
 )
 {
-},
-
-/**
- * @method get_msgID
- * @return {int}
- */
-get_msgID : function (
-)
-{
-    return 0;
+    return new Array();
 },
 
 /**
@@ -336,26 +316,6 @@ set_result : function (
 int 
 )
 {
-},
-
-/**
- * @method set_rooms
- * @param {GameJoy::JS_CSRoomMessage} arg0
- */
-set_rooms : function (
-js_csroommessage 
-)
-{
-},
-
-/**
- * @method get_rooms
- * @return {GameJoy::JS_CSRoomMessage}
- */
-get_rooms : function (
-)
-{
-    return GameJoy::JS_CSRoomMessage;
 },
 
 /**
@@ -413,16 +373,6 @@ Instance : function (
 GameJoy.JS_CSCreateRoomResponse = {
 
 /**
- * @method get_msgID
- * @return {int}
- */
-get_msgID : function (
-)
-{
-    return 0;
-},
-
-/**
  * @method get_result
  * @return {int}
  */
@@ -430,16 +380,6 @@ get_result : function (
 )
 {
     return 0;
-},
-
-/**
- * @method set_msgID
- * @param {int} arg0
- */
-set_msgID : function (
-int 
-)
-{
 },
 
 /**
@@ -527,16 +467,6 @@ Instance : function (
 GameJoy.JS_CSJoinRoomResponse = {
 
 /**
- * @method get_msgID
- * @return {int}
- */
-get_msgID : function (
-)
-{
-    return 0;
-},
-
-/**
  * @method get_result
  * @return {int}
  */
@@ -544,16 +474,6 @@ get_result : function (
 )
 {
     return 0;
-},
-
-/**
- * @method set_msgID
- * @param {int} arg0
- */
-set_msgID : function (
-int 
-)
-{
 },
 
 /**
@@ -621,16 +541,6 @@ Instance : function (
 GameJoy.JS_CSFightReadyResponse = {
 
 /**
- * @method get_msgID
- * @return {int}
- */
-get_msgID : function (
-)
-{
-    return 0;
-},
-
-/**
  * @method get_result
  * @return {int}
  */
@@ -638,16 +548,6 @@ get_result : function (
 )
 {
     return 0;
-},
-
-/**
- * @method set_msgID
- * @param {int} arg0
- */
-set_msgID : function (
-int 
-)
-{
 },
 
 /**

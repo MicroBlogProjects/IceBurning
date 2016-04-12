@@ -16,6 +16,7 @@ GC.h_2 = GC.winSize.height / 2;
 
 GC.SOUND_ON = true;
 GC.IS_HOST = true;
+GC.UIN = -1;
 
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
