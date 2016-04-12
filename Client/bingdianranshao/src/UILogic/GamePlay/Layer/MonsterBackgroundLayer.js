@@ -26,7 +26,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         monsterManager = this;
 
         this.schedule(this.updateEvent,ScheduleTime);//计时器
-        this.schedule(this.monsterTest,TestTime);//计时器
+        //this.schedule(this.monsterTest,TestTime);//计时器
     },
 
     init :function(){

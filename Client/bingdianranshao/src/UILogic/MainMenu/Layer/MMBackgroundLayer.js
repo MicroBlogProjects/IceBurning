@@ -20,6 +20,7 @@ var MMBackgroundLayer = cc.Layer.extend({
             var index = ""+id;
             var login_res = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
             cc.log(login_res.get_uin());
+            GC.UIN = login_res.get_uin();
             cc.log(login_res.get_result());
             g_this.receiveMessageLogin();
         }

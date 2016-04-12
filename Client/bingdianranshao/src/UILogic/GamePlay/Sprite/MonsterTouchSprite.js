@@ -46,7 +46,16 @@ var MonsterTouchSprite = cc.Sprite.extend({
         else {
             monsterManager.removeBuildingTick();
         }
-        monsterManager.addMonsterSprite(target.m_config, point,true);
+        var step = new GameJoy.JS_PBFrameMessage();
+        step.set_uin(GC.UIN);
+        step.set_obj_id(this.m_id);
+        step.set_pos_x(point.x);
+        step.set_pos_y(point.y);
+        setp.set_type(UserOperatorType.Monster);
+        GameJoy.JS_CSFrameSyncRequest.set_step(step);
+        GameJoy.Proxy.SendRequest();
+        cc.log("send Monster Message");
+        //monsterManager.addMonsterSprite(target.m_config, point,true);
 
     },
     onTouchCancelled : function (touch, event) {

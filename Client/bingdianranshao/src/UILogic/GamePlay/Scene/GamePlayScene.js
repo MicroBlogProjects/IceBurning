@@ -2,8 +2,17 @@
  * Created by jiachen on 2016/3/29.
  */
 
+/*var step = new GameJoy.JS_PBFrameMessage();
+step.set_uin()
+GameJoy.JS_CSFrameSyncRequest.set_step(step);
+GameJoy.Proxy.SendRequest()
 
-var gamePlayLayer;
+var id = GameJoy.Proxy.RecvResponse()
+GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
+var gamePlayLayer;*/
+
+var RecvMessagTime = 1.0/60;
+
 var GamePlayLayer = cc.Layer.extend({
     monsterBackgroundLayer : null,
     scrollView : null,
@@ -24,6 +33,7 @@ var GamePlayLayer = cc.Layer.extend({
 
         this.addChild(this.playerInfomation,150);
         this.schedule(this.updataTime,1);//计时器
+        this.schedule(this.recvMessage,RecvMessagTime);
         gamePlayLayer = this;
     },
     addScrollView :function(){
@@ -38,6 +48,32 @@ var GamePlayLayer = cc.Layer.extend({
         }
     },
 
+    //计算时间
+
+    recvMessage : function(){
+        var id = GameJoy.Proxy.RecvResponse();
+        if(id == MSG_ON_LOGIN){
+            cc.log("step 1 recvMessage id ");
+            cc.log(id);
+            var response = GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
+            var uin = response.get_uin();
+            var x = response.get_pos_x();
+            var y = response.get_pos_y();
+            var monsterId = response.get_obj_id();
+            var type = response.get_type();
+
+            var position = cc.p(x,y);
+            var config = MonsterConfig.id;
+            var isMyMonster  =false;
+            if(uin == GC.UIN){
+                isMyMonster = true;
+            }
+            else{
+                isMyMonster = false;
+            }
+            monsterManager.addMonsterSprite(config, position,isMyMonster);
+        }
+    },
     updataTime : function(){
         var secondTitle;
         var minutesTitle;
