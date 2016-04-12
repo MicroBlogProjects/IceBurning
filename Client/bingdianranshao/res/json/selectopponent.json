@@ -1718,15 +1718,15 @@
                       "X": 0.2328,
                       "Y": 0.1111
                     },
-                    "LeftMargin": 298.3,
-                    "RightMargin": 298.3,
-                    "TopMargin": -24.188,
-                    "BottomMargin": 496.388,
+                    "LeftMargin": 298.2874,
+                    "RightMargin": 298.2874,
+                    "TopMargin": -24.1962,
+                    "BottomMargin": 496.3799,
                     "Tag": 62,
                     "ActionTag": 230194401,
                     "Size": {
-                      "X": 181.0,
-                      "Y": 59.0
+                      "X": 181.0253,
+                      "Y": 59.0163
                     },
                     "Name": "m_refresh",
                     "ctype": "ButtonObjectData"
@@ -1807,6 +1807,58 @@
                     "ctype": "ButtonObjectData"
                   },
                   {
+                    "DirectionType": "Vertical",
+                    "ScrollDirectionType": 0,
+                    "ClipAble": true,
+                    "BackColorAlpha": 102,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 150
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 150
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "TouchEnable": true,
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 32.63,
+                      "Y": 43.02
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.042,
+                      "Y": 0.081
+                    },
+                    "PreSize": {
+                      "X": 0.8991,
+                      "Y": 0.7594
+                    },
+                    "LeftMargin": 32.63,
+                    "RightMargin": 45.802,
+                    "TopMargin": 84.78,
+                    "BottomMargin": 43.02,
+                    "Tag": 124,
+                    "ActionTag": -905189316,
+                    "Size": {
+                      "X": 699.168,
+                      "Y": 403.4
+                    },
+                    "Name": "m_ListView_room",
+                    "ctype": "ListViewObjectData"
+                  },
+                  {
                     "BackColorAlpha": 0,
                     "SingleColor": {
                       "R": 150,
@@ -1828,8 +1880,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 381.024,
-                      "Y": 409.024
+                      "X": 1246.0239,
+                      "Y": 196.024
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1840,8 +1892,8 @@
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.49,
-                      "Y": 0.77
+                      "X": 1.6024,
+                      "Y": 0.369
                     },
                     "PercentWidthEnable": true,
                     "PercentHeightEnable": true,
@@ -1851,10 +1903,10 @@
                       "X": 0.92,
                       "Y": 0.2363
                     },
-                    "LeftMargin": 23.328,
-                    "RightMargin": 38.88,
-                    "TopMargin": 59.4147,
-                    "BottomMargin": 346.2627,
+                    "LeftMargin": 888.3279,
+                    "RightMargin": -826.12,
+                    "TopMargin": 272.4147,
+                    "BottomMargin": 133.2627,
                     "Tag": 298,
                     "Children": [
                       {
@@ -1885,10 +1937,6 @@
                           "X": 0.2575,
                           "Y": 0.4935
                         },
-                        "PercentWidthEnable": true,
-                        "PercentHeightEnable": true,
-                        "PercentWidthEnabled": true,
-                        "PercentHeightEnabled": true,
                         "PreSize": {
                           "X": 0.5056,
                           "Y": 0.7298
@@ -2566,7 +2614,6 @@
                       "X": 715.392,
                       "Y": 125.5226
                     },
-                    "VisibleForFrame": false,
                     "Name": "Panel_room",
                     "ctype": "PanelObjectData"
                   }
