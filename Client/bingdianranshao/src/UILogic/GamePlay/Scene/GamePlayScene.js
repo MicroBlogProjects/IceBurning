@@ -51,28 +51,31 @@ var GamePlayLayer = cc.Layer.extend({
     //计算时间
 
     recvMessage : function(){
-        var id = GameJoy.Proxy.RecvResponse();
+        /*var id = GameJoy.Proxy.RecvResponse();
         if(id == MSG_ON_LOGIN){
             cc.log("step 1 recvMessage id ");
             cc.log(id);
-            var response = GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
-            var uin = response.get_uin();
-            var x = response.get_pos_x();
-            var y = response.get_pos_y();
-            var monsterId = response.get_obj_id();
-            var type = response.get_type();
+            var steps = GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
+            for(var i =0;i < steps;i++){
+                var step = steps[i]
+                var uin = step.get_uin();
+                var x = step.get_pos_x();
+                var y = step.get_pos_y();
+                var monsterId = step.get_obj_id();
+                var type = step.get_type();
 
-            var position = cc.p(x,y);
-            var config = MonsterConfig.id;
-            var isMyMonster  =false;
-            if(uin == GC.UIN){
-                isMyMonster = true;
+                var position = cc.p(x,y);
+                var config = MonsterConfig.id;
+                var isMyMonster  =false;
+                if(uin == GC.UIN){
+                    isMyMonster = true;
+                }
+                else{
+                    isMyMonster = false;
+                }
+                monsterManager.addMonsterSprite(config, position,isMyMonster);
             }
-            else{
-                isMyMonster = false;
-            }
-            monsterManager.addMonsterSprite(config, position,isMyMonster);
-        }
+        }*/
     },
     updataTime : function(){
         var secondTitle;

@@ -65,8 +65,6 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     },
 
     addMonsterSprite : function(config,point,isMymonster){
-        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
-        point.x -= offset.x;
         if(config.attribute.id < 100){//怪物
             if(this.isInPath(this.walkingPathConfig,point)){
                 var mosterSprite = new MonsterSprite(config,isMymonster);
