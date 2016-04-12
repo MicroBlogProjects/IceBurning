@@ -1,6 +1,9 @@
 /**
  * Created by yuquanacgong on 2016/4/9.
  */
+var messageNameToID ={
+
+};
 
 var NetIdentify = {
    "MSG_ON_LOGIN" : 1,

@@ -17,6 +17,7 @@ GC.h_2 = GC.winSize.height / 2;
 GC.SOUND_ON = true;
 
 GC.IS_HOST = true;
+GC.UIN = -1;
 
 GC.UIN = -1;
 
