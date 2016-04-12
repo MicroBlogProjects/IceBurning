@@ -23,18 +23,15 @@ using namespace std;
 	TYPE NAME; \
 	TYPE get_##NAME() { return NAME; } \
 	void set_##NAME(TYPE A##NAME) { NAME = A##NAME; }
-	
+
 #define NewRequest(PB)                                                              \
     class JS_##PB : public JS_CPP_Bridge {                                          \
     private:                                                                        \
         JS_##PB(int _msgID = -1) :msgID(_msgID) {}                                  \
-        static JS_##PB* instance;                                              		\
     public:                                                                         \
         static JS_##PB* Instance(){                                                 \
-            if(instance == NULL) {                                             		\
-                instance = new JS_##PB();                                      		\
-            }                                                                       \
-            return instance;	                                                    \
+            static JS_##PB* instance_##PB = new JS_##PB();                          \
+            return instance_##PB;	                                                \
         }                                                                           \
         int msgID;                                                                  \
         int get_msgID() { return msgID; }                                           \
@@ -45,28 +42,20 @@ using namespace std;
 #define NewResponse(PB)                                                             \
     class JS_##PB : public JS_CPP_Bridge {                                          \
     private:                                                                        \
-        JS_##PB(int _msgID = -1, int _result = 0):msgID(_msgID), result(_result){}  \
-        static JS_##PB* instance;                                              		\
+        JS_##PB(int _result = 0):result(_result){}  \
     public:                                                                         \
-        static JS_##PB* Instance() {                                                \
-            if(instance == NULL) {                                             		\
-                instance = new JS_##PB();                                     		\
-            }                                                                       \
-            return instance;                                                   		\
+        static JS_##PB* Instance(){                                                 \
+            static JS_##PB* instance_##PB = new JS_##PB();                          \
+            return instance_##PB;	                                                \
         }                                                                           \
-                                                                                    \
-        int msgID;                                                                  \
-        int get_msgID() { return msgID; }                                           \
-        void set_msgID(int _msgID) { msgID = _msgID; }                              \
-                                                                                    \
         int result;                                                                 \
         int get_result() { return result; }                                         \
         void set_result(int _result) { result = _result; } 
 #define EndResponse(PB)                                                             \
 };
 
-#define NewEntity(PB) 																\
-	class JS_##PB : public JS_CPP_Bridge {											\
+#define NewEntity(PB)                                        						\
+	class JS_##PB : public JS_CPP_Bridge, public cocos2d::Ref{						\
 	public:																			\
 		JS_##PB() {}																\
 		~JS_##PB(){}
@@ -122,7 +111,7 @@ EndEntity(CSRoomMessage)
 NewRequest(CSPullRoomsRequest)
 EndRequest(CSPullRoomsRequest)
 NewResponse(CSPullRoomsResponse)
-	NewField(JS_CSRoomMessage*, rooms)
+	NewField(cocos2d::Vector<JS_CSRoomMessage*>, rooms)
 EndResponse(CSPullRoomsResponse)
 
 //

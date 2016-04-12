@@ -138,7 +138,7 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
     {
         if (IsLogicserverConnect(fd))
         {
-            // TRACE_ERROR("logic server quit.");
+            console_msg("logic server quit.");
             has_connected_logicserver_ = false;
         }
         else
@@ -276,12 +276,14 @@ int32_t ConnsvrSocket::FindMessageSequence(const char* str, int32_t len)
     {
         ret = (ret << 8) | (int32_t)str[i];
     }
+    ret = ntohl(ret);
     return ret;
 }
 
 int32_t ConnsvrSocket::ResetMessageSequence(char* str, int32_t new_sq)
 {
     int32_t p = 0xff000000, m = 24;
+    new_sq = htonl(new_sq);
     for (int i = 12; i < 16; i++)
     {
         str[i] = (char)((new_sq & p) >> m);
@@ -310,6 +312,7 @@ int32_t ConnsvrSocket::FindUin(const char* str, int len)
     {
         ret = (ret << 8) | (int32_t)str[i];
     }
+    ret = ntohl(ret);
     return ret;
 }
 

@@ -38,25 +38,5 @@ void MsgIdBindJSUnit::BindMsgIDToJSResponse(int msgID, JS_CPP_Bridge* res)
     msgID_to_js_response[msgID] = res;
 }
 
-/************************************************************************************/
-// µÇÂ¼Ð­Òé
-JS_CSLoginRequest* JS_CSLoginRequest::instance = NULL;
-JS_CSLoginResponse* JS_CSLoginResponse::instance = NULL;
 
-// to add 
-JS_CSPullRoomsRequest* JS_CSPullRoomsRequest::instance = NULL;
-JS_CSPullRoomsResponse* JS_CSPullRoomsResponse::instance = NULL;
-
-//
-JS_CSCreateRoomRequest* JS_CSCreateRoomRequest::instance = NULL;
-JS_CSCreateRoomResponse* JS_CSCreateRoomResponse::instance = NULL;
-
-//
-JS_CSJoinRoomRequest* JS_CSJoinRoomRequest::instance = NULL;
-JS_CSJoinRoomResponse* JS_CSJoinRoomResponse::instance = NULL;
-
-//
-JS_CSFightReadyRequest* JS_CSFightReadyRequest::instance = NULL;
-JS_CSFightReadyResponse* JS_CSFightReadyResponse::instance = NULL;
-/************************************************************************************/
 NS_GJ_END
