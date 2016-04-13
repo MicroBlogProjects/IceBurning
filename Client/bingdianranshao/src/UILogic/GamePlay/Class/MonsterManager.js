@@ -260,7 +260,7 @@ var MonsterManager = cc.Class.extend({
         }
         monsterSprite.m_localZOrder = indexMonster.m_localZOrder + 1;
         monsterSprite.setLocalZOrder(monsterSprite.m_localZOrder);
-        this.updataLocalZOrder(monsterSprite);
+        this.updataLocalZOrder(this.headMonsterSprite.m_nextMonsterSprite);
 
     },
     //更新Z轴
@@ -281,7 +281,16 @@ var MonsterManager = cc.Class.extend({
     },
     //当Y轴改变
     monsterChangeY : function(monster){
-        var position = monster.getPosition();
+        var frontMonster = monster.m_frontMonsterSprite;
+        var nextMonster = monster.m_nextMonsterSprite;
+        frontMonster.m_nextMonsterSprite = nextMonster;
+        monster.m_frontMonsterSprite = null;
+        monster.m_nextMonsterSprite = null;
+        if(nextMonster != null && nextMonster != undefined){
+            nextMonster.m_frontMonsterSprite = frontMonster;
+        }
+        this.addHierarchyMonsterSprite(monster);
+        /*var position = monster.getPosition();
         var frontMonster = monster.m_frontMonsterSprite;
         if(frontMonster == null || frontMonster == undefined){
             cc.log("monster.frontmonster is num " + monster.m_weiyi);
@@ -312,7 +321,7 @@ var MonsterManager = cc.Class.extend({
                 break;
             }
             nextMonsterPosition = nextMonster.getPosition();
-        }
+        }*/
     },
     //交换2个Monster
     exchangeMonsters : function(frontMonster,monster){

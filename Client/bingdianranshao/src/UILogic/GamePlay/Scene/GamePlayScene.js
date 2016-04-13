@@ -62,8 +62,8 @@ var GamePlayLayer = cc.Layer.extend({
     //计算时间
 
     recvMessage : function(){
-        /*var id = GameJoy.Proxy.RecvResponse();
-        if(id == MSG_ON_LOGIN){
+        var id = GameJoy.Proxy.RecvResponse();
+        if(id == NetConfig["MSG_FRAME_SYNC"]){
             cc.log("step 1 recvMessage id ");
             cc.log(id);
             var steps = GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
@@ -86,7 +86,7 @@ var GamePlayLayer = cc.Layer.extend({
                 }
                 monsterManager.addMonsterSprite(config, position,isMyMonster);
             }
-        }*/
+        }
     },
     updataTime : function(){
         var secondTitle;

@@ -11,7 +11,8 @@ var NetIdentify = {
    "MSG_ON_PULL_ROOMS" : 3,
    "MSG_ON_CREATE_ROOM" : 4,
    "MSG_ON_JOIN_ROOM" : 5,
-   "MSG_FIGHT_READY" : 6
+   "MSG_FIGHT_READY" : 6,
+   "MSG_FRAME_SYNC" : 7
 };
 
 var NetRequest = {
