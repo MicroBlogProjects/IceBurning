@@ -66,7 +66,11 @@ var GamePlayLayer = cc.Layer.extend({
         if(id == NetConfig["MSG_FRAME_SYNC"]){
             cc.log("step 1 recvMessage id ");
             cc.log(id);
-            var steps = GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
+            var response = GameJoy.JS_CSFrameSyncResponse.Instance();
+            if(response.get_result() != 0){
+                return;
+            }
+            var steps =response.get_steps();
             for(var i =0;i < steps;i++){
                 var step = steps[i]
                 var uin = step.get_uin();

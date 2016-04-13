@@ -49,18 +49,18 @@ var MonsterTouchSprite = cc.Sprite.extend({
         else {
             monsterBackGroundLayer.removeBuildingTick();
         }
-        /*var step = new GameJoy.JS_PBFrameMessage();
+        var step = new GameJoy.JS_PBFrameMessage();
         step.set_uin(GC.UIN);
         step.set_obj_id(this.m_id);
         step.set_pos_x(point.x);
         step.set_pos_y(point.y);
         setp.set_type(UserOperatorType.Monster);
-        var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance;
+        var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
         requestInstance.set_step(step);
         GameJoy.JS_CSFrameSyncRequest.set_step(step);
         GameJoy.Proxy.SendRequest(NetConfig["MSG_FRAME_SYNC"]);
-        cc.log("send Monster Message");*/
-        monsterManager.addMonsterSprite(target.m_id, point,true);
+        cc.log("send Monster Message");
+        //monsterManager.addMonsterSprite(target.m_id, point,true);
 
     },
     onTouchCancelled : function (touch, event) {
