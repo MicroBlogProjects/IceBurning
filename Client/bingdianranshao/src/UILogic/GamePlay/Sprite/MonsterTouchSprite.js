@@ -42,6 +42,8 @@ var MonsterTouchSprite = cc.Sprite.extend({
         var point = touch.getLocation();
         var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
         point.x -= offset.x;
+        cc.log("point x is "+point.x);
+        cc.log("offset x is "+offset.x);
 
         if(target.m_id < 100){
             monsterBackGroundLayer.removeClipperNode();
@@ -49,18 +51,22 @@ var MonsterTouchSprite = cc.Sprite.extend({
         else {
             monsterBackGroundLayer.removeBuildingTick();
         }
+        cc.log("target id  is "+ target.m_id);
         var step = new GameJoy.JS_PBFrameMessage();
         step.set_uin(GC.UIN);
-        step.set_obj_id(this.m_id);
-        step.set_pos_x(point.x);
-        step.set_pos_y(point.y);
-        setp.set_type(UserOperatorType.Monster);
+        step.set_obj_id(target.m_id);
+        step.set_pos_x(parseInt(point.x));
+        step.set_pos_y(parseInt(point.y));
+        step.set_type(UserOperatorType.Monster);
         var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
         requestInstance.set_step(step);
-        GameJoy.JS_CSFrameSyncRequest.set_step(step);
-        GameJoy.Proxy.SendRequest(NetConfig["MSG_FRAME_SYNC"]);
-        cc.log("send Monster Message");
-        //monsterManager.addMonsterSprite(target.m_id, point,true);
+        GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
+        cc.log("uin is "+ GC.UIN);
+        cc.log("id is "+target.m_id);
+        cc.log("x is "+point.x);
+        cc.log("y is "+ point.y);
+        cc.log("type is "+ UserOperatorType.Monster);
+        cc.log("send Monster Message id " + NetIdentify["MSG_FRAME_SYNC"]);
 
     },
     onTouchCancelled : function (touch, event) {

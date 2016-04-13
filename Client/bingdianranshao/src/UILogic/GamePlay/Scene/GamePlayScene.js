@@ -62,17 +62,22 @@ var GamePlayLayer = cc.Layer.extend({
     //计算时间
 
     recvMessage : function(){
+        //cc.log("-------------------------------------------------1");
         var id = GameJoy.Proxy.RecvResponse();
-        if(id == NetConfig["MSG_FRAME_SYNC"]){
-            cc.log("step 1 recvMessage id ");
-            cc.log(id);
+        if(id > 0){
+            cc.log("recvMessageing...."+id);
+        }
+        if(id == NetIdentify["MSG_FRAME_SYNC"]){
+            cc.log("step 1 recvMessage id "+id);
             var response = GameJoy.JS_CSFrameSyncResponse.Instance();
+            cc.log("resule is "+ response.get_result());
             if(response.get_result() != 0){
                 return;
             }
             var steps =response.get_steps();
-            for(var i =0;i < steps;i++){
-                var step = steps[i]
+            cc.log("length is " + steps.length);
+            for(var i =0;i < steps.length;i++){
+                var step = steps[i];
                 var uin = step.get_uin();
                 var x = step.get_pos_x();
                 var y = step.get_pos_y();
@@ -80,7 +85,7 @@ var GamePlayLayer = cc.Layer.extend({
                 var type = step.get_type();
 
                 var position = cc.p(x,y);
-                var config = MonsterConfig.id;
+                var config = MonsterConfig[id];
                 var isMyMonster  =false;
                 if(uin == GC.UIN){
                     isMyMonster = true;
@@ -88,7 +93,12 @@ var GamePlayLayer = cc.Layer.extend({
                 else{
                     isMyMonster = false;
                 }
-                monsterManager.addMonsterSprite(config, position,isMyMonster);
+                cc.log("uin is "+ step.get_uin());
+                cc.log("x is "+step.get_pos_x());
+                cc.log("y is " + step.get_pos_x());
+                cc.log("name is ",config.name);
+                cc.log("type is "+ step.get_type());
+                monsterManager.addMonsterSprite(id, position,isMyMonster);
             }
         }
     },
