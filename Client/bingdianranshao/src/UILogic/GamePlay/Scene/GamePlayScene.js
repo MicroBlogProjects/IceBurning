@@ -96,7 +96,7 @@ var GamePlayLayer = cc.Layer.extend({
                 }
                 cc.log("uin is "+ step.get_uin());
                 cc.log("x is "+step.get_pos_x());
-                cc.log("y is " + step.get_pos_x());
+                cc.log("y is " + step.get_pos_y());
                 cc.log("mongter id "+ monsterId);
                 //cc.log("name is ",config.name);
                 cc.log("type is "+ step.get_type());

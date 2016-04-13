@@ -19,7 +19,9 @@ int32_t DecodeInt32(char*& str)
     int ret = 0;
     for (int i = 0; i < 4; i++)
     {
-        ret = (ret << 8) | *(str++);
+		
+        ret = (ret << 8) | (unsigned char)(*str);
+		str ++;
     }
     return ret;
 }
