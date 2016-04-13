@@ -31,6 +31,7 @@ var MonsterManager = cc.Class.extend({
 
     //用户添加Monster模块
     addMonsterSprite : function(id, point, isMyMonster){
+        cc.log("add monster!!!!!!!!!" + id);
         var config = MonsterConfig[""+id];
         if(config.attribute.id < 100){//怪物
             var mosterSprite = new MonsterSprite(config,isMyMonster);

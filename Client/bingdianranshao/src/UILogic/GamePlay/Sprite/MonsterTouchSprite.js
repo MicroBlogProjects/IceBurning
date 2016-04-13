@@ -51,20 +51,21 @@ var MonsterTouchSprite = cc.Sprite.extend({
         else {
             monsterBackGroundLayer.removeBuildingTick();
         }
-        cc.log("target id  is "+ target.m_id);
+        var x =  parseInt(point.x);
+        var y = parseInt(point.y);
         var step = new GameJoy.JS_PBFrameMessage();
         step.set_uin(GC.UIN);
         step.set_obj_id(target.m_id);
-        step.set_pos_x(parseInt(point.x));
-        step.set_pos_y(parseInt(point.y));
+        step.set_pos_x(x);
+        step.set_pos_y(y);
         step.set_type(UserOperatorType.Monster);
         var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
         requestInstance.set_step(step);
         GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
         cc.log("uin is "+ GC.UIN);
         cc.log("id is "+target.m_id);
-        cc.log("x is "+point.x);
-        cc.log("y is "+ point.y);
+        cc.log("x is "+x);
+        cc.log("y is "+ y);
         cc.log("type is "+ UserOperatorType.Monster);
         cc.log("send Monster Message id " + NetIdentify["MSG_FRAME_SYNC"]);
 

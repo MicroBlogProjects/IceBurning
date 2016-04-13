@@ -5,11 +5,12 @@ int EncodeInt32(char*& str, int32_t value)
     int p = 0xff000000, w = 24;
     for (int i = 0; i < 4; ++i)
     {
-        *(str++) = (value & p) >> w;
+        *str = (value & p) >> w;
+		str ++ ;
         p >>= 8;
-        w -= 24;
+        w -= 8;
     }
-    return success;
+    return sizeof(int32_t);
 }
 
 
