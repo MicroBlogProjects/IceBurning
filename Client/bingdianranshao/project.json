@@ -21,7 +21,7 @@
         "src/UILogic/MainMenu/Layer/MMBackgroundLayer.js",
         "src/UILogic/MainMenu/Layer/WaitTeam.js",
         "src/UILogic/MainMenu/Layer/MPackMenuLayer.js",
-
+        "src/UIlogic/Config/battleLayerConfig/battleLayerConfig.js",
         "src/UIlogic/Config/MonsterConfig/yuangujuren.js",
         "src/UIlogic/Config/MonsterConfig/xingxingmofata.js",
         "src/UIlogic/Config/MonsterConfig/MonsterConfig.js",
