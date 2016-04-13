@@ -121,7 +121,7 @@ var GamePlayLayer = cc.Layer.extend({
             minutesTitle = "0"+minutes+":";
         }
         else {
-            minutesTitle = ""+minutes+";";
+            minutesTitle = ""+minutes+":";
         }
         var timeTitle = "00:"+minutesTitle+secondTitle;
         this.TimeTitle.setString(timeTitle);
