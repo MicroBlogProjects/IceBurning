@@ -4,366 +4,103 @@
 //弃用
 //管理所有的怪物
 var ScheduleTime =1.0/10;
-var TestTime = 5;
-var monsterManager;
-
+var TestTime = 2;
+var monsterBackGroundLayer;
 var MonsterBackgroundLayer = cc.Layer.extend({
-    myMonsterArray : null,
-    enemyMonsterArray : null,
     m_clipperNode : null,
-    walkingPathConfig : null,
-    fightingPathConfig : null,
-    buildingPositionConfig : null,
-    buildingPositionMark : null, //标记是否被放塔
     buildingTickLayer : null,
-    ctor : function(){
+
+    TMXTiledMap :null,
+
+    ctor : function()
+    {
         this._super();
-        this.myMonsterArray = []; //创建一个数组
-        this.enemyMonsterArray = [];
-        this.buildingPositionMark = [];
-        this.fightingPathConfig = FightingPathConfig;
-        this.init();
-        monsterManager = this;
-
-        this.schedule(this.updateEvent,ScheduleTime);//计时器
-        this.schedule(this.monsterTest,TestTime);//计时器
-    },
-
-    init :function(){
-        if(GC.IS_HOST){
-            this.walkingPathConfig = HostPathConfig;
-            this.buildingPositionConfig = HostBuilddingPosition;
-        }
-        else {
-            this.walkingPathConfig = AwayPathConfig;
-            this.buildingPositionConfig = AwayBuilddingPosition;
-        }
-        for(var i = 0; i<this.buildingPositionConfig.length;i++){
-            this.buildingPositionMark.push(false);
-        }
-        config = MonsterConfig.xingxingmofata;
-        if(GC.IS_HOST){
-            this.addMainCitySprite(config,cc.p(200,GC.h_2),true);
-            this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),false);
-        }
-        else{
-            this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),true);
-            this.addMainCitySprite(config,cc.p(200,GC.h_2),false);
-        }
-    },
-
-    addMainCitySprite : function(config,point,isMyMonster){
-        var monsterSprite = new MonsterSprite(config,isMyMonster);
-        monsterSprite.setPosition(point);
-        this.addChild(monsterSprite);
-        if(isMyMonster){
-            this.myMonsterArray.push(monsterSprite);
-        }
-        else{
-            this.enemyMonsterArray.push(monsterSprite);
-        }
-    },
-
-    addMonsterSprite : function(config,point,isMymonster){
-        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
-        point.x -= offset.x;
-        if(config.attribute.id < 100){//怪物
-            if(this.isInPath(this.walkingPathConfig,point)){
-                var mosterSprite = new MonsterSprite(config,isMymonster);
-                mosterSprite.setPosition(point);
-                this.addChild(mosterSprite);
-                if(isMymonster){
-                    this.myMonsterArray.push(mosterSprite);
-                }
-                else{
-                    this.myMonsterArray.push(mosterSprite);
+        this.TMXTiledMap = new cc.TMXTiledMap(res.GM_Map_tmx);
+        this.addChild(this.TMXTiledMap,0);
+        var l_layer4 = this.TMXTiledMap.getLayer("layer4");
+        l_layer4.setVisible(true);
+        for(var i = 0; i<battleLayerConfig.width; i++)
+            for(var j = 0; j<battleLayerConfig.height; j++)
+            {
+                var l_block = l_layer4.getTileAt(cc.p(i,j));
+                if(l_block !=null)
+                {
+                    var l_id = i*battleLayerConfig.height + j;
+                    battleLayerConfig.iscanPutDown[l_id]=1;
+                    battleLayerConfig.canPutDown.push(l_id);
+                    l_block.setVisible(false);
+                    var l_siz=l_block.getContentSize();
+                    var l_pos = l_block.getPosition();
+                    var rect=cc.rect(l_pos ,l_siz);
+                    battleLayerConfig.canPutDownRect.push(rect);
                 }
             }
+        monsterBackGroundLayer = this;
+    },
+    myRectContainsPoint:function(point)
+    {
+        var l_layer4 = this.TMXTiledMap.getLayer("layer4");
+        for(var i = 0;  i < battleLayerConfig.highlight.length; ++i)
+        {
+            var block = battleLayerConfig.highlight[i];
+            if(block == null)continue;
+            block.setVisible(false);
         }
-        else { //建筑物
-            var ret =this.isInBuildingPosition(this.buildingPositionConfig,point);
-            if(ret == -1 || this.buildingPositionMark[ret]){
-                return;
-            }
-            else{
-                this.buildingPositionMark[ret] = true;
-                var mosterSprite = new MonsterSprite(config,isMymonster);
-                var element = this.buildingPositionConfig[ret];
-                var position = cc.p((element.origin.x+1)*TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
-                mosterSprite.setPosition(position);
-                this.addChild(mosterSprite);
-                if(isMymonster){
-                    this.myMonsterArray.push(mosterSprite);
+        var l_numofblock = 0;
+        for(var i = 0; i < battleLayerConfig.canPutDown.length; i++)
+        {
+            if( cc.rectContainsPoint(battleLayerConfig.canPutDownRect[i],point) )
+            {
+                var id = battleLayerConfig.canPutDown[ i ];
+                var x = id / battleLayerConfig.height;
+                x=Math.floor(x);
+                var y = id % battleLayerConfig.height;
+                var tx=x;
+                for(var j = 0; j<3; j++)
+                {
+                    var ty = y + j;
+                    var id = tx*battleLayerConfig.height+ty;
+                    if(battleLayerConfig.iscanPutDown[id]!=1)
+                        continue;
+                    ++ l_numofblock;
+                    var block = l_layer4.getTileAt(cc.p(tx, ty));
+                    block.setVisible(true);
+                    battleLayerConfig.highlight[j]=block;
                 }
-                else{
-                    this.myMonsterArray.push(mosterSprite);
-                }
-            }
-        }
-    },
-
-    isInRect : function(config,point){
-        var origin = config.origin;
-        var destination = config.destination;
-        var rect = cc.rect(origin.x * TMXTileMapsize, origin.y * TMXTileMapsize,(destination.x - origin.x) *TMXTileMapsize,(destination.y - origin.y) * TMXTileMapsize);
-        return cc.rectContainsPoint(rect, point);
-    },
-    isInUpPath : function (pathConfig,point){
-        for(var i = 0; i<pathConfig.UpPath.length ;i++){
-            var element = pathConfig.UpPath[i];
-            if(this.isInRect(element,point)){
-                return true;
-            }
-        }
-        return false;
-    },
-    isInStraightPath : function(pathConfig,point){
-        for(var i =0 ;i < pathConfig.StraightPath.length;i++){
-            var element = pathConfig.StraightPath[i];
-            if(this.isInRect(element,point)){
-                return true;
-            }
-        }
-        return false;
-    },
-    isInDownPath : function(pathConfig,point){
-        for(var i =0 ;i < pathConfig.DownPath.length;i++){
-            var element = pathConfig.DownPath[i];
-            if(this.isInRect(element,point)){
-                return true;
-            }
-        }
-        return false;
-    },
-
-    isInPath : function(pathConfig,point){
-        if((this.isInUpPath(pathConfig,point)) || (this.isInStraightPath(pathConfig,point)) || (this.isInDownPath(pathConfig,point))){
-            return true;
-        }
-        else{
-            return false;
-        }
-    },
-
-    isInBuildingPosition : function(buildingConfig,point){
-        for(var i = 0; i < buildingConfig.length; i++){
-            var element = buildingConfig[i];
-            if(this.isInRect(element,point)){
-                return i;
-            }
-        }
-        return -1;
-    },
-
-
-    monsterTest : function(){
-        var points;
-        if(GC.IS_HOST){
-            points = [cc.p(50 * TMXTileMapsize,3 * TMXTileMapsize),cc.p(50*TMXTileMapsize,10*TMXTileMapsize), cc.p(50*TMXTileMapsize,17*TMXTileMapsize)];
-        }
-        else{
-            points = [cc.p(6 * TMXTileMapsize,3 * TMXTileMapsize),cc.p(10*TMXTileMapsize,10*TMXTileMapsize), cc.p(6*TMXTileMapsize,17*TMXTileMapsize)];
-        }
-        var config = MonsterConfig.yuangujuren;
-        var num = Math.round(Math.random()*3)%3;
-        var point = points[num];
-
-        var mosterSprite = new MonsterSprite(config,false);
-        mosterSprite.setPosition(point);
-        this.addChild(mosterSprite);
-        this.enemyMonsterArray.push(mosterSprite);
-    },
-
-    updateEvent : function(){
-        this.updateMonsterArray()
-        this.monsterWalking();
-    },
-
-    //删除已经死亡的怪物
-    updateMonsterArray :function(){
-        for(var  i = 0; i < this.myMonsterArray.length; i++){
-            var monster = this.myMonsterArray[i];
-            if(monster.m_activity == false){
-                this.myMonsterArray.splice(i,1);
-            }
-        }
-        for(var  i = 0; i < this.enemyMonsterArray.length;i ++){
-            var monster = this.enemyMonsterArray[i];
-            if(this.enemyMonsterArray[i].m_activity == false){
-                this.enemyMonsterArray.splice(i,1);
-            }
-        }
-    },
-
-    resetBuildingPosition : function(monster){
-        if(monster.m_type == MonsterType.Building) {
-            var ret = this.isInBuildingPosition(this.buildingPositionConfig, monster.getPosition());
-            if (ret != -1) {
-                this.buildingPositionMark[ret] = false;
-            }
-        }
-    },
-
-    monsterWalking :function(){
-        for(var i = 0;i < this.myMonsterArray.length; i++){
-            var  myMonster = this.myMonsterArray[i];
-            this.walk(myMonster,this.enemyMonsterArray);
-        }
-        for(var i = 0;i < this.enemyMonsterArray.length; i++){
-            var  myMonster = this.enemyMonsterArray[i];
-            this.walk(myMonster,this.myMonsterArray);
-        }
-
-    },
-
-    walk : function(monster, enemyMonsterArray){
-        if(monster.m_HP <= 0){
-            this.resetBuildingPosition(monster);
-            monster.monsterAction(MonsterState.Death);
-            return;
-        }
-
-        var sighRadius = monster.m_sightRadius;
-        var attackRadius = monster.m_attackRadius;
-        var monsterPoint = monster.getPosition();
-
-        var destinationMonster = null;
-        var minDistance  = sighRadius * sighRadius; //视野范围内
-
-        for(var i = 0; i < enemyMonsterArray.length; i++){ //寻找最近的敌人
-            var enemyMonster = enemyMonsterArray[i];
-            if(enemyMonsterArray.m_HP <= 0){ //血量为0
-                continue;
-            }
-
-            var enemyPoint = enemyMonster.getPosition();
-            var distance = this.getPointDistance(monsterPoint,enemyPoint);
-            if (distance < minDistance){
-                minDistance = distance  ;
-                destinationMonster = enemyMonster;
-            }
-        }
-
-        var destinationX;
-        var destinationY;
-        var destinationPoint;
-        var state;
-        if (destinationMonster == null){ //视野内没有任何敌人 向前走
-            monster.setDirect();
-            if(GC.IS_HOST){
-                if(monster.m_isMyMonster){
-                    state = MonsterState.WalkingRight;
-                }
-                else{
-                    state = MonsterState.WalkingLeft;
-                }
-            }
-            else{
-                if(monster.m_isMyMonster){
-                    state = MonsterState.WalkingLeft;
-                }
-                else {
-                    state = MonsterState.WalkingRight;
-                }
-
-            }
-            if(this.isInUpPath(this.fightingPathConfig,monsterPoint)){
-                destinationX = monsterPoint.x;
-                destinationY = monsterPoint.y + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                destinationPoint = cc.p(destinationX,destinationY);
-                if(!this.isInPath(this.fightingPathConfig,destinationPoint)){
-                    destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                    destinationY = monsterPoint.y;
-                    destinationPoint = cc.p(destinationX,destinationY);
-                }
-            }
-            else if(this.isInDownPath(this.fightingPathConfig,monsterPoint)){
-                destinationX = monsterPoint.x;
-                destinationY = monsterPoint.y - monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                destinationPoint = cc.p(destinationX,destinationY);
-                if(!this.isInPath(this.fightingPathConfig,destinationPoint)){
-                    destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                    destinationY = monsterPoint.y;
-                    destinationPoint = cc.p(destinationX,destinationY);
-                }
-            }
-            else {
-                destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                destinationY = monsterPoint.y;
-                destinationPoint = cc.p(destinationX,destinationY);
-            }
-            monster.setPosition(destinationPoint);
-        }
-        else{
-            var enemyPoint = destinationMonster.getPosition();
-            if(minDistance <= (attackRadius * attackRadius)){ //攻击范围
-                if(monsterPoint.x < enemyPoint.x){
-                    state = MonsterState.AttackRight;
-                }
-                else{
-                    state = MonsterState.AttackLeft;
-                }
-            }
-            else{
-                var dx = monsterPoint.x - enemyPoint.x;
-                var dy = monsterPoint.y - enemyPoint.y;
-                if(dx ==0){
-                    if(dy > 0) //正下方
+                if(y%2 == 1)
+                {
+                    tx = x+1;
+                    var ty = y + 1;
+                    var id = tx*battleLayerConfig.height+ty;
+                    if(battleLayerConfig.iscanPutDown[id]==1)
                     {
+                        var block = l_layer4.getTileAt(cc.p(tx, ty));
+                        block.setVisible(true);
+                        ++l_numofblock;
+                        battleLayerConfig.highlight[j] = block;
                     }
-                    else{//正上方
-                    }
+                }else
+                {
+                       tx=x-1;
+                        var ty = y + 1;
+                        var id = tx*battleLayerConfig.height+ty;
+                        if(battleLayerConfig.iscanPutDown[id]==1)
+                        {
+                            var block = l_layer4.getTileAt(cc.p(tx, ty));
+                             block.setVisible(true);
+                            ++l_numofblock;
+                            battleLayerConfig.highlight[j]=block;
+                        }
                 }
-                else{
-                    var d = monster.m_walkSpeed * ScheduleTime;
-                    var ratio = dy / dx;
-                    var x = Math.sqrt((d * d * 1.0) / (ratio * ratio +1));
-                    var y = Math.sqrt((d * d - x * x));
-                    if(dx < 0){
-                        state = MonsterState.WalkingRight;
-                        destinationX = monsterPoint.x + x;
-                    }
-                    else{
-                        destinationX = monsterPoint.x - x;
-                        state = MonsterState.WalkingLeft
-                    }
-                    if(dy < 0){
-                        destinationY  =monsterPoint.y + y;
-                    }
-                    else{
-                        destinationY  =monsterPoint.y - y;
-                    }
-                    destinationPoint = cc.p(destinationX,destinationY);
-                    monster.setPosition(destinationPoint);
-                }
+                break;
             }
         }
-        monster.monsterAction(state,destinationMonster);
+        return l_numofblock == 4;
     },
-
-    getPointDistance : function (p1, p2) {
-        return (p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y);
-    },
-
     //拖动怪物的效果
     addClipperNode :function(){
         //设置模板
-        var stencil = cc.Node.create();
-        for(var i = 0; i<this.walkingPathConfig.UpPath.length ;i++){
-            var element = this.walkingPathConfig.UpPath[i];
-            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
-            stencil.addChild(rectangular);
-        }
-        for(var i =0 ;i < this.walkingPathConfig.StraightPath.length;i++){
-            var element = this.walkingPathConfig.StraightPath[i];
-            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
-            stencil.addChild(rectangular);
-        }
-        for(var i =0 ;i < this.walkingPathConfig.DownPath.length;i++){
-            var element = this.walkingPathConfig.DownPath[i];
-            var rectangular = this.getRectangular(cc.p(element.origin.x * TMXTileMapsize,element.origin.y * TMXTileMapsize),cc.p(element.destination.x * TMXTileMapsize,element.destination.y*TMXTileMapsize));
-            stencil.addChild(rectangular);
-        }
+        /*var stencil = checkPathManager.getStencil();
         //设置
         this.m_clipperNode = cc.ClippingNode.create(stencil);
         this.m_clipperNode.setInverted(true);//底板可见
@@ -372,11 +109,11 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         var baLayer = cc.LayerColor.create(cc.color(0,0,0,150));
         baLayer.setScaleX(4);
         this.m_clipperNode.addChild(baLayer);
-        this.addChild(this.m_clipperNode);
+        this.addChild(this.m_clipperNode,0);*/
     },
     removeClipperNode : function(){
-        this.m_clipperNode.removeFromParent();
-        this.m_clipperNode = null;
+        /*this.m_clipperNode.removeFromParent();
+        this.m_clipperNode = null;*/
     },
 
     //技能效果
@@ -386,60 +123,21 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         skillSprite.attackAnimate(elemy);
         this.addChild(skillSprite);
     },
-    //英雄技能效果
-
-    heroSkillAniamte :function(){
-        config = HeroSkillConfig.first;
-        var x;
-        var y;
-        var isFlipX;
-        if(GC.IS_HOST){
-            x = 9*32;
-            y  =3*32;
-            isFlipX = false;
-        }
-        else{
-            x = 51 * 32;
-            y = 3*32;
-            isFlipX = true
-        }
-        for(var i = 0;i < 3;i++){
-            var heroSkillSprite = new HeroSkillSprite(config);
-            heroSkillSprite.setFlippedX(isFlipX);
-            var position = cc.p(x,y);
-            heroSkillSprite.setPosition(position);
-            heroSkillSprite.startAnimate();
-            this.addChild(heroSkillSprite,160);
-
-            y += 7*32;
-        }
-    },
 
     //拖动建筑物效果
     addBuildingTick : function(){
-        this.buildingTickLayer = new BuildingTicklayer();
+        /*this.buildingTickLayer = new BuildingTicklayer();
         this.addChild(this.buildingTickLayer,LAYER_PRIORITY_TOUCH-1);
-        for(var i = 0; i< this.buildingPositionConfig.length;i++){
-            var element = this.buildingPositionConfig[i];
-            if(this.buildingPositionMark[i] == false){//还没放塔
-                var position = cc.p((element.origin.x+1) * TMXTileMapsize,(element.origin.y+1)*TMXTileMapsize);
-                this.buildingTickLayer.addTickSprite(position);
-            }
-        }
+        var positions = checkPathManager.getBuildintPositions();
+        for(var i = 0; i < positions.length; i++){
+            var position = positions[i];
+            this.buildingTickLayer.addTickSprite(position);
+        }*/
     },
     removeBuildingTick : function(){
-        this.buildingTickLayer.removeFromParent();
-        this.buildingTickLayer = null;
-    },
-
-    //画一个矩形
-    getRectangular : function(origin, destination){
-        var rectangular = new cc.DrawNode();
-        var origin = cc.p(origin);
-        var destination = cc.p(destination);
-        var color = cc.color(0,0,0);
-        rectangular.drawRect(origin,destination,color);
-        return rectangular;
+        //this.buildingTickLayer.removeFromParent();
+        //this.buildingTickLayer = null;
     }
+
 
 });

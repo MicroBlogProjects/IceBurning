@@ -25,28 +25,31 @@ var MonsterTouchSprite = cc.Sprite.extend({
         }
         MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
         if(target.m_id < 100){
-            monsterManager.addClipperNode();
+            monsterBackGroundLayer.addClipperNode();
         }
         else{
-            monsterManager.addBuildingTick();
+            monsterBackGroundLayer.addBuildingTick();
         }
         return true;
     },
     onTouchMoved : function (touch, event) {
         MonsterTouch.moveListerSprite(touch.getLocation());
-
+        monsterBackGroundLayer.myRectContainsPoint(touch.getLocation());
     },
     onTouchEnded : function (touch, event) {
         var target = event.getCurrentTarget();
         MonsterTouch.removeListerSprite();
         var point = touch.getLocation();
+        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
+        point.x -= offset.x;
+
         if(target.m_id < 100){
-            monsterManager.removeClipperNode();
+            monsterBackGroundLayer.removeClipperNode();
         }
         else {
-            monsterManager.removeBuildingTick();
+            monsterBackGroundLayer.removeBuildingTick();
         }
-        monsterManager.addMonsterSprite(target.m_config, point,true);
+        monsterManager.addMonsterSprite(target.m_id, point,true);
 
     },
     onTouchCancelled : function (touch, event) {
