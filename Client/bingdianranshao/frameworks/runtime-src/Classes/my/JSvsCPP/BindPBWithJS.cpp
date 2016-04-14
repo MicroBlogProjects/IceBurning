@@ -122,6 +122,7 @@ int ParsePBResponseToJS_CSFrameSync(::google::protobuf::Message* pb, GameJoy::JS
 
     cocos2d::Vector<GameJoy::JS_PBFrameMessage*>& js_steps = real_js->steps;
     char buf[MAX_CSMESSAGE_SIZE];
+	js_steps.clear();
     for (int i = 0; i < real_pb->steps_size(); ++i)
     {
         const PBFrameMessage& pb_step = real_pb->steps(i);
@@ -134,6 +135,7 @@ int ParsePBResponseToJS_CSFrameSync(::google::protobuf::Message* pb, GameJoy::JS
         js_step->obj_id = DecodeInt32(str);
         js_step->pos_x  = DecodeInt32(str);
         js_step->pos_y  = DecodeInt32(str);
+		CCLOG("c++: back uin(%d) type(%d) obj_id(%d) pos_x(%d) pos_y(%d)", js_step->uin,js_step->type, js_step->obj_id, js_step->pos_x, js_step->pos_y);
 
         js_steps.pushBack(js_step);
     }
@@ -149,11 +151,14 @@ int ParseJSToPBRequest_CSFrameSync(GameJoy::JS_CPP_Bridge* js, ::google::protobu
     pb_step->set_uin(js_step->uin);
     char buf[MAX_CSMESSAGE_SIZE], *str = buf;
     memset(buf, 0, MAX_CSMESSAGE_SIZE);
-    EncodeInt32(str, js_step->type);
-    EncodeInt32(str, js_step->obj_id);
-    EncodeInt32(str, js_step->pos_x);
-    EncodeInt32(str, js_step->pos_y);
-    pb_step->set_operation(buf);
+	int len = 0;
+    len += EncodeInt32(str, js_step->type);
+	len += EncodeInt32(str, js_step->obj_id);
+	len += EncodeInt32(str, js_step->pos_x);
+	len += EncodeInt32(str, js_step->pos_y);
+	CCLOG("c++: out uin(%d) type(%d) obj_id(%d) pos_x(%d) pos_y(%d)", js_step->uin, js_step->type, js_step->obj_id, js_step->pos_x, js_step->pos_y);
+	std::string s(buf, len);
+    pb_step->set_operation(s);
     ParseEnd
 }
 

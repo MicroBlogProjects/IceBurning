@@ -3,7 +3,6 @@
  */
 
 MonsterSprite = cc.Sprite.extend({
-    m_weiyi : null,
     m_isMyMonster : true, //是否是我方怪物
     m_state :null, //执行什么动画
     m_type : null, //怪物还是建筑
