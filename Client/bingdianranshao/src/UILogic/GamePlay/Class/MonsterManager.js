@@ -29,9 +29,15 @@ var MonsterManager = cc.Class.extend({
         monsterManager = this;
     },
 
+    getTime : function(){
+        var mydate = new Date();
+        cc.log(mydate.getMinutes() + mydate.getSeconds()+ mydate.getMilliseconds());
+    },
+
     //用户添加Monster模块
     addMonsterSprite : function(id, point, isMyMonster){
         cc.log("add monster!!!!!!!!!" + id);
+        this.getTime();
         var config = MonsterConfig[""+id];
         if(config.attribute.id < 100){//怪物
             var mosterSprite = new MonsterSprite(config,isMyMonster);
@@ -327,6 +333,7 @@ var MonsterManager = cc.Class.extend({
     },
     //交换2个Monster
     exchangeMonsters : function(frontMonster,monster){
+
         frontMonster.m_frontMonsterSprite.m_nextMonsterSprite = monster;
         if(monster.m_nextMonsterSprite != null && monster.m_nextMonsterSprite != undefined){
             monster.m_nextMonsterSprite.m_frontMonsterSprite = frontMonster;
