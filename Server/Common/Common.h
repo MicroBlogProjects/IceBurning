@@ -11,7 +11,6 @@
 #include <algorithm>
 
 #include <math.h>
-#include <time.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <errno.h>
@@ -21,6 +20,7 @@
 #include <stdarg.h>
 
 #include <sys/stat.h>
+#include <sys/time.h>
 
 
 #define NS_GJ           GameJoy

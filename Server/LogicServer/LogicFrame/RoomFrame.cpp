@@ -1,7 +1,9 @@
 #include "RoomFrame.h"
 #include "LoginFrame.h"
+#include "SyncFrame.h"
 #include "../../Proto_out/Login.h"
 #include "../../Proto_out/CreateRoom.h"
+#include "Logicserver_Player.h"
 
 
 NS_LS_BEGIN
@@ -40,7 +42,6 @@ int32_t CRoomFrame::ProcessRequest(const CMessage& message)
     int32_t result = success;
     switch (message.GetMessageID())
     {
-        break;
     case MSG_ON_PULL_ROOMS:
         result = ProcessRequestPullRooms(message);
         break;
@@ -67,6 +68,10 @@ int32_t CRoomFrame::ProcessRequestPullRooms(const CMessage& message)
     pbRes->clear_rooms();
     for (std::map<int32_t, RoomMessage>::iterator it = rooms_.begin(); it != rooms_.end(); ++it)
     {
+        if (it->second.room_status_ != OnWaitingJoin)
+        {
+            continue;
+        }
         CSRoomMessage* pbRoom = pbRes->add_rooms();
         pbRoom->set_uin(it->second.roomid_);
         pbRoom->set_username(it->second.room_name_);
@@ -82,7 +87,7 @@ int32_t CRoomFrame::ProcessRequestCreateRoom(const CMessage& message)
     ProcessRequestBegin(MSG_ON_CREATE_ROOM, CSCreateRoomRequest, CSCreateRoomResponse);
     int32_t roomID = message.GetUin();
     do {
-        const CPlayer* p = CLoginFrame::Instance()->GetPlayer(message.GetUin());
+        CPlayer* p = CLoginFrame::Instance()->GetPlayer(message.GetUin());
         if (p == NULL || IsAlreadyInRoom(message.GetUin()))
         {
             pbRes->set_result(fail);
@@ -94,8 +99,10 @@ int32_t CRoomFrame::ProcessRequestCreateRoom(const CMessage& message)
         room.roomid_ = roomID;
         room.players_.push_back(p);
         room.room_name_ = p->GetUsername();
+        room.room_status_ = OnWaitingJoin;
 
         rooms_[roomID] = room;
+        p->SetRoomID(roomID);
         pbRes->set_result(success);
     } while (0);
     ProcessRequestEnd(success);
@@ -111,7 +118,8 @@ int32_t CRoomFrame::ProcessRequestJoinRoom(const CMessage& message)
     }
     else
     {
-        OnPlayerJoinRoom(roomID, CLoginFrame::Instance()->GetPlayer(message.GetUin()));
+        console_msg("uin(%d), join room(%d)", message.GetUin(), roomID);
+        OnPlayerJoinRoom(roomID, message.GetUin());
         pbRes->set_result(success);
     }
     ProcessRequestEnd(success);
@@ -120,7 +128,7 @@ int32_t CRoomFrame::ProcessRequestReadyFight(const CMessage& message)
 {
     console_msg("uin(%d) ReadyFight, ", message.GetUin());
     ProcessRequestBegin(MSG_FIGHT_READY, CSFightReadyRequest, CSFightReadyResponse);
-    int32_t roomID = GetRoomID(message.GetUin());
+    int32_t roomID = CLoginFrame::Instance()->GetPlayer(message.GetUin())->GetRoomID();
     rooms_[roomID].isReady.insert(message.GetUin());
     if (rooms_[roomID].isReady.size() < RoomMessage::SIZE)
     {
@@ -145,10 +153,13 @@ bool CRoomFrame::IsAlreadyInRoom(int uin)
     }
     return false;
 }
-int32_t CRoomFrame::OnPlayerJoinRoom(int32_t roomID, const CPlayer* player)
+int32_t CRoomFrame::OnPlayerJoinRoom(int32_t roomID, int32_t uin)
 {
     RoomMessage& room = rooms_[roomID];
+    CPlayer* player = CLoginFrame::Instance()->GetPlayer(uin);
+    player->SetRoomID(roomID);
     room.players_.push_back(player);
+    console_msg("roomId(%d) size(%d)", roomID, room.players_.size());
 
     if (room.players_.size() == RoomMessage::SIZE)
     {
@@ -159,9 +170,11 @@ int32_t CRoomFrame::OnPlayerJoinRoom(int32_t roomID, const CPlayer* player)
         {
             if (room.players_[i]->GetUin() != player->GetUin())
             {
-                room.players_[i]->SendMessageToSelf(MSG_ON_JOIN_ROOM, b);
+                room.players_[i]->SendMessageToSelf(MSG_ON_JOIN_ROOM, *b);
             }
         }
+        delete b;
+        room.room_status_ = OnWaitingStart;
     }
     return success;
 }
@@ -176,9 +189,13 @@ int32_t CRoomFrame::OnAllPlayerReady(int32_t roomID, int32_t sender_uin)
     {
         if (room.players_[i]!= NULL && room.players_[i]->GetUin() != sender_uin)
         {
-            room.players_[i]->SendMessageToSelf(MSG_FIGHT_READY, body);
+            room.players_[i]->SendMessageToSelf(MSG_FIGHT_READY, *body);
         }
     }
+    delete body;
+    room.room_status_ = OnPlaying;
+    CSyncFrame::Instance()->OnNewRoomStartFight(roomID);
+    return success;
 }
 
 int32_t CRoomFrame::GetRoomID(int uin)
@@ -191,6 +208,15 @@ int32_t CRoomFrame::GetRoomID(int uin)
         }
     }
     return -1;
+}
+
+RoomMessage* CRoomFrame::GetRoomWithRoomID(int32_t roomID)
+{
+    if (rooms_.find(roomID) == rooms_.end())
+    {
+        return NULL;
+    }
+    return &rooms_[roomID];
 }
 
 NS_LS_END

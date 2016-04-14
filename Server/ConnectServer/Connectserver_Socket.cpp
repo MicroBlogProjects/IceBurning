@@ -93,15 +93,13 @@ int32_t ConnsvrSocket::ProcessRequestConnect(std::vector<int32_t>& vec)
 
         make_socket_non_blocking(connfd);
         // give a connection a message buffer
-        CConnConnection conn(connfd, temp_sockaddr);
-        fd_to_conn[connfd] = conn;
+        fd_to_conn[connfd] = CConnConnection(connfd, temp_sockaddr);
 
         // connection request of logic server
         if (!has_connected_logicserver_)
         {
             if (!IsLogicserverConnectRequest(temp_sockaddr))
             {
-                console_msg("logic server do not connect yet");
                 CloseSocket(connfd);
                 return -1;
             }
@@ -125,6 +123,7 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
         // Send message from client to logic server
         if (!IsLogicserverConnect(fd))
         {
+            console_msg("client_fd(%d) request to send msg to logic", fd);
             TransmitMessageToLogicServer(fd, buf_, len);
         }
         // send message from logic server to client
@@ -194,6 +193,7 @@ int32_t ConnsvrSocket::TransmitMessageToLogicServer(int32_t client_fd, char* con
     else if (uin_to_fd.find(uin) == uin_to_fd.end())
     {
         uin_to_fd[uin] = client_fd;
+        fd_to_uin[client_fd] = uin;
     }
     
     if (error == fd_to_conn[logicserver_fd_].WriteData(content, len))
@@ -215,7 +215,6 @@ int32_t ConnsvrSocket::TransmitMessageToClient(char* content, int32_t len)
         int32_t msgSq = FindMessageSequence(content, len);
         if (msgSequence_to_fd.find(msgSq) == msgSequence_to_fd.end())
         {
-            TRACE_WARN("can not find fd with msgSq(%d) and uin(%d)", msgSq, uin);
             return fail;
         }
         fd = msgSequence_to_fd[msgSq];
@@ -274,7 +273,7 @@ int32_t ConnsvrSocket::FindMessageSequence(const char* str, int32_t len)
     int32_t ret = 0;
     for (int32_t i = 12; i < 16; ++i)
     {
-        ret = (ret << 8) | (int32_t)str[i];
+        ret = (ret << 8) | (unsigned char)str[i];
     }
     ret = ntohl(ret);
     return ret;
@@ -310,7 +309,7 @@ int32_t ConnsvrSocket::FindUin(const char* str, int len)
     int ret = 0;
     for (int32_t i = 4; i < 8; ++i)
     {
-        ret = (ret << 8) | (int32_t)str[i];
+        ret = (ret << 8) | (unsigned char)str[i];
     }
     ret = ntohl(ret);
     return ret;

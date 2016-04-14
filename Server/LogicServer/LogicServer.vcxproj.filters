@@ -29,6 +29,18 @@
     <ClInclude Include="..\Proto_out\CreateRoom.h">
       <Filter>Proto_out</Filter>
     </ClInclude>
+    <ClInclude Include="..\Proto_out\GamePlay.h">
+      <Filter>Proto_out</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicFrame\SyncFrame.h">
+      <Filter>LogicFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicFrame\RoomFrame.h">
+      <Filter>LogicFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicFrame\Logicserver_Player.h">
+      <Filter>LogicFrame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Proto_out\Login.cpp">
@@ -58,6 +70,18 @@
     </ClCompile>
     <ClCompile Include="..\Proto_out\CreateRoom.cpp">
       <Filter>Proto_out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Proto_out\GamePlay.cpp">
+      <Filter>Proto_out</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicFrame\SyncFrame.cpp">
+      <Filter>LogicFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicFrame\RoomFrame.cpp">
+      <Filter>LogicFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicFrame\Logicserver_Player.cpp">
+      <Filter>LogicFrame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

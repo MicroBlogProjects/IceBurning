@@ -9,7 +9,7 @@ NS_CS_BEGIN
 class CConnConnection
 {
 public:
-    CConnConnection();
+    CConnConnection() {}
     CConnConnection(int32_t connfd, const struct sockaddr_in& addr);
     
     int32_t ReadData(char* str, int32_t& str_size);

@@ -1,7 +1,7 @@
 #include "Logicserver_LogicFrame.h"
 #include "Logicserver_FrameBase.h"
 #include "LoginFrame.h"
-#include "../Network/Logicserver_Socket.h"
+#include "SyncFrame.h"
 
 NS_LS_BEGIN
 
@@ -9,6 +9,7 @@ LogicFrame* LogicFrame::instance = NULL;
 
 LogicFrame::LogicFrame()
 {
+    gettimeofday(&last_check_time_, NULL);
 }
 
 int32_t LogicFrame::HandleOneMessage(const CMessage* message)
@@ -43,6 +44,25 @@ int32_t LogicFrame::HandleMessage()
         TRACE_WARN("Connect server quit or error connect");
     }
     return ret;
+}
+
+int32_t LogicFrame::CheckTimer(struct timeval& now_time)
+{
+    if (!FinishOneFrame(now_time)) return fail;
+    CSyncFrame::Instance()->OnOneFrameFinished();
+    return success;
+}
+
+bool LogicFrame::FinishOneFrame(struct timeval& now_time)
+{
+    int32_t dis_ms = (now_time.tv_sec - last_check_time_.tv_sec) * 1000
+        + (now_time.tv_usec - last_check_time_.tv_usec) / 1000;
+    if (dis_ms * 6 < 100)
+    {
+        return false;
+    }
+    last_check_time_ = now_time;
+    return true;
 }
 
 

@@ -52,7 +52,7 @@ public:
         messageBody->message = new PB_T();
         return messageBody;
     }
-    ::google::protobuf::Message* GetPB()
+    ::google::protobuf::Message* GetPB() const
     {
         return message;
     }
