@@ -45,7 +45,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         cc.log("point x is "+point.x);
         cc.log("offset x is "+offset.x);
 
-        if(target.m_id < 100){
+        /*if(target.m_id < 100){
             monsterBackGroundLayer.removeClipperNode();
         }
         else {
@@ -68,6 +68,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         cc.log("y is "+ y);
         cc.log("type is "+ UserOperatorType.Monster);
         cc.log("send Monster Message id " + NetIdentify["MSG_FRAME_SYNC"]);*/
+        monsterManager.addMonsterSprite(target.m_id, point,true);
 
     },
     onTouchCancelled : function (touch, event) {
