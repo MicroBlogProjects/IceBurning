@@ -111,7 +111,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Proto_out\CreateRoom.h" />
+    <ClInclude Include="..\Proto_out\GamePlay.h" />
     <ClInclude Include="..\Proto_out\Login.h" />
+    <ClInclude Include="LogicFrame\RoomFrame.h" />
+    <ClInclude Include="LogicFrame\SyncFrame.h" />
     <ClInclude Include="LogicFrame\Logicserver_FrameBase.h" />
     <ClInclude Include="LogicFrame\Logicserver_LogicFrame.h" />
     <ClInclude Include="LogicFrame\Logicserver_Player.h" />
@@ -124,11 +127,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Proto_out\CreateRoom.cpp" />
+    <ClCompile Include="..\Proto_out\GamePlay.cpp" />
     <ClCompile Include="..\Proto_out\Login.cpp" />
     <ClCompile Include="LogicFrame\Logicserver_FrameBase.cpp" />
     <ClCompile Include="LogicFrame\Logicserver_LogicFrame.cpp" />
     <ClCompile Include="LogicFrame\Logicserver_Player.cpp" />
     <ClCompile Include="LogicFrame\LoginFrame.cpp" />
+    <ClCompile Include="LogicFrame\RoomFrame.cpp" />
+    <ClCompile Include="LogicFrame\SyncFrame.cpp" />
     <ClCompile Include="Logicserver_server.cpp" />
     <ClCompile Include="Network\Logicserver_EpollUnit.cpp" />
     <ClCompile Include="Network\Logicserver_Message.cpp" />

@@ -12,10 +12,11 @@ NS_GJ_BEGIN
 
 MessageProxy* MessageProxy::instance = NULL;
 
+int MessageProxy::uin = -1;
+
 MessageProxy::MessageProxy()
 {
     ConnectToServer();
-	uin = -1;
 }
 
 MessageProxy* MessageProxy::Instance()

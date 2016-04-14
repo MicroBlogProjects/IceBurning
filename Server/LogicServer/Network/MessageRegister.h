@@ -7,7 +7,7 @@
 
 NS_LS_BEGIN
 
-#define MSGREGISTER NS_LS::MsgRegister::Instance()
+#define MSGREGISTER MsgRegister::Instance()
 
 #define RegistPBToMessageID(MSGID, PB_REQ, PB_RES) \
     struct PBRegist##PB_REQ##PB_RES##MSGID { \

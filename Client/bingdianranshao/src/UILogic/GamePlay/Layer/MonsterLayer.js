@@ -3,7 +3,7 @@
  */
 
 
-var ScheduleTime =1.0/10;
+var ScheduleTime =1.0/60;
 var TestTime = 2;
 
 var monsterLayer;
@@ -13,7 +13,7 @@ var MonsterLayer = cc.Layer.extend({
         this._super();
 
         this.schedule(this.updateEvent,ScheduleTime);//计时器
-        this.schedule(this.monsterTest,TestTime);//计时器
+        //this.schedule(this.monsterTest,TestTime);//计时器
 
         monsterLayer = this;
     },

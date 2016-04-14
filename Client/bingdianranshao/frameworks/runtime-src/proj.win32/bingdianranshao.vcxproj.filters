@@ -34,9 +34,6 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\my\Common\Console_Output.cpp">
-      <Filter>Classes\my\Common</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\my\Connect\ClientSocket.cpp">
       <Filter>Classes\my\Connect</Filter>
     </ClCompile>
@@ -44,9 +41,6 @@
       <Filter>Classes\my\Connect</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\my\ProtoOut\MessageRegister.cpp">
-      <Filter>Classes\my\ProtoOut</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\my\ProtoOut\Test.pb.cc">
       <Filter>Classes\my\ProtoOut</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\my\JSvsCPP\jsb_GameJoy_auto.cpp">
@@ -67,6 +61,12 @@
     <ClCompile Include="..\Classes\my\ProtoOut\CreateRoom.pb.cc">
       <Filter>Classes\my\ProtoOut</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\my\ProtoOut\GamePlay.pb.cc">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\my\Common\Common_Tools.cpp">
+      <Filter>Classes\my\Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -79,9 +79,6 @@
     <ClInclude Include="..\Classes\my\Common\Common_Head.h">
       <Filter>Classes\my\Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\my\Common\Console_Output.h">
-      <Filter>Classes\my\Common</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\my\Connect\ClientSocket.h">
       <Filter>Classes\my\Connect</Filter>
     </ClInclude>
@@ -89,9 +86,6 @@
       <Filter>Classes\my\Connect</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\my\ProtoOut\MessageRegister.h">
-      <Filter>Classes\my\ProtoOut</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\my\ProtoOut\Test.pb.h">
       <Filter>Classes\my\ProtoOut</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\my\JSvsCPP\JS_CPP_Data_Exchange.h">
@@ -114,6 +108,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\my\ProtoOut\CreateRoom.pb.h">
       <Filter>Classes\my\ProtoOut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\ProtoOut\GamePlay.pb.h">
+      <Filter>Classes\my\ProtoOut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\my\Common\Common_Tools.h">
+      <Filter>Classes\my\Common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

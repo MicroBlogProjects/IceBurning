@@ -3,7 +3,6 @@
  */
 
 var monsterManager;
-var account = 1;
 var MonsterManager = cc.Class.extend({
 
     //用户添加Monster模块
@@ -29,9 +28,16 @@ var MonsterManager = cc.Class.extend({
         monsterManager = this;
     },
 
+    getTime : function(){
+        var mydate = new Date();
+        cc.log("minues :"+mydate.getMinutes() +"seconds"+ mydate.getSeconds()+ "millise"+mydate.getMilliseconds());
+    },
+
     //用户添加Monster模块
     addMonsterSprite : function(id, point, isMyMonster){
-        var config = MonsterConfig[id];
+        /*cc.log("add monster!!!!!!!!!" + id);
+        this.getTime();*/
+        var config = MonsterConfig[""+id];
         if(config.attribute.id < 100){//怪物
             var mosterSprite = new MonsterSprite(config,isMyMonster);
                 mosterSprite.setPosition(point);
@@ -42,8 +48,6 @@ var MonsterManager = cc.Class.extend({
                 else{
                     this.enemyMonsterArray.push(mosterSprite);
                 }
-            mosterSprite.m_weiyi = account;
-            account ++;
                 this.addHierarchyMonsterSprite(mosterSprite);
             }
         else { //建筑物
@@ -56,8 +60,6 @@ var MonsterManager = cc.Class.extend({
                 else{
                     this.enemyMonsterArray.push(mosterSprite);
                 }
-            mosterSprite.m_weiyi = account;
-            account ++;
                 this.addHierarchyMonsterSprite(mosterSprite);
         }
      },
@@ -260,7 +262,7 @@ var MonsterManager = cc.Class.extend({
         }
         monsterSprite.m_localZOrder = indexMonster.m_localZOrder + 1;
         monsterSprite.setLocalZOrder(monsterSprite.m_localZOrder);
-        this.updataLocalZOrder(monsterSprite);
+        this.updataLocalZOrder(this.headMonsterSprite.m_nextMonsterSprite);
 
     },
     //更新Z轴
@@ -281,7 +283,16 @@ var MonsterManager = cc.Class.extend({
     },
     //当Y轴改变
     monsterChangeY : function(monster){
-        var position = monster.getPosition();
+        var frontMonster = monster.m_frontMonsterSprite;
+        var nextMonster = monster.m_nextMonsterSprite;
+        frontMonster.m_nextMonsterSprite = nextMonster;
+        monster.m_frontMonsterSprite = null;
+        monster.m_nextMonsterSprite = null;
+        if(nextMonster != null && nextMonster != undefined){
+            nextMonster.m_frontMonsterSprite = frontMonster;
+        }
+        this.addHierarchyMonsterSprite(monster);
+        /*var position = monster.getPosition();
         var frontMonster = monster.m_frontMonsterSprite;
         if(frontMonster == null || frontMonster == undefined){
             cc.log("monster.frontmonster is num " + monster.m_weiyi);
@@ -312,10 +323,11 @@ var MonsterManager = cc.Class.extend({
                 break;
             }
             nextMonsterPosition = nextMonster.getPosition();
-        }
+        }*/
     },
     //交换2个Monster
     exchangeMonsters : function(frontMonster,monster){
+
         frontMonster.m_frontMonsterSprite.m_nextMonsterSprite = monster;
         if(monster.m_nextMonsterSprite != null && monster.m_nextMonsterSprite != undefined){
             monster.m_nextMonsterSprite.m_frontMonsterSprite = frontMonster;
@@ -337,7 +349,6 @@ var MonsterManager = cc.Class.extend({
     },
     //yichuMonster
     removeMonsterSprite : function(monster){
-        cc.log("remove from monster Sprite " + monster.m_weiyi);
         var frontMonster = monster.m_frontMonsterSprite;
         var nextMonster = monster.m_nextMonsterSprite;
         frontMonster.m_nextMonsterSprite = nextMonster;

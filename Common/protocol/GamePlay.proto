@@ -1,0 +1,15 @@
+// 帧同步信息
+message PBFrameMessage
+{
+    optional int32 uin                  = 1;
+    optional string operation           = 2;
+}
+message CSFrameSyncRequest
+{
+    optional PBFrameMessage step        = 1;
+}
+message CSFrameSyncResponse
+{
+    optional int32 result               = 1;
+    repeated PBFrameMessage steps       = 2;
+}

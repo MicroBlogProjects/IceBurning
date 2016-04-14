@@ -72,13 +72,13 @@ var MonsterTouchLayer = cc.Layer.extend({
         this.addIcon();
     },
     addIcon : function(){
-        config = MonsterConfig.yuangujuren;
+        config = MonsterConfig[""+1];
         for(var i = 0; i < 5;i++){
             var sprite = new MonsterTouchSprite(config);
             sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
             this.m_toolScrollView.addChild(sprite);
         }
-        config = MonsterConfig.xingxingmofata;
+        config = MonsterConfig[""+101];
         for(var i = 0; i < 4;i++){
             var sprite = new MonsterTouchSprite(config);
             sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);

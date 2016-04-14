@@ -63,7 +63,7 @@ int32_t CMessageHead::DecodeInt32(const char*& str)
     int32_t value = 0;
     for (int32_t i = 0; i < sizeof(int32_t); ++i)
     {
-        value = (value << 8) | (int32_t)*(str++);
+        value = (value << 8) | (unsigned char)*(str++);
     }
     value = ntohl(value);
     return value;
