@@ -13,8 +13,7 @@ var res = {
     MM_Flare_jpg :     "res/MainMenu/flare.jpg",
 
     //GamePlay
-    GM_Map_tmx : "res/GamePlay/Map/map1.tmx",
-    //GM_Map_png : "res/GamePlay/Map/c.png",
+    GM_Map_tmx : "res/GamePlay/Map/map.tmx",
 
     //monster
     GM_MainCity_png :     "res/GamePlay/Monster/xingxingmofata/xingxingmofata.png",

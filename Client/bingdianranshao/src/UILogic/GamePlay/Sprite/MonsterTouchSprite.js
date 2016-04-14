@@ -34,7 +34,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
     },
     onTouchMoved : function (touch, event) {
         MonsterTouch.moveListerSprite(touch.getLocation());
-
+        monsterBackGroundLayer.myRectContainsPoint(touch.getLocation());
     },
     onTouchEnded : function (touch, event) {
         var target = event.getCurrentTarget();
