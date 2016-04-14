@@ -85,7 +85,7 @@ var GamePlayLayer = cc.Layer.extend({
                 var type = step.get_type();
 
                 var position = cc.p(x,y);
-                var config = MonsterConfig[""+monsterId];
+                //var config = MonsterConfig[""+monsterId];
                 if(config == null)
                 var isMyMonster  =false;
                 if(uin == GC.UIN){
@@ -94,12 +94,12 @@ var GamePlayLayer = cc.Layer.extend({
                 else{
                     isMyMonster = false;
                 }
-                cc.log("uin is "+ step.get_uin());
+                /*cc.log("uin is "+ step.get_uin());
                 cc.log("x is "+step.get_pos_x());
                 cc.log("y is " + step.get_pos_y());
                 cc.log("mongter id "+ monsterId);
                 //cc.log("name is ",config.name);
-                cc.log("type is "+ step.get_type());
+                cc.log("type is "+ step.get_type());*/
                 monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
             }
         }

@@ -62,12 +62,12 @@ var MonsterTouchSprite = cc.Sprite.extend({
         var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
         requestInstance.set_step(step);
         GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
-        cc.log("uin is "+ GC.UIN);
+        /*cc.log("uin is "+ GC.UIN);
         cc.log("id is "+target.m_id);
         cc.log("x is "+x);
         cc.log("y is "+ y);
         cc.log("type is "+ UserOperatorType.Monster);
-        cc.log("send Monster Message id " + NetIdentify["MSG_FRAME_SYNC"]);
+        cc.log("send Monster Message id " + NetIdentify["MSG_FRAME_SYNC"]);*/
 
     },
     onTouchCancelled : function (touch, event) {

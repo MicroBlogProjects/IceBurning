@@ -3,7 +3,6 @@
  */
 
 var monsterManager;
-var account = 1;
 var MonsterManager = cc.Class.extend({
 
     //用户添加Monster模块
@@ -31,17 +30,16 @@ var MonsterManager = cc.Class.extend({
 
     getTime : function(){
         var mydate = new Date();
-        cc.log(mydate.getMinutes() + mydate.getSeconds()+ mydate.getMilliseconds());
+        cc.log("minues :"+mydate.getMinutes() +"seconds"+ mydate.getSeconds()+ "millise"+mydate.getMilliseconds());
     },
 
     //用户添加Monster模块
     addMonsterSprite : function(id, point, isMyMonster){
-        cc.log("add monster!!!!!!!!!" + id);
-        this.getTime();
+        /*cc.log("add monster!!!!!!!!!" + id);
+        this.getTime();*/
         var config = MonsterConfig[""+id];
         if(config.attribute.id < 100){//怪物
             var mosterSprite = new MonsterSprite(config,isMyMonster);
-            cc.log("addchildMonster",mosterSprite);
                 mosterSprite.setPosition(point);
                 monsterLayer.addMonsterSprite(mosterSprite);
                 if(isMyMonster){
@@ -50,8 +48,6 @@ var MonsterManager = cc.Class.extend({
                 else{
                     this.enemyMonsterArray.push(mosterSprite);
                 }
-            mosterSprite.m_weiyi = account;
-            account ++;
                 this.addHierarchyMonsterSprite(mosterSprite);
             }
         else { //建筑物
@@ -64,8 +60,6 @@ var MonsterManager = cc.Class.extend({
                 else{
                     this.enemyMonsterArray.push(mosterSprite);
                 }
-            mosterSprite.m_weiyi = account;
-            account ++;
                 this.addHierarchyMonsterSprite(mosterSprite);
         }
      },
@@ -355,7 +349,6 @@ var MonsterManager = cc.Class.extend({
     },
     //yichuMonster
     removeMonsterSprite : function(monster){
-        cc.log("remove from monster Sprite " + monster.m_weiyi);
         var frontMonster = monster.m_frontMonsterSprite;
         var nextMonster = monster.m_nextMonsterSprite;
         frontMonster.m_nextMonsterSprite = nextMonster;
