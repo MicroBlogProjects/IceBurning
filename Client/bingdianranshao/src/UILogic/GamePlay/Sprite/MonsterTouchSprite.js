@@ -46,15 +46,13 @@ var MonsterTouchSprite = cc.Sprite.extend({
         point.x -= offset.x;
         cc.log("point x is "+point.x);
         cc.log("offset x is "+offset.x);
-
-        if(target.m_id < 100){
-            monsterBackGroundLayer.removeClipperNode();
+        var l_willPoint = monsterBackGroundLayer.TouchOfEnd(point);
+        if(l_WillPoint.point.x <=0 )
+        {
+            return ;
         }
-        else {
-            monsterBackGroundLayer.removeBuildingTick();
-        }
-        var x =  parseInt(point.x);
-        var y = parseInt(point.y);
+        var x = l_willPoint.tiled[0].x;
+        var y = l_willPoint.tiled[0].y;
         var step = new GameJoy.JS_PBFrameMessage();
         step.set_uin(GC.UIN);
         step.set_obj_id(target.m_id);

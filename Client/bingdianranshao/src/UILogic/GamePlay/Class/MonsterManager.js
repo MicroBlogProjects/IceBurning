@@ -77,7 +77,7 @@ var MonsterManager = cc.Class.extend({
      },
     //更新Monster
     updateMonsterData : function(){
-        this.updateMonsterArray()
+        this.updateMonsterArray();
         this.monsterWalking();
     },
 
@@ -114,128 +114,6 @@ var MonsterManager = cc.Class.extend({
             return;
         }
         algorithmOfStatus.GetNextLocation(monster);
-     /* if (destinationMonster == null)
-        { //视野内没有任何敌人 向前走
-            monster.setDirect();
-            if(GC.IS_HOST)
-            {
-                if(monster.m_isMyMonster)
-                {
-                    state = MonsterState.WalkingRight;
-                }
-                else
-                {
-                    state = MonsterState.WalkingLeft;
-                }
-            }
-            else
-            {
-                if(monster.m_isMyMonster)
-                {
-                    state = MonsterState.WalkingLeft;
-                }
-                else 
-                {
-                    state = MonsterState.WalkingRight;
-                }
-            }
-            if(checkPathManager.isInFightUpPath(monsterPoint))
-            {
-                destinationX = monsterPoint.x;
-                destinationY = monsterPoint.y + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                destinationPoint = cc.p(destinationX,destinationY);
-                if( !checkPathManager.isInFightPath( destinationPoint ) )
-                {
-                    destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                    destinationY = monsterPoint.y;
-                    destinationPoint = cc.p(destinationX, destinationY);
-                }
-            }
-            else if(checkPathManager.isInFightDownPath(monsterPoint))
-            {
-                destinationX = monsterPoint.x;
-                destinationY = monsterPoint.y - monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                destinationPoint = cc.p(destinationX,destinationY);
-                if(!checkPathManager.isInFightPath(destinationPoint))
-                {
-                    destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                    destinationY = monsterPoint.y;
-                    destinationPoint = cc.p(destinationX,destinationY);
-                }
-            }
-            else 
-            {
-                destinationX = monsterPoint.x + monster.m_walkSpeed * ScheduleTime * monster.m_direct;
-                destinationY = monsterPoint.y;
-                destinationPoint = cc.p(destinationX,destinationY);
-            }
-            monster.setPosition(destinationPoint);
-            if(destinationY != monsterPoint.y)
-            {
-                this.monsterChangeY(monster);
-            }
-        }
-        else
-        {
-            var enemyPoint = destinationMonster.getPosition();
-            if(minDistance < (attackRadius * attackRadius))
-            { //攻击范围
-                if(monsterPoint.x < enemyPoint.x)
-                {
-                    state = MonsterState.AttackRight;
-                }
-                else
-                {
-                    state = MonsterState.AttackLeft;
-                }
-            }
-            else
-            {
-                var dx = monsterPoint.x - enemyPoint.x;
-                var dy = monsterPoint.y - enemyPoint.y;
-                if(dx ==0)
-                {
-                    if(dy > 0) //正下方
-                    {
-                    }
-                    else
-                    {//正上方
-                    }
-                }
-                else
-                {
-                    var d = monster.m_walkSpeed * ScheduleTime;
-                    var ratio = dy / dx;
-                    var x = Math.sqrt((d * d * 1.0) / (ratio * ratio +1));
-                    var y = Math.sqrt((d * d - x * x));
-                    if(dx < 0)
-                    {
-                        state = MonsterState.WalkingRight;
-                        destinationX = monsterPoint.x + x;
-                    }
-                    else
-                    {
-                        destinationX = monsterPoint.x - x;
-                        state = MonsterState.WalkingLeft
-                    }
-                    if(dy < 0)
-                    {
-                        destinationY = monsterPoint.y + y;
-                    }
-                    else
-                    {
-                        destinationY = monsterPoint.y - y;
-                    }
-                    destinationPoint = cc.p(destinationX,destinationY);
-                    monster.setPosition(destinationPoint);
-                    if(destinationY != monsterPoint.y)
-                    {
-                        this.monsterChangeY(monster);
-                    }
-
-                }
-            }
-        }*/
         var state = null;
         var destinationMonster = null;
         monster.monsterAction(state,destinationMonster);
@@ -278,7 +156,6 @@ var MonsterManager = cc.Class.extend({
         monsterSprite.m_localZOrder = indexMonster.m_localZOrder + 1;
         monsterSprite.setLocalZOrder(monsterSprite.m_localZOrder);
         this.updataLocalZOrder(this.headMonsterSprite.m_nextMonsterSprite);
-
     },
     //更新Z轴
     updataLocalZOrder : function(monsterSprite)
@@ -311,56 +188,19 @@ var MonsterManager = cc.Class.extend({
             nextMonster.m_frontMonsterSprite = frontMonster;
         }
         this.addHierarchyMonsterSprite(monster);
-        /*var position = monster.getPosition();
-        var frontMonster = monster.m_frontMonsterSprite;
-        if(frontMonster == null || frontMonster == undefined)
-        {
-            cc.log("monster.frontmonster is num " + monster.m_weiyi);
-            return;
-        }
-        var frontMonsterPosition = frontMonster.getPosition();
-        while(frontMonsterPosition.y < position.y)
-        {//上一个monstery比较小
-            this.exchangeMonsters(frontMonster,monster);
-            //继续向前走
-            frontMonster = monster.m_frontMonsterSprite;
-            if(frontMonster == null || frontMonster == undefined)
-            {
-                break;
-            }
-            frontMonsterPosition = frontMonster.getPosition();
-        }
-
-        var nextMonster = monster.m_nextMonsterSprite;
-        if(nextMonster == null || nextMonster == undefined)
-        {
-            return;
-        }
-        var nextMonsterPosition = nextMonster.getPosition();
-
-        while(nextMonsterPosition.y > position.y)
-        { //下一个monster比较大
-            this.exchangeMonsters(monster,nextMonster);
-            nextMonster = monster.m_nextMonsterSprite;
-            if(nextMonster == null || nextMonster == undefined)
-            {
-                break;
-            }
-            nextMonsterPosition = nextMonster.getPosition();
-        }*/
     },
     //交换2个Monster
     exchangeMonsters : function(frontMonster,monster){
 
         frontMonster.m_frontMonsterSprite.m_nextMonsterSprite = monster;
-        if(monster.m_nextMonsterSprite != null && monster.m_nextMonsterSprite != undefined){
+        if(monster.m_nextMonsterSprite != null && monster.m_nextMonsterSprite != undefined)
         {
             monster.m_nextMonsterSprite.m_frontMonsterSprite = frontMonster;
         }
         frontMonster.m_nextMonsterSprite = monster.m_nextMonsterSprite;
         monster.m_frontMonsterSprite = frontMonster.m_frontMonsterSprite;
         frontMonster.m_frontMonsterSprite = monster;
-        if(monster.m_nextMonsterSprite != null && monster.m_nextMonsterSprite != undefined){
+        if(monster.m_nextMonsterSprite != null && monster.m_nextMonsterSprite != undefined)
         {
             monster.m_nextMonsterSprite = frontMonster;
         }

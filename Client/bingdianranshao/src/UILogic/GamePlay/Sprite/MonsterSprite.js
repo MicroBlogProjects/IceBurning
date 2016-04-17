@@ -78,7 +78,10 @@ MonsterSprite = cc.Sprite.extend({
     ,
     setMyPosition:function(position)
     {
+        
+
         this.setTiledPosition(position.tiled);
+
         this.setPosition((position.point).x,(position.point).y);
     }
     ,
@@ -213,11 +216,9 @@ MonsterSprite = cc.Sprite.extend({
 
         var myPosition={};
         myPosition.tiled=this.m_TiledPosition;
-
         var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
         myPosition.point = tiled.getTileAt( cc.p( myPosition.tiled[0].x, myPosition.tiled[0].y ) );
         this.m_nextPosition = myPosition.point; 
-//        this.setMyPosition(myPosition);
         if(this.m_nextState == MonsterState.WalkingLeft){
             this.walkingAnimate(this.m_nextState)
         }
