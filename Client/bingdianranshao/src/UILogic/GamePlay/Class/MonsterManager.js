@@ -124,6 +124,7 @@ var MonsterManager = cc.Class.extend({
 
     walk : function(monster, MonsterArray)
     {
+        if(monster.m_id > 100) return ;
         if(monster.m_HP <= 0)
         {
             monster.monsterAction(MonsterState.Death);
