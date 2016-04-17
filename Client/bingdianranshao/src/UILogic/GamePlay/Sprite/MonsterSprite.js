@@ -15,6 +15,7 @@ MonsterSprite = cc.Sprite.extend({
 
     //属性
     m_id : null,
+    m_spriteID:null,
     m_name : null,
     m_walkSpeed : null,
     m_HP : null,
@@ -24,12 +25,16 @@ MonsterSprite = cc.Sprite.extend({
     m_attackRadius : null,
     m_attackSpeed : null,
     m_direct : null,
+    m_nextState :null,
 
     m_attackConfig : null,
     m_walkingConfig : null,
     m_deathConfig : null,
     m_skillConfig : null,
-
+    m_TiledPosition:null,
+    m_Camp:null,
+    m_AttackObjects:null,
+    m_nextPosition:null,
     //血条
     m_booldProgressTimer :null,
     m_total_HP :null,
@@ -37,7 +42,7 @@ MonsterSprite = cc.Sprite.extend({
     ctor : function(config,isMyMonster){
         var attributeConfig = config.attribute;
         this._super(attributeConfig.defaultImage);
-
+        this.m_TiledPosition=[];
         //设置属性
         this.m_id = attributeConfig.id;
         this.m_name = attributeConfig.name;
@@ -45,7 +50,7 @@ MonsterSprite = cc.Sprite.extend({
         this.m_HP = attributeConfig.HP;
         this.m_total_HP = this.m_HP;
         this.m_sightRadius = attributeConfig.sightRadius;
-         this.m_defense = attributeConfig.defense;
+        this.m_defense = attributeConfig.defense;
         this.m_attack = attributeConfig.attack;
         this.m_attackRadius = attributeConfig.attackRadius;
         this.m_isMyMonster = isMyMonster
@@ -66,7 +71,17 @@ MonsterSprite = cc.Sprite.extend({
 
         this.addBooldProgressTimer();
     },
-
+    setTiledPosition:function(position)
+    {
+       this.m_TiledPosition = position;
+    }
+    ,
+    setMyPosition:function(position)
+    {
+        this.setTiledPosition(position.tiled);
+        this.setPosition((position.point).x,(position.point).y);
+    }
+    ,
     setDirect : function(){
         if(GC.IS_HOST){
             if(this.m_isMyMonster){
@@ -112,7 +127,10 @@ MonsterSprite = cc.Sprite.extend({
 
         var speed = totalTime * 1.0 / account;
         var animation = new cc.Animation(animFrames, speed);
-        this.m_nowAnimateAction = new cc.Animate(animation);
+        var moveToAction = new cc.MoveTo(totalTime,this.m_nextPosition);
+        var animate = new cc.Animate(animation);
+        var spwan = new cc.Spawn(animate,moveToAction);
+        this.m_nowAnimateAction = spwan;
     },
 
     deathCallFunc : function(){
@@ -144,6 +162,7 @@ MonsterSprite = cc.Sprite.extend({
         this.m_state = null;
     },
     walkingCallFunc : function(){
+        this.setPosition(this.m_nextPosition);
         this.m_state = null;
     },
     stopAnimate : function(){
@@ -189,17 +208,23 @@ MonsterSprite = cc.Sprite.extend({
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this)));
     },
 
-
+    
     monsterAction : function(state,enemyMonster){
-        if(state == MonsterState.WalkingLeft){
-            this.m_direct = -1;
-            this.walkingAnimate(state)
+
+        var myPosition={};
+        myPosition.tiled=this.m_TiledPosition;
+
+        var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
+        myPosition.point = tiled.getTileAt( cc.p( myPosition.tiled[0].x, myPosition.tiled[0].y ) );
+        this.m_nextPosition = myPosition.point; 
+//        this.setMyPosition(myPosition);
+        if(this.m_nextState == MonsterState.WalkingLeft){
+            this.walkingAnimate(this.m_nextState)
         }
-        else if(state == MonsterState.WalkingRight){
-            this.m_direct = 1;
-            this.walkingAnimate(state)
+        else if(this.m_nextState == MonsterState.WalkingRight){            
+            this.walkingAnimate(this.m_nextState)
         }
-        else if(state == MonsterState.AttackLeft){
+        /*else if(state == MonsterState.AttackLeft){
             this.m_direct = -1;
             this.attackAnimate(state,enemyMonster)
         }
@@ -209,7 +234,7 @@ MonsterSprite = cc.Sprite.extend({
         }
         else if(state == MonsterState.Death){
             this.deathAnimate(state);
-        }
+        }*/
     },
 
     //添加血条

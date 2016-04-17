@@ -13,7 +13,9 @@ var MonsterLayer = cc.Layer.extend({
         this._super();
 
         this.schedule(this.updateEvent,ScheduleTime);//计时器
+
         //this.schedule(this.monsterTest,TestTime);//计时器
+
 
         monsterLayer = this;
     },
@@ -33,9 +35,6 @@ var MonsterLayer = cc.Layer.extend({
             enemyMainCityPosition = cc.p(200,GC.h_2);
 
         }
-        monsterManager.addMonsterSprite(101,myMainCityPosition,true);
-        monsterManager.addMonsterSprite(101,enemyMainCityPosition,false);
-
     },
     updateEvent : function(){
         monsterManager.updateMonsterData();

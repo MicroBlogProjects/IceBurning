@@ -19,7 +19,7 @@ var GamePlayLayer = cc.Layer.extend({
     backgroundLayer : null,
     monstarLayer : null,
     monsterTouchlayer: null,
-
+    
     playerInfomation : null,
     selectTool : null,
     timeTitle : null,
@@ -145,10 +145,12 @@ var GamePlayScene = cc.Scene.extend({
     gamePlayLayer :null,
     monsterManager:null,
     checkPathManger:null,
+    algorithmOfStatus:null,
     onEnter :function(){
         this._super();
         this.monsterManager = new MonsterManager();
         this.checkPathManger = new CheckPathManager();
+        this.algorithmOfStatus = new AlgorithmOfStatus();
         this.addGamePlay();
     },
     addGamePlay : function(){

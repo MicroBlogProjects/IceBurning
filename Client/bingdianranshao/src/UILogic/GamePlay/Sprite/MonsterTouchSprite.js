@@ -19,22 +19,24 @@ var MonsterTouchSprite = cc.Sprite.extend({
         }, this);
     },
     onTouchBegan : function (touch, event) {
-        var target = event.getCurrentTarget();
-        if (!target.isTouchInRect(touch)){
+        var l_target = event.getCurrentTarget();
+        if (!l_target.isTouchInRect(touch)){
             return false;
         }
-        MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
-        if(target.m_id < 100){
-            monsterBackGroundLayer.addClipperNode();
-        }
-        else{
-            monsterBackGroundLayer.addBuildingTick();
-        }
+        MonsterTouch.addListerSprite(l_target.m_config,touch.getLocation());
+        var l_point = touch.getLocation();
+        var l_offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
+        l_point.x -= l_offset.x;
+        battleLayerConfig.buildType = (l_target.m_id>100)?2:1;
+        monsterBackGroundLayer.TouchOfBegin(l_point);
         return true;
     },
     onTouchMoved : function (touch, event) {
         MonsterTouch.moveListerSprite(touch.getLocation());
-        monsterBackGroundLayer.myRectContainsPoint(touch.getLocation());
+        var l_point = touch.getLocation();
+        var l_offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
+        l_point.x -= l_offset.x;
+        monsterBackGroundLayer.TouchOfMove(l_point);
     },
     onTouchEnded : function (touch, event) {
         var target = event.getCurrentTarget();
