@@ -65,11 +65,12 @@ var GamePlayLayer = cc.Layer.extend({
         var l_position={};
         l_position.tiled=[];
         l_position.point = null;
+        var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
         if(uin > 100)
         {
             for(var i = 0; i < 3; i++)
             {
-                var l_y = postion.y + j;
+                var l_y = postion.y + i;
                 var l_x = postion.x;
                 l_position.tiled.push(cc.p(l_x,l_y));
             }
@@ -84,11 +85,14 @@ var GamePlayLayer = cc.Layer.extend({
                 var l_y = postion.y + 1;
                 l_position.tiled.push(cc.p(l_x,l_y));
             }
-            l_position.point = (tiled.getTileAt(postion)).getPosition();
+            var l_msize = (tiled.getTileAt(postion)).getContentSize();
+            var l_mpoint = (tiled.getTileAt(postion)).getPosition();
+            cc.log(l_mpoint.x + " " + l_mpoint.y);
+            cc.log(l_msize.x + " " + l_msize.y);
+            l_position.point = cc.p( l_mpoint.x+l_msize.width/2, l_mpoint.y +l_msize.height/2 );
         }else
         {
             l_position.tiled.push(postion);
-            var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
             l_position.point = (tiled.getTileAt( postion )).getPosition();
         }
         return l_position;
@@ -116,7 +120,7 @@ var GamePlayLayer = cc.Layer.extend({
                 var y = step.get_pos_y();
                 var monsterId = step.get_obj_id();
                 var type = step.get_type();
-                var position = this.GetPointOfBuild(uin,cc.p(x,y));
+                var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
                 //var config = MonsterConfig[""+monsterId];
                 var isMyMonster  =false;
                 if(uin == GC.UIN){
