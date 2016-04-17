@@ -83,13 +83,13 @@ var GamePlayLayer = cc.Layer.extend({
                 var y = step.get_pos_y();
                 var monsterId = step.get_obj_id();
                 var type = step.get_type();
-                /////////////////////////////////////////////
+                
                 var position = {};
-                var position.tiled=[];
+                position.tiled=[];
                 position.tiled.push(cc.p(x,y));
                 var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
                 position.point = tiled.getTileAt( cc.p( x, y ) ); 
-                ////////////////////////////////////////////
+                
                 //var config = MonsterConfig[""+monsterId];
                 var isMyMonster  =false;
                 if(uin == GC.UIN){
@@ -140,11 +140,13 @@ var GamePlayLayer = cc.Layer.extend({
 
 });
 var GamePlayScene = cc.Scene.extend({
+
     gamePlayLayer :null,
     monsterManager:null,
     checkPathManger:null,
     algorithmOfStatus:null,
     onEnter :function(){
+    cc.log("+++++++++++_____________"+GC.IS_HOST);
         this._super();
         this.monsterManager = new MonsterManager();
         this.checkPathManger = new CheckPathManager();

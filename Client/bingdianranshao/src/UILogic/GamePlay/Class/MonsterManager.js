@@ -46,16 +46,32 @@ var MonsterManager = cc.Class.extend({
                 mosterSprite.m_spriteID = numOfSprite++;
                 mosterSprite.setMyPosition(point);
                 monsterLayer.addMonsterSprite(mosterSprite);
-                if(isMyMonster)
+                if(GC.IS_HOST)
                 {
-                    mosterSprite.m_Camp = 0;
-                    this.MonsterArray[0].push(mosterSprite);
-                }
-                else
+                    if(isMyMonster)
+                    {
+                        mosterSprite.m_Camp = 0;
+                        this.MonsterArray[0].push(mosterSprite);
+                    }
+                    else 
+                    {
+                        mosterSprite.m_Camp = 1;
+                        this.MonsterArray[1].push(mosterSprite);
+                    }
+                }else
                 {
-                    mosterSprite.m_Camp = 1;
-                    this.MonsterArray[1].push(mosterSprite);
+                    if(isMyMonster)
+                    {
+                        mosterSprite.m_Camp = 1;
+                        this.MonsterArray[1].push(mosterSprite);
+                    }
+                    else 
+                    {
+                        mosterSprite.m_Camp = 0;
+                        this.MonsterArray[0].push(mosterSprite);
+                    }
                 }
+                
             mosterSprite.m_weiyi = account;
             account ++;
             this.addHierarchyMonsterSprite(mosterSprite);

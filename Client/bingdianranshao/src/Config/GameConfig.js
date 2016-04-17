@@ -16,7 +16,7 @@ GC.h_2 = GC.winSize.height / 2;
 
 GC.SOUND_ON = true;
 
-GC.IS_HOST = true; //true 表示主场也是左边这个阵营， false表示客场也是右边这个阵营
+GC.IS_HOST = false; //true 表示主场也是左边这个阵营， false表示客场也是右边这个阵营
 
 GC.UIN = -1;
 

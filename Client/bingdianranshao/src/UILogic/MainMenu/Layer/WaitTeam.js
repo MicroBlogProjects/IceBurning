@@ -55,10 +55,12 @@ var MMTouchLayer = cc.Layer.extend({
     },
     createMyRoom:function(id)
     {
+       GC.IS_HOST = true;
        this.buttonFreshRoomTouchEvent();
     },
     JoinBattle:function(id)
     {
+       
         this.unschedule(this.receiveMessage());
         g_this.parent.addChosePack();
         this.removeFromParent();

@@ -47,7 +47,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         cc.log("point x is "+point.x);
         cc.log("offset x is "+offset.x);
         var l_willPoint = monsterBackGroundLayer.TouchOfEnd(point);
-        if(l_WillPoint.point.x <=0 )
+        if(l_willPoint.point.x <=0 )
         {
             return ;
         }
