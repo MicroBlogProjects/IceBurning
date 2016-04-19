@@ -67,7 +67,7 @@ var RangedAttackSprite = cc.Sprite.extend({
     },
 
     straight : function(){
-        var walkSpeed = 100;
+        var walkSpeed = 300;
         var des_point = this.m_enemyMonster.getPosition();
         var position = this.getPosition();
         var distance = (des_point.x - position.x) * (des_point.x - position.x) + (des_point.y - position.y) * (des_point.y - position.y);

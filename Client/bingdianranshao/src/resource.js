@@ -57,6 +57,12 @@ var res = {
     GM_TurreAttackEnd_png :                  "res/GamePlay/Monster/Turret/TurretAttackEnd.png",
     GM_TurreAttackEnd_plist :                "res/GamePlay/Monster/Turret/TurretAttackEnd.plist",
 
+    //电塔
+    GM_PylonIcon_png  :                       "res/GamePlay/Monster/pylon/pylonIcon.png",
+    GM_PylonDefault_png  :                   "res/GamePlay/Monster/pylon/pylonDeafault.png",
+    GM_PylonSkillDefault_png :              "res/GamePlay/Monster/pylon/PylonSkillDefault.png",
+    GM_Pylon_plist :                          "res/GamePlay/Monster/pylon/pylon.plist",
+
     //骑士
     GM_KnightIcon_png :                 "res/GamePlay/Monster/Knight/KnightIcon.png",
     GM_KnightDefault_png :               "res/GamePlay/Monster/Knight/KnightDefault.png",

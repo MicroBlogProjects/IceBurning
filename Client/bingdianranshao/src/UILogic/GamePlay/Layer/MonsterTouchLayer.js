@@ -60,7 +60,7 @@ var MonsterTouchLayer = cc.Layer.extend({
         this.m_bulidingSelectScrollView.setDirection(ccui.ScrollView.DIR_VERTICAL);
         this.m_bulidingSelectScrollView.setTouchEnabled(true);
         this.m_bulidingSelectScrollView.setContentSize(cc.size(250,50));
-        this.m_bulidingSelectScrollView.setPosition(cc.p(530,23));
+        this.m_bulidingSelectScrollView.setPosition(cc.p(530,30));
         this.addChild(this.m_bulidingSelectScrollView,151);
 
         this.selectTool = ccs.load(res.GM_SelectTool_json).node;
@@ -78,7 +78,14 @@ var MonsterTouchLayer = cc.Layer.extend({
             var sprite = new MonsterTouchSprite(config);
             sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
             this.m_toolScrollView.addChild(sprite);
+        }
 
+        for(var i = 0; i < BuildingIDlist.length;i++){
+            var ID = BuildingIDlist[i];
+            var config = MonsterConfig[""+ID];
+            var sprite = new MonsterTouchSprite(config);
+            sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
+            this.m_bulidingSelectScrollView.addChild(sprite);
         }
         /*config = MonsterConfig[""+1];
         for(var i = 0; i < 5;i++){

@@ -30,6 +30,7 @@
         "src/UIlogic/Config/MonsterConfig/SkeletonConfig.js",
         "src/UIlogic/Config/MonsterConfig/AxeSoldersConfig.js",
         "src/UIlogic/Config/MonsterConfig/ArcherConfig.js",
+        "src/UIlogic/Config/MonsterConfig/PylonConfig.js",
         "src/UIlogic/Config/MonsterConfig/MonsterConfig.js",
 
         "src/UILogic/Config/MonsterConfig/HeroSkillConfig.js",
