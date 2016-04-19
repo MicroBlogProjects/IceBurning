@@ -16,7 +16,7 @@ GC.h_2 = GC.winSize.height / 2;
 
 GC.SOUND_ON = true;
 
-GC.IS_HOST = true;
+GC.IS_HOST = false;
 GC.UIN = -1;
 
 GC.UIN = -1;
@@ -44,6 +44,9 @@ var MonsterType ={
     Building: 0,
     Animal: 1
 };
+
+var MonsterIDList = [2,3,4,5,7];
+var BuildingIDlist = [101,102];
 
 var TMXTileMapsize = 32;
 

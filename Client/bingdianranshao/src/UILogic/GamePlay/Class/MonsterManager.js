@@ -21,7 +21,7 @@ var MonsterManager = cc.Class.extend({
          this.enemyMonsterArray = [];
 
         //层级管理模块
-        this.headMonsterSprite = new MonsterSprite(MonsterConfig.yuangujuren);
+        this.headMonsterSprite = new MonsterSprite(MonsterConfig[""+2]);
         this.headMonsterSprite.setPosition(0,7000);
         this.headMonsterSprite.getPosition();
         this.headMonsterSprite.m_localZOrder = 0;
@@ -234,6 +234,19 @@ var MonsterManager = cc.Class.extend({
 
     getPointDistance : function (p1, p2) {
         return (p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y);
+    },
+
+    //用来计算范围伤害
+    getMonstersInRect : function(point, radius){
+        var radius2 = radius * radius;
+        var monsters = [];
+        for(var i = 0; i < this.enemyMonsterArray.length; i++){
+            var enemyMonster = this.enemyMonsterArray[i];
+            if(this.getPointDistance(enemyMonster.getPosition(),point) <= radius2){
+                monsters.push(enemyMonster);
+            }
+        }
+        return monsters;
     },
 
 

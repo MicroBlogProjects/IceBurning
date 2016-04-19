@@ -13,7 +13,7 @@ var MonsterLayer = cc.Layer.extend({
         this._super();
 
         this.schedule(this.updateEvent,ScheduleTime);//计时器
-        this.schedule(this.monsterTest,TestTime);//计时器
+        //this.schedule(this.monsterTest,TestTime);//计时器
 
         monsterLayer = this;
     },
@@ -35,6 +35,7 @@ var MonsterLayer = cc.Layer.extend({
         }
         monsterManager.addMonsterSprite(101,myMainCityPosition,true);
         monsterManager.addMonsterSprite(101,enemyMainCityPosition,false);
+        //this.monsterTest();
 
     },
     updateEvent : function(){
@@ -52,16 +53,22 @@ var MonsterLayer = cc.Layer.extend({
         var config = MonsterConfig.yuangujuren;
         var num = Math.round(Math.random()*3)%3;
         var point = points[num];
-        monsterManager.addMonsterSprite(1,point,false);
+        monsterManager.addMonsterSprite(2,point,false);
 
      },
 
     //技能效果
-    skillAnimate :function(skillConfig,elemy){
-        var skillSprite = new SkillSprite(skillConfig);
-        skillSprite.setPosition(elemy.getPosition().x,elemy.getPosition().y -60 );
-        skillSprite.attackAnimate(elemy);
-        this.addChild(skillSprite);
+    skillAnimate :function(skillConfig,myMonster,elemyMonster){
+        var rangedAttackSprite = new RangedAttackSprite(skillConfig,myMonster.getPosition(),elemyMonster);
+        rangedAttackSprite.startAnimate();
+        this.addChild(rangedAttackSprite,0);
+    },
+    //技能特效
+    rangedAttackEffect : function(config, position){
+        var rangedAttackEffect = new RangedAttackEffectSprite(config);
+        rangedAttackEffect.setPosition(position);
+        rangedAttackEffect.startAnimate();
+        this.addChild(rangedAttackEffect);
     },
 
     addMonsterSprite : function(sprite) {

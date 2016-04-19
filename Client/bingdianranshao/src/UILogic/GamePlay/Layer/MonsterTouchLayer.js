@@ -7,7 +7,6 @@ var MonsterTouchLayer = cc.Layer.extend({
     m_toolScrollView : null,
     m_bulidingSelectScrollView : null,
     m_nowmoveSprite : null,
-    m_heroSkillSPrite :null,
     //m_monsterSelectScrollView : null,
     //m_buildingSelectScrollView : null,
     ctor : function(){
@@ -72,19 +71,35 @@ var MonsterTouchLayer = cc.Layer.extend({
         this.addIcon();
     },
     addIcon : function(){
-        config = MonsterConfig[""+1];
+
+        for(var i = 0; i < MonsterIDList.length; i++){
+            var ID = MonsterIDList[i];
+            var config = MonsterConfig[""+ID];
+            var sprite = new MonsterTouchSprite(config);
+            sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
+            this.m_toolScrollView.addChild(sprite);
+
+        }
+        /*config = MonsterConfig[""+1];
         for(var i = 0; i < 5;i++){
             var sprite = new MonsterTouchSprite(config);
             sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
             this.m_toolScrollView.addChild(sprite);
         }
         config = MonsterConfig[""+101];
-        for(var i = 0; i < 4;i++){
+        for(var i = 0; i < 2;i++){
             var sprite = new MonsterTouchSprite(config);
             sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
             //this.m_bulidingSelectScrollView.setInnerContainerSize(cc.size(1000,30));
             this.m_bulidingSelectScrollView.addChild(sprite);
         }
+        config = MonsterConfig[""+102];
+        for(var i = 2; i < 4;i++){
+            var sprite = new MonsterTouchSprite(config);
+            sprite.setPosition((sprite.getContentSize().width+30)*(i+0.5),sprite.getContentSize().height/2);
+            //this.m_bulidingSelectScrollView.setInnerContainerSize(cc.size(1000,30));
+            this.m_bulidingSelectScrollView.addChild(sprite);
+        }*/
 
     },
     addHeroSkillIcon : function(){

@@ -129,7 +129,7 @@ MonsterSprite = cc.Sprite.extend({
             enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
         }
         else {
-            monsterLayer.skillAnimate(skillConfig,enemyMonster);
+            monsterLayer.skillAnimate(skillConfig,myMonster,enemyMonster);
         }
         if(endAnimate == null || endAnimate == undefined){
             this.m_state = null;
@@ -214,23 +214,21 @@ MonsterSprite = cc.Sprite.extend({
 
     //添加血条
     addBooldProgressTimer : function () {
-        var backgroundSprite = cc.Sprite.create(res.GM_BackgroundBolld_png,cc.rect(0,0,this.width*0.8,10));
-        backgroundSprite.setPosition(this.width/2.0,this.height);
-        backgroundSprite.setContentSize(this.width*0.8,10);
+        var backgroundSprite = cc.Sprite.create(res.GM_BackgroundBolld_png,cc.rect(0,0,this.width*0.7,7));
+        backgroundSprite.setPosition((this.width*1.1)/2.0,this.getContentSize().height);
         this.addChild(backgroundSprite);
         var booldSprite ;
         if(this.m_isMyMonster){
-            booldSprite = cc.Sprite.create(res.GM_RedBlood_png,cc.rect(0,0,this.width*0.8,10));
+            booldSprite = cc.Sprite.create(res.GM_RedBlood_png,cc.rect(0,0,this.width*0.7,7));
         }
         else{
-            booldSprite = cc.Sprite.create(res.GM_BlueBlood_png,cc.rect(0,0,this.width*0.8,10))
+            booldSprite = cc.Sprite.create(res.GM_BlueBlood_png,cc.rect(0,0,this.width*0.7,7))
         }
         this.m_booldProgressTimer =  cc.ProgressTimer.create(booldSprite);
-        this.m_booldProgressTimer.setPosition(this.width/2.0,this.height);
+        this.m_booldProgressTimer.setPosition((this.width*1.1)/2.0,this.height);
         this.m_booldProgressTimer.type = cc.ProgressTimer.TYPE_BAR;
         this.m_booldProgressTimer.setMidpoint(cc.p(0.0,0.5));
         this.m_booldProgressTimer.setBarChangeRate(cc.p(1.0,0.0));
-        this.m_booldProgressTimer.setPercentage(80);
         this.addChild(this.m_booldProgressTimer);
     },
     update:function (dt){

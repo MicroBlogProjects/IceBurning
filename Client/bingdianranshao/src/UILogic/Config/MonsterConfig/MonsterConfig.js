@@ -3,11 +3,16 @@
  */
 
 var MonsterConfig = MonsterConfig = {
-    "yuangujuren" : YuangujurenConfig,
-    "xingxingmofata" : XingxingmofataConfig,
+    "2" : KnightConfig,
+    "3" : LongSwordConfig,
+    "4" : MusketConfig,
+    "5" : SkeletonConfig,
+    "6" : AxeSoldersConfig,
+    "7" : ArcherConfig,
 
-    "1" : YuangujurenConfig,
-    "101" : XingxingmofataConfig
+
+    "101" : XingxingmofataConfig,
+    "102" : TurretConfig
 };
 
 
