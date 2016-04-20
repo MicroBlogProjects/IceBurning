@@ -55,6 +55,7 @@ var MMTouchLayer = cc.Layer.extend({
     },
     createMyRoom:function(id)
     {
+       GC.IS_HOST = true;
        this.buttonFreshRoomTouchEvent();
     },
     JoinBattle:function(id)

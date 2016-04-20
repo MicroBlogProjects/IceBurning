@@ -1,15 +1,15 @@
 <GameFile>
-  <PropertyGroup Name="selectopponent" Type="Layer" ID="ff720657-bb3b-4a38-b0a7-38d626b14d91" Version="2.3.3.0" />
+  <PropertyGroup Name="selectopponent" Type="Layer" ID="ff720657-bb3b-4a38-b0a7-38d626b14d91" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Layer" Tag="169" ctype="GameLayerObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_1" ActionTag="-2012053302" Tag="170" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1" ActionTag="-2012053302" Tag="170" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="960.0000" Y="640.0000" />
             <Children>
-              <AbstractNodeData Name="Panel_9" ActionTag="206336819" Tag="250" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Enable="True" Scale9Width="1024" Scale9Height="522" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_9" ActionTag="206336819" Tag="250" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Enable="True" Scale9Width="1024" Scale9Height="522" ctype="PanelObjectData">
                 <Size X="960.0000" Y="640.0000" />
                 <AnchorPoint />
                 <Position />
@@ -23,10 +23,10 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_6" ActionTag="-1969558565" Alpha="254" Tag="251" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="91.2000" RightMargin="91.2000" TopMargin="54.4000" BottomMargin="54.4000" TouchEnable="True" BackColorAlpha="0" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_6" ActionTag="-1969558565" Alpha="254" Tag="251" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="91.2000" RightMargin="91.2000" TopMargin="54.4000" BottomMargin="54.4000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="777.6000" Y="531.2000" />
                 <Children>
-                  <AbstractNodeData Name="Panel_11" ActionTag="-327091752" Tag="278" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_11" ActionTag="-327091752" Tag="278" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="777.6000" Y="531.2000" />
                     <Children>
                       <AbstractNodeData Name="Image_Frame" ActionTag="-405994459" Tag="252" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="367.4937" RightMargin="383.9789" TopMargin="7.7555" BottomMargin="485.5168" Scale9Width="20" Scale9Height="35" ctype="ImageViewObjectData">
@@ -381,7 +381,7 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Panel_room" ActionTag="1886560810" Tag="298" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="888.3279" RightMargin="-826.1200" TopMargin="272.4147" BottomMargin="133.2627" TouchEnable="True" BackColorAlpha="0" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_room" ActionTag="1886560810" Tag="298" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="888.3279" RightMargin="-826.1200" TopMargin="272.4147" BottomMargin="133.2627" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="715.3920" Y="125.5226" />
                     <Children>
                       <AbstractNodeData Name="Image_189_229" ActionTag="2026092007" Tag="299" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="3.3624" RightMargin="350.3275" TopMargin="17.7740" BottomMargin="16.1422" Scale9Width="273" Scale9Height="100" ctype="ImageViewObjectData">

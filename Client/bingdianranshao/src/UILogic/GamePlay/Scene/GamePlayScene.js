@@ -11,7 +11,7 @@ var id = GameJoy.Proxy.RecvResponse()
 GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
 var gamePlayLayer;*/
 
-var RecvMessagTime = 1.0/60;
+var RecvMessagTime = 0;
 
 var GamePlayLayer = cc.Layer.extend({
 
@@ -19,7 +19,7 @@ var GamePlayLayer = cc.Layer.extend({
     backgroundLayer : null,
     monstarLayer : null,
     monsterTouchlayer: null,
-
+    
     playerInfomation : null,
     selectTool : null,
     timeTitle : null,
@@ -60,7 +60,47 @@ var GamePlayLayer = cc.Layer.extend({
     },
 
     //计算时间
+    GetPointOfBuild:function(uin,postion)
+    {
+        var l_position={};
+        l_position.tiled=[];
+        l_position.point = null;
+        var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
+        if(uin > 100)
+        {
 
+            for(var i = 0; i < 3; i++)
+            {
+                var l_y = postion.y + i;
+                var l_x = postion.x;
+
+                l_position.tiled.push(cc.p(l_x,l_y));
+            }
+            if( (postion.y)%2 )
+            {
+                var l_x = postion.x + 1;
+                var l_y = postion.y + 1;
+                l_position.tiled.push(cc.p(l_x,l_y));
+            }else
+            {
+                var l_x = postion.x - 1;
+                var l_y = postion.y + 1;
+                l_position.tiled.push(cc.p(l_x,l_y));
+            }
+            var l_msize = (tiled.getTileAt(postion)).getContentSize();
+            var l_mpoint = (tiled.getTileAt(postion)).getPosition();
+            l_position.point = cc.p( l_mpoint.x+32, l_mpoint.y+16);
+            monsterBackGroundLayer.PushDownTower(l_position.tiled,1);
+
+        }else
+        {
+            l_position.tiled.push(postion);
+            l_position.point = (tiled.getTileAt( postion )).getPosition();
+        }
+
+        return l_position;
+    }
+    ,
     recvMessage : function(){
         //cc.log("-------------------------------------------------1");
         var id = GameJoy.Proxy.RecvResponse();
@@ -83,10 +123,8 @@ var GamePlayLayer = cc.Layer.extend({
                 var y = step.get_pos_y();
                 var monsterId = step.get_obj_id();
                 var type = step.get_type();
-
-                var position = cc.p(x,y);
+                var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
                 //var config = MonsterConfig[""+monsterId];
-                if(config == null)
                 var isMyMonster  =false;
                 if(uin == GC.UIN){
                     isMyMonster = true;
@@ -94,13 +132,8 @@ var GamePlayLayer = cc.Layer.extend({
                 else{
                     isMyMonster = false;
                 }
-                /*cc.log("uin is "+ step.get_uin());
-                cc.log("x is "+step.get_pos_x());
-                cc.log("y is " + step.get_pos_y());
-                cc.log("mongter id "+ monsterId);
-                //cc.log("name is ",config.name);
-                cc.log("type is "+ step.get_type());*/
                 monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
+                cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
             }
         }
     },
@@ -142,13 +175,16 @@ var GamePlayLayer = cc.Layer.extend({
 
 });
 var GamePlayScene = cc.Scene.extend({
+
     gamePlayLayer :null,
     monsterManager:null,
     checkPathManger:null,
+    algorithmOfStatus:null,
     onEnter :function(){
         this._super();
         this.monsterManager = new MonsterManager();
         this.checkPathManger = new CheckPathManager();
+        this.algorithmOfStatus = new AlgorithmOfStatus();
         this.addGamePlay();
     },
     addGamePlay : function(){

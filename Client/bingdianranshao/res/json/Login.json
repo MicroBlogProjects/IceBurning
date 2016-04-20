@@ -1,6 +1,6 @@
 {
   "ID": "444184c6-b268-45bc-b6da-9c74bf060999",
-  "Version": "2.3.3.0",
+  "Version": "2.3.4",
   "Name": "Login",
   "Content": {
     "Content": {
@@ -211,6 +211,7 @@
             "ctype": "ImageViewObjectData"
           },
           {
+            "ClipAble": false,
             "BackColorAlpha": 102,
             "ComboBoxIndex": 1,
             "SingleColor": {
@@ -402,6 +403,7 @@
             "ctype": "PanelObjectData"
           },
           {
+            "ClipAble": false,
             "BackColorAlpha": 102,
             "ComboBoxIndex": 1,
             "SingleColor": {
