@@ -11,7 +11,7 @@ var id = GameJoy.Proxy.RecvResponse()
 GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
 var gamePlayLayer;*/
 
-var RecvMessagTime = 1.0/60;
+var RecvMessagTime = 0;
 
 var GamePlayLayer = cc.Layer.extend({
 

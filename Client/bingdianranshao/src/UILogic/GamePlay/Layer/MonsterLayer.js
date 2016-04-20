@@ -1,7 +1,7 @@
 /**
  * Created by jiachen on 2016/4/2.
  */
-var ScheduleTime =1.0/60;
+var ScheduleTime =0;
 var TestTime = 2;
 var monsterLayer;
 var MonsterLayer = cc.Layer.extend({
@@ -37,12 +37,6 @@ var MonsterLayer = cc.Layer.extend({
 
     monsterTest : function(){
         var points;
-        if(GC.IS_HOST){
-            points = [cc.p(50 * TMXTileMapsize,3 * TMXTileMapsize),cc.p(50*TMXTileMapsize,10*TMXTileMapsize), cc.p(50*TMXTileMapsize,17*TMXTileMapsize)];
-        }
-        else{
-            points = [cc.p(6 * TMXTileMapsize,3 * TMXTileMapsize),cc.p(10*TMXTileMapsize,10*TMXTileMapsize), cc.p(6*TMXTileMapsize,17*TMXTileMapsize)];
-        }
         var config = MonsterConfig.yuangujuren;
         var num = Math.round(Math.random()*3)%3;
         var point = points[num];

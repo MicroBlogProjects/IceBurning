@@ -3,7 +3,7 @@
  */
 
 //带弧线的远程攻击
-var setSlopeTime = 1/60;
+var setSlopeTime = 0;
 var RangedAttackSprite = cc.Sprite.extend({
     m_attack : null,
     m_time : null,
@@ -63,11 +63,16 @@ var RangedAttackSprite = cc.Sprite.extend({
     },
 
     startStraightAnimate : function(){
-        this.schedule(this.setSlope,setSlopeTime);
         this.schedule(this.straight,setSlopeTime);
     },
 
     straight : function(){
+        if(this.m_enemyMonster.m_activity == false){
+            this.removeFromParent();
+            return;
+        }
+        this.setSlope();
+        cc.log("stargit animate");
         var walkSpeed = 300;
         var des_point = this.m_enemyMonster.getPosition();
         var position = this.getPosition();
@@ -79,6 +84,7 @@ var RangedAttackSprite = cc.Sprite.extend({
         if(distance <= this.width * this.width * 0.5){
             this.calculationsDamage();
             this.removeFromParent();
+            return;
         }
         else {
             var dx = position.x - des_point.x;
@@ -227,6 +233,12 @@ var RangedAttackSprite = cc.Sprite.extend({
             }
         }
         else {
+            if(this.m_enemyMonster.m_activity == false){
+                return;
+            }
+            if(this.m_enemyMonster.m_HP <=0 ){
+                return;
+            }
             this.m_enemyMonster.m_HP -=(this.m_attack / this.m_enemyMonster.m_defense + 1);
         }
     }
