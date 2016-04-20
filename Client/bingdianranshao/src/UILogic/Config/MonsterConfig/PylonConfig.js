@@ -16,6 +16,7 @@ PylonConfig.attribute = {
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
     "attackRadius" : 200.0, //攻击半径
+    "attackSpeed" : 2,
 
     "Icon" :res.GM_PylonIcon_png,
     "defaultImage" : res.GM_PylonDefault_png
@@ -52,6 +53,7 @@ PylonConfig.walking = null;
 
 PylonConfig.skill = {
     "attribute" : {
+        "offsetPoint" : cc.p(0,30),
         "isRangeAttack" : false,
         "isArcAnimate" : false,
         "attack" : 20, //有技能伤害 则伤害根据技能伤害算

@@ -94,6 +94,22 @@ var res = {
     GM_Archer_plist :                             "res/GamePlay/Monster/Archer/Archer.plist",
     GM_ArcherSkillDefault_png    :               "res/GamePlay/Monster/Archer/ArcherSkillDefault.png",
 
+    //锤子兵
+    GM_HammerIcon_png :                           "res/GamePlay/Monster/Hammer/HammerIcon.png",
+    GM_HammerDefault_png :                       "res/GamePlay/Monster/Hammer/HammerDefault.png",
+    GM_Hammer_plist :                             "res/GamePlay/Monster/Hammer/Hammer.plist",
+
+    //巫师
+    GM_WizardIcon_png :                            "res/GamePlay/Monster/Wizard/WizardIcon.png",
+    GM_WizardDefault_png :                          "res/GamePlay/Monster/Wizard/WizardDefault.png",
+    GM_Wizard_plist :                               "res/GamePlay/Monster/Wizard/Wizard.plist",
+    GM_WizardSkill_png :                             "res/GamePlay/Monster/Wizard/WizardSkillDefault.png",
+
+    //狼
+    GM_WolfIcon_png :                                "res/GamePlay/Monster/Wolf/WolfIcon.png",
+    GM_WolfDefault_png :                              "res/GamePlay/Monster/Wolf/WolfDefault.png",
+    GM_Wolf_plist :                                    "res/GamePlay/Monster/Wolf/Wolf.plist",
+
 
     //英雄技能
     HS_Hongqiu_png : "res/GamePlay/HeroSkill/Hongqiu/Hongqiu.png",

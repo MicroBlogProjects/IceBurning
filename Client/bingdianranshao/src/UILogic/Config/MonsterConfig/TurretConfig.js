@@ -16,7 +16,8 @@ TurretConfig.attribute = {
     "sightRadius" : 200.0, //视野半径
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
-    "attackRadius" : 200.0 //攻击半径
+    "attackRadius" : 200.0, //攻击半径
+    "attackSpeed" : 2
 
 };
 
@@ -53,6 +54,7 @@ TurretConfig.walking = null;
 //技能
 TurretConfig.skill = {
     "attribute" : {
+        "offsetPoint" : cc.p(0,30),
         "isRangeAttack" : true, //是否是范围伤害
         "isArcAnimate" : true, // 是否是弧线动画
         "attack" : 20,

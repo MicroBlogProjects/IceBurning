@@ -9,6 +9,9 @@ var MonsterConfig = MonsterConfig = {
     "5" : SkeletonConfig,
     "6" : AxeSoldersConfig,
     "7" : ArcherConfig,
+    "8" : HammerConfig,
+    "9" : WizardConfig,
+    "10" : WolfConfig,
 
 
     "101" : XingxingmofataConfig,

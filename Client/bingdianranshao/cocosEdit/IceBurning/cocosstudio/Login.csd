@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Login" Type="Layer" ID="444184c6-b268-45bc-b6da-9c74bf060999" Version="2.3.3.0" />
+  <PropertyGroup Name="Login" Type="Layer" ID="444184c6-b268-45bc-b6da-9c74bf060999" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -48,7 +48,7 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="Login/LI07.jpg" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_1" ActionTag="282936416" Tag="95" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="295.1520" RightMargin="292.8480" TopMargin="262.2320" BottomMargin="327.7680" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1" ActionTag="282936416" Tag="95" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="295.1520" RightMargin="292.8480" TopMargin="262.2320" BottomMargin="327.7680" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="372.0000" Y="50.0000" />
             <Children>
               <AbstractNodeData Name="Frd11_1_2_16_28" CanEdit="False" ActionTag="1837197815" Tag="96" IconVisible="False" LeftMargin="0.2510" RightMargin="185.7490" TopMargin="-0.5000" BottomMargin="0.5000" ctype="SpriteObjectData">
@@ -94,7 +94,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_1_0" ActionTag="-737595456" Tag="99" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="294.4800" RightMargin="293.5200" TopMargin="327.7680" BottomMargin="262.2320" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1_0" ActionTag="-737595456" Tag="99" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="294.4800" RightMargin="293.5200" TopMargin="327.7680" BottomMargin="262.2320" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="372.0000" Y="50.0000" />
             <Children>
               <AbstractNodeData Name="Frd11_1_2_16_24_32" CanEdit="False" ActionTag="-1617159305" Tag="100" IconVisible="False" LeftMargin="0.2510" RightMargin="185.7490" TopMargin="-0.5000" BottomMargin="0.5000" ctype="SpriteObjectData">

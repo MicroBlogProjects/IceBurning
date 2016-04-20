@@ -93,7 +93,10 @@ var MMTouchLayer = cc.Layer.extend({
     },
     buttonCreateRoomTouchEvent:function()
     {
-        GameJoy.Proxy.SendRequest(4);
+        //this.unschedule(this.receiveMessage());
+        g_this.parent.addChosePack();
+        this.removeFromParent();
+       // GameJoy.Proxy.SendRequest(4);
     },
     buttonFreshRoomTouchEvent:function()
     {

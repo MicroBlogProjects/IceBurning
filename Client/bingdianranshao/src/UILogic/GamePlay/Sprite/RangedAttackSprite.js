@@ -27,7 +27,8 @@ var RangedAttackSprite = cc.Sprite.extend({
         this.m_isRangeAttack = attributeConfig.isRangeAttack;
         this.m_isArcAnimate = attributeConfig.isArcAnimate;
         this.m_attackConfig = config.attackAnimate;
-        this.setPosition(position);
+        var offsetPoint = attributeConfig.offsetPoint;
+        this.setPosition(position.x + offsetPoint.x, position.y + offsetPoint.y);
         this.m_frontPoint = this.getPosition();
         this.m_runAnimate = config.Animate;
 

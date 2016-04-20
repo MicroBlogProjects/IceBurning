@@ -16,7 +16,7 @@ AxeSoldersConfig.attribute = {
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
     "attackRadius" : 10.0, //攻击半径
-    //"attackSpeed" : 1.0  //攻击速度 多少秒一下
+    "attackSpeed" : 1.0,  //攻击速度 多少秒一下
 
     "Icon" : res.GM_AxeSoldiersIcon_png,
     "defaultImage" : res.GM_AxeSoldiersDefault_png

@@ -45,7 +45,7 @@ var MonsterType ={
     Animal: 1
 };
 
-var MonsterIDList = [2,3,4,5,7];
+var MonsterIDList = [2,8,9,10,7];
 var BuildingIDlist = [102,103];
 
 var TMXTileMapsize = 32;
