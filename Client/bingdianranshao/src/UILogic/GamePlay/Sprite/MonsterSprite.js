@@ -76,7 +76,12 @@ MonsterSprite = cc.Sprite.extend({
     },
     setTiledPosition:function(position)
     {
-       this.m_TiledPosition = position;
+        for(var i = 0; i<position.length; ++i)
+        {
+            this.m_TiledPosition[i] = position[i];
+            this.m_nextTiledPosition[i] = position[i];
+        }
+
     }
     ,
     setMyPosition:function(position)
@@ -232,6 +237,7 @@ MonsterSprite = cc.Sprite.extend({
         if(this.m_state != null) return ;
         if(this.m_id<100)
         {
+            cc.log(this.m_nextTiledPosition[0].x + "  "+ this.m_nextTiledPosition[0].y);
             this.m_nextPosition =monsterBackGroundLayer.GetPositionOfTiled(this.m_nextTiledPosition[0]) ; 
         }
         if(this.m_nextState == MonsterState.WalkingLeft && this.m_state == null){

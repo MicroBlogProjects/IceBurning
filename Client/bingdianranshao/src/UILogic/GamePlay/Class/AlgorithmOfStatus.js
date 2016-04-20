@@ -245,39 +245,6 @@
     GetIdByTiledPos:function(l_pos)
     {
       return l_pos.x * battleLayerConfig.height + l_pos.y;
-    },
-    BFSAttrack:function(moster,TiledPosition,l_mypos)
-    {
-
-         this.queue.clear();
-         var l_pos = TiledPosition[0];
-         this.queue.push(l_pos);
-         this.bfsmap[ this.GetIdByTiledPos(l_pos) ] = this.makrid;
-          var l_tildpos = TiledPosition[0];
-         while(this.queue.length > 0)
-         {
-            var fornt = this.queue.shift();
-             if(this.mapstatus[ 1 - moster.m_Camp ][ fornt.x ][fornt.y ].length > 0)
-             {
-                   return this.mapstatus[ 1 - moster.m_Camp ][ fornt.x ][fornt.y ][0];
-             }
-            for(var i = 0; i < 4; ++ i)
-            {
-              var l_nex = this.TurnDirec(fornt,i);
-              if(l_nex.x >= battleLayerConfig.width || l_nex.x < 0 || l_nex.y < 0 || l_nex.y >= battleLayerConfig.height)
-                 continue;
-               var diff = Math.abs(l_tildpos.x - l_nex.x) + Math.abs(l_tildpos.y - l_nex.y ) ;
-               var l_nexpos = monsterBackGroundLayer.GetPositionOfTiled(l_nex);
-                var l_mark = this.bfsmap[this.GetIdByTiledPos(l_nex) ];
-                if(l_mark != this.makrid && diff <=1)
-                {
-                   this.queue.push(l_nex);
-                   this.bfsmap[this.GetIdByTiledPos(l_nex)] = this.makrid;
-                }
-            }
-         }
-         this.makrid++;
-         return -1;
     }
     ,
     GetAttrackDir:function(sprite)
@@ -489,22 +456,20 @@
     },
     GetNextLocationNotOnRoad:function(sprite,l_endPosition)
     {
-        var l_tiledPosition = sprite.m_TiledPosition[0];
-        var l_idx = sprite.m_Camp == 0 ? 0:1;
-        var l_diffx = l_tiledPosition.x - l_endPosition.x;
-        l_diffx = l_diffx > 0 ? l_diffx : -l_diffx;
-        var l_diffy = l_tiledPosition.y - l_endPosition.y;
-        l_diffy = l_diffy > 0 ? l_diffy : -l_diffy;
-        var l_nowTilePosition;
-        if(l_diffx >= l_diffy)
-        {
-            var l_jud = l_tiledPosition.x > l_endPosition.x ? 1 : -1;
-            sprite.m_nextTiledPosition[0] = cc.p((l_tiledPosition.x - l_jud), l_tiledPosition.y);
-        }else
-        {
-            var l_jud = l_tiledPosition.y > l_endPosition.y ? 1 : -1;
-            sprite.m_nextTiledPosition[0] = cc.p(l_tiledPosition.x ,(l_tiledPosition.y - l_jud));
-        }
+      var l_minv =1000000;
+      var l_minpos = null;
+      var l_mypos = sprite.m_TiledPosition[0];
+      for(var i = 0; i < 4; i++)
+      {
+          var l_tit = this.TurnDirec(l_mypos,i);
+          var diff = this.DistanceOfPoint(l_tit, l_endPosition);
+          if(diff < l_minv)
+          {
+            l_minv = diff;
+            l_minpos = l_tit;
+          }
+      }
+      sprite.m_nextTiledPosition[0] = l_minpos;
     },
     GetDirctAndStatusMonster:function(sprite)
     {
