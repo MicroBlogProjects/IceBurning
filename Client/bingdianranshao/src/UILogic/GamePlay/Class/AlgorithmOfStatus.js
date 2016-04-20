@@ -489,22 +489,20 @@
     },
     GetNextLocationNotOnRoad:function(sprite,l_endPosition)
     {
-        var l_tiledPosition = sprite.m_TiledPosition[0];
-        var l_idx = sprite.m_Camp == 0 ? 0:1;
-        var l_diffx = l_tiledPosition.x - l_endPosition.x;
-        l_diffx = l_diffx > 0 ? l_diffx : -l_diffx;
-        var l_diffy = l_tiledPosition.y - l_endPosition.y;
-        l_diffy = l_diffy > 0 ? l_diffy : -l_diffy;
-        var l_nowTilePosition;
-        if(l_diffx >= l_diffy)
-        {
-            var l_jud = l_tiledPosition.x > l_endPosition.x ? 1 : -1;
-            sprite.m_nextTiledPosition[0] = cc.p((l_tiledPosition.x - l_jud), l_tiledPosition.y);
-        }else
-        {
-            var l_jud = l_tiledPosition.y > l_endPosition.y ? 1 : -1;
-            sprite.m_nextTiledPosition[0] = cc.p(l_tiledPosition.x ,(l_tiledPosition.y - l_jud));
-        }
+      var l_minv =1000000;
+      var l_minpos = null;
+      var l_mypos = sprite.m_TiledPosition[0];
+      for(var i = 0; i < 4; i++)
+      {
+          var l_tit = this.TurnDirec(l_mypos,i);
+          var diff = this.DistanceOfPoint(l_tit, l_endPosition);
+          if(diff < l_minv)
+          {
+            l_minv = diff;
+            l_minpos = l_tit;
+          }
+      }
+      sprite.m_nextTiledPosition[0] = l_minpos;
     },
     GetDirctAndStatusMonster:function(sprite)
     {
