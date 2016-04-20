@@ -37,9 +37,26 @@ var MPackMenuLayer = cc.Scene.extend({
         this.addChild(g_mainscene);
         var l_startButton = ccui.helper.seekWidgetByName(g_mainscene, "m_Button_start");
         l_startButton.addClickEventListener(this.buttonStartTouchEvent);
+        this.setIcon();
     },
     buttonStartTouchEvent:function()
     {
         GameJoy.Proxy.SendRequest(6);
+    },
+
+    setIcon: function(){
+        var panel = ccui.helper.seekWidgetByName(g_mainscene,"BagPanel");
+        var height = panel.height;
+        var width = panel.width;
+        var account = 0;
+        for(var value in MonsterConfig){
+            var config = MonsterConfig[value];
+            var x = (0.14 + (account % 5)*0.18)*width;
+            var y = (0.80 - parseInt(account /5)*0.3) * height;
+            ++ account;
+            var sprite = new BagTouchSprite(config);
+            sprite.setPosition(x,y);
+            panel.addChild(sprite);
+        }
     }
 });

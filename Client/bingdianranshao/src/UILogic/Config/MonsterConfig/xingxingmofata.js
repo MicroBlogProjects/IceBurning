@@ -9,13 +9,14 @@ var XingxingmofataConfig = XingxingmofataConfig || {};
 XingxingmofataConfig.attribute = {
     "id" : 101, //id
     "name" : "星星魔法塔",
+
     "walkSpeed" : 0, //移动速度
     "HP" : 100.0, //血量
     "sightRadius" : 200.0, //视野半径
     "defense" : 20.0,
-
     "attack" : 20.0, //攻击力
     "attackRadius" : 200.0, //攻击半径
+    "attackSpeed" : 2,
 
     "Icon" :res.GM_XxmftIcon_Png,
     "defaultImage" : res.GM_Xxmft_Png
@@ -52,7 +53,7 @@ XingxingmofataConfig.death = {
 XingxingmofataConfig.walking = null;
 
 //技能
-XingxingmofataConfig.skill = {
+/*XingxingmofataConfig.skill = {
     "attribute" : {
         "attack" : 20,
         "walkingSpeed" : 0,
@@ -68,4 +69,16 @@ XingxingmofataConfig.skill = {
         },
         "end" : null
     }
-};
+};*/
+XingxingmofataConfig.skill = {
+    "attribute" : {
+        "offsetPoint" : cc.p(0,0),
+        "isRangeAttack" : false,
+        "isArcAnimate" : false,
+        "attack" : 20, //有技能伤害 则伤害根据技能伤害算
+        "time" : 0.2,
+        "attackRadius" :1,
+        "defaultImage" : res.GM_XxmftSkillArrow_png
+    },
+    "Animate" : null
+}

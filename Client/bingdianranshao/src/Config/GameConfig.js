@@ -17,9 +17,6 @@ GC.h_2 = GC.winSize.height / 2;
 GC.SOUND_ON = true;
 
 GC.IS_HOST = false; //true 表示主场也是左边这个阵营， false表示客场也是右边这个阵营
-
-GC.UIN = -1;
-
 GC.UIN = -1;
 GC.NUM_MONSTER_BLOCK = 2;
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
@@ -45,6 +42,9 @@ var MonsterType ={
     Building: 0,
     Animal: 1
 };
+
+var MonsterIDList = [2,8,9,10,7];
+var BuildingIDlist = [102,103];
 
 var TMXTileMapsize = 32;
 

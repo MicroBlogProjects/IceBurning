@@ -1,6 +1,6 @@
 {
   "ID": "ff720657-bb3b-4a38-b0a7-38d626b14d91",
-  "Version": "2.3.3.0",
+  "Version": "2.3.4",
   "Name": "selectopponent",
   "Content": {
     "Content": {
@@ -15,6 +15,7 @@
         "Tag": 169,
         "Children": [
           {
+            "ClipAble": false,
             "BackColorAlpha": 102,
             "ComboBoxIndex": 1,
             "SingleColor": {
@@ -58,6 +59,7 @@
             "Tag": 170,
             "Children": [
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -116,6 +118,7 @@
                 "ctype": "PanelObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 0,
                 "SingleColor": {
                   "R": 150,
@@ -167,6 +170,7 @@
                 "Tag": 251,
                 "Children": [
                   {
+                    "ClipAble": false,
                     "BackColorAlpha": 102,
                     "SingleColor": {
                       "R": 150,
@@ -1859,6 +1863,7 @@
                     "ctype": "ListViewObjectData"
                   },
                   {
+                    "ClipAble": false,
                     "BackColorAlpha": 0,
                     "SingleColor": {
                       "R": 150,
