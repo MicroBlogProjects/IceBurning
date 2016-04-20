@@ -3,7 +3,6 @@
  */
 
 //带弧线的远程攻击
-var setSlopeTime = 0;
 var RangedAttackSprite = cc.Sprite.extend({
     m_attack : null,
     m_time : null,
@@ -63,7 +62,7 @@ var RangedAttackSprite = cc.Sprite.extend({
     },
 
     startStraightAnimate : function(){
-        this.schedule(this.straight,setSlopeTime);
+        this.schedule(this.straight,0);
     },
 
     straight : function(){
@@ -79,7 +78,7 @@ var RangedAttackSprite = cc.Sprite.extend({
         var distance = (des_point.x - position.x) * (des_point.x - position.x) + (des_point.y - position.y) * (des_point.y - position.y);
         var destinationX = position.x;
         var destinationY = position.y;
-        var d = walkSpeed * setSlopeTime;
+        var d = walkSpeed * 1/60;
         var destinationPoint;
         if(distance <= this.width * this.width * 0.5){
             this.calculationsDamage();
@@ -116,7 +115,7 @@ var RangedAttackSprite = cc.Sprite.extend({
                 }
             }
             destinationPoint = cc.p(destinationX,destinationY);
-            var moveTo = new cc.MoveTo(setSlopeTime,destinationPoint);
+            var moveTo = new cc.MoveTo(1/60,destinationPoint);
             this.runAction(moveTo);
         }
     },
@@ -124,7 +123,7 @@ var RangedAttackSprite = cc.Sprite.extend({
 
     startArcAnimate : function(){
         var point = this.m_enemyMonster.getPosition();
-        this.schedule(this.setSlope,setSlopeTime);
+        this.schedule(this.setSlope,0);
         var bezierToAnimate = this.getBezierAnimate(point);
         if(this.m_runAnimate == null || this.m_runAnimate == undefined){
             this.runAction(cc.sequence(bezierToAnimate,cc.callFunc(this.animateCallFunc,this,null)));
