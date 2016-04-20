@@ -245,39 +245,6 @@
     GetIdByTiledPos:function(l_pos)
     {
       return l_pos.x * battleLayerConfig.height + l_pos.y;
-    },
-    BFSAttrack:function(moster,TiledPosition,l_mypos)
-    {
-
-         this.queue.clear();
-         var l_pos = TiledPosition[0];
-         this.queue.push(l_pos);
-         this.bfsmap[ this.GetIdByTiledPos(l_pos) ] = this.makrid;
-          var l_tildpos = TiledPosition[0];
-         while(this.queue.length > 0)
-         {
-            var fornt = this.queue.shift();
-             if(this.mapstatus[ 1 - moster.m_Camp ][ fornt.x ][fornt.y ].length > 0)
-             {
-                   return this.mapstatus[ 1 - moster.m_Camp ][ fornt.x ][fornt.y ][0];
-             }
-            for(var i = 0; i < 4; ++ i)
-            {
-              var l_nex = this.TurnDirec(fornt,i);
-              if(l_nex.x >= battleLayerConfig.width || l_nex.x < 0 || l_nex.y < 0 || l_nex.y >= battleLayerConfig.height)
-                 continue;
-               var diff = Math.abs(l_tildpos.x - l_nex.x) + Math.abs(l_tildpos.y - l_nex.y ) ;
-               var l_nexpos = monsterBackGroundLayer.GetPositionOfTiled(l_nex);
-                var l_mark = this.bfsmap[this.GetIdByTiledPos(l_nex) ];
-                if(l_mark != this.makrid && diff <=1)
-                {
-                   this.queue.push(l_nex);
-                   this.bfsmap[this.GetIdByTiledPos(l_nex)] = this.makrid;
-                }
-            }
-         }
-         this.makrid++;
-         return -1;
     }
     ,
     GetAttrackDir:function(sprite)
