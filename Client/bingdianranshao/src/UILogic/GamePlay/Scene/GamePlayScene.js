@@ -35,7 +35,7 @@ var GamePlayLayer = cc.Layer.extend({
 
         this.addChild(this.playerInfomation,150);
         this.schedule(this.updataTime,1);//计时器
-        //this.schedule(this.recvMessage,RecvMessagTime);
+        this.schedule(this.recvMessage,RecvMessagTime);
         gamePlayLayer = this;
     },
     addBackgroundpScrollView :function(){
@@ -133,6 +133,7 @@ var GamePlayLayer = cc.Layer.extend({
                     isMyMonster = false;
                 }
                 monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
+                cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
             }
         }
     },

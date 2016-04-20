@@ -13,10 +13,10 @@ TurretConfig.attribute = {
 
     "walkSpeed" : 0, //移动速度
     "HP" : 100.0, //血量
-    "sightRadius" : 200.0, //视野半径
+    "sightRadius" : 2, //视野半径
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
-    "attackRadius" : 200.0, //攻击半径
+    "attackRadius" : 1, //攻击半径
     "attackSpeed" : 2
 
 };
@@ -59,7 +59,7 @@ TurretConfig.skill = {
         "isArcAnimate" : true, // 是否是弧线动画
         "attack" : 20,
         "walkingSpeed" : 0,
-        "attackRadius" : 5,
+        "attackRadius" : 1,
         "defaultImage" : res.GM_TurretRangedAttackDefault_png
     },
     "Animate" :{

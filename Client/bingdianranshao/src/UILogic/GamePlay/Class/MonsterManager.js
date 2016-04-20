@@ -42,16 +42,13 @@ var MonsterManager = cc.Class.extend({
     //用户添加Monster模块
     addMonsterSprite : function(id, point, isMyMonster)
     {
-
         var config = MonsterConfig[id];
         var mosterSprite;
         mosterSprite = new MonsterSprite(config,isMyMonster);
         mosterSprite.setMyPosition(point);
         monsterLayer.addMonsterSprite(mosterSprite);
         mosterSprite.m_spriteID = this.numOfSprite++;
-        
         this.IdMapSprite[ mosterSprite.m_spriteID ] = mosterSprite;
- 
         if(GC.IS_HOST)
         {
             if(isMyMonster)
@@ -79,23 +76,10 @@ var MonsterManager = cc.Class.extend({
         }
         this.addHierarchyMonsterSprite(mosterSprite);
         if(id > 100) 
-        { //建筑物
-/*                mosterSprite = new MonsterSprite(config,isMyMonster);
-                mosterSprite.setMyPosition(point);
-                monsterLayer.addMonsterSprite(mosterSprite);
-                if(isMyMonster){
-                    mosterSprite.m_Camp = 0;
-                    this.MonsterArray[0].push(mosterSprite);
-                }
-                else{
-                    mosterSprite.m_Camp = 1;
-                    this.MonsterArray[1].push(mosterSprite);
-                }
-                this.addHierarchyMonsterSprite(mosterSprite);*/
-                algorithmOfStatus.PushDownTower(mosterSprite.m_TiledPosition,1);
+        { 
+            algorithmOfStatus.PushDownTower(mosterSprite.m_TiledPosition,1);
         }
         algorithmOfStatus.AddMonster(mosterSprite,1);
-
      },
     //更新Monster
     updateMonsterData : function(){
@@ -134,10 +118,9 @@ var MonsterManager = cc.Class.extend({
         
         for(var i = 0;i < Math.min(len2,3); i++)
         {      
-                this.idx2=(this.idx2+1)%len2;
-                var  myMonster = this.MonsterArray[1][this.idx2];
-                this.walk(myMonster);
-
+            this.idx2=(this.idx2+1)%len2;
+            var  myMonster = this.MonsterArray[1][this.idx2];
+            this.walk(myMonster);
         }
     },
 

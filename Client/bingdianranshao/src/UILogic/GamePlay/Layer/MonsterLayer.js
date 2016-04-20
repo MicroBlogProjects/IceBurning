@@ -1,11 +1,8 @@
 /**
  * Created by jiachen on 2016/4/2.
  */
-
-
 var ScheduleTime =1.0/60;
 var TestTime = 2;
-
 var monsterLayer;
 var MonsterLayer = cc.Layer.extend({
 

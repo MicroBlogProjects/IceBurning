@@ -13,10 +13,10 @@ WizardConfig.attribute = {
 
     "walkSpeed" : 20, //移动速度
     "HP" : 10.0, //血量
-    "sightRadius" : 200.0, //视野半径
+    "sightRadius" : 2, //视野半径
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
-    "attackRadius" : 200.0, //攻击半径
+    "attackRadius" : 1, //攻击半径
     "attackSpeed" : 2,
 
     "Icon" :res.GM_WizardIcon_png,
