@@ -4,22 +4,25 @@
 
 var monsterManager;
 
-var account = 1;
-var numOfSprite = 0;
-
 var MonsterManager = cc.Class.extend({
 
     //用户添加Monster模块
     myMainBuildingSprite : null,
-     enemyMainBuildingSprite : null,
-     MonsterArray : null, //用来存放我方怪物，包括怪物，建筑类
+    enemyMainBuildingSprite : null,
+    MonsterArray : null, //用来存放我方怪物，包括怪物，建筑类
     //层级管理模块
     headMonsterSprite : null,
-
+    IdMapSprite:null,
+    times:null,
+    idx1:null,
+    idx2:null,
+    numOfSprite:0,
     ctor : function(){
-
+        this.numOfSprite =0;
+        this.idx1 = this.idx2 = 0;
         //用户添加Monster模块
         this.MonsterArray={};
+        this.IdMapSprite={};
         this.MonsterArray[0]=[];
         this.MonsterArray[1]=[];
         //层级管理模块
@@ -27,6 +30,7 @@ var MonsterManager = cc.Class.extend({
         this.headMonsterSprite.setPosition(0,7000);
         this.headMonsterSprite.getPosition();
         this.headMonsterSprite.m_localZOrder = 0;
+        this.times = 0;
         monsterManager = this;
     },
 
@@ -40,44 +44,43 @@ var MonsterManager = cc.Class.extend({
     {
 
         var config = MonsterConfig[id];
-        if(config.attribute.id < 100)
-        {//怪物
-            var mosterSprite = new MonsterSprite(config,isMyMonster);
-                mosterSprite.m_spriteID = numOfSprite++;
-                mosterSprite.setMyPosition(point);
-                monsterLayer.addMonsterSprite(mosterSprite);
-                if(GC.IS_HOST)
-                {
-                    if(isMyMonster)
-                    {
-                        mosterSprite.m_Camp = 0;
-                        this.MonsterArray[0].push(mosterSprite);
-                    }
-                    else 
-                    {
-                        mosterSprite.m_Camp = 1;
-                        this.MonsterArray[1].push(mosterSprite);
-                    }
-                }else
-                {
-                    if(isMyMonster)
-                    {
-                        mosterSprite.m_Camp = 1;
-                        this.MonsterArray[1].push(mosterSprite);
-                    }
-                    else 
-                    {
-                        mosterSprite.m_Camp = 0;
-                        this.MonsterArray[0].push(mosterSprite);
-                    }
-                }
-                
-            mosterSprite.m_weiyi = account;
-            account ++;
-            this.addHierarchyMonsterSprite(mosterSprite);
+        var mosterSprite;
+        mosterSprite = new MonsterSprite(config,isMyMonster);
+        mosterSprite.setMyPosition(point);
+        monsterLayer.addMonsterSprite(mosterSprite);
+        mosterSprite.m_spriteID = this.numOfSprite++;
+        
+        this.IdMapSprite[ mosterSprite.m_spriteID ] = mosterSprite;
+ 
+        if(GC.IS_HOST)
+        {
+            if(isMyMonster)
+            {
+                mosterSprite.m_Camp = 0;
+                this.MonsterArray[0].push(mosterSprite);
+            }
+            else 
+            {
+                mosterSprite.m_Camp = 1;
+                this.MonsterArray[1].push(mosterSprite);
+            }
+        }else
+        {
+            if(isMyMonster)
+            {
+                mosterSprite.m_Camp = 1;
+                this.MonsterArray[1].push(mosterSprite);
+            }
+            else 
+            {
+                mosterSprite.m_Camp = 0;
+                this.MonsterArray[0].push(mosterSprite);
+            }
         }
-        else { //建筑物
-                var mosterSprite = new MonsterSprite(config,isMyMonster);
+        this.addHierarchyMonsterSprite(mosterSprite);
+        if(id > 100) 
+        { //建筑物
+/*                mosterSprite = new MonsterSprite(config,isMyMonster);
                 mosterSprite.setMyPosition(point);
                 monsterLayer.addMonsterSprite(mosterSprite);
                 if(isMyMonster){
@@ -88,11 +91,17 @@ var MonsterManager = cc.Class.extend({
                     mosterSprite.m_Camp = 1;
                     this.MonsterArray[1].push(mosterSprite);
                 }
-                this.addHierarchyMonsterSprite(mosterSprite);
+                this.addHierarchyMonsterSprite(mosterSprite);*/
+                algorithmOfStatus.PushDownTower(mosterSprite.m_TiledPosition,1);
         }
+        algorithmOfStatus.AddMonster(mosterSprite,1);
+
      },
     //更新Monster
     updateMonsterData : function(){
+        this.times=(this.times+1)%1;
+        if(this.times != 0)
+            return ;
         this.updateMonsterArray();
         this.monsterWalking();
     },
@@ -112,28 +121,36 @@ var MonsterManager = cc.Class.extend({
     //怪物行走动画
     monsterWalking :function()
     {
-        for(var camp = 0; camp < 2; ++ camp)
-        {
-            for(var i = 0;i < this.MonsterArray[camp].length; i++)
-            {
-                var  myMonster = this.MonsterArray[camp][i];
-                this.walk(myMonster,this.MonsterArray[1-camp]);
-            }
+        var len1 = this.MonsterArray[0].length;
+    
+        for(var i = 0;i < Math.min(len1,3); i++)
+        {   
+            this.idx1=(this.idx1+1)%len1;
+            var  myMonster = this.MonsterArray[0][this.idx1];
+            this.walk(myMonster);
+
+        }
+        var len2 = this.MonsterArray[1].length;
+        
+        for(var i = 0;i < Math.min(len2,3); i++)
+        {      
+                this.idx2=(this.idx2+1)%len2;
+                var  myMonster = this.MonsterArray[1][this.idx2];
+                this.walk(myMonster);
+
         }
     },
 
-    walk : function(monster, MonsterArray)
+    walk : function(monster)
     {
-        if(monster.m_id > 100) return ;
         if(monster.m_HP <= 0)
         {
-            monster.monsterAction(MonsterState.Death);
+            monster.m_nextState = MonsterState.Death;
+            monster.monsterAction();
             return;
         }
-        algorithmOfStatus.GetNextLocation(monster);
-        var state = null;
-        var destinationMonster = null;
-        monster.monsterAction(state,destinationMonster);
+        algorithmOfStatus.GetStatus(monster);
+        monster.monsterAction();
     },
 
     getPointDistance : function (p1, p2) 
@@ -232,6 +249,12 @@ var MonsterManager = cc.Class.extend({
     },
     //yichuMonster
     removeMonsterSprite : function(monster){
+        algorithmOfStatus.AddMonster(monster,-1);
+        if(monster.m_id>100)
+        {
+            algorithmOfStatus.PushDownTower(monster.m_TiledPosition,-1);
+            monsterBackGroundLayer.PushDownTower(monster.m_TiledPosition,-1);
+        }
         var frontMonster = monster.m_frontMonsterSprite;
         var nextMonster = monster.m_nextMonsterSprite;
         frontMonster.m_nextMonsterSprite = nextMonster;

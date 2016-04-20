@@ -9,14 +9,15 @@ var monsterBackGroundLayer;
 var MonsterBackgroundLayer = cc.Layer.extend({
     m_clipperNode : null,
     buildingTickLayer : null,
-
+    positionOfTiled:null,
     TMXTiledMap :null,
-
+    layer7:null,
     ctor : function()
     {
         this._super();
         this.InitMyMap();
         monsterBackGroundLayer = this;
+        this.layer7 = this.TMXTiledMap.getLayer("layer7");
     },
    InitMyMap:function()
    {
@@ -33,10 +34,18 @@ var MonsterBackgroundLayer = cc.Layer.extend({
        l_layer5.setVisible(true);
        var l_st;
        var l_ed;
+        this.positionOfTiled ={};
        for(var i = 0; i < battleLayerConfig.width; ++ i)
+       {
+          this.positionOfTiled[i]={};
         for(var j = 0; j < battleLayerConfig.height; ++ j)
         {
+          
+          var l_posblock = l_layer7.getTileAt(cc.p(i,j));
+          this.positionOfTiled[i][j]=l_posblock.getPosition();
+
           var l_block = l_layer4.getTileAt( cc.p( i, j ) );
+        
           if(l_block != null)
           {
              l_block.setVisible(false);
@@ -47,6 +56,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
              l_block.setVisible(false);
           }
         }
+      }
        if(GC.IS_HOST)
        {
            l_st = 0; l_ed = battleLayerConfig.colums;
@@ -123,6 +133,37 @@ var MonsterBackgroundLayer = cc.Layer.extend({
         }
       }
    },
+
+   GetPositionOfTiled:function(pos)
+   {
+         
+         return this.positionOfTiled[pos.x][pos.y];
+   }
+   ,
+    PushDownTower:function(tiled,op)
+    {
+       if(op > 0 )
+       {
+          for(var i = 0; i< tiled.length; ++ i)
+          {
+            var l_x = tiled[i].x;
+            var l_y = tiled[i].y;
+            var l_id = l_x * battleLayerConfig.height + l_y;
+            battleLayerConfig.occupiedOfblock[l_id] = 1;
+          }
+       }else
+       {
+          for(var i = 0; i< tiled.length; ++ i)
+          {
+            var l_x = tiled[i].x;
+            var l_y = tiled[i].y;
+            var l_id = l_x * battleLayerConfig.height + l_y;
+            battleLayerConfig.occupiedOfblock[l_id] = 0;
+          }
+       }
+    }
+
+   ,
    TouchOfBegin:function(point)
    {
        if(battleLayerConfig.buildType == 1)
@@ -217,7 +258,7 @@ var MonsterBackgroundLayer = cc.Layer.extend({
       for(var i = 0; i < 4; ++i)
       {
         var l_id = battleLayerConfig.highLightID[i];
-        battleLayerConfig.occupiedOfblock[l_id] = 1;
+        
         var l_x = Math.floor(l_id/battleLayerConfig.height);
         var l_y = l_id % battleLayerConfig.height;
         l_poin.tiled.push(cc.p(l_x,l_y));

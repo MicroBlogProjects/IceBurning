@@ -68,10 +68,12 @@ var GamePlayLayer = cc.Layer.extend({
         var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
         if(uin > 100)
         {
+
             for(var i = 0; i < 3; i++)
             {
                 var l_y = postion.y + i;
                 var l_x = postion.x;
+
                 l_position.tiled.push(cc.p(l_x,l_y));
             }
             if( (postion.y)%2 )
@@ -87,14 +89,15 @@ var GamePlayLayer = cc.Layer.extend({
             }
             var l_msize = (tiled.getTileAt(postion)).getContentSize();
             var l_mpoint = (tiled.getTileAt(postion)).getPosition();
-            cc.log(l_mpoint.x + " " + l_mpoint.y);
-            cc.log(l_msize.x + " " + l_msize.y);
-            l_position.point = cc.p( l_mpoint.x+l_msize.width/2, l_mpoint.y +l_msize.height/2 );
+            l_position.point = cc.p( l_mpoint.x+32, l_mpoint.y+16);
+            monsterBackGroundLayer.PushDownTower(l_position.tiled,1);
+
         }else
         {
             l_position.tiled.push(postion);
             l_position.point = (tiled.getTileAt( postion )).getPosition();
         }
+
         return l_position;
     }
     ,
@@ -177,7 +180,6 @@ var GamePlayScene = cc.Scene.extend({
     checkPathManger:null,
     algorithmOfStatus:null,
     onEnter :function(){
-    cc.log("+++++++++++_____________"+GC.IS_HOST);
         this._super();
         this.monsterManager = new MonsterManager();
         this.checkPathManger = new CheckPathManager();

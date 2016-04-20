@@ -32,8 +32,9 @@ MonsterSprite = cc.Sprite.extend({
     m_deathConfig : null,
     m_skillConfig : null,
     m_TiledPosition:null,
+    m_nextTiledPosition:null,
     m_Camp:null,
-    m_AttackObjects:null,
+    m_AttackObjectsID:null,
     m_nextPosition:null,
     //血条
     m_booldProgressTimer :null,
@@ -42,7 +43,9 @@ MonsterSprite = cc.Sprite.extend({
     ctor : function(config,isMyMonster){
         var attributeConfig = config.attribute;
         this._super(attributeConfig.defaultImage);
-        this.m_TiledPosition=[];
+        this.m_TiledPosition = [];
+        this.m_nextTiledPosition = [];
+        this.m_AttackObjectsID = -1;
         //设置属性
         this.m_id = attributeConfig.id;
         this.m_name = attributeConfig.name;
@@ -78,10 +81,7 @@ MonsterSprite = cc.Sprite.extend({
     ,
     setMyPosition:function(position)
     {
-        
-
         this.setTiledPosition(position.tiled);
-
         this.setPosition((position.point).x,(position.point).y);
     }
     ,
@@ -127,13 +127,20 @@ MonsterSprite = cc.Sprite.extend({
                 this.setFlippedX(false);
             }
         }
-
-        var speed = totalTime * 1.0 / account;
-        var animation = new cc.Animation(animFrames, speed);
-        var moveToAction = new cc.MoveTo(totalTime,this.m_nextPosition);
-        var animate = new cc.Animate(animation);
-        var spwan = new cc.Spawn(animate,moveToAction);
-        this.m_nowAnimateAction = spwan;
+        if(this.m_id < 100)
+        {
+            var speed = totalTime * 1.0 / account;
+            var animation = new cc.Animation(animFrames, speed);
+            var moveToAction = new cc.MoveTo(totalTime,cc.p(this.m_nextPosition.x+32,this.m_nextPosition.y+32));
+            var animate = new cc.Animate(animation);
+            var spwan = new cc.Spawn(animate,moveToAction);
+            this.m_nowAnimateAction = spwan;
+       }else{
+            var speed = totalTime * 1.0 / account;
+            var animation = new cc.Animation(animFrames, speed);
+            var animate = new cc.Animate(animation);
+            this.m_nowAnimateAction = animate;
+       }
     },
 
     deathCallFunc : function(){
@@ -165,8 +172,16 @@ MonsterSprite = cc.Sprite.extend({
         this.m_state = null;
     },
     walkingCallFunc : function(){
-        this.setPosition(this.m_nextPosition);
+//        this.setPosition(cc.p(this.m_nextPosition);
         this.m_state = null;
+        algorithmOfStatus.AddMonster(this,-1)
+        for(var i = 0 ; i < this.m_nextTiledPosition.length; ++ i)
+        {
+            this.m_TiledPosition[i] = this.m_nextTiledPosition[i];    
+        
+        }
+        algorithmOfStatus.AddMonster(this,1);
+        
     },
     stopAnimate : function(){
         this.stopAllActions();
@@ -206,36 +221,44 @@ MonsterSprite = cc.Sprite.extend({
         if(this.m_state == state){
             return;
         }
+
         this.m_state = state;
         this.startAnimate(this.m_deathConfig.begin);
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this)));
     },
 
     
-    monsterAction : function(state,enemyMonster){
-
-        var myPosition={};
-        myPosition.tiled=this.m_TiledPosition;
-        var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
-        myPosition.point = tiled.getTileAt( cc.p( myPosition.tiled[0].x, myPosition.tiled[0].y ) );
-        this.m_nextPosition = myPosition.point; 
-        if(this.m_nextState == MonsterState.WalkingLeft){
-            this.walkingAnimate(this.m_nextState)
+    monsterAction : function(){
+        if(this.m_state != null) return ;
+        if(this.m_id<100)
+        {
+            this.m_nextPosition =monsterBackGroundLayer.GetPositionOfTiled(this.m_nextTiledPosition[0]) ; 
         }
-        else if(this.m_nextState == MonsterState.WalkingRight){            
-            this.walkingAnimate(this.m_nextState)
+        if(this.m_nextState == MonsterState.WalkingLeft && this.m_state == null){
+            this.m_nextState = null;
+            this.walkingAnimate(MonsterState.WalkingLeft);
         }
-        /*else if(state == MonsterState.AttackLeft){
-            this.m_direct = -1;
-            this.attackAnimate(state,enemyMonster)
+        else if(this.m_nextState == MonsterState.WalkingRight && this.m_state == null){            
+            this.m_nextState = null;
+            this.walkingAnimate(MonsterState.WalkingRight);
         }
-        else if(state == MonsterState.AttackRight){
+        else if(this.m_nextState == MonsterState.AttackLeft && this.m_state == null){
+            this.m_nextState = null;
+            var l_obj = monsterManager.IdMapSprite[this.m_AttackObjectsID];
+            this.attackAnimate(MonsterState.AttackLeft,l_obj);
+        }
+        else if(this.m_nextState == MonsterState.AttackRight && this.m_state == null){
+            this.m_nextState = null;
             this.m_direct = 1;
-            this.attackAnimate(state,enemyMonster)
+            var l_obj = monsterManager.IdMapSprite[this.m_AttackObjectsID];
+            this.attackAnimate(MonsterState.AttackRight,l_obj);
         }
-        else if(state == MonsterState.Death){
-            this.deathAnimate(state);
-        }*/
+        else if(this.m_nextState == MonsterState.Death){
+        
+            this.m_nextState = null;
+            this.deathAnimate(MonsterState.Death);
+        
+        }
     },
 
     //添加血条
