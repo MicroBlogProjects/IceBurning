@@ -71,7 +71,6 @@ var RangedAttackSprite = cc.Sprite.extend({
             return;
         }
         this.setSlope();
-        cc.log("stargit animate");
         var walkSpeed = 300;
         var des_point = this.m_enemyMonster.getPosition();
         var position = this.getPosition();
@@ -122,6 +121,7 @@ var RangedAttackSprite = cc.Sprite.extend({
 
 
     startArcAnimate : function(){
+        cc.log("starArcAnimate1");
         var point = this.m_enemyMonster.getPosition();
         this.schedule(this.setSlope,0);
         var bezierToAnimate = this.getBezierAnimate(point);
@@ -129,6 +129,7 @@ var RangedAttackSprite = cc.Sprite.extend({
             this.runAction(cc.sequence(bezierToAnimate,cc.callFunc(this.animateCallFunc,this,null)));
         }
         else {
+            cc.log("starArcAnimate");
             var argu = {
                 "end" : this.m_runAnimate.end,
                 "effect" : this.m_runAnimate.effect

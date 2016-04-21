@@ -4,7 +4,7 @@
 
 
 
-var checkPathManager;
+//var checkPathManager;
 var CheckPathManager = cc.Class.extend({
 
     walkingPathConfig : null,

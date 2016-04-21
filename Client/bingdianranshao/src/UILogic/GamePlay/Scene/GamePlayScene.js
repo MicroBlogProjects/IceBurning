@@ -183,7 +183,7 @@ var GamePlayScene = cc.Scene.extend({
     onEnter :function(){
         this._super();
         this.monsterManager = new MonsterManager();
-        this.checkPathManger = new CheckPathManager();
+        //this.checkPathManger = new CheckPathManager();
         this.algorithmOfStatus = new AlgorithmOfStatus();
         this.addGamePlay();
     },

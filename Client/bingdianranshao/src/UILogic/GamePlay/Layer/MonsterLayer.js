@@ -46,6 +46,7 @@ var MonsterLayer = cc.Layer.extend({
 
     //技能效果
     skillAnimate :function(skillConfig,myMonster,elemyMonster){
+        cc.log("skillAnimate");
         var rangedAttackSprite = new RangedAttackSprite(skillConfig,myMonster.getPosition(),elemyMonster);
         rangedAttackSprite.startAnimate();
         this.addChild(rangedAttackSprite,0);
