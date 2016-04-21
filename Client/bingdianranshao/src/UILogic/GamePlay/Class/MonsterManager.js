@@ -170,9 +170,9 @@ var MonsterManager = cc.Class.extend({
              {
                   if((Math.abs(l_W) + Math.abs(l_h) <= l_H))
                       {
-                          for( var e = 0; e < algorithmOfStatus.mapstatus[camp][l_nex.x][l_nex.y].length; ++i)
+                          for( var e = 0; e < algorithmOfStatus.mapstatus[camp][l_nex.x][l_nex.y].length; ++e)
                           {
-                             var id = algorithmOfStatus.mapstatus[camp][l_nex.x][l_nex.y][e]; 
+                             var id = algorithmOfStatus.mapstatus[camp][l_nex.x][l_nex.y][e];
                              monsters.push( this.IdMapSprite[ id  ]  )
                           }
                       }

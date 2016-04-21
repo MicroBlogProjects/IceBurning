@@ -59,7 +59,7 @@ TurretConfig.skill = {
         "isArcAnimate" : true, // 是否是弧线动画
         "attack" : 20,
         "walkingSpeed" : 0,
-        "attackRadius" : 2,
+        "attackRadius" : 4,
         "defaultImage" : res.GM_TurretRangedAttackDefault_png
     },
     "Animate" :{

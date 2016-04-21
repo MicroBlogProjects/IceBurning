@@ -122,7 +122,10 @@ var RangedAttackSprite = cc.Sprite.extend({
 
 
     startArcAnimate : function(){
-        cc.log("starArcAnimate1");
+        if(this.m_enemyMonster.m_activity == false){
+            this.removeFromParent();
+            return;
+        }
         var point = this.m_enemyMonster.getPosition();
         this.schedule(this.setSlope,0);
         var bezierToAnimate = this.getBezierAnimate(point);
@@ -130,7 +133,6 @@ var RangedAttackSprite = cc.Sprite.extend({
             this.runAction(cc.sequence(bezierToAnimate,cc.callFunc(this.animateCallFunc,this,null)));
         }
         else {
-            cc.log("starArcAnimate");
             var argu = {
                 "end" : this.m_runAnimate.end,
                 "effect" : this.m_runAnimate.effect
@@ -192,25 +194,17 @@ var RangedAttackSprite = cc.Sprite.extend({
 
     animateCallFunc : function(sender,argu){
         if(argu == null || argu == undefined){
-            /*var monsters = monsterManager.getMonstersInRect(this.getPosition(),this.m_attackRadius);
-            for(var i = 0; i < monsters.length ;i++){
-                var monster = monsters[i];
-                monster.m_HP -= (sender.m_attack / monster.m_defense + 1);
-            }*/
             sender.calculationsDamage();
             sender.removeFromParent();
             return;
         }
         if(argu.effect == null || argu.effect == undefined){
-            /*var monsters = monsterManager.getMonstersInRect(this.getPosition(),this.m_attackRadius);
-            for(var i = 0; i < monsters.length ;i++){
-                var monster = monsters[i];
-                monster.m_HP -= (sender.m_attack / monster.m_defense + 1);
-            }*/
-            sender.calculationsDamage();
+            cc.log("callfunc3");
+            //sender.calculationsDamage();
         }
         else {
-            monsterLayer.rangedAttackEffect(argu.effect,this.getPosition());
+            var position =cc.p(sender.getPosition().x,sender.getPosition().y);
+            monsterLayer.rangedAttackEffect(argu.effect,position);
         }
         if(argu.end == null || argu.end == undefined){
             sender.calculationsDamage();
