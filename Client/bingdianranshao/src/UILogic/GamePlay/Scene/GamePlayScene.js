@@ -102,20 +102,20 @@ var GamePlayLayer = cc.Layer.extend({
     }
     ,
     recvMessage : function(){
-        //cc.log("-------------------------------------------------1");
+        ////cc.log("-------------------------------------------------1");
         var id = GameJoy.Proxy.RecvResponse();
         if(id > 0){
-            cc.log("recvMessageing...."+id);
+            //cc.log("recvMessageing...."+id);
         }
         if(id == NetIdentify["MSG_FRAME_SYNC"]){
-            cc.log("step 1 recvMessage id "+id);
+            //cc.log("step 1 recvMessage id "+id);
             var response = GameJoy.JS_CSFrameSyncResponse.Instance();
-            cc.log("resule is "+ response.get_result());
+            //cc.log("resule is "+ response.get_result());
             if(response.get_result() != 0){
                 return;
             }
             var steps =response.get_steps();
-            cc.log("length is " + steps.length);
+            //cc.log("length is " + steps.length);
             for(var i =0;i < steps.length;i++){
                 var step = steps[i];
                 var uin = step.get_uin();
@@ -133,7 +133,7 @@ var GamePlayLayer = cc.Layer.extend({
                     isMyMonster = false;
                 }
                 monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
-                cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
+                //cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
             }
         }
     },

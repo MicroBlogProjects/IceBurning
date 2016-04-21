@@ -21,7 +21,7 @@ var MMTouchLayer = cc.Layer.extend({
         var l_oppen = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
         var is_success = l_oppen.get_result();
         var l_rooms = l_oppen.get_rooms();
-        cc.log(l_rooms.length);
+        //cc.log(l_rooms.length);
         var listView = ccui.helper.seekWidgetByName(g_mainscene, "m_ListView_room");
         listView.removeAllItems();
         var Panel_room = ccui.helper.seekWidgetByName(g_mainscene, "Panel_room");

@@ -237,7 +237,7 @@ MonsterSprite = cc.Sprite.extend({
         if(this.m_state != null) return ;
         if(this.m_id<100)
         {
-            cc.log(this.m_nextTiledPosition[0].x + "  "+ this.m_nextTiledPosition[0].y);
+            //cc.log(this.m_nextTiledPosition[0].x + "  "+ this.m_nextTiledPosition[0].y);
             this.m_nextPosition =monsterBackGroundLayer.GetPositionOfTiled(this.m_nextTiledPosition[0]) ; 
         }
         if(this.m_nextState == MonsterState.WalkingLeft && this.m_state == null){
