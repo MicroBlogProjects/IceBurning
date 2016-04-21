@@ -55,6 +55,7 @@ var MMTouchLayer = cc.Layer.extend({
     },
     createMyRoom:function(id)
     {
+       GC.IS_HOST = true;
        this.buttonFreshRoomTouchEvent();
     },
     JoinBattle:function(id)
@@ -93,12 +94,7 @@ var MMTouchLayer = cc.Layer.extend({
     },
     buttonCreateRoomTouchEvent:function()
     {
-        //this.unschedule(this.receiveMessage());
-        /*g_this.parent.addChosePack();
-        this.removeFromParent();*/
-        g_this.parent.addChosePack();
-        this.removeFromParent();
-       // GameJoy.Proxy.SendRequest(4);
+        GameJoy.Proxy.SendRequest(4);
     },
     buttonFreshRoomTouchEvent:function()
     {

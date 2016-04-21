@@ -11,10 +11,10 @@ HammerConfig.attribute = {
 
     "walkSpeed" : 50, //移动速度
     "HP" : 1.0, //血量
-    "sightRadius" : 100.0, //视野半径
+    "sightRadius" : 2, //视野半径
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
-    "attackRadius" : 10.0, //攻击半径
+    "attackRadius" : 2, //攻击半径
     "attackSpeed" : 1.0,  //攻击速度 多少秒一下
 
     "Icon" : res.GM_HammerIcon_png,
@@ -54,7 +54,7 @@ HammerConfig.walking = {
         "time" : 0.6,
         "account" : 6,
         "prefix" : "HummerWalking",
-        "animatePlist" : res.GM_Knight_plist
+        "animatePlist" : res.GM_Hammer_plist
     },
     "end" :null
 };

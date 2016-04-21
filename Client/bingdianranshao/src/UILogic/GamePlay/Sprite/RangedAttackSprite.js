@@ -3,7 +3,6 @@
  */
 
 //带弧线的远程攻击
-var setSlopeTime = 1/60;
 var RangedAttackSprite = cc.Sprite.extend({
     m_attack : null,
     m_time : null,
@@ -63,22 +62,28 @@ var RangedAttackSprite = cc.Sprite.extend({
     },
 
     startStraightAnimate : function(){
-        this.schedule(this.setSlope,setSlopeTime);
-        this.schedule(this.straight,setSlopeTime);
+        this.schedule(this.straight,0);
     },
 
     straight : function(){
+        if(this.m_enemyMonster.m_activity == false){
+            this.removeFromParent();
+            return;
+        }
+        this.setSlope();
+        cc.log("stargit animate");
         var walkSpeed = 300;
         var des_point = this.m_enemyMonster.getPosition();
         var position = this.getPosition();
         var distance = (des_point.x - position.x) * (des_point.x - position.x) + (des_point.y - position.y) * (des_point.y - position.y);
         var destinationX = position.x;
         var destinationY = position.y;
-        var d = walkSpeed * setSlopeTime;
+        var d = walkSpeed * 1/60;
         var destinationPoint;
         if(distance <= this.width * this.width * 0.5){
             this.calculationsDamage();
             this.removeFromParent();
+            return;
         }
         else {
             var dx = position.x - des_point.x;
@@ -110,7 +115,7 @@ var RangedAttackSprite = cc.Sprite.extend({
                 }
             }
             destinationPoint = cc.p(destinationX,destinationY);
-            var moveTo = new cc.MoveTo(setSlopeTime,destinationPoint);
+            var moveTo = new cc.MoveTo(1/60,destinationPoint);
             this.runAction(moveTo);
         }
     },
@@ -118,7 +123,7 @@ var RangedAttackSprite = cc.Sprite.extend({
 
     startArcAnimate : function(){
         var point = this.m_enemyMonster.getPosition();
-        this.schedule(this.setSlope,setSlopeTime);
+        this.schedule(this.setSlope,0);
         var bezierToAnimate = this.getBezierAnimate(point);
         if(this.m_runAnimate == null || this.m_runAnimate == undefined){
             this.runAction(cc.sequence(bezierToAnimate,cc.callFunc(this.animateCallFunc,this,null)));
@@ -227,6 +232,12 @@ var RangedAttackSprite = cc.Sprite.extend({
             }
         }
         else {
+            if(this.m_enemyMonster.m_activity == false){
+                return;
+            }
+            if(this.m_enemyMonster.m_HP <=0 ){
+                return;
+            }
             this.m_enemyMonster.m_HP -=(this.m_attack / this.m_enemyMonster.m_defense + 1);
         }
     }
