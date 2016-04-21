@@ -14,11 +14,12 @@ var RangedAttackSprite = cc.Sprite.extend({
     m_isRangeAttack : true,
     m_isArcAnimate : null,
     m_enemyMonster : null,
-
+    m_Camp:null,
     ctor : function(config, position,enemyMonster){
         var attributeConfig = config.attribute;
         this._super(attributeConfig.defaultImage);
 
+        this.m_Camp = 1 - enemyMonster.m_Camp; 
         this.m_enemyMonster = enemyMonster;
         this.m_attack = attributeConfig.attack;
         this.m_time = attributeConfig.time;
@@ -212,6 +213,7 @@ var RangedAttackSprite = cc.Sprite.extend({
             monsterLayer.rangedAttackEffect(argu.effect,this.getPosition());
         }
         if(argu.end == null || argu.end == undefined){
+            sender.calculationsDamage();
             sender.removeFromParent();
         }
         else {
@@ -226,7 +228,7 @@ var RangedAttackSprite = cc.Sprite.extend({
 
     calculationsDamage : function(){
         if(this.m_isRangeAttack){
-            var monsters = monsterManager.getMonstersInRect(this.getPosition(),this.m_attackRadius);
+            var monsters = monsterManager.getMonstersInRect(1-this.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(this.getPosition()), this.m_attackRadius);
             for(var i = 0; i < monsters.length ;i++){
                 var monster = monsters[i];
                 monster.m_HP -= (this.m_attack / monster.m_defense + 1);

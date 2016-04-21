@@ -151,7 +151,7 @@
             sprite.m_AttackObjectsID = -1;    
           }
        }
-      if(sprite.m_spriteID < 100)
+      if(sprite.m_id < 100)
        {
          var l_attacknum = 0;
          var l_x = sprite.m_TiledPosition[0].x;
@@ -170,16 +170,14 @@
            return false;
          }
        }
-
-       var id = this.Around(sprite.m_TiledPosition[0],sprite.m_attackRadius,sprite.m_attackRadius,1-sprite.m_Camp);
-       if(id < 0 )
+       for(var i = 0;  i < sprite.m_TiledPosition.length; ++i)
        {
-         return false;
+          var id = this.Around(sprite.m_TiledPosition[i],sprite.m_attackRadius,sprite.m_attackRadius,1-sprite.m_Camp);
+         if(id<0) continue;
+         sprite.m_AttackObjectsID = id;
+         return true;
        }
-      var l_obj = monsterManager.IdMapSprite[id];
-   
-       sprite.m_AttackObjectsID = id;
-       return true;
+       return false
     },
     TurnLeft:function(pos)
     {
@@ -249,6 +247,7 @@
     ,
     GetAttrackDir:function(sprite)
     {
+       
         var l_obj = monsterManager.IdMapSprite[sprite.m_AttackObjectsID];
         var l_p2 = l_obj.m_TiledPosition[0];
         var l_p1 = sprite.m_TiledPosition[0];
@@ -283,7 +282,7 @@
        var l_jud = this.IsAttack(sprite);
        if(l_jud || sprite.m_id > 100 ) 
        {
-           if(l_jud && sprite.m_id <100)
+           if(l_jud)
            {
              this.GetAttrackDir(sprite);
            }

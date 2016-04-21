@@ -16,12 +16,12 @@ var MMBackgroundLayer = cc.Layer.extend({
         var id = GameJoy.Proxy.RecvResponse();
         if(id > 0)
         {
-            cc.log(id);
+            //cc.log(id);
             var index = ""+id;
             var login_res = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
-            cc.log(login_res.get_uin());
+            //cc.log(login_res.get_uin());
             GC.UIN = login_res.get_uin();
-            cc.log(login_res.get_result());
+            //cc.log(login_res.get_result());
             GC.UIN = login_res.get_uin();
             g_this.receiveMessageLogin();
         }

@@ -36,7 +36,7 @@ var MonsterManager = cc.Class.extend({
 
     getTime : function(){
         var mydate = new Date();
-        cc.log("minues :"+mydate.getMinutes() +"seconds"+ mydate.getSeconds()+ "millise"+mydate.getMilliseconds());
+        //cc.log("minues :"+mydate.getMinutes() +"seconds"+ mydate.getSeconds()+ "millise"+mydate.getMilliseconds());
     },
 
     //用户添加Monster模块
@@ -70,6 +70,7 @@ var MonsterManager = cc.Class.extend({
             }
             else 
             {
+
                 mosterSprite.m_Camp = 0;
                 this.MonsterArray[0].push(mosterSprite);
             }
@@ -142,18 +143,49 @@ var MonsterManager = cc.Class.extend({
     },
 
     //用来计算范围伤害
-    getMonstersInRect : function(point, radius){
-        var radius2 = radius * radius;
-        var monsters = [];
-        for(var i = 0; i < this.enemyMonsterArray.length; i++){
-            var enemyMonster = this.enemyMonsterArray[i];
-            if(this.getPointDistance(enemyMonster.getPosition(),point) <= radius2){
-                monsters.push(enemyMonster);
-            }
-        }
+    getMonstersInRect : function(camp,pos, radius){
+        cc.log("HHHHH");
+       var H = radius;
+       var W = radius;
+       var monsters = [];
+       var l_W = radius;
+       var l_H = radius;
+       var l_nex = pos;
+       for(var i = 0; i<H; i++)
+       {
+          pos = algorithmOfStatus.TurnUP(pos);
+       }
+       for(var i = 0; i<W; i++)
+       {
+          pos = algorithmOfStatus.TurnLeft(pos);
+       }
+
+       for(var i = 0; i <= W*2; i++)
+       {   
+          l_nex = pos;
+          var l_h = l_H;
+          for(var j = 0; j <= 2*H; ++j)
+          {
+             if((l_nex.x >= battleLayerConfig.width || l_nex.x < 0 || l_nex.y < 0 || l_nex.y >= battleLayerConfig.height)==false)   
+             {
+                  if((Math.abs(l_W) + Math.abs(l_h) <= l_H))
+                      {
+                          for( var e = 0; e < algorithmOfStatus.mapstatus[camp][l_nex.x][l_nex.y].length; ++i)
+                          {
+                             var id = algorithmOfStatus.mapstatus[camp][l_nex.x][l_nex.y][e]; 
+                             monsters.push( this.IdMapSprite[ id  ]  )
+                          }
+                      }
+             }
+             l_nex=algorithmOfStatus.TurnDown(l_nex);
+             l_h --;
+          }
+         pos=algorithmOfStatus.TurnRight(pos);
+         l_W --;
+       }
         return monsters;
     },
-
+    
 
     //层级管理模块
     //层级管理模块添加Monster
