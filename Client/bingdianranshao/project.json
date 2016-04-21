@@ -50,6 +50,8 @@
         "src/UILogic/GamePlay/Sprite/RangedAttackSprite.js",
         "src/UILogic/GamePlay/Sprite/RangedAttackEffectSprite.js",
 
+        "src/UILogic/GameOver/GameOverScene.js",
+
         "src/UILogic/Setting/Scene/SettingScene.js",
         "src/UILogic/Setting/Layer/STBackgroundLayer.js",
         "src/UILogic/Setting/Layer/STTouchLayer.js"

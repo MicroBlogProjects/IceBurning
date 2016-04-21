@@ -6,10 +6,14 @@ var BagTouchSprite = cc.Sprite.extend({
     m_id : null,
     m_config : null,
     m_attributePanel : null,
-    ctor : function(config){
+    m_isSelect : false,
+    m_select: null,
+    m_num : null,
+    ctor : function(config,num){
         this._super(config.attribute.defaultImage);
         this.m_id = config.attribute.id;
-        this.m_config  = config;
+        this.m_config  = config.attribute;
+        this.m_num = num;
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -20,14 +24,68 @@ var BagTouchSprite = cc.Sprite.extend({
         }, this);
     },
 
+
     onTouchBegan : function (touch, event) {
         var target = event.getCurrentTarget();
         if (!target.isTouchInRect(touch)){
             return false;
         }
+        var select = ccui.helper.seekWidgetByName(g_mainscene, "seleted_imageview_"+target.m_num);
+        var IDlist;
+        if(target.m_id < 100){
+            IDlist = MonsterIDList;
+        }
+        else {
+            IDlist = BuildingIDlist;
+        }
+        if(!target.m_isSelect){
+            if(IDlist.length < MAXMonsterAccount){
+                target.m_isSelect = !target.m_isSelect;
+                select.setVisible(target.m_isSelect);
+                IDlist.push(target.m_id);
+            }
+        }
+        else{
+            target.m_isSelect = !target.m_isSelect;
+            select.setVisible(target.m_isSelect);
+            for(var i =0; i < IDlist.length ;i++){
+                var monsterID = IDlist[i];
+                if(monsterID == target.m_id){
+                    IDlist.splice(i,1);
+                    break;
+                    //cc.log("delete ID "+monsterID);
+                }
+            }
+        }
+        /*cc.log('--------------------');
+        for(var i = 0;i<IDlist.length;i++){
+            cc.log("select iD is " + IDlist[i]);
+        }*/
         this.m_attributePanel = ccui.helper.seekWidgetByName(g_mainscene, "AttributePanel");
+        if(target.getPosition().x > 342){
+            this.m_attributePanel.setPosition(170,145);
+        }
+        else {
+            this.m_attributePanel.setPosition(550,145);
+        }
         this.m_attributePanel.setVisible(true);
-        target.setBagPanel(target.m_config);
+        var config = target.m_config;
+        var name_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_name");
+        var HP_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_HP");
+        var attack_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_attack");
+        var defense_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_defense");
+        var attackSpeed_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_attack_speed");
+        var walkSpeed_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_walk_speed");
+        var attackRadius_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_attack_radius");
+        var signRadius_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_sign_radius");
+        name_text.setString(config.name);
+        HP_text.setString(config.HP);
+        attack_text.setString(config.attack);
+        defense_text.setString(config.defense);
+        attackSpeed_text.setString(config.attackSpeed);
+        walkSpeed_text.setString(config.walkSpeed);
+        attackRadius_text.setString(config.attackRadius);
+        signRadius_text.setString(config.sightRadius);
         return true;
     },
     onTouchMoved : function (touch, event) {
@@ -43,11 +101,6 @@ var BagTouchSprite = cc.Sprite.extend({
         point = this.convertToWorldSpace(cc.p(this.width/2,this.height/2));
         myRect = cc.rect(point.x - this.width/2.0,point.y - this.height/2.0,this.width,this.height);
         return cc.rectContainsPoint(myRect, getPoint);
-    },
-
-    setBagPanel : function(config){
-        var name_text = ccui.helper.seekWidgetByName(g_mainscene, "atribute_name");
-        name_text.setString(config.name);
-        //var HP_text = ccui.helper.seekWidgetByName(g_mainscene,   "atribute_HP");
     }
+
 });

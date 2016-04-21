@@ -11,6 +11,7 @@ var res = {
     MM_Mune_png :     "res/MainMenu/menu.png",
     MM_ButtonEffect : "res/Sound/Effect/buttonEffect.mp3",
     MM_Flare_jpg :     "res/MainMenu/flare.jpg",
+    MB_Select_png :    "res/MainMenu/Select/select.png",
 
     //GamePlay
     GM_Map_tmx : "res/GamePlay/Map/map.tmx",
@@ -109,6 +110,9 @@ var res = {
     GM_WolfIcon_png :                                "res/GamePlay/Monster/Wolf/WolfIcon.png",
     GM_WolfDefault_png :                              "res/GamePlay/Monster/Wolf/WolfDefault.png",
     GM_Wolf_plist :                                    "res/GamePlay/Monster/Wolf/Wolf.plist",
+
+    //游戏结束界面
+    GO_SettlementLayer_json :                      "res/json/Settlementlayer.json",
 
 
     //英雄技能

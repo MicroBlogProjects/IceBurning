@@ -6,13 +6,13 @@
       <ObjectData Name="Layer" Tag="514" ctype="GameLayerObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_1" ActionTag="-338024205" Tag="119" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-1.3009" RightMargin="1.3009" BottomMargin="0.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Enable="True" Scale9Width="1024" Scale9Height="522" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1" ActionTag="-338024205" Tag="119" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-1.3440" RightMargin="1.3440" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Enable="True" Scale9Width="1024" Scale9Height="522" ctype="PanelObjectData">
             <Size X="960.0000" Y="640.0000" />
             <AnchorPoint />
-            <Position X="-1.3009" Y="0.0000" />
+            <Position X="-1.3440" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="-0.0014" Y="0.0000" />
+            <PrePosition X="-0.0014" />
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="Common/Lg_selectbardground.jpg" Plist="" />
             <SingleColor A="255" R="150" G="200" B="255" />
@@ -340,8 +340,345 @@
                 <PreSize X="0.0336" Y="0.0953" />
                 <FileData Type="Normal" Path="Inventory/BaB161.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="ListView_3" ActionTag="-268275866" Tag="135" IconVisible="False" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="19.4000" RightMargin="43.4243" TopMargin="79.2327" BottomMargin="81.7382" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ScrollDirectionType="0" DirectionType="Vertical" ctype="ListViewObjectData">
-                <Size X="685.9756" Y="395.8291" />
+              <AbstractNodeData Name="ListView_3" ActionTag="-268275866" Tag="135" IconVisible="False" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="19.4000" RightMargin="43.4243" TopMargin="79.2327" BottomMargin="81.7382" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="0" DirectionType="Vertical" ctype="ListViewObjectData">
+                <Size X="685.9757" Y="395.8291" />
+                <Children>
+                  <AbstractNodeData Name="BagPanel" ActionTag="-1760594608" Tag="512" IconVisible="False" RightMargin="-0.0043" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                    <Size X="685.9800" Y="395.8300" />
+                    <Children>
+                      <AbstractNodeData Name="Image_189" CanEdit="False" ActionTag="-336795910" Tag="714" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" RightMargin="342.9900" Scale9Enable="True" LeftEage="40" RightEage="40" TopEage="40" BottomEage="40" Scale9OriginX="40" Scale9OriginY="40" Scale9Width="193" Scale9Height="20" ctype="ImageViewObjectData">
+                        <Size X="342.9900" Y="395.8300" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="171.4950" Y="197.9150" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.2500" Y="0.5000" />
+                        <PreSize X="0.5000" Y="1.0000" />
+                        <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_189_0" CanEdit="False" ActionTag="-2014833156" Tag="321" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="339.2171" RightMargin="3.7729" FlipX="True" Scale9Enable="True" LeftEage="40" RightEage="40" TopEage="40" BottomEage="40" Scale9OriginX="40" Scale9OriginY="40" Scale9Width="193" Scale9Height="20" ctype="ImageViewObjectData">
+                        <Size X="342.9900" Y="395.8300" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="510.7121" Y="197.9150" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.7445" Y="0.5000" />
+                        <PreSize X="0.5000" Y="1.0000" />
+                        <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_0" ActionTag="1017102377" Tag="331" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-7.0100" RightMargin="-7.0100" TopMargin="-229.7402" BottomMargin="25.5702" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="342.9900" Y="325.5702" />
+                        <Scale ScaleX="0.1672" ScaleY="0.1801" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="0.8225" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_1" ActionTag="-610409757" Tag="332" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="124.5561" RightMargin="-138.2758" TopMargin="-236.7262" BottomMargin="38.8111" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="699.6996" Y="593.7450" />
+                        <AnchorPoint ScaleX="0.4863" ScaleY="0.4791" />
+                        <Position X="464.8200" Y="323.2744" />
+                        <Scale ScaleX="0.1638" ScaleY="0.1820" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.6776" Y="0.8167" />
+                        <PreSize X="1.0200" Y="1.5000" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_2" ActionTag="1778892092" Tag="333" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="239.9428" RightMargin="-253.9628" TopMargin="-229.7402" BottomMargin="25.5702" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="589.9428" Y="325.5702" />
+                        <Scale ScaleX="0.1672" ScaleY="0.1729" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.8600" Y="0.8225" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_3" ActionTag="-1221204490" Tag="334" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-253.9628" RightMargin="239.9428" TopMargin="-102.0850" BottomMargin="-102.0850" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="96.0372" Y="197.9150" />
+                        <Scale ScaleX="0.1593" ScaleY="0.1815" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1400" Y="0.5000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_4" ActionTag="1524195670" Tag="335" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-130.4864" RightMargin="116.4664" TopMargin="-102.0850" BottomMargin="-102.0850" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="219.5136" Y="197.9150" />
+                        <Scale ScaleX="0.1629" ScaleY="0.1767" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.3200" Y="0.5000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_5" ActionTag="-904940423" Tag="336" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-7.0100" RightMargin="-7.0100" TopMargin="-102.0850" BottomMargin="-102.0850" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="342.9900" Y="197.9150" />
+                        <Scale ScaleX="0.1600" ScaleY="0.1767" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="0.5000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_6" ActionTag="36210681" Tag="337" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="116.4664" RightMargin="-130.4865" TopMargin="-102.0850" BottomMargin="-102.0850" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="466.4664" Y="197.9150" />
+                        <Scale ScaleX="0.1571" ScaleY="0.1800" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.6800" Y="0.5000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_7" ActionTag="-670373168" Tag="338" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="239.9428" RightMargin="-253.9628" TopMargin="-102.0850" BottomMargin="-102.0850" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="589.9428" Y="197.9150" />
+                        <Scale ScaleX="0.1566" ScaleY="0.1842" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.8600" Y="0.5000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_8" ActionTag="-99995460" Tag="339" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-253.9628" RightMargin="239.9428" TopMargin="16.6640" BottomMargin="-220.8340" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="96.0372" Y="79.1660" />
+                        <Scale ScaleX="0.1506" ScaleY="0.1644" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1400" Y="0.2000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_9" ActionTag="1719374065" Tag="340" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-130.4864" RightMargin="116.4664" TopMargin="16.6640" BottomMargin="-220.8340" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="219.5136" Y="79.1660" />
+                        <Scale ScaleX="0.1615" ScaleY="0.1619" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.3200" Y="0.2000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_10" ActionTag="18956967" Tag="341" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-7.0100" RightMargin="-7.0100" TopMargin="16.6640" BottomMargin="-220.8340" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="342.9900" Y="79.1660" />
+                        <Scale ScaleX="0.1682" ScaleY="0.1679" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="0.2000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_11" ActionTag="-1838241120" Tag="342" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="116.4664" RightMargin="-130.4865" TopMargin="16.6640" BottomMargin="-220.8340" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="466.4664" Y="79.1660" />
+                        <Scale ScaleX="0.1581" ScaleY="0.1705" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.6800" Y="0.2000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_12" ActionTag="1722249332" Tag="343" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="239.9428" RightMargin="-253.9628" TopMargin="16.6640" BottomMargin="-220.8340" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="589.9428" Y="79.1660" />
+                        <Scale ScaleX="0.1562" ScaleY="0.1773" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.8600" Y="0.2000" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_0_0" ActionTag="1661373363" Tag="137" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-253.9628" RightMargin="239.9428" TopMargin="-229.7402" BottomMargin="25.5702" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="96.0372" Y="325.5702" />
+                        <Scale ScaleX="0.1571" ScaleY="0.1767" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1400" Y="0.8225" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_13_0_1" ActionTag="-1299443714" Tag="155" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" LeftMargin="-130.4864" RightMargin="116.4664" TopMargin="-229.7402" BottomMargin="25.5702" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                        <Size X="700.0000" Y="600.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="219.5136" Y="325.5702" />
+                        <Scale ScaleX="0.1668" ScaleY="0.1788" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.3200" Y="0.8225" />
+                        <PreSize X="1.0204" Y="1.5158" />
+                        <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_3" ActionTag="1049531040" VisibleForFrame="False" Tag="89" IconVisible="False" LeftMargin="370.3900" RightMargin="294.5900" TopMargin="89.4400" BottomMargin="285.3900" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="380.8900" Y="295.8900" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5552" Y="0.7475" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_1" ActionTag="-837854622" VisibleForFrame="False" Tag="91" IconVisible="False" LeftMargin="118.8200" RightMargin="546.1600" TopMargin="85.0400" BottomMargin="289.7900" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="129.3200" Y="300.2900" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1885" Y="0.7586" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_2" ActionTag="1750820339" VisibleForFrame="False" Tag="92" IconVisible="False" LeftMargin="246.3800" RightMargin="418.6000" TopMargin="86.6900" BottomMargin="288.1400" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="256.8800" Y="298.6400" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.3745" Y="0.7545" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_4" ActionTag="-1142119332" VisibleForFrame="False" Tag="93" IconVisible="False" LeftMargin="489.6000" RightMargin="175.3800" TopMargin="90.3400" BottomMargin="284.4900" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="500.1000" Y="294.9900" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.7290" Y="0.7452" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_5" ActionTag="1350166468" VisibleForFrame="False" Tag="95" IconVisible="False" LeftMargin="616.7300" RightMargin="48.2500" TopMargin="88.0400" BottomMargin="286.7900" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="627.2300" Y="297.2900" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.9144" Y="0.7511" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_6" ActionTag="-1930978207" VisibleForFrame="False" Tag="96" IconVisible="False" LeftMargin="118.8200" RightMargin="546.1600" TopMargin="217.7000" BottomMargin="157.1300" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.4666" ScaleY="0.3522" />
+                        <Position X="128.6183" Y="164.5257" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1875" Y="0.4156" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_7" ActionTag="-1416275801" VisibleForFrame="False" Tag="97" IconVisible="False" LeftMargin="245.3000" RightMargin="419.6800" TopMargin="217.7000" BottomMargin="157.1300" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="255.8000" Y="167.6300" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.3729" Y="0.4235" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_8" ActionTag="1429621153" VisibleForFrame="False" Tag="98" IconVisible="False" LeftMargin="369.7700" RightMargin="295.2100" TopMargin="217.7000" BottomMargin="157.1300" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="380.2700" Y="167.6300" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5543" Y="0.4235" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_9" ActionTag="-4981290" VisibleForFrame="False" Tag="99" IconVisible="False" LeftMargin="490.5500" RightMargin="174.4300" TopMargin="219.8800" BottomMargin="154.9500" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="501.0500" Y="165.4500" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.7304" Y="0.4180" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_10" ActionTag="1107896084" VisibleForFrame="False" Tag="100" IconVisible="False" LeftMargin="614.7300" RightMargin="50.2500" TopMargin="221.7000" BottomMargin="153.1300" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="625.2300" Y="163.6300" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.9114" Y="0.4134" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_11" ActionTag="963977923" VisibleForFrame="False" Tag="101" IconVisible="False" LeftMargin="119.8300" RightMargin="545.1500" TopMargin="333.1411" BottomMargin="41.6889" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="130.3300" Y="52.1889" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1900" Y="0.1318" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_12" ActionTag="-1104078472" VisibleForFrame="False" Tag="102" IconVisible="False" LeftMargin="246.0300" RightMargin="418.9500" TopMargin="331.6400" BottomMargin="43.1900" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="256.5300" Y="53.6900" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.3740" Y="0.1356" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_13" ActionTag="-1634027714" VisibleForFrame="False" Tag="103" IconVisible="False" LeftMargin="371.8600" RightMargin="293.1200" TopMargin="331.2843" BottomMargin="43.5457" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="382.3600" Y="54.0457" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5574" Y="0.1365" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_14" ActionTag="-1338863229" VisibleForFrame="False" Tag="104" IconVisible="False" LeftMargin="490.4081" RightMargin="174.5719" TopMargin="331.5000" BottomMargin="43.3300" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="500.9081" Y="53.8300" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.7302" Y="0.1360" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="seleted_imageview_15" ActionTag="141397391" VisibleForFrame="False" Tag="105" IconVisible="False" LeftMargin="613.3900" RightMargin="51.5900" TopMargin="338.1400" BottomMargin="36.6900" LeftEage="6" RightEage="6" TopEage="6" BottomEage="6" Scale9OriginX="6" Scale9OriginY="6" Scale9Width="9" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="21.0000" Y="21.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="623.8900" Y="47.1900" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.9095" Y="0.1192" />
+                        <PreSize X="0.0306" Y="0.0531" />
+                        <FileData Type="Normal" Path="Bag/select.png" Plist="" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint />
+                    <Position />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition />
+                    <PreSize X="1.0000" Y="1.0000" />
+                    <SingleColor A="255" R="150" G="200" B="255" />
+                    <FirstColor A="255" R="150" G="200" B="255" />
+                    <EndColor A="255" R="255" G="255" B="255" />
+                    <ColorVector ScaleY="1.0000" />
+                  </AbstractNodeData>
+                </Children>
                 <AnchorPoint />
                 <Position X="19.4000" Y="81.7382" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -350,191 +687,6 @@
                 <PreSize X="0.9161" Y="0.7109" />
                 <SingleColor A="255" R="150" G="150" B="255" />
                 <FirstColor A="255" R="150" G="150" B="255" />
-                <EndColor A="255" R="255" G="255" B="255" />
-                <ColorVector ScaleY="1.0000" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="BagPanel" ActionTag="-1760594608" Tag="512" IconVisible="False" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="19.4031" RightMargin="43.4212" TopMargin="79.2326" BottomMargin="81.7383" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-                <Size X="685.9757" Y="395.8291" />
-                <Children>
-                  <AbstractNodeData Name="Image_189" CanEdit="False" ActionTag="-336795910" Tag="714" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" RightMargin="342.9878" Scale9Enable="True" LeftEage="40" RightEage="40" TopEage="40" BottomEage="40" Scale9OriginX="40" Scale9OriginY="40" Scale9Width="193" Scale9Height="20" ctype="ImageViewObjectData">
-                    <Size X="342.9879" Y="395.8291" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="171.4940" Y="197.9146" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.2500" Y="0.5000" />
-                    <PreSize X="0.5000" Y="1.0000" />
-                    <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_189_0" CanEdit="False" ActionTag="-2014833156" Tag="321" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="339.2151" RightMargin="3.7726" FlipX="True" Scale9Enable="True" LeftEage="40" RightEage="40" TopEage="40" BottomEage="40" Scale9OriginX="40" Scale9OriginY="40" Scale9Width="193" Scale9Height="20" ctype="ImageViewObjectData">
-                    <Size X="342.9879" Y="395.8291" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="510.7091" Y="197.9146" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.7445" Y="0.5000" />
-                    <PreSize X="0.5000" Y="1.0000" />
-                    <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_0" ActionTag="1017102377" Tag="331" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="288.1103" RightMargin="288.1093" TopMargin="19.8112" BottomMargin="275.1210" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="342.9884" Y="325.5694" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5000" Y="0.8225" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_1" ActionTag="-610409757" Tag="332" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="411.5856" RightMargin="164.6340" TopMargin="19.8112" BottomMargin="275.1210" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="466.4636" Y="325.5694" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.6800" Y="0.8225" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_2" ActionTag="1778892092" Tag="333" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="535.0612" RightMargin="41.1584" TopMargin="19.8112" BottomMargin="275.1210" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="589.9393" Y="325.5694" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.8600" Y="0.8225" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_3" ActionTag="-1221204490" Tag="334" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="41.1586" RightMargin="535.0610" TopMargin="147.4661" BottomMargin="147.4661" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="96.0366" Y="197.9146" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1400" Y="0.5000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_4" ActionTag="1524195670" Tag="335" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="164.6342" RightMargin="411.5854" TopMargin="147.4661" BottomMargin="147.4661" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="219.5123" Y="197.9146" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3200" Y="0.5000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_5" ActionTag="-904940423" Tag="336" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="288.1099" RightMargin="288.1097" TopMargin="147.4661" BottomMargin="147.4661" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="342.9879" Y="197.9146" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5000" Y="0.5000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_6" ActionTag="36210681" Tag="337" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="411.5855" RightMargin="164.6340" TopMargin="147.4661" BottomMargin="147.4661" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="466.4636" Y="197.9146" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.6800" Y="0.5000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_7" ActionTag="-670373168" Tag="338" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="535.0612" RightMargin="41.1584" TopMargin="147.4661" BottomMargin="147.4661" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="589.9393" Y="197.9146" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.8600" Y="0.5000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_8" ActionTag="-99995460" Tag="339" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="41.1586" RightMargin="535.0610" TopMargin="266.2148" BottomMargin="28.7174" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="96.0366" Y="79.1658" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1400" Y="0.2000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_9" ActionTag="1719374065" Tag="340" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="164.6342" RightMargin="411.5854" TopMargin="266.2148" BottomMargin="28.7174" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="219.5123" Y="79.1658" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3200" Y="0.2000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_10" ActionTag="18956967" Tag="341" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="288.1099" RightMargin="288.1097" TopMargin="266.2148" BottomMargin="28.7174" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="342.9879" Y="79.1658" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5000" Y="0.2000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_11" ActionTag="-1838241120" Tag="342" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="411.5855" RightMargin="164.6340" TopMargin="266.2148" BottomMargin="28.7174" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="466.4636" Y="79.1658" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.6800" Y="0.2000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_12" ActionTag="1722249332" Tag="343" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="535.0612" RightMargin="41.1584" TopMargin="266.2148" BottomMargin="28.7174" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="589.9393" Y="79.1658" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.8600" Y="0.2000" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_0_0" ActionTag="1661373363" Tag="137" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="41.1585" RightMargin="535.0610" TopMargin="19.8112" BottomMargin="275.1210" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="96.0366" Y="325.5694" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1400" Y="0.8225" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Image_13_0_1" ActionTag="-1299443714" Tag="155" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="164.6342" RightMargin="411.5854" TopMargin="19.8112" BottomMargin="275.1210" Scale9Width="91" Scale9Height="116" ctype="ImageViewObjectData">
-                    <Size X="109.7561" Y="100.8968" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="219.5122" Y="325.5694" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3200" Y="0.8225" />
-                    <PreSize X="0.1600" Y="0.2549" />
-                    <FileData Type="Normal" Path="Inventory/charalockedbg.png" Plist="" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint />
-                <Position X="19.4031" Y="81.7383" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0259" Y="0.1468" />
-                <PreSize X="0.9161" Y="0.7109" />
-                <SingleColor A="255" R="150" G="200" B="255" />
-                <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
@@ -595,7 +747,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="AttributePanel" Visible="False" ActionTag="-1201152381" VisibleForFrame="False" Tag="164" IconVisible="False" LeftMargin="170.5678" RightMargin="589.4323" TopMargin="294.9744" BottomMargin="145.0256" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="AttributePanel" Visible="False" ActionTag="-1201152381" VisibleForFrame="False" Tag="164" IconVisible="False" LeftMargin="170.5678" RightMargin="589.4322" TopMargin="294.9744" BottomMargin="145.0256" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
               <AbstractNodeData Name="Text_5" ActionTag="213751771" Tag="165" IconVisible="False" LeftMargin="5.0000" RightMargin="125.0000" BottomMargin="180.0000" FontSize="20" LabelText=" 名字：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -752,7 +904,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="atribute_sign_radius" ActionTag="1316367936" Tag="179" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="150.0000" BottomMargin="30.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="atribute_attack_radius" ActionTag="1316367936" Tag="179" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="150.0000" BottomMargin="30.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="100.0000" Y="20.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="155.0000" Y="40.0000" />

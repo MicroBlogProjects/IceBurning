@@ -1,0 +1,248 @@
+{
+  "ID": "b8adbfb1-7467-407a-a6e3-a596411bd89f",
+  "Version": "2.3.4",
+  "Name": "Settlementlayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 260,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "settlement/board.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 484.4338,
+              "Y": 318.1346
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0723
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5046,
+              "Y": 0.4971
+            },
+            "PreSize": {
+              "X": 1.0104,
+              "Y": 0.9375
+            },
+            "LeftMargin": -0.5662,
+            "RightMargin": -9.4338,
+            "TopMargin": 21.8654,
+            "BottomMargin": 18.1346,
+            "Tag": 261,
+            "ActionTag": 1331380472,
+            "Size": {
+              "X": 970.0,
+              "Y": 600.0
+            },
+            "Name": "board_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 152,
+            "Scale9OriginY": 99,
+            "Scale9Width": 158,
+            "Scale9Height": 105,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 501.7869,
+              "Y": 341.2729
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5227,
+              "Y": 0.5332
+            },
+            "PreSize": {
+              "X": 0.4812,
+              "Y": 0.4734
+            },
+            "LeftMargin": 270.7869,
+            "RightMargin": 227.2131,
+            "TopMargin": 147.2271,
+            "BottomMargin": 189.7729,
+            "Tag": 263,
+            "ActionTag": 662620321,
+            "Size": {
+              "X": 462.0,
+              "Y": 303.0
+            },
+            "VisibleForFrame": false,
+            "Name": "lose_imageview",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 131,
+            "Scale9OriginY": 82,
+            "Scale9Width": 136,
+            "Scale9Height": 87,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 494.5566,
+              "Y": 338.381
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5152,
+              "Y": 0.5287
+            },
+            "PreSize": {
+              "X": 0.4146,
+              "Y": 0.3922
+            },
+            "LeftMargin": 295.5566,
+            "RightMargin": 266.4434,
+            "TopMargin": 176.119,
+            "BottomMargin": 212.881,
+            "Tag": 264,
+            "ActionTag": -223647750,
+            "Size": {
+              "X": 398.0,
+              "Y": 251.0
+            },
+            "VisibleForFrame": false,
+            "Name": "lose_imageview",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "settlement/BackButton.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 68,
+            "Scale9Height": 21,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 834.3834,
+              "Y": 75.1957
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.8691,
+              "Y": 0.1175
+            },
+            "PreSize": {
+              "X": 0.1021,
+              "Y": 0.0672
+            },
+            "LeftMargin": 785.3834,
+            "RightMargin": 76.6166,
+            "TopMargin": 543.3043,
+            "BottomMargin": 53.6957,
+            "Tag": 265,
+            "ActionTag": 1090291498,
+            "Size": {
+              "X": 98.0,
+              "Y": 43.0
+            },
+            "Name": "Back_Button",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "GameOverLayer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Default/Button_Press.png",
+        "Default/ImageFile.png",
+        "settlement/BackButton.png",
+        "settlement/board.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

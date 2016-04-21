@@ -4,6 +4,10 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="AltarScene" />
+        <Folder Name="Bag">
+          <Image Name="select.png" />
+          <Image Name="SelectBg.png" />
+        </Folder>
         <Folder Name="Common">
           <Image Name="BaS08.png" />
           <Image Name="BaS09.png" />
@@ -97,9 +101,17 @@
           <PlistImageFile Name="Login_LI02.png" Key="Login/LI02.png" />
           <PlistImageFile Name="Login_LI07.jpg" Key="Login/LI07.jpg" />
         </PlistImageFolder>
+        <Folder Name="settlement">
+          <Image Name="BackButton.png" />
+          <Image Name="board.png" />
+          <Image Name="ctbg.png" />
+          <Image Name="lose.png" />
+          <Image Name="win.png" />
+        </Folder>
         <Project Name="Inventory.csd" Type="Layer" />
         <Project Name="Login.csd" Type="Layer" />
         <Project Name="selectopponent.csd" Type="Layer" />
+        <Project Name="Settlementlayer.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
