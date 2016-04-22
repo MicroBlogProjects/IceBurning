@@ -3,7 +3,7 @@
 #define __BIND_JS_WITH_CPP_H__
 
 #include "my/Common/Common_Head.h"
-#include "JS_CPP_Data_Exchange.h"
+#include "my/JSvsCPP/JS_CPP_Data_Exchange.h"
 #include "google/protobuf/message.h"
 
 #define BINDTOOL GameJoy::BindTool::Instance()

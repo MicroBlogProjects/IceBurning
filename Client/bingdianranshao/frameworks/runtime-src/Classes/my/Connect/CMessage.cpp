@@ -1,5 +1,5 @@
 
-#include "CMessage.h"
+#include "my/Connect/CMessage.h"
 #include "my/ProtoOut/MessageRegister.h"
 
 NS_GJ_BEGIN
@@ -8,7 +8,7 @@ int32_t CMessageHead::Encode(char* out_str, int32_t& out_len) const
 {
     if (out_len < Size())
     {
-        console_msg("char array length too short when Encode message head.");
+        CCLOG("char array length too short when Encode message head.");
         return fail;
     }
 
@@ -26,7 +26,7 @@ int32_t CMessageHead::Decode(const char* in_str, int32_t in_len)
 {
     if (in_len < Size())
     {
-        console_msg("char array length is too short when decode message head");
+        CCLOG("char array length is too short when decode message head");
         return fail;
     }
     int32_t len = 0;
@@ -89,7 +89,7 @@ int32_t CMessageBody::Decode(const char* in_str, int32_t in_len)
 {
     if (!message->ParseFromArray(in_str, in_len))
     {
-        console_msg("parse message from array failed.");
+        CCLOG("parse message from array failed.");
         return fail;
     }
     return success;
@@ -116,7 +116,7 @@ int32_t CMessage::Encode(char* out_str, int32_t& out_len) const
     int32_t result = m_iMessageHead->Encode(str, head_len);
     if (result == fail)
     {
-        console_msg("encode messgae head failed.");
+        CCLOG("encode messgae head failed.");
         return fail;
     }
 
@@ -124,7 +124,7 @@ int32_t CMessage::Encode(char* out_str, int32_t& out_len) const
     result = m_iMessageBody->Encode(&str[head_len], body_len);
     if (result == fail)
     {
-        console_msg("encode messgae body failed.");
+        CCLOG("encode messgae body failed.");
         return fail;
     }
 
@@ -142,7 +142,7 @@ int32_t CMessage::Decode(const char* in_str, int32_t in_len)
     int32_t head_len = m_iMessageHead->Size();
     if (fail == m_iMessageHead->Decode(in_str, head_len))
     {
-        console_msg("decode message head fail.");
+        CCLOG("decode message head fail.");
         return fail;
     }
 
@@ -155,7 +155,7 @@ int32_t CMessage::Decode(const char* in_str, int32_t in_len)
     int32_t body_len = in_len - head_len;
     if (fail == m_iMessageBody->Decode(&in_str[head_len], body_len))
     {
-        console_msg("decode message body fail.");
+        CCLOG("decode message body fail.");
         return fail;
     }
     return success;
