@@ -19,28 +19,13 @@
         <iOS_BundleID Value="" />
         <Platform Value="None" />
         <RunPlatform Value="None" />
-        <FrameworkVersion Value="cocos2d-x-3.9" />
+        <FrameworkVersion Value="无" />
         <IsDebugKeystore Value="True" />
         <KeystorePassword Value="" />
         <KeystoreAliasName Value="" />
         <KeystoreAliasPassword Value="" />
         <EnableSourceMap Value="False" />
         <EnableHTML5Advanced Value="False" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="SelectTool.csd" />
-          <FilePathData Path="selectopponent.csd" />
-          <FilePathData Path="PlayerInfomation.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="SelectTool.csd" />
-
-          <FilePathData Path="Login.csd" />
-          <FilePathData Path="Inventory.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="Inventory.csd" />
       </Value>
     </Item>
   </Properties>

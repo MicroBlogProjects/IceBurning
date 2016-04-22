@@ -13,8 +13,7 @@ var res = {
     MM_Flare_jpg :     "res/MainMenu/flare.jpg",
 
     //GamePlay
-    GM_Map_tmx : "res/GamePlay/Map/c.tmx",
-    GM_Map_png : "res/GamePlay/Map/c.png",
+    GM_Map_tmx : "res/GamePlay/Map/map.tmx",
 
     //monster
     GM_MainCity_png :     "res/GamePlay/Monster/xingxingmofata/xingxingmofata.png",
@@ -30,16 +29,6 @@ var res = {
     GM_SelectTool_json : "res/json/SelectTool.json",
 
 
-    //远古巨人
-    GM_YgjrIcon_png :        "res/GamePlay/Monster/yuangujuren/yuangujurenIcon.png",
-    GM_Ygjrwalking_plist :  "res/GamePlay/Monster/yuangujuren/ygjrwalking.plist",
-    GM_Ygjrwalking_png :     "res/GamePlay/Monster/yuangujuren/ygjrwalking.png",
-    GM_Ygjr_png :             "res/GamePlay/Monster/yuangujuren/ygjr.png",
-    GM_Ygjrattack_plist :    "res/GamePlay/Monster/yuangujuren/ygjrattack.plist",
-    GM_Ygjrattack_png :      "res/GamePlay/Monster/yuangujuren/ygjrattack.png",
-    GM_Ygjrdeath_plist :     "res/GamePlay/Monster/yuangujuren/ygjrdeath.plist",
-    GM_Ygjrdeath_png :        "res/GamePlay/Monster/yuangujuren/ygjrdeath.png",
-
     //星星魔法塔
     GM_Xxmft_Png      :    "res/GamePlay/Monster/xingxingmofata/xingxingmofata.png",
     GM_XxmftSkill_Png :   "res/GamePlay/Monster/xingxingmofata/xxmftskill.png",
@@ -52,6 +41,74 @@ var res = {
     GM_XxmftDeath_Png : "res/GamePlay/Monster/xingxingmofata/xxmftdeath.png",
     GM_XxmftSkillAttack_Plist : "res/GamePlay/Monster/xingxingmofata/skillattack.plist",
     GM_XxmftSkillAttack_Png : "res/GamePlay/Monster/xingxingmofata/skillattack.png",
+    GM_XxmftSkillArrow_png : "res/GamePlay/Monster/xingxingmofata/arrow.png",
+
+    //炮塔
+    GM_TurretIcon_png :                       "res/GamePlay/Monster/Turret/Icon.png",
+    GM_TurretRangedAttackDefault_png :      "res/GamePlay/Monster/Turret/RangedAttackDefault.png",
+    GM_TurretRangedAttackBegin_png :        "res/GamePlay/Monster/Turret/RangedAttackBeigin.png",
+    GM_TurretRangedAttackBegin_plist :      "res/GamePlay/Monster/Turret/RangedAttackBeigin.plist",
+    GM_TurretRangedEffectDefault_png :      "res/GamePlay/Monster/Turret/RangedAttackEffectsDefault.png",
+    GM_TurretRangedEffect_png :              "res/GamePlay/Monster/Turret/RangedAttackEffect.png",
+    GM_TurretRangedEffect_plist :            "res/GamePlay/Monster/Turret/RangedAttackEffect.plist",
+    GM_TurretAttackDeafult_png :             "res/GamePlay/Monster/Turret/TurretAttackDefault.png",
+    GM_TurreAttackBegin_png :                "res/GamePlay/Monster/Turret/TurretAttackBegin.png",
+    GM_TurreAttackBegin_plist :              "res/GamePlay/Monster/Turret/TurretAttackBegin.plist",
+    GM_TurreAttackEnd_png :                  "res/GamePlay/Monster/Turret/TurretAttackEnd.png",
+    GM_TurreAttackEnd_plist :                "res/GamePlay/Monster/Turret/TurretAttackEnd.plist",
+
+    //电塔
+    GM_PylonIcon_png  :                       "res/GamePlay/Monster/pylon/pylonIcon.png",
+    GM_PylonDefault_png  :                   "res/GamePlay/Monster/pylon/pylonDeafault.png",
+    GM_PylonSkillDefault_png :              "res/GamePlay/Monster/pylon/PylonSkillDefault.png",
+    GM_Pylon_plist :                          "res/GamePlay/Monster/pylon/pylon.plist",
+
+    //骑士
+    GM_KnightIcon_png :                 "res/GamePlay/Monster/Knight/KnightIcon.png",
+    GM_KnightDefault_png :               "res/GamePlay/Monster/Knight/KnightDefault.png",
+    GM_Knight_plist :                    "res/GamePlay/Monster/Knight/Knight.plist",
+
+    //长刀兵
+    GM_LongSwordIcon_png :             "res/GamePlay/Monster/LongSword/LongSwordIcon.png",
+    GM_LongSwordDefault_png :         "res/GamePlay/Monster/LongSword/LongSwordDefault.png",
+    GM_LongSword_plist :               "res/GamePlay/Monster/LongSword/LongSword.plist",
+
+    //火枪兵
+    GM_MusketIcon_png :                    "res/GamePlay/Monster/Musket/MusketIcon.png",
+    GM_MusketDefault_png :                "res/GamePlay/Monster/Musket/MusketDefault.png",
+    GM_Musket_plist :                      "res/GamePlay/Monster/Musket/Musket.plist",
+
+    //骷髅兵
+    GM_SkeletonIcon_png :                      "res/GamePlay/Monster/Skeleton/SkeletonIcon.png",
+    GM_SkeletonDefault_png :                  "res/GamePlay/Monster/Skeleton/SkeletonDefault.png",
+    GM_Skeleton_plist :                        "res/GamePlay/Monster/Skeleton/Skeleton.plist",
+
+    //斧兵
+    GM_AxeSoldiersIcon_png   :                "res/GamePlay/Monster/AxeSoldiers/AxeSoldiersIcon.png",
+    GM_AxeSoldiersDefault_png :              "res/GamePlay/Monster/AxeSoldiers/AxeSoldiersDefault.png",
+    GM_AxeSoldiers_plist    :                  "res/GamePlay/Monster/AxeSoldiers/AxeSoldiers.plist",
+
+    //弓箭手
+    GM_ArcherIcon_png :                           "res/GamePlay/Monster/Archer/ArcherIcon.png",
+    GM_ArcherDefault_png :                        "res/GamePlay/Monster/Archer/ArcherDefault.png",
+    GM_Archer_plist :                             "res/GamePlay/Monster/Archer/Archer.plist",
+    GM_ArcherSkillDefault_png    :               "res/GamePlay/Monster/Archer/ArcherSkillDefault.png",
+
+    //锤子兵
+    GM_HammerIcon_png :                           "res/GamePlay/Monster/Hammer/HammerIcon.png",
+    GM_HammerDefault_png :                       "res/GamePlay/Monster/Hammer/HammerDefault.png",
+    GM_Hammer_plist :                             "res/GamePlay/Monster/Hammer/Hammer.plist",
+
+    //巫师
+    GM_WizardIcon_png :                            "res/GamePlay/Monster/Wizard/WizardIcon.png",
+    GM_WizardDefault_png :                          "res/GamePlay/Monster/Wizard/WizardDefault.png",
+    GM_Wizard_plist :                               "res/GamePlay/Monster/Wizard/Wizard.plist",
+    GM_WizardSkill_png :                             "res/GamePlay/Monster/Wizard/WizardSkillDefault.png",
+
+    //狼
+    GM_WolfIcon_png :                                "res/GamePlay/Monster/Wolf/WolfIcon.png",
+    GM_WolfDefault_png :                              "res/GamePlay/Monster/Wolf/WolfDefault.png",
+    GM_Wolf_plist :                                    "res/GamePlay/Monster/Wolf/Wolf.plist",
 
 
     //英雄技能

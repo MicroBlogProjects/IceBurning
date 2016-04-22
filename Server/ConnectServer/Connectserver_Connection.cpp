@@ -2,9 +2,6 @@
 
 NS_CS_BEGIN
 
-CConnConnection::CConnConnection()
-{
-}
 
 CConnConnection::CConnConnection(int32_t connfd, const struct sockaddr_in& addr)
 {
@@ -131,7 +128,7 @@ int32_t CConnConnection::ParseToInt(const char* str, int32_t pBegin, int32_t pEn
     int32_t ret = 0;
     for (int32_t i = pBegin; i != pEnd; i = (i + 1) % MAX_CSMESSAGE_SIZE)
     {
-        ret = (ret << 8) | (int32_t)str[i];
+        ret = (ret << 8) | (unsigned char)str[i];
     }
     return ntohl(ret);
 }

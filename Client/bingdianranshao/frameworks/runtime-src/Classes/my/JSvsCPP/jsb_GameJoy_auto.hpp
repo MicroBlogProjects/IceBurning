@@ -157,4 +157,49 @@ bool js_GameJoy_JS_CSFightReadyResponse_get_result(JSContext *cx, uint32_t argc,
 bool js_GameJoy_JS_CSFightReadyResponse_set_result(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_CSFightReadyResponse_Instance(JSContext *cx, uint32_t argc, jsval *vp);
 
+extern JSClass  *jsb_GameJoy_JS_PBFrameMessage_class;
+extern JSObject *jsb_GameJoy_JS_PBFrameMessage_prototype;
+
+bool js_GameJoy_JS_PBFrameMessage_constructor(JSContext *cx, uint32_t argc, jsval *vp);
+void js_GameJoy_JS_PBFrameMessage_finalize(JSContext *cx, JSObject *obj);
+void js_register_GameJoy_JS_PBFrameMessage(JSContext *cx, JS::HandleObject global);
+void register_all_GameJoy(JSContext* cx, JS::HandleObject obj);
+bool js_GameJoy_JS_PBFrameMessage_get_pos_y(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_get_pos_x(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_set_pos_y(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_set_pos_x(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_get_uin(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_set_type(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_get_obj_id(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_get_type(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_set_obj_id(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_set_uin(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_JS_PBFrameMessage(JSContext *cx, uint32_t argc, jsval *vp);
+
+extern JSClass  *jsb_GameJoy_JS_CSFrameSyncRequest_class;
+extern JSObject *jsb_GameJoy_JS_CSFrameSyncRequest_prototype;
+
+bool js_GameJoy_JS_CSFrameSyncRequest_constructor(JSContext *cx, uint32_t argc, jsval *vp);
+void js_GameJoy_JS_CSFrameSyncRequest_finalize(JSContext *cx, JSObject *obj);
+void js_register_GameJoy_JS_CSFrameSyncRequest(JSContext *cx, JS::HandleObject global);
+void register_all_GameJoy(JSContext* cx, JS::HandleObject obj);
+bool js_GameJoy_JS_CSFrameSyncRequest_get_msgID(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncRequest_get_step(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncRequest_set_msgID(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncRequest_set_step(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncRequest_Instance(JSContext *cx, uint32_t argc, jsval *vp);
+
+extern JSClass  *jsb_GameJoy_JS_CSFrameSyncResponse_class;
+extern JSObject *jsb_GameJoy_JS_CSFrameSyncResponse_prototype;
+
+bool js_GameJoy_JS_CSFrameSyncResponse_constructor(JSContext *cx, uint32_t argc, jsval *vp);
+void js_GameJoy_JS_CSFrameSyncResponse_finalize(JSContext *cx, JSObject *obj);
+void js_register_GameJoy_JS_CSFrameSyncResponse(JSContext *cx, JS::HandleObject global);
+void register_all_GameJoy(JSContext* cx, JS::HandleObject obj);
+bool js_GameJoy_JS_CSFrameSyncResponse_get_steps(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncResponse_get_result(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncResponse_set_steps(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncResponse_set_result(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSFrameSyncResponse_Instance(JSContext *cx, uint32_t argc, jsval *vp);
+
 #endif // __GameJoy_h__

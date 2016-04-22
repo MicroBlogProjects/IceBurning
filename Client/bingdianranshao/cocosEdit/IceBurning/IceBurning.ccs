@@ -1,18 +1,13 @@
 <Solution>
-  <PropertyGroup Name="IceBurning" Version="2.3.3.0" Type="CocosStudio" />
+  <PropertyGroup Name="IceBurning" Version="3.10.0.0" Type="CocosStudio" />
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="Login">
-          <Image Name="BaS31.png" />
-          <Image Name="BaS32.png" />
-          <Image Name="Frd11.png" />
-          <Image Name="LI01.png" />
-          <Image Name="LI02.png" />
-          <Image Name="LI07.jpg" />
-        </Folder>
-        <Project Name="Login.csd" Type="Layer" />
+        <Folder Name="AltarScene" />
         <Folder Name="Common">
+          <Image Name="BaS08.png" />
+          <Image Name="BaS09.png" />
+          <Image Name="BaS10.png" />
           <Image Name="Cn01.png" />
           <Image Name="Cn02.png" />
           <Image Name="Cn03.png" />
@@ -33,27 +28,11 @@
           <Image Name="Cn20.png" />
           <Image Name="Cn21.png" />
           <Image Name="Lg_selectbardground.jpg" />
-          <TTF Name="simhei.ttf" />
           <Image Name="MM04.png" />
           <Image Name="MM17.png" />
-          <Image Name="BaS08.png" />
-          <Image Name="BaS09.png" />
-          <Image Name="BaS10.png" />
+          <TTF Name="simhei.ttf" />
         </Folder>
         <Folder Name="DifficultySelection">
-          <Image Name="DS01.png" />
-          <Image Name="DS02.png" />
-          <Image Name="DS03.png" />
-          <Image Name="DS05.png" />
-          <Image Name="DS07.png" />
-          <Image Name="DS08.png" />
-          <Image Name="DS09.png" />
-          <Image Name="DS10.png" />
-          <Image Name="DS11.png" />
-          <Image Name="DS12.png" />
-          <Image Name="DS13.png" />
-          <Image Name="DS15.png" />
-          <Image Name="DS16.png" />
           <Image Name="Cn01.png" />
           <Image Name="Cn02.png" />
           <Image Name="Cn03.png" />
@@ -73,17 +52,20 @@
           <Image Name="Cn19.png" />
           <Image Name="Cn20.png" />
           <Image Name="Cn21.png" />
+          <Image Name="DS01.png" />
+          <Image Name="DS02.png" />
+          <Image Name="DS03.png" />
+          <Image Name="DS05.png" />
+          <Image Name="DS07.png" />
+          <Image Name="DS08.png" />
+          <Image Name="DS09.png" />
+          <Image Name="DS10.png" />
+          <Image Name="DS11.png" />
+          <Image Name="DS12.png" />
+          <Image Name="DS13.png" />
+          <Image Name="DS15.png" />
+          <Image Name="DS16.png" />
         </Folder>
-        <PlistImageFolder Image="Login.png" PListFile="Login.plist" Name=".Login_PList.Dir">
-          <PlistImageFile Name="Login_BaS31.png" Key="Login/BaS31.png" />
-          <PlistImageFile Name="Login_BaS32.png" Key="Login/BaS32.png" />
-          <PlistImageFile Name="Login_Frd11.png" Key="Login/Frd11.png" />
-          <PlistImageFile Name="Login_LI01.png" Key="Login/LI01.png" />
-          <PlistImageFile Name="Login_LI02.png" Key="Login/LI02.png" />
-          <PlistImageFile Name="Login_LI07.jpg" Key="Login/LI07.jpg" />
-        </PlistImageFolder>
-        <Project Name="selectopponent.csd" Type="Layer" />
-        <Folder Name="AltarScene" />
         <Folder Name="Inventory">
           <Image Name="BaB14.png" />
           <Image Name="BaB148.png" />
@@ -99,7 +81,25 @@
           <Image Name="ic_egyviper_blue.png" />
           <Image Name="rolebg.png" />
         </Folder>
+        <Folder Name="Login">
+          <Image Name="BaS31.png" />
+          <Image Name="BaS32.png" />
+          <Image Name="Frd11.png" />
+          <Image Name="LI01.png" />
+          <Image Name="LI02.png" />
+          <Image Name="LI07.jpg" />
+        </Folder>
+        <PlistImageFolder Image="Login.png" PListFile="Login.plist" Name=".Login_PList.Dir">
+          <PlistImageFile Name="Login_BaS31.png" Key="Login/BaS31.png" />
+          <PlistImageFile Name="Login_BaS32.png" Key="Login/BaS32.png" />
+          <PlistImageFile Name="Login_Frd11.png" Key="Login/Frd11.png" />
+          <PlistImageFile Name="Login_LI01.png" Key="Login/LI01.png" />
+          <PlistImageFile Name="Login_LI02.png" Key="Login/LI02.png" />
+          <PlistImageFile Name="Login_LI07.jpg" Key="Login/LI07.jpg" />
+        </PlistImageFolder>
         <Project Name="Inventory.csd" Type="Layer" />
+        <Project Name="Login.csd" Type="Layer" />
+        <Project Name="selectopponent.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

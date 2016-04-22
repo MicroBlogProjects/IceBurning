@@ -40,31 +40,28 @@ void EpollUnit::EpollRegist(int32_t connfd, int32_t (*func)(), struct epoll_even
 
 void EpollUnit::EpollRun()
 {
-    for (; ; )
+    int n = Epoll_wait(epollfd, events, MAXEVENTS, 2);
+    for (int i = 0; i < n; i++)
     {
-        int n = Epoll_wait(epollfd, events, MAXEVENTS, -1);
-        for (int i = 0; i < n; i++)
+        int fd = events[i].data.fd;
+        if ((events[i].events & EPOLLERR) ||
+            (events[i].events & EPOLLHUP) ||
+            (!(events[i].events & EPOLLIN) && !(events[i].events & EPOLLOUT)))
         {
-            int fd = events[i].data.fd;
-            if ((events[i].events & EPOLLERR) ||
-                (events[i].events & EPOLLHUP) ||
-                (!(events[i].events & EPOLLIN) && !(events[i].events & EPOLLOUT)))
-            {
-                err_msg("epoll_run interrupt!");
-                EpollDelete(fd);
-                continue;
-            }
+            err_msg("epoll_run interrupt!");
+            EpollDelete(fd);
+            continue;
+        }
 
-            //check and run function
-            if (fd_to_func[fd] == NULL)
-            {
-                TRACE_WARN("call error: function NULL!");
-            }
-            else if (fd_to_func[fd]() == error)
-            {
-                TRACE_WARN("epoll_run error!");
-                EpollDelete(fd);
-            }
+        //check and run function
+        if (fd_to_func[fd] == NULL)
+        {
+            TRACE_WARN("call error: function NULL!");
+        }
+        else if (fd_to_func[fd]() != success)
+        {
+            TRACE_WARN("epoll_run registed function error!");
+            EpollDelete(fd);
         }
     }
 }

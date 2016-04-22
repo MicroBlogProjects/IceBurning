@@ -4,8 +4,8 @@
 var g_mainscene;
 var g_this;
 var useName;
-var MMTouchLayer = cc.Layer.extend({
 
+var MMTouchLayer = cc.Layer.extend({
     ctor : function()
     {
         this._super();
@@ -20,24 +20,43 @@ var MMTouchLayer = cc.Layer.extend({
         var index = ""+id;
         var l_oppen = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
         var is_success = l_oppen.get_result();
-        if(is_success != 0 )return ;
-        var l_person = l_oppen.get_rooms();
-
+        var l_rooms = l_oppen.get_rooms();
+        //cc.log(l_rooms.length);
+        var listView = ccui.helper.seekWidgetByName(g_mainscene, "m_ListView_room");
+        listView.removeAllItems();
         var Panel_room = ccui.helper.seekWidgetByName(g_mainscene, "Panel_room");
-        Panel_room.setVisible(true);
-        var l_name_text = ccui.helper.seekWidgetByName(g_mainscene, "m_name");
-        l_name_text.setString(l_person.get_username());
-        var l_uid_text = ccui.helper.seekWidgetByName(g_mainscene,"m_uid");
-        l_uid_text.setString(l_person.get_uin());
-        var Panel_room_button = ccui.helper.seekWidgetByName(g_mainscene,"m_Button_start");
-        Panel_room_button.addClickEventListener(this.buttonJoinBattleTouchEvent);
+        for(var i=0; i<l_rooms.length; i++)
+        {
+            var l_temp = Panel_room.clone();
+            var l_room = l_rooms[i];
+            l_temp.setVisible(true);
+            var l_name_text = ccui.helper.seekWidgetByName(l_temp, "m_name");
+            l_name_text.setString(l_room.get_username());
+            var l_uid_text = ccui.helper.seekWidgetByName(l_temp,"m_uid");
+            l_uid_text.setString(l_room.get_uin());
+            var Panel_room_button = ccui.helper.seekWidgetByName(l_temp,"m_Button_start");
+           if(GC.UIN != l_room.get_uin())
+           {
+             Panel_room_button.uindd=l_room.get_uin();
+             Panel_room_button.addClickEventListener(
+                 function (sender, eventType) {
+                     var temp=GameJoy.JS_CSJoinRoomRequest.Instance();
+                     temp.set_uin(this.uindd);
+                     GameJoy.Proxy.SendRequest(5);
+                 }
+             );
+           }
+           else
+           {
+               Panel_room_button.setEnabled(false);
+           }
+           listView.pushBackCustomItem(l_temp);
+        }
     },
     createMyRoom:function(id)
     {
-        var Panel_room = ccui.helper.seekWidgetByName(g_mainscene, "Panel_room");
-        Panel_room.setVisible(true);
-        var panel_text = ccui.helper.seekWidgetByName(g_mainscene, "m_name");
-        panel_text.setString(g_this.parent.m_Name);
+       GC.IS_HOST = true;
+       this.buttonFreshRoomTouchEvent();
     },
     JoinBattle:function(id)
     {
@@ -52,7 +71,6 @@ var MMTouchLayer = cc.Layer.extend({
         {
             if(id == 3)
             {
-                cc.log("------------------------sheng qin lie biao-------------------");
                 this.createRoom(id);
             }
             if(id == 4)
@@ -76,17 +94,10 @@ var MMTouchLayer = cc.Layer.extend({
     },
     buttonCreateRoomTouchEvent:function()
     {
-        cc.log("4----------------------------creatRoom");
         GameJoy.Proxy.SendRequest(4);
-    },
-    buttonJoinBattleTouchEvent:function()
-    {
-        cc.log("5----------------------------JoinRoom");
-        GameJoy.Proxy.SendRequest(5);
     },
     buttonFreshRoomTouchEvent:function()
     {
-        cc.log("3----------------------------PullRoomList");
         GameJoy.Proxy.SendRequest(3);
     }
 });

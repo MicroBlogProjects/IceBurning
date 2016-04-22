@@ -1617,6 +1617,576 @@ void js_register_GameJoy_JS_CSFightReadyResponse(JSContext *cx, JS::HandleObject
     jsb_register_class<GameJoy::JS_CSFightReadyResponse>(cx, jsb_GameJoy_JS_CSFightReadyResponse_class, proto, parent_proto);
 }
 
+JSClass  *jsb_GameJoy_JS_PBFrameMessage_class;
+JSObject *jsb_GameJoy_JS_PBFrameMessage_prototype;
+
+bool js_GameJoy_JS_PBFrameMessage_get_pos_y(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_get_pos_y : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_pos_y();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_get_pos_y : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_get_pos_x(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_get_pos_x : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_pos_x();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_get_pos_x : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_set_pos_y(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_set_pos_y : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_PBFrameMessage_set_pos_y : Error processing arguments");
+        cobj->set_pos_y(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_pos_y : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_set_pos_x(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_set_pos_x : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_PBFrameMessage_set_pos_x : Error processing arguments");
+        cobj->set_pos_x(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_pos_x : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_get_uin(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_get_uin : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_uin();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_get_uin : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_set_type(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_set_type : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_PBFrameMessage_set_type : Error processing arguments");
+        cobj->set_type(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_type : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_get_obj_id(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_get_obj_id : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_obj_id();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_get_obj_id : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_get_type(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_get_type : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_type();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_get_type : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_set_obj_id(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_set_obj_id : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_PBFrameMessage_set_obj_id : Error processing arguments");
+        cobj->set_obj_id(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_obj_id : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_set_uin(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_set_uin : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_PBFrameMessage_set_uin : Error processing arguments");
+        cobj->set_uin(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_uin : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_PBFrameMessage_constructor(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    GameJoy::JS_PBFrameMessage* cobj = new (std::nothrow) GameJoy::JS_PBFrameMessage();
+
+    js_type_class_t *typeClass = js_get_type_from_native<GameJoy::JS_PBFrameMessage>(cobj);
+
+    // link the native object with the javascript object
+    JS::RootedObject jsobj(cx, jsb_ref_create_jsobject(cx, cobj, typeClass, "GameJoy::JS_PBFrameMessage"));
+    args.rval().set(OBJECT_TO_JSVAL(jsobj));
+    if (JS_HasProperty(cx, jsobj, "_ctor", &ok) && ok)
+        ScriptingCore::getInstance()->executeFunctionWithOwner(OBJECT_TO_JSVAL(jsobj), "_ctor", args);
+    return true;
+}
+
+
+extern JSObject *jsb_GameJoy_JS_CPP_Bridge_prototype;
+
+void js_register_GameJoy_JS_PBFrameMessage(JSContext *cx, JS::HandleObject global) {
+    jsb_GameJoy_JS_PBFrameMessage_class = (JSClass *)calloc(1, sizeof(JSClass));
+    jsb_GameJoy_JS_PBFrameMessage_class->name = "JS_PBFrameMessage";
+    jsb_GameJoy_JS_PBFrameMessage_class->addProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_PBFrameMessage_class->delProperty = JS_DeletePropertyStub;
+    jsb_GameJoy_JS_PBFrameMessage_class->getProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_PBFrameMessage_class->setProperty = JS_StrictPropertyStub;
+    jsb_GameJoy_JS_PBFrameMessage_class->enumerate = JS_EnumerateStub;
+    jsb_GameJoy_JS_PBFrameMessage_class->resolve = JS_ResolveStub;
+    jsb_GameJoy_JS_PBFrameMessage_class->convert = JS_ConvertStub;
+    jsb_GameJoy_JS_PBFrameMessage_class->finalize = jsb_ref_finalize;
+    jsb_GameJoy_JS_PBFrameMessage_class->flags = JSCLASS_HAS_RESERVED_SLOTS(2);
+
+    static JSPropertySpec properties[] = {
+        JS_PSG("__nativeObj", js_is_native_obj, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_PS_END
+    };
+
+    static JSFunctionSpec funcs[] = {
+        JS_FN("get_pos_y", js_GameJoy_JS_PBFrameMessage_get_pos_y, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_pos_x", js_GameJoy_JS_PBFrameMessage_get_pos_x, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_pos_y", js_GameJoy_JS_PBFrameMessage_set_pos_y, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_pos_x", js_GameJoy_JS_PBFrameMessage_set_pos_x, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_uin", js_GameJoy_JS_PBFrameMessage_get_uin, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_type", js_GameJoy_JS_PBFrameMessage_set_type, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_obj_id", js_GameJoy_JS_PBFrameMessage_get_obj_id, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_type", js_GameJoy_JS_PBFrameMessage_get_type, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_obj_id", js_GameJoy_JS_PBFrameMessage_set_obj_id, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_uin", js_GameJoy_JS_PBFrameMessage_set_uin, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    JSFunctionSpec *st_funcs = NULL;
+
+    JS::RootedObject parent_proto(cx, jsb_GameJoy_JS_CPP_Bridge_prototype);
+    jsb_GameJoy_JS_PBFrameMessage_prototype = JS_InitClass(
+        cx, global,
+        parent_proto,
+        jsb_GameJoy_JS_PBFrameMessage_class,
+        js_GameJoy_JS_PBFrameMessage_constructor, 0, // constructor
+        properties,
+        funcs,
+        NULL, // no static properties
+        st_funcs);
+
+    // add the proto and JSClass to the type->js info hash table
+    JS::RootedObject proto(cx, jsb_GameJoy_JS_PBFrameMessage_prototype);
+    jsb_register_class<GameJoy::JS_PBFrameMessage>(cx, jsb_GameJoy_JS_PBFrameMessage_class, proto, parent_proto);
+}
+
+JSClass  *jsb_GameJoy_JS_CSFrameSyncRequest_class;
+JSObject *jsb_GameJoy_JS_CSFrameSyncRequest_prototype;
+
+bool js_GameJoy_JS_CSFrameSyncRequest_get_msgID(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncRequest* cobj = (GameJoy::JS_CSFrameSyncRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncRequest_get_msgID : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_msgID();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncRequest_get_msgID : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncRequest_get_step(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncRequest* cobj = (GameJoy::JS_CSFrameSyncRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncRequest_get_step : Invalid Native Object");
+    if (argc == 0) {
+        GameJoy::JS_PBFrameMessage* ret = cobj->get_step();
+        jsval jsret = JSVAL_NULL;
+        if (ret) {
+            jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<GameJoy::JS_PBFrameMessage>(cx, (GameJoy::JS_PBFrameMessage*)ret));
+        } else {
+            jsret = JSVAL_NULL;
+        };
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncRequest_get_step : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncRequest_set_msgID(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncRequest* cobj = (GameJoy::JS_CSFrameSyncRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncRequest_set_msgID : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSFrameSyncRequest_set_msgID : Error processing arguments");
+        cobj->set_msgID(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncRequest_set_msgID : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncRequest_set_step(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncRequest* cobj = (GameJoy::JS_CSFrameSyncRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncRequest_set_step : Invalid Native Object");
+    if (argc == 1) {
+        GameJoy::JS_PBFrameMessage* arg0 = nullptr;
+        do {
+            if (args.get(0).isNull()) { arg0 = nullptr; break; }
+            if (!args.get(0).isObject()) { ok = false; break; }
+            js_proxy_t *jsProxy;
+            JS::RootedObject tmpObj(cx, args.get(0).toObjectOrNull());
+            jsProxy = jsb_get_js_proxy(tmpObj);
+            arg0 = (GameJoy::JS_PBFrameMessage*)(jsProxy ? jsProxy->ptr : NULL);
+            JSB_PRECONDITION2( arg0, cx, false, "Invalid Native Object");
+        } while (0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSFrameSyncRequest_set_step : Error processing arguments");
+        cobj->set_step(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncRequest_set_step : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncRequest_Instance(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    if (argc == 0) {
+
+        GameJoy::JS_CSFrameSyncRequest* ret = GameJoy::JS_CSFrameSyncRequest::Instance();
+        jsval jsret = JSVAL_NULL;
+        if (ret) {
+        jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<GameJoy::JS_CSFrameSyncRequest>(cx, (GameJoy::JS_CSFrameSyncRequest*)ret));
+    } else {
+        jsret = JSVAL_NULL;
+    };
+        args.rval().set(jsret);
+        return true;
+    }
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncRequest_Instance : wrong number of arguments");
+    return false;
+}
+
+
+extern JSObject *jsb_GameJoy_JS_CPP_Bridge_prototype;
+
+void js_register_GameJoy_JS_CSFrameSyncRequest(JSContext *cx, JS::HandleObject global) {
+    jsb_GameJoy_JS_CSFrameSyncRequest_class = (JSClass *)calloc(1, sizeof(JSClass));
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->name = "JS_CSFrameSyncRequest";
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->addProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->delProperty = JS_DeletePropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->getProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->setProperty = JS_StrictPropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->enumerate = JS_EnumerateStub;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->resolve = JS_ResolveStub;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->convert = JS_ConvertStub;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->finalize = jsb_ref_finalize;
+    jsb_GameJoy_JS_CSFrameSyncRequest_class->flags = JSCLASS_HAS_RESERVED_SLOTS(2);
+
+    static JSPropertySpec properties[] = {
+        JS_PSG("__nativeObj", js_is_native_obj, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_PS_END
+    };
+
+    static JSFunctionSpec funcs[] = {
+        JS_FN("get_msgID", js_GameJoy_JS_CSFrameSyncRequest_get_msgID, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_step", js_GameJoy_JS_CSFrameSyncRequest_get_step, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_msgID", js_GameJoy_JS_CSFrameSyncRequest_set_msgID, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_step", js_GameJoy_JS_CSFrameSyncRequest_set_step, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    static JSFunctionSpec st_funcs[] = {
+        JS_FN("Instance", js_GameJoy_JS_CSFrameSyncRequest_Instance, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    JS::RootedObject parent_proto(cx, jsb_GameJoy_JS_CPP_Bridge_prototype);
+    jsb_GameJoy_JS_CSFrameSyncRequest_prototype = JS_InitClass(
+        cx, global,
+        parent_proto,
+        jsb_GameJoy_JS_CSFrameSyncRequest_class,
+        dummy_constructor<GameJoy::JS_CSFrameSyncRequest>, 0, // no constructor
+        properties,
+        funcs,
+        NULL, // no static properties
+        st_funcs);
+
+    // add the proto and JSClass to the type->js info hash table
+    JS::RootedObject proto(cx, jsb_GameJoy_JS_CSFrameSyncRequest_prototype);
+    jsb_register_class<GameJoy::JS_CSFrameSyncRequest>(cx, jsb_GameJoy_JS_CSFrameSyncRequest_class, proto, parent_proto);
+}
+
+JSClass  *jsb_GameJoy_JS_CSFrameSyncResponse_class;
+JSObject *jsb_GameJoy_JS_CSFrameSyncResponse_prototype;
+
+bool js_GameJoy_JS_CSFrameSyncResponse_get_steps(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncResponse* cobj = (GameJoy::JS_CSFrameSyncResponse *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncResponse_get_steps : Invalid Native Object");
+    if (argc == 0) {
+        cocos2d::Vector<GameJoy::JS_PBFrameMessage *> ret = cobj->get_steps();
+        jsval jsret = JSVAL_NULL;
+        jsret = ccvector_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncResponse_get_steps : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncResponse_get_result(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncResponse* cobj = (GameJoy::JS_CSFrameSyncResponse *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncResponse_get_result : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_result();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncResponse_get_result : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncResponse_set_steps(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncResponse* cobj = (GameJoy::JS_CSFrameSyncResponse *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncResponse_set_steps : Invalid Native Object");
+    if (argc == 1) {
+        cocos2d::Vector<GameJoy::JS_PBFrameMessage *> arg0;
+        ok &= jsval_to_ccvector(cx, args.get(0), &arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSFrameSyncResponse_set_steps : Error processing arguments");
+        cobj->set_steps(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncResponse_set_steps : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncResponse_set_result(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSFrameSyncResponse* cobj = (GameJoy::JS_CSFrameSyncResponse *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSFrameSyncResponse_set_result : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSFrameSyncResponse_set_result : Error processing arguments");
+        cobj->set_result(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncResponse_set_result : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_CSFrameSyncResponse_Instance(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    if (argc == 0) {
+
+        GameJoy::JS_CSFrameSyncResponse* ret = GameJoy::JS_CSFrameSyncResponse::Instance();
+        jsval jsret = JSVAL_NULL;
+        if (ret) {
+        jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<GameJoy::JS_CSFrameSyncResponse>(cx, (GameJoy::JS_CSFrameSyncResponse*)ret));
+    } else {
+        jsret = JSVAL_NULL;
+    };
+        args.rval().set(jsret);
+        return true;
+    }
+    JS_ReportError(cx, "js_GameJoy_JS_CSFrameSyncResponse_Instance : wrong number of arguments");
+    return false;
+}
+
+
+extern JSObject *jsb_GameJoy_JS_CPP_Bridge_prototype;
+
+void js_register_GameJoy_JS_CSFrameSyncResponse(JSContext *cx, JS::HandleObject global) {
+    jsb_GameJoy_JS_CSFrameSyncResponse_class = (JSClass *)calloc(1, sizeof(JSClass));
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->name = "JS_CSFrameSyncResponse";
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->addProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->delProperty = JS_DeletePropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->getProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->setProperty = JS_StrictPropertyStub;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->enumerate = JS_EnumerateStub;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->resolve = JS_ResolveStub;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->convert = JS_ConvertStub;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->finalize = jsb_ref_finalize;
+    jsb_GameJoy_JS_CSFrameSyncResponse_class->flags = JSCLASS_HAS_RESERVED_SLOTS(2);
+
+    static JSPropertySpec properties[] = {
+        JS_PSG("__nativeObj", js_is_native_obj, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_PS_END
+    };
+
+    static JSFunctionSpec funcs[] = {
+        JS_FN("get_steps", js_GameJoy_JS_CSFrameSyncResponse_get_steps, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_result", js_GameJoy_JS_CSFrameSyncResponse_get_result, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_steps", js_GameJoy_JS_CSFrameSyncResponse_set_steps, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_result", js_GameJoy_JS_CSFrameSyncResponse_set_result, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    static JSFunctionSpec st_funcs[] = {
+        JS_FN("Instance", js_GameJoy_JS_CSFrameSyncResponse_Instance, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    JS::RootedObject parent_proto(cx, jsb_GameJoy_JS_CPP_Bridge_prototype);
+    jsb_GameJoy_JS_CSFrameSyncResponse_prototype = JS_InitClass(
+        cx, global,
+        parent_proto,
+        jsb_GameJoy_JS_CSFrameSyncResponse_class,
+        dummy_constructor<GameJoy::JS_CSFrameSyncResponse>, 0, // no constructor
+        properties,
+        funcs,
+        NULL, // no static properties
+        st_funcs);
+
+    // add the proto and JSClass to the type->js info hash table
+    JS::RootedObject proto(cx, jsb_GameJoy_JS_CSFrameSyncResponse_prototype);
+    jsb_register_class<GameJoy::JS_CSFrameSyncResponse>(cx, jsb_GameJoy_JS_CSFrameSyncResponse_class, proto, parent_proto);
+}
+
 void register_all_GameJoy(JSContext* cx, JS::HandleObject obj) {
     // Get the ns
     JS::RootedObject ns(cx);
@@ -1624,9 +2194,12 @@ void register_all_GameJoy(JSContext* cx, JS::HandleObject obj) {
 
     js_register_GameJoy_JS_CPP_Bridge(cx, ns);
     js_register_GameJoy_JS_CSLoginResponse(cx, ns);
+    js_register_GameJoy_JS_PBFrameMessage(cx, ns);
     js_register_GameJoy_JS_CSCreateRoomRequest(cx, ns);
     js_register_GameJoy_JS_CSFightReadyResponse(cx, ns);
     js_register_GameJoy_JS_CSFightReadyRequest(cx, ns);
+    js_register_GameJoy_JS_CSFrameSyncRequest(cx, ns);
+    js_register_GameJoy_JS_CSFrameSyncResponse(cx, ns);
     js_register_GameJoy_JS_CSRoomMessage(cx, ns);
     js_register_GameJoy_Proxy(cx, ns);
     js_register_GameJoy_JS_CSJoinRoomRequest(cx, ns);

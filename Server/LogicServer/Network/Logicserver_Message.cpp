@@ -62,7 +62,7 @@ int32_t CMessageHead::DecodeInt32(const char*& str)
     int32_t value = 0;
     for (int32_t i = 0; i < sizeof(int32_t); ++i)
     {
-        value = (value << 8) | (int32_t)*(str++);
+        value = (value << 8) | (unsigned char)*(str++);
     }
     value = ntohl(value);
     return value;
@@ -180,7 +180,18 @@ void CMessage::SetMessageHead(CMessageHead* head)
 void CMessage::SetMessageBody(CMessageBody* body)
 {
     m_iMessageBody = body;
-    m_iMessageHead->SetLen(m_iMessageHead->Size() + m_iMessageBody->GetPB()->ByteSize());
+    ::google::protobuf::Message* pb = m_iMessageBody->GetPB();
+    if (pb == NULL)
+    {
+        console_msg("pb is NULL when set Message Body");
+        return;
+    }
+    if (m_iMessageHead == NULL)
+    {
+        console_msg("msg head is NULL when set Message Body");
+        return;
+    }
+    m_iMessageHead->SetLen(m_iMessageHead->Size() + pb->ByteSize());
     srand(time(NULL));
     m_iMessageHead->SetMsq((int32_t)(time(NULL) << 16) | (1 + rand()));
 }

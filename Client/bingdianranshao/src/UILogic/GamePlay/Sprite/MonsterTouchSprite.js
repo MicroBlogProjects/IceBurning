@@ -19,34 +19,55 @@ var MonsterTouchSprite = cc.Sprite.extend({
         }, this);
     },
     onTouchBegan : function (touch, event) {
-        var target = event.getCurrentTarget();
-        if (!target.isTouchInRect(touch)){
+        var l_target = event.getCurrentTarget();
+        if (!l_target.isTouchInRect(touch)){
             return false;
         }
-        MonsterTouch.addListerSprite(target.m_config,touch.getLocation());
-        if(target.m_id < 100){
-            monsterManager.addClipperNode();
-        }
-        else{
-            monsterManager.addBuildingTick();
-        }
+        MonsterTouch.addListerSprite(l_target.m_config,touch.getLocation());
+        var l_point = touch.getLocation();
+        var l_offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
+        l_point.x -= l_offset.x;
+        battleLayerConfig.buildType = (l_target.m_id>100)?2:1;
+        monsterBackGroundLayer.TouchOfBegin(l_point);
         return true;
     },
     onTouchMoved : function (touch, event) {
         MonsterTouch.moveListerSprite(touch.getLocation());
-
+        var l_point = touch.getLocation();
+        var l_offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
+        l_point.x -= l_offset.x;
+        monsterBackGroundLayer.TouchOfMove(l_point);
     },
     onTouchEnded : function (touch, event) {
         var target = event.getCurrentTarget();
         MonsterTouch.removeListerSprite();
         var point = touch.getLocation();
-        if(target.m_id < 100){
-            monsterManager.removeClipperNode();
+        var offset = gamePlayLayer.scrollView.getInnerContainer().getPosition(); //计算当前scrollview的偏移
+        point.x -= offset.x;
+        //cc.log("point x is "+point.x);
+        //cc.log("offset x is "+offset.x);
+        var l_willPoint = monsterBackGroundLayer.TouchOfEnd(point);
+        if(l_willPoint.point.x <=0 )
+        {
+            return ;
         }
-        else {
-            monsterManager.removeBuildingTick();
-        }
-        monsterManager.addMonsterSprite(target.m_config, point,true);
+        var x = l_willPoint.tiled[0].x;
+        var y = l_willPoint.tiled[0].y;
+        var step = new GameJoy.JS_PBFrameMessage();
+        step.set_uin(GC.UIN);
+        step.set_obj_id(target.m_id);
+        step.set_pos_x(x);
+        step.set_pos_y(y);
+        step.set_type(UserOperatorType.Monster);
+        var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
+        requestInstance.set_step(step);
+        GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
+        //cc.log("uin is "+ GC.UIN);
+        //cc.log("id is "+target.m_id);
+        //cc.log("x is "+x);
+        //cc.log("y is "+ y);
+        //cc.log("type is "+ UserOperatorType.Monster);
+        //cc.log("send Monster Message id " + NetIdentify["MSG_FRAME_SYNC"]);
 
     },
     onTouchCancelled : function (touch, event) {

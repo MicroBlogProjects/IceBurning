@@ -571,3 +571,233 @@ Instance : function (
 },
 
 };
+
+/**
+ * @class JS_PBFrameMessage
+ */
+GameJoy.JS_PBFrameMessage = {
+
+/**
+ * @method get_pos_y
+ * @return {int}
+ */
+get_pos_y : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method get_pos_x
+ * @return {int}
+ */
+get_pos_x : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method set_pos_y
+ * @param {int} arg0
+ */
+set_pos_y : function (
+int 
+)
+{
+},
+
+/**
+ * @method set_pos_x
+ * @param {int} arg0
+ */
+set_pos_x : function (
+int 
+)
+{
+},
+
+/**
+ * @method get_uin
+ * @return {int}
+ */
+get_uin : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method set_type
+ * @param {int} arg0
+ */
+set_type : function (
+int 
+)
+{
+},
+
+/**
+ * @method get_obj_id
+ * @return {int}
+ */
+get_obj_id : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method get_type
+ * @return {int}
+ */
+get_type : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method set_obj_id
+ * @param {int} arg0
+ */
+set_obj_id : function (
+int 
+)
+{
+},
+
+/**
+ * @method set_uin
+ * @param {int} arg0
+ */
+set_uin : function (
+int 
+)
+{
+},
+
+/**
+ * @method JS_PBFrameMessage
+ * @constructor
+ */
+JS_PBFrameMessage : function (
+)
+{
+},
+
+};
+
+/**
+ * @class JS_CSFrameSyncRequest
+ */
+GameJoy.JS_CSFrameSyncRequest = {
+
+/**
+ * @method get_msgID
+ * @return {int}
+ */
+get_msgID : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method get_step
+ * @return {GameJoy::JS_PBFrameMessage}
+ */
+get_step : function (
+)
+{
+    return GameJoy::JS_PBFrameMessage;
+},
+
+/**
+ * @method set_msgID
+ * @param {int} arg0
+ */
+set_msgID : function (
+int 
+)
+{
+},
+
+/**
+ * @method set_step
+ * @param {GameJoy::JS_PBFrameMessage} arg0
+ */
+set_step : function (
+js_pbframemessage 
+)
+{
+},
+
+/**
+ * @method Instance
+ * @return {GameJoy::JS_CSFrameSyncRequest}
+ */
+Instance : function (
+)
+{
+    return GameJoy::JS_CSFrameSyncRequest;
+},
+
+};
+
+/**
+ * @class JS_CSFrameSyncResponse
+ */
+GameJoy.JS_CSFrameSyncResponse = {
+
+/**
+ * @method get_steps
+ * @return {Array}
+ */
+get_steps : function (
+)
+{
+    return new Array();
+},
+
+/**
+ * @method get_result
+ * @return {int}
+ */
+get_result : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method set_steps
+ * @param {Array} arg0
+ */
+set_steps : function (
+array 
+)
+{
+},
+
+/**
+ * @method set_result
+ * @param {int} arg0
+ */
+set_result : function (
+int 
+)
+{
+},
+
+/**
+ * @method Instance
+ * @return {GameJoy::JS_CSFrameSyncResponse}
+ */
+Instance : function (
+)
+{
+    return GameJoy::JS_CSFrameSyncResponse;
+},
+
+};

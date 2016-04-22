@@ -78,10 +78,10 @@ var STTouchLayer = cc.Layer.extend({
         }
     },
     onModeControl : function(){
-        cc.log("[STTouchLayer] : changeModeChange");
+        //cc.log("[STTouchLayer] : changeModeChange");
     },
     onBackCallback : function(){
-        cc.log("[STTouchLayer] : onBack");
+        //cc.log("[STTouchLayer] : onBack");
         cc.director.runScene(new cc.TransitionFade(1.2, new MainMenuScene()));
     }
 

@@ -4,26 +4,41 @@
 #include "LogicFrame/Logicserver_LogicFrame.h"
 US_NS_LS;
 
-
-void working()
+bool Initialize()
 {
-    EpollUnit* epollUnit = EpollUnit::Instance();
-    epollUnit->Initialize();
+    EPOLLUNIT->Initialize();
 
     int32_t logic_fd = LOGICSOCKET->ConnectToConnectserver();
     if (logic_fd == error)
     {
         printf("connect to connect server failed.");
-        return;
+        return false;
     }
 
-    epollUnit->EpollRegist(logic_fd, LOGICFRAME->HandleMessage);
+    EPOLLUNIT->EpollRegist(logic_fd, LOGICFRAME->HandleMessage);
 
-    epollUnit->EpollRun();
+    return true;
+}
+
+void working()
+{
+    do 
+    {
+        struct timeval tvNowTime;
+        gettimeofday(&tvNowTime, NULL);
+
+        EPOLLUNIT->EpollRun();
+        LOGICFRAME->CheckTimer(tvNowTime);
+    } while (true);
+    
 }
 
 int main(int argc, char ** args)
 {
+    if (!Initialize())
+    {
+        printf("Initialize program failed");
+    }
     working();
     return 0;
 }

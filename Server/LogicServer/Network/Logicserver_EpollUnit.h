@@ -6,6 +6,8 @@
 #include "../Logicserver_Common.h"
 #include <sys/epoll.h>
 
+#define EPOLLUNIT NS_LS::EpollUnit::Instance()
+
 NS_LS_BEGIN
 
 class EpollUnit {
