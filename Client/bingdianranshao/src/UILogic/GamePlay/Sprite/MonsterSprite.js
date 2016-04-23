@@ -67,6 +67,19 @@ MonsterSprite = cc.Sprite.extend({
             this.m_type = MonsterType.Animal
         }
 
+        if(this.m_id  == 201){ //主城
+            if(GC.IS_HOST){
+                if(isMyMonster){
+                    this.setFlippedX(true);
+                }
+            }
+            else {
+                if(!isMyMonster){
+                    this.setFlippedX(true);
+                }
+            }
+        }
+
         this.m_attackConfig = config.attack;
         this.m_walkingConfig = config.walking;
         this.m_deathConfig = config.death;

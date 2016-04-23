@@ -40,7 +40,7 @@
             "TouchEnable": true,
             "AnchorPoint": {},
             "Position": {
-              "X": -1.3009,
+              "X": -1.344,
               "Y": 0.0
             },
             "Scale": {
@@ -63,9 +63,8 @@
               "X": 1.0,
               "Y": 1.0
             },
-            "LeftMargin": -1.3009,
-            "RightMargin": 1.3009,
-            "BottomMargin": 0.0,
+            "LeftMargin": -1.344,
+            "RightMargin": 1.344,
             "Tag": 119,
             "ActionTag": -338024205,
             "Size": {
@@ -1652,6 +1651,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
@@ -1682,81 +1683,30 @@
                 "TopMargin": 79.2327,
                 "BottomMargin": 81.7382,
                 "Tag": 135,
-                "ActionTag": -268275866,
-                "Size": {
-                  "X": 685.9756,
-                  "Y": 395.8291
-                },
-                "Name": "ListView_3",
-                "ctype": "ListViewObjectData"
-              },
-              {
-                "ClipAble": false,
-                "BackColorAlpha": 0,
-                "ComboBoxIndex": 1,
-                "SingleColor": {
-                  "R": 150,
-                  "G": 200
-                },
-                "FirstColor": {
-                  "R": 150,
-                  "G": 200
-                },
-                "EndColor": {},
-                "ColorVector": {
-                  "ScaleY": 1.0
-                },
-                "Scale9Width": 1,
-                "Scale9Height": 1,
-                "TouchEnable": true,
-                "AnchorPoint": {},
-                "Position": {
-                  "X": 19.4031,
-                  "Y": 81.7383
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentYEnabled": true,
-                "PrePosition": {
-                  "X": 0.0259,
-                  "Y": 0.1468
-                },
-                "PercentWidthEnable": true,
-                "PercentHeightEnable": true,
-                "PercentWidthEnabled": true,
-                "PercentHeightEnabled": true,
-                "PreSize": {
-                  "X": 0.9161,
-                  "Y": 0.7109
-                },
-                "LeftMargin": 19.4031,
-                "RightMargin": 43.4212,
-                "TopMargin": 79.2326,
-                "BottomMargin": 81.7383,
-                "Tag": 512,
                 "Children": [
                   {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Common/Cn01.png",
-                      "Plist": ""
+                    "ClipAble": false,
+                    "BackColorAlpha": 0,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
                     },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 40,
-                    "Scale9OriginY": 40,
-                    "Scale9Width": 193,
-                    "Scale9Height": 20,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
                     },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {},
                     "Position": {
-                      "X": 171.494,
-                      "Y": 197.9146
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1764,824 +1714,1583 @@
                     },
                     "CColor": {},
                     "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.25,
-                      "Y": 0.5
+                      "X": 0.0,
+                      "Y": 0.0
                     },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
                     "PreSize": {
-                      "X": 0.5,
+                      "X": 1.0,
                       "Y": 1.0
                     },
-                    "RightMargin": 342.9878,
-                    "Tag": 714,
-                    "ActionTag": -336795910,
+                    "RightMargin": -0.0043,
+                    "Tag": 512,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn01.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 40,
+                        "Scale9OriginY": 40,
+                        "Scale9Width": 193,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 171.495,
+                          "Y": 197.915
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.25,
+                          "Y": 0.5
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.5,
+                          "Y": 1.0
+                        },
+                        "RightMargin": 342.99,
+                        "Tag": 714,
+                        "ActionTag": -336795910,
+                        "Size": {
+                          "X": 342.99,
+                          "Y": 395.83
+                        },
+                        "Name": "Image_189",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FlipX": true,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Common/Cn01.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 40,
+                        "Scale9OriginY": 40,
+                        "Scale9Width": 193,
+                        "Scale9Height": 20,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 510.7121,
+                          "Y": 197.915
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.7445,
+                          "Y": 0.5
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.5,
+                          "Y": 1.0
+                        },
+                        "LeftMargin": 339.2171,
+                        "RightMargin": 3.7729,
+                        "Tag": 321,
+                        "ActionTag": -2014833156,
+                        "Size": {
+                          "X": 342.99,
+                          "Y": 395.83
+                        },
+                        "Name": "Image_189_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 342.99,
+                          "Y": 325.5702
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1672,
+                          "ScaleY": 0.1801
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.8225
+                        },
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -7.01,
+                        "RightMargin": -7.01,
+                        "TopMargin": -229.7402,
+                        "BottomMargin": 25.5702,
+                        "Tag": 331,
+                        "ActionTag": 1017102377,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.4863,
+                          "ScaleY": 0.4791
+                        },
+                        "Position": {
+                          "X": 464.82,
+                          "Y": 323.2744
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1638,
+                          "ScaleY": 0.182
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.6776,
+                          "Y": 0.8167
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.02,
+                          "Y": 1.5
+                        },
+                        "LeftMargin": 124.5561,
+                        "RightMargin": -138.2758,
+                        "TopMargin": -236.7262,
+                        "BottomMargin": 38.8111,
+                        "Tag": 332,
+                        "ActionTag": -610409757,
+                        "Size": {
+                          "X": 699.6996,
+                          "Y": 593.745
+                        },
+                        "Name": "Image_13_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 589.9428,
+                          "Y": 325.5702
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1672,
+                          "ScaleY": 0.1729
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.86,
+                          "Y": 0.8225
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": 239.9428,
+                        "RightMargin": -253.9628,
+                        "TopMargin": -229.7402,
+                        "BottomMargin": 25.5702,
+                        "Tag": 333,
+                        "ActionTag": 1778892092,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 96.0372,
+                          "Y": 197.915
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1593,
+                          "ScaleY": 0.1815
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.14,
+                          "Y": 0.5
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -253.9628,
+                        "RightMargin": 239.9428,
+                        "TopMargin": -102.085,
+                        "BottomMargin": -102.085,
+                        "Tag": 334,
+                        "ActionTag": -1221204490,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_3",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 219.5136,
+                          "Y": 197.915
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1629,
+                          "ScaleY": 0.1767
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.32,
+                          "Y": 0.5
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -130.4864,
+                        "RightMargin": 116.4664,
+                        "TopMargin": -102.085,
+                        "BottomMargin": -102.085,
+                        "Tag": 335,
+                        "ActionTag": 1524195670,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_4",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 342.99,
+                          "Y": 197.915
+                        },
+                        "Scale": {
+                          "ScaleX": 0.16,
+                          "ScaleY": 0.1767
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -7.01,
+                        "RightMargin": -7.01,
+                        "TopMargin": -102.085,
+                        "BottomMargin": -102.085,
+                        "Tag": 336,
+                        "ActionTag": -904940423,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_5",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 466.4664,
+                          "Y": 197.915
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1571,
+                          "ScaleY": 0.18
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.68,
+                          "Y": 0.5
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": 116.4664,
+                        "RightMargin": -130.4865,
+                        "TopMargin": -102.085,
+                        "BottomMargin": -102.085,
+                        "Tag": 337,
+                        "ActionTag": 36210681,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_6",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 589.9428,
+                          "Y": 197.915
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1566,
+                          "ScaleY": 0.1842
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.86,
+                          "Y": 0.5
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": 239.9428,
+                        "RightMargin": -253.9628,
+                        "TopMargin": -102.085,
+                        "BottomMargin": -102.085,
+                        "Tag": 338,
+                        "ActionTag": -670373168,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_7",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 96.0372,
+                          "Y": 79.166
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1506,
+                          "ScaleY": 0.1644
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.14,
+                          "Y": 0.2
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -253.9628,
+                        "RightMargin": 239.9428,
+                        "TopMargin": 16.664,
+                        "BottomMargin": -220.834,
+                        "Tag": 339,
+                        "ActionTag": -99995460,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_8",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 219.5136,
+                          "Y": 79.166
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1615,
+                          "ScaleY": 0.1619
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.32,
+                          "Y": 0.2
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -130.4864,
+                        "RightMargin": 116.4664,
+                        "TopMargin": 16.664,
+                        "BottomMargin": -220.834,
+                        "Tag": 340,
+                        "ActionTag": 1719374065,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_9",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 342.99,
+                          "Y": 79.166
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1682,
+                          "ScaleY": 0.1679
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.2
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -7.01,
+                        "RightMargin": -7.01,
+                        "TopMargin": 16.664,
+                        "BottomMargin": -220.834,
+                        "Tag": 341,
+                        "ActionTag": 18956967,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_10",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 466.4664,
+                          "Y": 79.166
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1581,
+                          "ScaleY": 0.1705
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.68,
+                          "Y": 0.2
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": 116.4664,
+                        "RightMargin": -130.4865,
+                        "TopMargin": 16.664,
+                        "BottomMargin": -220.834,
+                        "Tag": 342,
+                        "ActionTag": -1838241120,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_11",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 589.9428,
+                          "Y": 79.166
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1562,
+                          "ScaleY": 0.1773
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.86,
+                          "Y": 0.2
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": 239.9428,
+                        "RightMargin": -253.9628,
+                        "TopMargin": 16.664,
+                        "BottomMargin": -220.834,
+                        "Tag": 343,
+                        "ActionTag": 1722249332,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_12",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 96.0372,
+                          "Y": 325.5702
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1571,
+                          "ScaleY": 0.1767
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.14,
+                          "Y": 0.8225
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -253.9628,
+                        "RightMargin": 239.9428,
+                        "TopMargin": -229.7402,
+                        "BottomMargin": 25.5702,
+                        "Tag": 137,
+                        "ActionTag": 1661373363,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_0_0",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/SelectBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 231,
+                        "Scale9OriginY": 198,
+                        "Scale9Width": 238,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 219.5136,
+                          "Y": 325.5702
+                        },
+                        "Scale": {
+                          "ScaleX": 0.1668,
+                          "ScaleY": 0.1788
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.32,
+                          "Y": 0.8225
+                        },
+                        "PercentHeightEnable": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 1.0204,
+                          "Y": 1.5158
+                        },
+                        "LeftMargin": -130.4864,
+                        "RightMargin": 116.4664,
+                        "TopMargin": -229.7402,
+                        "BottomMargin": 25.5702,
+                        "Tag": 155,
+                        "ActionTag": -1299443714,
+                        "Size": {
+                          "X": 700.0,
+                          "Y": 600.0
+                        },
+                        "Name": "Image_13_0_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 380.89,
+                          "Y": 295.89
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.5552,
+                          "Y": 0.7475
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 370.39,
+                        "RightMargin": 294.59,
+                        "TopMargin": 89.44,
+                        "BottomMargin": 285.39,
+                        "Tag": 89,
+                        "ActionTag": 1049531040,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_3",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 129.32,
+                          "Y": 300.29
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1885,
+                          "Y": 0.7586
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 118.82,
+                        "RightMargin": 546.16,
+                        "TopMargin": 85.04,
+                        "BottomMargin": 289.79,
+                        "Tag": 91,
+                        "ActionTag": -837854622,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 256.88,
+                          "Y": 298.64
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.3745,
+                          "Y": 0.7545
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 246.38,
+                        "RightMargin": 418.6,
+                        "TopMargin": 86.69,
+                        "BottomMargin": 288.14,
+                        "Tag": 92,
+                        "ActionTag": 1750820339,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 500.1,
+                          "Y": 294.99
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.729,
+                          "Y": 0.7452
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 489.6,
+                        "RightMargin": 175.38,
+                        "TopMargin": 90.34,
+                        "BottomMargin": 284.49,
+                        "Tag": 93,
+                        "ActionTag": -1142119332,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_4",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 627.23,
+                          "Y": 297.29
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9144,
+                          "Y": 0.7511
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 616.73,
+                        "RightMargin": 48.25,
+                        "TopMargin": 88.04,
+                        "BottomMargin": 286.79,
+                        "Tag": 95,
+                        "ActionTag": 1350166468,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_5",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.4666,
+                          "ScaleY": 0.3522
+                        },
+                        "Position": {
+                          "X": 128.6183,
+                          "Y": 164.5257
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1875,
+                          "Y": 0.4156
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 118.82,
+                        "RightMargin": 546.16,
+                        "TopMargin": 217.7,
+                        "BottomMargin": 157.13,
+                        "Tag": 96,
+                        "ActionTag": -1930978207,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_6",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 255.8,
+                          "Y": 167.63
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.3729,
+                          "Y": 0.4235
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 245.3,
+                        "RightMargin": 419.68,
+                        "TopMargin": 217.7,
+                        "BottomMargin": 157.13,
+                        "Tag": 97,
+                        "ActionTag": -1416275801,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_7",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 380.27,
+                          "Y": 167.63
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.5543,
+                          "Y": 0.4235
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 369.77,
+                        "RightMargin": 295.21,
+                        "TopMargin": 217.7,
+                        "BottomMargin": 157.13,
+                        "Tag": 98,
+                        "ActionTag": 1429621153,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_8",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 501.05,
+                          "Y": 165.45
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.7304,
+                          "Y": 0.418
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 490.55,
+                        "RightMargin": 174.43,
+                        "TopMargin": 219.88,
+                        "BottomMargin": 154.95,
+                        "Tag": 99,
+                        "ActionTag": -4981290,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_9",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 625.23,
+                          "Y": 163.63
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9114,
+                          "Y": 0.4134
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 614.73,
+                        "RightMargin": 50.25,
+                        "TopMargin": 221.7,
+                        "BottomMargin": 153.13,
+                        "Tag": 100,
+                        "ActionTag": 1107896084,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_10",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 130.33,
+                          "Y": 52.1889
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.19,
+                          "Y": 0.1318
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 119.83,
+                        "RightMargin": 545.15,
+                        "TopMargin": 333.1411,
+                        "BottomMargin": 41.6889,
+                        "Tag": 101,
+                        "ActionTag": 963977923,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_11",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 256.53,
+                          "Y": 53.69
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.374,
+                          "Y": 0.1356
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 246.03,
+                        "RightMargin": 418.95,
+                        "TopMargin": 331.64,
+                        "BottomMargin": 43.19,
+                        "Tag": 102,
+                        "ActionTag": -1104078472,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_12",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 382.36,
+                          "Y": 54.0457
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.5574,
+                          "Y": 0.1365
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 371.86,
+                        "RightMargin": 293.12,
+                        "TopMargin": 331.2843,
+                        "BottomMargin": 43.5457,
+                        "Tag": 103,
+                        "ActionTag": -1634027714,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_13",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 500.9081,
+                          "Y": 53.83
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.7302,
+                          "Y": 0.136
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 490.4081,
+                        "RightMargin": 174.5719,
+                        "TopMargin": 331.5,
+                        "BottomMargin": 43.33,
+                        "Tag": 104,
+                        "ActionTag": -1338863229,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_14",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Bag/select.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 6,
+                        "Scale9OriginY": 6,
+                        "Scale9Width": 9,
+                        "Scale9Height": 9,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 623.89,
+                          "Y": 47.19
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9095,
+                          "Y": 0.1192
+                        },
+                        "PreSize": {
+                          "X": 0.0306,
+                          "Y": 0.0531
+                        },
+                        "LeftMargin": 613.39,
+                        "RightMargin": 51.59,
+                        "TopMargin": 338.14,
+                        "BottomMargin": 36.69,
+                        "Tag": 105,
+                        "ActionTag": 141397391,
+                        "Size": {
+                          "X": 21.0,
+                          "Y": 21.0
+                        },
+                        "VisibleForFrame": false,
+                        "Name": "seleted_imageview_15",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": -1760594608,
                     "Size": {
-                      "X": 342.9879,
-                      "Y": 395.8291
-                    },
-                    "Name": "Image_189",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FlipX": true,
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Common/Cn01.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 40,
-                    "Scale9OriginY": 40,
-                    "Scale9Width": 193,
-                    "Scale9Height": 20,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 510.7091,
-                      "Y": 197.9146
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.7445,
-                      "Y": 0.5
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.5,
-                      "Y": 1.0
-                    },
-                    "LeftMargin": 339.2151,
-                    "RightMargin": 3.7726,
-                    "Tag": 321,
-                    "ActionTag": -2014833156,
-                    "Size": {
-                      "X": 342.9879,
-                      "Y": 395.8291
-                    },
-                    "Name": "Image_189_0",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 342.9884,
-                      "Y": 325.5694
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.8225
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 288.1103,
-                    "RightMargin": 288.1093,
-                    "TopMargin": 19.8112,
-                    "BottomMargin": 275.121,
-                    "Tag": 331,
-                    "ActionTag": 1017102377,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_0",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 466.4636,
-                      "Y": 325.5694
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.68,
-                      "Y": 0.8225
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 411.5856,
-                    "RightMargin": 164.634,
-                    "TopMargin": 19.8112,
-                    "BottomMargin": 275.121,
-                    "Tag": 332,
-                    "ActionTag": -610409757,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_1",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 589.9393,
-                      "Y": 325.5694
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.86,
-                      "Y": 0.8225
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 535.0612,
-                    "RightMargin": 41.1584,
-                    "TopMargin": 19.8112,
-                    "BottomMargin": 275.121,
-                    "Tag": 333,
-                    "ActionTag": 1778892092,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_2",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 96.0366,
-                      "Y": 197.9146
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.14,
-                      "Y": 0.5
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 41.1586,
-                    "RightMargin": 535.061,
-                    "TopMargin": 147.4661,
-                    "BottomMargin": 147.4661,
-                    "Tag": 334,
-                    "ActionTag": -1221204490,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_3",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 219.5123,
-                      "Y": 197.9146
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.32,
-                      "Y": 0.5
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 164.6342,
-                    "RightMargin": 411.5854,
-                    "TopMargin": 147.4661,
-                    "BottomMargin": 147.4661,
-                    "Tag": 335,
-                    "ActionTag": 1524195670,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_4",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 342.9879,
-                      "Y": 197.9146
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.5
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 288.1099,
-                    "RightMargin": 288.1097,
-                    "TopMargin": 147.4661,
-                    "BottomMargin": 147.4661,
-                    "Tag": 336,
-                    "ActionTag": -904940423,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_5",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 466.4636,
-                      "Y": 197.9146
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.68,
-                      "Y": 0.5
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 411.5855,
-                    "RightMargin": 164.634,
-                    "TopMargin": 147.4661,
-                    "BottomMargin": 147.4661,
-                    "Tag": 337,
-                    "ActionTag": 36210681,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_6",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 589.9393,
-                      "Y": 197.9146
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.86,
-                      "Y": 0.5
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 535.0612,
-                    "RightMargin": 41.1584,
-                    "TopMargin": 147.4661,
-                    "BottomMargin": 147.4661,
-                    "Tag": 338,
-                    "ActionTag": -670373168,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_7",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 96.0366,
-                      "Y": 79.1658
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.14,
-                      "Y": 0.2
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 41.1586,
-                    "RightMargin": 535.061,
-                    "TopMargin": 266.2148,
-                    "BottomMargin": 28.7174,
-                    "Tag": 339,
-                    "ActionTag": -99995460,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_8",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 219.5123,
-                      "Y": 79.1658
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.32,
-                      "Y": 0.2
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 164.6342,
-                    "RightMargin": 411.5854,
-                    "TopMargin": 266.2148,
-                    "BottomMargin": 28.7174,
-                    "Tag": 340,
-                    "ActionTag": 1719374065,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_9",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 342.9879,
-                      "Y": 79.1658
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.2
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 288.1099,
-                    "RightMargin": 288.1097,
-                    "TopMargin": 266.2148,
-                    "BottomMargin": 28.7174,
-                    "Tag": 341,
-                    "ActionTag": 18956967,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_10",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 466.4636,
-                      "Y": 79.1658
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.68,
-                      "Y": 0.2
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 411.5855,
-                    "RightMargin": 164.634,
-                    "TopMargin": 266.2148,
-                    "BottomMargin": 28.7174,
-                    "Tag": 342,
-                    "ActionTag": -1838241120,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_11",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 589.9393,
-                      "Y": 79.1658
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.86,
-                      "Y": 0.2
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 535.0612,
-                    "RightMargin": 41.1584,
-                    "TopMargin": 266.2148,
-                    "BottomMargin": 28.7174,
-                    "Tag": 343,
-                    "ActionTag": 1722249332,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_12",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 96.0366,
-                      "Y": 325.5694
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.14,
-                      "Y": 0.8225
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 41.1585,
-                    "RightMargin": 535.061,
-                    "TopMargin": 19.8112,
-                    "BottomMargin": 275.121,
-                    "Tag": 137,
-                    "ActionTag": 1661373363,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_0_0",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "Inventory/charalockedbg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Width": 91,
-                    "Scale9Height": 116,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 219.5122,
-                      "Y": 325.5694
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.32,
-                      "Y": 0.8225
-                    },
-                    "PercentWidthEnable": true,
-                    "PercentHeightEnable": true,
-                    "PercentWidthEnabled": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 0.16,
-                      "Y": 0.2549
-                    },
-                    "LeftMargin": 164.6342,
-                    "RightMargin": 411.5854,
-                    "TopMargin": 19.8112,
-                    "BottomMargin": 275.121,
-                    "Tag": 155,
-                    "ActionTag": -1299443714,
-                    "Size": {
-                      "X": 109.7561,
-                      "Y": 100.8968
-                    },
-                    "Name": "Image_13_0_1",
-                    "ctype": "ImageViewObjectData"
+                      "X": 685.98,
+                      "Y": 395.83
+                    },
+                    "Name": "BagPanel",
+                    "ctype": "PanelObjectData"
                   }
                 ],
-                "ActionTag": -1760594608,
+                "ActionTag": -268275866,
                 "Size": {
                   "X": 685.9757,
                   "Y": 395.8291
                 },
-                "Name": "BagPanel",
-                "ctype": "PanelObjectData"
+                "Name": "ListView_3",
+                "ctype": "ListViewObjectData"
               },
               {
                 "FontSize": 14,
@@ -2833,6 +3542,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "TouchEnable": true,
             "AnchorPoint": {},
             "Position": {
@@ -2854,7 +3565,7 @@
               "Y": 0.3125
             },
             "LeftMargin": 170.5678,
-            "RightMargin": 589.4323,
+            "RightMargin": 589.4322,
             "TopMargin": 294.9744,
             "BottomMargin": 145.0256,
             "Tag": 164,
@@ -3589,7 +4300,7 @@
                   "X": 100.0,
                   "Y": 20.0
                 },
-                "Name": "atribute_sign_radius",
+                "Name": "atribute_attack_radius",
                 "ctype": "TextObjectData"
               },
               {
@@ -3660,6 +4371,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "Bag/select.png",
+        "Bag/SelectBg.png",
         "Common/BaS08.png",
         "Common/BaS09.png",
         "Common/BaS10.png",
@@ -3683,8 +4396,7 @@
         "Inventory/BaB161.png",
         "Inventory/BaB17.png",
         "Inventory/BaB18.png",
-        "Inventory/BaB77.png",
-        "Inventory/charalockedbg.png"
+        "Inventory/BaB77.png"
       ],
       "ctype": "GameFileData"
     }

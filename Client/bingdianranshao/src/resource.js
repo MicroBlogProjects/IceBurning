@@ -11,15 +11,16 @@ var res = {
     MM_Mune_png :     "res/MainMenu/menu.png",
     MM_ButtonEffect : "res/Sound/Effect/buttonEffect.mp3",
     MM_Flare_jpg :     "res/MainMenu/flare.jpg",
+    //MB_Select_png :    "res/MainMenu/Select/select.png",
 
     //GamePlay
     GM_Map_tmx : "res/GamePlay/Map/map.tmx",
 
     //monster
-    GM_MainCity_png :     "res/GamePlay/Monster/xingxingmofata/xingxingmofata.png",
+    GM_MainCity_png :     "res/GamePlay/Monster/MainCity/MainCity.png",
     GM_RedBlood_png     : "res/GamePlay/Monster/bloodImage/RedBlood.png",
     GM_BlueBlood_png :    "res/GamePlay/Monster/bloodImage/BlueBlood.png",
-    GM_BackgroundBolld_png : "res/GamePlay/monster/bloodImage/BackgroundBlood.png",
+    GM_BackgroundBolld_png : "res/GamePlay/Monster/bloodImage/BackgroundBlood.png",
 
 
     //monstertouchlayr
@@ -32,7 +33,7 @@ var res = {
     //星星魔法塔
     GM_Xxmft_Png      :    "res/GamePlay/Monster/xingxingmofata/xingxingmofata.png",
     GM_XxmftSkill_Png :   "res/GamePlay/Monster/xingxingmofata/xxmftskill.png",
-    GM_XxmftIcon_Png : "res/GamePlay/Monster/xingxingmofata/xingxingmofataIcon.png",
+    GM_XxmftIcon_Png : "res/GamePlay/Monster/xingxingmofata/xxmftIcon.png",
     GM_XxmftAttack_Plist :  "res/GamePlay/Monster/xingxingmofata/xxmftattack.plist",
     GM_XxmftAttack_Png :  "res/GamePlay/Monster/xingxingmofata/xxmftattack.png",
     GM_XxmftAttackDeath_Plist : "res/GamePlay/Monster/xingxingmofata/xxmftattackdeath.plist",
@@ -59,9 +60,15 @@ var res = {
 
     //电塔
     GM_PylonIcon_png  :                       "res/GamePlay/Monster/pylon/pylonIcon.png",
-    GM_PylonDefault_png  :                   "res/GamePlay/Monster/pylon/pylonDeafault.png",
+    GM_PylonDefault_png  :                   "res/GamePlay/Monster/pylon/PylonDeafault.png",
     GM_PylonSkillDefault_png :              "res/GamePlay/Monster/pylon/PylonSkillDefault.png",
     GM_Pylon_plist :                          "res/GamePlay/Monster/pylon/pylon.plist",
+
+    //箭塔
+    GM_TowersIcon_png :                        "res/GamePlay/Monster/Towers/TowersIcon.png",
+    GM_TowersDefault_png :                     "res/GamePlay/Monster/Towers/TowersDefault.png",
+    GM_Towers_plist :                           "res/GamePlay/Monster/Towers/Towers.plist",
+    GM_TowersSkill_png :                         "res/GamePlay/Monster/Towers/Arrow.png",
 
     //骑士
     GM_KnightIcon_png :                 "res/GamePlay/Monster/Knight/KnightIcon.png",
@@ -109,6 +116,9 @@ var res = {
     GM_WolfIcon_png :                                "res/GamePlay/Monster/Wolf/WolfIcon.png",
     GM_WolfDefault_png :                              "res/GamePlay/Monster/Wolf/WolfDefault.png",
     GM_Wolf_plist :                                    "res/GamePlay/Monster/Wolf/Wolf.plist",
+
+    //游戏结束界面
+    GO_SettlementLayer_json :                      "res/json/Settlementlayer.json",
 
 
     //英雄技能

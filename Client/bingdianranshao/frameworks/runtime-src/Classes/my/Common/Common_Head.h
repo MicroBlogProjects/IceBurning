@@ -22,7 +22,6 @@
 #include <stdarg.h>
 
 #include "cocos2d.h"
-#include "my/Common/Console_Output.h"
 
 #define NS_GJ           GameJoy
 #define US_NS_GJ        using namespace GameJoy

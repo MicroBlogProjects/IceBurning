@@ -55,7 +55,7 @@ PylonConfig.skill = {
     "attribute" : {
         "offsetPoint" : cc.p(0,30),
         "isRangeAttack" : false,
-        "isArcAnimate" : false,
+        "isArcAnimate" : MonsterAnimateKind.StraightAnimate,
         "attack" : 20, //有技能伤害 则伤害根据技能伤害算
         "time" : 0.2,
         "attackRadius" :1,

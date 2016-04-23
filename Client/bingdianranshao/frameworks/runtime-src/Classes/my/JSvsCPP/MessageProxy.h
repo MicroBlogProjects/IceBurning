@@ -17,6 +17,7 @@ private:
     MessageProxy();
     static MessageProxy* instance;
 	static int uin;
+    int has_connect_success;
 };
 
 }

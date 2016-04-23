@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>TowersAttackBegin0.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{50,71}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,4},{50,71}}</string>
+                <key>sourceSize</key>
+                <string>{50,79}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>Towers.png</string>
+            <key>size</key>
+            <string>{64,128}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:ad1670f5c0d643412d410e9bb6f40beb:736a331de9ce13ea822e455f640df863:b056938122b954bd6d91f27a320a56cc$</string>
+            <key>textureFileName</key>
+            <string>Towers.png</string>
+        </dict>
+    </dict>
+</plist>

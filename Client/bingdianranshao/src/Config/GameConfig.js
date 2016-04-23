@@ -18,6 +18,7 @@ GC.SOUND_ON = true;
 
 GC.IS_HOST = false; //true 表示主场也是左边这个阵营， false表示客场也是右边这个阵营
 GC.UIN = -1;
+GC.ISWIN = false;
 GC.NUM_MONSTER_BLOCK = 2;
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
@@ -26,8 +27,9 @@ var LAYER_PRIORITY_TOUCH = 100;                                //点击层优先
 //向左走为-1 向右走位1 死亡 0 向左攻击为 -2 向右攻击为 2
 
 var UserOperatorType = {
-    "Monster" : 1
-}
+    "Monster" : 1,
+    "Settlement" : 2
+};
 
 //当前怪物的动画状态
 var MonsterState ={
@@ -43,72 +45,13 @@ var MonsterType ={
     Animal: 1
 };
 
-var MonsterIDList = [2,8,9,10,7];
-var BuildingIDlist = [102,103];
+var MAXMonsterAccount = 5;
+var MonsterIDList = [];
+var BuildingIDlist = [];
 
-var TMXTileMapsize = 32;
-
-var HostUpPath = {"origin" : cc.p(5,12),
-               "destination" : cc.p(7,18)};
-
-var HostUpStraightPath = {"origin" : cc.p(5,16),
-                             "destination" : cc.p(30,18)};
-
-var HostStraightPath = {"origin" : cc.p(8,9),
-                         "destination" : cc.p(30,11)};
-
-var HostDownStraightPath = {"origin" : cc.p(5,2),
-                           "destination" : cc.p(30,4)};
-
-var HostDownPath = {"origin" : cc.p(5,2),
-                  "destination" : cc.p(7,8)};
-
-var AwayUpPath = {"origin" : cc.p(53,12),
-                    "destination" : cc.p(55,18)};
-
-var AwayUpStraightPath = {"origin" : cc.p(30,16),
-                             "destination" : cc.p(55,18)};
-
-var AwayStraightPath = {"origin" : cc.p(30,9),
-                           "destination" : cc.p(52,11)};
-
-var AwayDownStraightPath = {"origin" : cc.p(30,2),
-                               "destination" : cc.p(55,4)};
-
-var AwayDownPath = {"origin" : cc.p(53,2),
-                      "destination" : cc.p(55,8)};
-
-var HostPathConfig = {
-    "UpPath" :[HostUpPath,],
-    "StraightPath" : [HostUpStraightPath,HostStraightPath,HostDownStraightPath],
-    "DownPath" :[HostDownPath,]
+//远程攻击动画种类
+var MonsterAnimateKind = {
+    "StraightAnimate" : 1,
+    "ArcAnimate" : 2,
+    "pointAnimate" : 3
 };
-
-
-
-var  AwayPathConfig = {
-    "UpPath" : [AwayUpPath,],
-    "StraightPath" : [AwayUpStraightPath,AwayStraightPath,AwayDownStraightPath],
-    "DownPath" : [AwayDownPath,]
-};
-
-var FightingPathConfig = {
-    "UpPath" :[HostUpPath, AwayDownPath],
-    "StraightPath" : [HostUpStraightPath,HostStraightPath,HostDownStraightPath,AwayUpStraightPath,AwayStraightPath,AwayDownStraightPath],
-    "DownPath" :[HostDownPath,AwayUpPath]
-}
-
-//建筑物可以放得位置
-var HostBuilddingPosition = [{"origin" : cc.p(9,6), "destination" : cc.p(11,8)},
-                               {"origin" : cc.p(15,6),"destination" : cc.p(17,8)},
-                               {"origin" : cc.p(21,6),"destination" : cc.p(23,8)},
-                               {"origin" : cc.p(9,12), "destination" : cc.p(11,14)},
-                               {"origin" : cc.p(15,12),"destination" : cc.p(17,14)},
-                               {"origin" : cc.p(21,12),"destination" : cc.p(23,14)}];
-
-var AwayBuilddingPosition =[{"origin" : cc.p(36,6), "destination" : cc.p(38,8)},
-                                {"origin" : cc.p(42,6),"destination" : cc.p(44,8)},
-                                {"origin" : cc.p(48,6),"destination" : cc.p(50,8)},
-                                {"origin" : cc.p(36,12), "destination" : cc.p(38,14)},
-                                {"origin" : cc.p(42,12),"destination" : cc.p(44,14)},
-                                {"origin" : cc.p(48,12),"destination" : cc.p(50,14)}];

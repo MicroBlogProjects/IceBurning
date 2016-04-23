@@ -50,11 +50,12 @@ var MPackMenuLayer = cc.Scene.extend({
         var width = panel.width;
         var account = 0;
         for(var value in MonsterConfig){
+            if(value > 200) continue;
             var config = MonsterConfig[value];
             var x = (0.14 + (account % 5)*0.18)*width;
             var y = (0.80 - parseInt(account /5)*0.3) * height;
             ++ account;
-            var sprite = new BagTouchSprite(config);
+            var sprite = new BagTouchSprite(config,account);
             sprite.setPosition(x,y);
             panel.addChild(sprite);
         }

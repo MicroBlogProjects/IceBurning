@@ -33,7 +33,7 @@ var RangedAttackEffectSprite = cc.Sprite.extend({
         this.m_nowAnimateAction = new cc.Animate(animation);
         this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.attackCallFunc,this)));
     },
-    attackCallFunc : function(sprite){
-        sprite.removeFromParent();
+    attackCallFunc : function(sender){
+        sender.removeFromParent();
     }
 });

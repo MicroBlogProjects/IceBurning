@@ -123,17 +123,39 @@ var GamePlayLayer = cc.Layer.extend({
                 var y = step.get_pos_y();
                 var monsterId = step.get_obj_id();
                 var type = step.get_type();
-                var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
-                //var config = MonsterConfig[""+monsterId];
-                var isMyMonster  =false;
-                if(uin == GC.UIN){
-                    isMyMonster = true;
+                if(type == UserOperatorType.Monster){
+                    var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
+                    //var config = MonsterConfig[""+monsterId];
+                    var isMyMonster  =false;
+                    if(uin == GC.UIN){
+                        isMyMonster = true;
+                    }
+                    else{
+                        isMyMonster = false;
+                    }
+                    monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
+                    //cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
                 }
-                else{
-                    isMyMonster = false;
+                else {
+                    if(GC.UIN == uin){
+                        if(monsterId == 1){
+                            GC.ISWIN = true;
+                        }
+                        else {
+                            GC.ISWIN = false;
+                        }
+                    }
+                    else {
+                        if(monsterId == 1){
+                            GC.ISWIN = false;
+                        }
+                        else {
+                            GC.ISWIN = true;
+                        }
+                    }
+                    cc.director.runScene(new GameOverScene);
+                    break;
                 }
-                monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
-                //cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
             }
         }
     },
@@ -183,7 +205,7 @@ var GamePlayScene = cc.Scene.extend({
     onEnter :function(){
         this._super();
         this.monsterManager = new MonsterManager();
-        this.checkPathManger = new CheckPathManager();
+        //this.checkPathManger = new CheckPathManager();
         this.algorithmOfStatus = new AlgorithmOfStatus();
         this.addGamePlay();
     },

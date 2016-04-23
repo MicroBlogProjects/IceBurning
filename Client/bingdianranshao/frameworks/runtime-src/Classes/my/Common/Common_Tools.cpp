@@ -5,7 +5,7 @@ int EncodeInt32(char*& str, int32_t value)
     int p = 0xff000000, w = 24;
     for (int i = 0; i < 4; ++i)
     {
-        byte b = (byte)((value & p) >> w);
+        unsigned char b = (unsigned char)((value & p) >> w);
         *(str++) = (char)((b & 0xf0) >> 4);
         *(str++) = (char)( b & 0x0f);
         p >>= 8;
@@ -25,5 +25,4 @@ int32_t DecodeInt32(char*& str)
     }
     return ret;
 }
-
 

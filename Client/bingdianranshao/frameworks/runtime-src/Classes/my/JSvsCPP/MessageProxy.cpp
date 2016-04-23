@@ -16,7 +16,7 @@ int MessageProxy::uin = -1;
 
 MessageProxy::MessageProxy()
 {
-    ConnectToServer();
+    has_connect_success =  (ConnectToServer() == success);
 }
 
 MessageProxy* MessageProxy::Instance()
@@ -36,6 +36,10 @@ int MessageProxy::ConnectToServer()
 
 void MessageProxy::SendRequest(int msgID)
 {
+    if (!has_connect_success)
+    {
+        return;
+    }
     JS_CPP_Bridge* js_obj = MSGIDBINDJSUNIT->GetJSRequestWithMsgID(msgID);
     if (js_obj == NULL)
     {
@@ -58,6 +62,10 @@ void MessageProxy::SendRequest(int msgID)
 
 int MessageProxy::RecvResponse()
 {
+    if (!has_connect_success)
+    {
+        return -1;
+    }
     CMessage* msg= NULL;
     if (success == CLIENTSOCKET->RecvOneDataFromServer(msg) && msg)
     {

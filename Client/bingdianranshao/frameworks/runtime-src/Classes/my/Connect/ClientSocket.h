@@ -3,9 +3,18 @@
 #define __CLIENT_SOCKRT_H__
 
 #include "my/Common/Common_Head.h"
-#include "CMessage.h"
+#include "my/Connect/CMessage.h"
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <errno.h>
+#include <fcntl.h>
+#define SA struct sockaddr
+#else
 #include <Winsock2.h>
+#endif 
+
 
 #define CLIENTSOCKET GameJoy::ClientSocket::Instance()
 
@@ -32,9 +41,15 @@ private:
 
 private:
     static ClientSocket* instance;
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    int32_t sockClient;
+    struct sockaddr_in addrSrv;
+#else
     SOCKET sockClient;
     SOCKADDR_IN addrSrv;
 
+#endif
     std::queue<CMessage*> msg_que;
     int32_t msg_len_;
     int32_t recved_len_;
@@ -46,4 +61,3 @@ private:
 NS_GJ_END
 
 #endif // !__CLIENT_SOCKRT_H__
-
