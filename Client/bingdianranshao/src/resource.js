@@ -19,7 +19,7 @@ var res = {
     GM_MainCity_png :     "res/GamePlay/Monster/xingxingmofata/xingxingmofata.png",
     GM_RedBlood_png     : "res/GamePlay/Monster/bloodImage/RedBlood.png",
     GM_BlueBlood_png :    "res/GamePlay/Monster/bloodImage/BlueBlood.png",
-    GM_BackgroundBolld_png : "res/GamePlay/monster/bloodImage/BackgroundBlood.png",
+    GM_BackgroundBolld_png : "res/GamePlay/Monster/bloodImage/BackgroundBlood.png",
 
 
     //monstertouchlayr
@@ -59,7 +59,7 @@ var res = {
 
     //电塔
     GM_PylonIcon_png  :                       "res/GamePlay/Monster/pylon/pylonIcon.png",
-    GM_PylonDefault_png  :                   "res/GamePlay/Monster/pylon/pylonDeafault.png",
+    GM_PylonDefault_png  :                   "res/GamePlay/Monster/pylon/PylonDeafault.png",
     GM_PylonSkillDefault_png :              "res/GamePlay/Monster/pylon/PylonSkillDefault.png",
     GM_Pylon_plist :                          "res/GamePlay/Monster/pylon/pylon.plist",
 

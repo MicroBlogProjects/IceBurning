@@ -53,7 +53,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         }
         var x = l_willPoint.tiled[0].x;
         var y = l_willPoint.tiled[0].y;
-        /*var step = new GameJoy.JS_PBFrameMessage();
+        var step = new GameJoy.JS_PBFrameMessage();
         step.set_uin(GC.UIN);
         step.set_obj_id(target.m_id);
         step.set_pos_x(x);
@@ -61,9 +61,9 @@ var MonsterTouchSprite = cc.Sprite.extend({
         step.set_type(UserOperatorType.Monster);
         var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
         requestInstance.set_step(step);
-        GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);*/
-        var position =target.GetPointOfBuild(target.m_id,cc.p(x,y));
-        monsterManager.addMonsterSprite(target.m_id,position,true);
+        GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
+        //var position =target.GetPointOfBuild(target.m_id,cc.p(x,y));
+        //monsterManager.addMonsterSprite(target.m_id,position,true);
         //cc.log("uin is "+ GC.UIN);
         //cc.log("id is "+target.m_id);
         //cc.log("x is "+x);
