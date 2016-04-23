@@ -1,14 +1,14 @@
 /**
- * Created by JiaChen on 2016/4/19.
+ * Created by jiachen on 2016/4/22.
  */
 
-var PylonConfig = PylonConfig || {};
+var TowersConfig = TowersConfig || {};
 
 
 //属性
-PylonConfig.attribute = {
-    "id" : 103, //id
-    "name" : "电塔",
+TowersConfig.attribute = {
+    "id" : 104, //id
+    "name" : "箭塔",
 
     "walkSpeed" : 0, //移动速度
     "HP" : 100.0, //血量
@@ -18,29 +18,24 @@ PylonConfig.attribute = {
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 2,
 
-    "Icon" :res.GM_PylonIcon_png,
-    "defaultImage" : res.GM_PylonDefault_png
+    "Icon" :res.GM_TowersIcon_png,
+    "defaultImage" : res.GM_TowersDefault_png
 };
 //攻击
-PylonConfig.attack =  {
+TowersConfig.attack =  {
     "begin" : {
-        "time" : 2.7,
-        "account" : 27,
-        "prefix" : "PylonAttackBegin",
-        "animatePlist" : res.GM_Pylon_plist
+        "time" : 2,
+        "account" : 1,
+        "prefix" : "TowersAttackBegin",
+        "animatePlist" : res.GM_Towers_plist
     },
-    "end" : {
-        "time" : 0.6,
-        "account" : 6,
-        "prefix" : "PylonAttackEnd",
-        "animatePlist" : res.GM_Pylon_plist
-    }
+    "end" : null
 };
 
 //死亡
-PylonConfig.death = {
+TowersConfig.death = {
     "begin" : {
-        "time" : 0.7,
+        "time" : 2,
         "account" : 7,
         "prefix" : "xxmftdeath",
         "animatePlist" : res.GM_XxmftDeath_Plist
@@ -49,17 +44,19 @@ PylonConfig.death = {
 };
 
 //行走
-PylonConfig.walking = null;
+TowersConfig.walking = null;
 
-PylonConfig.skill = {
+
+TowersConfig.skill = {
     "attribute" : {
-        "offsetPoint" : cc.p(0,30),
+        "offsetPoint" : cc.p(0,50),
         "isRangeAttack" : false,
         "isArcAnimate" : MonsterAnimateKind.StraightAnimate,
         "attack" : 20, //有技能伤害 则伤害根据技能伤害算
         "time" : 0.2,
         "attackRadius" :1,
-        "defaultImage" : res.GM_PylonSkillDefault_png
+        "defaultImage" : res.GM_TowersSkill_png
     },
     "Animate" : null
-}
+};
+

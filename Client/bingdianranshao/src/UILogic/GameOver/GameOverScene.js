@@ -13,6 +13,14 @@ var GameOverlayer = cc.Scene.extend({
 
             var backButton = ccui.helper.seekWidgetByName(this.gameOverLayerJson,"Back_Button");
             backButton.addClickEventListener(this.backButtonClickEvent);
+            if(GC.ISWIN){
+                var imageView = ccui.helper.seekWidgetByName(this.gameOverLayerJson,"win_imageview");
+                imageView.setVisible(true);
+            }
+            else{
+                var imageView = ccui.helper.seekWidgetByName(this.gameOverLayerJson,"lose_imageview");
+                imageView.setVisible(true);
+            }
 
         },
 
@@ -21,11 +29,6 @@ var GameOverlayer = cc.Scene.extend({
         }
     }
 );
-
-
-
-
-
 
 var GameOverScene = cc.Scene.extend({
     gameOverlayer : null,

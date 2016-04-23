@@ -18,7 +18,7 @@ XingxingmofataConfig.attribute = {
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 2,
 
-    "Icon" :res.GM_XxmftIcon_Png,
+    "Icon" : res.GM_XxmftIcon_Png,
     "defaultImage" : res.GM_Xxmft_Png
 };
 //攻击
@@ -53,14 +53,17 @@ XingxingmofataConfig.death = {
 XingxingmofataConfig.walking = null;
 
 //技能
-/*XingxingmofataConfig.skill = {
+XingxingmofataConfig.skill = {
     "attribute" : {
+        "offsetPoint" : cc.p(0,0),
+        "isRangeAttack" : true,
+        "isArcAnimate" : MonsterAnimateKind.pointAnimate,
         "attack" : 20,
         "walkingSpeed" : 0,
-        "attackRadius" : 5,
+        "attackRadius" : 4,
         "defaultImage" : res.GM_XxmftSkill_Png
     },
-    "attack" :{
+    "Animate" :{
         "begin" :{
             "time" : 0.5,
             "account" : 6,
@@ -69,8 +72,8 @@ XingxingmofataConfig.walking = null;
         },
         "end" : null
     }
-};*/
-XingxingmofataConfig.skill = {
+};
+/*XingxingmofataConfig.skill = {
     "attribute" : {
         "offsetPoint" : cc.p(0,0),
         "isRangeAttack" : false,
@@ -81,4 +84,4 @@ XingxingmofataConfig.skill = {
         "defaultImage" : res.GM_XxmftSkillArrow_png
     },
     "Animate" : null
-}
+}*/

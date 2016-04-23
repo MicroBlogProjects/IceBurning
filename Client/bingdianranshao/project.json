@@ -26,7 +26,9 @@
 
 
         "src/UIlogic/Config/battleLayerConfig/battleLayerConfig.js",
+        "src/UILogic/Config/MonsterConfig/TowersConfig.js",
 
+        "src/UIlogic/Config/MonsterConfig/MainCityConfig.js",
         "src/UIlogic/Config/MonsterConfig/xingxingmofata.js",
         "src/UIlogic/Config/MonsterConfig/TurretConfig.js",
         "src/UIlogic/Config/MonsterConfig/KnightConfig.js",

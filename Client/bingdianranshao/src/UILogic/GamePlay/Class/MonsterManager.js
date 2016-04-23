@@ -127,6 +127,25 @@ var MonsterManager = cc.Class.extend({
 
     walk : function(monster)
     {
+        if(monster.m_id>200){
+            if(monster.m_HP <=0){
+                var step = new GameJoy.JS_PBFrameMessage();
+                step.set_uin(GC.UIN);
+                if(monster.m_isMyMonster){
+                    step.set_obj_id(0);
+                }
+                else {
+                    step.set_obj_id(1);
+                }
+                step.set_pos_x(0);
+                step.set_pos_y(0);
+                step.set_type(UserOperatorType.Settlement);
+                var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
+                requestInstance.set_step(step);
+                GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
+            }
+            return ;
+        }
         if(monster.m_HP <= 0)
         {
             monster.m_nextState = MonsterState.Death;

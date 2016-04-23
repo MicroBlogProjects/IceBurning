@@ -56,7 +56,7 @@ TurretConfig.skill = {
     "attribute" : {
         "offsetPoint" : cc.p(0,30),
         "isRangeAttack" : true, //是否是范围伤害
-        "isArcAnimate" : true, // 是否是弧线动画
+        "isArcAnimate" : MonsterAnimateKind.ArcAnimate,
         "attack" : 20,
         "walkingSpeed" : 0,
         "attackRadius" : 4,

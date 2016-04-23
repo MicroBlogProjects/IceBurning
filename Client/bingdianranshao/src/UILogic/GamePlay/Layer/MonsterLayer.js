@@ -16,21 +16,29 @@ var MonsterLayer = cc.Layer.extend({
     },
 
 
-    addMainCitySprite : function(){
-        var myMainCityPosition;
-        var enemyMainCityPosition;
-        if(GC.IS_HOST){
-            myMainCityPosition = cc.p(200,GC.h_2);
-            enemyMainCityPosition = cc.p(GC.w*2 - 200,GC.h_2);
-            /*this.addMainCitySprite(config,cc.p(200,GC.h_2),true);
-            this.addMainCitySprite(config,cc.p(GC.w*2 - 200,GC.h_2),false);*/
-        }
-        else{
-            myMainCityPosition = cc.p(GC.w*2 - 200,GC.h_2);
-            enemyMainCityPosition = cc.p(200,GC.h_2);
+    addMainCitySprite : function() {
 
+        var leftPoint = {};
+        leftPoint.tiled = [];
+        leftPoint.tiled.push(cc.p(2, 14));
+        leftPoint.point = monsterBackGroundLayer.GetPositionOfTiled(leftPoint.tiled[0]);
+        //monsterManager.addMonsterSprite(201,leftPoint,false);
+
+        var rightPoint = {};
+        rightPoint.tiled = [];
+        rightPoint.tiled.push(cc.p(28,14));
+        rightPoint.point = monsterBackGroundLayer.GetPositionOfTiled(rightPoint.tiled[0]);
+        //monsterManager.addMonsterSprite(201,rightPoint,true);
+        if(GC.IS_HOST){
+            monsterManager.addMonsterSprite(201,leftPoint,true);
+            monsterManager.addMonsterSprite(201,rightPoint,false);
         }
-    },
+        else {
+            monsterManager.addMonsterSprite(201,rightPoint,true);
+            monsterManager.addMonsterSprite(201,leftPoint,false);
+        }
+    }
+    ,
     updateEvent : function(){
         monsterManager.updateMonsterData();
     },
@@ -46,8 +54,17 @@ var MonsterLayer = cc.Layer.extend({
 
     //技能效果
     skillAnimate :function(skillConfig,myMonster,elemyMonster){
-        cc.log("skillAnimate");
-        var rangedAttackSprite = new RangedAttackSprite(skillConfig,myMonster.getPosition(),elemyMonster);
+        //cc.log("skillAnimate");
+        var position;
+        if(skillConfig.attribute.isArcAnimate == MonsterAnimateKind.pointAnimate){
+            cc.log("position animate");
+            position = elemyMonster.getPosition();
+        }
+        else {
+            position = myMonster.getPosition()
+        }
+        cc.log("point animate position x is "+ position.x + "y is " + position.y);
+        var rangedAttackSprite = new RangedAttackSprite(skillConfig,position,elemyMonster);
         rangedAttackSprite.startAnimate();
         this.addChild(rangedAttackSprite,0);
     },

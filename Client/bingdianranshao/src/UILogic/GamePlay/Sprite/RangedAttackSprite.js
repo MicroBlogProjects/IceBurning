@@ -54,12 +54,27 @@ var RangedAttackSprite = cc.Sprite.extend({
     },
 
     startAnimate : function(){
-        if(this.m_isArcAnimate){
+        cc.log("start animate");
+        if(this.m_isArcAnimate == MonsterAnimateKind.ArcAnimate){
             this.startArcAnimate();
         }
-        else {
+        else if(this.m_isArcAnimate == MonsterAnimateKind.StraightAnimate){
             this.startStraightAnimate();
         }
+        else {
+            cc.log("start straight animate");
+            this.startPointAnimate();
+        }
+    },
+
+    startPointAnimate : function(){
+        if(this.m_enemyMonster.m_activity == false){
+            this.removeFromParent();
+            return;
+        }
+        var des_point = this.m_enemyMonster.getPosition();
+        var runAnimate = this.getRunanimate(this.m_runAnimate.begin);
+        this.runAction(cc.sequence(runAnimate,cc.callFunc(this.animateCallFunc,this,null)));
     },
 
     startStraightAnimate : function(){

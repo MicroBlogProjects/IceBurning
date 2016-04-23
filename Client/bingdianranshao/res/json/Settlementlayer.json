@@ -61,14 +61,14 @@
           },
           {
             "FileData": {
-              "Type": "Default",
-              "Path": "Default/ImageFile.png",
+              "Type": "Normal",
+              "Path": "settlement/lose.png",
               "Plist": ""
             },
             "Scale9OriginX": 152,
             "Scale9OriginY": 99,
-            "Scale9Width": 158,
-            "Scale9Height": 105,
+            "Scale9Width": 94,
+            "Scale9Height": 53,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -88,18 +88,18 @@
               "Y": 0.5332
             },
             "PreSize": {
-              "X": 0.4812,
-              "Y": 0.4734
+              "X": 0.4146,
+              "Y": 0.3922
             },
-            "LeftMargin": 270.7869,
-            "RightMargin": 227.2131,
-            "TopMargin": 147.2271,
-            "BottomMargin": 189.7729,
+            "LeftMargin": 302.7869,
+            "RightMargin": 259.2131,
+            "TopMargin": 173.2271,
+            "BottomMargin": 215.7729,
             "Tag": 263,
             "ActionTag": 662620321,
             "Size": {
-              "X": 462.0,
-              "Y": 303.0
+              "X": 398.0,
+              "Y": 251.0
             },
             "VisibleForFrame": false,
             "Name": "lose_imageview",
@@ -107,14 +107,14 @@
           },
           {
             "FileData": {
-              "Type": "Default",
-              "Path": "Default/ImageFile.png",
+              "Type": "Normal",
+              "Path": "settlement/win.png",
               "Plist": ""
             },
             "Scale9OriginX": 131,
             "Scale9OriginY": 82,
-            "Scale9Width": 136,
-            "Scale9Height": 87,
+            "Scale9Width": 200,
+            "Scale9Height": 139,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -134,21 +134,21 @@
               "Y": 0.5287
             },
             "PreSize": {
-              "X": 0.4146,
-              "Y": 0.3922
+              "X": 0.4812,
+              "Y": 0.4734
             },
-            "LeftMargin": 295.5566,
-            "RightMargin": 266.4434,
-            "TopMargin": 176.119,
-            "BottomMargin": 212.881,
+            "LeftMargin": 263.5566,
+            "RightMargin": 234.4434,
+            "TopMargin": 150.119,
+            "BottomMargin": 186.881,
             "Tag": 264,
             "ActionTag": -223647750,
             "Size": {
-              "X": 398.0,
-              "Y": 251.0
+              "X": 462.0,
+              "Y": 303.0
             },
             "VisibleForFrame": false,
-            "Name": "lose_imageview",
+            "Name": "win_imageview",
             "ctype": "ImageViewObjectData"
           },
           {
@@ -237,9 +237,10 @@
       "UsedResources": [
         "Default/Button_Disable.png",
         "Default/Button_Press.png",
-        "Default/ImageFile.png",
         "settlement/BackButton.png",
-        "settlement/board.png"
+        "settlement/board.png",
+        "settlement/lose.png",
+        "settlement/win.png"
       ],
       "ctype": "GameFileData"
     }

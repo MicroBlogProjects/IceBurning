@@ -18,6 +18,7 @@ GC.SOUND_ON = true;
 
 GC.IS_HOST = false; //true 表示主场也是左边这个阵营， false表示客场也是右边这个阵营
 GC.UIN = -1;
+GC.ISWIN = false;
 GC.NUM_MONSTER_BLOCK = 2;
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
@@ -26,8 +27,9 @@ var LAYER_PRIORITY_TOUCH = 100;                                //点击层优先
 //向左走为-1 向右走位1 死亡 0 向左攻击为 -2 向右攻击为 2
 
 var UserOperatorType = {
-    "Monster" : 1
-}
+    "Monster" : 1,
+    "Settlement" : 2
+};
 
 //当前怪物的动画状态
 var MonsterState ={
@@ -46,3 +48,10 @@ var MonsterType ={
 var MAXMonsterAccount = 5;
 var MonsterIDList = [];
 var BuildingIDlist = [];
+
+//远程攻击动画种类
+var MonsterAnimateKind = {
+    "StraightAnimate" : 1,
+    "ArcAnimate" : 2,
+    "pointAnimate" : 3
+};
