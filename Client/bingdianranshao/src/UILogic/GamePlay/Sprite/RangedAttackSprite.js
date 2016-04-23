@@ -54,7 +54,7 @@ var RangedAttackSprite = cc.Sprite.extend({
     },
 
     startAnimate : function(){
-        cc.log("start animate");
+        //cc.log("start animate");
         if(this.m_isArcAnimate == MonsterAnimateKind.ArcAnimate){
             this.startArcAnimate();
         }
@@ -62,7 +62,7 @@ var RangedAttackSprite = cc.Sprite.extend({
             this.startStraightAnimate();
         }
         else {
-            cc.log("start straight animate");
+            //cc.log("start straight animate");
             this.startPointAnimate();
         }
     },
@@ -137,10 +137,14 @@ var RangedAttackSprite = cc.Sprite.extend({
 
 
     startArcAnimate : function(){
+        //cc.log("startArcAnimate 1");
         if(this.m_enemyMonster.m_activity == false){
+            cc.log("removeFrom parent");
+            this.stopAllActions()
             this.removeFromParent();
             return;
         }
+        //cc.log("startArcAnimate 2");
         var point = this.m_enemyMonster.getPosition();
         this.schedule(this.setSlope,0);
         var bezierToAnimate = this.getBezierAnimate(point);
@@ -148,6 +152,7 @@ var RangedAttackSprite = cc.Sprite.extend({
             this.runAction(cc.sequence(bezierToAnimate,cc.callFunc(this.animateCallFunc,this,null)));
         }
         else {
+            //cc.log("startArcAnimate 3");
             var argu = {
                 "end" : this.m_runAnimate.end,
                 "effect" : this.m_runAnimate.effect
@@ -208,13 +213,16 @@ var RangedAttackSprite = cc.Sprite.extend({
     },
 
     animateCallFunc : function(sender,argu){
+        //cc.log("animate call func1");
         if(argu == null || argu == undefined){
             sender.calculationsDamage();
             sender.removeFromParent();
+            //cc.log("removeFrom parent");
             return;
         }
+        //cc.log("animate call func2");
         if(argu.effect == null || argu.effect == undefined){
-            cc.log("callfunc3");
+            //cc.log("callfunc3");
             //sender.calculationsDamage();
         }
         else {
@@ -224,15 +232,20 @@ var RangedAttackSprite = cc.Sprite.extend({
         if(argu.end == null || argu.end == undefined){
             sender.calculationsDamage();
             sender.removeFromParent();
+            //cc.log("removeFrom parent");
+            //cc.log("animate call func4");
         }
         else {
+            //cc.log("animate call func5");
             var action = this.getRunanimate(argu.end);
             this.runAction(cc.sequence(action,cc.callFunc(this.animateEndCallFunc,this)));
         }
     },
 
     animateEndCallFunc : function(sender){
+        //cc.log("animate call func6");
         sender.removeFromParent();
+        //cc.log("removeFrom parent");
     },
 
     calculationsDamage : function(){
