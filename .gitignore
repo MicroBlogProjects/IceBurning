@@ -9,4 +9,9 @@ Common/protobuf-2.5.0/gtest*
 *bingdianranshao.sdf*
 Client/bingdianranshao/frameworks/runtime-src/proj.win32/bingdianranshao.VC.opend*
 *userconf.ini*
-Client\bingdianranshao\.idea\workspace*
+Client/bingdianranshao/.idea/workspace*
+Client/bingdianranshao/frameworks/runtime-src/proj.android/assets*
+Client/bingdianranshao/frameworks/runtime-src/proj.android/bin*
+Client/bingdianranshao/frameworks/runtime-src/proj.android/gen*
+Client/bingdianranshao/frameworks/runtime-src/proj.android/libs*
+Client/bingdianranshao/frameworks/runtime-src/proj.android/obj*
