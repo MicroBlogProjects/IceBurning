@@ -91,7 +91,7 @@ var MMBackgroundLayer = cc.Layer.extend({
     },
     receiveMessageLogin: function ()
     {
-        this.unschedule(this.receiveMessage());
+        this.unschedule(this.receiveMessage);
         g_this.parent.addTouchLayer();
         this.removeFromParent();
     }
