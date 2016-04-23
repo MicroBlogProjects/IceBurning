@@ -42,7 +42,7 @@ var MonsterManager = cc.Class.extend({
     //用户添加Monster模块
     addMonsterSprite : function(id, point, isMyMonster)
     {
-        var config = MonsterConfig[id];
+        var config = MonsterConfig[""+id];
         var mosterSprite;
         mosterSprite = new MonsterSprite(config,isMyMonster);
         mosterSprite.setMyPosition(point);

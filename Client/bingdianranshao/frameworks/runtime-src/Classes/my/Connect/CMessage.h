@@ -4,6 +4,10 @@
 
 #include "my/Common/Common_Head.h"
 #include "google/protobuf/message.h"
+#include <fcntl.h>
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#include <arpa/inet.h>
+#endif
 
 NS_GJ_BEGIN
 

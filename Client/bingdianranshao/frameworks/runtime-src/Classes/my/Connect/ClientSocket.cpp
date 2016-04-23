@@ -24,54 +24,72 @@ int32_t ClientSocket::Initialize()
 
 int32_t ClientSocket::Connect(std::string ip, int32_t port)
 {
-    // º”‘ÿsocket∂ØÃ¨¡¥Ω”ø‚(dll)  
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    if ((sockClient = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    {
+        CCLOG("socket error.");
+        return error;
+    }
+
+    bzero(&addrSrv, sizeof(addrSrv));
+    addrSrv.sin_family = AF_INET;
+    addrSrv.sin_port = htons(port);
+    inet_pton(AF_INET, ip.c_str(), &addrSrv.sin_addr);
+
+    if (connect(sockClient, (SA *)&addrSrv, sizeof(addrSrv)) < 0)
+    {
+        CCLOG("maybe connect to server failed with ip(%s) port(%d)", ip.c_str(), port);
+        return error;
+    }
+#else
+    // Âä†ËΩΩsocketÂä®ÊÄÅÈìæÊé•Â∫ì(dll)  
     WORD wVersionRequested;
-    WSADATA wsaData;    // ’‚Ω·ππ «”√”⁄Ω” ’Wjndows SocketµƒΩ·ππ–≈œ¢µƒ  
+    WSADATA wsaData;    // ËøôÁªìÊûÑÊòØÁî®‰∫éÊé•Êî∂Wjndows SocketÁöÑÁªìÊûÑ‰ø°ÊÅØÁöÑ  
     int err;
 
-    wVersionRequested = MAKEWORD(1, 1);   // «Î«Û1.1∞Ê±æµƒWinSockø‚  
+    wVersionRequested = MAKEWORD(1, 1);   // ËØ∑Ê±Ç1.1ÁâàÊú¨ÁöÑWinSockÂ∫ì  
 
     err = WSAStartup(wVersionRequested, &wsaData);
     if (err != 0) {
-        console_msg("Initialize in ClientSocket failed.");
-        return fail;          // ∑µªÿ÷µŒ™¡„µƒ ±∫Ú «±Ì æ≥…π¶…Í«ÎWSAStartup  
+        CCLOG("Initialize in ClientSocket failed.");
+        return fail;          // ËøîÂõûÂÄº‰∏∫Èõ∂ÁöÑÊó∂ÂÄôÊòØË°®Á§∫ÊàêÂäüÁî≥ËØ∑WSAStartup  
     }
 
     if (LOBYTE(wsaData.wVersion) != 1 || HIBYTE(wsaData.wVersion) != 1) {
-        // ºÏ≤È’‚∏ˆµÕ◊÷Ω⁄ «≤ª «1£¨∏ﬂ◊÷Ω⁄ «≤ª «1“‘»∑∂® «∑ÒŒ“√«À˘«Î«Ûµƒ1.1∞Ê±æ  
-        // ∑Ò‘Úµƒª∞£¨µ˜”√WSACleanup()«Â≥˝–≈œ¢£¨Ω· ¯∫Ø ˝  
+        // Ê£ÄÊü•Ëøô‰∏™‰ΩéÂ≠óËäÇÊòØ‰∏çÊòØ1ÔºåÈ´òÂ≠óËäÇÊòØ‰∏çÊòØ1‰ª•Á°ÆÂÆöÊòØÂê¶Êàë‰ª¨ÊâÄËØ∑Ê±ÇÁöÑ1.1ÁâàÊú¨  
+        // Âê¶ÂàôÁöÑËØùÔºåË∞ÉÁî®WSACleanup()Ê∏ÖÈô§‰ø°ÊÅØÔºåÁªìÊùüÂáΩÊï∞  
         WSACleanup();
         return fail;
     }
 
-    // ¥¥Ω®socket≤Ÿ◊˜£¨Ω®¡¢¡˜ ΩÃ◊Ω”◊÷£¨∑µªÿÃ◊Ω”◊÷∫≈sockClient  
+    // ÂàõÂª∫socketÊìç‰ΩúÔºåÂª∫Á´ãÊµÅÂºèÂ•óÊé•Â≠óÔºåËøîÂõûÂ•óÊé•Â≠óÂè∑sockClient  
     // SOCKET socket(int af, int type, int protocol);  
-    // µ⁄“ª∏ˆ≤Œ ˝£¨÷∏∂®µÿ÷∑¥ÿ(TCP/IP÷ªƒ‹ «AF_INET£¨“≤ø…–¥≥…PF_INET)  
-    // µ⁄∂˛∏ˆ£¨—°‘ÒÃ◊Ω”◊÷µƒ¿‡–Õ(¡˜ ΩÃ◊Ω”◊÷)£¨µ⁄»˝∏ˆ£¨Ãÿ∂®µÿ÷∑º“◊Âœ‡πÿ–≠“È£®0Œ™◊‘∂Ø£©  
+    // Á¨¨‰∏Ä‰∏™ÂèÇÊï∞ÔºåÊåáÂÆöÂú∞ÂùÄÁ∞á(TCP/IPÂè™ËÉΩÊòØAF_INETÔºå‰πüÂèØÂÜôÊàêPF_INET)  
+    // Á¨¨‰∫å‰∏™ÔºåÈÄâÊã©Â•óÊé•Â≠óÁöÑÁ±ªÂûã(ÊµÅÂºèÂ•óÊé•Â≠ó)ÔºåÁ¨¨‰∏â‰∏™ÔºåÁâπÂÆöÂú∞ÂùÄÂÆ∂ÊóèÁõ∏ÂÖ≥ÂçèËÆÆÔºà0‰∏∫Ëá™Âä®Ôºâ  
     sockClient = socket(AF_INET, SOCK_STREAM, 0);
     if (sockClient < 0)
     {
-        console_msg("socket error.");
+        CCLOG("socket error.");
         return fail;
     }
 
-    // Ω´Ã◊Ω”◊÷sockClient”Î‘∂≥Ã÷˜ª˙œ‡¡¨  
+    // Â∞ÜÂ•óÊé•Â≠ósockClient‰∏éËøúÁ®ã‰∏ªÊú∫Áõ∏Ëøû  
     // int connect( SOCKET s,  const struct sockaddr* name,  int namelen);  
-    // µ⁄“ª∏ˆ≤Œ ˝£∫–Ë“™Ω¯––¡¨Ω”≤Ÿ◊˜µƒÃ◊Ω”◊÷  
-    // µ⁄∂˛∏ˆ≤Œ ˝£∫…Ë∂®À˘–Ë“™¡¨Ω”µƒµÿ÷∑–≈œ¢  
-    // µ⁄»˝∏ˆ≤Œ ˝£∫µÿ÷∑µƒ≥§∂»  
-    addrSrv.sin_addr.S_un.S_addr = inet_addr(ip.c_str());      // ±æµÿªÿ¬∑µÿ÷∑ «127.0.0.1;   
+    // Á¨¨‰∏Ä‰∏™ÂèÇÊï∞ÔºöÈúÄË¶ÅËøõË°åËøûÊé•Êìç‰ΩúÁöÑÂ•óÊé•Â≠ó  
+    // Á¨¨‰∫å‰∏™ÂèÇÊï∞ÔºöËÆæÂÆöÊâÄÈúÄË¶ÅËøûÊé•ÁöÑÂú∞ÂùÄ‰ø°ÊÅØ  
+    // Á¨¨‰∏â‰∏™ÂèÇÊï∞ÔºöÂú∞ÂùÄÁöÑÈïøÂ∫¶  
+    addrSrv.sin_addr.S_un.S_addr = inet_addr(ip.c_str());      // Êú¨Âú∞ÂõûË∑ØÂú∞ÂùÄÊòØ127.0.0.1;   
     addrSrv.sin_family = AF_INET;
     addrSrv.sin_port = htons(port);
     if (0 > connect(sockClient, (SOCKADDR*)&addrSrv, sizeof(SOCKADDR)))
     {
-        console_msg("maybe connect to server failed with ip(%s) port(%d)", ip.c_str(), port);
+        CCLOG("maybe connect to server failed with ip(%s) port(%d)", ip.c_str(), port);
         return fail;
     }
-    // …Ë÷√∑«◊Ë»˚
+#endif
+    // ËÆæÁΩÆÈùûÈòªÂ°û
     MakeSockNonBlock(sockClient);
 
-    console_msg("connect success.");
     return success;
 }
 
@@ -83,23 +101,31 @@ int32_t ClientSocket::SendDataToServer(const CMessage& message)
 
     if (success != message.Encode(data, len))
     {
-        console_msg("encode msg error when send data to server");
+        CCLOG("encode msg error when send data to server");
         return fail;
     }
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    if (write(sockClient, data, len) < 0)
+    {
+        CCLOG("maybe send msg fail.");
+        return fail;
+    }
+#else
     if (len != send(sockClient, data, len, 0))
     {
-        console_msg("maybe send msg fail.");
+        CCLOG("maybe send msg fail.");
         return fail;
     }
 
+#endif
     return success;
 }
 
 int32_t ClientSocket::RecvOneDataFromServer(CMessage*& message)
 {
-    // œ»¥”Õ¯¬Á¿≠»°“ª±Èœ˚œ¢
+    // ÂÖà‰ªéÁΩëÁªúÊãâÂèñ‰∏ÄÈÅçÊ∂àÊÅØ
     RecvMsgsFromServer();
-    // ‘⁄≈–∂œ∂”¡–¿Ô”–√ª”–œ˚œ¢
+    // ÂÜçÂà§Êñ≠ÈòüÂàóÈáåÊúâÊ≤°ÊúâÊ∂àÊÅØ
     if (!msg_que.empty())
     {
         message = msg_que.front();
@@ -120,12 +146,12 @@ int32_t ClientSocket::RecvMsgsFromServer()
     delete msg;
     if (ret == quit)
     {
-        console_msg("Maybe ConnServer disconnected.");
+        CCLOG("Maybe ConnServer disconnected.");
         return quit;
     }
     else if (ret == error)
     {
-        console_msg("ReadMessage Error");
+        CCLOG("ReadMessage Error");
         return fail;
     }
     return fail;
@@ -139,21 +165,34 @@ int32_t ClientSocket::RecvOneMessageFromServer(CMessage* message)
     {
         if (recved_MsgLen_len_ < sz_int)
         {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+            recv_byte = read(sockClient, &buf_[pTail_], sz_int - recved_MsgLen_len_);
+#else
             recv_byte = recv(sockClient, &buf_[pTail_], sz_int - recved_MsgLen_len_, 0);
+#endif
             if (recv_byte == 0)
             {
-                console_msg("Maybe logic server disconnected with connect server");
+                CCLOG("Maybe logic server disconnected with connect server");
                 return quit;
             }
             else if (recv_byte < 0)
             {
-                int32_t err = WSAGetLastError();
-                if (err != WSAEWOULDBLOCK)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+                if (errno != EAGAIN)
                 {
-                    console_msg("read data error.");
+                    CCLOG("read data error.");
                     return error;
                 }
                 return fail;
+#else
+                int32_t err = WSAGetLastError();
+                if (err != WSAEWOULDBLOCK)
+                {
+                    CCLOG("read data error.");
+                    return error;
+                }
+                return fail;
+#endif
             }
             pTail_ = (pTail_ + recv_byte) % MAX_CSMESSAGE_SIZE;
 
@@ -169,20 +208,33 @@ int32_t ClientSocket::RecvOneMessageFromServer(CMessage* message)
 
         int32_t read_limit = (pTail_ >= pHead_) ? (MAX_CSMESSAGE_SIZE - pTail_) : (pHead_ - pTail_);
         read_limit = std::min(read_limit, msg_len_ - recved_len_);
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        recv_byte = read(sockClient, &buf_[pTail_], read_limit);
+#else
         recv_byte = recv(sockClient, &buf_[pTail_], read_limit, 0);
+#endif
         if (recv_byte == 0)
         {
             return quit;
         }
         else if (recv_byte < 0)
         {
-            int32_t err = WSAGetLastError();
-            if (err != WSAEWOULDBLOCK)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+            if (errno != EAGAIN)
             {
-                console_msg("read data error.");
+                CCLOG("read data error.");
                 return error;
             }
             return fail;
+#else
+            int32_t err = WSAGetLastError();
+            if (err != WSAEWOULDBLOCK)
+            {
+                CCLOG("read data error.");
+                return error;
+            }
+            return fail;
+#endif
         }
 
         recved_len_ += recv_byte;
@@ -193,7 +245,7 @@ int32_t ClientSocket::RecvOneMessageFromServer(CMessage* message)
         {
             if (error == FillMessage(message))
             {
-                console_msg("copy data error.");
+                CCLOG("copy data error.");
                 return error;
             }
             msg_len_ = recved_len_ = 0;
@@ -228,17 +280,32 @@ int32_t ClientSocket::ParseToInt(const char* str, int32_t pBegin, int32_t pEnd)
     int32_t ret = 0;
     for (int32_t i = pBegin; i != pEnd; i = (i + 1) % MAX_CSMESSAGE_SIZE)
     {
-        ret = (ret << 8) | (str[i] & 0x000000ff);
+        ret = (ret << 8) | (unsigned char)(str[i] & 0x000000ff);
     }
     return ntohl(ret);
 }
 
 int32_t ClientSocket::MakeSockNonBlock(int32_t fd)
 {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    int32_t flags, s;
+    flags = fcntl(fd, F_GETFL, 0);
+    if (flags == -1)
+    {
+        return -1;
+    }
+    flags |= O_NONBLOCK;
+    s = fcntl(fd, F_SETFL, flags);
+    if (s == -1)
+    {
+        return -1;
+    }
+    return success;
+#else
     int32_t iMode = 1;
     ioctlsocket(fd, FIONBIO, (u_long FAR*)&iMode);
     return success;
+#endif
 }
 
 NS_GJ_END
-

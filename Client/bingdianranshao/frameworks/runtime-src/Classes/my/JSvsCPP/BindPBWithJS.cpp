@@ -1,7 +1,7 @@
 
-#include "BindPBWithJS.h"
+#include "my/JSvsCPP/BindPBWithJS.h"
 #include "Message_i.h"
-#include "MessageProxy.h"
+#include "my/JSvsCPP/MessageProxy.h"
 #include "my/Common/Common_Tools.h"
 
 #define ParseBegin(PB) \
@@ -135,7 +135,6 @@ int ParsePBResponseToJS_CSFrameSync(::google::protobuf::Message* pb, GameJoy::JS
         js_step->obj_id = DecodeInt32(str);
         js_step->pos_x  = DecodeInt32(str);
         js_step->pos_y  = DecodeInt32(str);
-		CCLOG("c++: back uin(%d) type(%d) obj_id(%d) pos_x(%d) pos_y(%d)", js_step->uin,js_step->type, js_step->obj_id, js_step->pos_x, js_step->pos_y);
 
         js_steps.pushBack(js_step);
     }
@@ -156,7 +155,6 @@ int ParseJSToPBRequest_CSFrameSync(GameJoy::JS_CPP_Bridge* js, ::google::protobu
 	len += EncodeInt32(str, js_step->obj_id);
 	len += EncodeInt32(str, js_step->pos_x);
 	len += EncodeInt32(str, js_step->pos_y);
-	CCLOG("c++: out uin(%d) type(%d) obj_id(%d) pos_x(%d) pos_y(%d)", js_step->uin, js_step->type, js_step->obj_id, js_step->pos_x, js_step->pos_y);
 	std::string s(buf, len);
     pb_step->set_operation(s);
     ParseEnd
@@ -183,7 +181,7 @@ int BindTool::ParsePBToJS(int msgID, ::google::protobuf::Message* pb, JS_CPP_Bri
 {
     if (msgID_to_PBParser.find(msgID) == msgID_to_PBParser.end())
     {
-        console_msg("can not find PBPaser with msgID(%d)", msgID);
+        CCLOG("can not find PBPaser with msgID(%d)", msgID);
         return fail;
     }
     msgID_to_PBParser[msgID](pb, js);
@@ -194,7 +192,7 @@ int BindTool::ParseJSToPB(int msgID, JS_CPP_Bridge* js, ::google::protobuf::Mess
 {
     if (msgID_to_JSParser.find(msgID) == msgID_to_JSParser.end())
     {
-        console_msg("can not find jsparser with msgID(%d)", msgID);
+        CCLOG("can not find jsparser with msgID(%d)", msgID);
         return fail;
     }
     msgID_to_JSParser[msgID](js, pb);
@@ -205,7 +203,7 @@ void BindTool::BindMsgIDWithPBParser(int msgID, int(*func)(::google::protobuf::M
 {
     if (msgID_to_PBParser.find(msgID) != msgID_to_PBParser.end())
     {
-        console_msg("Bind msgID with PBParser error, msgID(%d) already Bind.", msgID);
+        CCLOG("Bind msgID with PBParser error, msgID(%d) already Bind.", msgID);
         return;
     }
     msgID_to_PBParser[msgID] = func;
@@ -215,7 +213,7 @@ void BindTool::BindMsgIDWithJSParser(int msgID, int(*func)(JS_CPP_Bridge*, ::goo
 {
     if (msgID_to_JSParser.find(msgID) != msgID_to_JSParser.end())
     {
-        console_msg("Bind msgID with JSParser error, msgID(%d) already Bind.", msgID);
+        CCLOG("Bind msgID with JSParser error, msgID(%d) already Bind.", msgID);
         return;
     }
     msgID_to_JSParser[msgID] = func;

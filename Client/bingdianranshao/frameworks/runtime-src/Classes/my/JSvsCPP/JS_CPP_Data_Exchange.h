@@ -3,7 +3,7 @@
 
 #include <map>
 #include "cocos2d.h"
-#include "MessageProxy.h"
+#include "my/JSvsCPP/MessageProxy.h"
 using namespace std;
 #define NS_GJ_BEGIN     namespace GameJoy {
 #define NS_GJ_END       }

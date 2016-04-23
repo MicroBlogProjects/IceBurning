@@ -2,7 +2,7 @@
 #ifndef __COMMON_TOOLS_H__
 #define __COMMON_TOOLS_H__
 
-#include "Common_Head.h"
+#include "my/Common/Common_Head.h"
 
 int EncodeInt32(char*& str, int32_t value);
 int32_t DecodeInt32(char*& str);
