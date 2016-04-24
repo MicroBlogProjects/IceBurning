@@ -117,6 +117,12 @@ var res = {
     GM_Wizard_plist :                               "res/GamePlay/Monster/Wizard/Wizard.plist",
     GM_WizardSkill_png :                             "res/GamePlay/Monster/Wizard/WizardSkillDefault.png",
 
+    //防守塔
+    GM_DefensiveTowersIcon_png :                 "res/GamePlay/Monster/DefensiveTowers/DefensiveTowersIcon.png",
+    GM_DefensiveTowersDefault_png :              "res/GamePlay/Monster/DefensiveTowers/DefensiveTowersDefault.png",
+    GM_DefensiveTowers_plist :                    "res/GamePlay/Monster/DefensiveTowers/DefensiveTowers.plist",
+
+
     //狼
     GM_WolfIcon_png :                                "res/GamePlay/Monster/Wolf/WolfIcon.png",
     GM_WolfDefault_png :                              "res/GamePlay/Monster/Wolf/WolfDefault.png",

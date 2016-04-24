@@ -19,6 +19,7 @@ var MonsterConfig = MonsterConfig = {
     "102" : TurretConfig,
     "103" : PylonConfig,
     "104" : TowersConfig,
+    "105" : DefensiveTowersConfig,
 
     "201" : MainCityConfig
 };

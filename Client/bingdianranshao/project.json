@@ -43,6 +43,7 @@
         "src/UILogic/Config/MonsterConfig/WizardConfig.js",
         "src/UILogic/Config/MonsterConfig/WolfConfig.js",
         "src/UILogic/Config/MonsterConfig/SiegeConfig.js",
+        "src/UILogic/Config/MonsterConfig/DefensiveTowersConfig.js",
         "src/UILogic/Config/MonsterConfig/MonsterConfig.js",
 
         "src/UILogic/Config/MonsterConfig/HeroSkillConfig.js",
