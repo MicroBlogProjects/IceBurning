@@ -18,6 +18,7 @@
         "src/Config/NetConfig.js",
         "src/UILogic/Config/battleLayerConfig/battleLayerConfig.js",
 
+        "src/UILogic/LogicScene/LogicScene.js",
         "src/UILogic/MainMenu/Scene/MainMenuScene.js",
         "src/UILogic/MainMenu/Layer/MMBackgroundLayer.js",
         "src/UILogic/MainMenu/Layer/WaitTeam.js",
