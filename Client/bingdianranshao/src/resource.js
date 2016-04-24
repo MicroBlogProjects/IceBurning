@@ -95,6 +95,11 @@ var res = {
     GM_AxeSoldiersDefault_png :              "res/GamePlay/Monster/AxeSoldiers/AxeSoldiersDefault.png",
     GM_AxeSoldiers_plist    :                  "res/GamePlay/Monster/AxeSoldiers/AxeSoldiers.plist",
 
+    //攻城兵
+    GM_SiegeIcon_png :                         "res/GamePlay/Monster/Siege/SiegeIcon.png",
+    GM_SiegeDefault_png :                      "res/GamePlay/Monster/Siege/SiegeDefault.png",
+    GM_Siege_plist :                             "res/GamePlay/Monster/Siege/Siege.plist",
+
     //弓箭手
     GM_ArcherIcon_png :                           "res/GamePlay/Monster/Archer/ArcherIcon.png",
     GM_ArcherDefault_png :                        "res/GamePlay/Monster/Archer/ArcherDefault.png",
