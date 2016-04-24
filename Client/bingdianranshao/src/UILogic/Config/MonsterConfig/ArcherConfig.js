@@ -17,6 +17,7 @@ ArcherConfig.attribute = {
     "attack" : 20.0, //攻击力
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 2,
+    "coincost" :20,
 
     "Icon" :res.GM_ArcherIcon_png,
     "defaultImage" : res.GM_ArcherDefault_png

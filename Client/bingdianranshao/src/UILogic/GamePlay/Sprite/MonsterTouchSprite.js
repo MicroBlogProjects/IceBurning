@@ -46,6 +46,9 @@ var MonsterTouchSprite = cc.Sprite.extend({
         point.x -= offset.x;
         //cc.log("point x is "+point.x);
         //cc.log("offset x is "+offset.x);
+        if(target.m_config.attribute.coincost > GC.CoidNum){
+            return;
+        }
         var l_willPoint = monsterBackGroundLayer.TouchOfEnd(point);
         if(l_willPoint.point.x <=0 )
         {

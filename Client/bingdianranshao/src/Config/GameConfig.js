@@ -20,6 +20,8 @@ GC.IS_HOST = false; //true 表示主场也是左边这个阵营， false表示�
 GC.UIN = -1;
 GC.ISWIN = false;
 GC.NUM_MONSTER_BLOCK = 2;
+GC.CoidNum = 100;
+
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
 var LAYER_PRIORITY_MONSTER = 10;                                //怪物层优先级
