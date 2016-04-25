@@ -20,34 +20,36 @@
               "Path": "MainMenu/MM05.png",
               "Plist": ""
             },
-            "Scale9Width": 625,
-            "Scale9Height": 143,
+            "Scale9OriginX": 206,
+            "Scale9OriginY": 47,
+            "Scale9Width": 213,
+            "Scale9Height": 49,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 273.38,
-              "Y": 45.3466
+              "X": 272.38,
+              "Y": 64.0
             },
             "Scale": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
+              "ScaleX": 0.676,
+              "ScaleY": 0.6119
             },
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.2848,
-              "Y": 0.5039
+              "X": 0.2837,
+              "Y": 0.5333
             },
             "PreSize": {
-              "X": 0.6511,
-              "Y": 1.5891
+              "X": 0.651,
+              "Y": 1.25
             },
-            "LeftMargin": -39.13,
-            "RightMargin": 374.11,
-            "TopMargin": -26.8566,
-            "BottomMargin": -26.1634,
+            "LeftMargin": -40.12,
+            "RightMargin": 375.12,
+            "TopMargin": -19.0,
+            "BottomMargin": -11.0,
             "Tag": 255,
             "Children": [
               {
@@ -63,26 +65,21 @@
                   "Path": "Default/Button_Disable.png",
                   "Plist": ""
                 },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "MainMenu/MM07.png",
-                  "Plist": ""
-                },
                 "NormalFileData": {
                   "Type": "Normal",
                   "Path": "MainMenu/MM01.png",
                   "Plist": ""
                 },
-                "Scale9Width": 98,
-                "Scale9Height": 30,
+                "Scale9OriginX": 32,
+                "Scale9OriginY": 9,
+                "Scale9Width": 34,
+                "Scale9Height": 12,
                 "OutlineColor": {
-                  "A": 0,
                   "R": 0,
                   "G": 0,
                   "B": 0
                 },
                 "ShadowColor": {
-                  "A": 0,
                   "R": 0,
                   "G": 0,
                   "B": 0
@@ -95,8 +92,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 315.5726,
-                  "Y": 136.5125
+                  "X": 315.5625,
+                  "Y": 143.175
                 },
                 "Scale": {
                   "ScaleX": 0.9423,
@@ -118,15 +115,15 @@
                   "X": 0.1568,
                   "Y": 0.2098
                 },
-                "LeftMargin": 266.571,
-                "RightMargin": 260.4458,
-                "TopMargin": -8.4953,
-                "BottomMargin": 121.5098,
+                "LeftMargin": 266.5625,
+                "RightMargin": 260.4375,
+                "TopMargin": -8.9093,
+                "BottomMargin": 127.4408,
                 "Tag": 256,
                 "ActionTag": 420722972,
                 "Size": {
-                  "X": 98.0031,
-                  "Y": 30.0056
+                  "X": 98.0,
+                  "Y": 31.4685
                 },
                 "Name": "Bnss_2",
                 "ctype": "ButtonObjectData"
@@ -134,8 +131,8 @@
             ],
             "ActionTag": 71895598,
             "Size": {
-              "X": 625.02,
-              "Y": 143.02
+              "X": 625.0,
+              "Y": 150.0
             },
             "Name": "Pc_Bg2_2",
             "ctype": "ImageViewObjectData"
@@ -147,46 +144,44 @@
               "Plist": ""
             },
             "Scale9Enable": true,
-            "Scale9OriginX": 320,
-            "Scale9Width": 316,
+            "Scale9OriginX": 15,
+            "Scale9Width": 606,
             "Scale9Height": 166,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 279.3882,
-              "Y": 46.7329
+              "X": 272.3621,
+              "Y": 60.3155
             },
             "Scale": {
-              "ScaleX": 0.3115,
-              "ScaleY": 0.6157
+              "ScaleX": 0.5977,
+              "ScaleY": 0.4758
             },
             "CColor": {},
             "IconVisible": false,
             "PositionPercentXEnabled": true,
             "PositionPercentYEnabled": true,
             "PrePosition": {
-              "X": 0.291,
-              "Y": 0.5193
+              "X": 0.2837,
+              "Y": 0.5026
             },
             "PercentWidthEnable": true,
-            "PercentHeightEnable": true,
             "PercentWidthEnabled": true,
-            "PercentHeightEnabled": true,
             "PreSize": {
-              "X": 1.0,
-              "Y": 1.0061
+              "X": 0.6625,
+              "Y": 1.25
             },
-            "LeftMargin": -200.6118,
-            "RightMargin": 200.6118,
-            "TopMargin": -2.0074,
-            "BottomMargin": 1.4584,
+            "LeftMargin": -45.6379,
+            "RightMargin": 369.6379,
+            "TopMargin": -15.3155,
+            "BottomMargin": -14.6845,
             "Tag": 254,
             "ActionTag": 2003835237,
             "Size": {
-              "X": 960.0,
-              "Y": 90.549
+              "X": 636.0,
+              "Y": 150.0
             },
             "Name": "Pc_Bg_4",
             "ctype": "ImageViewObjectData"
@@ -197,34 +192,36 @@
               "Path": "MainMenu/MM05.png",
               "Plist": ""
             },
-            "Scale9Width": 625,
-            "Scale9Height": 143,
+            "Scale9OriginX": 206,
+            "Scale9OriginY": 47,
+            "Scale9Width": 213,
+            "Scale9Height": 49,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 658.8083,
-              "Y": 46.5932
+              "X": 719.8088,
+              "Y": 65.0
             },
             "Scale": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
+              "ScaleX": 0.676,
+              "ScaleY": 0.6119
             },
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.6863,
-              "Y": 0.5177
+              "X": 0.7498,
+              "Y": 0.5417
             },
             "PreSize": {
-              "X": 0.6511,
-              "Y": 1.5891
+              "X": 0.651,
+              "Y": 1.25
             },
-            "LeftMargin": 346.2983,
-            "RightMargin": -11.3184,
-            "TopMargin": -28.1032,
-            "BottomMargin": -24.9168,
+            "LeftMargin": 407.3088,
+            "RightMargin": -72.3088,
+            "TopMargin": -20.0,
+            "BottomMargin": -10.0,
             "Tag": 258,
             "Children": [
               {
@@ -240,26 +237,21 @@
                   "Path": "Default/Button_Disable.png",
                   "Plist": ""
                 },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "MainMenu/MM07.png",
-                  "Plist": ""
-                },
                 "NormalFileData": {
                   "Type": "Normal",
                   "Path": "MainMenu/MM01.png",
                   "Plist": ""
                 },
-                "Scale9Width": 98,
-                "Scale9Height": 30,
+                "Scale9OriginX": 32,
+                "Scale9OriginY": 9,
+                "Scale9Width": 34,
+                "Scale9Height": 12,
                 "OutlineColor": {
-                  "A": 0,
                   "R": 0,
                   "G": 0,
                   "B": 0
                 },
                 "ShadowColor": {
-                  "A": 0,
                   "R": 0,
                   "G": 0,
                   "B": 0
@@ -272,8 +264,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 315.5726,
-                  "Y": 136.5125
+                  "X": 315.5625,
+                  "Y": 143.175
                 },
                 "Scale": {
                   "ScaleX": 0.9423,
@@ -295,15 +287,15 @@
                   "X": 0.1568,
                   "Y": 0.2098
                 },
-                "LeftMargin": 266.571,
-                "RightMargin": 260.4458,
-                "TopMargin": -8.4953,
-                "BottomMargin": 121.5098,
+                "LeftMargin": 266.5625,
+                "RightMargin": 260.4375,
+                "TopMargin": -8.9093,
+                "BottomMargin": 127.4408,
                 "Tag": 259,
                 "ActionTag": 446157029,
                 "Size": {
-                  "X": 98.0031,
-                  "Y": 30.0056
+                  "X": 98.0,
+                  "Y": 31.4685
                 },
                 "Name": "Bnss_2",
                 "ctype": "ButtonObjectData"
@@ -311,8 +303,8 @@
             ],
             "ActionTag": 1324468570,
             "Size": {
-              "X": 625.02,
-              "Y": 143.02
+              "X": 625.0,
+              "Y": 150.0
             },
             "Name": "Pc_Bg2_2_0",
             "ctype": "ImageViewObjectData"
@@ -332,112 +324,100 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 662.6481,
-              "Y": 45.8123
+              "X": 720.6903,
+              "Y": 65.3122
             },
             "Scale": {
-              "ScaleX": 0.3115,
-              "ScaleY": 0.6157
+              "ScaleX": 0.6008,
+              "ScaleY": 0.4758
             },
             "CColor": {},
             "IconVisible": false,
             "PositionPercentXEnabled": true,
             "PositionPercentYEnabled": true,
             "PrePosition": {
-              "X": 0.6903,
-              "Y": 0.509
+              "X": 0.7507,
+              "Y": 0.5443
             },
             "PercentWidthEnable": true,
-            "PercentHeightEnable": true,
             "PercentWidthEnabled": true,
-            "PercentHeightEnabled": true,
             "PreSize": {
-              "X": 1.0,
-              "Y": 1.0061
+              "X": 0.6625,
+              "Y": 1.25
             },
-            "LeftMargin": 182.6481,
-            "RightMargin": -182.6481,
-            "TopMargin": -1.0868,
-            "BottomMargin": 0.5378,
+            "LeftMargin": 402.6903,
+            "RightMargin": -78.6903,
+            "TopMargin": -20.3122,
+            "BottomMargin": -9.6878,
             "Tag": 260,
             "ActionTag": 2026274352,
             "Size": {
-              "X": 960.0,
-              "Y": 90.549
+              "X": 636.0,
+              "Y": 150.0
             },
             "Name": "Pc_Bg_4_0",
             "ctype": "ImageViewObjectData"
           },
           {
-            "InnerNodeSize": {
-              "Width": 200,
-              "Height": 200
-            },
-            "ScrollDirectionType": "Horizontal",
             "ClipAble": false,
             "BackColorAlpha": 102,
             "SingleColor": {
-              "G": 150,
-              "B": 100
+              "R": 150,
+              "G": 200
             },
             "FirstColor": {
-              "G": 150,
-              "B": 100
+              "R": 150,
+              "G": 200
             },
             "EndColor": {},
             "ColorVector": {
               "ScaleY": 1.0
             },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
             "TouchEnable": true,
-            "AnchorPoint": {},
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
             "Position": {
-              "X": 135.4477,
-              "Y": 24.922
+              "X": 94.0017,
+              "Y": 60.9998
             },
             "Scale": {
-              "ScaleX": 1.3576,
-              "ScaleY": 0.209
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
             },
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.1411,
-              "Y": 0.2769
+              "X": 0.0979,
+              "Y": 0.5083
             },
             "PreSize": {
-              "X": 0.2083,
-              "Y": 2.2222
+              "X": 0.3729,
+              "Y": 0.55
             },
-            "LeftMargin": 135.4477,
-            "RightMargin": 624.5523,
-            "TopMargin": -134.922,
-            "BottomMargin": 24.922,
-            "Tag": 261,
-            "ActionTag": 594324481,
+            "LeftMargin": 94.0017,
+            "RightMargin": 507.9983,
+            "TopMargin": 26.0002,
+            "BottomMargin": 27.9998,
+            "Tag": 15,
+            "ActionTag": 252307157,
             "Size": {
-              "X": 200.0,
-              "Y": 200.0
+              "X": 358.0,
+              "Y": 66.0
             },
-            "Name": "ScrollView_1",
-            "ctype": "ScrollViewObjectData"
+            "Name": "Monster_Panel",
+            "ctype": "PanelObjectData"
           },
           {
-            "InnerNodeSize": {
-              "Width": 200,
-              "Height": 200
-            },
-            "ScrollDirectionType": "Horizontal",
             "ClipAble": false,
             "BackColorAlpha": 102,
             "SingleColor": {
-              "G": 150,
-              "B": 100
+              "R": 150,
+              "G": 200
             },
             "FirstColor": {
-              "G": 150,
-              "B": 100
+              "R": 150,
+              "G": 200
             },
             "EndColor": {},
             "ColorVector": {
@@ -446,42 +426,44 @@
             "Scale9Width": 1,
             "Scale9Height": 1,
             "TouchEnable": true,
-            "AnchorPoint": {},
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
             "Position": {
-              "X": 521.7856,
-              "Y": 26.3082
+              "X": 541.69,
+              "Y": 66.3125
             },
             "Scale": {
-              "ScaleX": 1.3576,
-              "ScaleY": 0.209
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
             },
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.5435,
-              "Y": 0.2923
+              "X": 0.5643,
+              "Y": 0.5526
             },
             "PreSize": {
-              "X": 0.2083,
-              "Y": 2.2222
+              "X": 0.3812,
+              "Y": 0.55
             },
-            "LeftMargin": 521.7856,
-            "RightMargin": 238.2144,
-            "TopMargin": -136.3082,
-            "BottomMargin": 26.3082,
-            "Tag": 263,
-            "ActionTag": 12641667,
+            "LeftMargin": 541.69,
+            "RightMargin": 52.31,
+            "TopMargin": 20.6875,
+            "BottomMargin": 33.3125,
+            "Tag": 16,
+            "ActionTag": -1420599003,
             "Size": {
-              "X": 200.0,
-              "Y": 200.0
+              "X": 366.0,
+              "Y": 66.0
             },
-            "Name": "ScrollView_2",
-            "ctype": "ScrollViewObjectData"
+            "Name": "BuildingPanel",
+            "ctype": "PanelObjectData"
           }
         ],
         "Size": {
           "X": 960.0,
-          "Y": 90.0
+          "Y": 120.0
         },
         "Name": "Layer",
         "ctype": "LayerObjectData"
@@ -490,7 +472,6 @@
         "Default/Button_Disable.png",
         "MainMenu/MM01.png",
         "MainMenu/MM05.png",
-        "MainMenu/MM07.png",
         "MainMenu/MM10.png"
       ],
       "ctype": "GameFileData"
