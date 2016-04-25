@@ -12,12 +12,14 @@ var MonsterConfig = MonsterConfig = {
     "8" : HammerConfig,
     "9" : WizardConfig,
     "10" : WolfConfig,
+    "11" : SiegeConfig,
 
 
     "101" : XingxingmofataConfig,
     "102" : TurretConfig,
     "103" : PylonConfig,
     "104" : TowersConfig,
+    "105" : DefensiveTowersConfig,
 
     "201" : MainCityConfig
 };

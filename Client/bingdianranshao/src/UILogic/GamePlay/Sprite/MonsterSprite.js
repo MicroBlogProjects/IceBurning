@@ -161,7 +161,22 @@ MonsterSprite = cc.Sprite.extend({
        }
     },
 
-    deathCallFunc : function(){
+    deathCallFunc : function(sender,config){
+        if(config == null || config == undefined){
+
+        }
+        else {
+            //cc.log("deathCallFunc shagnhai");
+            var attackRadius = config.attackRadius;
+            var attack = config.attack;;
+            var monsters = monsterManager.getMonstersInRect(1-sender.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(sender.getPosition()), attackRadius);
+            cc.log(monsters.length);
+            for(var i = 0; i< monsters.length;i++){
+                var monster = monsters[i];
+                monster.m_HP -= (attack / monster.m_defense + 1);
+                //cc.log("monste hp is ",monster.m_HP);
+            }
+        }
         this.m_activity = false;
         this.removeFromParent();
     },
@@ -222,6 +237,10 @@ MonsterSprite = cc.Sprite.extend({
             return;
         }
         this.m_state = state;
+        if(this.m_attackConfig == null || this.m_attackConfig == undefined){
+            this.m_state = null;
+            return;
+        }
         var beginConfig = this.m_attackConfig.begin;
         this.startAnimate(beginConfig);
         var endConfig = this.m_attackConfig.end;
@@ -242,12 +261,12 @@ MonsterSprite = cc.Sprite.extend({
 
         this.m_state = state;
         this.startAnimate(this.m_deathConfig.begin);
-        this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this)));
+        this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this,this.m_deathConfig.attribute)));
     },
 
     
     monsterAction : function(){
-        if(this.m_state != null) return ;
+        if(this.m_state != null ) return ;
         if(this.m_id<100)
         {
             //cc.log(this.m_nextTiledPosition[0].x + "  "+ this.m_nextTiledPosition[0].y);
@@ -273,7 +292,7 @@ MonsterSprite = cc.Sprite.extend({
             this.attackAnimate(MonsterState.AttackRight,l_obj);
         }
         else if(this.m_nextState == MonsterState.Death){
-        
+            //cc.log("death animate0");
             this.m_nextState = null;
             this.deathAnimate(MonsterState.Death);
         
@@ -303,5 +322,6 @@ MonsterSprite = cc.Sprite.extend({
         var num = this.m_HP / this.m_total_HP * 100;
         this.m_booldProgressTimer.setPercentage(this.m_HP / this.m_total_HP * 100);
     }
+
 
 });

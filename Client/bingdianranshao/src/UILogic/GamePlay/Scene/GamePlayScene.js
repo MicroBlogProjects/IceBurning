@@ -23,6 +23,7 @@ var GamePlayLayer = cc.Layer.extend({
     playerInfomation : null,
     selectTool : null,
     timeTitle : null,
+    coinText : null,
     GC_Time : 0,
 
     ctor:function () {
@@ -32,12 +33,22 @@ var GamePlayLayer = cc.Layer.extend({
         this.addMonsterTouchlayer();
         this.playerInfomation = ccs.load(res.GM_PlayerInfomation_json).node;
         this.TimeTitle = ccui.helper.seekWidgetByName(this.playerInfomation,"m_time_label");
+        this.coinText = ccui.helper.seekWidgetByName(this.playerInfomation,"MocoinScount_6");
+        this.setCoinText();
 
         this.addChild(this.playerInfomation,150);
         this.schedule(this.updataTime,1);//计时器
         this.schedule(this.recvMessage,RecvMessagTime);
+        this.initGameConfig();
+
         gamePlayLayer = this;
     },
+    initGameConfig : function(){
+        GC.CoidNum = 100;
+        BuildingIDlist = [];
+        MonsterIDList = [];
+    },
+
     addBackgroundpScrollView :function(){
 
         this.scrollView = new ccui.ScrollView();
@@ -59,7 +70,6 @@ var GamePlayLayer = cc.Layer.extend({
 
     },
 
-    //计算时间
     GetPointOfBuild:function(uin,postion)
     {
         var l_position={};
@@ -129,6 +139,9 @@ var GamePlayLayer = cc.Layer.extend({
                     var isMyMonster  =false;
                     if(uin == GC.UIN){
                         isMyMonster = true;
+                        var config = MonsterConfig[""+id];
+                        GC.CoidNum -= config.attribute.coincost;
+                        this.setCoinText();
                     }
                     else{
                         isMyMonster = false;
@@ -159,7 +172,13 @@ var GamePlayLayer = cc.Layer.extend({
             }
         }
     },
+
+    //计算时间
     updataTime : function(){
+        if(GC.CoidNum <200){
+            GC.CoidNum ++;
+            this.setCoinText();
+        }
         var secondTitle;
         var minutesTitle;
         this.GC_Time++;
@@ -180,7 +199,10 @@ var GamePlayLayer = cc.Layer.extend({
         }
         var timeTitle = "00:"+minutesTitle+secondTitle;
         this.TimeTitle.setString(timeTitle);
+    },
 
+    setCoinText : function(){
+      this.coinText.setString(""+GC.CoidNum)
     },
 
     addMonsterTouchlayer :function(){

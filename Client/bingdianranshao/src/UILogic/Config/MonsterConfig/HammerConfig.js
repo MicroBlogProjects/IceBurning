@@ -16,6 +16,7 @@ HammerConfig.attribute = {
     "attack" : 20.0, //攻击力
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 1.0,  //攻击速度 多少秒一下
+    "coincost" :20,
 
     "Icon" : res.GM_HammerIcon_png,
     "defaultImage" : res.GM_HammerDefault_png

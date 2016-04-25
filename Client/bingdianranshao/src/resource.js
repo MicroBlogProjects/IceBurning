@@ -95,6 +95,11 @@ var res = {
     GM_AxeSoldiersDefault_png :              "res/GamePlay/Monster/AxeSoldiers/AxeSoldiersDefault.png",
     GM_AxeSoldiers_plist    :                  "res/GamePlay/Monster/AxeSoldiers/AxeSoldiers.plist",
 
+    //攻城兵
+    GM_SiegeIcon_png :                         "res/GamePlay/Monster/Siege/SiegeIcon.png",
+    GM_SiegeDefault_png :                      "res/GamePlay/Monster/Siege/SiegeDefault.png",
+    GM_Siege_plist :                             "res/GamePlay/Monster/Siege/Siege.plist",
+
     //弓箭手
     GM_ArcherIcon_png :                           "res/GamePlay/Monster/Archer/ArcherIcon.png",
     GM_ArcherDefault_png :                        "res/GamePlay/Monster/Archer/ArcherDefault.png",
@@ -111,6 +116,12 @@ var res = {
     GM_WizardDefault_png :                          "res/GamePlay/Monster/Wizard/WizardDefault.png",
     GM_Wizard_plist :                               "res/GamePlay/Monster/Wizard/Wizard.plist",
     GM_WizardSkill_png :                             "res/GamePlay/Monster/Wizard/WizardSkillDefault.png",
+
+    //防守塔
+    GM_DefensiveTowersIcon_png :                 "res/GamePlay/Monster/DefensiveTowers/DefensiveTowersIcon.png",
+    GM_DefensiveTowersDefault_png :              "res/GamePlay/Monster/DefensiveTowers/DefensiveTowersDefault.png",
+    GM_DefensiveTowers_plist :                    "res/GamePlay/Monster/DefensiveTowers/DefensiveTowers.plist",
+
 
     //狼
     GM_WolfIcon_png :                                "res/GamePlay/Monster/Wolf/WolfIcon.png",

@@ -15,10 +15,36 @@ var MonsterBackgroundLayer = cc.Layer.extend({
     ctor : function()
     {
         this._super();
+        this.initConfig();
         this.InitMyMap();
         monsterBackGroundLayer = this;
         this.layer7 = this.TMXTiledMap.getLayer("layer7");
     },
+    initConfig:function()
+    {
+        battleLayerConfig.TiledMap=null;
+        battleLayerConfig.towerLocal = {};
+        battleLayerConfig.towerCanPutDown = [];
+        battleLayerConfig.towerCanPutDownBlock = [];
+        battleLayerConfig.occupiedOfblock = {};
+        battleLayerConfig.highLight = [];
+        battleLayerConfig.highLightID = [];
+        battleLayerConfig.buildType = -1;
+
+        battleLayerConfig.soldierOfPart = {};
+        battleLayerConfig.soldierCanPutDown = [];
+        battleLayerConfig.soldierCanPutDownBlock = [];
+        battleLayerConfig.soldierLocal = {};
+        battleLayerConfig.soldierStartPositon = {};
+        battleLayerConfig.soldierStartID = {};
+
+        battleLayerConfig.roadLocal = {};
+        battleLayerConfig.roadCanPutDown = [];
+        battleLayerConfig.roadCanPutDownBlock = [];
+
+        battleLayerConfig.endPoint = [];
+    }
+    ,
    InitMyMap:function()
    {
        battleLayerConfig.endPoint.push(cc.p(29,17));

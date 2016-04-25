@@ -10,9 +10,9 @@ var MainMenuScene = cc.Scene.extend({
     _packLayer :null,
     onEnter:function () {
         this._super();
-        this.addBackgroundLayer();
+        //this.addBackgroundLayer();
 
-       // this.addTouchLayer();
+       this.addTouchLayer();
     },
 
     addBackgroundLayer : function(){
