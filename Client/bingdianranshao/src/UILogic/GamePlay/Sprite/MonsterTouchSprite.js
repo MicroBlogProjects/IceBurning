@@ -82,7 +82,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
     isTouchInRect:function (touch) {
         var getPoint = touch.getLocation();
         point = this.convertToWorldSpace(cc.p(this.getContentSize().width/2,this.getContentSize().height/2));
-        myRect = cc.rect(point.x - this.getContentSize().width/2.0,point.y - this.getContentSize().height/2.0,this.getContentSize().width,this.getContentSize().height);
+        myRect = cc.rect(point.x - this.getContentSize().width/2.0 - 15,point.y - this.getContentSize().height/2.0 - 15,this.getContentSize().width + 15,this.getContentSize().height+15);
         return cc.rectContainsPoint(myRect, getPoint);
     },
 
