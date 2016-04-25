@@ -30,8 +30,8 @@ var MonsterTouchLayer = cc.Layer.extend({
             var ID = MonsterIDList[i];
             var config = MonsterConfig[""+ID];
             var sprite = new MonsterTouchSprite(config);
-            sprite.setContentSize(sprite.getContentSize().width*1.5,sprite.getContentSize().height*1.5);
-            sprite.setPosition((15+sprite.getContentSize().width+6)*(i+0.5),sprite.getContentSize().height/2+20);
+            sprite.setContentSize(sprite.getContentSize().width*2,sprite.getContentSize().height*2);
+            sprite.setPosition(40+(6+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+50);
             this.monsterPanel.addChild(sprite);
         }
 
@@ -39,8 +39,8 @@ var MonsterTouchLayer = cc.Layer.extend({
             var ID = BuildingIDlist[i];
             var config = MonsterConfig[""+ID];
             var sprite = new MonsterTouchSprite(config);
-            sprite.setContentSize(sprite.getContentSize().width*1.5,sprite.getContentSize().height*1.5);
-            sprite.setPosition((15+sprite.getContentSize().width+6)*(i+0.5),sprite.getContentSize().height/2+20);
+            sprite.setContentSize(sprite.getContentSize().width*2,sprite.getContentSize().height*2);
+            sprite.setPosition(40+(6+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+51);
             this.buildingPanel.addChild(sprite);
         }
     },
