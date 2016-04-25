@@ -9,6 +9,7 @@ var MonsterTouchSprite = cc.Sprite.extend({
         this._super(config.attribute.Icon);
         this.m_config = config;
         this.m_id = config.attribute.id;
+        this.setScale(2);
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -80,8 +81,8 @@ var MonsterTouchSprite = cc.Sprite.extend({
 
     isTouchInRect:function (touch) {
         var getPoint = touch.getLocation();
-        point = this.convertToWorldSpace(cc.p(this.width/2,this.height/2));
-        myRect = cc.rect(point.x - this.width/2.0,point.y - this.height/2.0,this.width,this.height);
+        point = this.convertToWorldSpace(cc.p(this.getContentSize().width/2,this.getContentSize().height/2));
+        myRect = cc.rect(point.x - this.getContentSize().width/2.0 - 30,point.y - this.getContentSize().height/2.0-30,this.getContentSize().width ,this.getContentSize().height);
         return cc.rectContainsPoint(myRect, getPoint);
     },
 

@@ -4,69 +4,23 @@
 
 var MonsterTouch ;
 var MonsterTouchLayer = cc.Layer.extend({
-    m_toolScrollView : null,
-    m_bulidingSelectScrollView : null,
+    monsterPanel : null,
+    buildingPanel : null,
     m_nowmoveSprite : null,
-    //m_monsterSelectScrollView : null,
-    //m_buildingSelectScrollView : null,
     ctor : function(){
         this._super();
-        //this.addToolScrollView();
         this.addSelectTool();
-        this.addHeroSkillIcon();
+        //this.addHeroSkillIcon();
         MonsterTouch = this;
     },
 
-    /*addToolScrollView : function(){
-        this.m_toolScrollView = new ccui.ScrollView();
-        this.m_toolScrollView.setDirection(ccui.ScrollView.DIR_VERTICAL);
-        this.m_toolScrollView.setTouchEnabled(true);
-        this.m_toolScrollView.setContentSize(cc.size(GC.w, 150));
-        this.m_toolScrollView.x = 150;
-        this.m_toolScrollView.y = 0;
-        this.addChild(this.m_toolScrollView,150);
-
-        //添加背景
-        var bgSprite = cc.Sprite.create(res.GM_TouchlayerTool_png);
-        bgSprite.setScaleX(1200.0/bgSprite.getContentSize().width);
-        bgSprite.setPosition(30,30);
-        this.m_toolScrollView.addChild(bgSprite,0);
-
-        var monsterConfig = MonsterConfig.yuangujuren;
-        for(var i = 0; i < 1;i++){
-            var monsterTouchSprite = new MonsterTouchSprite(monsterConfig);
-            monsterTouchSprite.setPosition((monsterTouchSprite.getContentSize().width/2 + 20) * (i+0.5),monsterTouchSprite.getContentSize().height/2);
-            this.m_toolScrollView.addChild(monsterTouchSprite,10);
-        }
-        var buildingConfig = MonsterConfig.xingxingmofata;
-        for(var i = 1;i < 2;i++){
-            var monsterTouchSprite = new MonsterTouchSprite(buildingConfig);
-            monsterTouchSprite.setPosition((monsterTouchSprite.getContentSize().width/2 + 20) * (i+0.5),monsterTouchSprite.getContentSize().height/2);
-            this.m_toolScrollView.addChild(monsterTouchSprite,10);
-        }
-    },*/
 
     addSelectTool : function(){
 
-        this.m_toolScrollView = new ccui.ScrollView();
-        this.m_toolScrollView.setDirection(ccui.ScrollView.DIR_VERTICAL);
-        this.m_toolScrollView.setTouchEnabled(true);
-        this.m_toolScrollView.setContentSize(cc.size(250, 50));
-        this.m_toolScrollView.x = 150;
-        this.m_toolScrollView.y = 30;
-        this.addChild(this.m_toolScrollView,151);
-
-        this.m_bulidingSelectScrollView = new ccui.ScrollView();
-        this.m_bulidingSelectScrollView.setDirection(ccui.ScrollView.DIR_VERTICAL);
-        this.m_bulidingSelectScrollView.setTouchEnabled(true);
-        this.m_bulidingSelectScrollView.setContentSize(cc.size(250,50));
-        this.m_bulidingSelectScrollView.setPosition(cc.p(530,30));
-        this.addChild(this.m_bulidingSelectScrollView,151);
 
         this.selectTool = ccs.load(res.GM_SelectTool_json).node;
-        //this.m_monsterSelectScrollView = ccui.helper.seekWidgetByName(this.selectTool,"ScrollView_1");
-        //this.m_buildingSelectScrollView = ccui.helper.seekWidgetByName(this.selectTool,"ScrollView_2");
-        //this.selectTool.setPosition(cc.p(0,GC.w - 90));
+        this.monsterPanel = ccui.helper.seekWidgetByName(this.selectTool,"Monster_Panel");
+        this.buildingPanel = ccui.helper.seekWidgetByName(this.selectTool,"BuildingPanel")
         this.addChild(this.selectTool,150);
         this.addIcon();
     },
@@ -76,38 +30,19 @@ var MonsterTouchLayer = cc.Layer.extend({
             var ID = MonsterIDList[i];
             var config = MonsterConfig[""+ID];
             var sprite = new MonsterTouchSprite(config);
-            sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
-            this.m_toolScrollView.addChild(sprite);
+            sprite.setContentSize(sprite.getContentSize().width*2,sprite.getContentSize().height*2);
+            sprite.setPosition(40+(6+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+50);
+            this.monsterPanel.addChild(sprite);
         }
 
         for(var i = 0; i < BuildingIDlist.length;i++){
             var ID = BuildingIDlist[i];
             var config = MonsterConfig[""+ID];
             var sprite = new MonsterTouchSprite(config);
-            sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
-            this.m_bulidingSelectScrollView.addChild(sprite);
+            sprite.setContentSize(sprite.getContentSize().width*2,sprite.getContentSize().height*2);
+            sprite.setPosition(40+(6+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+51);
+            this.buildingPanel.addChild(sprite);
         }
-        /*config = MonsterConfig[""+1];
-        for(var i = 0; i < 5;i++){
-            var sprite = new MonsterTouchSprite(config);
-            sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
-            this.m_toolScrollView.addChild(sprite);
-        }
-        config = MonsterConfig[""+101];
-        for(var i = 0; i < 2;i++){
-            var sprite = new MonsterTouchSprite(config);
-            sprite.setPosition((sprite.getContentSize().width+10)*(i+0.5),sprite.getContentSize().height/2);
-            //this.m_bulidingSelectScrollView.setInnerContainerSize(cc.size(1000,30));
-            this.m_bulidingSelectScrollView.addChild(sprite);
-        }
-        config = MonsterConfig[""+102];
-        for(var i = 2; i < 4;i++){
-            var sprite = new MonsterTouchSprite(config);
-            sprite.setPosition((sprite.getContentSize().width+30)*(i+0.5),sprite.getContentSize().height/2);
-            //this.m_bulidingSelectScrollView.setInnerContainerSize(cc.size(1000,30));
-            this.m_bulidingSelectScrollView.addChild(sprite);
-        }*/
-
     },
     addHeroSkillIcon : function(){
         var button = ccui.Button.create(res.HS_HongqiuIcon_png);
