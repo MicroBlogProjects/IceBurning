@@ -21,6 +21,7 @@ var res = {
     GM_RedBlood_png     : "res/GamePlay/Monster/bloodImage/RedBlood.png",
     GM_BlueBlood_png :    "res/GamePlay/Monster/bloodImage/BlueBlood.png",
     GM_BackgroundBolld_png : "res/GamePlay/Monster/bloodImage/BackgroundBlood.png",
+    GM_CD_png :                "res/GamePlay/Monster/CD/CD.png",
 
 
     //monstertouchlayr
