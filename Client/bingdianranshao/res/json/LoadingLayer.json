@@ -1,0 +1,77 @@
+{
+  "ID": "663b3f24-3884-4167-b05e-625f8db57c7c",
+  "Version": "2.3.4",
+  "Name": "LoadingLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 6,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Loading/LoadingBg.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 471.73,
+              "Y": 319.1426
+            },
+            "Scale": {
+              "ScaleX": 1.45,
+              "ScaleY": 1.11
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4914,
+              "Y": 0.4987
+            },
+            "PreSize": {
+              "X": 0.7281,
+              "Y": 0.9391
+            },
+            "LeftMargin": 122.23,
+            "RightMargin": 138.77,
+            "TopMargin": 20.3574,
+            "BottomMargin": 18.6426,
+            "Tag": 7,
+            "ActionTag": -1061885248,
+            "Size": {
+              "X": 699.0,
+              "Y": 601.0
+            },
+            "Name": "LoadingBg_1",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "Loading/LoadingBg.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

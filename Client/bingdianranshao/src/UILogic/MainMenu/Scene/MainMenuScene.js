@@ -8,6 +8,7 @@ var MainMenuScene = cc.Scene.extend({
     _backgroundLayer : null,
     _touchLayer      : null,
     _packLayer :null,
+    _loadingLayer : null,
     onEnter:function () {
         this._super();
         //this.addBackgroundLayer();
@@ -30,6 +31,11 @@ var MainMenuScene = cc.Scene.extend({
     {
         this._packLayer = new MPackMenuLayer();
         this.addChild(this._packLayer,LAYER_PRIORITY_TOUCH);
+    },
+    addLoadingLayer : function(){
+        this._packLayer.removeFromParent();
+        this._loadingLayer = new Loadinglayer();
+        this.addChild(this._loadingLayer);
     },
     addBattleLayer:function()
     {

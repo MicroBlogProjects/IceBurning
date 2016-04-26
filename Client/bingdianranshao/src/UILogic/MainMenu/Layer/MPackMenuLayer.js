@@ -4,12 +4,13 @@
 var g_mainscene;
 var g_this;
 var MPackMenuLayer = cc.Scene.extend({
+    loadingLayer : null,
     ctor : function()
     {
     this._super();
     g_this = this;
     this.init();
-    this.schedule(this.receiveMessage,0.1);
+    //this.schedule(this.receiveMessage,0.1);
     },
     startBattle:function(id)
     {
@@ -17,7 +18,7 @@ var MPackMenuLayer = cc.Scene.extend({
         var fight_res = NetConfig[index]();//GameJoy.JS_CSLoginResponse.Instance();
         if(fight_res.get_result() !=0 )
             return ;
-        this.unschedule(this.receiveMessage());
+        this.unschedule(this.receiveMessage);
         g_this.parent.addBattleLayer();
         this.removeFromParent();
     },
@@ -41,6 +42,9 @@ var MPackMenuLayer = cc.Scene.extend({
     },
     buttonStartTouchEvent:function()
     {
+        this.loadingLayer = new Loadinglayer();
+        this.setPosition(0,0);
+        this.addChild(this.loadingLayer);
         GameJoy.Proxy.SendRequest(6);
     },
 

@@ -24,6 +24,7 @@
         "src/UILogic/MainMenu/Layer/WaitTeam.js",
         "src/UILogic/MainMenu/Sprite/BagTouchSprite.js",
         "src/UILogic/MainMenu/Layer/MPackMenuLayer.js",
+        "src/UILogic/MainMenu/Layer/LoadingLayer.js",
 
 
         "src/UILogic/Config/battleLayerConfig/battleLayerConfig.js",

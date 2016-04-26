@@ -11,6 +11,9 @@ var res = {
     MM_Mune_png :     "res/MainMenu/menu.png",
     MM_ButtonEffect : "res/Sound/Effect/buttonEffect.mp3",
     MM_Flare_jpg :     "res/MainMenu/flare.jpg",
+    MM_Loading_json :  "res/json/LoadingLayer.json",
+    MM_LoadingAnimate_plist : "res/Loading/LoadingAnimate.plist",
+    MM_LoadingDefault_png : "res/Loading/LoadingDefault.png",
     //MB_Select_png :    "res/MainMenu/Select/select.png",
 
     //GamePlay
