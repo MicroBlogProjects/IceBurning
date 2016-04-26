@@ -35,6 +35,12 @@
           <Image Name="MM04.png" />
           <Image Name="MM17.png" />
           <TTF Name="simhei.ttf" />
+          <Image Name="ui6_common_anniu_changtai_da2.png" />
+          <Image Name="ui6_common_anniu_da2.png" />
+          <Image Name="ui6_common_anniu_guanbi.png" />
+          <Image Name="ui6_common_diban_jianbian_huang.png" />
+          <Image Name="ui6_common_diban_jin.png" />
+          <Image Name="ui6_common_diban_jin2.png" />
         </Folder>
         <Folder Name="DifficultySelection">
           <Image Name="Cn01.png" />
@@ -109,6 +115,7 @@
           <Image Name="win.png" />
         </Folder>
         <Project Name="Inventory.csd" Type="Layer" />
+        <Project Name="Layer.csd" Type="Layer" />
         <Project Name="Login.csd" Type="Layer" />
         <Project Name="selectopponent.csd" Type="Layer" />
         <Project Name="Settlementlayer.csd" Type="Layer" />
