@@ -8,12 +8,14 @@ var useName;
 var MMTouchLayer = cc.Layer.extend({
     ctor : function()
     {
+        this.haveCreatRoom = 0;
         this._super();
         g_this = this;
         this.initUI();
     	this.schedule(this.receiveMessage,0.1);
         this.buttonFreshRoomTouchEvent();
         this.ismyRoom=false;
+        GC.hasCreateRoom=0;
     },
     createRoom:function(id)
     {
@@ -40,6 +42,7 @@ var MMTouchLayer = cc.Layer.extend({
              Panel_room_button.uindd=l_room.get_uin();
              Panel_room_button.addClickEventListener(
                  function (sender, eventType) {
+                     GC.hasCreateRoom = 0;
                      var temp=GameJoy.JS_CSJoinRoomRequest.Instance();
                      temp.set_uin(this.uindd);
                      GameJoy.Proxy.SendRequest(5);
@@ -55,11 +58,14 @@ var MMTouchLayer = cc.Layer.extend({
     },
     createMyRoom:function(id)
     {
-       GC.IS_HOST = true;
+       GC.hasCreateRoom = 1;
        this.buttonFreshRoomTouchEvent();
     },
     JoinBattle:function(id)
     {
+        if(GC.hasCreateRoom == 0)
+            GC.IS_HOST = false;
+        else GC.IS_HOST =true;
         this.unschedule(this.receiveMessage());
         g_this.parent.addChosePack();
         this.removeFromParent();
@@ -89,7 +95,7 @@ var MMTouchLayer = cc.Layer.extend({
         this.addChild(g_mainscene);
         var create_room = ccui.helper.seekWidgetByName(g_mainscene, "m_button_create");
         create_room.addClickEventListener(this.buttonCreateRoomTouchEvent);
-        var refresh_room = ccui.helper.seekWidgetByName(g_mainscene,"m_refresh");
+        var refresh_room = ccui.helper.seekWidgetByName(g_mainscene,"m_button_fresh");
         refresh_room.addClickEventListener(this.buttonFreshRoomTouchEvent);
     },
     buttonCreateRoomTouchEvent:function()
