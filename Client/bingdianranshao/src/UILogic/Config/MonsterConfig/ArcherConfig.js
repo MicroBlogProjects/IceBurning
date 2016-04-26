@@ -10,9 +10,9 @@ ArcherConfig.attribute = {
     "id" : 7, //id
     "name" : "弓箭手",
 
+
     "walkSpeed" : 20, //移动速度
     "HP" : 100.0, //血量
-    "sightRadius" : 3, //视野半径
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
     "attackRadius" : 2, //攻击半径
