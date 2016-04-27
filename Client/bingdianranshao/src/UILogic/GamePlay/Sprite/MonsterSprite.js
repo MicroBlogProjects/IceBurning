@@ -39,7 +39,8 @@ MonsterSprite = cc.Sprite.extend({
     //血条
     m_booldProgressTimer :null,
     m_total_HP :null,
-
+    m_total_foot:null,
+    m_has_foot:null,
     ctor : function(config,isMyMonster){
         var attributeConfig = config.attribute;
         this._super(attributeConfig.defaultImage);
@@ -82,6 +83,10 @@ MonsterSprite = cc.Sprite.extend({
 
         this.m_attackConfig = config.attack;
         this.m_walkingConfig = config.walking;
+        if(config.walking != null && config.walking!= undefined){
+            this.m_total_foot = Math.floor((config.walking).begin.time*60);
+        }
+        this.m_has_foot = 0;
         this.m_deathConfig = config.death;
         this.m_skillConfig = config.skill;
 
@@ -145,7 +150,7 @@ MonsterSprite = cc.Sprite.extend({
                 this.setFlippedX(false);
             }
         }
-        if(this.m_id < 100)
+     /*   if(this.m_id < 100)
         {
             var speed = totalTime * 1.0 / account;
             var animation = new cc.Animation(animFrames, speed);
@@ -153,12 +158,12 @@ MonsterSprite = cc.Sprite.extend({
             var animate = new cc.Animate(animation);
             var spwan = new cc.Spawn(animate,moveToAction);
             this.m_nowAnimateAction = spwan;
-       }else{
+       }else{*/
             var speed = totalTime * 1.0 / account;
             var animation = new cc.Animation(animFrames, speed);
             var animate = new cc.Animate(animation);
             this.m_nowAnimateAction = animate;
-       }
+     //  }
     },
 
     deathCallFunc : function(sender,config){
@@ -206,14 +211,14 @@ MonsterSprite = cc.Sprite.extend({
     },
     walkingCallFunc : function(){
 //        this.setPosition(cc.p(this.m_nextPosition);
-        this.m_state = null;
+      /*  this.m_state = null;
         algorithmOfStatus.AddMonster(this,-1)
         for(var i = 0 ; i < this.m_nextTiledPosition.length; ++ i)
         {
             this.m_TiledPosition[i] = this.m_nextTiledPosition[i];    
         
         }
-        algorithmOfStatus.AddMonster(this,1);
+        algorithmOfStatus.AddMonster(this,1);*/
         
     },
     stopAnimate : function(){

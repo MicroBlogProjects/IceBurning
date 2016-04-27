@@ -88,9 +88,48 @@ var MonsterManager = cc.Class.extend({
         if(this.times != 0)
             return ;
         this.updateMonsterArray();
+        this.MovetoNextPosition();
         this.monsterWalking();
     },
-
+    MovetoNextPosition:function()
+    {
+        for(var i = 0; i < 2; ++ i)
+            for(var j =0; j < this.MonsterArray[i].length; ++ j)
+            {
+                var monster = this.MonsterArray[i][j];
+                if(monster.m_HP <=0 || monster.m_id > 100) 
+                    continue;
+                this.RunNext(monster);
+            }
+    },
+    RunNext:function(monster)
+    {
+        if(monster.m_state == null ||( monster.m_state != MonsterState.WalkingLeft && monster.m_state != MonsterState.WalkingRight ) )
+        {
+            return ;
+        }
+        if(monster.m_total_foot == monster.m_has_foot)
+        {
+            monster.setPosition( cc.p(monster.m_nextPosition.x+32,monster.m_nextPosition.y+32) );
+            monster.m_state = null;
+            monster.m_has_foot = 0;
+            algorithmOfStatus.AddMonster(monster,-1)
+            for(var i = 0 ; i < monster.m_nextTiledPosition.length; ++ i)
+            {
+                monster.m_TiledPosition[i] = monster.m_nextTiledPosition[i];    
+            }
+            algorithmOfStatus.AddMonster(monster,1);
+            return ;
+        }
+        var now_pos = monsterBackGroundLayer.GetPositionOfTiled(monster.m_TiledPosition[0]);
+        var nex_pos = monsterBackGroundLayer.GetPositionOfTiled(monster.m_nextTiledPosition[0]);
+        var E_pos = cc.p(nex_pos.x - now_pos.x, nex_pos.y - now_pos.y);
+        E_pos.x = E_pos.x * monster.m_has_foot / monster.m_total_foot + now_pos.x + 32;
+        E_pos.y = E_pos.y * monster.m_has_foot / monster.m_total_foot + now_pos.y + 32;
+        monster.m_has_foot++;
+        monster.setPosition(E_pos);
+    }    
+    ,
     //删除已经死亡的怪物
     updateMonsterArray :function(){
         for(var camp = 0; camp < 2; ++ camp)
