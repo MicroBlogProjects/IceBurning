@@ -135,6 +135,7 @@ int ParsePBResponseToJS_CSFrameSync(::google::protobuf::Message* pb, GameJoy::JS
         js_step->obj_id = DecodeInt32(str);
         js_step->pos_x  = DecodeInt32(str);
         js_step->pos_y  = DecodeInt32(str);
+        js_step->frame  = DecodeInt32(str);
 
         js_steps.pushBack(js_step);
     }
@@ -155,6 +156,7 @@ int ParseJSToPBRequest_CSFrameSync(GameJoy::JS_CPP_Bridge* js, ::google::protobu
 	len += EncodeInt32(str, js_step->obj_id);
 	len += EncodeInt32(str, js_step->pos_x);
 	len += EncodeInt32(str, js_step->pos_y);
+    len += EncodeInt32(str, js_step->frame);
 	std::string s(buf, len);
     pb_step->set_operation(s);
     ParseEnd

@@ -1696,6 +1696,26 @@ bool js_GameJoy_JS_PBFrameMessage_set_pos_x(JSContext *cx, uint32_t argc, jsval 
     JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_pos_x : wrong number of arguments: %d, was expecting %d", argc, 1);
     return false;
 }
+bool js_GameJoy_JS_PBFrameMessage_set_frame(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_set_frame : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_PBFrameMessage_set_frame : Error processing arguments");
+        cobj->set_frame(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_frame : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
 bool js_GameJoy_JS_PBFrameMessage_get_uin(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
@@ -1810,6 +1830,24 @@ bool js_GameJoy_JS_PBFrameMessage_set_uin(JSContext *cx, uint32_t argc, jsval *v
     JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_set_uin : wrong number of arguments: %d, was expecting %d", argc, 1);
     return false;
 }
+bool js_GameJoy_JS_PBFrameMessage_get_frame(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_PBFrameMessage* cobj = (GameJoy::JS_PBFrameMessage *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_PBFrameMessage_get_frame : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_frame();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_PBFrameMessage_get_frame : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
 bool js_GameJoy_JS_PBFrameMessage_constructor(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
@@ -1852,12 +1890,14 @@ void js_register_GameJoy_JS_PBFrameMessage(JSContext *cx, JS::HandleObject globa
         JS_FN("get_pos_x", js_GameJoy_JS_PBFrameMessage_get_pos_x, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("set_pos_y", js_GameJoy_JS_PBFrameMessage_set_pos_y, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("set_pos_x", js_GameJoy_JS_PBFrameMessage_set_pos_x, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_frame", js_GameJoy_JS_PBFrameMessage_set_frame, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("get_uin", js_GameJoy_JS_PBFrameMessage_get_uin, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("set_type", js_GameJoy_JS_PBFrameMessage_set_type, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("get_obj_id", js_GameJoy_JS_PBFrameMessage_get_obj_id, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("get_type", js_GameJoy_JS_PBFrameMessage_get_type, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("set_obj_id", js_GameJoy_JS_PBFrameMessage_set_obj_id, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("set_uin", js_GameJoy_JS_PBFrameMessage_set_uin, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("get_frame", js_GameJoy_JS_PBFrameMessage_get_frame, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FS_END
     };
 

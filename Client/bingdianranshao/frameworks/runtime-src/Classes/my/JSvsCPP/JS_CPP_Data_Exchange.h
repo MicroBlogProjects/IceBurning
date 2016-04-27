@@ -3,7 +3,7 @@
 
 #include <map>
 #include "cocos2d.h"
-#include "my/JSvsCPP/MessageProxy.h"
+#include "../JSvsCPP/MessageProxy.h"
 using namespace std;
 #define NS_GJ_BEGIN     namespace GameJoy {
 #define NS_GJ_END       }
@@ -140,6 +140,7 @@ NewEntity(PBFrameMessage)
     NewField(int, obj_id)
     NewField(int, pos_x)
     NewField(int, pos_y)
+    NewField(int, frame)
 EndEntity(PBFrameMessage)
 NewRequest(CSFrameSyncRequest)
     NewField(JS_PBFrameMessage*, step)

@@ -618,6 +618,16 @@ int
 },
 
 /**
+ * @method set_frame
+ * @param {int} arg0
+ */
+set_frame : function (
+int 
+)
+{
+},
+
+/**
  * @method get_uin
  * @return {int}
  */
@@ -675,6 +685,16 @@ set_uin : function (
 int 
 )
 {
+},
+
+/**
+ * @method get_frame
+ * @return {int}
+ */
+get_frame : function (
+)
+{
+    return 0;
 },
 
 /**

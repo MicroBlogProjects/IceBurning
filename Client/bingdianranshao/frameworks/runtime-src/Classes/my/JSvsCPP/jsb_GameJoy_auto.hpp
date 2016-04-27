@@ -168,12 +168,14 @@ bool js_GameJoy_JS_PBFrameMessage_get_pos_y(JSContext *cx, uint32_t argc, jsval 
 bool js_GameJoy_JS_PBFrameMessage_get_pos_x(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_set_pos_y(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_set_pos_x(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_set_frame(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_get_uin(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_set_type(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_get_obj_id(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_get_type(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_set_obj_id(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_set_uin(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_PBFrameMessage_get_frame(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_PBFrameMessage_JS_PBFrameMessage(JSContext *cx, uint32_t argc, jsval *vp);
 
 extern JSClass  *jsb_GameJoy_JS_CSFrameSyncRequest_class;
