@@ -43,6 +43,7 @@ var MonsterType ={
 };
 
 var MAXMonsterAccount = 5;
+var MAXBuildingAccount = 3;
 var MonsterIDList = [];
 var BuildingIDlist = [];
 

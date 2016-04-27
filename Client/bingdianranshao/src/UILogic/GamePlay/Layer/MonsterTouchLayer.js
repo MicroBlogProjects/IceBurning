@@ -7,8 +7,10 @@ var MonsterTouchLayer = cc.Layer.extend({
     monsterPanel : null,
     buildingPanel : null,
     m_nowmoveSprite : null,
+    monsters : null,
     ctor : function(){
         this._super();
+        this.monsters = [];
         this.addSelectTool();
         //this.addHeroSkillIcon();
         MonsterTouch = this;
@@ -30,6 +32,7 @@ var MonsterTouchLayer = cc.Layer.extend({
             var ID = MonsterIDList[i];
             var config = MonsterConfig[""+ID];
             var sprite = new MonsterTouchSprite(config);
+            this.monsters.push(sprite);
             sprite.setContentSize(sprite.getContentSize().width*2,sprite.getContentSize().height*2);
             sprite.setPosition(40+(6+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+50);
             this.monsterPanel.addChild(sprite);
@@ -40,8 +43,16 @@ var MonsterTouchLayer = cc.Layer.extend({
             var config = MonsterConfig[""+ID];
             var sprite = new MonsterTouchSprite(config);
             sprite.setContentSize(sprite.getContentSize().width*2,sprite.getContentSize().height*2);
-            sprite.setPosition(40+(6+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+51);
+            sprite.setPosition(40+(60+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+51);
+            this.monsters.push(sprite);
             this.buildingPanel.addChild(sprite);
+        }
+    },
+
+    changedCoin : function(coin){
+        for(var i = 0 ;i < this.monsters.length;i++){
+            var sprite = this.monsters[i];
+            sprite.changeProgressTimer(coin);
         }
     },
     addHeroSkillIcon : function(){

@@ -357,7 +357,7 @@
                       <AbstractNodeData Name="Image_189_229" ActionTag="2026092007" Tag="299" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="3.3624" RightMargin="350.3275" TopMargin="17.7740" BottomMargin="16.1422" Scale9Width="273" Scale9Height="100" ctype="ImageViewObjectData">
                         <Size X="361.7021" Y="91.6064" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="184.2135" Y="61.9454" />
+                        <Position X="184.2134" Y="61.9454" />
                         <Scale ScaleX="0.9800" ScaleY="1.3600" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.2575" Y="0.4935" />
@@ -365,7 +365,7 @@
                         <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Image_189_0_231" ActionTag="1236957558" Tag="300" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="351.9729" RightMargin="1.7169" TopMargin="17.7740" BottomMargin="16.1422" FlipX="True" Scale9Width="273" Scale9Height="100" ctype="ImageViewObjectData">
-                        <Size X="361.7021" Y="91.6064" />
+                        <Size X="361.7022" Y="91.6064" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="532.8240" Y="61.9454" />
                         <Scale ScaleX="0.9800" ScaleY="1.3600" />
@@ -409,7 +409,7 @@
                         <PreSize X="0.1296" Y="0.2336" />
                         <FileData Type="Normal" Path="DifficultySelection/DS15.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="ImageView_Input_1_237" ActionTag="-515791416" Tag="305" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="200.2383" RightMargin="422.4389" TopMargin="64.4307" BottomMargin="31.7698" Scale9Enable="True" LeftEage="10" Scale9OriginX="10" Scale9Width="6" Scale9Height="32" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="ImageView_Input_1_237" ActionTag="-515791416" Tag="305" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="200.2382" RightMargin="422.4389" TopMargin="64.4307" BottomMargin="31.7698" Scale9Enable="True" LeftEage="10" Scale9OriginX="10" Scale9Width="6" Scale9Height="32" ctype="ImageViewObjectData">
                         <Size X="92.7148" Y="29.3221" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="246.5956" Y="46.4308" />
@@ -475,7 +475,7 @@
                         <PreSize X="0.2407" Y="0.9441" />
                         <FileData Type="Normal" Path="DifficultySelection/DS03.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Image_82_1_245" ActionTag="1709699235" Tag="311" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="178.1684" RightMargin="477.6315" TopMargin="21.7217" BottomMargin="66.2320" Scale9Width="45" Scale9Height="41" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="Image_82_1_245" ActionTag="1709699235" Tag="311" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="178.1684" RightMargin="477.6314" TopMargin="21.7217" BottomMargin="66.2320" Scale9Width="45" Scale9Height="41" ctype="ImageViewObjectData">
                         <Size X="59.5922" Y="37.5689" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="207.9644" Y="85.0165" />
@@ -548,7 +548,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="m_button_fresh" ActionTag="1349868696" Tag="59" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="542.2041" RightMargin="177.7959" TopMargin="551.5645" BottomMargin="5.2356" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="240" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="m_button_fresh" ActionTag="1349868696" Tag="59" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="542.2041" RightMargin="177.7959" TopMargin="551.5644" BottomMargin="5.2356" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="240" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="240.0000" Y="83.2000" />
                 <Children>
                   <AbstractNodeData Name="Text_2" ActionTag="724145520" Tag="60" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="82.5000" RightMargin="82.5000" TopMargin="20.1000" BottomMargin="20.1000" FontSize="36" LabelText="刷新" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ShadowEnabled="True" ctype="TextObjectData">

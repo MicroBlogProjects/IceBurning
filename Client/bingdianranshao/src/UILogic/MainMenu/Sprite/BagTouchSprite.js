@@ -32,14 +32,17 @@ var BagTouchSprite = cc.Sprite.extend({
         }
         var select = ccui.helper.seekWidgetByName(g_mainscene, "seleted_imageview_"+target.m_num);
         var IDlist;
+        var maxAccount;
         if(target.m_id < 100){
+            maxAccount = MAXMonsterAccount
             IDlist = MonsterIDList;
         }
         else {
+            maxAccount = MAXBuildingAccount;
             IDlist = BuildingIDlist;
         }
         if(!target.m_isSelect){
-            if(IDlist.length < MAXMonsterAccount){
+            if(IDlist.length < maxAccount){
                 target.m_isSelect = !target.m_isSelect;
                 select.setVisible(target.m_isSelect);
                 IDlist.push(target.m_id);

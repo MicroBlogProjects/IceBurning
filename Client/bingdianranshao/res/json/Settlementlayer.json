@@ -165,8 +165,8 @@
               "Plist": ""
             },
             "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
+              "Type": "Normal",
+              "Path": "settlement/BackButtonHight.png",
               "Plist": ""
             },
             "NormalFileData": {
@@ -236,8 +236,8 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
-        "Default/Button_Press.png",
         "settlement/BackButton.png",
+        "settlement/BackButtonHight.png",
         "settlement/board.png",
         "settlement/lose.png",
         "settlement/win.png"

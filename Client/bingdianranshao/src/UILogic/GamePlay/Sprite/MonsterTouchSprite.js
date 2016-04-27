@@ -5,11 +5,15 @@
 var MonsterTouchSprite = cc.Sprite.extend({
     m_id : null,
     m_config : null,
+    m_progressTimerCD : null,
+    m_coin : null,
     ctor : function(config){
         this._super(config.attribute.Icon);
         this.m_config = config;
         this.m_id = config.attribute.id;
+        this.m_coin = config.attribute.coincost
         this.setScale(2);
+        this.addProgressTimer();
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -19,9 +23,30 @@ var MonsterTouchSprite = cc.Sprite.extend({
             onTouchCancelled : this.onTouchCancelled
         }, this);
     },
+    addProgressTimer : function(){
+        var point = cc.p(this.getContentSize().width/2,this.getContentSize().height/2);
+        var sprite = cc.Sprite.create(res.GM_CD_png);
+        this.m_progressTimerCD = cc.ProgressTimer.create(sprite);
+        this.m_progressTimerCD.setPosition(point);
+        this.m_progressTimerCD.setReverseDirection(true);
+        this.m_progressTimerCD.setBarChangeRate(cc.p(0,1));
+        this.m_progressTimerCD.setPercentage(0);
+        this.addChild(this.m_progressTimerCD);
+    },
+    changeProgressTimer : function(coin){
+        if(coin >= this.m_coin){
+            this.m_progressTimerCD.setPercentage(0);
+        }
+        else {
+            this.m_progressTimerCD.setPercentage(100 - (coin /this.m_coin * 100 ))
+        }
+    },
     onTouchBegan : function (touch, event) {
         var l_target = event.getCurrentTarget();
         if (!l_target.isTouchInRect(touch)){
+            return false;
+        }
+        if(l_target.m_config.attribute.coincost > GC.CoidNum){
             return false;
         }
         MonsterTouch.addListerSprite(l_target.m_config,touch.getLocation());
@@ -48,9 +73,6 @@ var MonsterTouchSprite = cc.Sprite.extend({
         //cc.log("point x is "+point.x);
         //cc.log("offset x is "+offset.x);
         var l_willPoint = monsterBackGroundLayer.TouchOfEnd(point);
-        if(target.m_config.attribute.coincost > GC.CoidNum){
-            return;
-        }
         if(l_willPoint.point.x <=0 )
         {
             return ;
