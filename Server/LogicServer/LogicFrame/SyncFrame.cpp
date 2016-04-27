@@ -87,10 +87,10 @@ void CSyncFrame::OnOneFrameFinished()
         it = sync_frames_.begin(); it != sync_frames_.end(); ++it)
     {
         // 这个房间没有帧信息
-        if (it->second.size() <= 0)
+        /*if (it->second.size() <= 0)
         {
             continue;
-        }
+        }*/
         console_msg("roomID(%d) has frame need sync", it->second.size());
         // 拿到房间信息
         const RoomMessage* room = CRoomFrame::Instance()->GetRoomWithRoomID(it->first);
