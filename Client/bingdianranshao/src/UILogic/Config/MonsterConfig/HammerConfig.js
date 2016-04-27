@@ -24,6 +24,8 @@ HammerConfig.attribute = {
 
 //攻击
 HammerConfig.attack = {
+    "allTime" : 1.4,
+    "attackTime" : 1,
     "begin" : {
         "time" : 1,
         "account" : 10,

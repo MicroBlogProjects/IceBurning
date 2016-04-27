@@ -24,6 +24,8 @@ MusketConfig.attribute = {
 
 //攻击
 MusketConfig.attack = {
+    "allTime" : 2.2,
+    "attackTime" : 1.1,
     "begin" : {
         "time" : 1.1,
         "account" : 11,

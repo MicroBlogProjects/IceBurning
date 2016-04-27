@@ -24,6 +24,8 @@ SiegeConfig.attribute = {
 
 //攻击
 SiegeConfig.attack = {
+    "allTime" : 1,
+    "attackTime" : 1,
     "begin" : {
         "time" : 1,
         "account" : 10,

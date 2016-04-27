@@ -25,6 +25,8 @@ WolfConfig.attribute = {
 
 //攻击
 WolfConfig.attack = {
+    "alltime" : 1,
+    "attackTime" : 1,
     "begin" : {
         "time" : 1,
         "account" : 10,

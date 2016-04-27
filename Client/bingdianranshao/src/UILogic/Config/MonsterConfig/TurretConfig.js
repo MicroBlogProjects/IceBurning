@@ -23,6 +23,8 @@ TurretConfig.attribute = {
 };
 
 TurretConfig.attack =  {
+    "allTime" : 2.5,
+    "attackTime" : 2.5,
     "begin" : {
         "time" : 2,
         "account" : 10,

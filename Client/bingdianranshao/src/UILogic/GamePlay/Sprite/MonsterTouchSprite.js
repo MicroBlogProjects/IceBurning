@@ -85,6 +85,8 @@ var MonsterTouchSprite = cc.Sprite.extend({
         step.set_pos_x(x);
         step.set_pos_y(y);
         step.set_type(UserOperatorType.Monster);
+        step.set_frame(GC.Frame +10);
+        cc.log("frame is "+ GC.Frame+10);
         var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
         requestInstance.set_step(step);
         GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);

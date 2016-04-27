@@ -47,6 +47,7 @@
         "src/UILogic/Config/MonsterConfig/DefensiveTowersConfig.js",
         "src/UILogic/Config/MonsterConfig/MonsterConfig.js",
 
+        "src/UILogic/GamePlay/Class/Data/InfomationData.js",
         "src/UILogic/Config/MonsterConfig/HeroSkillConfig.js",
         "src/UILogic/GamePlay/Class/MonsterManager.js",
         "src/UILogic/GamePlay/Class/MyQueue.js",

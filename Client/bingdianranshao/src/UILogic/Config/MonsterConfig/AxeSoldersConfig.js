@@ -25,6 +25,8 @@ AxeSoldersConfig.attribute = {
 
 //攻击
 AxeSoldersConfig.attack = {
+    "allTime" : 1.2,
+    "attackTime" : 0.6,
     "begin" : {
         "time" : 0.6,
         "account" : 6,

@@ -24,6 +24,8 @@ LongSwordConfig.attribute = {
 
 //攻击
 LongSwordConfig.attack = {
+    "allTime" : 1.1,
+    "attackTime" : 1.1,
     "begin" : {
         "time" : 1.1,
         "account" : 11,

@@ -17,6 +17,8 @@ GC.IS_HOST = false; //true 表示主场也是左边这个阵营， false表示�
 GC.ISWIN = false;
 GC.CoidNum = 100;
 GC.hasCreateRoom = 0;
+GC.Frame = 0;
+
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
 var LAYER_PRIORITY_MONSTER = 10;                                //怪物层优先级
@@ -46,6 +48,8 @@ var MAXMonsterAccount = 5;
 var MAXBuildingAccount = 3;
 var MonsterIDList = [];
 var BuildingIDlist = [];
+
+var stepList = [];
 
 //远程攻击动画种类
 var MonsterAnimateKind = {

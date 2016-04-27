@@ -2,17 +2,7 @@
  * Created by jiachen on 2016/3/29.
  */
 
-/*var step = new GameJoy.JS_PBFrameMessage();
-step.set_uin()
-GameJoy.JS_CSFrameSyncRequest.set_step(step);
-GameJoy.Proxy.SendRequest()
-
-var id = GameJoy.Proxy.RecvResponse()
-GameJoy.JS_CSFrameSyncResponse.Instance().get_steps();
-var gamePlayLayer;*/
-
-var RecvMessagTime = 0;
-
+var PCoinText;
 var GamePlayLayer = cc.Layer.extend({
 
     scrollView : null,
@@ -34,19 +24,26 @@ var GamePlayLayer = cc.Layer.extend({
         this.playerInfomation = ccs.load(res.GM_PlayerInfomation_json).node;
         this.TimeTitle = ccui.helper.seekWidgetByName(this.playerInfomation,"m_time_label");
         this.coinText = ccui.helper.seekWidgetByName(this.playerInfomation,"MocoinScount_6");
+        PCoinText = this.coinText
         this.setCoinText();
 
         this.addChild(this.playerInfomation,150);
-        this.schedule(this.updataTime,1);//计时器
-        this.schedule(this.recvMessage,RecvMessagTime);
+
+        //this.schedule(this.updataTime,1);//计时器
+        //this.schedule(this.recvMessage,0);
+
+        this.schedule(this.frameSynsSchedule,0); //帧同步
+
         this.initGameConfig();
 
         gamePlayLayer = this;
     },
     initGameConfig : function(){
+        GC.Frame = 0;
         GC.CoidNum = 100;
         BuildingIDlist = [];
         MonsterIDList = [];
+        stepList = [];
     },
 
     addBackgroundpScrollView :function(){
@@ -109,30 +106,54 @@ var GamePlayLayer = cc.Layer.extend({
         }
 
         return l_position;
-    }
-    ,
+    },
+    frameSynsSchedule : function(){
+        if(this.recvMessage()){
+            this.updataTime();
+            monsterManager.updateMonsterData();
+            GC.Frame ++;
+            //cc.log("GC frame is "+GC.Frame);
+        }
+    },
     recvMessage : function(){
-        ////cc.log("-------------------------------------------------1");
+        //cc.log("-------------------------------------------------1");
         var id = GameJoy.Proxy.RecvResponse();
-        if(id > 0){
-            //cc.log("recvMessageing...."+id);
+        //cc.log("id---- is"+id);
+        if(id <= 0){
+            //cc.log("frame return false");
+            return true;
         }
         if(id == NetIdentify["MSG_FRAME_SYNC"]){
-            //cc.log("step 1 recvMessage id "+id);
+            cc.log("step 1 recvMessage id "+id);
             var response = GameJoy.JS_CSFrameSyncResponse.Instance();
-            //cc.log("resule is "+ response.get_result());
+            cc.log("resule is "+ response.get_result());
             if(response.get_result() != 0){
-                return;
+                return true;
             }
             var steps =response.get_steps();
-            //cc.log("length is " + steps.length);
-            for(var i =0;i < steps.length;i++){
+            for(var i = 0; i < steps.length ;i++){
                 var step = steps[i];
                 var uin = step.get_uin();
                 var x = step.get_pos_x();
                 var y = step.get_pos_y();
                 var monsterId = step.get_obj_id();
                 var type = step.get_type();
+                var frame = step.get_frame();
+                cc.log("recv frame is " + frame);
+                var stepInfomationData = new StepInfomationData(uin,x,y,monsterId,type,frame);
+                stepList.push(stepInfomationData);
+                cc.log("stepList length" +stepList.length);
+            }
+            //cc.log("length is " + steps.length);
+            /*for(var i =0;i < steps.length;i++){
+                var step = steps[i];
+                var uin = step.get_uin();
+                var x = step.get_pos_x();
+                var y = step.get_pos_y();
+                var monsterId = step.get_obj_id();
+                var type = step.get_type();
+                var frame = step.get_frame();
+                cc.log("frame is "+frame);
                 if(type == UserOperatorType.Monster){
                     var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
                     //var config = MonsterConfig[""+monsterId];
@@ -167,15 +188,18 @@ var GamePlayLayer = cc.Layer.extend({
                             GC.ISWIN = true;
                         }
                     }
-                    cc.director.runScene(new GameOverScene);
+                    cc.director.replaceScene(new GameOverScene);
                     break;
                 }
-            }
+            }*/
         }
     },
 
     //计算时间
     updataTime : function(){
+        if(GC.Frame % 60 !=0){
+            return;
+        }
         if(GC.CoidNum <200){
             GC.CoidNum ++;
             MonsterTouch.changedCoin(GC.CoidNum);

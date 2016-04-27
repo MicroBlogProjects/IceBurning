@@ -6,6 +6,10 @@ var monsterManager;
 
 var MonsterManager = cc.Class.extend({
 
+    deathInfomation :null,
+    attackInfomation : null,
+    animateInfomation : null,
+
     //用户添加Monster模块
     myMainBuildingSprite : null,
     enemyMainBuildingSprite : null,
@@ -32,11 +36,110 @@ var MonsterManager = cc.Class.extend({
         this.headMonsterSprite.m_localZOrder = 0;
         this.times = 0;
         monsterManager = this;
+
+        this.deathInfomation = {}; //处理死亡消息
+        this.attackInfomation = {};//处理攻击消息
+        this.animateInfomation = {}; //处理攻击动画
     },
 
     getTime : function(){
         var mydate = new Date();
         //cc.log("minues :"+mydate.getMinutes() +"seconds"+ mydate.getSeconds()+ "millise"+mydate.getMilliseconds());
+    },
+
+    GetPointOfBuild:function(uin,postion)
+    {
+        var l_position={};
+        l_position.tiled=[];
+        l_position.point = null;
+        var tiled = battleLayerConfig.TiledMap.getLayer("layer7");
+        if(uin > 100)
+        {
+
+            for(var i = 0; i < 3; i++)
+            {
+                var l_y = postion.y + i;
+                var l_x = postion.x;
+
+                l_position.tiled.push(cc.p(l_x,l_y));
+            }
+            if( (postion.y)%2 )
+            {
+                var l_x = postion.x + 1;
+                var l_y = postion.y + 1;
+                l_position.tiled.push(cc.p(l_x,l_y));
+            }else
+            {
+                var l_x = postion.x - 1;
+                var l_y = postion.y + 1;
+                l_position.tiled.push(cc.p(l_x,l_y));
+            }
+            var l_msize = (tiled.getTileAt(postion)).getContentSize();
+            var l_mpoint = (tiled.getTileAt(postion)).getPosition();
+            l_position.point = cc.p( l_mpoint.x+32, l_mpoint.y+16);
+            monsterBackGroundLayer.PushDownTower(l_position.tiled,1);
+
+        }else
+        {
+            l_position.tiled.push(postion);
+            l_position.point = (tiled.getTileAt( postion )).getPosition();
+        }
+
+        return l_position;
+    },
+
+    //帧同步
+    frameSyncOperator : function(){
+        var account =0;
+        for(var i = 0; i < stepList.length; i++){
+            var step = stepList[i];
+            if(step.frame <= GC.Frame){
+                account ++;
+                var uin = step.uin;
+                var x = step.x;
+                var y = step.y;
+                var monsterId = step.monsterId;
+                var type = step.type;
+                var frame = step.frame;
+                if(type == UserOperatorType.Monster){
+                    var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
+                    var isMyMonster  =false;
+                    if(uin == GC.UIN){
+                        isMyMonster = true;
+                        var config = MonsterConfig[""+monsterId];
+                        GC.CoidNum -= config.attribute.coincost;
+                        MonsterTouch.changedCoin(GC.CoidNum);
+                        PCoinText.setString(""+GC.CoidNum);
+                    }
+                    else{
+                        isMyMonster = false;
+                    }
+                    this.addMonsterSprite(monsterId, position,isMyMonster);
+                    //cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
+                }
+                else {
+                    if(GC.UIN == uin){
+                        if(monsterId == 1){
+                            GC.ISWIN = true;
+                        }
+                        else {
+                            GC.ISWIN = false;
+                        }
+                    }
+                    else {
+                        if(monsterId == 1){
+                            GC.ISWIN = false;
+                        }
+                        else {
+                            GC.ISWIN = true;
+                        }
+                    }
+                    cc.director.replaceScene(new GameOverScene);
+                    break;
+                }
+            }
+        }
+        stepList.splice(0,account);
     },
 
     //用户添加Monster模块
@@ -70,7 +173,6 @@ var MonsterManager = cc.Class.extend({
             }
             else 
             {
-
                 mosterSprite.m_Camp = 0;
                 this.MonsterArray[0].push(mosterSprite);
             }
@@ -84,13 +186,34 @@ var MonsterManager = cc.Class.extend({
      },
     //更新Monster
     updateMonsterData : function(){
-        this.times=(this.times+1)%1;
+        /*this.times=(this.times+1)%1;
         if(this.times != 0)
-            return ;
+            return ;*/
+        this.frameSyncOperator();
         this.updateMonsterArray();
         this.MovetoNextPosition();
         this.monsterWalking();
+        this.operatorDeathInfomation();
     },
+    operatorDeathInfomation : function(){
+        this.op(this.deathInfomation);
+        this.op(this.attackInfomation);
+        this.op(this.animateInfomation);
+    },
+    op : function(infomation){
+        //cc.log("GC frame is "+ GC.Frame);
+        var infoList = infomation[""+GC.Frame];
+        if(infoList == null || infoList == undefined){
+            return;
+        }
+        for(var i = 0;i < infoList.length; i++){
+            var info = infoList[i];
+            cc.log("++++++"+info.m_id+"   frame is "+ info.m_frame);
+            info.operator();
+        }
+    },
+
+
     MovetoNextPosition:function()
     {
         for(var i = 0; i < 2; ++ i)
@@ -179,6 +302,7 @@ var MonsterManager = cc.Class.extend({
                 step.set_pos_x(0);
                 step.set_pos_y(0);
                 step.set_type(UserOperatorType.Settlement);
+                step.set_frame(GC.Frame+10);
                 var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
                 requestInstance.set_step(step);
                 GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
@@ -202,7 +326,6 @@ var MonsterManager = cc.Class.extend({
 
     //用来计算范围伤害
     getMonstersInRect : function(camp,pos, radius){
-        cc.log("HHHHH");
        var H = radius;
        var W = radius;
        var monsters = [];
@@ -351,6 +474,5 @@ var MonsterManager = cc.Class.extend({
         monster.m_nextMonsterSprite = null;
         monster.m_frontMonsterSprite = null;
     }
-
 
 });

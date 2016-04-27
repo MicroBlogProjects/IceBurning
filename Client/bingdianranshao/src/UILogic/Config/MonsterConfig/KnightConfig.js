@@ -24,6 +24,8 @@ KnightConfig.attribute = {
 
 //攻击
 KnightConfig.attack = {
+    "allTime" : 2.6,
+    "attackTime" : 2,
     "begin" : {
         "time" : 2,
         "account" : 20,

@@ -19,11 +19,14 @@ ArcherConfig.attribute = {
     "attackSpeed" : 2,
     "coincost" :20,
 
+
     "Icon" :res.GM_ArcherIcon_png,
     "defaultImage" : res.GM_ArcherDefault_png
 };
 //攻击
 ArcherConfig.attack =  {
+    "allTime" : 1.1,
+    "attackTime" : 1.1,
     "begin" : {
         "time" : 0.9,
         "account" : 9,

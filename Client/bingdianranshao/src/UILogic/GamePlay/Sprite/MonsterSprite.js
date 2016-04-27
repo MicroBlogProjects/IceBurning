@@ -57,7 +57,7 @@ MonsterSprite = cc.Sprite.extend({
         this.m_defense = attributeConfig.defense;
         this.m_attack = attributeConfig.attack;
         this.m_attackRadius = attributeConfig.attackRadius;
-        this.m_isMyMonster = isMyMonster
+        this.m_isMyMonster = isMyMonster;
         this.setDirect();
         this.scheduleUpdate();
 
@@ -166,22 +166,33 @@ MonsterSprite = cc.Sprite.extend({
      //  }
     },
 
-    deathCallFunc : function(sender,config){
+    deathCallFunc : function(){
+        var config = this.m_deathConfig.attribute;
         if(config == null || config == undefined){
 
         }
         else {
             //cc.log("deathCallFunc shagnhai");
             var attackRadius = config.attackRadius;
-            var attack = config.attack;;
-            var monsters = monsterManager.getMonstersInRect(1-sender.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(sender.getPosition()), attackRadius);
+            var attack = config.attack;
+            var type =1;
+            var position = this.getPosition();
+            var frame = GC.Frame +10;
+            var attackInfomationData = new AttackInfomationData(type, attack, position, frame, this.m_Camp,attackRadius );
+            if(monsterManager.attackInfomation[""+frame] == null ||monsterManager.attackInfomation[""+frame] == null){
+                monsterManager.attackInfomation[""+frame] =[];
+            }
+            mmonsterManager.attackInfomation[""+frame] == push(attackInfomationData);
+            /*var monsters = monsterManager.getMonstersInRect(1-this.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(this.getPosition()), attackRadius);
             cc.log(monsters.length);
             for(var i = 0; i< monsters.length;i++){
                 var monster = monsters[i];
                 monster.m_HP -= (attack / monster.m_defense + 1);
                 //cc.log("monste hp is ",monster.m_HP);
-            }
+            }*/
+
         }
+        cc.log("deathCallFunc");
         this.m_activity = false;
         this.removeFromParent();
     },
@@ -192,13 +203,13 @@ MonsterSprite = cc.Sprite.extend({
         var skillConfig = argu.skillConfig;
         var endAnimate = argu.endAnimate;
         if(skillConfig == null || skillConfig == undefined){
-            enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
+            //enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
         }
         else {
             monsterLayer.skillAnimate(skillConfig,myMonster,enemyMonster);
         }
         if(endAnimate == null || endAnimate == undefined){
-            this.m_state = null;
+            //this.m_state = null;
         }
         else {
             this.startAnimate(endAnimate);
@@ -207,7 +218,7 @@ MonsterSprite = cc.Sprite.extend({
 
     },
     attackEndCallFunc :function(){
-        this.m_state = null;
+        //this.m_state = null;
     },
     walkingCallFunc : function(){
 //        this.setPosition(cc.p(this.m_nextPosition);
@@ -246,6 +257,22 @@ MonsterSprite = cc.Sprite.extend({
             this.m_state = null;
             return;
         }
+        var allTime = this.m_attackConfig.allTime;
+        var allFrame = GC.Frame + parseInt(allTime * 60);
+        var attackAnimateInfomationData = new AttackAnimateInfomationData(this.m_spriteID,allFrame);
+        if(monsterManager.animateInfomation[""+allFrame] == null || monsterManager.animateInfomation[""+allFrame] == undefined){
+            monsterManager.animateInfomation[""+allFrame] = [];
+        }
+        monsterManager.animateInfomation[""+allFrame].push(attackAnimateInfomationData);
+        var attatkTime = this.m_attackConfig.attackTime;
+        var attackFrame = GC.Frame + parseInt(attatkTime * 60);
+        var type = 0;
+        var attackInfomationData = new AttackInfomationData(type,this.m_attack,this.m_AttackObjectsID,attackFrame);
+        if(monsterManager.attackInfomation[""+attackFrame] == null || monsterManager.attackInfomation[""+attackFrame] == undefined ){
+            monsterManager.attackInfomation[""+attackFrame] = [];
+        }
+        monsterManager.attackInfomation[""+attackFrame].push(attackInfomationData);
+
         var beginConfig = this.m_attackConfig.begin;
         this.startAnimate(beginConfig);
         var endConfig = this.m_attackConfig.end;
@@ -263,10 +290,17 @@ MonsterSprite = cc.Sprite.extend({
         if(this.m_state == state){
             return;
         }
-
+        cc.log("deathAnimate begin");
         this.m_state = state;
         this.startAnimate(this.m_deathConfig.begin);
-        this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this,this.m_deathConfig.attribute)));
+        this.runAction(cc.repeatForever(this.m_nowAnimateAction));
+        var frame = GC.Frame + parseInt(this.m_deathConfig.begin.time * 60);
+        var deathInfomationData = new DeathInfomationData(this.m_spriteID,frame);
+        if(monsterManager.deathInfomation[""+frame] == null || monsterManager.deathInfomation[""+frame] == undefined){
+            monsterManager.deathInfomation[""+frame] = [];
+        }
+        monsterManager.deathInfomation[""+frame].push(deathInfomationData);
+        //this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this,this.m_deathConfig.attribute)));
     },
 
     
