@@ -201,108 +201,108 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Panel_3_0" ActionTag="-1464294215" Tag="82" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="523.8735" RightMargin="53.1266" TopMargin="17.7354" BottomMargin="90.2700" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_3_0" ActionTag="-1464294215" Tag="82" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="523.8534" RightMargin="53.1468" TopMargin="17.7354" BottomMargin="90.2700" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="199.9998" Y="422.9946" />
                     <Children>
-                      <AbstractNodeData Name="HP_text" ActionTag="688524910" Tag="83" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="49.9492" BottomMargin="346.0454" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="HP_text" ActionTag="688524910" Tag="83" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="49.9492" BottomMargin="346.0454" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="359.5454" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.8500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="defense_text" ActionTag="2006942018" Tag="84" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="92.2487" BottomMargin="303.7459" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="defense_text" ActionTag="2006942018" Tag="84" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="92.2487" BottomMargin="303.7459" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="317.2459" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.7500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="attack_text" ActionTag="-100801647" Tag="85" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="134.5481" BottomMargin="261.4465" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="attack_text" ActionTag="-100801647" Tag="85" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="134.5481" BottomMargin="261.4465" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="274.9465" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.6500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="attackRadius_text" ActionTag="-1552731087" Tag="86" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="176.8476" BottomMargin="219.1470" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="attackRadius_text" ActionTag="-1552731087" Tag="86" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="176.8476" BottomMargin="219.1470" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="232.6470" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.5500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="attackSpeed_text" ActionTag="815761852" Tag="87" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="219.1470" BottomMargin="176.8476" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="attackSpeed_text" ActionTag="815761852" Tag="87" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="219.1470" BottomMargin="176.8476" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="190.3476" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.4500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="coincost_text" ActionTag="-1617796916" Tag="88" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="261.4465" BottomMargin="134.5481" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="coincost_text" ActionTag="-1617796916" Tag="88" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="261.4465" BottomMargin="134.5481" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="148.0481" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.3500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="name_text" ActionTag="-677433768" Tag="89" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="7.6497" BottomMargin="388.3448" TouchEnable="True" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="name_text" ActionTag="-677433768" Tag="89" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="7.6497" BottomMargin="388.3448" TouchEnable="True" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="401.8448" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.9500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="walkingSpeed_text" ActionTag="1969000546" Tag="219" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="68.9999" RightMargin="68.9999" TopMargin="303.7459" BottomMargin="92.2486" FontSize="24" LabelText="00000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="62.0000" Y="27.0000" />
+                      <AbstractNodeData Name="walkingSpeed_text" ActionTag="1969000546" Tag="219" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.9999" RightMargin="44.9999" TopMargin="303.7459" BottomMargin="92.2486" FontSize="24" LabelText="000000000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="110.0000" Y="27.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="99.9999" Y="105.7486" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="94" G="239" B="7" />
                         <PrePosition X="0.5000" Y="0.2500" />
-                        <PreSize X="0.3100" Y="0.0638" />
+                        <PreSize X="0.5500" Y="0.0638" />
                         <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint />
-                    <Position X="523.8735" Y="90.2700" />
+                    <Position X="523.8534" Y="90.2700" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.6742" Y="0.1700" />

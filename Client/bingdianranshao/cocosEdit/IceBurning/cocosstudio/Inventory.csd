@@ -320,13 +320,13 @@
                 <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Text_30" ActionTag="486067488" Tag="222" IconVisible="False" LeftMargin="283.7600" RightMargin="282.0400" TopMargin="45.5200" BottomMargin="488.2800" FontSize="20" LabelText="选择5个小兵和3个塔" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="Text_30" ActionTag="486067488" Tag="222" IconVisible="False" LeftMargin="279.7600" RightMargin="286.0400" TopMargin="45.5200" BottomMargin="488.2800" FontSize="20" LabelText="选择5个小兵和3个塔" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="183.0000" Y="23.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="375.2600" Y="499.7800" />
+                <Position X="371.2600" Y="499.7800" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="0" B="0" />
-                <PrePosition X="0.5011" Y="0.8976" />
+                <PrePosition X="0.4958" Y="0.8976" />
                 <PreSize X="0.2444" Y="0.0413" />
                 <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />

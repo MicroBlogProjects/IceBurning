@@ -8,7 +8,7 @@ var XingxingmofataConfig = XingxingmofataConfig || {};
 //属性
 XingxingmofataConfig.attribute = {
     "id" : 101, //id
-    "name" : "星星魔法塔",
+    "name" : "天雷塔",
 
     "walkSpeed" : 0, //移动速度
     "HP" : 100.0, //血量

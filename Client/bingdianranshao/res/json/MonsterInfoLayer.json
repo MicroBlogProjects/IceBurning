@@ -1039,7 +1039,7 @@
                     "TouchEnable": true,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 523.8735,
+                      "X": 523.8534,
                       "Y": 90.27
                     },
                     "Scale": {
@@ -1062,15 +1062,15 @@
                       "X": 0.2574,
                       "Y": 0.7966
                     },
-                    "LeftMargin": 523.8735,
-                    "RightMargin": 53.1266,
+                    "LeftMargin": 523.8534,
+                    "RightMargin": 53.1468,
                     "TopMargin": 17.7354,
                     "BottomMargin": 90.27,
                     "Tag": 82,
                     "Children": [
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1112,17 +1112,17 @@
                           "Y": 0.85
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 49.9492,
                         "BottomMargin": 346.0454,
                         "Tag": 83,
                         "ActionTag": 688524910,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "HP_text",
@@ -1130,7 +1130,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1172,17 +1172,17 @@
                           "Y": 0.75
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 92.2487,
                         "BottomMargin": 303.7459,
                         "Tag": 84,
                         "ActionTag": 2006942018,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "defense_text",
@@ -1190,7 +1190,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1232,17 +1232,17 @@
                           "Y": 0.65
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 134.5481,
                         "BottomMargin": 261.4465,
                         "Tag": 85,
                         "ActionTag": -100801647,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "attack_text",
@@ -1250,7 +1250,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1292,17 +1292,17 @@
                           "Y": 0.55
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 176.8476,
                         "BottomMargin": 219.147,
                         "Tag": 86,
                         "ActionTag": -1552731087,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "attackRadius_text",
@@ -1310,7 +1310,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1352,17 +1352,17 @@
                           "Y": 0.45
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 219.147,
                         "BottomMargin": 176.8476,
                         "Tag": 87,
                         "ActionTag": 815761852,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "attackSpeed_text",
@@ -1370,7 +1370,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1412,17 +1412,17 @@
                           "Y": 0.35
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 261.4465,
                         "BottomMargin": 134.5481,
                         "Tag": 88,
                         "ActionTag": -1617796916,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "coincost_text",
@@ -1430,7 +1430,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1473,17 +1473,17 @@
                           "Y": 0.95
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 7.6497,
                         "BottomMargin": 388.3448,
                         "Tag": 89,
                         "ActionTag": -677433768,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "name_text",
@@ -1491,7 +1491,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "00000",
+                        "LabelText": "000000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1533,17 +1533,17 @@
                           "Y": 0.25
                         },
                         "PreSize": {
-                          "X": 0.31,
+                          "X": 0.55,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 68.9999,
-                        "RightMargin": 68.9999,
+                        "LeftMargin": 44.9999,
+                        "RightMargin": 44.9999,
                         "TopMargin": 303.7459,
                         "BottomMargin": 92.2486,
                         "Tag": 219,
                         "ActionTag": 1969000546,
                         "Size": {
-                          "X": 62.0,
+                          "X": 110.0,
                           "Y": 27.0
                         },
                         "Name": "walkingSpeed_text",
