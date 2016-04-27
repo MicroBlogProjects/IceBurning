@@ -43,7 +43,7 @@ var MonsterTouchLayer = cc.Layer.extend({
             var config = MonsterConfig[""+ID];
             var sprite = new MonsterTouchSprite(config);
             sprite.setContentSize(sprite.getContentSize().width*2,sprite.getContentSize().height*2);
-            sprite.setPosition(40+(6+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+51);
+            sprite.setPosition(40+(60+sprite.getContentSize().width)*(i+0.5),sprite.getContentSize().height/2+51);
             this.monsters.push(sprite);
             this.buildingPanel.addChild(sprite);
         }

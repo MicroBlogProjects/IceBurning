@@ -298,6 +298,98 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
+              <AbstractNodeData Name="Cn01_5" ActionTag="-1539069518" Tag="220" IconVisible="False" LeftMargin="191.2000" RightMargin="284.6000" TopMargin="7.8000" BottomMargin="449.0000" ctype="SpriteObjectData">
+                <Size X="273.0000" Y="100.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="327.7000" Y="499.0000" />
+                <Scale ScaleX="0.3600" ScaleY="0.4400" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.4376" Y="0.8962" />
+                <PreSize X="0.3646" Y="0.1796" />
+                <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Cn01_6" ActionTag="-1726358529" Tag="221" IconVisible="False" LeftMargin="287.4300" RightMargin="188.3700" TopMargin="7.8000" BottomMargin="449.0000" ctype="SpriteObjectData">
+                <Size X="273.0000" Y="100.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="423.9300" Y="499.0000" />
+                <Scale ScaleX="-0.3600" ScaleY="0.4400" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5661" Y="0.8962" />
+                <PreSize X="0.3646" Y="0.1796" />
+                <FileData Type="Normal" Path="Common/Cn01.png" Plist="" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Text_30" ActionTag="486067488" Tag="222" IconVisible="False" LeftMargin="283.7600" RightMargin="282.0400" TopMargin="45.5200" BottomMargin="488.2800" FontSize="20" LabelText="选择5个小兵和3个塔" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="183.0000" Y="23.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="375.2600" Y="499.7800" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="0" B="0" />
+                <PrePosition X="0.5011" Y="0.8976" />
+                <PreSize X="0.2444" Y="0.0413" />
+                <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="BuildingButton" ActionTag="-1234022689" Tag="148" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="496.1870" RightMargin="72.9009" TopMargin="27.4097" BottomMargin="475.2136" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="240" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="179.7120" Y="54.1766" />
+                <Children>
+                  <AbstractNodeData Name="Text_44" ActionTag="-1444397815" Tag="302" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="75.3560" RightMargin="75.3560" TopMargin="11.5883" BottomMargin="11.5883" FontSize="25" LabelText="塔" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="29.0000" Y="31.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="89.8560" Y="27.0883" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.5000" Y="0.5000" />
+                    <PreSize X="0.1614" Y="0.5722" />
+                    <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
+                    <OutlineColor A="255" R="0" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="586.0430" Y="502.3019" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.7826" Y="0.9021" />
+                <PreSize X="0.2400" Y="0.0973" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Common/ui6_common_anniu_da2.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Common/ui6_common_anniu_da2.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="MonsterButton" ActionTag="-1857317471" Tag="147" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="64.4917" RightMargin="504.1470" TopMargin="28.1097" BottomMargin="474.5137" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="240" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="180.1613" Y="54.1766" />
+                <Children>
+                  <AbstractNodeData Name="Text_43" ActionTag="703990913" Tag="301" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="63.5807" RightMargin="63.5806" TopMargin="11.5883" BottomMargin="11.5883" FontSize="25" LabelText="小兵" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="53.0000" Y="31.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="90.0807" Y="27.0883" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.5000" Y="0.5000" />
+                    <PreSize X="0.2942" Y="0.5722" />
+                    <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
+                    <OutlineColor A="255" R="0" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="154.5723" Y="501.6020" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.2064" Y="0.9009" />
+                <PreSize X="0.2406" Y="0.0973" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Common/ui6_common_anniu_da2.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Common/ui6_common_anniu_da2.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
               <AbstractNodeData Name="Image_187" ActionTag="-1718170485" Tag="712" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="204.1978" RightMargin="204.1978" TopMargin="-31.0695" BottomMargin="503.4586" Scale9Width="270" Scale9Height="94" ctype="ImageViewObjectData">
                 <Size X="340.4045" Y="84.4109" />
                 <Children>
@@ -403,10 +495,10 @@
                     <PreSize X="1.0204" Y="1.5158" />
                     <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Building_image_view6" ActionTag="493893366" UserData="8" Tag="222" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-129.4734" RightMargin="115.4794" TopMargin="-102.0846" BottomMargin="-102.0845" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Building_image_view6" ActionTag="493893366" UserData="8" Tag="222" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-129.4444" RightMargin="115.4504" TopMargin="-102.0846" BottomMargin="-102.0845" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
                     <Size X="699.9740" Y="599.9991" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="220.5136" Y="197.9150" />
+                    <Position X="220.5426" Y="197.9150" />
                     <Scale ScaleX="0.1629" ScaleY="0.1767" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3215" Y="0.5000" />
@@ -443,10 +535,10 @@
                     <PreSize X="1.0204" Y="1.5158" />
                     <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Building_image_view10" ActionTag="1581030953" Tag="226" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-251.9498" RightMargin="237.9558" TopMargin="15.6645" BottomMargin="-219.8335" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Building_image_view10" ActionTag="1581030953" Tag="226" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-251.9604" RightMargin="237.9664" TopMargin="15.6749" BottomMargin="-219.8440" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
                     <Size X="699.9740" Y="599.9991" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="98.0372" Y="80.1660" />
+                    <Position X="98.0265" Y="80.1556" />
                     <Scale ScaleX="0.1506" ScaleY="0.1644" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1429" Y="0.2025" />
@@ -675,7 +767,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="MonsterPanel" ActionTag="-1760594608" Tag="512" IconVisible="False" LeftMargin="28.6219" RightMargin="34.1981" TopMargin="88.1145" BottomMargin="72.8555" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="MonsterPanel" ActionTag="-1760594608" Tag="512" IconVisible="False" LeftMargin="28.6200" RightMargin="34.2000" TopMargin="88.1100" BottomMargin="72.8600" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="685.9800" Y="395.8300" />
                 <Children>
                   <AbstractNodeData Name="Image_189" CanEdit="False" ActionTag="-336795910" Tag="714" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" RightMargin="342.9900" Scale9Enable="True" LeftEage="40" RightEage="40" TopEage="40" BottomEage="40" Scale9OriginX="40" Scale9OriginY="40" Scale9Width="193" Scale9Height="20" ctype="ImageViewObjectData">
@@ -738,10 +830,10 @@
                     <PreSize X="1.0204" Y="1.5158" />
                     <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="monster_image_view6" ActionTag="1524195670" UserData="8" Tag="335" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-129.4734" RightMargin="115.4794" TopMargin="-102.0846" BottomMargin="-102.0845" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="monster_image_view6" ActionTag="1524195670" UserData="8" Tag="335" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-129.4444" RightMargin="115.4504" TopMargin="-102.0846" BottomMargin="-102.0845" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
                     <Size X="699.9740" Y="599.9991" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="220.5136" Y="197.9150" />
+                    <Position X="220.5426" Y="197.9150" />
                     <Scale ScaleX="0.1629" ScaleY="0.1767" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3215" Y="0.5000" />
@@ -778,10 +870,10 @@
                     <PreSize X="1.0204" Y="1.5158" />
                     <FileData Type="Normal" Path="Bag/SelectBg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="monster_image_view10" ActionTag="-99995460" Tag="339" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-251.9498" RightMargin="237.9558" TopMargin="15.6645" BottomMargin="-219.8335" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="monster_image_view10" ActionTag="-99995460" Tag="339" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-251.9604" RightMargin="237.9664" TopMargin="15.6749" BottomMargin="-219.8440" TouchEnable="True" LeftEage="231" RightEage="231" TopEage="198" BottomEage="198" Scale9OriginX="231" Scale9OriginY="198" Scale9Width="238" Scale9Height="204" ctype="ImageViewObjectData">
                     <Size X="699.9740" Y="599.9991" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="98.0372" Y="80.1660" />
+                    <Position X="98.0265" Y="80.1556" />
                     <Scale ScaleX="0.1506" ScaleY="0.1644" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1429" Y="0.2025" />
@@ -1000,10 +1092,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="28.6219" Y="72.8555" />
+                <Position X="28.6200" Y="72.8600" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0382" Y="0.1308" />
+                <PrePosition X="0.0382" Y="0.1309" />
                 <PreSize X="0.9161" Y="0.7109" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
@@ -1025,87 +1117,20 @@
                 <OutlineColor A="255" R="0" G="0" B="0" />
                 <ShadowColor A="255" R="0" G="0" B="0" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Button_20" ActionTag="-1671816660" Tag="317" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="170.9277" RightMargin="423.8723" TopMargin="472.5665" BottomMargin="25.2334" TouchEnable="True" FontSize="14" Scale9Width="154" Scale9Height="59" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="154.0000" Y="59.0000" />
+              <AbstractNodeData Name="m_Button_start" ActionTag="-1388254793" Tag="316" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="304.8365" RightMargin="304.8365" TopMargin="476.3424" BottomMargin="29.0093" TouchEnable="True" FontSize="14" LeftEage="65" RightEage="65" TopEage="31" BottomEage="31" Scale9OriginX="65" Scale9OriginY="31" Scale9Width="69" Scale9Height="34" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="139.1270" Y="51.4483" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="247.9277" Y="54.7334" />
+                <Position X="374.4000" Y="54.7334" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3311" Y="0.0983" />
-                <PreSize X="0.2057" Y="0.1060" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Inventory/BaB18.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Inventory/BaB17.png" Plist="" />
-                <OutlineColor A="255" R="0" G="0" B="0" />
-                <ShadowColor A="255" R="0" G="0" B="0" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="m_Button_start" ActionTag="-1388254793" Tag="316" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="423.4230" RightMargin="171.3770" TopMargin="472.5665" BottomMargin="25.2334" TouchEnable="True" FontSize="14" Scale9Width="154" Scale9Height="59" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="154.0000" Y="59.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="500.4230" Y="54.7334" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6683" Y="0.0983" />
-                <PreSize X="0.2057" Y="0.1060" />
+                <PrePosition X="0.5000" Y="0.0983" />
+                <PreSize X="0.1858" Y="0.0924" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Normal" Path="Common/BaS10.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Common/BaS09.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Common/BaS08.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Common/StartButtonHight.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Common/StartButtonnormal.png" Plist="" />
                 <OutlineColor A="255" R="0" G="0" B="0" />
                 <ShadowColor A="255" R="0" G="0" B="0" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="BaB151_2" ActionTag="-480324525" Tag="248" IconVisible="False" LeftMargin="281.1800" RightMargin="384.6200" TopMargin="37.5700" BottomMargin="473.2300" ctype="SpriteObjectData">
-                <Size X="83.0000" Y="46.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="322.6800" Y="496.2300" />
-                <Scale ScaleX="1.2000" ScaleY="1.2000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4309" Y="0.8912" />
-                <PreSize X="0.1108" Y="0.0826" />
-                <FileData Type="Normal" Path="Inventory/BaB151.png" Plist="" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="BaB159_3" ActionTag="147889939" Tag="249" IconVisible="False" LeftMargin="377.4100" RightMargin="288.3900" TopMargin="34.6100" BottomMargin="476.1900" ctype="SpriteObjectData">
-                <Size X="83.0000" Y="46.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="418.9100" Y="499.1900" />
-                <Scale ScaleX="1.2000" ScaleY="1.2000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5594" Y="0.8965" />
-                <PreSize X="0.1108" Y="0.0826" />
-                <FileData Type="Normal" Path="Inventory/BaB159.png" Plist="" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="BuildingButton" ActionTag="-1234022689" Tag="148" IconVisible="False" LeftMargin="373.0000" RightMargin="295.8000" TopMargin="32.3000" BottomMargin="477.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="25" Scale9Height="29" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="80.0000" Y="47.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="413.0000" Y="501.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5515" Y="0.8998" />
-                <PreSize X="0.1068" Y="0.0844" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Inventory/BuildingButton.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Inventory/BuildingButton.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="MonsterButton" ActionTag="-1857317471" Tag="147" IconVisible="False" LeftMargin="285.0000" RightMargin="383.8000" TopMargin="34.3000" BottomMargin="475.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="25" Scale9Height="29" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="80.0000" Y="47.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="325.0000" Y="499.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4340" Y="0.8962" />
-                <PreSize X="0.1068" Y="0.0844" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Inventory/MonsterButton.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Inventory/MonsterButton.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -1114,197 +1139,6 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.7800" Y="0.8700" />
-            <SingleColor A="255" R="150" G="200" B="255" />
-            <FirstColor A="255" R="150" G="200" B="255" />
-            <EndColor A="255" R="255" G="255" B="255" />
-            <ColorVector ScaleY="1.0000" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="AttributePanel" Visible="False" ActionTag="-1201152381" VisibleForFrame="False" Tag="164" IconVisible="False" LeftMargin="-348.5262" RightMargin="1108.5261" TopMargin="159.6707" BottomMargin="280.3293" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-            <Size X="200.0000" Y="200.0000" />
-            <Children>
-              <AbstractNodeData Name="Text_5" ActionTag="213751771" Tag="165" IconVisible="False" LeftMargin="5.0000" RightMargin="125.0000" BottomMargin="180.0000" FontSize="20" LabelText=" 名字：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="70.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="190.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.9500" />
-                <PreSize X="0.3500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_name" ActionTag="-622538345" Tag="166" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" BottomMargin="180.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="190.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.9500" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Text_7" ActionTag="805290258" Tag="167" IconVisible="False" LeftMargin="15.0000" RightMargin="135.0000" TopMargin="25.0000" BottomMargin="155.0000" FontSize="20" LabelText="血量:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="50.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="165.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.8250" />
-                <PreSize X="0.2500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_HP" ActionTag="1159081175" Tag="168" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="25.0000" BottomMargin="155.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="165.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.8250" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Text_9" ActionTag="530263152" Tag="169" IconVisible="False" LeftMargin="5.0000" RightMargin="125.0000" TopMargin="50.0000" BottomMargin="130.0000" FontSize="20" LabelText="攻击力:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="70.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="140.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.7000" />
-                <PreSize X="0.3500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_attack" ActionTag="1593036626" Tag="170" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="50.0000" BottomMargin="130.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="140.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.7000" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Text_11" ActionTag="907536126" Tag="171" IconVisible="False" LeftMargin="5.0000" RightMargin="125.0000" TopMargin="75.0000" BottomMargin="105.0000" FontSize="20" LabelText="防御力:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="70.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="115.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.5750" />
-                <PreSize X="0.3500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Text_12" ActionTag="1661634979" Tag="172" IconVisible="False" LeftMargin="15.0000" RightMargin="135.0000" TopMargin="100.0000" BottomMargin="80.0000" FontSize="20" LabelText="攻速:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="50.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="90.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.4500" />
-                <PreSize X="0.2500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Text_13" ActionTag="1893837694" Tag="173" IconVisible="False" LeftMargin="15.0000" RightMargin="135.0000" TopMargin="125.0000" BottomMargin="55.0000" FontSize="20" LabelText="移速:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="50.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="65.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.3250" />
-                <PreSize X="0.2500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Text_14" ActionTag="1043427404" Tag="174" IconVisible="False" LeftMargin="-5.0000" RightMargin="115.0000" TopMargin="150.0000" BottomMargin="30.0000" FontSize="20" LabelText="攻击距离:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="90.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="40.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.2000" />
-                <PreSize X="0.4500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Text_15" ActionTag="1061909873" Tag="175" IconVisible="False" LeftMargin="15.0000" RightMargin="135.0000" TopMargin="175.0000" BottomMargin="5.0000" FontSize="20" LabelText="视野:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="50.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="40.0000" Y="15.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2000" Y="0.0750" />
-                <PreSize X="0.2500" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_defense" ActionTag="-389036538" Tag="176" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="75.0000" BottomMargin="105.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="115.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.5750" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_attack_speed" ActionTag="811653079" Tag="177" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="100.0000" BottomMargin="80.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="90.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.4500" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_walk_speed" ActionTag="943372568" Tag="178" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="125.0000" BottomMargin="55.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="65.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.3250" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_attack_radius" ActionTag="1316367936" Tag="179" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="150.0000" BottomMargin="30.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="40.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.2000" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="atribute_sign_radius" ActionTag="1815132913" Tag="180" IconVisible="False" LeftMargin="105.0000" RightMargin="-5.0000" TopMargin="175.0000" BottomMargin="5.0000" FontSize="20" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="20.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="155.0000" Y="15.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7750" Y="0.0750" />
-                <PreSize X="0.5000" Y="0.1000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-            </Children>
-            <AnchorPoint />
-            <Position X="-348.5262" Y="280.3293" />
-            <Scale ScaleX="1.1301" ScaleY="1.7741" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="-0.3630" Y="0.4380" />
-            <PreSize X="0.2083" Y="0.3125" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />

@@ -14,6 +14,7 @@ var res = {
     MM_Loading_json :  "res/json/LoadingLayer.json",
     MM_LoadingAnimate_plist : "res/Loading/LoadingAnimate.plist",
     MM_LoadingDefault_png : "res/Loading/LoadingDefault.png",
+    MM_MonsterInfo_json   : "res/json/MonsterInfoLayer.json",
     //MB_Select_png :    "res/MainMenu/Select/select.png",
 
     //GamePlay

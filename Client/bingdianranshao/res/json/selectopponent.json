@@ -1779,7 +1779,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 184.2135,
+                          "X": 184.2134,
                           "Y": 61.9454
                         },
                         "Scale": {
@@ -1855,7 +1855,7 @@
                         "Tag": 300,
                         "ActionTag": 1236957558,
                         "Size": {
-                          "X": 361.7021,
+                          "X": 361.7022,
                           "Y": 91.6064
                         },
                         "Name": "Image_189_0_231",
@@ -2079,7 +2079,7 @@
                           "X": 0.1296,
                           "Y": 0.2336
                         },
-                        "LeftMargin": 200.2383,
+                        "LeftMargin": 200.2382,
                         "RightMargin": 422.4389,
                         "TopMargin": 64.4307,
                         "BottomMargin": 31.7698,
@@ -2404,7 +2404,7 @@
                           "Y": 0.2993
                         },
                         "LeftMargin": 178.1684,
-                        "RightMargin": 477.6315,
+                        "RightMargin": 477.6314,
                         "TopMargin": 21.7217,
                         "BottomMargin": 66.232,
                         "Tag": 311,
@@ -2694,7 +2694,7 @@
                 },
                 "LeftMargin": 542.2041,
                 "RightMargin": 177.7959,
-                "TopMargin": 551.5645,
+                "TopMargin": 551.5644,
                 "BottomMargin": 5.2356,
                 "Tag": 59,
                 "Children": [

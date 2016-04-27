@@ -35,7 +35,7 @@ var MainMenuScene = cc.Scene.extend({
     addLoadingLayer : function(){
         this._packLayer.removeFromParent();
         this._loadingLayer = new Loadinglayer();
-        this.addChild(this._loadingLayer);
+        this.addChild(this._loadingLayer,150);
     },
     addBattleLayer:function()
     {

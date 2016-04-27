@@ -1,7 +1,7 @@
 {
   "ID": "a34f4ab0-db45-4cfe-8f73-54238a89a540",
   "Version": "2.3.4",
-  "Name": "Layer",
+  "Name": "MonsterInfoLayer",
   "Content": {
     "Content": {
       "Animation": {
@@ -29,6 +29,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "TouchEnable": true,
             "AnchorPoint": {},
             "Position": {
@@ -405,7 +407,7 @@
                     },
                     "LeftMargin": 472.6144,
                     "RightMargin": 159.3856,
-                    "TopMargin": 450.9604,
+                    "TopMargin": 450.9605,
                     "BottomMargin": 24.0395,
                     "Tag": 70,
                     "Children": [
@@ -494,6 +496,8 @@
                     "ColorVector": {
                       "ScaleY": 1.0
                     },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
                     "TouchEnable": true,
                     "AnchorPoint": {},
                     "Position": {
@@ -611,7 +615,7 @@
                         },
                         "Position": {
                           "X": 99.9999,
-                          "Y": 317.246
+                          "Y": 317.2459
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -636,7 +640,7 @@
                         "LeftMargin": 70.4999,
                         "RightMargin": 70.4999,
                         "TopMargin": 92.2487,
-                        "BottomMargin": 303.746,
+                        "BottomMargin": 303.7459,
                         "Tag": 79,
                         "ActionTag": 1927152225,
                         "Size": {
@@ -888,7 +892,7 @@
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "移动速度：",
+                        "LabelText": "名字：",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -911,7 +915,7 @@
                         },
                         "Position": {
                           "X": 99.9999,
-                          "Y": 401.8449
+                          "Y": 401.8448
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -930,20 +934,80 @@
                           "Y": 0.95
                         },
                         "PreSize": {
-                          "X": 0.535,
+                          "X": 0.295,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 46.4999,
-                        "RightMargin": 46.4999,
+                        "LeftMargin": 70.4999,
+                        "RightMargin": 70.4999,
                         "TopMargin": 7.6497,
-                        "BottomMargin": 388.3449,
+                        "BottomMargin": 388.3448,
                         "Tag": 74,
                         "ActionTag": -1127529006,
                         "Size": {
-                          "X": 107.0,
+                          "X": 59.0,
                           "Y": 27.0
                         },
                         "Name": "Text_3",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FontSize": 24,
+                        "LabelText": "移动速度",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Common/simhei.ttf",
+                          "Plist": ""
+                        },
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 99.9999,
+                          "Y": 105.7486
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 94,
+                          "G": 239,
+                          "B": 7
+                        },
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.25
+                        },
+                        "PreSize": {
+                          "X": 0.49,
+                          "Y": 0.0638
+                        },
+                        "LeftMargin": 50.9999,
+                        "RightMargin": 50.9999,
+                        "TopMargin": 303.7459,
+                        "BottomMargin": 92.2486,
+                        "Tag": 217,
+                        "ActionTag": 1525434075,
+                        "Size": {
+                          "X": 98.0,
+                          "Y": 27.0
+                        },
+                        "Name": "Text_5",
                         "ctype": "TextObjectData"
                       }
                     ],
@@ -975,7 +1039,7 @@
                     "TouchEnable": true,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 525.1743,
+                      "X": 523.8735,
                       "Y": 90.27
                     },
                     "Scale": {
@@ -987,7 +1051,7 @@
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.6759,
+                      "X": 0.6742,
                       "Y": 0.17
                     },
                     "PercentWidthEnable": true,
@@ -998,15 +1062,15 @@
                       "X": 0.2574,
                       "Y": 0.7966
                     },
-                    "LeftMargin": 525.1743,
-                    "RightMargin": 51.8259,
+                    "LeftMargin": 523.8735,
+                    "RightMargin": 53.1266,
                     "TopMargin": 17.7354,
                     "BottomMargin": 90.27,
                     "Tag": 82,
                     "Children": [
                       {
                         "FontSize": 24,
-                        "LabelText": "0",
+                        "LabelText": "00000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1048,25 +1112,25 @@
                           "Y": 0.85
                         },
                         "PreSize": {
-                          "X": 0.07,
+                          "X": 0.31,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 92.9999,
-                        "RightMargin": 92.9999,
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
                         "TopMargin": 49.9492,
                         "BottomMargin": 346.0454,
                         "Tag": 83,
                         "ActionTag": 688524910,
                         "Size": {
-                          "X": 14.0,
+                          "X": 62.0,
                           "Y": 27.0
                         },
-                        "Name": "HP",
+                        "Name": "HP_text",
                         "ctype": "TextObjectData"
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "0",
+                        "LabelText": "00000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1089,7 +1153,7 @@
                         },
                         "Position": {
                           "X": 99.9999,
-                          "Y": 317.246
+                          "Y": 317.2459
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -1108,25 +1172,25 @@
                           "Y": 0.75
                         },
                         "PreSize": {
-                          "X": 0.07,
+                          "X": 0.31,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 92.9999,
-                        "RightMargin": 92.9999,
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
                         "TopMargin": 92.2487,
-                        "BottomMargin": 303.746,
+                        "BottomMargin": 303.7459,
                         "Tag": 84,
                         "ActionTag": 2006942018,
                         "Size": {
-                          "X": 14.0,
+                          "X": 62.0,
                           "Y": 27.0
                         },
-                        "Name": "defense",
+                        "Name": "defense_text",
                         "ctype": "TextObjectData"
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "0",
+                        "LabelText": "00000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1168,25 +1232,25 @@
                           "Y": 0.65
                         },
                         "PreSize": {
-                          "X": 0.07,
+                          "X": 0.31,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 92.9999,
-                        "RightMargin": 92.9999,
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
                         "TopMargin": 134.5481,
                         "BottomMargin": 261.4465,
                         "Tag": 85,
                         "ActionTag": -100801647,
                         "Size": {
-                          "X": 14.0,
+                          "X": 62.0,
                           "Y": 27.0
                         },
-                        "Name": "attack",
+                        "Name": "attack_text",
                         "ctype": "TextObjectData"
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "0",
+                        "LabelText": "00000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1228,25 +1292,25 @@
                           "Y": 0.55
                         },
                         "PreSize": {
-                          "X": 0.07,
+                          "X": 0.31,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 92.9999,
-                        "RightMargin": 92.9999,
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
                         "TopMargin": 176.8476,
                         "BottomMargin": 219.147,
                         "Tag": 86,
                         "ActionTag": -1552731087,
                         "Size": {
-                          "X": 14.0,
+                          "X": 62.0,
                           "Y": 27.0
                         },
-                        "Name": "attackRadius",
+                        "Name": "attackRadius_text",
                         "ctype": "TextObjectData"
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "0",
+                        "LabelText": "00000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1288,25 +1352,25 @@
                           "Y": 0.45
                         },
                         "PreSize": {
-                          "X": 0.07,
+                          "X": 0.31,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 92.9999,
-                        "RightMargin": 92.9999,
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
                         "TopMargin": 219.147,
                         "BottomMargin": 176.8476,
                         "Tag": 87,
                         "ActionTag": 815761852,
                         "Size": {
-                          "X": 14.0,
+                          "X": 62.0,
                           "Y": 27.0
                         },
-                        "Name": "attackSpeed",
+                        "Name": "attackSpeed_text",
                         "ctype": "TextObjectData"
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "0",
+                        "LabelText": "00000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1348,25 +1412,86 @@
                           "Y": 0.35
                         },
                         "PreSize": {
-                          "X": 0.07,
+                          "X": 0.31,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 92.9999,
-                        "RightMargin": 92.9999,
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
                         "TopMargin": 261.4465,
                         "BottomMargin": 134.5481,
                         "Tag": 88,
                         "ActionTag": -1617796916,
                         "Size": {
-                          "X": 14.0,
+                          "X": 62.0,
                           "Y": 27.0
                         },
-                        "Name": "coincost",
+                        "Name": "coincost_text",
                         "ctype": "TextObjectData"
                       },
                       {
                         "FontSize": 24,
-                        "LabelText": "0",
+                        "LabelText": "00000",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Common/simhei.ttf",
+                          "Plist": ""
+                        },
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 99.9999,
+                          "Y": 401.8448
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 94,
+                          "G": 239,
+                          "B": 7
+                        },
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.95
+                        },
+                        "PreSize": {
+                          "X": 0.31,
+                          "Y": 0.0638
+                        },
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
+                        "TopMargin": 7.6497,
+                        "BottomMargin": 388.3448,
+                        "Tag": 89,
+                        "ActionTag": -677433768,
+                        "Size": {
+                          "X": 62.0,
+                          "Y": 27.0
+                        },
+                        "Name": "name_text",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FontSize": 24,
+                        "LabelText": "00000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Common/simhei.ttf",
@@ -1389,7 +1514,7 @@
                         },
                         "Position": {
                           "X": 99.9999,
-                          "Y": 401.8449
+                          "Y": 105.7486
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -1405,23 +1530,23 @@
                         "PositionPercentYEnabled": true,
                         "PrePosition": {
                           "X": 0.5,
-                          "Y": 0.95
+                          "Y": 0.25
                         },
                         "PreSize": {
-                          "X": 0.07,
+                          "X": 0.31,
                           "Y": 0.0638
                         },
-                        "LeftMargin": 92.9999,
-                        "RightMargin": 92.9999,
-                        "TopMargin": 7.6497,
-                        "BottomMargin": 388.3449,
-                        "Tag": 89,
-                        "ActionTag": -677433768,
+                        "LeftMargin": 68.9999,
+                        "RightMargin": 68.9999,
+                        "TopMargin": 303.7459,
+                        "BottomMargin": 92.2486,
+                        "Tag": 219,
+                        "ActionTag": 1969000546,
                         "Size": {
-                          "X": 14.0,
+                          "X": 62.0,
                           "Y": 27.0
                         },
-                        "Name": "walkSpeed",
+                        "Name": "walkingSpeed_text",
                         "ctype": "TextObjectData"
                       }
                     ],
@@ -1432,6 +1557,67 @@
                     },
                     "Name": "Panel_3_0",
                     "ctype": "PanelObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 24,
+                    "LabelText": "Text Label",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Common/simhei.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 388.5,
+                      "Y": 150.9102
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 94,
+                      "G": 239,
+                      "B": 7
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.2842
+                    },
+                    "PreSize": {
+                      "X": 0.1519,
+                      "Y": 0.0508
+                    },
+                    "LeftMargin": 329.5,
+                    "RightMargin": 329.5,
+                    "TopMargin": 366.5898,
+                    "BottomMargin": 137.4102,
+                    "Tag": 300,
+                    "ActionTag": 536691390,
+                    "Size": {
+                      "X": 118.0,
+                      "Y": 27.0
+                    },
+                    "Name": "monster_descrip_text",
+                    "ctype": "TextObjectData"
                   }
                 ],
                 "ActionTag": 549664109,
