@@ -18,7 +18,7 @@ var MonsterManager = cc.Class.extend({
     idx2:null,
     numOfSprite:0,
     ctor : function(){
-        this.numOfSprite =0;
+        this.numOfSprite =1;
         this.idx1 = this.idx2 = 0;
         //用户添加Monster模块
         this.MonsterArray={};
@@ -166,6 +166,7 @@ var MonsterManager = cc.Class.extend({
         {
             monster.m_state = null;
             monster.m_total_AttackNow =0;
+            monster.setDefaultImage();
          //   //cc.log("gongji->3 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
             return ;
         }

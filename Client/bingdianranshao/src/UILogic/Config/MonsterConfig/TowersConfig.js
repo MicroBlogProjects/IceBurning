@@ -12,9 +12,9 @@ TowersConfig.attribute = {
     "sightRadius" : 4, //视野半径
     "defense" : 20.0,
 
-    "HP" : 300.0, //血量
+    "HP" : 250.0, //血量
     "walkSpeed" : 0, //移动速度
-    "attack" : 60.0, //攻击力
+    "attack" : 50.0, //攻击力
     "attackRadius" : 3, //攻击半径
     "attackSpeed" : 0.5,
     "coincost" :80,

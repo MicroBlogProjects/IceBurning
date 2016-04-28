@@ -14,7 +14,7 @@ PylonConfig.attribute = {
 
     "walkSpeed" : 0, //移动速度
     "HP" : 400.0, //血量
-    "attack" : 70.0, //攻击力
+    "attack" : 60.0, //攻击力
     "attackRadius" : 3, //攻击半径
     "attackSpeed" : 0.25,
     "coincost" :90,

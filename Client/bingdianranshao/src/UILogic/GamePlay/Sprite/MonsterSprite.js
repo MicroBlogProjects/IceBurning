@@ -48,9 +48,11 @@ MonsterSprite = cc.Sprite.extend({
     m_total_AttackTime:null,
     m_total_AttackNow:null,
     m_AttackType:null,
+    m_defaultImage : null,
     ctor : function(config,isMyMonster){
         var attributeConfig = config.attribute;
         this.m_AttackType = attributeConfig.attackType;
+        this.m_defaultImage = attributeConfig.defaultImage;
         this._super(attributeConfig.defaultImage);
         this.m_TiledPosition = [];
         this.m_nextTiledPosition = [];
@@ -143,6 +145,10 @@ MonsterSprite = cc.Sprite.extend({
                 this.m_direct = 1;
             }
         }
+    },
+
+    setDefaultImage : function(){
+        this.setTexture(this.m_defaultImage);
     },
 
     startAnimate : function(config){

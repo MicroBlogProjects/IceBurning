@@ -13,8 +13,8 @@ TurretConfig.attribute = {
     "sightRadius" : 4, //视野半径
     "defense" : 20.0,
 
-    "HP" : 350.0, //血量
-    "attack" : 40.0, //攻击力
+    "HP" : 300.0, //血量
+    "attack" : 30.0, //攻击力
     "walkSpeed" : 0, //移动速度
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,

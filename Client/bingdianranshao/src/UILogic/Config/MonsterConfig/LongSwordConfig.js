@@ -17,7 +17,7 @@ LongSwordConfig.attribute = {
     "attackRadius" : 1, //攻击半径
     "attackSpeed" : 1.0 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
     "walkSpeed" : 20, //移动速度
-    "coincost" :5,
+    "coincost" :10,
     "attackType" : 0,
 
     "descript" : "守卫军中最基本的单位，攻守平衡",
