@@ -8,18 +8,20 @@ var DefensiveTowersConfig = DefensiveTowersConfig || {};
 //属性
 DefensiveTowersConfig.attribute = {
     "id" : 105, //id
-    "name" : "自爆塔",
+    "name" : "守卫树精",
     "Icon" :res.GM_DefensiveTowersIcon_png,
     "defaultImage" : res.GM_DefensiveTowersDefault_png,
-
-    "walkSpeed" : 0, //移动速度
-    "HP" : 20.0, //血量
     "sightRadius" : 4, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 4, //攻击半径
-    "attackSpeed" : 2,
-    "coincost" :20
+
+    "HP" : 500.0, //血量
+    "attack" : 30, //攻击力
+    "attackSpeed" : 0,
+    "walkSpeed" : 0, //移动速度
+    "attackRadius" : 0, //攻击半径
+    "coincost" :80,
+
+    "descript" : "热爱大自然树精卫士，为了抵抗邪恶势力的入侵，进化出唯一一种攻击方式自爆,死亡后对范围内的对方怪物造成一定杀伤"
 
 };
 
@@ -28,7 +30,7 @@ DefensiveTowersConfig.attack = null;
 //死亡
 DefensiveTowersConfig.death = {
     "attribute" :{
-        "attack" : 20,
+        "attack" : 30,
         "attackRadius" : 3
     },
     "begin" : {

@@ -10,24 +10,26 @@ TurretConfig.attribute = {
     "name" : "炮塔",
     "Icon" :res.GM_TurretIcon_png,
     "defaultImage" : res.GM_TurretAttackDeafult_png,
-
-    "walkSpeed" : 0, //移动速度
-    "HP" : 100.0, //血量
     "sightRadius" : 4, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 4, //攻击半径
-    "attackSpeed" : 2,
-    "coincost" :20,
-    "attackType" : 1
+
+    "HP" : 350.0, //血量
+    "attack" : 40.0, //攻击力
+    "walkSpeed" : 0, //移动速度
+    "attackRadius" : 2, //攻击半径
+    "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,
+    "coincost" :100,
+    "attackType" : 1,
+
+    "descript" : "是一固定于地面建筑上的弹丸射击武器装置,给靠近的人力范围性伤害"
 
 };
 
 TurretConfig.attack =  {
-    "allTime" : 2.5,
-    "attackTime" : 2,
+    "allTime" : GC.AttackSpeedCoefficient / 0.5,
+    "attackTime" : GC.AttackSpeedCoefficient / 0.5 - 0.5,
     "begin" : {
-        "time" : 2,
+        "time" : GC.AttackSpeedCoefficient / 0.5 - 0.5,
         "account" : 10,
         "prefix" : "TurretAttackBegin",
         "animatePlist" : res.GM_TurreAttackBegin_plist

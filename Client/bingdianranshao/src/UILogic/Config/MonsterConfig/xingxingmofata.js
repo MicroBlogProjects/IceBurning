@@ -9,26 +9,27 @@ var XingxingmofataConfig = XingxingmofataConfig || {};
 XingxingmofataConfig.attribute = {
     "id" : 101, //id
     "name" : "天雷塔",
-
-    "walkSpeed" : 0, //移动速度
-    "HP" : 100.0, //血量
-    "sightRadius" : 3, //视野半径
+    "sightRadius" : 0.5  / GC.AttackSpeedCoefficient, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 2, //攻击半径
-    "attackSpeed" : 2,
-    "coincost" :20,
-    "attackType" : 1,
 
+    "HP" : 300.0, //血量
+    "attack" : 30.0, //攻击力
+    "walkSpeed" : 0, //移动速度
+    "attackRadius" : 3, //攻击半径
+    "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,
+    "attackType" : 1,
+    "coincost" :140,
+
+    "descript" : "防御性建筑物，召唤从天而降的天雷，对于范围性敌人毁灭性打击",
     "Icon" : res.GM_XxmftIcon_Png,
     "defaultImage" : res.GM_Xxmft_Png
 };
 //攻击
 XingxingmofataConfig.attack =  {
-    "allTime" : 1.5,
-    "attackTime" : 1.5,
+    "allTime" : GC.AttackSpeedCoefficient /0.5,
+    "attackTime" : GC.AttackSpeedCoefficient /0.5 - 0.5,
     "begin" : {
-        "time" : 1,
+        "time" : GC.AttackSpeedCoefficient /0.5 - 0.5,
         "account" : 10,
         "prefix" : "xxfmtAttack",
         "animatePlist" : res.GM_XxmftAttack_Plist
