@@ -24,16 +24,16 @@ MusketConfig.attribute = {
 
 //攻击
 MusketConfig.attack = {
-    "allTime" : 0.7,
-    "attack" : 0.35,
+    "allTime" : 1.4,
+    "attack" : 0.7,
     "begin" : {
-        "time" : 0.35,
+        "time" : 0.7,
         "account" : 11,
         "prefix" : "MusketAttackBegin",
         "animatePlist" : res.GM_Musket_plist
     },
     "end" : {
-        "time" : 0.35,
+        "time" : 0.7,
         "account" : 11,
         "prefix" : "MusketAttackEnd",
         "animatePlist" : res.GM_Musket_plist

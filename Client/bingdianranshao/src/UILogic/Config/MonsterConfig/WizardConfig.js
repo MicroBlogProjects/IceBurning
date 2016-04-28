@@ -26,7 +26,7 @@ WizardConfig.attribute = {
 //攻击
 WizardConfig.attack =  {
     "allTime" : 0.8,
-    "attackTime" : 0.8,
+    "attackTime" : 0.6,
     "begin" : {
         "time" : 0.6,
         "account" : 6,

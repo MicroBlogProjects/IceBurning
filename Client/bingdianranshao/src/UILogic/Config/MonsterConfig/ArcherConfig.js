@@ -24,15 +24,20 @@ ArcherConfig.attribute = {
 };
 //攻击
 ArcherConfig.attack =  {
-    "allTime" : 1.3,
-    "attackTime" : 1.5,
+    "allTime" : 1.5,
+    "attackTime" : 1.3,
     "begin" : {
         "time" : 1.3,
         "account" : 9,
         "prefix" : "ArcherAttackBegin",
         "animatePlist" : res.GM_Archer_plist
     },
-    "end" : null
+    "end" : {
+        "time" : 0.2,
+        "account" : 1,
+        "prefix" : "ArcherAttackBegin",
+        "animatePlist" : res.GM_Archer_plist
+    }
 };
 
 //死亡

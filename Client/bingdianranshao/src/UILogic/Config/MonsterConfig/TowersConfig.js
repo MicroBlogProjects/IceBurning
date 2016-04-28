@@ -25,9 +25,9 @@ TowersConfig.attribute = {
 //攻击
 TowersConfig.attack =  {
     "allTime" : 2,
-    "attackTime":2,
+    "attackTime":1.5,
     "begin" : {
-        "time" : 2,
+        "time" : 1.5,
         "account" : 1,
         "prefix" : "TowersAttackBegin",
         "animatePlist" : res.GM_Towers_plist
