@@ -12,7 +12,8 @@ var NetIdentify = {
    "MSG_ON_CREATE_ROOM" : 4,
    "MSG_ON_JOIN_ROOM" : 5,
    "MSG_FIGHT_READY" : 6,
-   "MSG_FRAME_SYNC" : 7
+   "MSG_FRAME_SYNC" : 7,
+   "MSG_BACK_ROOM"  : 8
 };
 
 var NetRequest = {
@@ -21,7 +22,8 @@ var NetRequest = {
    "MSG_ON_PULL_ROOMS" : GameJoy.JS_CSPullRoomsRequest,
    "MSG_ON_CREATE_ROOM" : GameJoy.JS_CSCreateRoomRequest,
    "MSG_ON_JOIN_ROOM" : GameJoy.JS_CSJoinRoomRequest,
-   "MSG_FIGHT_READY" : GameJoy.JS_CSFightReadyRequest
+   "MSG_FIGHT_READY" : GameJoy.JS_CSFightReadyRequest,
+   "MSG_BACK_ROOM_LIST" : GameJoy.JS_CSBackRoomListRequest
 };
 
 var NetResponse = {
