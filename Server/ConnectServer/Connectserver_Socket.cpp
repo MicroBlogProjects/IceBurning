@@ -167,7 +167,7 @@ void ConnsvrSocket::CloseSocket(int32_t fd)
         fd_to_uin.erase(fd);
     }
     fd_to_conn.erase(fd);
-    close(fd);
+    shutdown(fd, SHUT_RDWR);
 }
 
 int32_t ConnsvrSocket::GetSocketFd()

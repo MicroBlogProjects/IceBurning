@@ -18,7 +18,7 @@ class LogicSocket
 public:
     static LogicSocket* Instance();
 
-    int32_t ConnectToConnectserver(const std::string& connect_server_ip = "10.0.128.158");
+    int32_t ConnectToConnectserver(const std::string& connect_server_ip = "10.164.24.237");
     int32_t WriteMessages(const std::vector<CMessage>& messages);
     int32_t WriteOneMessage(const CMessage& message);
     int32_t ReadMessages(std::vector<CMessage*>& messages);

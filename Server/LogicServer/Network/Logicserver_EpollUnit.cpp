@@ -70,7 +70,7 @@ void EpollUnit::EpollDelete(int32_t connfd)
 {
     fd_to_func[connfd] = NULL;
     Epoll_ctl(epollfd, EPOLL_CTL_DEL, connfd, NULL);
-    close(connfd);
+    shutdown(connfd, SHUT_RDWR);
 }
 
 

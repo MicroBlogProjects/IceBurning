@@ -60,7 +60,7 @@ int32_t LogicSocket::ReadOneMessage(CMessage* msg)
         // a new mesage coming
         if (recved_MsgLen_len_ < sz_int)
         {
-            recv_byte = read(logicserver_fd_, &buf_[pTail_], sz_int - recved_MsgLen_len_);
+            recv_byte = recv(logicserver_fd_, &buf_[pTail_], sz_int - recved_MsgLen_len_, 0);
             if (recv_byte == 0)
             {
                 TRACE_WARN("Maybe logic server disconnected with connect server");
@@ -90,7 +90,7 @@ int32_t LogicSocket::ReadOneMessage(CMessage* msg)
         // read content except length
         int32_t read_limit = (pTail_ >= pHead_) ? (MAX_CSMESSAGE_SIZE - pTail_) : (pHead_ - pTail_);
         read_limit = std::min(read_limit, msg_len_ - recved_len_);
-        recv_byte = read(logicserver_fd_, &buf_[pTail_], read_limit);
+        recv_byte = recv(logicserver_fd_, &buf_[pTail_], read_limit, 0);
         if (recv_byte == 0)
         {
             return quit;
@@ -148,7 +148,7 @@ int32_t LogicSocket::WriteOneMessage(const CMessage& message)
         TRACE_WARN("Encode message when write one message failed.");
         return fail;
     }
-    if (write(logicserver_fd_, tmp, len) < 0)
+    if (send(logicserver_fd_, tmp, len, 0) < 0)
     {
         TRACE_WARN("write data from logic to connect failed.");
         return fail;
