@@ -96,7 +96,7 @@ var RangedAttackSprite = cc.Sprite.extend({
         var d = walkSpeed * 1/60;
         var destinationPoint;
         if(distance <= this.width * this.width * 0.5){
-            this.calculationsDamage();
+          //  this.calculationsDamage();
             this.removeFromParent();
             return;
         }
@@ -215,7 +215,7 @@ var RangedAttackSprite = cc.Sprite.extend({
     animateCallFunc : function(sender,argu){
         //cc.log("animate call func1");
         if(argu == null || argu == undefined){
-            sender.calculationsDamage();
+            //sender.calculationsDamage();
             sender.removeFromParent();
             //cc.log("removeFrom parent");
             return;
@@ -230,7 +230,7 @@ var RangedAttackSprite = cc.Sprite.extend({
             monsterLayer.rangedAttackEffect(argu.effect,position);
         }
         if(argu.end == null || argu.end == undefined){
-            sender.calculationsDamage();
+          //  sender.calculationsDamage();
             sender.removeFromParent();
             //cc.log("removeFrom parent");
             //cc.log("animate call func4");

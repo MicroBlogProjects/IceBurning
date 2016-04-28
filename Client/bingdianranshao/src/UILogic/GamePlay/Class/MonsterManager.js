@@ -84,28 +84,117 @@ var MonsterManager = cc.Class.extend({
      },
     //更新Monster
     updateMonsterData : function(){
-        this.times=(this.times+1)%1;
-        if(this.times != 0)
-            return ;
-        this.updateMonsterArray();
+       
         this.MovetoNextPosition();
         this.monsterWalking();
+    },
+
+    NextDeath:function(monster)
+    {
+        if(monster.m_id>200)
+        {
+            var step = new GameJoy.JS_PBFrameMessage();
+            step.set_uin(GC.UIN);
+            if(monster.m_isMyMonster)
+            {
+                step.set_obj_id(0);
+            }
+            else 
+            {
+                step.set_obj_id(1);
+            }
+            step.set_pos_x(0);
+            step.set_pos_y(0);
+            step.set_type(UserOperatorType.Settlement);
+            var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
+            requestInstance.set_step(step);
+            GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
+            return ;
+        }
+        if(monster.m_state == MonsterState.Death)
+        {
+             monster.m_total_nowDeath++;
+           //  cc.log("sile ->"+monster.m_spriteID+" bu = "+monster.m_total_nowDeath);
+             if(monster.m_total_nowDeath == monster.m_total_Death)
+             {
+                monster.m_total_nowDeath = 0;
+                monster.deathCallFunc();
+                this.updateMonsterArray(monster);
+                return;
+             }
+             return ;
+        }
+        if(monster.m_HP <= 0 )
+        {
+            monster.m_nextState = MonsterState.Death;
+            monster.m_total_nowDeath=0;
+            monster.m_state = null;
+            monster.monsterAction();
+        }
+    }
+    ,
+    NextAttrack:function(monster)
+    {
+        if(monster.m_nextState == MonsterState.AttackRight || monster.m_nextState == MonsterState.AttackLeft)
+        {
+            monster.m_total_AttackNow = 0;
+            monster.monsterAction();
+           // cc.log("gongji->1 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
+            return ;
+        }
+        if(monster.m_total_AttackNow == monster.m_total_AttackTime)
+        {
+          //  cc.log("gongji->2 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
+            monster.CaculHeart();   
+        }
+        if(monster.m_total_AttackNow == monster.m_total_AttackAllTime){
+            monster.m_state = null;
+            monster.m_total_AttackNow =0;
+         //   cc.log("gongji->3 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
+            return ;
+        }
+        monster.m_total_AttackNow ++;
+       // cc.log("gongji->4 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
     },
     MovetoNextPosition:function()
     {
         for(var i = 0; i < 2; ++ i)
             for(var j =0; j < this.MonsterArray[i].length; ++ j)
-            {
-                var monster = this.MonsterArray[i][j];
+            {             
+                var monster = this.MonsterArray[i][j];          
+                if(monster.m_HP <= 0 || monster.m_state == MonsterState.Death || monster.m_nextState == MonsterState.Death )
+                {
+                    this.NextDeath(monster);
+                    continue;
+                }
+                if( 
+                    (
+                         monster.m_state == MonsterState.AttackRight || monster.m_state == MonsterState.AttackLeft ||
+                         monster.m_nextState == MonsterState.AttackRight || monster.m_nextState == MonsterState.AttackLeft
+                    )
+                    && monster.m_id<200
+                  )
+                {
+                    this.NextAttrack(monster);
+                    continue;
+                }
                 if(monster.m_HP <=0 || monster.m_id > 100) 
                     continue;
-                this.RunNext(monster);
+                if( ( monster.m_state == MonsterState.WalkingLeft || monster.m_state == MonsterState.WalkingRight
+                    ||monster.m_nextState == MonsterState.WalkingLeft || monster.m_nextState == MonsterState.WalkingRight) && monster.m_id < 100)
+                {     
+                    this.RunNext(monster);
+                }
             }
     },
     RunNext:function(monster)
     {
-        if(monster.m_state == null ||( monster.m_state != MonsterState.WalkingLeft && monster.m_state != MonsterState.WalkingRight ) )
+        
+        if(monster.m_state == null)
         {
+            monster.m_has_foot = 0;
+            monster.monsterAction();
+         //   cc.log("zou->1 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
             return ;
         }
         if(monster.m_total_foot == monster.m_has_foot)
@@ -119,6 +208,7 @@ var MonsterManager = cc.Class.extend({
                 monster.m_TiledPosition[i] = monster.m_nextTiledPosition[i];    
             }
             algorithmOfStatus.AddMonster(monster,1);
+        //    cc.log("zou->2 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
             return ;
         }
         var now_pos = monsterBackGroundLayer.GetPositionOfTiled(monster.m_TiledPosition[0]);
@@ -128,17 +218,17 @@ var MonsterManager = cc.Class.extend({
         E_pos.y = E_pos.y * monster.m_has_foot / monster.m_total_foot + now_pos.y + 32;
         monster.m_has_foot++;
         monster.setPosition(E_pos);
+      //  cc.log("zou->3 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
     }    
     ,
     //删除已经死亡的怪物
-    updateMonsterArray :function(){
-        for(var camp = 0; camp < 2; ++ camp)
-            for(var  i = 0; i < this.MonsterArray[camp].length; i++){
-                var monster = this.MonsterArray[camp][i];
-                if(monster.m_activity == false)
+    updateMonsterArray :function(Lmonster){
+            for(var  i = 0; i < this.MonsterArray[ Lmonster.m_Camp ].length; i++){
+                var monster = this.MonsterArray[ Lmonster.m_Camp ][ i ];
+                if( monster.m_activity == false && monster.m_spriteID == Lmonster.m_spriteID )
                 {
-                    this.removeMonsterSprite(monster);
-                    this.MonsterArray[camp].splice(i,1);
+                    this.removeMonsterSprite( monster );
+                    this.MonsterArray[Lmonster.m_Camp].splice( i,1);
                 }
             }
     },
@@ -152,7 +242,6 @@ var MonsterManager = cc.Class.extend({
             this.idx1=(this.idx1+1)%len1;
             var  myMonster = this.MonsterArray[0][this.idx1];
             this.walk(myMonster);
-
         }
         var len2 = this.MonsterArray[1].length;
         
@@ -166,35 +255,9 @@ var MonsterManager = cc.Class.extend({
 
     walk : function(monster)
     {
-        if(monster.m_id>200){
-            if(monster.m_HP <=0){
-                var step = new GameJoy.JS_PBFrameMessage();
-                step.set_uin(GC.UIN);
-                if(monster.m_isMyMonster){
-                    step.set_obj_id(0);
-                }
-                else {
-                    step.set_obj_id(1);
-                }
-                step.set_pos_x(0);
-                step.set_pos_y(0);
-                step.set_type(UserOperatorType.Settlement);
-                var requestInstance = GameJoy.JS_CSFrameSyncRequest.Instance();
-                requestInstance.set_step(step);
-                GameJoy.Proxy.SendRequest(NetIdentify["MSG_FRAME_SYNC"]);
-            }
-            return ;
-        }
-        if(monster.m_HP <= 0)
-        {
-            monster.m_nextState = MonsterState.Death;
-            monster.monsterAction();
-            return;
-        }
+        if(monster.m_id>200) return;
         algorithmOfStatus.GetStatus(monster);
-        monster.monsterAction();
     },
-
     getPointDistance : function (p1, p2) 
     {
         return (p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y);
@@ -202,7 +265,7 @@ var MonsterManager = cc.Class.extend({
 
     //用来计算范围伤害
     getMonstersInRect : function(camp,pos, radius){
-        cc.log("HHHHH");
+       // cc.log("HHHHH");
        var H = radius;
        var W = radius;
        var monsters = [];

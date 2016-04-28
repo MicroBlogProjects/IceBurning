@@ -14,7 +14,7 @@ HammerConfig.attribute = {
     "sightRadius" : 2, //视野半径
     "defense" : 20.0,
     "attack" : 40.0, //攻击力
-    "attackRadius" : 1, //攻击半径
+    "attackRadius" : 2, //攻击半径
     "attackSpeed" : 1.0,  //攻击速度 多少秒一下
     "coincost" :40,
 
