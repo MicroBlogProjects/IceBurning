@@ -19,6 +19,8 @@ ArcherConfig.attribute = {
     "attackSpeed" : 2,
     "coincost" :10,
 
+    "attackType" : 0,
+
     "Icon" :res.GM_ArcherIcon_png,
     "defaultImage" : res.GM_ArcherDefault_png
 };

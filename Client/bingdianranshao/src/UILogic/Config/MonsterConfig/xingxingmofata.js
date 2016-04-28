@@ -18,6 +18,7 @@ XingxingmofataConfig.attribute = {
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 2,
     "coincost" :20,
+    "attackType" : 1,
 
     "Icon" : res.GM_XxmftIcon_Png,
     "defaultImage" : res.GM_Xxmft_Png

@@ -19,6 +19,8 @@ TowersConfig.attribute = {
     "attackSpeed" : 2,
     "coincost" :20,
 
+    "attackType" : 0,
+
     "Icon" :res.GM_TowersIcon_png,
     "defaultImage" : res.GM_TowersDefault_png
 };

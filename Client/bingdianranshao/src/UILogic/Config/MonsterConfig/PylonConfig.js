@@ -18,6 +18,7 @@ PylonConfig.attribute = {
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 2,
     "coincost" :20,
+    "attackType" : 0,
 
     "Icon" :res.GM_PylonIcon_png,
     "defaultImage" : res.GM_PylonDefault_png

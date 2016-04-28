@@ -17,6 +17,7 @@ SkeletonConfig.attribute = {
     "attackRadius" : 1, //攻击半径
     "attackSpeed" : 1.0,  //攻击速度 多少秒一下
     "coincost" :20,
+    "attackType" : 0,
 
     "Icon" : res.GM_SkeletonIcon_png,
     "defaultImage" : res.GM_SkeletonDefault_png

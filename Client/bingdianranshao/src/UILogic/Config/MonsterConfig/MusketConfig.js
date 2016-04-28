@@ -17,6 +17,7 @@ MusketConfig.attribute = {
     "attackRadius" : 3, //攻击半径
     "attackSpeed" : 0.7,  //攻击速度 多少秒一下
     "coincost" :20,
+    "attackType" : 0,
 
     "Icon" : res.GM_MusketIcon_png,
     "defaultImage" : res.GM_MusketDefault_png

@@ -19,6 +19,7 @@ WizardConfig.attribute = {
     "attackRadius" : 1, //攻击半径
     "attackSpeed" : 2,
     "coincost" :20,
+    "attackType" : 0,
 
     "Icon" :res.GM_WizardIcon_png,
     "defaultImage" : res.GM_WizardDefault_png

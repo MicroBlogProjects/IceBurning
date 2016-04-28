@@ -19,6 +19,8 @@ AxeSoldersConfig.attribute = {
     "attackSpeed" : 1.0,  //攻击速度 多少秒一下
     "coincost" :30,
 
+    "attackType" : 0,
+
     "Icon" : res.GM_AxeSoldiersIcon_png,
     "defaultImage" : res.GM_AxeSoldiersDefault_png
 };

@@ -18,7 +18,8 @@ TurretConfig.attribute = {
     "attack" : 20.0, //攻击力
     "attackRadius" : 4, //攻击半径
     "attackSpeed" : 2,
-    "coincost" :20
+    "coincost" :20,
+    "attackType" : 1
 
 };
 

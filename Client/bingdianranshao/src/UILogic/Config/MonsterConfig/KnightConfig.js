@@ -17,6 +17,7 @@ KnightConfig.attribute = {
     "attackRadius" : 1, //攻击半径
     "attackSpeed" : 0.5,  //攻击速度 多少秒一下
     "coincost" :20,
+    "attackType" : 0,
 
     "Icon" : res.GM_KnightIcon_png,
     "defaultImage" : res.GM_KnightDefault_png

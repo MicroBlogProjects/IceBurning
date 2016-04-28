@@ -18,6 +18,8 @@ HammerConfig.attribute = {
     "attackSpeed" : 1.0,  //攻击速度 多少秒一下
     "coincost" :40,
 
+    "attackType" : 1,
+
     "Icon" : res.GM_HammerIcon_png,
     "defaultImage" : res.GM_HammerDefault_png
 };
