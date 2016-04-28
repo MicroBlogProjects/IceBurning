@@ -33,7 +33,7 @@ var GameOverlayer = cc.Scene.extend({
         recvMessage : function(){
             var id = GameJoy.Proxy.RecvResponse();
             cc.log("recv message !!!!!!!!!!!!!!!!!!!!" + id);
-            if(id == NetIdentify["MSG_BACK_ROOM_LIST"]){
+            if(id == NetIdentify["MSG_BACK_ROOM"]){
                 cc.log("send back room list message");
                 cc.director.replaceScene(new MainMenuScene());
             }
