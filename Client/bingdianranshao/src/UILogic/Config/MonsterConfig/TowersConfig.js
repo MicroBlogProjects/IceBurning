@@ -9,7 +9,7 @@ var TowersConfig = TowersConfig || {};
 TowersConfig.attribute = {
     "id" : 104, //id
     "name" : "箭塔",
-    "sightRadius" : 3, //视野半径
+    "sightRadius" : 4, //视野半径
     "defense" : 20.0,
 
     "HP" : 300.0, //血量

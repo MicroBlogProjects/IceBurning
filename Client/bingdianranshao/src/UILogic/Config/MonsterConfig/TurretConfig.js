@@ -27,7 +27,7 @@ TurretConfig.attribute = {
 
 TurretConfig.attack =  {
     "allTime" : GC.AttackSpeedCoefficient / 0.5,
-    "attackTime" : GC.AttackSpeedCoefficient / 0.5 - 0.5,
+    "attackTime" : GC.AttackSpeedCoefficient / 0.5 - 0.3,
     "begin" : {
         "time" : GC.AttackSpeedCoefficient / 0.5 - 0.5,
         "account" : 10,

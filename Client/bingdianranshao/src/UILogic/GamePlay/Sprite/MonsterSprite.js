@@ -363,6 +363,7 @@ MonsterSprite = cc.Sprite.extend({
         }
         this.m_booldProgressTimer =  cc.ProgressTimer.create(booldSprite);
         this.m_booldProgressTimer.setPosition((this.width*1.1)/2.0,this.height);
+        
         this.m_booldProgressTimer.type = cc.ProgressTimer.TYPE_BAR;
         this.m_booldProgressTimer.setMidpoint(cc.p(0.0,0.5));
         this.m_booldProgressTimer.setBarChangeRate(cc.p(1.0,0.0));

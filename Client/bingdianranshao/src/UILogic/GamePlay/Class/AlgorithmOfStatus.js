@@ -470,7 +470,7 @@
       {
           var l_tit = this.TurnDirec(l_mypos,i);
           var diff = this.DistanceOfPoint(l_tit, l_endPosition);
-          if(diff < l_minv)
+          if(diff < l_minv && l_tit.x >=0 && l_tit.x <= battleLayerConfig.width && l_tit.y >=0 && l_tit.y <= battleLayerConfig.height)
           {
             l_minv = diff;
             l_minpos = l_tit;

@@ -10,7 +10,7 @@ var WizardConfig = WizardConfig || {};
 WizardConfig.attribute = {
     "id" : 9, //id
     "name" : "巫师",
-    "sightRadius" : 2, //视野半径
+    "sightRadius" : 3, //视野半径
     "defense" : 20.0,
 
     "HP" : 120.0, //血量

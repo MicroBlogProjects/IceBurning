@@ -9,7 +9,7 @@ var PylonConfig = PylonConfig || {};
 PylonConfig.attribute = {
     "id" : 103, //id
     "name" : "特斯拉电塔",
-    "sightRadius" : 3, //视野半径
+    "sightRadius" : 4, //视野半径
     "defense" : 20.0,
 
     "walkSpeed" : 0, //移动速度

@@ -9,7 +9,7 @@ var XingxingmofataConfig = XingxingmofataConfig || {};
 XingxingmofataConfig.attribute = {
     "id" : 101, //id
     "name" : "天雷塔",
-    "sightRadius" : 0.5  / GC.AttackSpeedCoefficient, //视野半径
+    "sightRadius" : 4  / GC.AttackSpeedCoefficient, //视野半径
     "defense" : 20.0,
 
     "HP" : 300.0, //血量
