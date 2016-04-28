@@ -3,6 +3,7 @@
 #include "SyncFrame.h"
 #include "../../Proto_out/Login.h"
 #include "../../Proto_out/CreateRoom.h"
+#include "../../Proto_out/GamePlay.h"
 #include "Logicserver_Player.h"
 
 
@@ -12,6 +13,7 @@ RegistFrameAndPBToMsgID(MSG_ON_PULL_ROOMS, CRoomFrame, CSPullRoomsRequest, CSPul
 RegistFrameAndPBToMsgID(MSG_ON_CREATE_ROOM, CRoomFrame, CSCreateRoomRequest, CSCreateRoomResponse)
 RegistFrameAndPBToMsgID(MSG_ON_JOIN_ROOM, CRoomFrame, CSJoinRoomRequest, CSJoinRoomResponse)
 RegistFrameAndPBToMsgID(MSG_FIGHT_READY, CRoomFrame, CSFightReadyRequest, CSFightReadyResponse)
+RegistFrameAndPBToMsgID(MSG_BACK_ROOM, CRoomFrame, CSBackRoomListRequest, CSBackRoomListResponse)
 
 int32_t RoomMessage::SIZE = 2;
 CRoomFrame* CRoomFrame::instance = NULL;
@@ -63,7 +65,6 @@ int32_t CRoomFrame::ProcessRequest(const CMessage& message)
 
 int32_t CRoomFrame::ProcessRequestPullRooms(const CMessage& message)
 {
-    console_msg("uin(%d) PullRooms", message.GetUin());
     ProcessRequestBegin(MSG_ON_PULL_ROOMS, CSPullRoomsRequest, CSPullRoomsResponse);
     pbRes->clear_rooms();
     for (std::map<int32_t, RoomMessage>::iterator it = rooms_.begin(); it != rooms_.end(); ++it)
@@ -75,7 +76,6 @@ int32_t CRoomFrame::ProcessRequestPullRooms(const CMessage& message)
         CSRoomMessage* pbRoom = pbRes->add_rooms();
         pbRoom->set_uin(it->second.roomid_);
         pbRoom->set_username(it->second.room_name_);
-        console_msg("find a room with room ID(%d).", it->second.roomid_);
     }
     pbRes->set_result(success);
     ProcessRequestEnd(success);
@@ -83,7 +83,6 @@ int32_t CRoomFrame::ProcessRequestPullRooms(const CMessage& message)
 
 int32_t CRoomFrame::ProcessRequestCreateRoom(const CMessage& message)
 {
-    console_msg("uin(%d) CreateRoom", message.GetUin());
     ProcessRequestBegin(MSG_ON_CREATE_ROOM, CSCreateRoomRequest, CSCreateRoomResponse);
     int32_t roomID = message.GetUin();
     do {
@@ -109,7 +108,6 @@ int32_t CRoomFrame::ProcessRequestCreateRoom(const CMessage& message)
 }
 int32_t CRoomFrame::ProcessRequestJoinRoom(const CMessage& message)
 {
-    console_msg("uin(%d) JoinRoom", message.GetUin());
     ProcessRequestBegin(MSG_ON_JOIN_ROOM, CSJoinRoomRequest, CSJoinRoomResponse);
     int32_t roomID = pbReq->uin();
     if (rooms_.find(roomID) == rooms_.end())
@@ -118,7 +116,6 @@ int32_t CRoomFrame::ProcessRequestJoinRoom(const CMessage& message)
     }
     else
     {
-        console_msg("uin(%d), join room(%d)", message.GetUin(), roomID);
         OnPlayerJoinRoom(roomID, message.GetUin());
         pbRes->set_result(success);
     }
@@ -126,7 +123,6 @@ int32_t CRoomFrame::ProcessRequestJoinRoom(const CMessage& message)
 }
 int32_t CRoomFrame::ProcessRequestReadyFight(const CMessage& message)
 {
-    console_msg("uin(%d) ReadyFight, ", message.GetUin());
     ProcessRequestBegin(MSG_FIGHT_READY, CSFightReadyRequest, CSFightReadyResponse);
     int32_t roomID = CLoginFrame::Instance()->GetPlayer(message.GetUin())->GetRoomID();
     rooms_[roomID].isReady.insert(message.GetUin());
@@ -139,6 +135,18 @@ int32_t CRoomFrame::ProcessRequestReadyFight(const CMessage& message)
         pbRes->set_result(success);
         OnAllPlayerReady(roomID, message.GetUin());
     }
+    ProcessRequestEnd(success);
+}
+
+int32_t CRoomFrame::ProcessRequestBackRoom(const CMessage& message)
+{
+    ProcessRequestBegin(MSG_BACK_ROOM, CSBackRoomListRequest, CSBackRoomListResponse);
+    int32_t roomID = CLoginFrame::Instance()->GetPlayer(message.GetUin())->GetRoomID();
+    if (roomID > 0 && rooms_.find(roomID) != rooms_.end())
+    {
+        rooms_.erase(roomID);
+    }
+    pbRes->set_result(success);
     ProcessRequestEnd(success);
 }
 
@@ -159,7 +167,6 @@ int32_t CRoomFrame::OnPlayerJoinRoom(int32_t roomID, int32_t uin)
     CPlayer* player = CLoginFrame::Instance()->GetPlayer(uin);
     player->SetRoomID(roomID);
     room.players_.push_back(player);
-    console_msg("roomId(%d) size(%d)", roomID, room.players_.size());
 
     if (room.players_.size() == RoomMessage::SIZE)
     {

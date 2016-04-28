@@ -42,6 +42,7 @@ private:
     int32_t ProcessRequestCreateRoom(const CMessage& message);
     int32_t ProcessRequestJoinRoom(const CMessage& message);
     int32_t ProcessRequestReadyFight(const CMessage& message);
+    int32_t ProcessRequestBackRoom(const CMessage& message);
 
     bool IsAlreadyInRoom(int uin);
     int32_t OnPlayerJoinRoom(int32_t roomID, int32_t uin);
