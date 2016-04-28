@@ -46,6 +46,10 @@ int ParseJSToPBRequest_CSFightReady(GameJoy::JS_CPP_Bridge* js, ::google::protob
 int ParsePBResponseToJS_CSFrameSync(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js);
 int ParseJSToPBRequest_CSFrameSync(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb);
 
+// 返回房间列表
+int ParsePBResponseToJS_CSBackRoom(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js);
+int ParseJSToPBRequest_CSBackRoom(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb);
+
 //to add
 /**************************************************************************************************/
 

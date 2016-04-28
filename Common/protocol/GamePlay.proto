@@ -13,3 +13,12 @@ message CSFrameSyncResponse
     optional int32 result               = 1;
     repeated PBFrameMessage steps       = 2;
 }
+
+// 游戏结束，返回房间列表协议
+message CSBackRoomListRequest
+{
+}
+message CSBackRoomListResponse
+{
+    optional int32 result               = 1;
+}

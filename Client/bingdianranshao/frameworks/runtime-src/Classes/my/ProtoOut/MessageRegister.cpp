@@ -14,6 +14,7 @@ RegistPBToMessageID(MSG_FIGHT_READY, CSFightReadyRequest, CSFightReadyResponse)
 // 帧同步模块
 #include "GamePlay.pb.h"
 RegistPBToMessageID(MSG_FRAME_SYNC, CSFrameSyncRequest, CSFrameSyncResponse)
+RegistPBToMessageID(MSG_BACK_ROOM, CSBackRoomListRequest, CSBackRoomListResponse)
 // to add 其他协议
 /*==============================================================================*/
 
