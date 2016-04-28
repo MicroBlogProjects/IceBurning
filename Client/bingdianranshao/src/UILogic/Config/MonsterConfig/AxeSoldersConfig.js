@@ -8,35 +8,35 @@ var AxeSoldersConfig = AxeSoldersConfig || {};
 //属性
 AxeSoldersConfig.attribute = {
     "id" : 6, //id
-    "name" : "斧兵",
-
-    "walkSpeed" : 10, //移动速度
-    "HP" : 200.0, //血量
+    "name" : "诺玛斧兵",
     "sightRadius" : 3, //视野半径
     "defense" : 20.0,
+
+    "HP" : 200.0, //血量
     "attack" : 70.0, //攻击力
     "attackRadius" : 1, //攻击半径
-    "attackSpeed" : 1.0,  //攻击速度 多少秒一下
-    "coincost" :30,
-
+    "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
+    "walkSpeed" : 10, //移动速度
+    "coincost" :50,
     "attackType" : 0,
 
+    "descript" : "装备精良，身着诺玛族工匠特制的重型盔甲，手持染血的战斧，拥有可怕的攻击力和防御力",
     "Icon" : res.GM_AxeSoldiersIcon_png,
     "defaultImage" : res.GM_AxeSoldiersDefault_png
 };
 
 //攻击
 AxeSoldersConfig.attack = {
-    "allTime" : 1,
-    "attackTime" : 0.5,
+    "allTime" :   GC.AttackSpeedCoefficient / 0.5,
+    "attackTime" : GC.AttackSpeedCoefficient / 0.5 / 2,
     "begin" : {
-        "time" : 0.5,
+        "time" :  GC.AttackSpeedCoefficient / 0.5 /2,
         "account" : 6,
         "prefix" : "AxeSoldiersAttackBegin",
         "animatePlist" : res.GM_AxeSoldiers_plist
     },
     "end" : {
-        "time" : 0.5,
+        "time" :  GC.AttackSpeedCoefficient / 0.5 / 2,
         "account" : 6,
         "prefix" : "AxeSoldiersAttackEnd",
         "animatePlist" : res.GM_AxeSoldiers_plist
@@ -44,8 +44,6 @@ AxeSoldersConfig.attack = {
 };
 
 AxeSoldersConfig.death = {
-    "allTime" : 0.6,
-    "attackTime" : 0.6,
     "begin" : {
         "time" : 0.6,
         "account" : 6,
@@ -59,7 +57,7 @@ AxeSoldersConfig.skill = null;
 
 AxeSoldersConfig.walking = {
     "begin" :{
-        "time" : 2,
+        "time" : GC.WalkingSpeedCoefficient / 1,
         "account" : 6,
         "prefix" : "AxeSoldiersWalking",
         "animatePlist" : res.GM_AxeSoldiers_plist

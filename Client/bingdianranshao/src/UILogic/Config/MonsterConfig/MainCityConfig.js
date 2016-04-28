@@ -11,7 +11,7 @@ MainCityConfig.attribute = {
     "name" : "主城",
 
     "walkSpeed" : 0, //移动速度
-    "HP" : 100.0, //血量
+    "HP" : 1000.0, //血量
     "sightRadius" : 0, //视野半径
     "defense" : 20.0,
     "attack" : 0.0, //攻击力

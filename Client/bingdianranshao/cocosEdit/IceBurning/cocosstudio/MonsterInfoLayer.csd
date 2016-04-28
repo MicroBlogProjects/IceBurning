@@ -312,14 +312,14 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="monster_descrip_text" ActionTag="536691390" Tag="300" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="329.5000" RightMargin="329.5000" TopMargin="366.5898" BottomMargin="137.4102" IsCustomSize="True" FontSize="24" LabelText="Text Label" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="118.0000" Y="27.0000" />
+                  <AbstractNodeData Name="monster_descrip_text" ActionTag="536691390" Tag="300" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="21.5000" RightMargin="21.5000" TopMargin="357.0898" BottomMargin="127.9102" IsCustomSize="True" FontSize="16" LabelText="0000000000000000000000000000000000000000000000000000000000000" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="734.0000" Y="46.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="388.5000" Y="150.9102" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="94" G="239" B="7" />
                     <PrePosition X="0.5000" Y="0.2842" />
-                    <PreSize X="0.1519" Y="0.0508" />
+                    <PreSize X="0.9447" Y="0.0866" />
                     <FontResource Type="Normal" Path="Common/simhei.ttf" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />

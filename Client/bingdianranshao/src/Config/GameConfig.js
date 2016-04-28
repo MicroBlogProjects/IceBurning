@@ -13,10 +13,12 @@ GC.UIN = -1;
 GC.NUM_MONSTER_BLOCK = 2;
 
 GC.IS_HOST = false; //true 表示主场也是左边这个阵营， false表示客场也是右边这个阵营
-
 GC.ISWIN = false;
 GC.CoidNum = 100;
 GC.hasCreateRoom = 0;
+GC.WalkingSpeedCoefficient = 1.5;
+GC.AttackSpeedCoefficient = 1;
+
 var LAYER_PRIORITY_BACKGROUND = 0;			               //背景层优先级
 var LAYER_PRIORITY_MAP = 5;                                //地图优先级
 var LAYER_PRIORITY_MONSTER = 10;                                //怪物层优先级

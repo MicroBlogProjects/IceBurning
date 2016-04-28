@@ -8,34 +8,35 @@ var ArcherConfig = ArcherConfig || {};
 //属性
 ArcherConfig.attribute = {
     "id" : 7, //id
-    "name" : "弓箭手",
-
-
-    "walkSpeed" : 20, //移动速度
-    "HP" : 60.0, //血量
+    "name" : "丛林猎手",
     "defense" : 20.0,
+    "sightRadius" : 3, //视野半径
+
+
+    "HP" : 60.0, //血量
     "attack" : 30.0, //攻击力
     "attackRadius" : 2, //攻击半径
-    "attackSpeed" : 2,
+    "attackSpeed" : 1.5/GC.AttackSpeedCoefficient,
+    "walkSpeed" : 20, //移动速度
     "coincost" :10,
-
     "attackType" : 0,
 
+    "descript" : "擅长使用弓箭，在后方进行远距离攻击。凭借快速的移动和攻速令敌人胆寒",
     "Icon" :res.GM_ArcherIcon_png,
     "defaultImage" : res.GM_ArcherDefault_png
 };
 //攻击
 ArcherConfig.attack =  {
-    "allTime" : 1.5,
-    "attackTime" : 1.3,
+    "allTime" :GC.AttackSpeedCoefficient/1.5,
+    "attackTime" : GC.AttackSpeedCoefficient/1.5 - 0.3,
     "begin" : {
-        "time" : 1.3,
+        "time" : GC.AttackSpeedCoefficient/1.5 - 0.3,
         "account" : 9,
         "prefix" : "ArcherAttackBegin",
         "animatePlist" : res.GM_Archer_plist
     },
     "end" : {
-        "time" : 0.2,
+        "time" : 0.3,
         "account" : 1,
         "prefix" : "ArcherAttackBegin",
         "animatePlist" : res.GM_Archer_plist
@@ -44,8 +45,6 @@ ArcherConfig.attack =  {
 
 //死亡
 ArcherConfig.death = {
-    "allTime" : 0.7,
-    "attackTime" : 0.9,
     "begin" : {
         "time" : 0.7,
         "account" : 7,
@@ -58,7 +57,7 @@ ArcherConfig.death = {
 //行走
 ArcherConfig.walking = {
     "begin" : {
-        "time" : 1,
+        "time" : GC.WalkingSpeedCoefficient /2,
         "account" : 6,
         "prefix" : "ArcherWalking",
         "animatePlist" : res.GM_Archer_plist

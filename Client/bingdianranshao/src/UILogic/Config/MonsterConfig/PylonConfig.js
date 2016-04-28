@@ -8,33 +8,34 @@ var PylonConfig = PylonConfig || {};
 //属性
 PylonConfig.attribute = {
     "id" : 103, //id
-    "name" : "电塔",
-
-    "walkSpeed" : 0, //移动速度
-    "HP" : 100.0, //血量
+    "name" : "特斯拉电塔",
     "sightRadius" : 3, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 2, //攻击半径
-    "attackSpeed" : 2,
-    "coincost" :20,
+
+    "walkSpeed" : 0, //移动速度
+    "HP" : 400.0, //血量
+    "attack" : 70.0, //攻击力
+    "attackRadius" : 3, //攻击半径
+    "attackSpeed" : 0.25,
+    "coincost" :90,
     "attackType" : 0,
 
+    "descript" : "防御性建筑物，对于任何靠近他的敌人，给与巨大的杀伤",
     "Icon" :res.GM_PylonIcon_png,
     "defaultImage" : res.GM_PylonDefault_png
 };
 //攻击
 PylonConfig.attack =  {
-    "allTime" : 3.3,
-    "attackTime" : 2.7,
+    "allTime" : 4,
+    "attackTime" : 3,
     "begin" : {
-        "time" : 2.7,
+        "time" : 3,
         "account" : 27,
         "prefix" : "PylonAttackBegin",
         "animatePlist" : res.GM_Pylon_plist
     },
     "end" : {
-        "time" : 0.6,
+        "time" : 1,
         "account" : 6,
         "prefix" : "PylonAttackEnd",
         "animatePlist" : res.GM_Pylon_plist

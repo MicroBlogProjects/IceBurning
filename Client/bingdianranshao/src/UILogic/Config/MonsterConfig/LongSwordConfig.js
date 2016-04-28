@@ -8,25 +8,27 @@ var LongSwordConfig = LongSwordConfig || {};
 LongSwordConfig.attribute = {
     "id" : 3, //id
     "name" : "长刀兵",
-
-    "walkSpeed" : 20, //移动速度
-    "HP" : 60.0, //血量
     "sightRadius" : 3, //视野半径
     "defense" : 20.0,
+
+
+    "HP" : 100.0, //血量
     "attack" : 20.0, //攻击力
-    "attackRadius" : 2, //攻击半径
-    "attackSpeed" : 1.0,  //攻击速度 多少秒一下
+    "attackRadius" : 1, //攻击半径
+    "attackSpeed" : 1.0 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
+    "walkSpeed" : 20, //移动速度
     "coincost" :5,
     "attackType" : 0,
 
+    "descript" : "守卫军中最基本的单位，攻守平衡",
     "Icon" : res.GM_LongSwordIcon_png,
     "defaultImage" : res.GM_LongSwordDefault_png
 };
 
 //攻击
 LongSwordConfig.attack = {
-    "allTime" : 1,
-    "attackTime" : 1,
+    "allTime" :  GC.AttackSpeedCoefficient / 1,
+    "attackTime" :  GC.AttackSpeedCoefficient / 1,
     "begin" : {
         "time" : 1,
         "account" : 11,
@@ -50,7 +52,7 @@ LongSwordConfig.skill = null;
 
 LongSwordConfig.walking = {
     "begin" :{
-        "time" : 0.5,
+        "time" : GC.WalkingSpeedCoefficient /2,
         "account" : 6,
         "prefix" : "LongSwordWalking",
         "animatePlist" : res.GM_LongSword_plist

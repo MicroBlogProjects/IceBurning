@@ -10,32 +10,33 @@ var WizardConfig = WizardConfig || {};
 WizardConfig.attribute = {
     "id" : 9, //id
     "name" : "巫师",
-
-    "walkSpeed" : 20, //移动速度
-    "HP" : 10.0, //血量
     "sightRadius" : 2, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 1, //攻击半径
-    "attackSpeed" : 2,
-    "coincost" :20,
+
+    "HP" : 120.0, //血量
+    "attack" : 45, //攻击力
+    "attackRadius" : 2, //攻击半径
+    "attackSpeed" : 1 / GC.AttackSpeedCoefficient,
+    "walkSpeed" : 20, //移动速度
+    "coincost" :30,
     "attackType" : 0,
 
+    "descript" : "拥有另外眼花缭乱的魔法，并且利用魔法，给与敌人打击",
     "Icon" :res.GM_WizardIcon_png,
     "defaultImage" : res.GM_WizardDefault_png
 };
 //攻击
 WizardConfig.attack =  {
-    "allTime" : 0.8,
-    "attackTime" : 0.6,
+    "allTime" :GC.AttackSpeedCoefficient / 1 ,
+    "attackTime" : GC.AttackSpeedCoefficient / 1 - 0.3,
     "begin" : {
-        "time" : 0.6,
+        "time" : GC.AttackSpeedCoefficient / 1 - 0.3,
         "account" : 6,
         "prefix" : "WizardAttackBegin",
         "animatePlist" : res.GM_Wizard_plist
     },
     "end" : {
-        "time" : 0.2,
+        "time" : 0.3,
         "account" : 2,
         "prefix" : "WizardAttackEnd",
         "animatePlist" : res.GM_Wizard_plist
@@ -57,8 +58,8 @@ WizardConfig.death = {
 //行走
 WizardConfig.walking = {
     "begin" : {
-        "time" : 1.2,
-        "account" : 12,
+        "time" : GC.WalkingSpeedCoefficient / 2,
+        "account" : 6,
         "prefix" : "WizardWalking",
         "animatePlist" : res.GM_Wizard_plist
     },
