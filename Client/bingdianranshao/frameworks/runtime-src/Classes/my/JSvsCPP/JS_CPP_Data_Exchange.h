@@ -3,7 +3,7 @@
 
 #include <map>
 #include "cocos2d.h"
-#include "my/JSvsCPP/MessageProxy.h"
+#include "../JSvsCPP/MessageProxy.h"
 using namespace std;
 #define NS_GJ_BEGIN     namespace GameJoy {
 #define NS_GJ_END       }
@@ -148,6 +148,11 @@ NewResponse(CSFrameSyncResponse)
     NewField(cocos2d::Vector<JS_PBFrameMessage*>, steps)
 EndResponse(CSFrameSyncResponse)
 
+// 返回房间列表
+NewRequest(CSBackRoomListRequest)
+EndRequest(CSBackRoomListRequest)
+NewResponse(CSBackRoomListResponse)
+EndResponse(CSBackRoomListResponse)
 // to add 下一个协议
 /******************************************************************************/
 

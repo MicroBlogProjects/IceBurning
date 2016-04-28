@@ -34,6 +34,8 @@ void protobuf_ShutdownFile_GamePlay_2eproto();
 class PBFrameMessage;
 class CSFrameSyncRequest;
 class CSFrameSyncResponse;
+class CSBackRoomListRequest;
+class CSBackRoomListResponse;
 
 // ===================================================================
 
@@ -311,6 +313,160 @@ class CSFrameSyncResponse : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static CSFrameSyncResponse* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class CSBackRoomListRequest : public ::google::protobuf::Message {
+ public:
+  CSBackRoomListRequest();
+  virtual ~CSBackRoomListRequest();
+
+  CSBackRoomListRequest(const CSBackRoomListRequest& from);
+
+  inline CSBackRoomListRequest& operator=(const CSBackRoomListRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSBackRoomListRequest& default_instance();
+
+  void Swap(CSBackRoomListRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  CSBackRoomListRequest* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CSBackRoomListRequest& from);
+  void MergeFrom(const CSBackRoomListRequest& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:CSBackRoomListRequest)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[1];
+
+  friend void  protobuf_AddDesc_GamePlay_2eproto();
+  friend void protobuf_AssignDesc_GamePlay_2eproto();
+  friend void protobuf_ShutdownFile_GamePlay_2eproto();
+
+  void InitAsDefaultInstance();
+  static CSBackRoomListRequest* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CSBackRoomListResponse : public ::google::protobuf::Message {
+ public:
+  CSBackRoomListResponse();
+  virtual ~CSBackRoomListResponse();
+
+  CSBackRoomListResponse(const CSBackRoomListResponse& from);
+
+  inline CSBackRoomListResponse& operator=(const CSBackRoomListResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSBackRoomListResponse& default_instance();
+
+  void Swap(CSBackRoomListResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  CSBackRoomListResponse* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CSBackRoomListResponse& from);
+  void MergeFrom(const CSBackRoomListResponse& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 result = 1;
+  inline bool has_result() const;
+  inline void clear_result();
+  static const int kResultFieldNumber = 1;
+  inline ::google::protobuf::int32 result() const;
+  inline void set_result(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:CSBackRoomListResponse)
+ private:
+  inline void set_has_result();
+  inline void clear_has_result();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::int32 result_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+
+  friend void  protobuf_AddDesc_GamePlay_2eproto();
+  friend void protobuf_AssignDesc_GamePlay_2eproto();
+  friend void protobuf_ShutdownFile_GamePlay_2eproto();
+
+  void InitAsDefaultInstance();
+  static CSBackRoomListResponse* default_instance_;
+};
 // ===================================================================
 
 
@@ -501,6 +657,36 @@ CSFrameSyncResponse::steps() const {
 inline ::google::protobuf::RepeatedPtrField< ::PBFrameMessage >*
 CSFrameSyncResponse::mutable_steps() {
   return &steps_;
+}
+
+// -------------------------------------------------------------------
+
+// CSBackRoomListRequest
+
+// -------------------------------------------------------------------
+
+// CSBackRoomListResponse
+
+// optional int32 result = 1;
+inline bool CSBackRoomListResponse::has_result() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSBackRoomListResponse::set_has_result() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSBackRoomListResponse::clear_has_result() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSBackRoomListResponse::clear_result() {
+  result_ = 0;
+  clear_has_result();
+}
+inline ::google::protobuf::int32 CSBackRoomListResponse::result() const {
+  return result_;
+}
+inline void CSBackRoomListResponse::set_result(::google::protobuf::int32 value) {
+  set_has_result();
+  result_ = value;
 }
 
 
