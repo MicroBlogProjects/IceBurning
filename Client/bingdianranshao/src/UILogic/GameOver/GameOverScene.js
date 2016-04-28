@@ -25,7 +25,8 @@ var GameOverlayer = cc.Scene.extend({
         },
 
         backButtonClickEvent : function(){
-            cc.director.runScene(new MainMenuScene());
+            cc.director.end();
+            //cc.director.runScene(new MainMenuScene());
         }
     }
 );

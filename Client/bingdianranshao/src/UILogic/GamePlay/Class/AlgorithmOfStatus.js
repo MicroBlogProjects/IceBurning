@@ -335,7 +335,15 @@
              if((l_nex.x >= battleLayerConfig.width || l_nex.x < 0 || l_nex.y < 0 || l_nex.y >= battleLayerConfig.height)==false)   
              {
                   if(this.mapstatus[camp][l_nex.x][l_nex.y].length>0 && (Math.abs(l_W) + Math.abs(l_h) <= l_H))
-                      return this.mapstatus[camp][l_nex.x][l_nex.y][0];
+                    {
+                      for(var e = 0; e < this.mapstatus[camp][l_nex.x][l_nex.y].length ; ++e)
+                        {
+                          var l_id = this.mapstatus[camp][l_nex.x][l_nex.y][e];
+                          var l_obj = monsterManager.IdMapSprite[l_id];
+                          if(l_obj.m_HP > 0)
+                            return this.mapstatus[camp][l_nex.x][l_nex.y][e];
+                        }
+                    }
              }
              l_nex=this.TurnDown(l_nex);
              l_h --;

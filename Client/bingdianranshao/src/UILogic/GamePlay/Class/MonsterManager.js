@@ -82,10 +82,25 @@ var MonsterManager = cc.Class.extend({
         }
         algorithmOfStatus.AddMonster(mosterSprite,1);
      },
+    DeletaMonster:function()
+    {
+        for(var camp = 0; camp < 2; ++ camp)
+           for(var  i = 0; i < this.MonsterArray[ camp ].length; i++){
+                var monster = this.MonsterArray[ camp ][ i ];
+                if( monster.m_activity == false )
+                {
+                    this.removeMonsterSprite( monster );
+                    this.MonsterArray[camp].splice( i,1);
+                }
+            }
+
+    },
     //更新Monster
+
     updateMonsterData : function(){
        
         this.MovetoNextPosition();
+        this.DeletaMonster();
         this.monsterWalking();
     },
 
@@ -114,7 +129,7 @@ var MonsterManager = cc.Class.extend({
         if(monster.m_state == MonsterState.Death)
         {
              monster.m_total_nowDeath++;
-           //  cc.log("sile ->"+monster.m_spriteID+" bu = "+monster.m_total_nowDeath);
+           //  //cc.log("sile ->"+monster.m_spriteID+" bu = "+monster.m_total_nowDeath);
              if(monster.m_total_nowDeath == monster.m_total_Death)
              {
                 monster.m_total_nowDeath = 0;
@@ -139,22 +154,23 @@ var MonsterManager = cc.Class.extend({
         {
             monster.m_total_AttackNow = 0;
             monster.monsterAction();
-           // cc.log("gongji->1 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
+           // //cc.log("gongji->1 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
             return ;
         }
         if(monster.m_total_AttackNow == monster.m_total_AttackTime)
         {
-          //  cc.log("gongji->2 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
+          //  //cc.log("gongji->2 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
             monster.CaculHeart();   
         }
-        if(monster.m_total_AttackNow == monster.m_total_AttackAllTime){
+        if(monster.m_total_AttackNow == monster.m_total_AttackAllTime)
+        {
             monster.m_state = null;
             monster.m_total_AttackNow =0;
-         //   cc.log("gongji->3 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
+         //   //cc.log("gongji->3 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
             return ;
         }
         monster.m_total_AttackNow ++;
-       // cc.log("gongji->4 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
+       // //cc.log("gongji->4 ->"+monster.m_spriteID+" bu = "+monster.m_total_AttackNow);
     },
     MovetoNextPosition:function()
     {
@@ -194,7 +210,7 @@ var MonsterManager = cc.Class.extend({
         {
             monster.m_has_foot = 0;
             monster.monsterAction();
-         //   cc.log("zou->1 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
+         //   //cc.log("zou->1 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
             return ;
         }
         if(monster.m_total_foot == monster.m_has_foot)
@@ -208,7 +224,7 @@ var MonsterManager = cc.Class.extend({
                 monster.m_TiledPosition[i] = monster.m_nextTiledPosition[i];    
             }
             algorithmOfStatus.AddMonster(monster,1);
-        //    cc.log("zou->2 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
+        //    //cc.log("zou->2 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
             return ;
         }
         var now_pos = monsterBackGroundLayer.GetPositionOfTiled(monster.m_TiledPosition[0]);
@@ -218,7 +234,7 @@ var MonsterManager = cc.Class.extend({
         E_pos.y = E_pos.y * monster.m_has_foot / monster.m_total_foot + now_pos.y + 32;
         monster.m_has_foot++;
         monster.setPosition(E_pos);
-      //  cc.log("zou->3 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
+      //  //cc.log("zou->3 ->"+monster.m_spriteID+" bu = "+monster.m_has_foot);
     }    
     ,
     //删除已经死亡的怪物
@@ -265,7 +281,7 @@ var MonsterManager = cc.Class.extend({
 
     //用来计算范围伤害
     getMonstersInRect : function(camp,pos, radius){
-       // cc.log("HHHHH");
+       // //cc.log("HHHHH");
        var H = radius;
        var W = radius;
        var monsters = [];
