@@ -25,7 +25,7 @@ var GamePlayLayer = cc.Layer.extend({
     timeTitle : null,
     coinText : null,
     GC_Time : 0,
-
+    frame:0,
     ctor:function () {
         this._super();
         this.addBackgroundpScrollView();
@@ -37,10 +37,9 @@ var GamePlayLayer = cc.Layer.extend({
         this.setCoinText();
 
         this.addChild(this.playerInfomation,150);
-        this.schedule(this.updataTime,1);//计时器
         this.schedule(this.recvMessage,RecvMessagTime);
         this.initGameConfig();
-
+        this.frame=0;
         gamePlayLayer = this;
     },
     initGameConfig : function(){
@@ -177,6 +176,11 @@ var GamePlayLayer = cc.Layer.extend({
             }
 
            monsterManager.updateMonsterData();
+           this.frame=(this.frame+1)%60;
+           if(this.frame == 0)
+           {
+             this.updataTime();
+           }
         }
     },
 

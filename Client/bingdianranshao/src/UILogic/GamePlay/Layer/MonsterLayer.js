@@ -29,12 +29,14 @@ var MonsterLayer = cc.Layer.extend({
 
         var rightPoint = {};
         rightPoint.tiled = [];
-        rightPoint.tiled.push(cc.p(28,14));
-        leftPoint.tiled.push(cc.p(28, 15));
-        leftPoint.tiled.push(cc.p(28, 16));
-        leftPoint.tiled.push(cc.p(29, 15));
+        rightPoint.tiled.push(cc.p(26,17));
+        leftPoint.tiled.push(cc.p(27, 16));
+        leftPoint.tiled.push(cc.p(27, 17));
+        leftPoint.tiled.push(cc.p(27, 18));
         rightPoint.point = monsterBackGroundLayer.GetPositionOfTiled(rightPoint.tiled[0]);
         //monsterManager.addMonsterSprite(201,rightPoint,true);
+        rightPoint.point.x += 96;
+        rightPoint.point.y += 48;
         if(GC.IS_HOST){
             monsterManager.addMonsterSprite(201,leftPoint,true);
             monsterManager.addMonsterSprite(201,rightPoint,false);
