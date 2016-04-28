@@ -139,7 +139,7 @@ var RangedAttackSprite = cc.Sprite.extend({
     startArcAnimate : function(){
         //cc.log("startArcAnimate 1");
         if(this.m_enemyMonster.m_activity == false){
-            cc.log("removeFrom parent");
+            //cc.log("removeFrom parent");
             this.stopAllActions()
             this.removeFromParent();
             return;

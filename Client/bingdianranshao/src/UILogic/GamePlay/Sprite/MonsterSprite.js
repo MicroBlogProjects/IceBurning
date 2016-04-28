@@ -193,7 +193,7 @@ MonsterSprite = cc.Sprite.extend({
             var attackRadius = config.attackRadius;
             var attack = config.attack;;
             var monsters = monsterManager.getMonstersInRect(1-this.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(this.getPosition()), attackRadius);
-            cc.log(monsters.length);
+            //cc.log(monsters.length);
             for(var i = 0; i< monsters.length;i++){
                 var monster = monsters[i];
                 if(monster.m_HP <0 ) continue;
@@ -338,7 +338,7 @@ MonsterSprite = cc.Sprite.extend({
             var l_obj = monsterManager.IdMapSprite[this.m_AttackObjectsID];
             if(l_obj == null || l_obj == undefined || l_obj.m_HP <= 0 || l_obj.m_activity == false)return ;
             var monsters = monsterManager.getMonstersInRect(1-this.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(l_obj.getPosition()), 4);
-            cc.log(monsters.length);
+            //cc.log(monsters.length);
             for(var i = 0; i< monsters.length;i++){
                 var monster = monsters[i];
                 if(monster.m_HP<=0)

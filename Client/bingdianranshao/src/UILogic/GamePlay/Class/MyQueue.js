@@ -41,7 +41,7 @@ var MyQueue = cc.Class.extend({
         this.tail=(this.tail+1)%this.num;
         if(this.tail == this.front )
         {
-            cc.log("MyQueue out of num");
+            //cc.log("MyQueue out of num");
         }
     }
 
