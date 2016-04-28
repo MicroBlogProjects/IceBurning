@@ -12,7 +12,7 @@ KnightConfig.attribute = {
     "HP" : 200.0, //血量
     "attack" : 60.0, //攻击力
     "attackRadius" : 1, //攻击半径
-    "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
+    "attackSpeed" : 0.7 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
     "walkSpeed" : 30, //移动速度
     "coincost" :35,
     "attackType" : 0,
@@ -26,16 +26,16 @@ KnightConfig.attribute = {
 
 //攻击
 KnightConfig.attack = {
-    "allTime" :  GC.AttackSpeedCoefficient / 0.5,
-    "attackTime" : GC.AttackSpeedCoefficient / 0.5 * 0.8,
+    "allTime" :  GC.AttackSpeedCoefficient / 0.7,
+    "attackTime" : GC.AttackSpeedCoefficient / 0.7 * 0.8,
     "begin" : {
-        "time" : GC.AttackSpeedCoefficient / 0.5 * 0.8,
+        "time" : GC.AttackSpeedCoefficient / 0.7 * 0.8,
         "account" : 20,
         "prefix" : "KnightAttackBegin",
         "animatePlist" : res.GM_Knight_plist
     },
     "end" : {
-        "time" :GC.AttackSpeedCoefficient / 0.5 * 0.2,
+        "time" :GC.AttackSpeedCoefficient / 0.7 * 0.2,
         "account" : 6,
         "prefix" : "KnightAttackEnd",
         "animatePlist" : res.GM_Knight_plist
