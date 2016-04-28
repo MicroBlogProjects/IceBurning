@@ -12,11 +12,11 @@ SiegeConfig.attribute = {
     "defense" : 20.0,
 
     "HP" : 250, //血量
-    "attack" : 100.0, //攻击力
+    "attack" : 80.0, //攻击力
     "attackRadius" : 1, //攻击半径
     "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
     "walkSpeed" : 10, //移动速度
-    "coincost" :40,
+    "coincost" :60,
     "attackType" : 0,
 
     "descript" : "肩抗巨大的木头，拥有毁灭一切的力量，藐视任何敌人，对于建筑物毁灭性打击",
