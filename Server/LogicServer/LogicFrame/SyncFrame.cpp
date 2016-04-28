@@ -40,7 +40,6 @@ int32_t CSyncFrame::ProcessRequest(const CMessage& message)
 
 int32_t CSyncFrame::ProcessRequestRecvOneStep(const CMessage& message)
 {
-    console_msg("uin(%d) sync frame", message.GetUin());
     ProcessRequestBegin(MSG_FRAME_SYNC, CSFrameSyncRequest, CSFrameSyncResponse);
     do
     {
@@ -72,7 +71,6 @@ int32_t CSyncFrame::ProcessRequestRecvOneStep(const CMessage& message)
 int32_t CSyncFrame::OnNewRoomStartFight(int32_t roomID)
 {
     sync_frames_[roomID] = std::vector<const PBFrameMessage*>();
-    console_msg("a new room(%d) start fight", roomID);
     return success;
 }
 int32_t CSyncFrame::OnRoomFinishedFight(int32_t roomID)
@@ -86,12 +84,11 @@ void CSyncFrame::OnOneFrameFinished()
     for (std::map<int32_t, std::vector<const PBFrameMessage*> >::iterator 
         it = sync_frames_.begin(); it != sync_frames_.end(); ++it)
     {
-        // 这个房间没有帧信息
-        if (it->second.size() <= 0)
-        {
-            continue;
-        }
-        console_msg("roomID(%d) has frame need sync", it->second.size());
+        //// 这个房间没有帧信息
+        //if (it->second.size() <= 0)
+        //{
+        //    continue;
+        //}
         // 拿到房间信息
         const RoomMessage* room = CRoomFrame::Instance()->GetRoomWithRoomID(it->first);
         if (room == NULL || room->room_status_ != OnPlaying)
