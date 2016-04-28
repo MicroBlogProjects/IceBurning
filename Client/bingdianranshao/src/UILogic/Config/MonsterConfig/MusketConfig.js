@@ -14,7 +14,7 @@ MusketConfig.attribute = {
     "HP" : 120.0, //血量
     "attack" : 40.0, //攻击力
     "attackRadius" : 3, //攻击半径
-    "attackSpeed" : 0.7 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
+    "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
     "walkSpeed" : 20, //移动速度
     "coincost" :20,
     "attackType" : 0,
@@ -27,16 +27,16 @@ MusketConfig.attribute = {
 
 //攻击
 MusketConfig.attack = {
-    "allTime" : 0.7 / GC.AttackSpeedCoefficient,
-    "attackTime" : 0.7 / GC.AttackSpeedCoefficient / 2,
+    "allTime" :  GC.AttackSpeedCoefficient / 0.5,
+    "attackTime" :GC.AttackSpeedCoefficient / 0.5 / 2,
     "begin" : {
-        "time" : 0.7 / GC.AttackSpeedCoefficient / 2,
+        "time" : GC.AttackSpeedCoefficient / 0.5 / 2,
         "account" : 11,
         "prefix" : "MusketAttackBegin",
         "animatePlist" : res.GM_Musket_plist
     },
     "end" : {
-        "time" : 0.7 / GC.AttackSpeedCoefficient / 2,
+        "time" : GC.AttackSpeedCoefficient / 0.5 / 2,
         "account" : 11,
         "prefix" : "MusketAttackEnd",
         "animatePlist" : res.GM_Musket_plist
