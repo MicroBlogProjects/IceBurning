@@ -139,7 +139,7 @@ var GamePlayLayer = cc.Layer.extend({
                     var isMyMonster  =false;
                     if(uin == GC.UIN){
                         isMyMonster = true;
-                        var config = MonsterConfig[""+id];
+                        var config = MonsterConfig[""+monsterId];
                         GC.CoidNum -= config.attribute.coincost;
                         MonsterTouch.changedCoin(GC.CoidNum);
                         this.setCoinText();
