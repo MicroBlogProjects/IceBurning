@@ -24,6 +24,8 @@ PylonConfig.attribute = {
 };
 //攻击
 PylonConfig.attack =  {
+    "allTime" : 3.3,
+    "attackTime" : 2.7,
     "begin" : {
         "time" : 2.7,
         "account" : 27,

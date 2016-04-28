@@ -24,6 +24,8 @@ SkeletonConfig.attribute = {
 
 //攻击
 SkeletonConfig.attack = {
+    "allTime" : 1,
+    "attackTime" : 1,
     "begin" : {
         "time" : 1,
         "account" : 10,

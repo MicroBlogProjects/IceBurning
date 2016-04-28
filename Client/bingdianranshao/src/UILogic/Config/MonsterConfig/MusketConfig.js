@@ -9,13 +9,13 @@ MusketConfig.attribute = {
     "id" : 4, //id
     "name" : "火枪兵",
 
-    "walkSpeed" : 50, //移动速度
-    "HP" : 1.0, //血量
+    "walkSpeed" : 10, //移动速度
+    "HP" : 120.0, //血量
     "sightRadius" : 3, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 2, //攻击半径
-    "attackSpeed" : 1.0,  //攻击速度 多少秒一下
+    "attack" : 40.0, //攻击力
+    "attackRadius" : 3, //攻击半径
+    "attackSpeed" : 0.7,  //攻击速度 多少秒一下
     "coincost" :20,
 
     "Icon" : res.GM_MusketIcon_png,
@@ -24,14 +24,16 @@ MusketConfig.attribute = {
 
 //攻击
 MusketConfig.attack = {
+    "allTime" : 0.7,
+    "attack" : 0.35,
     "begin" : {
-        "time" : 1.1,
+        "time" : 0.35,
         "account" : 11,
         "prefix" : "MusketAttackBegin",
         "animatePlist" : res.GM_Musket_plist
     },
     "end" : {
-        "time" : 1.1,
+        "time" : 0.35,
         "account" : 11,
         "prefix" : "MusketAttackEnd",
         "animatePlist" : res.GM_Musket_plist
@@ -52,7 +54,7 @@ MusketConfig.skill = null;
 
 MusketConfig.walking = {
     "begin" :{
-        "time" : 0.7,
+        "time" : 1,
         "account" : 7,
         "prefix" : "MusketWalking",
         "animatePlist" : res.GM_Musket_plist

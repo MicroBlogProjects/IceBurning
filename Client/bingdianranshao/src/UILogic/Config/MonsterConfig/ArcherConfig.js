@@ -12,20 +12,22 @@ ArcherConfig.attribute = {
 
 
     "walkSpeed" : 20, //移动速度
-    "HP" : 100.0, //血量
+    "HP" : 60.0, //血量
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
+    "attack" : 30.0, //攻击力
     "attackRadius" : 2, //攻击半径
     "attackSpeed" : 2,
-    "coincost" :20,
+    "coincost" :10,
 
     "Icon" :res.GM_ArcherIcon_png,
     "defaultImage" : res.GM_ArcherDefault_png
 };
 //攻击
 ArcherConfig.attack =  {
+    "allTime" : 1.3,
+    "attackTime" : 1.5,
     "begin" : {
-        "time" : 0.9,
+        "time" : 1.3,
         "account" : 9,
         "prefix" : "ArcherAttackBegin",
         "animatePlist" : res.GM_Archer_plist
@@ -35,6 +37,8 @@ ArcherConfig.attack =  {
 
 //死亡
 ArcherConfig.death = {
+    "allTime" : 0.7,
+    "attackTime" : 0.9,
     "begin" : {
         "time" : 0.7,
         "account" : 7,
@@ -47,7 +51,7 @@ ArcherConfig.death = {
 //行走
 ArcherConfig.walking = {
     "begin" : {
-        "time" : 0.6,
+        "time" : 1,
         "account" : 6,
         "prefix" : "ArcherWalking",
         "animatePlist" : res.GM_Archer_plist

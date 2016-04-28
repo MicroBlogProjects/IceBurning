@@ -24,6 +24,8 @@ XingxingmofataConfig.attribute = {
 };
 //攻击
 XingxingmofataConfig.attack =  {
+    "allTime" : 1,
+    "attackTime" : 1.5,
     "begin" : {
         "time" : 1,
         "account" : 10,

@@ -9,8 +9,8 @@ SiegeConfig.attribute = {
     "id" : 11, //id
     "name" : "攻城兵",
 
-    "walkSpeed" : 50, //移动速度
-    "HP" : 10.0, //血量
+    "walkSpeed" : 5, //移动速度
+    "HP" : 250, //血量
     "sightRadius" : 3, //视野半径
     "defense" : 20.0,
     "attack" : 20.0, //攻击力
@@ -24,6 +24,8 @@ SiegeConfig.attribute = {
 
 //攻击
 SiegeConfig.attack = {
+    "allTime" : 1,
+    "attackTime" : 1,
     "begin" : {
         "time" : 1,
         "account" : 10,
@@ -47,7 +49,7 @@ SiegeConfig.skill = null;
 
 SiegeConfig.walking = {
     "begin" :{
-        "time" : 1.2,
+        "time" : 4,
         "account" : 12,
         "prefix" : "SiegeWalking",
         "animatePlist" : res.GM_Siege_plist

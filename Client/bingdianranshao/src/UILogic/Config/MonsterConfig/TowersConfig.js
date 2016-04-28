@@ -24,6 +24,8 @@ TowersConfig.attribute = {
 };
 //攻击
 TowersConfig.attack =  {
+    "allTime" : 2,
+    "attackTime":2,
     "begin" : {
         "time" : 2,
         "account" : 1,
