@@ -28,7 +28,7 @@
 #define NS_GJ_BEGIN     namespace GameJoy {
 #define NS_GJ_END       }
 
-#define SERVERIP "10.0.128.158"
+#define SERVERIP "121.42.56.59"
 #define SERVERPORT 23333
 
 enum
