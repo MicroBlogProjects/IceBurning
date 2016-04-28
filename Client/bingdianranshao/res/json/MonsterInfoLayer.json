@@ -1560,13 +1560,14 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 24,
-                    "LabelText": "Text Label",
+                    "FontSize": 16,
+                    "LabelText": "0000000000000000000000000000000000000000000000000000000000000",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "Common/simhei.ttf",
                       "Plist": ""
                     },
+                    "HorizontalAlignmentType": "HT_Center",
                     "OutlineColor": {
                       "G": 0,
                       "B": 0
@@ -1603,18 +1604,18 @@
                       "Y": 0.2842
                     },
                     "PreSize": {
-                      "X": 0.1519,
-                      "Y": 0.0508
+                      "X": 0.9447,
+                      "Y": 0.0866
                     },
-                    "LeftMargin": 329.5,
-                    "RightMargin": 329.5,
-                    "TopMargin": 366.5898,
-                    "BottomMargin": 137.4102,
+                    "LeftMargin": 21.5,
+                    "RightMargin": 21.5,
+                    "TopMargin": 357.0898,
+                    "BottomMargin": 127.9102,
                     "Tag": 300,
                     "ActionTag": 536691390,
                     "Size": {
-                      "X": 118.0,
-                      "Y": 27.0
+                      "X": 734.0,
+                      "Y": 46.0
                     },
                     "Name": "monster_descrip_text",
                     "ctype": "TextObjectData"

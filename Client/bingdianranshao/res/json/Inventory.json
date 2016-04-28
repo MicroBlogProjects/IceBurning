@@ -5321,81 +5321,6 @@
                   "B": 70
                 },
                 "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "Common/Cn15.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "Common/Cn14.png",
-                  "Plist": ""
-                },
-                "Scale9Width": 82,
-                "Scale9Height": 82,
-                "OutlineColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 718.8808,
-                  "Y": 530.023
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.96,
-                  "Y": 0.9519
-                },
-                "PreSize": {
-                  "X": 0.1095,
-                  "Y": 0.1473
-                },
-                "HorizontalEdge": "RightEdge",
-                "VerticalEdge": "TopEdge",
-                "LeftMargin": 677.8808,
-                "RightMargin": -11.0808,
-                "TopMargin": -14.223,
-                "BottomMargin": 489.023,
-                "Tag": 567,
-                "ActionTag": -548243778,
-                "Size": {
-                  "X": 82.0,
-                  "Y": 82.0
-                },
-                "Name": "Button_Close",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
                   "Type": "Normal",
                   "Path": "Common/BaS10.png",
                   "Plist": ""
@@ -5501,8 +5426,6 @@
         "Common/Cn10.png",
         "Common/Cn11.png",
         "Common/Cn12.png",
-        "Common/Cn14.png",
-        "Common/Cn15.png",
         "Common/Lg_selectbardground.jpg",
         "Common/simhei.ttf",
         "Common/StartButtonHight.png",

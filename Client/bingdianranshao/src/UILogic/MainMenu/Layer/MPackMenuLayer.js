@@ -152,6 +152,7 @@ var MPackMenuLayer = cc.Scene.extend({
                 var walkingSpeed_text = ccui.helper.seekWidgetByName(this.monsterInfoLayer,"walkingSpeed_text");
                 walkingSpeed_text.setString(config.walkSpeed);
                 var monster_descrip_text = ccui.helper.seekWidgetByName(this.monsterInfoLayer,"monster_descrip_text");
+                monster_descrip_text.setString(config.descript);
                 var button_chose = ccui.helper.seekWidgetByName(this.monsterInfoLayer,"m_Button_chose");
                 cc.log("monsters length si "+monsters.length);
                 if(monsters.length >= maxAccount){

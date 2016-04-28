@@ -1102,21 +1102,6 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Button_Close" ActionTag="-548243778" Tag="567" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="677.8808" RightMargin="-11.0808" TopMargin="-14.2230" BottomMargin="489.0230" TouchEnable="True" FontSize="14" Scale9Width="82" Scale9Height="82" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="82.0000" Y="82.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="718.8808" Y="530.0230" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9600" Y="0.9519" />
-                <PreSize X="0.1095" Y="0.1473" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Common/Cn15.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Common/Cn14.png" Plist="" />
-                <OutlineColor A="255" R="0" G="0" B="0" />
-                <ShadowColor A="255" R="0" G="0" B="0" />
-              </AbstractNodeData>
               <AbstractNodeData Name="m_Button_start" ActionTag="-1388254793" Tag="316" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="304.8365" RightMargin="304.8365" TopMargin="476.3424" BottomMargin="29.0093" TouchEnable="True" FontSize="14" LeftEage="65" RightEage="65" TopEage="31" BottomEage="31" Scale9OriginX="65" Scale9OriginY="31" Scale9Width="69" Scale9Height="34" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="139.1270" Y="51.4483" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
