@@ -26,7 +26,7 @@ int32_t CConnConnection::ReadData(char* out_str, int32_t& str_size)
         // a new mesage coming
         if (recved_MsgLen_len_ < sz_int)
         {
-            recv_byte = read(connfd_, &buf_[pTail_], sz_int - recved_MsgLen_len_);
+            recv_byte = recv(connfd_, &buf_[pTail_], sz_int - recved_MsgLen_len_,0);
             if (recv_byte == 0)
             {
                 return quit;
@@ -55,7 +55,7 @@ int32_t CConnConnection::ReadData(char* out_str, int32_t& str_size)
         // read content except length
         int32_t read_limit = (pTail_ >= pHead_) ? (MAX_CSMESSAGE_SIZE - pTail_) : (pHead_ - pTail_);
         read_limit = std::min(read_limit, msg_len_ - recved_len_);
-        recv_byte = read(connfd_, &buf_[pTail_], read_limit );
+        recv_byte = recv(connfd_, &buf_[pTail_], read_limit, 0);
         if (recv_byte == 0)
         {
             return quit;
@@ -95,7 +95,7 @@ int32_t CConnConnection::ReadData(char* out_str, int32_t& str_size)
 // write data with size of size
 int32_t CConnConnection::WriteData(const char* str, int32_t size)
 {
-    if (write(connfd_, str, size) < 0 && errno != EAGAIN)
+    if (send(connfd_, str, size, 0) < 0 && errno != EAGAIN)
     {
         return error;
     }

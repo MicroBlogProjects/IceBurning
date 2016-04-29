@@ -22,7 +22,7 @@ NS_CS_BEGIN
 #define MAXLINE 4096
 #define BUFSIZE 8192
 
-#define LOGICSERVER_IP "10.0.128.158"
+#define LOGICSERVER_IP "10.164.24.237"
 
 enum
 {
