@@ -9,7 +9,7 @@ var MonsterLayer = cc.Layer.extend({
     ctor : function(){
         this._super();
 
-        this.schedule(this.updateEvent,ScheduleTime);//计时器
+      //  this.schedule(this.updateEvent,ScheduleTime);//计时器
         //this.schedule(this.monsterTest,TestTime);//计时器
 
         monsterLayer = this;
@@ -21,14 +21,22 @@ var MonsterLayer = cc.Layer.extend({
         var leftPoint = {};
         leftPoint.tiled = [];
         leftPoint.tiled.push(cc.p(2, 14));
+        leftPoint.tiled.push(cc.p(2, 15));
+        leftPoint.tiled.push(cc.p(2, 16));
+        leftPoint.tiled.push(cc.p(1, 15));
         leftPoint.point = monsterBackGroundLayer.GetPositionOfTiled(leftPoint.tiled[0]);
         //monsterManager.addMonsterSprite(201,leftPoint,false);
 
         var rightPoint = {};
         rightPoint.tiled = [];
-        rightPoint.tiled.push(cc.p(28,14));
+        rightPoint.tiled.push(cc.p(26,17));
+        rightPoint.tiled.push(cc.p(27, 16));
+        rightPoint.tiled.push(cc.p(27, 17));
+        rightPoint.tiled.push(cc.p(27, 18));
         rightPoint.point = monsterBackGroundLayer.GetPositionOfTiled(rightPoint.tiled[0]);
         //monsterManager.addMonsterSprite(201,rightPoint,true);
+        rightPoint.point.x += 96;
+        rightPoint.point.y += 48;
         if(GC.IS_HOST){
             monsterManager.addMonsterSprite(201,leftPoint,true);
             monsterManager.addMonsterSprite(201,rightPoint,false);

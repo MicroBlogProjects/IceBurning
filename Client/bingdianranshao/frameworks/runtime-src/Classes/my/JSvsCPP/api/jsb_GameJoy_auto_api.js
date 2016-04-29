@@ -801,3 +801,77 @@ Instance : function (
 },
 
 };
+
+/**
+ * @class JS_CSBackRoomListRequest
+ */
+GameJoy.JS_CSBackRoomListRequest = {
+
+/**
+ * @method get_msgID
+ * @return {int}
+ */
+get_msgID : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method set_msgID
+ * @param {int} arg0
+ */
+set_msgID : function (
+int 
+)
+{
+},
+
+/**
+ * @method Instance
+ * @return {GameJoy::JS_CSBackRoomListRequest}
+ */
+Instance : function (
+)
+{
+    return GameJoy::JS_CSBackRoomListRequest;
+},
+
+};
+
+/**
+ * @class JS_CSBackRoomListResponse
+ */
+GameJoy.JS_CSBackRoomListResponse = {
+
+/**
+ * @method get_result
+ * @return {int}
+ */
+get_result : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method set_result
+ * @param {int} arg0
+ */
+set_result : function (
+int 
+)
+{
+},
+
+/**
+ * @method Instance
+ * @return {GameJoy::JS_CSBackRoomListResponse}
+ */
+Instance : function (
+)
+{
+    return GameJoy::JS_CSBackRoomListResponse;
+},
+
+};

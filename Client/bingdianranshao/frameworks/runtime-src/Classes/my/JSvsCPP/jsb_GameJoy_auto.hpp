@@ -202,4 +202,26 @@ bool js_GameJoy_JS_CSFrameSyncResponse_set_steps(JSContext *cx, uint32_t argc, j
 bool js_GameJoy_JS_CSFrameSyncResponse_set_result(JSContext *cx, uint32_t argc, jsval *vp);
 bool js_GameJoy_JS_CSFrameSyncResponse_Instance(JSContext *cx, uint32_t argc, jsval *vp);
 
+extern JSClass  *jsb_GameJoy_JS_CSBackRoomListRequest_class;
+extern JSObject *jsb_GameJoy_JS_CSBackRoomListRequest_prototype;
+
+bool js_GameJoy_JS_CSBackRoomListRequest_constructor(JSContext *cx, uint32_t argc, jsval *vp);
+void js_GameJoy_JS_CSBackRoomListRequest_finalize(JSContext *cx, JSObject *obj);
+void js_register_GameJoy_JS_CSBackRoomListRequest(JSContext *cx, JS::HandleObject global);
+void register_all_GameJoy(JSContext* cx, JS::HandleObject obj);
+bool js_GameJoy_JS_CSBackRoomListRequest_get_msgID(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSBackRoomListRequest_set_msgID(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSBackRoomListRequest_Instance(JSContext *cx, uint32_t argc, jsval *vp);
+
+extern JSClass  *jsb_GameJoy_JS_CSBackRoomListResponse_class;
+extern JSObject *jsb_GameJoy_JS_CSBackRoomListResponse_prototype;
+
+bool js_GameJoy_JS_CSBackRoomListResponse_constructor(JSContext *cx, uint32_t argc, jsval *vp);
+void js_GameJoy_JS_CSBackRoomListResponse_finalize(JSContext *cx, JSObject *obj);
+void js_register_GameJoy_JS_CSBackRoomListResponse(JSContext *cx, JS::HandleObject global);
+void register_all_GameJoy(JSContext* cx, JS::HandleObject obj);
+bool js_GameJoy_JS_CSBackRoomListResponse_get_result(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSBackRoomListResponse_set_result(JSContext *cx, uint32_t argc, jsval *vp);
+bool js_GameJoy_JS_CSBackRoomListResponse_Instance(JSContext *cx, uint32_t argc, jsval *vp);
+
 #endif // __GameJoy_h__

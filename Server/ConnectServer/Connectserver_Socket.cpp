@@ -123,7 +123,6 @@ int32_t ConnsvrSocket::ProcessRequestTransmitMessage(int32_t fd)
         // Send message from client to logic server
         if (!IsLogicserverConnect(fd))
         {
-            console_msg("client_fd(%d) request to send msg to logic", fd);
             TransmitMessageToLogicServer(fd, buf_, len);
         }
         // send message from logic server to client

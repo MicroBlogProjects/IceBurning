@@ -7,31 +7,36 @@ var HammerConfig = HammerConfig || {};
 //属性
 HammerConfig.attribute = {
     "id" : 8, //id
-    "name" : "锤兵",
+    "name" : "战锤",
 
-    "walkSpeed" : 50, //移动速度
-    "HP" : 1.0, //血量
-    "sightRadius" : 2, //视野半径
+    "HP" : 200.0, //血量
+    "attack" : 25.0, //攻击力
+    "attackRadius" : 1, //攻击半径
+    "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
+    "walkSpeed" : 20, //移动速度
+    "sightRadius" : 3, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 2, //攻击半径
-    "attackSpeed" : 1.0,  //攻击速度 多少秒一下
-    "coincost" :20,
+    "coincost" :35,
 
+    "attackType" : 0,
+
+    "descript" : "拥有野蛮人血脉的战锤，手持巨大的战锤，对于面前范围内的敌人，给与巨大的打击",
     "Icon" : res.GM_HammerIcon_png,
     "defaultImage" : res.GM_HammerDefault_png
 };
 
 //攻击
 HammerConfig.attack = {
+    "allTime" : GC.AttackSpeedCoefficient / 0.5,
+    "attackTime" :GC.AttackSpeedCoefficient / 0.5* 0.6,
     "begin" : {
-        "time" : 1,
+        "time" : GC.AttackSpeedCoefficient / 0.5* 0.6,
         "account" : 10,
         "prefix" : "HammerAttackBegin",
         "animatePlist" : res.GM_Hammer_plist
     },
     "end" : {
-        "time" : 0.4,
+        "time" : GC.AttackSpeedCoefficient / 0.5* 0.4,
         "account" : 4,
         "prefix" : "HammerAttackEnd",
         "animatePlist" : res.GM_Hammer_plist
@@ -52,7 +57,7 @@ HammerConfig.skill = null;
 
 HammerConfig.walking = {
     "begin" :{
-        "time" : 0.6,
+        "time" : 2 / GC.WalkingSpeedCoefficient,
         "account" : 6,
         "prefix" : "HummerWalking",
         "animatePlist" : res.GM_Hammer_plist

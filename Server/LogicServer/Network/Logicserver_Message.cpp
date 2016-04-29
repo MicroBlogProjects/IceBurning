@@ -183,12 +183,12 @@ void CMessage::SetMessageBody(CMessageBody* body)
     ::google::protobuf::Message* pb = m_iMessageBody->GetPB();
     if (pb == NULL)
     {
-        console_msg("pb is NULL when set Message Body");
+        TRACE_WARN("pb is NULL when set Message Body");
         return;
     }
     if (m_iMessageHead == NULL)
     {
-        console_msg("msg head is NULL when set Message Body");
+        TRACE_WARN("msg head is NULL when set Message Body");
         return;
     }
     m_iMessageHead->SetLen(m_iMessageHead->Size() + pb->ByteSize());

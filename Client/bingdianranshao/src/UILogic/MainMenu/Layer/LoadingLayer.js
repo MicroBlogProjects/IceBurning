@@ -20,7 +20,7 @@ var Loadinglayer = cc.Layer.extend({
         var animFrames = [];
         for(var i = 0; i < 8 ;i++){
             var frame = cc.spriteFrameCache.getSpriteFrame("LoadingAnimate"+i+".png");
-            cc.log("frame is "+frame);
+            //cc.log("frame is "+frame);
             animFrames.push(frame);
         };
         var animation = new cc.Animation(animFrames, 0.1);

@@ -60,9 +60,9 @@ var BagTouchSprite = cc.Sprite.extend({
                 }
             }
         }
-        /*cc.log('--------------------');
+        /*//cc.log('--------------------');
         for(var i = 0;i<IDlist.length;i++){
-            cc.log("select iD is " + IDlist[i]);
+            //cc.log("select iD is " + IDlist[i]);
         }*/
         this.m_attributePanel = ccui.helper.seekWidgetByName(g_mainscene, "AttributePanel");
         if(target.getPosition().x > 342){

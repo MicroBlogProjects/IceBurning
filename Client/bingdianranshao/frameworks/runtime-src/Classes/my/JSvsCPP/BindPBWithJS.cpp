@@ -37,6 +37,9 @@ BindParserJS_PB(MSG_FIGHT_READY, ParsePBResponseToJS_CSFightReady, ParseJSToPBRe
 // 帧同步
 BindMsgIDToJSObj(MSG_FRAME_SYNC, CSFrameSyncRequest, CSFrameSyncResponse)
 BindParserJS_PB(MSG_FRAME_SYNC, ParsePBResponseToJS_CSFrameSync, ParseJSToPBRequest_CSFrameSync)
+// 返回房间列表
+BindMsgIDToJSObj(MSG_BACK_ROOM, CSBackRoomListRequest, CSBackRoomListResponse)
+BindParserJS_PB(MSG_BACK_ROOM, ParsePBResponseToJS_CSBackRoom, ParseJSToPBRequest_CSBackRoom)
 
 int ParsePBResponseToJS_CSLogin(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
 {
@@ -158,6 +161,19 @@ int ParseJSToPBRequest_CSFrameSync(GameJoy::JS_CPP_Bridge* js, ::google::protobu
 	std::string s(buf, len);
     pb_step->set_operation(s);
     ParseEnd
+}
+
+// 返回房间列表
+int ParsePBResponseToJS_CSBackRoom(::google::protobuf::Message* pb, GameJoy::JS_CPP_Bridge* js)
+{
+	ParseBegin(CSBackRoomListResponse)
+	real_js->result = real_pb->result();
+	ParseEnd
+}
+int ParseJSToPBRequest_CSBackRoom(GameJoy::JS_CPP_Bridge* js, ::google::protobuf::Message* pb)
+{
+	ParseBegin(CSBackRoomListRequest)
+	ParseEnd
 }
 
 // to add 下一个协议

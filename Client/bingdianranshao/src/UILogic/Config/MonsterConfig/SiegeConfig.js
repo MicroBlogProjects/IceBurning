@@ -7,25 +7,29 @@ var SiegeConfig = SiegeConfig || {};
 //属性
 SiegeConfig.attribute = {
     "id" : 11, //id
-    "name" : "攻城兵",
-
-    "walkSpeed" : 50, //移动速度
-    "HP" : 10.0, //血量
+    "name" : "毁灭战士",
     "sightRadius" : 3, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 1, //攻击半径
-    "attackSpeed" : 1.0,  //攻击速度 多少秒一下
-    "coincost" :20,
 
+    "HP" : 250, //血量
+    "attack" : 80.0, //攻击力
+    "attackRadius" : 1, //攻击半径
+    "attackSpeed" : 0.5 / GC.AttackSpeedCoefficient,  //攻击速度 多少秒一下
+    "walkSpeed" : 10, //移动速度
+    "coincost" :60,
+    "attackType" : 0,
+
+    "descript" : "肩抗巨大的木头，拥有毁灭一切的力量，藐视任何敌人，对于建筑物毁灭性打击",
     "Icon" : res.GM_SiegeIcon_png,
     "defaultImage" : res.GM_SiegeDefault_png
 };
 
 //攻击
 SiegeConfig.attack = {
+    "allTime" :   GC.AttackSpeedCoefficient / 0.5,
+    "attackTime" : GC.AttackSpeedCoefficient / 0.5,
     "begin" : {
-        "time" : 1,
+        "time" : GC.AttackSpeedCoefficient / 0.5,
         "account" : 10,
         "prefix" : "SiegeAttackBegin",
         "animatePlist" : res.GM_Siege_plist
@@ -47,8 +51,8 @@ SiegeConfig.skill = null;
 
 SiegeConfig.walking = {
     "begin" :{
-        "time" : 1.2,
-        "account" : 12,
+        "time" : GC.WalkingSpeedCoefficient / 1,
+        "account" : 6,
         "prefix" : "SiegeWalking",
         "animatePlist" : res.GM_Siege_plist
     },

@@ -23,6 +23,7 @@ int32_t m_iMessageSequece;  //消息唯一标识符
 #define MSG_ON_JOIN_ROOM            0x0005 // 加入房间请求
 #define MSG_FIGHT_READY             0x0006 // 准备开战
 #define MSG_FRAME_SYNC              0x0007 // 帧同步请求
+#define MSG_BACK_ROOM				0x0008 // 游戏结束，返回
 
 
 

@@ -9,23 +9,27 @@ var TowersConfig = TowersConfig || {};
 TowersConfig.attribute = {
     "id" : 104, //id
     "name" : "箭塔",
-
-    "walkSpeed" : 0, //移动速度
-    "HP" : 100.0, //血量
-    "sightRadius" : 3, //视野半径
+    "sightRadius" : 4, //视野半径
     "defense" : 20.0,
-    "attack" : 20.0, //攻击力
-    "attackRadius" : 2, //攻击半径
-    "attackSpeed" : 2,
-    "coincost" :20,
 
+    "HP" : 250.0, //血量
+    "walkSpeed" : 0, //移动速度
+    "attack" : 50.0, //攻击力
+    "attackRadius" : 3, //攻击半径
+    "attackSpeed" : 0.5,
+    "coincost" :80,
+    "attackType" : 0,
+
+    "descript" : "作为坚固的据点,对于任何靠近的敌人，给与打击",
     "Icon" :res.GM_TowersIcon_png,
     "defaultImage" : res.GM_TowersDefault_png
 };
 //攻击
 TowersConfig.attack =  {
+    "allTime" : 2,
+    "attackTime":1.5,
     "begin" : {
-        "time" : 2,
+        "time" : 1.5,
         "account" : 1,
         "prefix" : "TowersAttackBegin",
         "animatePlist" : res.GM_Towers_plist

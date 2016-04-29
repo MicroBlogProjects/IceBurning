@@ -174,6 +174,7 @@
        {
           var id = this.Around(sprite.m_TiledPosition[i],sprite.m_attackRadius,sprite.m_attackRadius,1-sprite.m_Camp);
          if(id<0) continue;
+         //cc.log("my =" + sprite.m_id + id);
          sprite.m_AttackObjectsID = id;
          return true;
        }
@@ -335,7 +336,18 @@
              if((l_nex.x >= battleLayerConfig.width || l_nex.x < 0 || l_nex.y < 0 || l_nex.y >= battleLayerConfig.height)==false)   
              {
                   if(this.mapstatus[camp][l_nex.x][l_nex.y].length>0 && (Math.abs(l_W) + Math.abs(l_h) <= l_H))
-                      return this.mapstatus[camp][l_nex.x][l_nex.y][0];
+                    {
+                      for(var e = 0; e < this.mapstatus[camp][l_nex.x][l_nex.y].length ; ++e)
+                        {
+                          var l_id = this.mapstatus[camp][l_nex.x][l_nex.y][e];
+                          var l_obj = monsterManager.IdMapSprite[l_id];
+                          if(l_obj.m_HP > 0)
+                            {
+                             // cc.log("loc x= "+l_nex.x+" y= "+l_nex.y +" e= " +this.mapstatus[camp][l_nex.x][l_nex.y][e]);
+                              return this.mapstatus[camp][l_nex.x][l_nex.y][e];
+                            }
+                        }
+                    }
              }
              l_nex=this.TurnDown(l_nex);
              l_h --;
@@ -462,7 +474,7 @@
       {
           var l_tit = this.TurnDirec(l_mypos,i);
           var diff = this.DistanceOfPoint(l_tit, l_endPosition);
-          if(diff < l_minv)
+          if(diff < l_minv && l_tit.x >=0 && l_tit.x <= battleLayerConfig.width && l_tit.y >=0 && l_tit.y <= battleLayerConfig.height)
           {
             l_minv = diff;
             l_minpos = l_tit;

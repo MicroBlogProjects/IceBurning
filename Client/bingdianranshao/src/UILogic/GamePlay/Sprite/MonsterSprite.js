@@ -39,9 +39,20 @@ MonsterSprite = cc.Sprite.extend({
     //血条
     m_booldProgressTimer :null,
     m_total_HP :null,
+    m_total_foot:null,
+    m_has_foot:null,
 
+    m_total_Death:null,
+    m_total_nowDeath:null,
+    m_total_AttackAllTime:null,
+    m_total_AttackTime:null,
+    m_total_AttackNow:null,
+    m_AttackType:null,
+    m_defaultImage : null,
     ctor : function(config,isMyMonster){
         var attributeConfig = config.attribute;
+        this.m_AttackType = attributeConfig.attackType;
+        this.m_defaultImage = attributeConfig.defaultImage;
         this._super(attributeConfig.defaultImage);
         this.m_TiledPosition = [];
         this.m_nextTiledPosition = [];
@@ -58,8 +69,6 @@ MonsterSprite = cc.Sprite.extend({
         this.m_attackRadius = attributeConfig.attackRadius;
         this.m_isMyMonster = isMyMonster
         this.setDirect();
-        this.scheduleUpdate();
-
         if(this.m_id >= 100){
             this.m_type = MonsterType.Building;
         }
@@ -82,10 +91,26 @@ MonsterSprite = cc.Sprite.extend({
 
         this.m_attackConfig = config.attack;
         this.m_walkingConfig = config.walking;
+        if(config.walking != null && config.walking!= undefined){
+            this.m_total_foot = Math.floor((config.walking).begin.time*60);
+        }
+        this.m_has_foot = 0;
         this.m_deathConfig = config.death;
-        this.m_skillConfig = config.skill;
+        if(config.death != null )
+        {
+            this.m_total_Death = Math.floor(config.death.begin.time*60);
+        }
+        this.m_total_nowDeath = 0;
 
+        this.m_skillConfig = config.skill;
+        if(config.attack != null && config.attack != undefined )
+        {
+            this.m_total_AttackAllTime = Math.floor(config.attack.allTime * 60);
+            this.m_total_AttackTime = Math.floor(config.attack.attackTime * 60);
+            this.m_total_AttackNow = 0;
+        }
         this.addBooldProgressTimer();
+        this.updateBooldProgress();
     },
     setTiledPosition:function(position)
     {
@@ -122,6 +147,10 @@ MonsterSprite = cc.Sprite.extend({
         }
     },
 
+    setDefaultImage : function(){
+        this.setTexture(this.m_defaultImage);
+    },
+
     startAnimate : function(config){
         this.stopAnimate();
 
@@ -145,7 +174,7 @@ MonsterSprite = cc.Sprite.extend({
                 this.setFlippedX(false);
             }
         }
-        if(this.m_id < 100)
+     /*   if(this.m_id < 100)
         {
             var speed = totalTime * 1.0 / account;
             var animation = new cc.Animation(animFrames, speed);
@@ -153,15 +182,15 @@ MonsterSprite = cc.Sprite.extend({
             var animate = new cc.Animate(animation);
             var spwan = new cc.Spawn(animate,moveToAction);
             this.m_nowAnimateAction = spwan;
-       }else{
+       }else{*/
             var speed = totalTime * 1.0 / account;
             var animation = new cc.Animation(animFrames, speed);
             var animate = new cc.Animate(animation);
             this.m_nowAnimateAction = animate;
-       }
+     //  }
     },
-
-    deathCallFunc : function(sender,config){
+    deathCallFunc:function(){
+        var config = this.m_deathConfig.attribute;
         if(config == null || config == undefined){
 
         }
@@ -169,31 +198,33 @@ MonsterSprite = cc.Sprite.extend({
             //cc.log("deathCallFunc shagnhai");
             var attackRadius = config.attackRadius;
             var attack = config.attack;;
-            var monsters = monsterManager.getMonstersInRect(1-sender.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(sender.getPosition()), attackRadius);
-            cc.log(monsters.length);
+            var monsters = monsterManager.getMonstersInRect(1-this.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(this.getPosition()), attackRadius);
+            //cc.log(monsters.length);
             for(var i = 0; i< monsters.length;i++){
                 var monster = monsters[i];
-                monster.m_HP -= (attack / monster.m_defense + 1);
+                if(monster.m_HP <0 ) continue;
+                monster.m_HP =monster.m_HP - this.m_attack;
+
+                monster.updateBooldProgress();
                 //cc.log("monste hp is ",monster.m_HP);
             }
         }
         this.m_activity = false;
         this.removeFromParent();
     },
-
     attackCallFunc : function(sprite,argu){
         var enemyMonster = argu.enemyMonster;
         var myMonster = argu.myMonster;
         var skillConfig = argu.skillConfig;
         var endAnimate = argu.endAnimate;
         if(skillConfig == null || skillConfig == undefined){
-            enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
+           // enemyMonster.m_HP -= myMonster.m_attack * 1.0 / enemyMonster.m_defense +1;//至少一点伤害
         }
         else {
             monsterLayer.skillAnimate(skillConfig,myMonster,enemyMonster);
         }
         if(endAnimate == null || endAnimate == undefined){
-            this.m_state = null;
+            //this.m_state = null;
         }
         else {
             this.startAnimate(endAnimate);
@@ -202,18 +233,18 @@ MonsterSprite = cc.Sprite.extend({
 
     },
     attackEndCallFunc :function(){
-        this.m_state = null;
+       // this.m_state = null;
     },
     walkingCallFunc : function(){
 //        this.setPosition(cc.p(this.m_nextPosition);
-        this.m_state = null;
+      /*  this.m_state = null;
         algorithmOfStatus.AddMonster(this,-1)
         for(var i = 0 ; i < this.m_nextTiledPosition.length; ++ i)
         {
             this.m_TiledPosition[i] = this.m_nextTiledPosition[i];    
         
         }
-        algorithmOfStatus.AddMonster(this,1);
+        algorithmOfStatus.AddMonster(this,1);*/
         
     },
     stopAnimate : function(){
@@ -229,7 +260,8 @@ MonsterSprite = cc.Sprite.extend({
         }
         this.m_state =state;
         this.startAnimate(this.m_walkingConfig.begin);
-        this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
+        this.runAction(cc.repeatForever(this.m_nowAnimateAction));
+//        this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.walkingCallFunc,this)));
     },
 
     attackAnimate : function(state,enemyMonster){
@@ -261,7 +293,8 @@ MonsterSprite = cc.Sprite.extend({
 
         this.m_state = state;
         this.startAnimate(this.m_deathConfig.begin);
-        this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this,this.m_deathConfig.attribute)));
+        this.runAction(cc.repeatForever(this.m_nowAnimateAction));
+        //this.runAction(cc.sequence(this.m_nowAnimateAction,cc.callFunc(this.deathCallFunc,this,this.m_deathConfig.attribute)));
     },
 
     
@@ -298,7 +331,30 @@ MonsterSprite = cc.Sprite.extend({
         
         }
     },
-
+    CaculHeart:function()
+    {
+        if(this.m_AttackType == 0)
+        {
+             var l_obj = monsterManager.IdMapSprite[this.m_AttackObjectsID];
+             if(l_obj == null || l_obj == undefined )return ;
+             if(l_obj.m_HP <=0 )return ;
+             l_obj.m_HP = l_obj.m_HP-this.m_attack;
+             l_obj.updateBooldProgress();
+        }else{
+            var l_obj = monsterManager.IdMapSprite[this.m_AttackObjectsID];
+            if(l_obj == null || l_obj == undefined || l_obj.m_HP <= 0 || l_obj.m_activity == false)return ;
+            var monsters = monsterManager.getMonstersInRect(1-this.m_Camp,monsterBackGroundLayer.StaggeredCoordForPosition(l_obj.getPosition()), 4);
+            //cc.log(monsters.length);
+            for(var i = 0; i< monsters.length;i++){
+                var monster = monsters[i];
+                if(monster.m_HP<=0)
+                    continue;
+                monster.m_HP = monster.m_HP-this.m_attack;
+                monster.updateBooldProgress();
+                //cc.log("monste hp is ",monster.m_HP);
+            }
+        }
+    },
     //添加血条
     addBooldProgressTimer : function () {
         var backgroundSprite = cc.Sprite.create(res.GM_BackgroundBolld_png,cc.rect(0,0,this.width*0.7,7));
@@ -313,14 +369,20 @@ MonsterSprite = cc.Sprite.extend({
         }
         this.m_booldProgressTimer =  cc.ProgressTimer.create(booldSprite);
         this.m_booldProgressTimer.setPosition((this.width*1.1)/2.0,this.height);
+        
         this.m_booldProgressTimer.type = cc.ProgressTimer.TYPE_BAR;
         this.m_booldProgressTimer.setMidpoint(cc.p(0.0,0.5));
         this.m_booldProgressTimer.setBarChangeRate(cc.p(1.0,0.0));
         this.addChild(this.m_booldProgressTimer);
     },
-    update:function (dt){
+    updateBooldProgress:function (){
         var num = this.m_HP / this.m_total_HP * 100;
-        this.m_booldProgressTimer.setPercentage(this.m_HP / this.m_total_HP * 100);
+        if(num < 0){
+            num = 0;
+        }else if(num > 100){
+            num = 100;
+        }
+        this.m_booldProgressTimer.setPercentage(num);
     }
 
 

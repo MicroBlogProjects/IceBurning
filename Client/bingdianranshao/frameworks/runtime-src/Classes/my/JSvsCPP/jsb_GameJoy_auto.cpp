@@ -2187,12 +2187,229 @@ void js_register_GameJoy_JS_CSFrameSyncResponse(JSContext *cx, JS::HandleObject 
     jsb_register_class<GameJoy::JS_CSFrameSyncResponse>(cx, jsb_GameJoy_JS_CSFrameSyncResponse_class, proto, parent_proto);
 }
 
+JSClass  *jsb_GameJoy_JS_CSBackRoomListRequest_class;
+JSObject *jsb_GameJoy_JS_CSBackRoomListRequest_prototype;
+
+bool js_GameJoy_JS_CSBackRoomListRequest_get_msgID(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSBackRoomListRequest* cobj = (GameJoy::JS_CSBackRoomListRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSBackRoomListRequest_get_msgID : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_msgID();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSBackRoomListRequest_get_msgID : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_CSBackRoomListRequest_set_msgID(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSBackRoomListRequest* cobj = (GameJoy::JS_CSBackRoomListRequest *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSBackRoomListRequest_set_msgID : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSBackRoomListRequest_set_msgID : Error processing arguments");
+        cobj->set_msgID(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSBackRoomListRequest_set_msgID : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_CSBackRoomListRequest_Instance(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    if (argc == 0) {
+
+        GameJoy::JS_CSBackRoomListRequest* ret = GameJoy::JS_CSBackRoomListRequest::Instance();
+        jsval jsret = JSVAL_NULL;
+        if (ret) {
+        jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<GameJoy::JS_CSBackRoomListRequest>(cx, (GameJoy::JS_CSBackRoomListRequest*)ret));
+    } else {
+        jsret = JSVAL_NULL;
+    };
+        args.rval().set(jsret);
+        return true;
+    }
+    JS_ReportError(cx, "js_GameJoy_JS_CSBackRoomListRequest_Instance : wrong number of arguments");
+    return false;
+}
+
+
+extern JSObject *jsb_GameJoy_JS_CPP_Bridge_prototype;
+
+void js_register_GameJoy_JS_CSBackRoomListRequest(JSContext *cx, JS::HandleObject global) {
+    jsb_GameJoy_JS_CSBackRoomListRequest_class = (JSClass *)calloc(1, sizeof(JSClass));
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->name = "JS_CSBackRoomListRequest";
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->addProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->delProperty = JS_DeletePropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->getProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->setProperty = JS_StrictPropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->enumerate = JS_EnumerateStub;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->resolve = JS_ResolveStub;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->convert = JS_ConvertStub;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->finalize = jsb_ref_finalize;
+    jsb_GameJoy_JS_CSBackRoomListRequest_class->flags = JSCLASS_HAS_RESERVED_SLOTS(2);
+
+    static JSPropertySpec properties[] = {
+        JS_PSG("__nativeObj", js_is_native_obj, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_PS_END
+    };
+
+    static JSFunctionSpec funcs[] = {
+        JS_FN("get_msgID", js_GameJoy_JS_CSBackRoomListRequest_get_msgID, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_msgID", js_GameJoy_JS_CSBackRoomListRequest_set_msgID, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    static JSFunctionSpec st_funcs[] = {
+        JS_FN("Instance", js_GameJoy_JS_CSBackRoomListRequest_Instance, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    JS::RootedObject parent_proto(cx, jsb_GameJoy_JS_CPP_Bridge_prototype);
+    jsb_GameJoy_JS_CSBackRoomListRequest_prototype = JS_InitClass(
+        cx, global,
+        parent_proto,
+        jsb_GameJoy_JS_CSBackRoomListRequest_class,
+        dummy_constructor<GameJoy::JS_CSBackRoomListRequest>, 0, // no constructor
+        properties,
+        funcs,
+        NULL, // no static properties
+        st_funcs);
+
+    // add the proto and JSClass to the type->js info hash table
+    JS::RootedObject proto(cx, jsb_GameJoy_JS_CSBackRoomListRequest_prototype);
+    jsb_register_class<GameJoy::JS_CSBackRoomListRequest>(cx, jsb_GameJoy_JS_CSBackRoomListRequest_class, proto, parent_proto);
+}
+
+JSClass  *jsb_GameJoy_JS_CSBackRoomListResponse_class;
+JSObject *jsb_GameJoy_JS_CSBackRoomListResponse_prototype;
+
+bool js_GameJoy_JS_CSBackRoomListResponse_get_result(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSBackRoomListResponse* cobj = (GameJoy::JS_CSBackRoomListResponse *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSBackRoomListResponse_get_result : Invalid Native Object");
+    if (argc == 0) {
+        int ret = cobj->get_result();
+        jsval jsret = JSVAL_NULL;
+        jsret = int32_to_jsval(cx, ret);
+        args.rval().set(jsret);
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSBackRoomListResponse_get_result : wrong number of arguments: %d, was expecting %d", argc, 0);
+    return false;
+}
+bool js_GameJoy_JS_CSBackRoomListResponse_set_result(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    JS::RootedObject obj(cx, args.thisv().toObjectOrNull());
+    js_proxy_t *proxy = jsb_get_js_proxy(obj);
+    GameJoy::JS_CSBackRoomListResponse* cobj = (GameJoy::JS_CSBackRoomListResponse *)(proxy ? proxy->ptr : NULL);
+    JSB_PRECONDITION2( cobj, cx, false, "js_GameJoy_JS_CSBackRoomListResponse_set_result : Invalid Native Object");
+    if (argc == 1) {
+        int arg0 = 0;
+        ok &= jsval_to_int32(cx, args.get(0), (int32_t *)&arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_GameJoy_JS_CSBackRoomListResponse_set_result : Error processing arguments");
+        cobj->set_result(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+
+    JS_ReportError(cx, "js_GameJoy_JS_CSBackRoomListResponse_set_result : wrong number of arguments: %d, was expecting %d", argc, 1);
+    return false;
+}
+bool js_GameJoy_JS_CSBackRoomListResponse_Instance(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    if (argc == 0) {
+
+        GameJoy::JS_CSBackRoomListResponse* ret = GameJoy::JS_CSBackRoomListResponse::Instance();
+        jsval jsret = JSVAL_NULL;
+        if (ret) {
+        jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<GameJoy::JS_CSBackRoomListResponse>(cx, (GameJoy::JS_CSBackRoomListResponse*)ret));
+    } else {
+        jsret = JSVAL_NULL;
+    };
+        args.rval().set(jsret);
+        return true;
+    }
+    JS_ReportError(cx, "js_GameJoy_JS_CSBackRoomListResponse_Instance : wrong number of arguments");
+    return false;
+}
+
+
+extern JSObject *jsb_GameJoy_JS_CPP_Bridge_prototype;
+
+void js_register_GameJoy_JS_CSBackRoomListResponse(JSContext *cx, JS::HandleObject global) {
+    jsb_GameJoy_JS_CSBackRoomListResponse_class = (JSClass *)calloc(1, sizeof(JSClass));
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->name = "JS_CSBackRoomListResponse";
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->addProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->delProperty = JS_DeletePropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->getProperty = JS_PropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->setProperty = JS_StrictPropertyStub;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->enumerate = JS_EnumerateStub;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->resolve = JS_ResolveStub;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->convert = JS_ConvertStub;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->finalize = jsb_ref_finalize;
+    jsb_GameJoy_JS_CSBackRoomListResponse_class->flags = JSCLASS_HAS_RESERVED_SLOTS(2);
+
+    static JSPropertySpec properties[] = {
+        JS_PSG("__nativeObj", js_is_native_obj, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_PS_END
+    };
+
+    static JSFunctionSpec funcs[] = {
+        JS_FN("get_result", js_GameJoy_JS_CSBackRoomListResponse_get_result, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("set_result", js_GameJoy_JS_CSBackRoomListResponse_set_result, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    static JSFunctionSpec st_funcs[] = {
+        JS_FN("Instance", js_GameJoy_JS_CSBackRoomListResponse_Instance, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FS_END
+    };
+
+    JS::RootedObject parent_proto(cx, jsb_GameJoy_JS_CPP_Bridge_prototype);
+    jsb_GameJoy_JS_CSBackRoomListResponse_prototype = JS_InitClass(
+        cx, global,
+        parent_proto,
+        jsb_GameJoy_JS_CSBackRoomListResponse_class,
+        dummy_constructor<GameJoy::JS_CSBackRoomListResponse>, 0, // no constructor
+        properties,
+        funcs,
+        NULL, // no static properties
+        st_funcs);
+
+    // add the proto and JSClass to the type->js info hash table
+    JS::RootedObject proto(cx, jsb_GameJoy_JS_CSBackRoomListResponse_prototype);
+    jsb_register_class<GameJoy::JS_CSBackRoomListResponse>(cx, jsb_GameJoy_JS_CSBackRoomListResponse_class, proto, parent_proto);
+}
+
 void register_all_GameJoy(JSContext* cx, JS::HandleObject obj) {
     // Get the ns
     JS::RootedObject ns(cx);
     get_or_create_js_obj(cx, obj, "GameJoy", &ns);
 
     js_register_GameJoy_JS_CPP_Bridge(cx, ns);
+    js_register_GameJoy_JS_CSBackRoomListRequest(cx, ns);
     js_register_GameJoy_JS_CSLoginResponse(cx, ns);
     js_register_GameJoy_JS_PBFrameMessage(cx, ns);
     js_register_GameJoy_JS_CSCreateRoomRequest(cx, ns);
@@ -2205,6 +2422,7 @@ void register_all_GameJoy(JSContext* cx, JS::HandleObject obj) {
     js_register_GameJoy_JS_CSJoinRoomRequest(cx, ns);
     js_register_GameJoy_JS_CSCreateRoomResponse(cx, ns);
     js_register_GameJoy_JS_CSPullRoomsRequest(cx, ns);
+    js_register_GameJoy_JS_CSBackRoomListResponse(cx, ns);
     js_register_GameJoy_JS_CSJoinRoomResponse(cx, ns);
     js_register_GameJoy_JS_CSPullRoomsResponse(cx, ns);
     js_register_GameJoy_JS_CSLoginRequest(cx, ns);

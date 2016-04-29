@@ -5,6 +5,7 @@
 
 
 var GameOverlayer = cc.Scene.extend({
+
         gameOverLayerJson : null,
         ctor : function(){
             this._super();
@@ -21,11 +22,21 @@ var GameOverlayer = cc.Scene.extend({
                 var imageView = ccui.helper.seekWidgetByName(this.gameOverLayerJson,"lose_imageview");
                 imageView.setVisible(true);
             }
-
+            this.schedule(this.recvMessage,0);//计时器
         },
 
         backButtonClickEvent : function(){
-            cc.director.runScene(new MainMenuScene());
+            cc.log("send back room list message");
+            GameJoy.Proxy.SendRequest(NetIdentify["MSG_BACK_ROOM"]);
+        },
+
+        recvMessage : function(){
+            var id = GameJoy.Proxy.RecvResponse();
+            cc.log("recv message !!!!!!!!!!!!!!!!!!!!" + id);
+            if(id == NetIdentify["MSG_BACK_ROOM"]){
+                cc.log("send back room list message");
+                cc.director.replaceScene(new MainMenuScene());
+            }
         }
     }
 );

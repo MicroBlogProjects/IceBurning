@@ -73,7 +73,7 @@ var MPackMenuLayer = cc.Scene.extend({
                 this.monsterPanel.addChild(sprite);
 
                 var imageView = ccui.helper.seekWidgetByName(g_mainscene,"monster_image_view"+monsterAccount);
-                cc.log("imageview is "+imageView);
+                //cc.log("imageview is "+imageView);
                 imageView.setTag(value);
                 imageView.setUserData(monsterAccount);
                 imageView.addTouchEventListener(this.imageViewListenr,this);
@@ -87,7 +87,7 @@ var MPackMenuLayer = cc.Scene.extend({
                 this.buildingPanel.addChild(sprite);
 
                 var imageView = ccui.helper.seekWidgetByName(g_mainscene,"Building_image_view"+buildingAccount);
-                cc.log("imageview is "+imageView);
+                //cc.log("imageview is "+imageView);
                 imageView.setTag(value);
                 imageView.setUserData(buildingAccount);
                 imageView.addTouchEventListener(this.imageViewListenr,this);
@@ -152,8 +152,9 @@ var MPackMenuLayer = cc.Scene.extend({
                 var walkingSpeed_text = ccui.helper.seekWidgetByName(this.monsterInfoLayer,"walkingSpeed_text");
                 walkingSpeed_text.setString(config.walkSpeed);
                 var monster_descrip_text = ccui.helper.seekWidgetByName(this.monsterInfoLayer,"monster_descrip_text");
+                monster_descrip_text.setString(config.descript);
                 var button_chose = ccui.helper.seekWidgetByName(this.monsterInfoLayer,"m_Button_chose");
-                cc.log("monsters length si "+monsters.length);
+                //cc.log("monsters length si "+monsters.length);
                 if(monsters.length >= maxAccount){
                     button_chose.setVisible(false);
                 }
@@ -174,7 +175,7 @@ var MPackMenuLayer = cc.Scene.extend({
                         }
                         if(mark == false){
                             IDlist.push(tag);
-                            cc.log("idlist length is "+IDlist.length)
+                            //cc.log("idlist length is "+IDlist.length)
                         }
                         select.setVisible(visible);
                         this.monsterInfoLayer.removeFromParent();

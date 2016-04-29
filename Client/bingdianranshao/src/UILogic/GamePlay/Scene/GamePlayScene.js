@@ -25,7 +25,7 @@ var GamePlayLayer = cc.Layer.extend({
     timeTitle : null,
     coinText : null,
     GC_Time : 0,
-
+    frame:0,
     ctor:function () {
         this._super();
         this.addBackgroundpScrollView();
@@ -37,10 +37,9 @@ var GamePlayLayer = cc.Layer.extend({
         this.setCoinText();
 
         this.addChild(this.playerInfomation,150);
-        this.schedule(this.updataTime,1);//计时器
         this.schedule(this.recvMessage,RecvMessagTime);
         this.initGameConfig();
-
+        this.frame=0;
         gamePlayLayer = this;
     },
     initGameConfig : function(){
@@ -113,64 +112,75 @@ var GamePlayLayer = cc.Layer.extend({
     ,
     recvMessage : function(){
         ////cc.log("-------------------------------------------------1");
-        var id = GameJoy.Proxy.RecvResponse();
-        if(id > 0){
-            //cc.log("recvMessageing...."+id);
-        }
-        if(id == NetIdentify["MSG_FRAME_SYNC"]){
-            //cc.log("step 1 recvMessage id "+id);
-            var response = GameJoy.JS_CSFrameSyncResponse.Instance();
-            //cc.log("resule is "+ response.get_result());
-            if(response.get_result() != 0){
-                return;
+        while(true)
+        {
+            var id = GameJoy.Proxy.RecvResponse();
+            if(id < 0){
+                break;
+                //cc.log("recvMessageing...."+id);
             }
-            var steps =response.get_steps();
-            //cc.log("length is " + steps.length);
-            for(var i =0;i < steps.length;i++){
-                var step = steps[i];
-                var uin = step.get_uin();
-                var x = step.get_pos_x();
-                var y = step.get_pos_y();
-                var monsterId = step.get_obj_id();
-                var type = step.get_type();
-                if(type == UserOperatorType.Monster){
-                    var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
-                    //var config = MonsterConfig[""+monsterId];
-                    var isMyMonster  =false;
-                    if(uin == GC.UIN){
-                        isMyMonster = true;
-                        var config = MonsterConfig[""+id];
-                        GC.CoidNum -= config.attribute.coincost;
-                        MonsterTouch.changedCoin(GC.CoidNum);
-                        this.setCoinText();
-                    }
-                    else{
-                        isMyMonster = false;
-                    }
-                    monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
-                    //cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
+            if(id == NetIdentify["MSG_FRAME_SYNC"]){
+                //cc.log("step 1 recvMessage id "+id);
+                var response = GameJoy.JS_CSFrameSyncResponse.Instance();
+                //cc.log("resule is "+ response.get_result());
+                if(response.get_result() != 0){
+                    return;
                 }
-                else {
-                    if(GC.UIN == uin){
-                        if(monsterId == 1){
-                            GC.ISWIN = true;
+                var steps =response.get_steps();
+                //cc.log("length is " + steps.length);
+                for(var i =0;i < steps.length;i++){
+                    var step = steps[i];
+                    var uin = step.get_uin();
+                    var x = step.get_pos_x();
+                    var y = step.get_pos_y();
+                    var monsterId = step.get_obj_id();
+                    var type = step.get_type();
+                    if(type == UserOperatorType.Monster){
+                        var position = this.GetPointOfBuild(monsterId,cc.p(x,y));
+                        //var config = MonsterConfig[""+monsterId];
+                        var isMyMonster  =false;
+                        if(uin == GC.UIN){
+                            isMyMonster = true;
+                            var config = MonsterConfig[""+monsterId];
+                            GC.CoidNum -= config.attribute.coincost;
+                            MonsterTouch.changedCoin(GC.CoidNum);
+                            this.setCoinText();
                         }
-                        else {
-                            GC.ISWIN = false;
+                        else{
+                            isMyMonster = false;
                         }
+                        monsterManager.addMonsterSprite(monsterId, position,isMyMonster);
+                        //cc.log("shouDao"+uin+" x="+x+" y="+y +" monsterId"+ monsterId);
                     }
                     else {
-                        if(monsterId == 1){
-                            GC.ISWIN = false;
+                        if(GC.UIN == uin){
+                            if(monsterId == 1){
+                                GC.ISWIN = true;
+                            }
+                            else {
+                                GC.ISWIN = false;
+                            }
                         }
                         else {
-                            GC.ISWIN = true;
+                            if(monsterId == 1){
+                                GC.ISWIN = false;
+                            }
+                            else {
+                                GC.ISWIN = true;
+                            }
                         }
+                        cc.director.runScene(new GameOverScene);
+                        break;
                     }
-                    cc.director.runScene(new GameOverScene);
-                    break;
                 }
             }
+
+           monsterManager.updateMonsterData();
+           this.frame=(this.frame+1)%60;
+           if(this.frame == 0)
+           {
+             this.updataTime();
+           }
         }
     },
 
