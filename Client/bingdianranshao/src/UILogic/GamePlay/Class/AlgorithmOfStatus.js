@@ -174,6 +174,7 @@
        {
           var id = this.Around(sprite.m_TiledPosition[i],sprite.m_attackRadius,sprite.m_attackRadius,1-sprite.m_Camp);
          if(id<0) continue;
+         //cc.log("my =" + sprite.m_id + id);
          sprite.m_AttackObjectsID = id;
          return true;
        }
@@ -341,7 +342,10 @@
                           var l_id = this.mapstatus[camp][l_nex.x][l_nex.y][e];
                           var l_obj = monsterManager.IdMapSprite[l_id];
                           if(l_obj.m_HP > 0)
-                            return this.mapstatus[camp][l_nex.x][l_nex.y][e];
+                            {
+                             // cc.log("loc x= "+l_nex.x+" y= "+l_nex.y +" e= " +this.mapstatus[camp][l_nex.x][l_nex.y][e]);
+                              return this.mapstatus[camp][l_nex.x][l_nex.y][e];
+                            }
                         }
                     }
              }
